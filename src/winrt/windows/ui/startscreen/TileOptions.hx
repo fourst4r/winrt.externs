@@ -1,0 +1,11 @@
+package winrt.windows.ui.startscreen;
+
+@:include("winrt/Windows.UI.StartScreen.h", true)
+@:native("winrt::Windows::UI::StartScreen::TileOptions")
+extern enum abstract TileOptions(cxx.num.UInt32)
+{
+    @:native("winrt::Windows::UI::StartScreen::TileOptions::None") final None;
+    @:native("winrt::Windows::UI::StartScreen::TileOptions::ShowNameOnLogo") final ShowNameOnLogo;
+    @:native("winrt::Windows::UI::StartScreen::TileOptions::ShowNameOnWideLogo") final ShowNameOnWideLogo;
+    @:native("winrt::Windows::UI::StartScreen::TileOptions::CopyOnDeployment") final CopyOnDeployment;
+}

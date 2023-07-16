@@ -1,0 +1,12 @@
+package winrt.windows.ui.xaml.data;
+
+@:valueType
+@:include("winrt/Windows.UI.Xaml.Data.h", true)
+@:native("winrt::Windows::UI::Xaml::Data::ICustomPropertyProvider")
+extern interface ICustomPropertyProvider extends winrt.windows.foundation.IInspectable
+{
+    function GetCustomProperty(name: cxx.ConstRef<winrt.HString>): winrt.windows.ui.xaml.data.ICustomProperty;
+    function GetIndexedProperty(name: cxx.ConstRef<winrt.HString>, type: cxx.ConstRef<winrt.windows.ui.xaml.interop.TypeName>): winrt.windows.ui.xaml.data.ICustomProperty;
+    function GetStringRepresentation(): winrt.HString;
+    overload function Type(): winrt.windows.ui.xaml.interop.TypeName;
+}

@@ -1,0 +1,11 @@
+package winrt.microsoft.ui.composition;
+
+@:include("winrt/Microsoft.UI.Composition.h", true)
+@:native("winrt::Microsoft::UI::Composition::CompositionStrokeLineJoin")
+extern enum abstract CompositionStrokeLineJoin(cxx.num.Int32)
+{
+    @:native("winrt::Microsoft::UI::Composition::CompositionStrokeLineJoin::Miter") final Miter;
+    @:native("winrt::Microsoft::UI::Composition::CompositionStrokeLineJoin::Bevel") final Bevel;
+    @:native("winrt::Microsoft::UI::Composition::CompositionStrokeLineJoin::Round") final Round;
+    @:native("winrt::Microsoft::UI::Composition::CompositionStrokeLineJoin::MiterOrBevel") final MiterOrBevel;
+}

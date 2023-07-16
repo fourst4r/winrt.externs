@@ -1,0 +1,9 @@
+package winrt.windows.graphics.printing3d;
+
+@:include("winrt/Windows.Graphics.Printing3D.h", true)
+@:native("winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationMode")
+extern enum abstract Printing3DMeshVerificationMode(cxx.num.Int32)
+{
+    @:native("winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationMode::FindFirstError") final FindFirstError;
+    @:native("winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationMode::FindAllErrors") final FindAllErrors;
+}

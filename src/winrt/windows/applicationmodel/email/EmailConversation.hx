@@ -1,0 +1,24 @@
+package winrt.windows.applicationmodel.email;
+
+@:valueType
+@:include("winrt/Windows.ApplicationModel.Email.h", true)
+@:native("winrt::Windows::ApplicationModel::Email::EmailConversation")
+extern class EmailConversation
+    implements winrt.windows.applicationmodel.email.IEmailConversation
+{
+    overload function Id(): winrt.HString;
+    overload function MailboxId(): winrt.HString;
+    overload function FlagState(): winrt.windows.applicationmodel.email.EmailFlagState;
+    overload function HasAttachment(): Bool;
+    overload function Importance(): winrt.windows.applicationmodel.email.EmailImportance;
+    overload function LastEmailResponseKind(): winrt.windows.applicationmodel.email.EmailMessageResponseKind;
+    overload function MessageCount(): cxx.num.UInt32;
+    overload function MostRecentMessageId(): winrt.HString;
+    overload function MostRecentMessageTime(): winrt.windows.foundation.DateTime;
+    overload function Preview(): winrt.HString;
+    overload function LatestSender(): winrt.windows.applicationmodel.email.EmailRecipient;
+    overload function Subject(): winrt.HString;
+    overload function UnreadMessageCount(): cxx.num.UInt32;
+    overload function FindMessagesAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.email.EmailMessage> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+    overload function FindMessagesAsync(count: cxx.num.UInt32): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.email.EmailMessage> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+}

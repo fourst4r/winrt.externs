@@ -1,0 +1,12 @@
+package winrt.windows.services.maps.localsearch;
+
+@:valueType
+@:include("winrt/Windows.Services.Maps.LocalSearch.h", true)
+@:native("winrt::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem")
+extern class LocalLocationHoursOfOperationItem
+    implements winrt.windows.services.maps.localsearch.ILocalLocationHoursOfOperationItem
+{
+    overload function Day(): winrt.windows.globalization.DayOfWeek;
+    overload function Start(): winrt.windows.foundation.TimeSpan;
+    overload function Span(): winrt.windows.foundation.TimeSpan;
+}

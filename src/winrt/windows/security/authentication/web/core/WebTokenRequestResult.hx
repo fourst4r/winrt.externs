@@ -1,0 +1,13 @@
+package winrt.windows.security.authentication.web.core;
+
+@:valueType
+@:include("winrt/Windows.Security.Authentication.Web.Core.h", true)
+@:native("winrt::Windows::Security::Authentication::Web::Core::WebTokenRequestResult")
+extern class WebTokenRequestResult
+    implements winrt.windows.security.authentication.web.core.IWebTokenRequestResult
+{
+    overload function ResponseData(): winrt.windows.foundation.collections.IVectorView<winrt.windows.security.authentication.web.core.WebTokenResponse> /* GenericTypeInstSig */;
+    overload function ResponseStatus(): winrt.windows.security.authentication.web.core.WebTokenRequestStatus;
+    overload function ResponseError(): winrt.windows.security.authentication.web.core.WebProviderError;
+    function InvalidateCacheAsync(): winrt.windows.foundation.IAsyncAction;
+}

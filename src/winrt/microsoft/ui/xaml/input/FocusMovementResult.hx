@@ -1,0 +1,10 @@
+package winrt.microsoft.ui.xaml.input;
+
+@:valueType
+@:include("winrt/Microsoft.UI.Xaml.Input.h", true)
+@:native("winrt::Microsoft::UI::Xaml::Input::FocusMovementResult")
+extern class FocusMovementResult
+    implements winrt.microsoft.ui.xaml.input.IFocusMovementResult
+{
+    overload function Succeeded(): Bool;
+}

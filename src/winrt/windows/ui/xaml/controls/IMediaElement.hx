@@ -1,0 +1,88 @@
+package winrt.windows.ui.xaml.controls;
+
+@:valueType
+@:include("winrt/Windows.UI.Xaml.Controls.h", true)
+@:native("winrt::Windows::UI::Xaml::Controls::IMediaElement")
+extern interface IMediaElement extends winrt.windows.foundation.IInspectable
+{
+    overload function PosterSource(): winrt.windows.ui.xaml.media.ImageSource;
+    overload function PosterSource(value: cxx.ConstRef<winrt.windows.ui.xaml.media.ImageSource>): Void;
+    overload function Source(): winrt.windows.foundation.Uri;
+    overload function Source(value: cxx.ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function IsMuted(): Bool;
+    overload function IsMuted(value: Bool): Void;
+    overload function IsAudioOnly(): Bool;
+    overload function AutoPlay(): Bool;
+    overload function AutoPlay(value: Bool): Void;
+    overload function Volume(): cxx.num.Float64;
+    overload function Volume(value: cxx.num.Float64): Void;
+    overload function Balance(): cxx.num.Float64;
+    overload function Balance(value: cxx.num.Float64): Void;
+    overload function NaturalVideoHeight(): cxx.num.Int32;
+    overload function NaturalVideoWidth(): cxx.num.Int32;
+    overload function NaturalDuration(): winrt.windows.ui.xaml.Duration;
+    overload function Position(): winrt.windows.foundation.TimeSpan;
+    overload function Position(value: cxx.ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function DownloadProgress(): cxx.num.Float64;
+    overload function BufferingProgress(): cxx.num.Float64;
+    overload function DownloadProgressOffset(): cxx.num.Float64;
+    overload function CurrentState(): winrt.windows.ui.xaml.media.MediaElementState;
+    overload function Markers(): winrt.windows.ui.xaml.media.TimelineMarkerCollection;
+    overload function CanSeek(): Bool;
+    overload function CanPause(): Bool;
+    overload function AudioStreamCount(): cxx.num.Int32;
+    overload function AudioStreamIndex(): winrt.windows.foundation.IReference<cxx.num.Int32> /* GenericTypeInstSig */;
+    overload function AudioStreamIndex(value: cxx.ConstRef<winrt.windows.foundation.IReference<cxx.num.Int32> /* temp_GenericTypeInstSig */>): Void;
+    overload function PlaybackRate(): cxx.num.Float64;
+    overload function PlaybackRate(value: cxx.num.Float64): Void;
+    overload function IsLooping(): Bool;
+    overload function IsLooping(value: Bool): Void;
+    overload function PlayToSource(): winrt.windows.media.playto.PlayToSource;
+    overload function DefaultPlaybackRate(): cxx.num.Float64;
+    overload function DefaultPlaybackRate(value: cxx.num.Float64): Void;
+    overload function AspectRatioWidth(): cxx.num.Int32;
+    overload function AspectRatioHeight(): cxx.num.Int32;
+    overload function RealTimePlayback(): Bool;
+    overload function RealTimePlayback(value: Bool): Void;
+    overload function AudioCategory(): winrt.windows.ui.xaml.media.AudioCategory;
+    overload function AudioCategory(value: cxx.ConstRef<winrt.windows.ui.xaml.media.AudioCategory>): Void;
+    overload function AudioDeviceType(): winrt.windows.ui.xaml.media.AudioDeviceType;
+    overload function AudioDeviceType(value: cxx.ConstRef<winrt.windows.ui.xaml.media.AudioDeviceType>): Void;
+    overload function ProtectionManager(): winrt.windows.media.protection.MediaProtectionManager;
+    overload function ProtectionManager(value: cxx.ConstRef<winrt.windows.media.protection.MediaProtectionManager>): Void;
+    overload function Stereo3DVideoPackingMode(): winrt.windows.ui.xaml.media.Stereo3DVideoPackingMode;
+    overload function Stereo3DVideoPackingMode(value: cxx.ConstRef<winrt.windows.ui.xaml.media.Stereo3DVideoPackingMode>): Void;
+    overload function Stereo3DVideoRenderMode(): winrt.windows.ui.xaml.media.Stereo3DVideoRenderMode;
+    overload function Stereo3DVideoRenderMode(value: cxx.ConstRef<winrt.windows.ui.xaml.media.Stereo3DVideoRenderMode>): Void;
+    overload function IsStereo3DVideo(): Bool;
+    overload function MediaOpened(handler: cxx.ConstRef<winrt.windows.ui.xaml.RoutedEventHandler>): winrt.EventToken;
+    @:noExcept overload function MediaOpened(token: cxx.ConstRef<winrt.EventToken>): Void;
+    overload function MediaEnded(handler: cxx.ConstRef<winrt.windows.ui.xaml.RoutedEventHandler>): winrt.EventToken;
+    @:noExcept overload function MediaEnded(token: cxx.ConstRef<winrt.EventToken>): Void;
+    overload function MediaFailed(handler: cxx.ConstRef<winrt.windows.ui.xaml.ExceptionRoutedEventHandler>): winrt.EventToken;
+    @:noExcept overload function MediaFailed(token: cxx.ConstRef<winrt.EventToken>): Void;
+    overload function DownloadProgressChanged(handler: cxx.ConstRef<winrt.windows.ui.xaml.RoutedEventHandler>): winrt.EventToken;
+    @:noExcept overload function DownloadProgressChanged(token: cxx.ConstRef<winrt.EventToken>): Void;
+    overload function BufferingProgressChanged(handler: cxx.ConstRef<winrt.windows.ui.xaml.RoutedEventHandler>): winrt.EventToken;
+    @:noExcept overload function BufferingProgressChanged(token: cxx.ConstRef<winrt.EventToken>): Void;
+    overload function CurrentStateChanged(handler: cxx.ConstRef<winrt.windows.ui.xaml.RoutedEventHandler>): winrt.EventToken;
+    @:noExcept overload function CurrentStateChanged(token: cxx.ConstRef<winrt.EventToken>): Void;
+    overload function MarkerReached(handler: cxx.ConstRef<winrt.windows.ui.xaml.media.TimelineMarkerRoutedEventHandler>): winrt.EventToken;
+    @:noExcept overload function MarkerReached(token: cxx.ConstRef<winrt.EventToken>): Void;
+    overload function RateChanged(handler: cxx.ConstRef<winrt.windows.ui.xaml.media.RateChangedRoutedEventHandler>): winrt.EventToken;
+    @:noExcept overload function RateChanged(token: cxx.ConstRef<winrt.EventToken>): Void;
+    overload function VolumeChanged(handler: cxx.ConstRef<winrt.windows.ui.xaml.RoutedEventHandler>): winrt.EventToken;
+    @:noExcept overload function VolumeChanged(token: cxx.ConstRef<winrt.EventToken>): Void;
+    overload function SeekCompleted(handler: cxx.ConstRef<winrt.windows.ui.xaml.RoutedEventHandler>): winrt.EventToken;
+    @:noExcept overload function SeekCompleted(token: cxx.ConstRef<winrt.EventToken>): Void;
+    function Stop(): Void;
+    function Play(): Void;
+    function Pause(): Void;
+    function CanPlayType(type: cxx.ConstRef<winrt.HString>): winrt.windows.ui.xaml.media.MediaCanPlayResponse;
+    function SetSource(stream: cxx.ConstRef<winrt.windows.storage.streams.IRandomAccessStream>, mimeType: cxx.ConstRef<winrt.HString>): Void;
+    function GetAudioStreamLanguage(index: cxx.ConstRef<winrt.windows.foundation.IReference<cxx.num.Int32> /* temp_GenericTypeInstSig */>): winrt.HString;
+    function AddAudioEffect(effectID: cxx.ConstRef<winrt.HString>, effectOptional: Bool, effectConfiguration: cxx.ConstRef<winrt.windows.foundation.collections.IPropertySet>): Void;
+    function AddVideoEffect(effectID: cxx.ConstRef<winrt.HString>, effectOptional: Bool, effectConfiguration: cxx.ConstRef<winrt.windows.foundation.collections.IPropertySet>): Void;
+    function RemoveAllEffects(): Void;
+    overload function ActualStereo3DVideoPackingMode(): winrt.windows.ui.xaml.media.Stereo3DVideoPackingMode;
+}

@@ -1,0 +1,11 @@
+package winrt.windows.devices.bluetooth.genericattributeprofile;
+
+@:valueType
+@:include("winrt/Windows.Devices.Bluetooth.GenericAttributeProfile.h", true)
+@:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattWriteRequestedEventArgs")
+extern interface IGattWriteRequestedEventArgs extends winrt.windows.foundation.IInspectable
+{
+    overload function Session(): winrt.windows.devices.bluetooth.genericattributeprofile.GattSession;
+    function GetDeferral(): winrt.windows.foundation.Deferral;
+    function GetRequestAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.bluetooth.genericattributeprofile.GattWriteRequest> /* GenericTypeInstSig */;
+}

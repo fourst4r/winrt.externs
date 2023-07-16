@@ -1,0 +1,27 @@
+package winrt.windows.devices.pointofservice;
+
+@:valueType
+@:include("winrt/Windows.Devices.PointOfService.h", true)
+@:native("winrt::Windows::Devices::PointOfService::LineDisplayCapabilities")
+extern class LineDisplayCapabilities
+    implements winrt.windows.devices.pointofservice.ILineDisplayCapabilities
+{
+    overload function IsStatisticsReportingSupported(): Bool;
+    overload function IsStatisticsUpdatingSupported(): Bool;
+    overload function PowerReportingType(): winrt.windows.devices.pointofservice.UnifiedPosPowerReportingType;
+    overload function CanChangeScreenSize(): Bool;
+    overload function CanDisplayBitmaps(): Bool;
+    overload function CanReadCharacterAtCursor(): Bool;
+    overload function CanMapCharacterSets(): Bool;
+    overload function CanDisplayCustomGlyphs(): Bool;
+    overload function CanReverse(): winrt.windows.devices.pointofservice.LineDisplayTextAttributeGranularity;
+    overload function CanBlink(): winrt.windows.devices.pointofservice.LineDisplayTextAttributeGranularity;
+    overload function CanChangeBlinkRate(): Bool;
+    overload function IsBrightnessSupported(): Bool;
+    overload function IsCursorSupported(): Bool;
+    overload function IsHorizontalMarqueeSupported(): Bool;
+    overload function IsVerticalMarqueeSupported(): Bool;
+    overload function IsInterCharacterWaitSupported(): Bool;
+    overload function SupportedDescriptors(): cxx.num.UInt32;
+    overload function SupportedWindows(): cxx.num.UInt32;
+}

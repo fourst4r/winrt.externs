@@ -1,0 +1,12 @@
+package winrt.windows.ui.xaml.controls;
+
+@:valueType
+@:include("winrt/Windows.UI.Xaml.Controls.h", true)
+@:native("winrt::Windows::UI::Xaml::Controls::IAutoSuggestBox2")
+extern interface IAutoSuggestBox2 extends winrt.windows.foundation.IInspectable
+{
+    overload function QueryIcon(): winrt.windows.ui.xaml.controls.IconElement;
+    overload function QueryIcon(value: cxx.ConstRef<winrt.windows.ui.xaml.controls.IconElement>): Void;
+    overload function QuerySubmitted(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.xaml.controls.AutoSuggestBox, winrt.windows.ui.xaml.controls.AutoSuggestBoxQuerySubmittedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function QuerySubmitted(token: cxx.ConstRef<winrt.EventToken>): Void;
+}
