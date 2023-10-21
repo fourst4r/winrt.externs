@@ -20,3 +20,7 @@ extern overload function get<TResult, TProgress>(action:IAsyncOperationWithProgr
 
 @:nativeFunctionCode("{arg0}.as<{type1}>()")
 extern function as<T: IUnknown, TResult: IUnknown>(i: T, c: Class<TResult> = null): TResult;
+
+@:noExcept
+@:nativeFunctionCode("{arg0}.try_as<{type1}>()")
+extern function tryAs<T: IUnknown, TResult: IUnknown>(i: T, c: Class<TResult> = null): TResult;
