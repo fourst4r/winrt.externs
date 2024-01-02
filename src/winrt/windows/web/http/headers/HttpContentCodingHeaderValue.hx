@@ -7,8 +7,7 @@ extern class HttpContentCodingHeaderValue
     implements winrt.windows.web.http.headers.IHttpContentCodingHeaderValue
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue")
-    /* explicit */ static overload function make(contentCoding: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpContentCodingHeaderValue;
+    /* explicit */ function new(contentCoding: cxx.ConstRef<winrt.HString>);
     overload function ContentCoding(): winrt.HString;
     function ToString(): winrt.HString;
     function Parse(input: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpContentCodingHeaderValue;

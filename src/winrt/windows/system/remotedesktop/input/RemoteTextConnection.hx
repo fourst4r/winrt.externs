@@ -7,8 +7,7 @@ extern class RemoteTextConnection
     implements winrt.windows.system.remotedesktop.input.IRemoteTextConnection
     implements winrt.windows.foundation.IClosable
 {
-    @:native("winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnection")
-    static overload function make(connectionId: cxx.ConstRef<winrt.Guid>, pduForwarder: cxx.ConstRef<winrt.windows.system.remotedesktop.input.RemoteTextConnectionDataHandler>): winrt.windows.system.remotedesktop.input.RemoteTextConnection;
+    function new(connectionId: cxx.ConstRef<winrt.Guid>, pduForwarder: cxx.ConstRef<winrt.windows.system.remotedesktop.input.RemoteTextConnectionDataHandler>);
     overload function IsEnabled(): Bool;
     overload function IsEnabled(value: Bool): Void;
     function RegisterThread(threadId: cxx.num.UInt32): Void;

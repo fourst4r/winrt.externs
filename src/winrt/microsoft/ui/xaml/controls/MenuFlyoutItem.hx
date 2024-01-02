@@ -7,8 +7,7 @@ extern class MenuFlyoutItem
     extends winrt.microsoft.ui.xaml.controls.MenuFlyoutItemBase
     implements winrt.microsoft.ui.xaml.controls.IMenuFlyoutItem
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::MenuFlyoutItem")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.MenuFlyoutItem;
+    function new();
     overload function Text(): winrt.HString;
     overload function Text(value: cxx.ConstRef<winrt.HString>): Void;
     overload function Command(): winrt.microsoft.ui.xaml.input.ICommand;

@@ -6,8 +6,7 @@ package winrt.windows.media.editing;
 extern class MediaOverlay
     implements winrt.windows.media.editing.IMediaOverlay
 {
-    @:native("winrt::Windows::Media::Editing::MediaOverlay")
-    /* explicit */ static overload function make(clip: cxx.ConstRef<winrt.windows.media.editing.MediaClip>): winrt.windows.media.editing.MediaOverlay;
+    /* explicit */ function new(clip: cxx.ConstRef<winrt.windows.media.editing.MediaClip>);
     @:native("winrt::Windows::Media::Editing::MediaOverlay")
     static overload function make(clip: cxx.ConstRef<winrt.windows.media.editing.MediaClip>, position: cxx.ConstRef<winrt.windows.foundation.Rect>, opacity: cxx.num.Float64): winrt.windows.media.editing.MediaOverlay;
     overload function Position(): winrt.windows.foundation.Rect;

@@ -8,8 +8,7 @@ extern class Page
     implements winrt.microsoft.ui.xaml.controls.IPage
     implements winrt.microsoft.ui.xaml.controls.IPageOverrides
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::Page")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.Page;
+    function new();
     overload function Frame(): winrt.microsoft.ui.xaml.controls.Frame;
     overload function NavigationCacheMode(): winrt.microsoft.ui.xaml.navigation.NavigationCacheMode;
     overload function NavigationCacheMode(value: cxx.ConstRef<winrt.microsoft.ui.xaml.navigation.NavigationCacheMode>): Void;

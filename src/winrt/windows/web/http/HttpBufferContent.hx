@@ -8,8 +8,7 @@ extern class HttpBufferContent
     implements winrt.windows.web.http.IHttpContent
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::HttpBufferContent")
-    /* explicit */ static overload function make(content: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.web.http.HttpBufferContent;
+    /* explicit */ function new(content: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>);
     @:native("winrt::Windows::Web::Http::HttpBufferContent")
     static overload function make(content: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>, offset: cxx.num.UInt32, count: cxx.num.UInt32): winrt.windows.web.http.HttpBufferContent;
     overload function Headers(): winrt.windows.web.http.headers.HttpContentHeaderCollection;

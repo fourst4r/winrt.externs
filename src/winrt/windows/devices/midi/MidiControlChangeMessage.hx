@@ -7,8 +7,7 @@ extern class MidiControlChangeMessage
     implements winrt.windows.devices.midi.IMidiMessage
     implements winrt.windows.devices.midi.IMidiControlChangeMessage
 {
-    @:native("winrt::Windows::Devices::Midi::MidiControlChangeMessage")
-    static overload function make(channel: cxx.num.UInt8, controller: cxx.num.UInt8, controlValue: cxx.num.UInt8): winrt.windows.devices.midi.MidiControlChangeMessage;
+    function new(channel: cxx.num.UInt8, controller: cxx.num.UInt8, controlValue: cxx.num.UInt8);
     overload function Channel(): cxx.num.UInt8;
     overload function Controller(): cxx.num.UInt8;
     overload function ControlValue(): cxx.num.UInt8;

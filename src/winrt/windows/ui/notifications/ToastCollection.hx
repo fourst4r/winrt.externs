@@ -6,8 +6,7 @@ package winrt.windows.ui.notifications;
 extern class ToastCollection
     implements winrt.windows.ui.notifications.IToastCollection
 {
-    @:native("winrt::Windows::UI::Notifications::ToastCollection")
-    static overload function make(collectionId: cxx.ConstRef<winrt.HString>, displayName: cxx.ConstRef<winrt.HString>, launchArgs: cxx.ConstRef<winrt.HString>, iconUri: cxx.ConstRef<winrt.windows.foundation.Uri>): winrt.windows.ui.notifications.ToastCollection;
+    function new(collectionId: cxx.ConstRef<winrt.HString>, displayName: cxx.ConstRef<winrt.HString>, launchArgs: cxx.ConstRef<winrt.HString>, iconUri: cxx.ConstRef<winrt.windows.foundation.Uri>);
     overload function Id(): winrt.HString;
     overload function DisplayName(): winrt.HString;
     overload function DisplayName(value: cxx.ConstRef<winrt.HString>): Void;

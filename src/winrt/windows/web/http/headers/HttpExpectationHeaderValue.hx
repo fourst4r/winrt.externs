@@ -7,8 +7,7 @@ extern class HttpExpectationHeaderValue
     implements winrt.windows.web.http.headers.IHttpExpectationHeaderValue
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue")
-    /* explicit */ static overload function make(name: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpExpectationHeaderValue;
+    /* explicit */ function new(name: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue")
     static overload function make(name: cxx.ConstRef<winrt.HString>, value: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpExpectationHeaderValue;
     overload function Name(): winrt.HString;

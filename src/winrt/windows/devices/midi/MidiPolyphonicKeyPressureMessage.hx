@@ -7,8 +7,7 @@ extern class MidiPolyphonicKeyPressureMessage
     implements winrt.windows.devices.midi.IMidiMessage
     implements winrt.windows.devices.midi.IMidiPolyphonicKeyPressureMessage
 {
-    @:native("winrt::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage")
-    static overload function make(channel: cxx.num.UInt8, note: cxx.num.UInt8, pressure: cxx.num.UInt8): winrt.windows.devices.midi.MidiPolyphonicKeyPressureMessage;
+    function new(channel: cxx.num.UInt8, note: cxx.num.UInt8, pressure: cxx.num.UInt8);
     overload function Channel(): cxx.num.UInt8;
     overload function Note(): cxx.num.UInt8;
     overload function Pressure(): cxx.num.UInt8;

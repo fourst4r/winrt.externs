@@ -7,8 +7,7 @@ extern class HttpConnectionOptionHeaderValue
     implements winrt.windows.web.http.headers.IHttpConnectionOptionHeaderValue
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue")
-    /* explicit */ static overload function make(token: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue;
+    /* explicit */ function new(token: cxx.ConstRef<winrt.HString>);
     overload function Token(): winrt.HString;
     function ToString(): winrt.HString;
     function Parse(input: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue;

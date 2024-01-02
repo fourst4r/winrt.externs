@@ -8,8 +8,7 @@ extern class SmartCardAutomaticResponseApdu
     implements winrt.windows.devices.smartcards.ISmartCardAutomaticResponseApdu2
     implements winrt.windows.devices.smartcards.ISmartCardAutomaticResponseApdu3
 {
-    @:native("winrt::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu")
-    static overload function make(commandApdu: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>, responseApdu: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.devices.smartcards.SmartCardAutomaticResponseApdu;
+    function new(commandApdu: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>, responseApdu: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>);
     overload function CommandApdu(): winrt.windows.storage.streams.IBuffer;
     overload function CommandApdu(value: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>): Void;
     overload function CommandApduBitMask(): winrt.windows.storage.streams.IBuffer;

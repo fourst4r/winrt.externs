@@ -6,8 +6,7 @@ package winrt.windows.applicationmodel.wallet;
 extern class WalletItemCustomProperty
     implements winrt.windows.applicationmodel.wallet.IWalletItemCustomProperty
 {
-    @:native("winrt::Windows::ApplicationModel::Wallet::WalletItemCustomProperty")
-    static overload function make(name: cxx.ConstRef<winrt.HString>, value: cxx.ConstRef<winrt.HString>): winrt.windows.applicationmodel.wallet.WalletItemCustomProperty;
+    function new(name: cxx.ConstRef<winrt.HString>, value: cxx.ConstRef<winrt.HString>);
     overload function Name(): winrt.HString;
     overload function Name(value: cxx.ConstRef<winrt.HString>): Void;
     overload function Value(): winrt.HString;

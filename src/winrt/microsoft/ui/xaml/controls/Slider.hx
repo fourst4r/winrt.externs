@@ -7,8 +7,7 @@ extern class Slider
     extends winrt.microsoft.ui.xaml.controls.primitives.RangeBase
     implements winrt.microsoft.ui.xaml.controls.ISlider
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::Slider")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.Slider;
+    function new();
     overload function IntermediateValue(): cxx.num.Float64;
     overload function IntermediateValue(value: cxx.num.Float64): Void;
     overload function StepFrequency(): cxx.num.Float64;

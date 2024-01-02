@@ -7,8 +7,7 @@ extern class PhoneNumberInfo
     implements winrt.windows.globalization.phonenumberformatting.IPhoneNumberInfo
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo")
-    /* explicit */ static overload function make(number: cxx.ConstRef<winrt.HString>): winrt.windows.globalization.phonenumberformatting.PhoneNumberInfo;
+    /* explicit */ function new(number: cxx.ConstRef<winrt.HString>);
     overload function CountryCode(): cxx.num.Int32;
     overload function PhoneNumber(): winrt.HString;
     function GetLengthOfGeographicalAreaCode(): cxx.num.Int32;

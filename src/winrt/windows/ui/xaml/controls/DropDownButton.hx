@@ -7,6 +7,5 @@ extern class DropDownButton
     extends winrt.windows.ui.xaml.controls.Button
     implements winrt.windows.ui.xaml.controls.IDropDownButton
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::DropDownButton")
-    static overload function make(): winrt.windows.ui.xaml.controls.DropDownButton;
+    function new();
 }

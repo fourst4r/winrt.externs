@@ -6,8 +6,7 @@ package winrt.windows.ui.xaml.navigation;
 extern class FrameNavigationOptions
     implements winrt.windows.ui.xaml.navigation.IFrameNavigationOptions
 {
-    @:native("winrt::Windows::UI::Xaml::Navigation::FrameNavigationOptions")
-    static overload function make(): winrt.windows.ui.xaml.navigation.FrameNavigationOptions;
+    function new();
     overload function IsNavigationStackEnabled(): Bool;
     overload function IsNavigationStackEnabled(value: Bool): Void;
     overload function TransitionInfoOverride(): winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo;

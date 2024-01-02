@@ -6,7 +6,6 @@ package winrt.windows.devices.alljoyn;
 extern class AllJoynSessionLostEventArgs
     implements winrt.windows.devices.alljoyn.IAllJoynSessionLostEventArgs
 {
-    @:native("winrt::Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs")
-    /* explicit */ static overload function make(reason: cxx.ConstRef<winrt.windows.devices.alljoyn.AllJoynSessionLostReason>): winrt.windows.devices.alljoyn.AllJoynSessionLostEventArgs;
+    /* explicit */ function new(reason: cxx.ConstRef<winrt.windows.devices.alljoyn.AllJoynSessionLostReason>);
     overload function Reason(): winrt.windows.devices.alljoyn.AllJoynSessionLostReason;
 }

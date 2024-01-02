@@ -9,8 +9,7 @@ extern class AppBarElementContainer
     implements winrt.windows.ui.xaml.controls.ICommandBarElement
     implements winrt.windows.ui.xaml.controls.ICommandBarElement2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::AppBarElementContainer")
-    static overload function make(): winrt.windows.ui.xaml.controls.AppBarElementContainer;
+    function new();
     overload function IsCompact(): Bool;
     overload function IsCompact(value: Bool): Void;
     overload function IsInOverflow(): Bool;

@@ -7,7 +7,6 @@ extern class PropertyPath
     extends winrt.windows.ui.xaml.DependencyObject
     implements winrt.windows.ui.xaml.IPropertyPath
 {
-    @:native("winrt::Windows::UI::Xaml::PropertyPath")
-    /* explicit */ static overload function make(path: cxx.ConstRef<winrt.HString>): winrt.windows.ui.xaml.PropertyPath;
+    /* explicit */ function new(path: cxx.ConstRef<winrt.HString>);
     overload function Path(): winrt.HString;
 }

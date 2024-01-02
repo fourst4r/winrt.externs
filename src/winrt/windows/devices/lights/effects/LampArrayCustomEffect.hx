@@ -7,8 +7,7 @@ extern class LampArrayCustomEffect
     implements winrt.windows.devices.lights.effects.ILampArrayCustomEffect
     implements winrt.windows.devices.lights.effects.ILampArrayEffect
 {
-    @:native("winrt::Windows::Devices::Lights::Effects::LampArrayCustomEffect")
-    static overload function make(lampArray: cxx.ConstRef<winrt.windows.devices.lights.LampArray>, lampIndexes: winrt.ArrayView<cxx.num.Int32>): winrt.windows.devices.lights.effects.LampArrayCustomEffect;
+    function new(lampArray: cxx.ConstRef<winrt.windows.devices.lights.LampArray>, lampIndexes: winrt.ArrayView<cxx.num.Int32>);
     overload function Duration(): winrt.windows.foundation.TimeSpan;
     overload function Duration(value: cxx.ConstRef<winrt.windows.foundation.TimeSpan>): Void;
     overload function UpdateInterval(): winrt.windows.foundation.TimeSpan;

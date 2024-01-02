@@ -7,8 +7,7 @@ extern class StreetsideExperience
     extends winrt.windows.ui.xaml.controls.maps.MapCustomExperience
     implements winrt.windows.ui.xaml.controls.maps.IStreetsideExperience
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Maps::StreetsideExperience")
-    /* explicit */ static overload function make(panorama: cxx.ConstRef<winrt.windows.ui.xaml.controls.maps.StreetsidePanorama>): winrt.windows.ui.xaml.controls.maps.StreetsideExperience;
+    /* explicit */ function new(panorama: cxx.ConstRef<winrt.windows.ui.xaml.controls.maps.StreetsidePanorama>);
     @:native("winrt::Windows::UI::Xaml::Controls::Maps::StreetsideExperience")
     static overload function make(panorama: cxx.ConstRef<winrt.windows.ui.xaml.controls.maps.StreetsidePanorama>, headingInDegrees: cxx.num.Float64, pitchInDegrees: cxx.num.Float64, fieldOfViewInDegrees: cxx.num.Float64): winrt.windows.ui.xaml.controls.maps.StreetsideExperience;
     overload function AddressTextVisible(): Bool;

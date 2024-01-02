@@ -7,8 +7,7 @@ extern class SpeechRecognitionTopicConstraint
     implements winrt.windows.media.speechrecognition.ISpeechRecognitionConstraint
     implements winrt.windows.media.speechrecognition.ISpeechRecognitionTopicConstraint
 {
-    @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint")
-    static overload function make(scenario: cxx.ConstRef<winrt.windows.media.speechrecognition.SpeechRecognitionScenario>, topicHint: cxx.ConstRef<winrt.HString>): winrt.windows.media.speechrecognition.SpeechRecognitionTopicConstraint;
+    function new(scenario: cxx.ConstRef<winrt.windows.media.speechrecognition.SpeechRecognitionScenario>, topicHint: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint")
     static overload function make(scenario: cxx.ConstRef<winrt.windows.media.speechrecognition.SpeechRecognitionScenario>, topicHint: cxx.ConstRef<winrt.HString>, tag: cxx.ConstRef<winrt.HString>): winrt.windows.media.speechrecognition.SpeechRecognitionTopicConstraint;
     overload function Scenario(): winrt.windows.media.speechrecognition.SpeechRecognitionScenario;

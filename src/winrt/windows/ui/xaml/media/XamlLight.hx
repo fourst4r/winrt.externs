@@ -9,8 +9,7 @@ extern class XamlLight
     implements winrt.windows.ui.xaml.media.IXamlLightProtected
     implements winrt.windows.ui.xaml.media.IXamlLightOverrides
 {
-    @:native("winrt::Windows::UI::Xaml::Media::XamlLight")
-    static overload function make(): winrt.windows.ui.xaml.media.XamlLight;
+    function new();
     overload function CompositionLight(): winrt.windows.ui.composition.CompositionLight;
     overload function CompositionLight(value: cxx.ConstRef<winrt.windows.ui.composition.CompositionLight>): Void;
     function GetId(): winrt.HString;

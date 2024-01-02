@@ -8,8 +8,7 @@ extern class FlipView
     implements winrt.windows.ui.xaml.controls.IFlipView
     implements winrt.windows.ui.xaml.controls.IFlipView2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::FlipView")
-    static overload function make(): winrt.windows.ui.xaml.controls.FlipView;
+    function new();
     overload function UseTouchAnimationsForAllNavigation(): Bool;
     overload function UseTouchAnimationsForAllNavigation(value: Bool): Void;
     overload function UseTouchAnimationsForAllNavigationProperty(): winrt.windows.ui.xaml.DependencyProperty;

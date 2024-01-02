@@ -6,8 +6,7 @@ package winrt.microsoft.ui.xaml;
 extern class ScalarTransition
     implements winrt.microsoft.ui.xaml.IScalarTransition
 {
-    @:native("winrt::Microsoft::UI::Xaml::ScalarTransition")
-    static overload function make(): winrt.microsoft.ui.xaml.ScalarTransition;
+    function new();
     overload function Duration(): winrt.windows.foundation.TimeSpan;
     overload function Duration(value: cxx.ConstRef<winrt.windows.foundation.TimeSpan>): Void;
 }

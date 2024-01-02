@@ -7,8 +7,7 @@ extern class SettingsFlyout
     extends winrt.windows.ui.xaml.controls.ContentControl
     implements winrt.windows.ui.xaml.controls.ISettingsFlyout
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::SettingsFlyout")
-    static overload function make(): winrt.windows.ui.xaml.controls.SettingsFlyout;
+    function new();
     overload function Title(): winrt.HString;
     overload function Title(value: cxx.ConstRef<winrt.HString>): Void;
     overload function HeaderBackground(): winrt.windows.ui.xaml.media.Brush;

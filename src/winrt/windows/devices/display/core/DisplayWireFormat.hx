@@ -6,8 +6,7 @@ package winrt.windows.devices.display.core;
 extern class DisplayWireFormat
     implements winrt.windows.devices.display.core.IDisplayWireFormat
 {
-    @:native("winrt::Windows::Devices::Display::Core::DisplayWireFormat")
-    static overload function make(pixelEncoding: cxx.ConstRef<winrt.windows.devices.display.core.DisplayWireFormatPixelEncoding>, bitsPerChannel: cxx.num.Int32, colorSpace: cxx.ConstRef<winrt.windows.devices.display.core.DisplayWireFormatColorSpace>, eotf: cxx.ConstRef<winrt.windows.devices.display.core.DisplayWireFormatEotf>, hdrMetadata: cxx.ConstRef<winrt.windows.devices.display.core.DisplayWireFormatHdrMetadata>): winrt.windows.devices.display.core.DisplayWireFormat;
+    function new(pixelEncoding: cxx.ConstRef<winrt.windows.devices.display.core.DisplayWireFormatPixelEncoding>, bitsPerChannel: cxx.num.Int32, colorSpace: cxx.ConstRef<winrt.windows.devices.display.core.DisplayWireFormatColorSpace>, eotf: cxx.ConstRef<winrt.windows.devices.display.core.DisplayWireFormatEotf>, hdrMetadata: cxx.ConstRef<winrt.windows.devices.display.core.DisplayWireFormatHdrMetadata>);
     overload function PixelEncoding(): winrt.windows.devices.display.core.DisplayWireFormatPixelEncoding;
     overload function BitsPerChannel(): cxx.num.Int32;
     overload function ColorSpace(): winrt.windows.devices.display.core.DisplayWireFormatColorSpace;

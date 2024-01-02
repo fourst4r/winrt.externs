@@ -7,8 +7,7 @@ extern class MonochromaticOverlayPresenter
     extends winrt.microsoft.ui.xaml.controls.Grid
     implements winrt.microsoft.ui.xaml.controls.primitives.IMonochromaticOverlayPresenter
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::MonochromaticOverlayPresenter")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.primitives.MonochromaticOverlayPresenter;
+    function new();
     overload function SourceElement(): winrt.microsoft.ui.xaml.UIElement;
     overload function SourceElement(value: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
     overload function ReplacementColor(): winrt.windows.ui.Color;

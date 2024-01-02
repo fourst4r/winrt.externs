@@ -6,7 +6,6 @@ package winrt.windows.devices.alljoyn;
 extern class AllJoynSessionMemberRemovedEventArgs
     implements winrt.windows.devices.alljoyn.IAllJoynSessionMemberRemovedEventArgs
 {
-    @:native("winrt::Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs")
-    /* explicit */ static overload function make(uniqueName: cxx.ConstRef<winrt.HString>): winrt.windows.devices.alljoyn.AllJoynSessionMemberRemovedEventArgs;
+    /* explicit */ function new(uniqueName: cxx.ConstRef<winrt.HString>);
     overload function UniqueName(): winrt.HString;
 }

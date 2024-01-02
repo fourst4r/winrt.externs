@@ -7,8 +7,7 @@ extern class MapLayer
     extends winrt.windows.ui.xaml.DependencyObject
     implements winrt.windows.ui.xaml.controls.maps.IMapLayer
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapLayer")
-    static overload function make(): winrt.windows.ui.xaml.controls.maps.MapLayer;
+    function new();
     overload function MapTabIndex(): cxx.num.Int32;
     overload function MapTabIndex(value: cxx.num.Int32): Void;
     overload function Visible(): Bool;

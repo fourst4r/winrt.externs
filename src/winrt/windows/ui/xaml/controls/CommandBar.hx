@@ -9,8 +9,7 @@ extern class CommandBar
     implements winrt.windows.ui.xaml.controls.ICommandBar2
     implements winrt.windows.ui.xaml.controls.ICommandBar3
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::CommandBar")
-    static overload function make(): winrt.windows.ui.xaml.controls.CommandBar;
+    function new();
     overload function PrimaryCommands(): winrt.windows.foundation.collections.IObservableVector<winrt.windows.ui.xaml.controls.ICommandBarElement> /* GenericTypeInstSig */;
     overload function SecondaryCommands(): winrt.windows.foundation.collections.IObservableVector<winrt.windows.ui.xaml.controls.ICommandBarElement> /* GenericTypeInstSig */;
     overload function CommandBarOverflowPresenterStyle(): winrt.windows.ui.xaml.Style;

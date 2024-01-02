@@ -10,8 +10,7 @@ extern class MediaStreamSource
     implements winrt.windows.media.core.IMediaStreamSource3
     implements winrt.windows.media.core.IMediaStreamSource4
 {
-    @:native("winrt::Windows::Media::Core::MediaStreamSource")
-    /* explicit */ static overload function make(descriptor: cxx.ConstRef<winrt.windows.media.core.IMediaStreamDescriptor>): winrt.windows.media.core.MediaStreamSource;
+    /* explicit */ function new(descriptor: cxx.ConstRef<winrt.windows.media.core.IMediaStreamDescriptor>);
     @:native("winrt::Windows::Media::Core::MediaStreamSource")
     static overload function make(descriptor: cxx.ConstRef<winrt.windows.media.core.IMediaStreamDescriptor>, descriptor2: cxx.ConstRef<winrt.windows.media.core.IMediaStreamDescriptor>): winrt.windows.media.core.MediaStreamSource;
     overload function Closed(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MediaStreamSource, winrt.windows.media.core.MediaStreamSourceClosedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;

@@ -7,8 +7,7 @@ extern class SpeechRecognitionGrammarFileConstraint
     implements winrt.windows.media.speechrecognition.ISpeechRecognitionConstraint
     implements winrt.windows.media.speechrecognition.ISpeechRecognitionGrammarFileConstraint
 {
-    @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint")
-    /* explicit */ static overload function make(file: cxx.ConstRef<winrt.windows.storage.StorageFile>): winrt.windows.media.speechrecognition.SpeechRecognitionGrammarFileConstraint;
+    /* explicit */ function new(file: cxx.ConstRef<winrt.windows.storage.StorageFile>);
     @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint")
     static overload function make(file: cxx.ConstRef<winrt.windows.storage.StorageFile>, tag: cxx.ConstRef<winrt.HString>): winrt.windows.media.speechrecognition.SpeechRecognitionGrammarFileConstraint;
     overload function GrammarFile(): winrt.windows.storage.StorageFile;

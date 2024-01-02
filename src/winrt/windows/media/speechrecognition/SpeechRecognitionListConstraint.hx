@@ -7,8 +7,7 @@ extern class SpeechRecognitionListConstraint
     implements winrt.windows.media.speechrecognition.ISpeechRecognitionConstraint
     implements winrt.windows.media.speechrecognition.ISpeechRecognitionListConstraint
 {
-    @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint")
-    /* explicit */ static overload function make(commands: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.media.speechrecognition.SpeechRecognitionListConstraint;
+    /* explicit */ function new(commands: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>);
     @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint")
     static overload function make(commands: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, tag: cxx.ConstRef<winrt.HString>): winrt.windows.media.speechrecognition.SpeechRecognitionListConstraint;
     overload function Commands(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;

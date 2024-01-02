@@ -6,7 +6,6 @@ package winrt.windows.devices.alljoyn;
 extern class AllJoynServiceInfoRemovedEventArgs
     implements winrt.windows.devices.alljoyn.IAllJoynServiceInfoRemovedEventArgs
 {
-    @:native("winrt::Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs")
-    /* explicit */ static overload function make(uniqueName: cxx.ConstRef<winrt.HString>): winrt.windows.devices.alljoyn.AllJoynServiceInfoRemovedEventArgs;
+    /* explicit */ function new(uniqueName: cxx.ConstRef<winrt.HString>);
     overload function UniqueName(): winrt.HString;
 }

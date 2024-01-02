@@ -6,7 +6,6 @@ package winrt.windows.devices.alljoyn;
 extern class AllJoynBusObjectStoppedEventArgs
     implements winrt.windows.devices.alljoyn.IAllJoynBusObjectStoppedEventArgs
 {
-    @:native("winrt::Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs")
-    /* explicit */ static overload function make(status: cxx.num.Int32): winrt.windows.devices.alljoyn.AllJoynBusObjectStoppedEventArgs;
+    /* explicit */ function new(status: cxx.num.Int32);
     overload function Status(): cxx.num.Int32;
 }

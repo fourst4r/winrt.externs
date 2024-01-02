@@ -9,8 +9,7 @@ extern class ItemsControl
     implements winrt.microsoft.ui.xaml.controls.IItemsControlOverrides
     implements winrt.microsoft.ui.xaml.controls.IItemContainerMapping
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::ItemsControl")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.ItemsControl;
+    function new();
     overload function ItemsSource(): winrt.windows.foundation.IInspectable;
     overload function ItemsSource(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function Items(): winrt.microsoft.ui.xaml.controls.ItemCollection;

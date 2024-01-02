@@ -7,8 +7,7 @@ extern class CustomSystemEventTrigger
     implements winrt.windows.applicationmodel.background.ICustomSystemEventTrigger
     implements winrt.windows.applicationmodel.background.IBackgroundTrigger
 {
-    @:native("winrt::Windows::ApplicationModel::Background::CustomSystemEventTrigger")
-    static overload function make(triggerId: cxx.ConstRef<winrt.HString>, recurrence: cxx.ConstRef<winrt.windows.applicationmodel.background.CustomSystemEventTriggerRecurrence>): winrt.windows.applicationmodel.background.CustomSystemEventTrigger;
+    function new(triggerId: cxx.ConstRef<winrt.HString>, recurrence: cxx.ConstRef<winrt.windows.applicationmodel.background.CustomSystemEventTriggerRecurrence>);
     overload function TriggerId(): winrt.HString;
     overload function Recurrence(): winrt.windows.applicationmodel.background.CustomSystemEventTriggerRecurrence;
 }

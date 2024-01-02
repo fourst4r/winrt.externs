@@ -7,8 +7,7 @@ extern class ColorPicker
     extends winrt.windows.ui.xaml.controls.Control
     implements winrt.windows.ui.xaml.controls.IColorPicker
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::ColorPicker")
-    static overload function make(): winrt.windows.ui.xaml.controls.ColorPicker;
+    function new();
     overload function Color(): winrt.windows.ui.Color;
     overload function Color(value: cxx.ConstRef<winrt.windows.ui.Color>): Void;
     overload function PreviousColor(): winrt.windows.foundation.IReference<winrt.windows.ui.Color> /* GenericTypeInstSig */;

@@ -8,8 +8,7 @@ extern class InkToolbarEraserButton
     implements winrt.windows.ui.xaml.controls.IInkToolbarEraserButton
     implements winrt.windows.ui.xaml.controls.IInkToolbarEraserButton2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::InkToolbarEraserButton")
-    static overload function make(): winrt.windows.ui.xaml.controls.InkToolbarEraserButton;
+    function new();
     overload function IsClearAllVisible(): Bool;
     overload function IsClearAllVisible(value: Bool): Void;
     overload function IsClearAllVisibleProperty(): winrt.windows.ui.xaml.DependencyProperty;

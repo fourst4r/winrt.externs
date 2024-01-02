@@ -7,8 +7,7 @@ extern class LoggingSession
     implements winrt.windows.foundation.IClosable
     implements winrt.windows.foundation.diagnostics.ILoggingSession
 {
-    @:native("winrt::Windows::Foundation::Diagnostics::LoggingSession")
-    /* explicit */ static overload function make(name: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.diagnostics.LoggingSession;
+    /* explicit */ function new(name: cxx.ConstRef<winrt.HString>);
     overload function Name(): winrt.HString;
     function SaveToFileAsync(folder: cxx.ConstRef<winrt.windows.storage.IStorageFolder>, fileName: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.StorageFile> /* GenericTypeInstSig */;
     overload function AddLoggingChannel(loggingChannel: cxx.ConstRef<winrt.windows.foundation.diagnostics.ILoggingChannel>): Void;

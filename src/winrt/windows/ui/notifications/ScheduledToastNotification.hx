@@ -9,8 +9,7 @@ extern class ScheduledToastNotification
     implements winrt.windows.ui.notifications.IScheduledToastNotification3
     implements winrt.windows.ui.notifications.IScheduledToastNotification4
 {
-    @:native("winrt::Windows::UI::Notifications::ScheduledToastNotification")
-    static overload function make(content: cxx.ConstRef<winrt.windows.data.xml.dom.XmlDocument>, deliveryTime: cxx.ConstRef<winrt.windows.foundation.DateTime>): winrt.windows.ui.notifications.ScheduledToastNotification;
+    function new(content: cxx.ConstRef<winrt.windows.data.xml.dom.XmlDocument>, deliveryTime: cxx.ConstRef<winrt.windows.foundation.DateTime>);
     @:native("winrt::Windows::UI::Notifications::ScheduledToastNotification")
     static overload function make(content: cxx.ConstRef<winrt.windows.data.xml.dom.XmlDocument>, deliveryTime: cxx.ConstRef<winrt.windows.foundation.DateTime>, snoozeInterval: cxx.ConstRef<winrt.windows.foundation.TimeSpan>, maximumSnoozeCount: cxx.num.UInt32): winrt.windows.ui.notifications.ScheduledToastNotification;
     overload function Content(): winrt.windows.data.xml.dom.XmlDocument;

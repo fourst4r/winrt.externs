@@ -10,8 +10,7 @@ extern class AudioStreamDescriptor
     implements winrt.windows.media.core.IMediaStreamDescriptor2
     implements winrt.windows.media.core.IAudioStreamDescriptor3
 {
-    @:native("winrt::Windows::Media::Core::AudioStreamDescriptor")
-    /* explicit */ static overload function make(encodingProperties: cxx.ConstRef<winrt.windows.media.mediaproperties.AudioEncodingProperties>): winrt.windows.media.core.AudioStreamDescriptor;
+    /* explicit */ function new(encodingProperties: cxx.ConstRef<winrt.windows.media.mediaproperties.AudioEncodingProperties>);
     overload function EncodingProperties(): winrt.windows.media.mediaproperties.AudioEncodingProperties;
     overload function IsSelected(): Bool;
     overload function Name(value: cxx.ConstRef<winrt.HString>): Void;

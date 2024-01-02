@@ -7,8 +7,7 @@ extern class ToggleMenuFlyoutItem
     extends winrt.windows.ui.xaml.controls.MenuFlyoutItem
     implements winrt.windows.ui.xaml.controls.IToggleMenuFlyoutItem
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::ToggleMenuFlyoutItem")
-    static overload function make(): winrt.windows.ui.xaml.controls.ToggleMenuFlyoutItem;
+    function new();
     overload function IsChecked(): Bool;
     overload function IsChecked(value: Bool): Void;
     overload function IsCheckedProperty(): winrt.windows.ui.xaml.DependencyProperty;

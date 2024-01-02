@@ -7,8 +7,7 @@ extern class StandardUICommand
     extends winrt.microsoft.ui.xaml.input.XamlUICommand
     implements winrt.microsoft.ui.xaml.input.IStandardUICommand
 {
-    @:native("winrt::Microsoft::UI::Xaml::Input::StandardUICommand")
-    static overload function make(): winrt.microsoft.ui.xaml.input.StandardUICommand;
+    function new();
     @:native("winrt::Microsoft::UI::Xaml::Input::StandardUICommand")
     /* explicit */ static overload function make(kind: cxx.ConstRef<winrt.microsoft.ui.xaml.input.StandardUICommandKind>): winrt.microsoft.ui.xaml.input.StandardUICommand;
     overload function Kind(): winrt.microsoft.ui.xaml.input.StandardUICommandKind;

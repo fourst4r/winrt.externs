@@ -8,8 +8,7 @@ extern class ProgressRingAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IProgressRingAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IRangeValueProvider
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.ProgressRing>): winrt.microsoft.ui.xaml.automation.peers.ProgressRingAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.ProgressRing>);
     overload function IsReadOnly(): Bool;
     overload function LargeChange(): cxx.num.Float64;
     overload function Maximum(): cxx.num.Float64;

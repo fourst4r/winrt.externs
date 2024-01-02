@@ -6,8 +6,7 @@ package winrt.windows.devices.wifidirect.services;
 extern class WiFiDirectServiceAdvertiser
     implements winrt.windows.devices.wifidirect.services.IWiFiDirectServiceAdvertiser
 {
-    @:native("winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAdvertiser")
-    /* explicit */ static overload function make(serviceName: cxx.ConstRef<winrt.HString>): winrt.windows.devices.wifidirect.services.WiFiDirectServiceAdvertiser;
+    /* explicit */ function new(serviceName: cxx.ConstRef<winrt.HString>);
     overload function ServiceName(): winrt.HString;
     overload function ServiceNamePrefixes(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function ServiceInfo(): winrt.windows.storage.streams.IBuffer;

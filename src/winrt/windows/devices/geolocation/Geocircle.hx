@@ -7,8 +7,7 @@ extern class Geocircle
     implements winrt.windows.devices.geolocation.IGeoshape
     implements winrt.windows.devices.geolocation.IGeocircle
 {
-    @:native("winrt::Windows::Devices::Geolocation::Geocircle")
-    static overload function make(position: cxx.ConstRef<winrt.windows.devices.geolocation.BasicGeoposition>, radius: cxx.num.Float64): winrt.windows.devices.geolocation.Geocircle;
+    function new(position: cxx.ConstRef<winrt.windows.devices.geolocation.BasicGeoposition>, radius: cxx.num.Float64);
     @:native("winrt::Windows::Devices::Geolocation::Geocircle")
     static overload function make(position: cxx.ConstRef<winrt.windows.devices.geolocation.BasicGeoposition>, radius: cxx.num.Float64, altitudeReferenceSystem: cxx.ConstRef<winrt.windows.devices.geolocation.AltitudeReferenceSystem>): winrt.windows.devices.geolocation.Geocircle;
     @:native("winrt::Windows::Devices::Geolocation::Geocircle")

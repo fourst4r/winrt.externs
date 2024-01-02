@@ -9,8 +9,7 @@ extern class Pivot
     implements winrt.windows.ui.xaml.controls.IPivot2
     implements winrt.windows.ui.xaml.controls.IPivot3
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Pivot")
-    static overload function make(): winrt.windows.ui.xaml.controls.Pivot;
+    function new();
     overload function Title(): winrt.windows.foundation.IInspectable;
     overload function Title(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function TitleTemplate(): winrt.windows.ui.xaml.DataTemplate;

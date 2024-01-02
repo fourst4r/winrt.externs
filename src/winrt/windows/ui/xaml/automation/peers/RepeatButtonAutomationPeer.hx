@@ -8,7 +8,6 @@ extern class RepeatButtonAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IRepeatButtonAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.IInvokeProvider
 {
-    @:native("winrt::Windows::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.windows.ui.xaml.controls.primitives.RepeatButton>): winrt.windows.ui.xaml.automation.peers.RepeatButtonAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.windows.ui.xaml.controls.primitives.RepeatButton>);
     function Invoke(): Void;
 }

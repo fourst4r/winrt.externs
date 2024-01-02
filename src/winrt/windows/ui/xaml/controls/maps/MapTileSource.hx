@@ -8,8 +8,7 @@ extern class MapTileSource
     implements winrt.windows.ui.xaml.controls.maps.IMapTileSource
     implements winrt.windows.ui.xaml.controls.maps.IMapTileSource2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource")
-    static overload function make(): winrt.windows.ui.xaml.controls.maps.MapTileSource;
+    function new();
     @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource")
     /* explicit */ static overload function make(dataSource: cxx.ConstRef<winrt.windows.ui.xaml.controls.maps.MapTileDataSource>): winrt.windows.ui.xaml.controls.maps.MapTileSource;
     @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource")

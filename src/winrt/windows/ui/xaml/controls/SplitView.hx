@@ -9,8 +9,7 @@ extern class SplitView
     implements winrt.windows.ui.xaml.controls.ISplitView2
     implements winrt.windows.ui.xaml.controls.ISplitView3
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::SplitView")
-    static overload function make(): winrt.windows.ui.xaml.controls.SplitView;
+    function new();
     overload function Content(): winrt.windows.ui.xaml.UIElement;
     overload function Content(value: cxx.ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
     overload function Pane(): winrt.windows.ui.xaml.UIElement;

@@ -7,8 +7,7 @@ extern class InkToolbarFlyoutItem
     extends winrt.windows.ui.xaml.controls.primitives.ButtonBase
     implements winrt.windows.ui.xaml.controls.IInkToolbarFlyoutItem
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::InkToolbarFlyoutItem")
-    static overload function make(): winrt.windows.ui.xaml.controls.InkToolbarFlyoutItem;
+    function new();
     overload function Kind(): winrt.windows.ui.xaml.controls.InkToolbarFlyoutItemKind;
     overload function Kind(value: cxx.ConstRef<winrt.windows.ui.xaml.controls.InkToolbarFlyoutItemKind>): Void;
     overload function IsChecked(): Bool;

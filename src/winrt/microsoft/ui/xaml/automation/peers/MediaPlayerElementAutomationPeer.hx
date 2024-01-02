@@ -7,6 +7,5 @@ extern class MediaPlayerElementAutomationPeer
     extends winrt.microsoft.ui.xaml.automation.peers.FrameworkElementAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IMediaPlayerElementAutomationPeer
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.MediaPlayerElement>): winrt.microsoft.ui.xaml.automation.peers.MediaPlayerElementAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.MediaPlayerElement>);
 }

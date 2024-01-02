@@ -7,8 +7,7 @@ extern class Geopath
     implements winrt.windows.devices.geolocation.IGeoshape
     implements winrt.windows.devices.geolocation.IGeopath
 {
-    @:native("winrt::Windows::Devices::Geolocation::Geopath")
-    /* explicit */ static overload function make(positions: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.devices.geolocation.BasicGeoposition> /* temp_GenericTypeInstSig */>): winrt.windows.devices.geolocation.Geopath;
+    /* explicit */ function new(positions: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.devices.geolocation.BasicGeoposition> /* temp_GenericTypeInstSig */>);
     @:native("winrt::Windows::Devices::Geolocation::Geopath")
     static overload function make(positions: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.devices.geolocation.BasicGeoposition> /* temp_GenericTypeInstSig */>, altitudeReferenceSystem: cxx.ConstRef<winrt.windows.devices.geolocation.AltitudeReferenceSystem>): winrt.windows.devices.geolocation.Geopath;
     @:native("winrt::Windows::Devices::Geolocation::Geopath")

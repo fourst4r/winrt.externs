@@ -7,8 +7,7 @@ extern class GpioChangeCounter
     implements winrt.windows.foundation.IClosable
     implements winrt.windows.devices.gpio.IGpioChangeCounter
 {
-    @:native("winrt::Windows::Devices::Gpio::GpioChangeCounter")
-    /* explicit */ static overload function make(pin: cxx.ConstRef<winrt.windows.devices.gpio.GpioPin>): winrt.windows.devices.gpio.GpioChangeCounter;
+    /* explicit */ function new(pin: cxx.ConstRef<winrt.windows.devices.gpio.GpioPin>);
     overload function Polarity(value: cxx.ConstRef<winrt.windows.devices.gpio.GpioChangePolarity>): Void;
     overload function Polarity(): winrt.windows.devices.gpio.GpioChangePolarity;
     overload function IsStarted(): Bool;

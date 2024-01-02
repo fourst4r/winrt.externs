@@ -8,7 +8,6 @@ extern class GridViewItemDataAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IGridViewItemDataAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.IScrollItemProvider
 {
-    @:native("winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer")
-    static overload function make(item: cxx.ConstRef<winrt.windows.foundation.IInspectable>, parent: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.GridViewAutomationPeer>): winrt.windows.ui.xaml.automation.peers.GridViewItemDataAutomationPeer;
+    function new(item: cxx.ConstRef<winrt.windows.foundation.IInspectable>, parent: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.GridViewAutomationPeer>);
     function ScrollIntoView(): Void;
 }

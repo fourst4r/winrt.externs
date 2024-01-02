@@ -10,8 +10,7 @@ extern class ListViewItemPresenter
     implements winrt.windows.ui.xaml.controls.primitives.IListViewItemPresenter3
     implements winrt.windows.ui.xaml.controls.primitives.IListViewItemPresenter4
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter")
-    static overload function make(): winrt.windows.ui.xaml.controls.primitives.ListViewItemPresenter;
+    function new();
     overload function SelectionCheckMarkVisualEnabled(): Bool;
     overload function SelectionCheckMarkVisualEnabled(value: Bool): Void;
     overload function CheckHintBrush(): winrt.windows.ui.xaml.media.Brush;

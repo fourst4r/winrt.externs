@@ -5,6 +5,7 @@ package winrt.windows.devices.sensors;
 @:native("winrt::Windows::Devices::Sensors::HumanPresenceSettings")
 extern class HumanPresenceSettings
     implements winrt.windows.devices.sensors.IHumanPresenceSettings
+    implements winrt.windows.devices.sensors.IHumanPresenceSettings2
 {
     overload function SensorId(): winrt.HString;
     overload function SensorId(value: cxx.ConstRef<winrt.HString>): Void;
@@ -20,6 +21,11 @@ extern class HumanPresenceSettings
     overload function LockOnLeaveTimeout(value: cxx.ConstRef<winrt.windows.foundation.TimeSpan>): Void;
     overload function IsAttentionAwareDimmingEnabled(): Bool;
     overload function IsAttentionAwareDimmingEnabled(value: Bool): Void;
+    overload function IsAdaptiveDimmingEnabled(): Bool;
+    overload function IsAdaptiveDimmingEnabled(value: Bool): Void;
+    overload function WakeOptions(): winrt.windows.devices.sensors.WakeOnApproachOptions;
+    overload function DimmingOptions(): winrt.windows.devices.sensors.AdaptiveDimmingOptions;
+    overload function LockOptions(): winrt.windows.devices.sensors.LockOnLeaveOptions;
     function GetCurrentSettingsAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.sensors.HumanPresenceSettings> /* GenericTypeInstSig */;
     function GetCurrentSettings(): winrt.windows.devices.sensors.HumanPresenceSettings;
     function UpdateSettingsAsync(settings: cxx.ConstRef<winrt.windows.devices.sensors.HumanPresenceSettings>): winrt.windows.foundation.IAsyncAction;

@@ -6,8 +6,7 @@ package winrt.windows.security.cryptography.certificates;
 extern class CmsDetachedSignature
     implements winrt.windows.security.cryptography.certificates.ICmsDetachedSignature
 {
-    @:native("winrt::Windows::Security::Cryptography::Certificates::CmsDetachedSignature")
-    /* explicit */ static overload function make(inputBlob: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.security.cryptography.certificates.CmsDetachedSignature;
+    /* explicit */ function new(inputBlob: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>);
     overload function Certificates(): winrt.windows.foundation.collections.IVectorView<winrt.windows.security.cryptography.certificates.Certificate> /* GenericTypeInstSig */;
     overload function Signers(): winrt.windows.foundation.collections.IVectorView<winrt.windows.security.cryptography.certificates.CmsSignerInfo> /* GenericTypeInstSig */;
     function VerifySignatureAsync(data: cxx.ConstRef<winrt.windows.storage.streams.IInputStream>): winrt.windows.foundation.IAsyncOperation<winrt.windows.security.cryptography.certificates.SignatureValidationResult> /* GenericTypeInstSig */;

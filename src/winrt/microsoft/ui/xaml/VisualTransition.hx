@@ -7,8 +7,7 @@ extern class VisualTransition
     extends winrt.microsoft.ui.xaml.DependencyObject
     implements winrt.microsoft.ui.xaml.IVisualTransition
 {
-    @:native("winrt::Microsoft::UI::Xaml::VisualTransition")
-    static overload function make(): winrt.microsoft.ui.xaml.VisualTransition;
+    function new();
     overload function GeneratedDuration(): winrt.microsoft.ui.xaml.Duration;
     overload function GeneratedDuration(value: cxx.ConstRef<winrt.microsoft.ui.xaml.Duration>): Void;
     overload function GeneratedEasingFunction(): winrt.microsoft.ui.xaml.media.animation.EasingFunctionBase;

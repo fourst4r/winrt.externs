@@ -7,6 +7,5 @@ extern class DatePickerAutomationPeer
     extends winrt.microsoft.ui.xaml.automation.peers.FrameworkElementAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IDatePickerAutomationPeer
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::DatePickerAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.DatePicker>): winrt.microsoft.ui.xaml.automation.peers.DatePickerAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.DatePicker>);
 }

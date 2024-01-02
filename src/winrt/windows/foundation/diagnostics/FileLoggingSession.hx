@@ -7,8 +7,7 @@ extern class FileLoggingSession
     implements winrt.windows.foundation.IClosable
     implements winrt.windows.foundation.diagnostics.IFileLoggingSession
 {
-    @:native("winrt::Windows::Foundation::Diagnostics::FileLoggingSession")
-    /* explicit */ static overload function make(name: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.diagnostics.FileLoggingSession;
+    /* explicit */ function new(name: cxx.ConstRef<winrt.HString>);
     overload function Name(): winrt.HString;
     overload function AddLoggingChannel(loggingChannel: cxx.ConstRef<winrt.windows.foundation.diagnostics.ILoggingChannel>): Void;
     overload function AddLoggingChannel(loggingChannel: cxx.ConstRef<winrt.windows.foundation.diagnostics.ILoggingChannel>, maxLevel: cxx.ConstRef<winrt.windows.foundation.diagnostics.LoggingLevel>): Void;

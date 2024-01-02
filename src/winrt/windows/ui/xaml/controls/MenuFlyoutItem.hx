@@ -9,8 +9,7 @@ extern class MenuFlyoutItem
     implements winrt.windows.ui.xaml.controls.IMenuFlyoutItem2
     implements winrt.windows.ui.xaml.controls.IMenuFlyoutItem3
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::MenuFlyoutItem")
-    static overload function make(): winrt.windows.ui.xaml.controls.MenuFlyoutItem;
+    function new();
     overload function Text(): winrt.HString;
     overload function Text(value: cxx.ConstRef<winrt.HString>): Void;
     overload function Command(): winrt.windows.ui.xaml.input.ICommand;

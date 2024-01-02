@@ -7,8 +7,7 @@ extern class ChatMessageAttachment
     implements winrt.windows.applicationmodel.chat.IChatMessageAttachment
     implements winrt.windows.applicationmodel.chat.IChatMessageAttachment2
 {
-    @:native("winrt::Windows::ApplicationModel::Chat::ChatMessageAttachment")
-    static overload function make(mimeType: cxx.ConstRef<winrt.HString>, dataStreamReference: cxx.ConstRef<winrt.windows.storage.streams.IRandomAccessStreamReference>): winrt.windows.applicationmodel.chat.ChatMessageAttachment;
+    function new(mimeType: cxx.ConstRef<winrt.HString>, dataStreamReference: cxx.ConstRef<winrt.windows.storage.streams.IRandomAccessStreamReference>);
     overload function DataStreamReference(): winrt.windows.storage.streams.IRandomAccessStreamReference;
     overload function DataStreamReference(value: cxx.ConstRef<winrt.windows.storage.streams.IRandomAccessStreamReference>): Void;
     overload function GroupId(): cxx.num.UInt32;

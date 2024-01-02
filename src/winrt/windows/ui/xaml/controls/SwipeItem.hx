@@ -7,8 +7,7 @@ extern class SwipeItem
     extends winrt.windows.ui.xaml.DependencyObject
     implements winrt.windows.ui.xaml.controls.ISwipeItem
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::SwipeItem")
-    static overload function make(): winrt.windows.ui.xaml.controls.SwipeItem;
+    function new();
     overload function Text(): winrt.HString;
     overload function Text(value: cxx.ConstRef<winrt.HString>): Void;
     overload function IconSource(): winrt.windows.ui.xaml.controls.IconSource;

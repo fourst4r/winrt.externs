@@ -6,8 +6,7 @@ package winrt.windows.system.threading.core;
 extern class PreallocatedWorkItem
     implements winrt.windows.system.threading.core.IPreallocatedWorkItem
 {
-    @:native("winrt::Windows::System::Threading::Core::PreallocatedWorkItem")
-    /* explicit */ static overload function make(handler: cxx.ConstRef<winrt.windows.system.threading.WorkItemHandler>): winrt.windows.system.threading.core.PreallocatedWorkItem;
+    /* explicit */ function new(handler: cxx.ConstRef<winrt.windows.system.threading.WorkItemHandler>);
     @:native("winrt::Windows::System::Threading::Core::PreallocatedWorkItem")
     static overload function make(handler: cxx.ConstRef<winrt.windows.system.threading.WorkItemHandler>, priority: cxx.ConstRef<winrt.windows.system.threading.WorkItemPriority>): winrt.windows.system.threading.core.PreallocatedWorkItem;
     @:native("winrt::Windows::System::Threading::Core::PreallocatedWorkItem")

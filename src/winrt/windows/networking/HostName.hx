@@ -7,8 +7,7 @@ extern class HostName
     implements winrt.windows.networking.IHostName
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Networking::HostName")
-    /* explicit */ static overload function make(hostName: cxx.ConstRef<winrt.HString>): winrt.windows.networking.HostName;
+    /* explicit */ function new(hostName: cxx.ConstRef<winrt.HString>);
     overload function IPInformation(): winrt.windows.networking.connectivity.IPInformation;
     overload function RawName(): winrt.HString;
     overload function DisplayName(): winrt.HString;

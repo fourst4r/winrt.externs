@@ -6,8 +6,7 @@ package winrt.windows.networking.networkoperators;
 extern class MobileBroadbandAntennaSar
     implements winrt.windows.networking.networkoperators.IMobileBroadbandAntennaSar
 {
-    @:native("winrt::Windows::Networking::NetworkOperators::MobileBroadbandAntennaSar")
-    static overload function make(antennaIndex: cxx.num.Int32, sarBackoffIndex: cxx.num.Int32): winrt.windows.networking.networkoperators.MobileBroadbandAntennaSar;
+    function new(antennaIndex: cxx.num.Int32, sarBackoffIndex: cxx.num.Int32);
     overload function AntennaIndex(): cxx.num.Int32;
     overload function SarBackoffIndex(): cxx.num.Int32;
 }

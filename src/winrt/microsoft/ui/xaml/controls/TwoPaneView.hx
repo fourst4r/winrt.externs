@@ -7,8 +7,7 @@ extern class TwoPaneView
     extends winrt.microsoft.ui.xaml.controls.Control
     implements winrt.microsoft.ui.xaml.controls.ITwoPaneView
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::TwoPaneView")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.TwoPaneView;
+    function new();
     overload function Pane1(): winrt.microsoft.ui.xaml.UIElement;
     overload function Pane1(value: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
     overload function Pane2(): winrt.microsoft.ui.xaml.UIElement;

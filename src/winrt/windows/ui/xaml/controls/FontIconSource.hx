@@ -7,8 +7,7 @@ extern class FontIconSource
     extends winrt.windows.ui.xaml.controls.IconSource
     implements winrt.windows.ui.xaml.controls.IFontIconSource
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::FontIconSource")
-    static overload function make(): winrt.windows.ui.xaml.controls.FontIconSource;
+    function new();
     overload function Glyph(): winrt.HString;
     overload function Glyph(value: cxx.ConstRef<winrt.HString>): Void;
     overload function FontSize(): cxx.num.Float64;

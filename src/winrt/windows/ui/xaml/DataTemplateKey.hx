@@ -6,8 +6,7 @@ package winrt.windows.ui.xaml;
 extern class DataTemplateKey
     implements winrt.windows.ui.xaml.IDataTemplateKey
 {
-    @:native("winrt::Windows::UI::Xaml::DataTemplateKey")
-    static overload function make(): winrt.windows.ui.xaml.DataTemplateKey;
+    function new();
     @:native("winrt::Windows::UI::Xaml::DataTemplateKey")
     /* explicit */ static overload function make(dataType: cxx.ConstRef<winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.DataTemplateKey;
     overload function DataType(): winrt.windows.foundation.IInspectable;

@@ -7,8 +7,7 @@ extern class SwipeControl
     extends winrt.microsoft.ui.xaml.controls.ContentControl
     implements winrt.microsoft.ui.xaml.controls.ISwipeControl
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::SwipeControl")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.SwipeControl;
+    function new();
     overload function LeftItems(): winrt.microsoft.ui.xaml.controls.SwipeItems;
     overload function LeftItems(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.SwipeItems>): Void;
     overload function RightItems(): winrt.microsoft.ui.xaml.controls.SwipeItems;

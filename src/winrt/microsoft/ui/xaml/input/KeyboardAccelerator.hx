@@ -7,8 +7,7 @@ extern class KeyboardAccelerator
     extends winrt.microsoft.ui.xaml.DependencyObject
     implements winrt.microsoft.ui.xaml.input.IKeyboardAccelerator
 {
-    @:native("winrt::Microsoft::UI::Xaml::Input::KeyboardAccelerator")
-    static overload function make(): winrt.microsoft.ui.xaml.input.KeyboardAccelerator;
+    function new();
     overload function Key(): winrt.windows.system.VirtualKey;
     overload function Key(value: cxx.ConstRef<winrt.windows.system.VirtualKey>): Void;
     overload function Modifiers(): winrt.windows.system.VirtualKeyModifiers;

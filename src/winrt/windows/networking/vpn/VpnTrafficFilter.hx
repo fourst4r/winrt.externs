@@ -6,8 +6,7 @@ package winrt.windows.networking.vpn;
 extern class VpnTrafficFilter
     implements winrt.windows.networking.vpn.IVpnTrafficFilter
 {
-    @:native("winrt::Windows::Networking::Vpn::VpnTrafficFilter")
-    /* explicit */ static overload function make(appId: cxx.ConstRef<winrt.windows.networking.vpn.VpnAppId>): winrt.windows.networking.vpn.VpnTrafficFilter;
+    /* explicit */ function new(appId: cxx.ConstRef<winrt.windows.networking.vpn.VpnAppId>);
     overload function AppId(): winrt.windows.networking.vpn.VpnAppId;
     overload function AppId(value: cxx.ConstRef<winrt.windows.networking.vpn.VpnAppId>): Void;
     overload function AppClaims(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;

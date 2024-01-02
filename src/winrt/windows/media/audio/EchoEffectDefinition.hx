@@ -7,8 +7,7 @@ extern class EchoEffectDefinition
     implements winrt.windows.media.effects.IAudioEffectDefinition
     implements winrt.windows.media.audio.IEchoEffectDefinition
 {
-    @:native("winrt::Windows::Media::Audio::EchoEffectDefinition")
-    /* explicit */ static overload function make(audioGraph: cxx.ConstRef<winrt.windows.media.audio.AudioGraph>): winrt.windows.media.audio.EchoEffectDefinition;
+    /* explicit */ function new(audioGraph: cxx.ConstRef<winrt.windows.media.audio.AudioGraph>);
     overload function WetDryMix(value: cxx.num.Float64): Void;
     overload function WetDryMix(): cxx.num.Float64;
     overload function Feedback(value: cxx.num.Float64): Void;

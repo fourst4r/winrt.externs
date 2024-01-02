@@ -8,7 +8,6 @@ extern class MenuFlyoutItemAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IMenuFlyoutItemAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IInvokeProvider
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.MenuFlyoutItem>): winrt.microsoft.ui.xaml.automation.peers.MenuFlyoutItemAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.MenuFlyoutItem>);
     function Invoke(): Void;
 }

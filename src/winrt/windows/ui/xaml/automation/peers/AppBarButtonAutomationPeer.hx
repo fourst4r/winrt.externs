@@ -8,8 +8,7 @@ extern class AppBarButtonAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IAppBarButtonAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.IExpandCollapseProvider
 {
-    @:native("winrt::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.windows.ui.xaml.controls.AppBarButton>): winrt.windows.ui.xaml.automation.peers.AppBarButtonAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.windows.ui.xaml.controls.AppBarButton>);
     overload function ExpandCollapseState(): winrt.windows.ui.xaml.automation.ExpandCollapseState;
     function Collapse(): Void;
     function Expand(): Void;

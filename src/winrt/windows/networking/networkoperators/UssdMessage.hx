@@ -6,8 +6,7 @@ package winrt.windows.networking.networkoperators;
 extern class UssdMessage
     implements winrt.windows.networking.networkoperators.IUssdMessage
 {
-    @:native("winrt::Windows::Networking::NetworkOperators::UssdMessage")
-    /* explicit */ static overload function make(messageText: cxx.ConstRef<winrt.HString>): winrt.windows.networking.networkoperators.UssdMessage;
+    /* explicit */ function new(messageText: cxx.ConstRef<winrt.HString>);
     overload function DataCodingScheme(): cxx.num.UInt8;
     overload function DataCodingScheme(value: cxx.num.UInt8): Void;
     function GetPayload(): winrt.ComArray<cxx.num.UInt8>;

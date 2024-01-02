@@ -7,8 +7,7 @@ extern class DateTimeFormatter
     implements winrt.windows.globalization.datetimeformatting.IDateTimeFormatter
     implements winrt.windows.globalization.datetimeformatting.IDateTimeFormatter2
 {
-    @:native("winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter")
-    /* explicit */ static overload function make(formatTemplate: cxx.ConstRef<winrt.HString>): winrt.windows.globalization.datetimeformatting.DateTimeFormatter;
+    /* explicit */ function new(formatTemplate: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter")
     static overload function make(formatTemplate: cxx.ConstRef<winrt.HString>, languages: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.globalization.datetimeformatting.DateTimeFormatter;
     @:native("winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter")

@@ -6,8 +6,7 @@ package winrt.windows.system.remotesystems;
 extern class RemoteSystemSessionMessageChannel
     implements winrt.windows.system.remotesystems.IRemoteSystemSessionMessageChannel
 {
-    @:native("winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel")
-    static overload function make(session: cxx.ConstRef<winrt.windows.system.remotesystems.RemoteSystemSession>, channelName: cxx.ConstRef<winrt.HString>): winrt.windows.system.remotesystems.RemoteSystemSessionMessageChannel;
+    function new(session: cxx.ConstRef<winrt.windows.system.remotesystems.RemoteSystemSession>, channelName: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel")
     static overload function make(session: cxx.ConstRef<winrt.windows.system.remotesystems.RemoteSystemSession>, channelName: cxx.ConstRef<winrt.HString>, reliability: cxx.ConstRef<winrt.windows.system.remotesystems.RemoteSystemSessionMessageChannelReliability>): winrt.windows.system.remotesystems.RemoteSystemSessionMessageChannel;
     overload function Session(): winrt.windows.system.remotesystems.RemoteSystemSession;

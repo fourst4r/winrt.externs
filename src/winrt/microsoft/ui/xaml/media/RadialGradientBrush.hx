@@ -7,8 +7,7 @@ extern class RadialGradientBrush
     extends winrt.microsoft.ui.xaml.media.XamlCompositionBrushBase
     implements winrt.microsoft.ui.xaml.media.IRadialGradientBrush
 {
-    @:native("winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush")
-    static overload function make(): winrt.microsoft.ui.xaml.media.RadialGradientBrush;
+    function new();
     overload function Center(): winrt.windows.foundation.Point;
     overload function Center(value: cxx.ConstRef<winrt.windows.foundation.Point>): Void;
     overload function RadiusX(): cxx.num.Float64;

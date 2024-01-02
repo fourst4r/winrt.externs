@@ -6,8 +6,7 @@ package winrt.windows.media.effects;
 extern class AudioEffectDefinition
     implements winrt.windows.media.effects.IAudioEffectDefinition
 {
-    @:native("winrt::Windows::Media::Effects::AudioEffectDefinition")
-    /* explicit */ static overload function make(activatableClassId: cxx.ConstRef<winrt.HString>): winrt.windows.media.effects.AudioEffectDefinition;
+    /* explicit */ function new(activatableClassId: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::Media::Effects::AudioEffectDefinition")
     static overload function make(activatableClassId: cxx.ConstRef<winrt.HString>, props: cxx.ConstRef<winrt.windows.foundation.collections.IPropertySet>): winrt.windows.media.effects.AudioEffectDefinition;
     overload function ActivatableClassId(): winrt.HString;

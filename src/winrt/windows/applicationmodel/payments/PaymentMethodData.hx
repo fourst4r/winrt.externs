@@ -6,8 +6,7 @@ package winrt.windows.applicationmodel.payments;
 extern class PaymentMethodData
     implements winrt.windows.applicationmodel.payments.IPaymentMethodData
 {
-    @:native("winrt::Windows::ApplicationModel::Payments::PaymentMethodData")
-    /* explicit */ static overload function make(supportedMethodIds: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.applicationmodel.payments.PaymentMethodData;
+    /* explicit */ function new(supportedMethodIds: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>);
     @:native("winrt::Windows::ApplicationModel::Payments::PaymentMethodData")
     static overload function make(supportedMethodIds: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, jsonData: cxx.ConstRef<winrt.HString>): winrt.windows.applicationmodel.payments.PaymentMethodData;
     overload function SupportedMethodIds(): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;

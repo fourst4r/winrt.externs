@@ -8,8 +8,7 @@ extern class ExpanderAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IExpanderAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IExpandCollapseProvider
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::ExpanderAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.Expander>): winrt.microsoft.ui.xaml.automation.peers.ExpanderAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.Expander>);
     overload function ExpandCollapseState(): winrt.microsoft.ui.xaml.automation.ExpandCollapseState;
     function Collapse(): Void;
     function Expand(): Void;

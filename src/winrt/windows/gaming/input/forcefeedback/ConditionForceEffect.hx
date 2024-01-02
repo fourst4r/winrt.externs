@@ -7,8 +7,7 @@ extern class ConditionForceEffect
     implements winrt.windows.gaming.input.forcefeedback.IForceFeedbackEffect
     implements winrt.windows.gaming.input.forcefeedback.IConditionForceEffect
 {
-    @:native("winrt::Windows::Gaming::Input::ForceFeedback::ConditionForceEffect")
-    /* explicit */ static overload function make(effectKind: cxx.ConstRef<winrt.windows.gaming.input.forcefeedback.ConditionForceEffectKind>): winrt.windows.gaming.input.forcefeedback.ConditionForceEffect;
+    /* explicit */ function new(effectKind: cxx.ConstRef<winrt.windows.gaming.input.forcefeedback.ConditionForceEffectKind>);
     overload function Gain(): cxx.num.Float64;
     overload function Gain(value: cxx.num.Float64): Void;
     overload function State(): winrt.windows.gaming.input.forcefeedback.ForceFeedbackEffectState;

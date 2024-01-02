@@ -6,8 +6,7 @@ package winrt.microsoft.ui.xaml.interop;
 extern class NotifyCollectionChangedEventArgs
     implements winrt.microsoft.ui.xaml.interop.INotifyCollectionChangedEventArgs
 {
-    @:native("winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs")
-    static overload function make(action: cxx.ConstRef<winrt.microsoft.ui.xaml.interop.NotifyCollectionChangedAction>, newItems: cxx.ConstRef<winrt.microsoft.ui.xaml.interop.IBindableVector>, oldItems: cxx.ConstRef<winrt.microsoft.ui.xaml.interop.IBindableVector>, newIndex: cxx.num.Int32, oldIndex: cxx.num.Int32): winrt.microsoft.ui.xaml.interop.NotifyCollectionChangedEventArgs;
+    function new(action: cxx.ConstRef<winrt.microsoft.ui.xaml.interop.NotifyCollectionChangedAction>, newItems: cxx.ConstRef<winrt.microsoft.ui.xaml.interop.IBindableVector>, oldItems: cxx.ConstRef<winrt.microsoft.ui.xaml.interop.IBindableVector>, newIndex: cxx.num.Int32, oldIndex: cxx.num.Int32);
     overload function Action(): winrt.microsoft.ui.xaml.interop.NotifyCollectionChangedAction;
     overload function NewItems(): winrt.microsoft.ui.xaml.interop.IBindableVector;
     overload function OldItems(): winrt.microsoft.ui.xaml.interop.IBindableVector;

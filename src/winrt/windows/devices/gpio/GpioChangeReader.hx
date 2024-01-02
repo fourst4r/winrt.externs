@@ -7,8 +7,7 @@ extern class GpioChangeReader
     implements winrt.windows.foundation.IClosable
     implements winrt.windows.devices.gpio.IGpioChangeReader
 {
-    @:native("winrt::Windows::Devices::Gpio::GpioChangeReader")
-    /* explicit */ static overload function make(pin: cxx.ConstRef<winrt.windows.devices.gpio.GpioPin>): winrt.windows.devices.gpio.GpioChangeReader;
+    /* explicit */ function new(pin: cxx.ConstRef<winrt.windows.devices.gpio.GpioPin>);
     @:native("winrt::Windows::Devices::Gpio::GpioChangeReader")
     static overload function make(pin: cxx.ConstRef<winrt.windows.devices.gpio.GpioPin>, minCapacity: cxx.num.Int32): winrt.windows.devices.gpio.GpioChangeReader;
     overload function Capacity(): cxx.num.Int32;

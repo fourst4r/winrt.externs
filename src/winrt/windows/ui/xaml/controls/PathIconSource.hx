@@ -7,8 +7,7 @@ extern class PathIconSource
     extends winrt.windows.ui.xaml.controls.IconSource
     implements winrt.windows.ui.xaml.controls.IPathIconSource
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::PathIconSource")
-    static overload function make(): winrt.windows.ui.xaml.controls.PathIconSource;
+    function new();
     overload function Data(): winrt.windows.ui.xaml.media.Geometry;
     overload function Data(value: cxx.ConstRef<winrt.windows.ui.xaml.media.Geometry>): Void;
     overload function DataProperty(): winrt.windows.ui.xaml.DependencyProperty;

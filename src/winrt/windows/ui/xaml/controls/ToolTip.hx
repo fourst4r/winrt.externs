@@ -8,8 +8,7 @@ extern class ToolTip
     implements winrt.windows.ui.xaml.controls.IToolTip
     implements winrt.windows.ui.xaml.controls.IToolTip2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::ToolTip")
-    static overload function make(): winrt.windows.ui.xaml.controls.ToolTip;
+    function new();
     overload function HorizontalOffset(): cxx.num.Float64;
     overload function HorizontalOffset(value: cxx.num.Float64): Void;
     overload function IsOpen(): Bool;

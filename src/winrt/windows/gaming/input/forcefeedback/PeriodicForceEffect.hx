@@ -7,8 +7,7 @@ extern class PeriodicForceEffect
     implements winrt.windows.gaming.input.forcefeedback.IForceFeedbackEffect
     implements winrt.windows.gaming.input.forcefeedback.IPeriodicForceEffect
 {
-    @:native("winrt::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffect")
-    /* explicit */ static overload function make(effectKind: cxx.ConstRef<winrt.windows.gaming.input.forcefeedback.PeriodicForceEffectKind>): winrt.windows.gaming.input.forcefeedback.PeriodicForceEffect;
+    /* explicit */ function new(effectKind: cxx.ConstRef<winrt.windows.gaming.input.forcefeedback.PeriodicForceEffectKind>);
     overload function Gain(): cxx.num.Float64;
     overload function Gain(value: cxx.num.Float64): Void;
     overload function State(): winrt.windows.gaming.input.forcefeedback.ForceFeedbackEffectState;

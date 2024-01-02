@@ -8,8 +8,7 @@ extern class TimedMetadataStreamDescriptor
     implements winrt.windows.media.core.IMediaStreamDescriptor
     implements winrt.windows.media.core.IMediaStreamDescriptor2
 {
-    @:native("winrt::Windows::Media::Core::TimedMetadataStreamDescriptor")
-    /* explicit */ static overload function make(encodingProperties: cxx.ConstRef<winrt.windows.media.mediaproperties.TimedMetadataEncodingProperties>): winrt.windows.media.core.TimedMetadataStreamDescriptor;
+    /* explicit */ function new(encodingProperties: cxx.ConstRef<winrt.windows.media.mediaproperties.TimedMetadataEncodingProperties>);
     overload function EncodingProperties(): winrt.windows.media.mediaproperties.TimedMetadataEncodingProperties;
     function Copy(): winrt.windows.media.core.TimedMetadataStreamDescriptor;
     overload function Label(value: cxx.ConstRef<winrt.HString>): Void;

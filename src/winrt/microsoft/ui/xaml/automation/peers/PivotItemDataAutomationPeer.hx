@@ -10,8 +10,7 @@ extern class PivotItemDataAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.ISelectionItemProvider
     implements winrt.microsoft.ui.xaml.automation.provider.IVirtualizedItemProvider
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::PivotItemDataAutomationPeer")
-    static overload function make(item: cxx.ConstRef<winrt.windows.foundation.IInspectable>, parent: cxx.ConstRef<winrt.microsoft.ui.xaml.automation.peers.PivotAutomationPeer>): winrt.microsoft.ui.xaml.automation.peers.PivotItemDataAutomationPeer;
+    function new(item: cxx.ConstRef<winrt.windows.foundation.IInspectable>, parent: cxx.ConstRef<winrt.microsoft.ui.xaml.automation.peers.PivotAutomationPeer>);
     function ScrollIntoView(): Void;
     overload function IsSelected(): Bool;
     overload function SelectionContainer(): winrt.microsoft.ui.xaml.automation.provider.IRawElementProviderSimple;

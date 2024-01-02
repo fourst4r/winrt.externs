@@ -7,6 +7,5 @@ extern class TabViewListView
     extends winrt.microsoft.ui.xaml.controls.ListView
     implements winrt.microsoft.ui.xaml.controls.primitives.ITabViewListView
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::TabViewListView")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.primitives.TabViewListView;
+    function new();
 }

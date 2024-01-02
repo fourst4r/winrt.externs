@@ -13,8 +13,7 @@ extern class ComboBox
     implements winrt.windows.ui.xaml.controls.IComboBox6
     implements winrt.windows.ui.xaml.controls.IComboBoxOverrides
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::ComboBox")
-    static overload function make(): winrt.windows.ui.xaml.controls.ComboBox;
+    function new();
     overload function IsDropDownOpen(): Bool;
     overload function IsDropDownOpen(value: Bool): Void;
     overload function IsEditable(): Bool;

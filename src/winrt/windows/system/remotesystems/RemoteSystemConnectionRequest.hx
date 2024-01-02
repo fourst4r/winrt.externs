@@ -8,8 +8,7 @@ extern class RemoteSystemConnectionRequest
     implements winrt.windows.system.remotesystems.IRemoteSystemConnectionRequest2
     implements winrt.windows.system.remotesystems.IRemoteSystemConnectionRequest3
 {
-    @:native("winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest")
-    /* explicit */ static overload function make(remoteSystem: cxx.ConstRef<winrt.windows.system.remotesystems.RemoteSystem>): winrt.windows.system.remotesystems.RemoteSystemConnectionRequest;
+    /* explicit */ function new(remoteSystem: cxx.ConstRef<winrt.windows.system.remotesystems.RemoteSystem>);
     overload function RemoteSystem(): winrt.windows.system.remotesystems.RemoteSystem;
     overload function RemoteSystemApp(): winrt.windows.system.remotesystems.RemoteSystemApp;
     overload function ConnectionToken(): winrt.HString;

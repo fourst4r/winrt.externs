@@ -6,6 +6,5 @@ package winrt.windows.devices.sensors;
 extern class PedometerDataThreshold
     implements winrt.windows.devices.sensors.ISensorDataThreshold
 {
-    @:native("winrt::Windows::Devices::Sensors::PedometerDataThreshold")
-    static overload function make(sensor: cxx.ConstRef<winrt.windows.devices.sensors.Pedometer>, stepGoal: cxx.num.Int32): winrt.windows.devices.sensors.PedometerDataThreshold;
+    function new(sensor: cxx.ConstRef<winrt.windows.devices.sensors.Pedometer>, stepGoal: cxx.num.Int32);
 }

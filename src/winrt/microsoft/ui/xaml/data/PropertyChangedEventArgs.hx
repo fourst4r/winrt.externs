@@ -6,7 +6,6 @@ package winrt.microsoft.ui.xaml.data;
 extern class PropertyChangedEventArgs
     implements winrt.microsoft.ui.xaml.data.IPropertyChangedEventArgs
 {
-    @:native("winrt::Microsoft::UI::Xaml::Data::PropertyChangedEventArgs")
-    /* explicit */ static overload function make(name: cxx.ConstRef<winrt.HString>): winrt.microsoft.ui.xaml.data.PropertyChangedEventArgs;
+    /* explicit */ function new(name: cxx.ConstRef<winrt.HString>);
     overload function PropertyName(): winrt.HString;
 }

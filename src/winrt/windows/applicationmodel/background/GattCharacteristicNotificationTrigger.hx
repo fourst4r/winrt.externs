@@ -8,8 +8,7 @@ extern class GattCharacteristicNotificationTrigger
     implements winrt.windows.applicationmodel.background.IGattCharacteristicNotificationTrigger
     implements winrt.windows.applicationmodel.background.IGattCharacteristicNotificationTrigger2
 {
-    @:native("winrt::Windows::ApplicationModel::Background::GattCharacteristicNotificationTrigger")
-    /* explicit */ static overload function make(characteristic: cxx.ConstRef<winrt.windows.devices.bluetooth.genericattributeprofile.GattCharacteristic>): winrt.windows.applicationmodel.background.GattCharacteristicNotificationTrigger;
+    /* explicit */ function new(characteristic: cxx.ConstRef<winrt.windows.devices.bluetooth.genericattributeprofile.GattCharacteristic>);
     @:native("winrt::Windows::ApplicationModel::Background::GattCharacteristicNotificationTrigger")
     static overload function make(characteristic: cxx.ConstRef<winrt.windows.devices.bluetooth.genericattributeprofile.GattCharacteristic>, eventTriggeringMode: cxx.ConstRef<winrt.windows.devices.bluetooth.background.BluetoothEventTriggeringMode>): winrt.windows.applicationmodel.background.GattCharacteristicNotificationTrigger;
     overload function Characteristic(): winrt.windows.devices.bluetooth.genericattributeprofile.GattCharacteristic;

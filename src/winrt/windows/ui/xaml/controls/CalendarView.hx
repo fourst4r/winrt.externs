@@ -8,8 +8,7 @@ extern class CalendarView
     implements winrt.windows.ui.xaml.controls.ICalendarView
     implements winrt.windows.ui.xaml.controls.ICalendarView2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::CalendarView")
-    static overload function make(): winrt.windows.ui.xaml.controls.CalendarView;
+    function new();
     overload function CalendarIdentifier(): winrt.HString;
     overload function CalendarIdentifier(value: cxx.ConstRef<winrt.HString>): Void;
     overload function DayOfWeekFormat(): winrt.HString;

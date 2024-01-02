@@ -8,8 +8,7 @@ extern class FlyoutPresenter
     implements winrt.windows.ui.xaml.controls.IFlyoutPresenter
     implements winrt.windows.ui.xaml.controls.IFlyoutPresenter2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::FlyoutPresenter")
-    static overload function make(): winrt.windows.ui.xaml.controls.FlyoutPresenter;
+    function new();
     overload function IsDefaultShadowEnabled(): Bool;
     overload function IsDefaultShadowEnabled(value: Bool): Void;
     overload function IsDefaultShadowEnabledProperty(): winrt.windows.ui.xaml.DependencyProperty;

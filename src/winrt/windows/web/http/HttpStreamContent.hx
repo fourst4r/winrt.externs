@@ -8,8 +8,7 @@ extern class HttpStreamContent
     implements winrt.windows.web.http.IHttpContent
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::HttpStreamContent")
-    /* explicit */ static overload function make(content: cxx.ConstRef<winrt.windows.storage.streams.IInputStream>): winrt.windows.web.http.HttpStreamContent;
+    /* explicit */ function new(content: cxx.ConstRef<winrt.windows.storage.streams.IInputStream>);
     overload function Headers(): winrt.windows.web.http.headers.HttpContentHeaderCollection;
     function BufferAllAsync(): winrt.windows.foundation.IAsyncOperationWithProgress<cxx.num.UInt64, cxx.num.UInt64> /* GenericTypeInstSig */;
     function ReadAsBufferAsync(): winrt.windows.foundation.IAsyncOperationWithProgress<winrt.windows.storage.streams.IBuffer, cxx.num.UInt64> /* GenericTypeInstSig */;

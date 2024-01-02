@@ -6,8 +6,7 @@ package winrt.windows.ui.uiautomation.core;
 extern class RemoteAutomationClientSession
     implements winrt.windows.ui.uiautomation.core.IRemoteAutomationClientSession
 {
-    @:native("winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession")
-    /* explicit */ static overload function make(name: cxx.ConstRef<winrt.HString>): winrt.windows.ui.uiautomation.core.RemoteAutomationClientSession;
+    /* explicit */ function new(name: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession")
     static overload function make(name: cxx.ConstRef<winrt.HString>, sessionId: cxx.ConstRef<winrt.Guid>): winrt.windows.ui.uiautomation.core.RemoteAutomationClientSession;
     function Start(): Void;

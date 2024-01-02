@@ -6,8 +6,7 @@ package winrt.microsoft.windows.appnotifications;
 extern class AppNotification
     implements winrt.microsoft.windows.appnotifications.IAppNotification
 {
-    @:native("winrt::Microsoft::Windows::AppNotifications::AppNotification")
-    /* explicit */ static overload function make(payload: cxx.ConstRef<winrt.HString>): winrt.microsoft.windows.appnotifications.AppNotification;
+    /* explicit */ function new(payload: cxx.ConstRef<winrt.HString>);
     overload function Tag(): winrt.HString;
     overload function Tag(value: cxx.ConstRef<winrt.HString>): Void;
     overload function Group(): winrt.HString;

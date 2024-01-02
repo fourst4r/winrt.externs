@@ -8,8 +8,7 @@ extern class DataTemplate
     implements winrt.windows.ui.xaml.IDataTemplate
     implements winrt.windows.ui.xaml.IElementFactory
 {
-    @:native("winrt::Windows::UI::Xaml::DataTemplate")
-    static overload function make(): winrt.windows.ui.xaml.DataTemplate;
+    function new();
     function LoadContent(): winrt.windows.ui.xaml.DependencyObject;
     function GetElement(args: cxx.ConstRef<winrt.windows.ui.xaml.ElementFactoryGetArgs>): winrt.windows.ui.xaml.UIElement;
     function RecycleElement(args: cxx.ConstRef<winrt.windows.ui.xaml.ElementFactoryRecycleArgs>): Void;

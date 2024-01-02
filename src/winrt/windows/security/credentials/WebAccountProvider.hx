@@ -9,8 +9,7 @@ extern class WebAccountProvider
     implements winrt.windows.security.credentials.IWebAccountProvider3
     implements winrt.windows.security.credentials.IWebAccountProvider4
 {
-    @:native("winrt::Windows::Security::Credentials::WebAccountProvider")
-    static overload function make(id: cxx.ConstRef<winrt.HString>, displayName: cxx.ConstRef<winrt.HString>, iconUri: cxx.ConstRef<winrt.windows.foundation.Uri>): winrt.windows.security.credentials.WebAccountProvider;
+    function new(id: cxx.ConstRef<winrt.HString>, displayName: cxx.ConstRef<winrt.HString>, iconUri: cxx.ConstRef<winrt.windows.foundation.Uri>);
     overload function Id(): winrt.HString;
     overload function DisplayName(): winrt.HString;
     overload function IconUri(): winrt.windows.foundation.Uri;

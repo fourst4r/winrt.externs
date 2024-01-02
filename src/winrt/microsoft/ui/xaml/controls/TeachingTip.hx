@@ -7,8 +7,7 @@ extern class TeachingTip
     extends winrt.microsoft.ui.xaml.controls.ContentControl
     implements winrt.microsoft.ui.xaml.controls.ITeachingTip
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::TeachingTip")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.TeachingTip;
+    function new();
     overload function Title(): winrt.HString;
     overload function Title(value: cxx.ConstRef<winrt.HString>): Void;
     overload function Subtitle(): winrt.HString;

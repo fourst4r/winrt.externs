@@ -7,8 +7,7 @@ extern class ToggleSplitButton
     extends winrt.microsoft.ui.xaml.controls.SplitButton
     implements winrt.microsoft.ui.xaml.controls.IToggleSplitButton
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::ToggleSplitButton")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.ToggleSplitButton;
+    function new();
     overload function IsChecked(): Bool;
     overload function IsChecked(value: Bool): Void;
     overload function IsCheckedChanged(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.microsoft.ui.xaml.controls.ToggleSplitButton, winrt.microsoft.ui.xaml.controls.ToggleSplitButtonIsCheckedChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;

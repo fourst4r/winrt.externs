@@ -9,8 +9,7 @@ extern class LoggingChannel
     implements winrt.windows.foundation.diagnostics.ILoggingTarget
     implements winrt.windows.foundation.diagnostics.ILoggingChannel2
 {
-    @:native("winrt::Windows::Foundation::Diagnostics::LoggingChannel")
-    /* explicit */ static overload function make(name: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.diagnostics.LoggingChannel;
+    /* explicit */ function new(name: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::Foundation::Diagnostics::LoggingChannel")
     static overload function make(name: cxx.ConstRef<winrt.HString>, options: cxx.ConstRef<winrt.windows.foundation.diagnostics.LoggingChannelOptions>): winrt.windows.foundation.diagnostics.LoggingChannel;
     @:native("winrt::Windows::Foundation::Diagnostics::LoggingChannel")

@@ -7,8 +7,7 @@ extern class Flyout
     extends winrt.windows.ui.xaml.controls.primitives.FlyoutBase
     implements winrt.windows.ui.xaml.controls.IFlyout
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Flyout")
-    static overload function make(): winrt.windows.ui.xaml.controls.Flyout;
+    function new();
     overload function Content(): winrt.windows.ui.xaml.UIElement;
     overload function Content(value: cxx.ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
     overload function FlyoutPresenterStyle(): winrt.windows.ui.xaml.Style;

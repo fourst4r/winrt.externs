@@ -15,4 +15,5 @@ extern enum abstract LampArrayKind(cxx.num.Int32)
     @:native("winrt::Windows::Devices::Lights::LampArrayKind::Wearable") final Wearable;
     @:native("winrt::Windows::Devices::Lights::LampArrayKind::Furniture") final Furniture;
     @:native("winrt::Windows::Devices::Lights::LampArrayKind::Art") final Art;
+    @:native("winrt::Windows::Devices::Lights::LampArrayKind::Headset") final Headset;
 }

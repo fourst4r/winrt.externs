@@ -8,8 +8,7 @@ extern class TreeView
     implements winrt.microsoft.ui.xaml.controls.ITreeView
     implements winrt.microsoft.ui.xaml.controls.ITreeView2
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::TreeView")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.TreeView;
+    function new();
     overload function RootNodes(): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.xaml.controls.TreeViewNode> /* GenericTypeInstSig */;
     overload function SelectionMode(): winrt.microsoft.ui.xaml.controls.TreeViewSelectionMode;
     overload function SelectionMode(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.TreeViewSelectionMode>): Void;

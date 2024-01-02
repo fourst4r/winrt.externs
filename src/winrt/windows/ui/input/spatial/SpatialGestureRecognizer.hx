@@ -6,8 +6,7 @@ package winrt.windows.ui.input.spatial;
 extern class SpatialGestureRecognizer
     implements winrt.windows.ui.input.spatial.ISpatialGestureRecognizer
 {
-    @:native("winrt::Windows::UI::Input::Spatial::SpatialGestureRecognizer")
-    /* explicit */ static overload function make(settings: cxx.ConstRef<winrt.windows.ui.input.spatial.SpatialGestureSettings>): winrt.windows.ui.input.spatial.SpatialGestureRecognizer;
+    /* explicit */ function new(settings: cxx.ConstRef<winrt.windows.ui.input.spatial.SpatialGestureSettings>);
     overload function RecognitionStarted(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.input.spatial.SpatialGestureRecognizer, winrt.windows.ui.input.spatial.SpatialRecognitionStartedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
     @:noExcept overload function RecognitionStarted(token: cxx.ConstRef<winrt.EventToken>): Void;
     overload function RecognitionEnded(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.input.spatial.SpatialGestureRecognizer, winrt.windows.ui.input.spatial.SpatialRecognitionEndedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;

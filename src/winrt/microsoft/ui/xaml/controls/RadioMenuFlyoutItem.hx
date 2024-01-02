@@ -7,8 +7,7 @@ extern class RadioMenuFlyoutItem
     extends winrt.microsoft.ui.xaml.controls.MenuFlyoutItem
     implements winrt.microsoft.ui.xaml.controls.IRadioMenuFlyoutItem
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::RadioMenuFlyoutItem")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.RadioMenuFlyoutItem;
+    function new();
     overload function IsChecked(): Bool;
     overload function IsChecked(value: Bool): Void;
     overload function GroupName(): winrt.HString;

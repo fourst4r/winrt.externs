@@ -10,8 +10,7 @@ extern class MapElement
     implements winrt.windows.ui.xaml.controls.maps.IMapElement3
     implements winrt.windows.ui.xaml.controls.maps.IMapElement4
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapElement")
-    static overload function make(): winrt.windows.ui.xaml.controls.maps.MapElement;
+    function new();
     overload function ZIndex(): cxx.num.Int32;
     overload function ZIndex(value: cxx.num.Int32): Void;
     overload function Visible(): Bool;

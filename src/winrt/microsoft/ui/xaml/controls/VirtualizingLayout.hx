@@ -8,8 +8,7 @@ extern class VirtualizingLayout
     implements winrt.microsoft.ui.xaml.controls.IVirtualizingLayout
     implements winrt.microsoft.ui.xaml.controls.IVirtualizingLayoutOverrides
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::VirtualizingLayout")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.VirtualizingLayout;
+    function new();
     function InitializeForContextCore(context: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.VirtualizingLayoutContext>): Void;
     function UninitializeForContextCore(context: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.VirtualizingLayoutContext>): Void;
     function MeasureOverride(context: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.VirtualizingLayoutContext>, availableSize: cxx.ConstRef<winrt.windows.foundation.Size>): winrt.windows.foundation.Size;

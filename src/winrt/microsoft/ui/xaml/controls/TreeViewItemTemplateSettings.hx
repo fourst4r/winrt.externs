@@ -7,8 +7,7 @@ extern class TreeViewItemTemplateSettings
     extends winrt.microsoft.ui.xaml.DependencyObject
     implements winrt.microsoft.ui.xaml.controls.ITreeViewItemTemplateSettings
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::TreeViewItemTemplateSettings")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.TreeViewItemTemplateSettings;
+    function new();
     overload function ExpandedGlyphVisibility(): winrt.microsoft.ui.xaml.Visibility;
     overload function CollapsedGlyphVisibility(): winrt.microsoft.ui.xaml.Visibility;
     overload function Indentation(): winrt.microsoft.ui.xaml.Thickness;

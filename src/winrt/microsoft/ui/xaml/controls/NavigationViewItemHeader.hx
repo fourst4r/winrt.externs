@@ -7,6 +7,5 @@ extern class NavigationViewItemHeader
     extends winrt.microsoft.ui.xaml.controls.NavigationViewItemBase
     implements winrt.microsoft.ui.xaml.controls.INavigationViewItemHeader
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::NavigationViewItemHeader")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.NavigationViewItemHeader;
+    function new();
 }

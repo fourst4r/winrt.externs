@@ -10,8 +10,7 @@ extern class ComboBoxAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.IExpandCollapseProvider
     implements winrt.windows.ui.xaml.automation.provider.IWindowProvider
 {
-    @:native("winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.windows.ui.xaml.controls.ComboBox>): winrt.windows.ui.xaml.automation.peers.ComboBoxAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.windows.ui.xaml.controls.ComboBox>);
     overload function IsReadOnly(): Bool;
     overload function Value(): winrt.HString;
     function SetValue(value: cxx.ConstRef<winrt.HString>): Void;

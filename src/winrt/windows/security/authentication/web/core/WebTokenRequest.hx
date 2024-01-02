@@ -8,8 +8,7 @@ extern class WebTokenRequest
     implements winrt.windows.security.authentication.web.core.IWebTokenRequest2
     implements winrt.windows.security.authentication.web.core.IWebTokenRequest3
 {
-    @:native("winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest")
-    static overload function make(provider: cxx.ConstRef<winrt.windows.security.credentials.WebAccountProvider>, scope: cxx.ConstRef<winrt.HString>, clientId: cxx.ConstRef<winrt.HString>): winrt.windows.security.authentication.web.core.WebTokenRequest;
+    function new(provider: cxx.ConstRef<winrt.windows.security.credentials.WebAccountProvider>, scope: cxx.ConstRef<winrt.HString>, clientId: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest")
     static overload function make(provider: cxx.ConstRef<winrt.windows.security.credentials.WebAccountProvider>, scope: cxx.ConstRef<winrt.HString>, clientId: cxx.ConstRef<winrt.HString>, promptType: cxx.ConstRef<winrt.windows.security.authentication.web.core.WebTokenRequestPromptType>): winrt.windows.security.authentication.web.core.WebTokenRequest;
     @:native("winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest")

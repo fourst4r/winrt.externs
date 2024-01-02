@@ -6,8 +6,7 @@ package winrt.windows.ui.xaml.controls.primitives;
 extern class FlyoutShowOptions
     implements winrt.windows.ui.xaml.controls.primitives.IFlyoutShowOptions
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions")
-    static overload function make(): winrt.windows.ui.xaml.controls.primitives.FlyoutShowOptions;
+    function new();
     overload function Position(): winrt.windows.foundation.IReference<winrt.windows.foundation.Point> /* GenericTypeInstSig */;
     overload function Position(value: cxx.ConstRef<winrt.windows.foundation.IReference<winrt.windows.foundation.Point> /* temp_GenericTypeInstSig */>): Void;
     overload function ExclusionRect(): winrt.windows.foundation.IReference<winrt.windows.foundation.Rect> /* GenericTypeInstSig */;

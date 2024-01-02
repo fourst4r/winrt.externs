@@ -6,8 +6,7 @@ package winrt.windows.applicationmodel.payments;
 extern class PaymentItem
     implements winrt.windows.applicationmodel.payments.IPaymentItem
 {
-    @:native("winrt::Windows::ApplicationModel::Payments::PaymentItem")
-    static overload function make(label: cxx.ConstRef<winrt.HString>, amount: cxx.ConstRef<winrt.windows.applicationmodel.payments.PaymentCurrencyAmount>): winrt.windows.applicationmodel.payments.PaymentItem;
+    function new(label: cxx.ConstRef<winrt.HString>, amount: cxx.ConstRef<winrt.windows.applicationmodel.payments.PaymentCurrencyAmount>);
     overload function Label(): winrt.HString;
     overload function Label(value: cxx.ConstRef<winrt.HString>): Void;
     overload function Amount(): winrt.windows.applicationmodel.payments.PaymentCurrencyAmount;

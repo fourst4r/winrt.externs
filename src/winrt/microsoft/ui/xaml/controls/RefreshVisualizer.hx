@@ -7,8 +7,7 @@ extern class RefreshVisualizer
     extends winrt.microsoft.ui.xaml.controls.Control
     implements winrt.microsoft.ui.xaml.controls.IRefreshVisualizer
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::RefreshVisualizer")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.RefreshVisualizer;
+    function new();
     function RequestRefresh(): Void;
     overload function Orientation(): winrt.microsoft.ui.xaml.controls.RefreshVisualizerOrientation;
     overload function Orientation(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.RefreshVisualizerOrientation>): Void;

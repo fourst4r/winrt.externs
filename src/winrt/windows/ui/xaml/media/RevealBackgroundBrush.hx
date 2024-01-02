@@ -7,6 +7,5 @@ extern class RevealBackgroundBrush
     extends winrt.windows.ui.xaml.media.RevealBrush
     implements winrt.windows.ui.xaml.media.IRevealBackgroundBrush
 {
-    @:native("winrt::Windows::UI::Xaml::Media::RevealBackgroundBrush")
-    static overload function make(): winrt.windows.ui.xaml.media.RevealBackgroundBrush;
+    function new();
 }

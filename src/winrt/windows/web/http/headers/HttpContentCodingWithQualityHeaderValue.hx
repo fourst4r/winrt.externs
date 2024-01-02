@@ -7,8 +7,7 @@ extern class HttpContentCodingWithQualityHeaderValue
     implements winrt.windows.web.http.headers.IHttpContentCodingWithQualityHeaderValue
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue")
-    /* explicit */ static overload function make(contentCoding: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValue;
+    /* explicit */ function new(contentCoding: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue")
     static overload function make(contentCoding: cxx.ConstRef<winrt.HString>, quality: cxx.num.Float64): winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValue;
     overload function ContentCoding(): winrt.HString;

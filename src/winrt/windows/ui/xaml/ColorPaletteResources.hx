@@ -7,8 +7,7 @@ extern class ColorPaletteResources
     extends winrt.windows.ui.xaml.ResourceDictionary
     implements winrt.windows.ui.xaml.IColorPaletteResources
 {
-    @:native("winrt::Windows::UI::Xaml::ColorPaletteResources")
-    static overload function make(): winrt.windows.ui.xaml.ColorPaletteResources;
+    function new();
     overload function AltHigh(): winrt.windows.foundation.IReference<winrt.windows.ui.Color> /* GenericTypeInstSig */;
     overload function AltHigh(value: cxx.ConstRef<winrt.windows.foundation.IReference<winrt.windows.ui.Color> /* temp_GenericTypeInstSig */>): Void;
     overload function AltLow(): winrt.windows.foundation.IReference<winrt.windows.ui.Color> /* GenericTypeInstSig */;

@@ -7,6 +7,5 @@ extern class MenuFlyoutSeparator
     extends winrt.windows.ui.xaml.controls.MenuFlyoutItemBase
     implements winrt.windows.ui.xaml.controls.IMenuFlyoutSeparator
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::MenuFlyoutSeparator")
-    static overload function make(): winrt.windows.ui.xaml.controls.MenuFlyoutSeparator;
+    function new();
 }

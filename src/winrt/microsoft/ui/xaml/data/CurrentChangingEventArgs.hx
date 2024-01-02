@@ -6,8 +6,7 @@ package winrt.microsoft.ui.xaml.data;
 extern class CurrentChangingEventArgs
     implements winrt.microsoft.ui.xaml.data.ICurrentChangingEventArgs
 {
-    @:native("winrt::Microsoft::UI::Xaml::Data::CurrentChangingEventArgs")
-    static overload function make(): winrt.microsoft.ui.xaml.data.CurrentChangingEventArgs;
+    function new();
     @:native("winrt::Microsoft::UI::Xaml::Data::CurrentChangingEventArgs")
     /* explicit */ static overload function make(isCancelable: Bool): winrt.microsoft.ui.xaml.data.CurrentChangingEventArgs;
     overload function Cancel(): Bool;

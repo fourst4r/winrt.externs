@@ -7,8 +7,7 @@ extern class DeviceManufacturerNotificationTrigger
     implements winrt.windows.applicationmodel.background.IBackgroundTrigger
     implements winrt.windows.applicationmodel.background.IDeviceManufacturerNotificationTrigger
 {
-    @:native("winrt::Windows::ApplicationModel::Background::DeviceManufacturerNotificationTrigger")
-    static overload function make(triggerQualifier: cxx.ConstRef<winrt.HString>, oneShot: Bool): winrt.windows.applicationmodel.background.DeviceManufacturerNotificationTrigger;
+    function new(triggerQualifier: cxx.ConstRef<winrt.HString>, oneShot: Bool);
     overload function TriggerQualifier(): winrt.HString;
     overload function OneShot(): Bool;
 }

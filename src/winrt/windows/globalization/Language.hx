@@ -9,8 +9,7 @@ extern class Language
     implements winrt.windows.globalization.ILanguage2
     implements winrt.windows.globalization.ILanguage3
 {
-    @:native("winrt::Windows::Globalization::Language")
-    /* explicit */ static overload function make(languageTag: cxx.ConstRef<winrt.HString>): winrt.windows.globalization.Language;
+    /* explicit */ function new(languageTag: cxx.ConstRef<winrt.HString>);
     overload function LanguageTag(): winrt.HString;
     overload function DisplayName(): winrt.HString;
     overload function NativeName(): winrt.HString;

@@ -6,8 +6,7 @@ package winrt.microsoft.windows.appnotifications.builder;
 extern class AppNotificationComboBox
     implements winrt.microsoft.windows.appnotifications.builder.IAppNotificationComboBox
 {
-    @:native("winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox")
-    /* explicit */ static overload function make(id: cxx.ConstRef<winrt.HString>): winrt.microsoft.windows.appnotifications.builder.AppNotificationComboBox;
+    /* explicit */ function new(id: cxx.ConstRef<winrt.HString>);
     overload function Items(): winrt.windows.foundation.collections.IMap<winrt.HString, winrt.HString> /* GenericTypeInstSig */;
     overload function Items(value: cxx.ConstRef<winrt.windows.foundation.collections.IMap<winrt.HString, winrt.HString> /* temp_GenericTypeInstSig */>): Void;
     overload function Title(): winrt.HString;

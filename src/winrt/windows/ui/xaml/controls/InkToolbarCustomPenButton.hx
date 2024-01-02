@@ -7,8 +7,7 @@ extern class InkToolbarCustomPenButton
     extends winrt.windows.ui.xaml.controls.InkToolbarPenButton
     implements winrt.windows.ui.xaml.controls.IInkToolbarCustomPenButton
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::InkToolbarCustomPenButton")
-    static overload function make(): winrt.windows.ui.xaml.controls.InkToolbarCustomPenButton;
+    function new();
     overload function CustomPen(): winrt.windows.ui.xaml.controls.InkToolbarCustomPen;
     overload function CustomPen(value: cxx.ConstRef<winrt.windows.ui.xaml.controls.InkToolbarCustomPen>): Void;
     overload function ConfigurationContent(): winrt.windows.ui.xaml.UIElement;

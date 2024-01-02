@@ -8,7 +8,6 @@ extern class ListBoxItemDataAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IListBoxItemDataAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.IScrollItemProvider
 {
-    @:native("winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer")
-    static overload function make(item: cxx.ConstRef<winrt.windows.foundation.IInspectable>, parent: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.ListBoxAutomationPeer>): winrt.windows.ui.xaml.automation.peers.ListBoxItemDataAutomationPeer;
+    function new(item: cxx.ConstRef<winrt.windows.foundation.IInspectable>, parent: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.ListBoxAutomationPeer>);
     function ScrollIntoView(): Void;
 }

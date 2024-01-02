@@ -7,8 +7,7 @@ extern class Canvas
     extends winrt.microsoft.ui.xaml.controls.Panel
     implements winrt.microsoft.ui.xaml.controls.ICanvas
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::Canvas")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.Canvas;
+    function new();
     overload function LeftProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     function GetLeft(element: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>): cxx.num.Float64;
     function SetLeft(element: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>, length: cxx.num.Float64): Void;

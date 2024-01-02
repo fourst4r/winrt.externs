@@ -7,8 +7,7 @@ extern class InkToolbarStencilButton
     extends winrt.windows.ui.xaml.controls.InkToolbarMenuButton
     implements winrt.windows.ui.xaml.controls.IInkToolbarStencilButton
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::InkToolbarStencilButton")
-    static overload function make(): winrt.windows.ui.xaml.controls.InkToolbarStencilButton;
+    function new();
     overload function Ruler(): winrt.windows.ui.input.inking.InkPresenterRuler;
     overload function Protractor(): winrt.windows.ui.input.inking.InkPresenterProtractor;
     overload function SelectedStencil(): winrt.windows.ui.xaml.controls.InkToolbarStencilKind;

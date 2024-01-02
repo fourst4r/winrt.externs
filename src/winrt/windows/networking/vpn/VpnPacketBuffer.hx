@@ -8,8 +8,7 @@ extern class VpnPacketBuffer
     implements winrt.windows.networking.vpn.IVpnPacketBuffer2
     implements winrt.windows.networking.vpn.IVpnPacketBuffer3
 {
-    @:native("winrt::Windows::Networking::Vpn::VpnPacketBuffer")
-    static overload function make(parentBuffer: cxx.ConstRef<winrt.windows.networking.vpn.VpnPacketBuffer>, offset: cxx.num.UInt32, length: cxx.num.UInt32): winrt.windows.networking.vpn.VpnPacketBuffer;
+    function new(parentBuffer: cxx.ConstRef<winrt.windows.networking.vpn.VpnPacketBuffer>, offset: cxx.num.UInt32, length: cxx.num.UInt32);
     overload function Buffer(): winrt.windows.storage.streams.Buffer;
     overload function Status(value: cxx.ConstRef<winrt.windows.networking.vpn.VpnPacketBufferStatus>): Void;
     overload function Status(): winrt.windows.networking.vpn.VpnPacketBufferStatus;

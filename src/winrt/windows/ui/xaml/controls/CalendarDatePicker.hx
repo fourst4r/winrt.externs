@@ -9,8 +9,7 @@ extern class CalendarDatePicker
     implements winrt.windows.ui.xaml.controls.ICalendarDatePicker2
     implements winrt.windows.ui.xaml.controls.ICalendarDatePicker3
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::CalendarDatePicker")
-    static overload function make(): winrt.windows.ui.xaml.controls.CalendarDatePicker;
+    function new();
     overload function Date(): winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* GenericTypeInstSig */;
     overload function Date(value: cxx.ConstRef<winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* temp_GenericTypeInstSig */>): Void;
     overload function IsCalendarOpen(): Bool;

@@ -7,8 +7,7 @@ extern class HttpLanguageRangeWithQualityHeaderValue
     implements winrt.windows.web.http.headers.IHttpLanguageRangeWithQualityHeaderValue
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue")
-    /* explicit */ static overload function make(languageRange: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpLanguageRangeWithQualityHeaderValue;
+    /* explicit */ function new(languageRange: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue")
     static overload function make(languageRange: cxx.ConstRef<winrt.HString>, quality: cxx.num.Float64): winrt.windows.web.http.headers.HttpLanguageRangeWithQualityHeaderValue;
     overload function LanguageRange(): winrt.HString;

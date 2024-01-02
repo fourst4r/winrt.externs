@@ -6,8 +6,7 @@ package winrt.microsoft.ui.xaml.data;
 extern class DataErrorsChangedEventArgs
     implements winrt.microsoft.ui.xaml.data.IDataErrorsChangedEventArgs
 {
-    @:native("winrt::Microsoft::UI::Xaml::Data::DataErrorsChangedEventArgs")
-    /* explicit */ static overload function make(name: cxx.ConstRef<winrt.HString>): winrt.microsoft.ui.xaml.data.DataErrorsChangedEventArgs;
+    /* explicit */ function new(name: cxx.ConstRef<winrt.HString>);
     overload function PropertyName(): winrt.HString;
     overload function PropertyName(value: cxx.ConstRef<winrt.HString>): Void;
 }

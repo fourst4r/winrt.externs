@@ -9,8 +9,7 @@ extern class VideoFrame
     implements winrt.windows.media.IVideoFrame
     implements winrt.windows.media.IVideoFrame2
 {
-    @:native("winrt::Windows::Media::VideoFrame")
-    static overload function make(format: cxx.ConstRef<winrt.windows.graphics.imaging.BitmapPixelFormat>, width: cxx.num.Int32, height: cxx.num.Int32): winrt.windows.media.VideoFrame;
+    function new(format: cxx.ConstRef<winrt.windows.graphics.imaging.BitmapPixelFormat>, width: cxx.num.Int32, height: cxx.num.Int32);
     @:native("winrt::Windows::Media::VideoFrame")
     static overload function make(format: cxx.ConstRef<winrt.windows.graphics.imaging.BitmapPixelFormat>, width: cxx.num.Int32, height: cxx.num.Int32, alpha: cxx.ConstRef<winrt.windows.graphics.imaging.BitmapAlphaMode>): winrt.windows.media.VideoFrame;
     overload function SoftwareBitmap(): winrt.windows.graphics.imaging.SoftwareBitmap;

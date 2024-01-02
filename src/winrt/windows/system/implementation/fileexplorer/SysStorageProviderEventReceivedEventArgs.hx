@@ -6,7 +6,6 @@ package winrt.windows.system.implementation.fileexplorer;
 extern class SysStorageProviderEventReceivedEventArgs
     implements winrt.windows.system.implementation.fileexplorer.ISysStorageProviderEventReceivedEventArgs
 {
-    @:native("winrt::Windows::System::Implementation::FileExplorer::SysStorageProviderEventReceivedEventArgs")
-    /* explicit */ static overload function make(json: cxx.ConstRef<winrt.HString>): winrt.windows.system.implementation.fileexplorer.SysStorageProviderEventReceivedEventArgs;
+    /* explicit */ function new(json: cxx.ConstRef<winrt.HString>);
     overload function Json(): winrt.HString;
 }

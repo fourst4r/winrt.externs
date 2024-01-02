@@ -7,8 +7,7 @@ extern class ProgressBar
     extends winrt.windows.ui.xaml.controls.primitives.RangeBase
     implements winrt.windows.ui.xaml.controls.IProgressBar
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::ProgressBar")
-    static overload function make(): winrt.windows.ui.xaml.controls.ProgressBar;
+    function new();
     overload function IsIndeterminate(): Bool;
     overload function IsIndeterminate(value: Bool): Void;
     overload function ShowError(): Bool;

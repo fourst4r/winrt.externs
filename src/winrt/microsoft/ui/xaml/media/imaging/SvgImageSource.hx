@@ -7,8 +7,7 @@ extern class SvgImageSource
     extends winrt.microsoft.ui.xaml.media.ImageSource
     implements winrt.microsoft.ui.xaml.media.imaging.ISvgImageSource
 {
-    @:native("winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource")
-    static overload function make(): winrt.microsoft.ui.xaml.media.imaging.SvgImageSource;
+    function new();
     @:native("winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource")
     /* explicit */ static overload function make(uriSource: cxx.ConstRef<winrt.windows.foundation.Uri>): winrt.microsoft.ui.xaml.media.imaging.SvgImageSource;
     overload function UriSource(): winrt.windows.foundation.Uri;

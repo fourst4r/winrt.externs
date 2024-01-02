@@ -7,8 +7,7 @@ extern class ItemsRepeater
     extends winrt.microsoft.ui.xaml.FrameworkElement
     implements winrt.microsoft.ui.xaml.controls.IItemsRepeater
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::ItemsRepeater")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.ItemsRepeater;
+    function new();
     overload function ItemsSource(): winrt.windows.foundation.IInspectable;
     overload function ItemsSource(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function ItemsSourceView(): winrt.microsoft.ui.xaml.controls.ItemsSourceView;

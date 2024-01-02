@@ -7,8 +7,7 @@ extern class HttpCredentialsHeaderValue
     implements winrt.windows.web.http.headers.IHttpCredentialsHeaderValue
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue")
-    /* explicit */ static overload function make(scheme: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpCredentialsHeaderValue;
+    /* explicit */ function new(scheme: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::Web::Http::Headers::HttpCredentialsHeaderValue")
     static overload function make(scheme: cxx.ConstRef<winrt.HString>, token: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpCredentialsHeaderValue;
     overload function Parameters(): winrt.windows.foundation.collections.IVector<winrt.windows.web.http.headers.HttpNameValueHeaderValue> /* GenericTypeInstSig */;

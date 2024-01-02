@@ -6,8 +6,7 @@ package winrt.windows.media.playback;
 extern class MediaBreak
     implements winrt.windows.media.playback.IMediaBreak
 {
-    @:native("winrt::Windows::Media::Playback::MediaBreak")
-    /* explicit */ static overload function make(insertionMethod: cxx.ConstRef<winrt.windows.media.playback.MediaBreakInsertionMethod>): winrt.windows.media.playback.MediaBreak;
+    /* explicit */ function new(insertionMethod: cxx.ConstRef<winrt.windows.media.playback.MediaBreakInsertionMethod>);
     @:native("winrt::Windows::Media::Playback::MediaBreak")
     static overload function make(insertionMethod: cxx.ConstRef<winrt.windows.media.playback.MediaBreakInsertionMethod>, presentationPosition: cxx.ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.media.playback.MediaBreak;
     overload function PlaybackList(): winrt.windows.media.playback.MediaPlaybackList;

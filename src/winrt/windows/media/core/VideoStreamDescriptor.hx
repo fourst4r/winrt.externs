@@ -9,8 +9,7 @@ extern class VideoStreamDescriptor
     implements winrt.windows.media.core.IMediaStreamDescriptor2
     implements winrt.windows.media.core.IVideoStreamDescriptor2
 {
-    @:native("winrt::Windows::Media::Core::VideoStreamDescriptor")
-    /* explicit */ static overload function make(encodingProperties: cxx.ConstRef<winrt.windows.media.mediaproperties.VideoEncodingProperties>): winrt.windows.media.core.VideoStreamDescriptor;
+    /* explicit */ function new(encodingProperties: cxx.ConstRef<winrt.windows.media.mediaproperties.VideoEncodingProperties>);
     overload function EncodingProperties(): winrt.windows.media.mediaproperties.VideoEncodingProperties;
     overload function IsSelected(): Bool;
     overload function Name(value: cxx.ConstRef<winrt.HString>): Void;

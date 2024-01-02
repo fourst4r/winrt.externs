@@ -6,8 +6,7 @@ package winrt.windows.applicationmodel.contacts;
 extern class ContactField
     implements winrt.windows.applicationmodel.contacts.IContactField
 {
-    @:native("winrt::Windows::ApplicationModel::Contacts::ContactField")
-    static overload function make(value: cxx.ConstRef<winrt.HString>, type: cxx.ConstRef<winrt.windows.applicationmodel.contacts.ContactFieldType>): winrt.windows.applicationmodel.contacts.ContactField;
+    function new(value: cxx.ConstRef<winrt.HString>, type: cxx.ConstRef<winrt.windows.applicationmodel.contacts.ContactFieldType>);
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactField")
     static overload function make(value: cxx.ConstRef<winrt.HString>, type: cxx.ConstRef<winrt.windows.applicationmodel.contacts.ContactFieldType>, category: cxx.ConstRef<winrt.windows.applicationmodel.contacts.ContactFieldCategory>): winrt.windows.applicationmodel.contacts.ContactField;
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactField")

@@ -7,8 +7,7 @@ extern class LampArrayBitmapEffect
     implements winrt.windows.devices.lights.effects.ILampArrayBitmapEffect
     implements winrt.windows.devices.lights.effects.ILampArrayEffect
 {
-    @:native("winrt::Windows::Devices::Lights::Effects::LampArrayBitmapEffect")
-    static overload function make(lampArray: cxx.ConstRef<winrt.windows.devices.lights.LampArray>, lampIndexes: winrt.ArrayView<cxx.num.Int32>): winrt.windows.devices.lights.effects.LampArrayBitmapEffect;
+    function new(lampArray: cxx.ConstRef<winrt.windows.devices.lights.LampArray>, lampIndexes: winrt.ArrayView<cxx.num.Int32>);
     overload function Duration(): winrt.windows.foundation.TimeSpan;
     overload function Duration(value: cxx.ConstRef<winrt.windows.foundation.TimeSpan>): Void;
     overload function StartDelay(): winrt.windows.foundation.TimeSpan;

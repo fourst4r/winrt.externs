@@ -7,8 +7,7 @@ extern class Window
     implements winrt.microsoft.ui.xaml.IWindow
     implements winrt.microsoft.ui.xaml.IWindow2
 {
-    @:native("winrt::Microsoft::UI::Xaml::Window")
-    static overload function make(): winrt.microsoft.ui.xaml.Window;
+    function new();
     overload function Bounds(): winrt.windows.foundation.Rect;
     overload function Visible(): Bool;
     overload function Content(): winrt.microsoft.ui.xaml.UIElement;

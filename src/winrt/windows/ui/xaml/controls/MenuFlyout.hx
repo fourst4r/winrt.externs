@@ -8,8 +8,7 @@ extern class MenuFlyout
     implements winrt.windows.ui.xaml.controls.IMenuFlyout
     implements winrt.windows.ui.xaml.controls.IMenuFlyout2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::MenuFlyout")
-    static overload function make(): winrt.windows.ui.xaml.controls.MenuFlyout;
+    function new();
     overload function Items(): winrt.windows.foundation.collections.IVector<winrt.windows.ui.xaml.controls.MenuFlyoutItemBase> /* GenericTypeInstSig */;
     overload function MenuFlyoutPresenterStyle(): winrt.windows.ui.xaml.Style;
     overload function MenuFlyoutPresenterStyle(value: cxx.ConstRef<winrt.windows.ui.xaml.Style>): Void;

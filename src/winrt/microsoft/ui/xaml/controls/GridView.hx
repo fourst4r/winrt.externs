@@ -7,6 +7,5 @@ extern class GridView
     extends winrt.microsoft.ui.xaml.controls.ListViewBase
     implements winrt.microsoft.ui.xaml.controls.IGridView
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::GridView")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.GridView;
+    function new();
 }

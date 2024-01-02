@@ -7,6 +7,5 @@ extern class PivotHeaderItem
     extends winrt.windows.ui.xaml.controls.ContentControl
     implements winrt.windows.ui.xaml.controls.primitives.IPivotHeaderItem
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Primitives::PivotHeaderItem")
-    static overload function make(): winrt.windows.ui.xaml.controls.primitives.PivotHeaderItem;
+    function new();
 }

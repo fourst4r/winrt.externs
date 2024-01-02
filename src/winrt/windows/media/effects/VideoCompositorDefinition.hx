@@ -6,8 +6,7 @@ package winrt.windows.media.effects;
 extern class VideoCompositorDefinition
     implements winrt.windows.media.effects.IVideoCompositorDefinition
 {
-    @:native("winrt::Windows::Media::Effects::VideoCompositorDefinition")
-    /* explicit */ static overload function make(activatableClassId: cxx.ConstRef<winrt.HString>): winrt.windows.media.effects.VideoCompositorDefinition;
+    /* explicit */ function new(activatableClassId: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::Media::Effects::VideoCompositorDefinition")
     static overload function make(activatableClassId: cxx.ConstRef<winrt.HString>, props: cxx.ConstRef<winrt.windows.foundation.collections.IPropertySet>): winrt.windows.media.effects.VideoCompositorDefinition;
     overload function ActivatableClassId(): winrt.HString;

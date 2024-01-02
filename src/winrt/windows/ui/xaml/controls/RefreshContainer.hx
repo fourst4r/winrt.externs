@@ -7,8 +7,7 @@ extern class RefreshContainer
     extends winrt.windows.ui.xaml.controls.ContentControl
     implements winrt.windows.ui.xaml.controls.IRefreshContainer
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::RefreshContainer")
-    static overload function make(): winrt.windows.ui.xaml.controls.RefreshContainer;
+    function new();
     overload function Visualizer(): winrt.windows.ui.xaml.controls.RefreshVisualizer;
     overload function Visualizer(value: cxx.ConstRef<winrt.windows.ui.xaml.controls.RefreshVisualizer>): Void;
     overload function PullDirection(): winrt.windows.ui.xaml.controls.RefreshPullDirection;

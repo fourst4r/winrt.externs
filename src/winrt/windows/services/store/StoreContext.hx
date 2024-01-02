@@ -8,6 +8,7 @@ extern class StoreContext
     implements winrt.windows.services.store.IStoreContext2
     implements winrt.windows.services.store.IStoreContext3
     implements winrt.windows.services.store.IStoreContext4
+    implements winrt.windows.services.store.IStoreContext5
 {
     overload function User(): winrt.windows.system.User;
     overload function OfflineLicensesChanged(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.services.store.StoreContext, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
@@ -47,6 +48,9 @@ extern class StoreContext
     function UninstallStorePackageByStoreIdAsync(storeId: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.store.StoreUninstallStorePackageResult> /* GenericTypeInstSig */;
     function RequestRateAndReviewAppAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.store.StoreRateAndReviewResult> /* GenericTypeInstSig */;
     function SetInstallOrderForAssociatedStoreQueueItemsAsync(items: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.services.store.StoreQueueItem> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.services.store.StoreQueueItem> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+    function GetUserPurchaseHistoryAsync(productKinds: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.store.StoreProductQueryResult> /* GenericTypeInstSig */;
+    function GetAssociatedStoreProductsByInAppOfferTokenAsync(inAppOfferTokens: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.store.StoreProductQueryResult> /* GenericTypeInstSig */;
+    function RequestPurchaseByInAppOfferTokenAsync(inAppOfferToken: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.store.StorePurchaseResult> /* GenericTypeInstSig */;
     function GetDefault(): winrt.windows.services.store.StoreContext;
     function GetForUser(user: cxx.ConstRef<winrt.windows.system.User>): winrt.windows.services.store.StoreContext;
     static function GetDefault(): winrt.windows.services.store.StoreContext;

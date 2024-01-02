@@ -10,8 +10,7 @@ extern class MediaTransportControls
     implements winrt.windows.ui.xaml.controls.IMediaTransportControls3
     implements winrt.windows.ui.xaml.controls.IMediaTransportControls4
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::MediaTransportControls")
-    static overload function make(): winrt.windows.ui.xaml.controls.MediaTransportControls;
+    function new();
     overload function IsFullWindowButtonVisible(): Bool;
     overload function IsFullWindowButtonVisible(value: Bool): Void;
     overload function IsFullWindowEnabled(): Bool;

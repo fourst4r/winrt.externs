@@ -7,7 +7,6 @@ extern class CommandBarFlyoutCommandBar
     extends winrt.microsoft.ui.xaml.controls.CommandBar
     implements winrt.microsoft.ui.xaml.controls.primitives.ICommandBarFlyoutCommandBar
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.primitives.CommandBarFlyoutCommandBar;
+    function new();
     overload function FlyoutTemplateSettings(): winrt.microsoft.ui.xaml.controls.primitives.CommandBarFlyoutCommandBarTemplateSettings;
 }

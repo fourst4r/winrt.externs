@@ -6,8 +6,7 @@ package winrt.windows.data.text;
 extern class WordsSegmenter
     implements winrt.windows.data.text.IWordsSegmenter
 {
-    @:native("winrt::Windows::Data::Text::WordsSegmenter")
-    /* explicit */ static overload function make(language: cxx.ConstRef<winrt.HString>): winrt.windows.data.text.WordsSegmenter;
+    /* explicit */ function new(language: cxx.ConstRef<winrt.HString>);
     overload function ResolvedLanguage(): winrt.HString;
     function GetTokenAt(text: cxx.ConstRef<winrt.HString>, startIndex: cxx.num.UInt32): winrt.windows.data.text.WordSegment;
     function GetTokens(text: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.data.text.WordSegment> /* GenericTypeInstSig */;

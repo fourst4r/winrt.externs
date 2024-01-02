@@ -7,8 +7,7 @@ extern class StackLayout
     extends winrt.microsoft.ui.xaml.controls.VirtualizingLayout
     implements winrt.microsoft.ui.xaml.controls.IStackLayout
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::StackLayout")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.StackLayout;
+    function new();
     overload function Orientation(): winrt.microsoft.ui.xaml.controls.Orientation;
     overload function Orientation(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.Orientation>): Void;
     overload function Spacing(): cxx.num.Float64;

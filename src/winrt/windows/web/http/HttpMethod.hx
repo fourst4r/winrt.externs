@@ -7,8 +7,7 @@ extern class HttpMethod
     implements winrt.windows.web.http.IHttpMethod
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::HttpMethod")
-    /* explicit */ static overload function make(method: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.HttpMethod;
+    /* explicit */ function new(method: cxx.ConstRef<winrt.HString>);
     overload function Method(): winrt.HString;
     function ToString(): winrt.HString;
     overload function Delete(): winrt.windows.web.http.HttpMethod;

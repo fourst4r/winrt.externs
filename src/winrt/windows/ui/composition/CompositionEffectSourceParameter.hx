@@ -7,7 +7,6 @@ extern class CompositionEffectSourceParameter
     implements winrt.windows.ui.composition.ICompositionEffectSourceParameter
     implements winrt.windows.graphics.effects.IGraphicsEffectSource
 {
-    @:native("winrt::Windows::UI::Composition::CompositionEffectSourceParameter")
-    /* explicit */ static overload function make(name: cxx.ConstRef<winrt.HString>): winrt.windows.ui.composition.CompositionEffectSourceParameter;
+    /* explicit */ function new(name: cxx.ConstRef<winrt.HString>);
     overload function Name(): winrt.HString;
 }

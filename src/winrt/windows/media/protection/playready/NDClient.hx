@@ -6,8 +6,7 @@ package winrt.windows.media.protection.playready;
 extern class NDClient
     implements winrt.windows.media.protection.playready.INDClient
 {
-    @:native("winrt::Windows::Media::Protection::PlayReady::NDClient")
-    static overload function make(downloadEngine: cxx.ConstRef<winrt.windows.media.protection.playready.INDDownloadEngine>, streamParser: cxx.ConstRef<winrt.windows.media.protection.playready.INDStreamParser>, pMessenger: cxx.ConstRef<winrt.windows.media.protection.playready.INDMessenger>): winrt.windows.media.protection.playready.NDClient;
+    function new(downloadEngine: cxx.ConstRef<winrt.windows.media.protection.playready.INDDownloadEngine>, streamParser: cxx.ConstRef<winrt.windows.media.protection.playready.INDStreamParser>, pMessenger: cxx.ConstRef<winrt.windows.media.protection.playready.INDMessenger>);
     overload function RegistrationCompleted(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.protection.playready.NDClient, winrt.windows.media.protection.playready.INDRegistrationCompletedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
     @:noExcept overload function RegistrationCompleted(token: cxx.ConstRef<winrt.EventToken>): Void;
     overload function ProximityDetectionCompleted(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.protection.playready.NDClient, winrt.windows.media.protection.playready.INDProximityDetectionCompletedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;

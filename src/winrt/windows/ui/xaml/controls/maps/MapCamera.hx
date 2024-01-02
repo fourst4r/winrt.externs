@@ -7,8 +7,7 @@ extern class MapCamera
     extends winrt.windows.ui.xaml.DependencyObject
     implements winrt.windows.ui.xaml.controls.maps.IMapCamera
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapCamera")
-    /* explicit */ static overload function make(location: cxx.ConstRef<winrt.windows.devices.geolocation.Geopoint>): winrt.windows.ui.xaml.controls.maps.MapCamera;
+    /* explicit */ function new(location: cxx.ConstRef<winrt.windows.devices.geolocation.Geopoint>);
     @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapCamera")
     static overload function make(location: cxx.ConstRef<winrt.windows.devices.geolocation.Geopoint>, headingInDegrees: cxx.num.Float64): winrt.windows.ui.xaml.controls.maps.MapCamera;
     @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapCamera")

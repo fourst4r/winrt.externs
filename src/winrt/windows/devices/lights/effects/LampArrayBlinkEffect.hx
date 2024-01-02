@@ -7,8 +7,7 @@ extern class LampArrayBlinkEffect
     implements winrt.windows.devices.lights.effects.ILampArrayBlinkEffect
     implements winrt.windows.devices.lights.effects.ILampArrayEffect
 {
-    @:native("winrt::Windows::Devices::Lights::Effects::LampArrayBlinkEffect")
-    static overload function make(lampArray: cxx.ConstRef<winrt.windows.devices.lights.LampArray>, lampIndexes: winrt.ArrayView<cxx.num.Int32>): winrt.windows.devices.lights.effects.LampArrayBlinkEffect;
+    function new(lampArray: cxx.ConstRef<winrt.windows.devices.lights.LampArray>, lampIndexes: winrt.ArrayView<cxx.num.Int32>);
     overload function Color(): winrt.windows.ui.Color;
     overload function Color(value: cxx.ConstRef<winrt.windows.ui.Color>): Void;
     overload function AttackDuration(): winrt.windows.foundation.TimeSpan;

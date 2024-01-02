@@ -7,8 +7,7 @@ extern class MidiPitchBendChangeMessage
     implements winrt.windows.devices.midi.IMidiMessage
     implements winrt.windows.devices.midi.IMidiPitchBendChangeMessage
 {
-    @:native("winrt::Windows::Devices::Midi::MidiPitchBendChangeMessage")
-    static overload function make(channel: cxx.num.UInt8, bend: cxx.num.UInt16): winrt.windows.devices.midi.MidiPitchBendChangeMessage;
+    function new(channel: cxx.num.UInt8, bend: cxx.num.UInt16);
     overload function Channel(): cxx.num.UInt8;
     overload function Bend(): cxx.num.UInt16;
     overload function Timestamp(): winrt.windows.foundation.TimeSpan;

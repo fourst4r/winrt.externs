@@ -7,8 +7,7 @@ extern class RatingControl
     extends winrt.windows.ui.xaml.controls.Control
     implements winrt.windows.ui.xaml.controls.IRatingControl
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::RatingControl")
-    static overload function make(): winrt.windows.ui.xaml.controls.RatingControl;
+    function new();
     overload function Caption(): winrt.HString;
     overload function Caption(value: cxx.ConstRef<winrt.HString>): Void;
     overload function InitialSetValue(): cxx.num.Int32;

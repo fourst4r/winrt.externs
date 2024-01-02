@@ -6,8 +6,7 @@ package winrt.windows.ui.xaml;
 extern class DispatcherTimer
     implements winrt.windows.ui.xaml.IDispatcherTimer
 {
-    @:native("winrt::Windows::UI::Xaml::DispatcherTimer")
-    static overload function make(): winrt.windows.ui.xaml.DispatcherTimer;
+    function new();
     overload function Interval(): winrt.windows.foundation.TimeSpan;
     overload function Interval(value: cxx.ConstRef<winrt.windows.foundation.TimeSpan>): Void;
     overload function IsEnabled(): Bool;

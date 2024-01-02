@@ -6,8 +6,7 @@ package winrt.microsoft.ui.xaml;
 extern class PropertyMetadata
     implements winrt.microsoft.ui.xaml.IPropertyMetadata
 {
-    @:native("winrt::Microsoft::UI::Xaml::PropertyMetadata")
-    /* explicit */ static overload function make(defaultValue: cxx.ConstRef<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.PropertyMetadata;
+    /* explicit */ function new(defaultValue: cxx.ConstRef<winrt.windows.foundation.IInspectable>);
     @:native("winrt::Microsoft::UI::Xaml::PropertyMetadata")
     static overload function make(defaultValue: cxx.ConstRef<winrt.windows.foundation.IInspectable>, propertyChangedCallback: cxx.ConstRef<winrt.microsoft.ui.xaml.PropertyChangedCallback>): winrt.microsoft.ui.xaml.PropertyMetadata;
     overload function DefaultValue(): winrt.windows.foundation.IInspectable;

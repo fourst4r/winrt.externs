@@ -7,8 +7,7 @@ extern class ContactInstantMessageField
     implements winrt.windows.applicationmodel.contacts.IContactField
     implements winrt.windows.applicationmodel.contacts.IContactInstantMessageField
 {
-    @:native("winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField")
-    /* explicit */ static overload function make(userName: cxx.ConstRef<winrt.HString>): winrt.windows.applicationmodel.contacts.ContactInstantMessageField;
+    /* explicit */ function new(userName: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField")
     static overload function make(userName: cxx.ConstRef<winrt.HString>, category: cxx.ConstRef<winrt.windows.applicationmodel.contacts.ContactFieldCategory>): winrt.windows.applicationmodel.contacts.ContactInstantMessageField;
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField")

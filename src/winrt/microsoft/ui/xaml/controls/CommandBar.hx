@@ -7,8 +7,7 @@ extern class CommandBar
     extends winrt.microsoft.ui.xaml.controls.AppBar
     implements winrt.microsoft.ui.xaml.controls.ICommandBar
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::CommandBar")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.CommandBar;
+    function new();
     overload function PrimaryCommands(): winrt.windows.foundation.collections.IObservableVector<winrt.microsoft.ui.xaml.controls.ICommandBarElement> /* GenericTypeInstSig */;
     overload function SecondaryCommands(): winrt.windows.foundation.collections.IObservableVector<winrt.microsoft.ui.xaml.controls.ICommandBarElement> /* GenericTypeInstSig */;
     overload function CommandBarOverflowPresenterStyle(): winrt.microsoft.ui.xaml.Style;

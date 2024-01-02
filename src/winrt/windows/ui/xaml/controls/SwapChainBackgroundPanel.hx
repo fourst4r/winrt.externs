@@ -8,7 +8,6 @@ extern class SwapChainBackgroundPanel
     implements winrt.windows.ui.xaml.controls.ISwapChainBackgroundPanel
     implements winrt.windows.ui.xaml.controls.ISwapChainBackgroundPanel2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::SwapChainBackgroundPanel")
-    static overload function make(): winrt.windows.ui.xaml.controls.SwapChainBackgroundPanel;
+    function new();
     function CreateCoreIndependentInputSource(deviceTypes: cxx.ConstRef<winrt.windows.ui.core.CoreInputDeviceTypes>): winrt.windows.ui.core.CoreIndependentInputSource;
 }

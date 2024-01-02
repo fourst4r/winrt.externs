@@ -6,8 +6,7 @@ package winrt.windows.devices.geolocation.geofencing;
 extern class Geofence
     implements winrt.windows.devices.geolocation.geofencing.IGeofence
 {
-    @:native("winrt::Windows::Devices::Geolocation::Geofencing::Geofence")
-    static overload function make(id: cxx.ConstRef<winrt.HString>, geoshape: cxx.ConstRef<winrt.windows.devices.geolocation.IGeoshape>): winrt.windows.devices.geolocation.geofencing.Geofence;
+    function new(id: cxx.ConstRef<winrt.HString>, geoshape: cxx.ConstRef<winrt.windows.devices.geolocation.IGeoshape>);
     @:native("winrt::Windows::Devices::Geolocation::Geofencing::Geofence")
     static overload function make(id: cxx.ConstRef<winrt.HString>, geoshape: cxx.ConstRef<winrt.windows.devices.geolocation.IGeoshape>, monitoredStates: cxx.ConstRef<winrt.windows.devices.geolocation.geofencing.MonitoredGeofenceStates>, singleUse: Bool): winrt.windows.devices.geolocation.geofencing.Geofence;
     @:native("winrt::Windows::Devices::Geolocation::Geofencing::Geofence")

@@ -6,8 +6,7 @@ package winrt.windows.security.authentication.web.provider;
 extern class WebAccountClientView
     implements winrt.windows.security.authentication.web.provider.IWebAccountClientView
 {
-    @:native("winrt::Windows::Security::Authentication::Web::Provider::WebAccountClientView")
-    static overload function make(viewType: cxx.ConstRef<winrt.windows.security.authentication.web.provider.WebAccountClientViewType>, applicationCallbackUri: cxx.ConstRef<winrt.windows.foundation.Uri>): winrt.windows.security.authentication.web.provider.WebAccountClientView;
+    function new(viewType: cxx.ConstRef<winrt.windows.security.authentication.web.provider.WebAccountClientViewType>, applicationCallbackUri: cxx.ConstRef<winrt.windows.foundation.Uri>);
     @:native("winrt::Windows::Security::Authentication::Web::Provider::WebAccountClientView")
     static overload function make(viewType: cxx.ConstRef<winrt.windows.security.authentication.web.provider.WebAccountClientViewType>, applicationCallbackUri: cxx.ConstRef<winrt.windows.foundation.Uri>, accountPairwiseId: cxx.ConstRef<winrt.HString>): winrt.windows.security.authentication.web.provider.WebAccountClientView;
     overload function ApplicationCallbackUri(): winrt.windows.foundation.Uri;

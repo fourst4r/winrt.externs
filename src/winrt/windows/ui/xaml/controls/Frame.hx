@@ -12,8 +12,7 @@ extern class Frame
     implements winrt.windows.ui.xaml.controls.IFrame5
     implements winrt.windows.ui.xaml.controls.INavigate
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Frame")
-    static overload function make(): winrt.windows.ui.xaml.controls.Frame;
+    function new();
     overload function CacheSize(): cxx.num.Int32;
     overload function CacheSize(value: cxx.num.Int32): Void;
     overload function CanGoBack(): Bool;

@@ -14,8 +14,7 @@ extern class TextBox
     implements winrt.windows.ui.xaml.controls.ITextBox7
     implements winrt.windows.ui.xaml.controls.ITextBox8
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::TextBox")
-    static overload function make(): winrt.windows.ui.xaml.controls.TextBox;
+    function new();
     overload function Text(): winrt.HString;
     overload function Text(value: cxx.ConstRef<winrt.HString>): Void;
     overload function SelectedText(): winrt.HString;

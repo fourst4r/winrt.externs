@@ -7,6 +7,5 @@ extern class MenuBarItemFlyout
     extends winrt.microsoft.ui.xaml.controls.MenuFlyout
     implements winrt.microsoft.ui.xaml.controls.IMenuBarItemFlyout
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::MenuBarItemFlyout")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.MenuBarItemFlyout;
+    function new();
 }

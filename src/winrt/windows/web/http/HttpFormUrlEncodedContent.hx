@@ -8,8 +8,7 @@ extern class HttpFormUrlEncodedContent
     implements winrt.windows.web.http.IHttpContent
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::HttpFormUrlEncodedContent")
-    /* explicit */ static overload function make(content: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.HString> /* GenericTypeInstSig */> /* temp_GenericTypeInstSig */>): winrt.windows.web.http.HttpFormUrlEncodedContent;
+    /* explicit */ function new(content: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.HString> /* GenericTypeInstSig */> /* temp_GenericTypeInstSig */>);
     overload function Headers(): winrt.windows.web.http.headers.HttpContentHeaderCollection;
     function BufferAllAsync(): winrt.windows.foundation.IAsyncOperationWithProgress<cxx.num.UInt64, cxx.num.UInt64> /* GenericTypeInstSig */;
     function ReadAsBufferAsync(): winrt.windows.foundation.IAsyncOperationWithProgress<winrt.windows.storage.streams.IBuffer, cxx.num.UInt64> /* GenericTypeInstSig */;

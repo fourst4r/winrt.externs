@@ -6,8 +6,7 @@ package winrt.microsoft.windows.appnotifications;
 extern class AppNotificationProgressData
     implements winrt.microsoft.windows.appnotifications.IAppNotificationProgressData
 {
-    @:native("winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressData")
-    /* explicit */ static overload function make(sequenceNumber: cxx.num.UInt32): winrt.microsoft.windows.appnotifications.AppNotificationProgressData;
+    /* explicit */ function new(sequenceNumber: cxx.num.UInt32);
     overload function SequenceNumber(): cxx.num.UInt32;
     overload function SequenceNumber(value: cxx.num.UInt32): Void;
     overload function Title(): winrt.HString;

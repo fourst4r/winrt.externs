@@ -6,8 +6,7 @@ package winrt.windows.applicationmodel.wallet;
 extern class WalletVerb
     implements winrt.windows.applicationmodel.wallet.IWalletVerb
 {
-    @:native("winrt::Windows::ApplicationModel::Wallet::WalletVerb")
-    /* explicit */ static overload function make(name: cxx.ConstRef<winrt.HString>): winrt.windows.applicationmodel.wallet.WalletVerb;
+    /* explicit */ function new(name: cxx.ConstRef<winrt.HString>);
     overload function Name(): winrt.HString;
     overload function Name(value: cxx.ConstRef<winrt.HString>): Void;
 }

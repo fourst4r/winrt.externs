@@ -6,8 +6,7 @@ package winrt.windows.ui.applicationsettings;
 extern class SettingsCommand
     implements winrt.windows.ui.popups.IUICommand
 {
-    @:native("winrt::Windows::UI::ApplicationSettings::SettingsCommand")
-    static overload function make(settingsCommandId: cxx.ConstRef<winrt.windows.foundation.IInspectable>, label: cxx.ConstRef<winrt.HString>, handler: cxx.ConstRef<winrt.windows.ui.popups.UICommandInvokedHandler>): winrt.windows.ui.applicationsettings.SettingsCommand;
+    function new(settingsCommandId: cxx.ConstRef<winrt.windows.foundation.IInspectable>, label: cxx.ConstRef<winrt.HString>, handler: cxx.ConstRef<winrt.windows.ui.popups.UICommandInvokedHandler>);
     overload function Label(): winrt.HString;
     overload function Label(value: cxx.ConstRef<winrt.HString>): Void;
     overload function Invoked(): winrt.windows.ui.popups.UICommandInvokedHandler;

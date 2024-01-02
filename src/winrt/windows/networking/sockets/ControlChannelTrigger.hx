@@ -8,8 +8,7 @@ extern class ControlChannelTrigger
     implements winrt.windows.networking.sockets.IControlChannelTrigger
     implements winrt.windows.networking.sockets.IControlChannelTrigger2
 {
-    @:native("winrt::Windows::Networking::Sockets::ControlChannelTrigger")
-    static overload function make(channelId: cxx.ConstRef<winrt.HString>, serverKeepAliveIntervalInMinutes: cxx.num.UInt32): winrt.windows.networking.sockets.ControlChannelTrigger;
+    function new(channelId: cxx.ConstRef<winrt.HString>, serverKeepAliveIntervalInMinutes: cxx.num.UInt32);
     @:native("winrt::Windows::Networking::Sockets::ControlChannelTrigger")
     static overload function make(channelId: cxx.ConstRef<winrt.HString>, serverKeepAliveIntervalInMinutes: cxx.num.UInt32, resourceRequestType: cxx.ConstRef<winrt.windows.networking.sockets.ControlChannelTriggerResourceType>): winrt.windows.networking.sockets.ControlChannelTrigger;
     overload function ControlChannelTriggerId(): winrt.HString;

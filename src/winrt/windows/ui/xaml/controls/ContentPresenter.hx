@@ -12,8 +12,7 @@ extern class ContentPresenter
     implements winrt.windows.ui.xaml.controls.IContentPresenter5
     implements winrt.windows.ui.xaml.controls.IContentPresenterOverrides
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::ContentPresenter")
-    static overload function make(): winrt.windows.ui.xaml.controls.ContentPresenter;
+    function new();
     overload function Content(): winrt.windows.foundation.IInspectable;
     overload function Content(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function ContentTemplate(): winrt.windows.ui.xaml.DataTemplate;

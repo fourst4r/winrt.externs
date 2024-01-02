@@ -8,8 +8,7 @@ extern class LearningModelBindingPreview
     implements winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */
     implements winrt.windows.ai.machinelearning.preview.ILearningModelBindingPreview
 {
-    @:native("winrt::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview")
-    /* explicit */ static overload function make(model: cxx.ConstRef<winrt.windows.ai.machinelearning.preview.LearningModelPreview>): winrt.windows.ai.machinelearning.preview.LearningModelBindingPreview;
+    /* explicit */ function new(model: cxx.ConstRef<winrt.windows.ai.machinelearning.preview.LearningModelPreview>);
     overload function Bind(name: cxx.ConstRef<winrt.HString>, value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function Bind(name: cxx.ConstRef<winrt.HString>, value: cxx.ConstRef<winrt.windows.foundation.IInspectable>, metadata: cxx.ConstRef<winrt.windows.foundation.collections.IPropertySet>): Void;
     function Clear(): Void;

@@ -7,8 +7,7 @@ extern class WebView2
     extends winrt.microsoft.ui.xaml.FrameworkElement
     implements winrt.microsoft.ui.xaml.controls.IWebView2
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::WebView2")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.WebView2;
+    function new();
     overload function CoreWebView2(): winrt.microsoft.web.webview2.core.CoreWebView2;
     function EnsureCoreWebView2Async(): winrt.windows.foundation.IAsyncAction;
     function ExecuteScriptAsync(javascriptCode: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.HString> /* GenericTypeInstSig */;

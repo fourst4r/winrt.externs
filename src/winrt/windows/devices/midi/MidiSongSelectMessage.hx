@@ -7,8 +7,7 @@ extern class MidiSongSelectMessage
     implements winrt.windows.devices.midi.IMidiMessage
     implements winrt.windows.devices.midi.IMidiSongSelectMessage
 {
-    @:native("winrt::Windows::Devices::Midi::MidiSongSelectMessage")
-    /* explicit */ static overload function make(song: cxx.num.UInt8): winrt.windows.devices.midi.MidiSongSelectMessage;
+    /* explicit */ function new(song: cxx.num.UInt8);
     overload function Song(): cxx.num.UInt8;
     overload function Timestamp(): winrt.windows.foundation.TimeSpan;
     overload function RawData(): winrt.windows.storage.streams.IBuffer;

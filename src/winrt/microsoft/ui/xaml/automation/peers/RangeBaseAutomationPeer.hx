@@ -8,8 +8,7 @@ extern class RangeBaseAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IRangeBaseAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IRangeValueProvider
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.primitives.RangeBase>): winrt.microsoft.ui.xaml.automation.peers.RangeBaseAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.primitives.RangeBase>);
     overload function IsReadOnly(): Bool;
     overload function LargeChange(): cxx.num.Float64;
     overload function Maximum(): cxx.num.Float64;

@@ -8,8 +8,7 @@ extern class Decompressor
     implements winrt.windows.storage.streams.IInputStream
     implements winrt.windows.storage.compression.IDecompressor
 {
-    @:native("winrt::Windows::Storage::Compression::Decompressor")
-    /* explicit */ static overload function make(underlyingStream: cxx.ConstRef<winrt.windows.storage.streams.IInputStream>): winrt.windows.storage.compression.Decompressor;
+    /* explicit */ function new(underlyingStream: cxx.ConstRef<winrt.windows.storage.streams.IInputStream>);
     function DetachStream(): winrt.windows.storage.streams.IInputStream;
     function ReadAsync(buffer: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>, count: cxx.num.UInt32, options: cxx.ConstRef<winrt.windows.storage.streams.InputStreamOptions>): winrt.windows.foundation.IAsyncOperationWithProgress<winrt.windows.storage.streams.IBuffer, cxx.num.UInt32> /* GenericTypeInstSig */;
     function Close(): Void;

@@ -9,8 +9,7 @@ extern class StackPanel
     implements winrt.microsoft.ui.xaml.controls.primitives.IScrollSnapPointsInfo
     implements winrt.microsoft.ui.xaml.controls.IInsertionPanel
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::StackPanel")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.StackPanel;
+    function new();
     overload function AreScrollSnapPointsRegular(): Bool;
     overload function AreScrollSnapPointsRegular(value: Bool): Void;
     overload function Orientation(): winrt.microsoft.ui.xaml.controls.Orientation;

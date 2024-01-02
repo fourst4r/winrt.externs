@@ -56,4 +56,5 @@ extern class MediaEncodingSubtypes
     static overload function Srt(): winrt.HString;
     static overload function Ssa(): winrt.HString;
     static overload function VobSub(): winrt.HString;
+    static overload function Av1(): winrt.HString;
 }

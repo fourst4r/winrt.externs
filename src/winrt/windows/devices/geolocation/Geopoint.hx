@@ -7,8 +7,7 @@ extern class Geopoint
     implements winrt.windows.devices.geolocation.IGeoshape
     implements winrt.windows.devices.geolocation.IGeopoint
 {
-    @:native("winrt::Windows::Devices::Geolocation::Geopoint")
-    /* explicit */ static overload function make(position: cxx.ConstRef<winrt.windows.devices.geolocation.BasicGeoposition>): winrt.windows.devices.geolocation.Geopoint;
+    /* explicit */ function new(position: cxx.ConstRef<winrt.windows.devices.geolocation.BasicGeoposition>);
     @:native("winrt::Windows::Devices::Geolocation::Geopoint")
     static overload function make(position: cxx.ConstRef<winrt.windows.devices.geolocation.BasicGeoposition>, altitudeReferenceSystem: cxx.ConstRef<winrt.windows.devices.geolocation.AltitudeReferenceSystem>): winrt.windows.devices.geolocation.Geopoint;
     @:native("winrt::Windows::Devices::Geolocation::Geopoint")

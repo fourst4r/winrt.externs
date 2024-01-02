@@ -7,8 +7,7 @@ extern class ProgressRing
     extends winrt.microsoft.ui.xaml.controls.Control
     implements winrt.microsoft.ui.xaml.controls.IProgressRing
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::ProgressRing")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.ProgressRing;
+    function new();
     overload function IsActive(): Bool;
     overload function IsActive(value: Bool): Void;
     overload function IsIndeterminate(): Bool;

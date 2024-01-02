@@ -8,8 +8,7 @@ extern class Slider
     implements winrt.windows.ui.xaml.controls.ISlider
     implements winrt.windows.ui.xaml.controls.ISlider2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Slider")
-    static overload function make(): winrt.windows.ui.xaml.controls.Slider;
+    function new();
     overload function IntermediateValue(): cxx.num.Float64;
     overload function IntermediateValue(value: cxx.num.Float64): Void;
     overload function StepFrequency(): cxx.num.Float64;

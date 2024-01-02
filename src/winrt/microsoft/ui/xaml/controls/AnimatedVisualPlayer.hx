@@ -8,8 +8,7 @@ extern class AnimatedVisualPlayer
     implements winrt.microsoft.ui.xaml.controls.IAnimatedVisualPlayer
     implements winrt.microsoft.ui.xaml.controls.IAnimatedVisualPlayer2
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::AnimatedVisualPlayer")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.AnimatedVisualPlayer;
+    function new();
     overload function Diagnostics(): winrt.windows.foundation.IInspectable;
     overload function Duration(): winrt.windows.foundation.TimeSpan;
     overload function Source(): winrt.microsoft.ui.xaml.controls.IAnimatedVisualSource;

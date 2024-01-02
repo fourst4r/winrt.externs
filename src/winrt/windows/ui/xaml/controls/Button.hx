@@ -8,8 +8,7 @@ extern class Button
     implements winrt.windows.ui.xaml.controls.IButton
     implements winrt.windows.ui.xaml.controls.IButtonWithFlyout
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Button")
-    static overload function make(): winrt.windows.ui.xaml.controls.Button;
+    function new();
     overload function Flyout(): winrt.windows.ui.xaml.controls.primitives.FlyoutBase;
     overload function Flyout(value: cxx.ConstRef<winrt.windows.ui.xaml.controls.primitives.FlyoutBase>): Void;
     overload function FlyoutProperty(): winrt.windows.ui.xaml.DependencyProperty;

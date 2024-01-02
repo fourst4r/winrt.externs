@@ -8,8 +8,7 @@ extern class InkPresenterRuler
     implements winrt.windows.ui.input.inking.IInkPresenterRuler
     implements winrt.windows.ui.input.inking.IInkPresenterRuler2
 {
-    @:native("winrt::Windows::UI::Input::Inking::InkPresenterRuler")
-    /* explicit */ static overload function make(inkPresenter: cxx.ConstRef<winrt.windows.ui.input.inking.InkPresenter>): winrt.windows.ui.input.inking.InkPresenterRuler;
+    /* explicit */ function new(inkPresenter: cxx.ConstRef<winrt.windows.ui.input.inking.InkPresenter>);
     overload function Length(): cxx.num.Float64;
     overload function Length(value: cxx.num.Float64): Void;
     overload function Width(): cxx.num.Float64;

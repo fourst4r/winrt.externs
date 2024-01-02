@@ -7,8 +7,7 @@ extern class InkPresenterProtractor
     implements winrt.windows.ui.input.inking.IInkPresenterStencil
     implements winrt.windows.ui.input.inking.IInkPresenterProtractor
 {
-    @:native("winrt::Windows::UI::Input::Inking::InkPresenterProtractor")
-    /* explicit */ static overload function make(inkPresenter: cxx.ConstRef<winrt.windows.ui.input.inking.InkPresenter>): winrt.windows.ui.input.inking.InkPresenterProtractor;
+    /* explicit */ function new(inkPresenter: cxx.ConstRef<winrt.windows.ui.input.inking.InkPresenter>);
     overload function AreTickMarksVisible(): Bool;
     overload function AreTickMarksVisible(value: Bool): Void;
     overload function AreRaysVisible(): Bool;

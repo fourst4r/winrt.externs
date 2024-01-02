@@ -7,6 +7,5 @@ extern class SwapChainBackgroundPanel
     extends winrt.microsoft.ui.xaml.controls.Grid
     implements winrt.microsoft.ui.xaml.controls.ISwapChainBackgroundPanel
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::SwapChainBackgroundPanel")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.SwapChainBackgroundPanel;
+    function new();
 }

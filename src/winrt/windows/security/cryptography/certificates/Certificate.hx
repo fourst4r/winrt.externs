@@ -8,8 +8,7 @@ extern class Certificate
     implements winrt.windows.security.cryptography.certificates.ICertificate2
     implements winrt.windows.security.cryptography.certificates.ICertificate3
 {
-    @:native("winrt::Windows::Security::Cryptography::Certificates::Certificate")
-    /* explicit */ static overload function make(certBlob: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.security.cryptography.certificates.Certificate;
+    /* explicit */ function new(certBlob: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>);
     overload function BuildChainAsync(certificates: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.security.cryptography.certificates.Certificate> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<winrt.windows.security.cryptography.certificates.CertificateChain> /* GenericTypeInstSig */;
     overload function BuildChainAsync(certificates: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.security.cryptography.certificates.Certificate> /* temp_GenericTypeInstSig */>, parameters: cxx.ConstRef<winrt.windows.security.cryptography.certificates.ChainBuildingParameters>): winrt.windows.foundation.IAsyncOperation<winrt.windows.security.cryptography.certificates.CertificateChain> /* GenericTypeInstSig */;
     overload function SerialNumber(): winrt.ComArray<cxx.num.UInt8>;

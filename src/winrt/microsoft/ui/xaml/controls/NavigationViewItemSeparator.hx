@@ -7,6 +7,5 @@ extern class NavigationViewItemSeparator
     extends winrt.microsoft.ui.xaml.controls.NavigationViewItemBase
     implements winrt.microsoft.ui.xaml.controls.INavigationViewItemSeparator
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::NavigationViewItemSeparator")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.NavigationViewItemSeparator;
+    function new();
 }

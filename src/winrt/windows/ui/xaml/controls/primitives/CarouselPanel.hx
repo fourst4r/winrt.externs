@@ -8,8 +8,7 @@ extern class CarouselPanel
     implements winrt.windows.ui.xaml.controls.primitives.ICarouselPanel
     implements winrt.windows.ui.xaml.controls.primitives.IScrollSnapPointsInfo
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel")
-    static overload function make(): winrt.windows.ui.xaml.controls.primitives.CarouselPanel;
+    function new();
     overload function CanVerticallyScroll(): Bool;
     overload function CanVerticallyScroll(value: Bool): Void;
     overload function CanHorizontallyScroll(): Bool;

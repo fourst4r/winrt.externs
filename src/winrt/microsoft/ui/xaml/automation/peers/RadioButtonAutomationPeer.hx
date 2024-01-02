@@ -8,8 +8,7 @@ extern class RadioButtonAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IRadioButtonAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.ISelectionItemProvider
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.RadioButton>): winrt.microsoft.ui.xaml.automation.peers.RadioButtonAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.RadioButton>);
     overload function IsSelected(): Bool;
     overload function SelectionContainer(): winrt.microsoft.ui.xaml.automation.provider.IRawElementProviderSimple;
     function AddToSelection(): Void;

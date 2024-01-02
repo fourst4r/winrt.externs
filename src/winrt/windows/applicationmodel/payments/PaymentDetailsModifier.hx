@@ -6,8 +6,7 @@ package winrt.windows.applicationmodel.payments;
 extern class PaymentDetailsModifier
     implements winrt.windows.applicationmodel.payments.IPaymentDetailsModifier
 {
-    @:native("winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier")
-    static overload function make(supportedMethodIds: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, total: cxx.ConstRef<winrt.windows.applicationmodel.payments.PaymentItem>): winrt.windows.applicationmodel.payments.PaymentDetailsModifier;
+    function new(supportedMethodIds: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, total: cxx.ConstRef<winrt.windows.applicationmodel.payments.PaymentItem>);
     @:native("winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier")
     static overload function make(supportedMethodIds: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, total: cxx.ConstRef<winrt.windows.applicationmodel.payments.PaymentItem>, additionalDisplayItems: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.applicationmodel.payments.PaymentItem> /* temp_GenericTypeInstSig */>): winrt.windows.applicationmodel.payments.PaymentDetailsModifier;
     @:native("winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier")

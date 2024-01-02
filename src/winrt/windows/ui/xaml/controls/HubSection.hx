@@ -7,8 +7,7 @@ extern class HubSection
     extends winrt.windows.ui.xaml.controls.Control
     implements winrt.windows.ui.xaml.controls.IHubSection
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::HubSection")
-    static overload function make(): winrt.windows.ui.xaml.controls.HubSection;
+    function new();
     overload function Header(): winrt.windows.foundation.IInspectable;
     overload function Header(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function HeaderTemplate(): winrt.windows.ui.xaml.DataTemplate;

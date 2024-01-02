@@ -6,8 +6,7 @@ package winrt.windows.devices.display.core;
 extern class DisplayPrimaryDescription
     implements winrt.windows.devices.display.core.IDisplayPrimaryDescription
 {
-    @:native("winrt::Windows::Devices::Display::Core::DisplayPrimaryDescription")
-    static overload function make(width: cxx.num.UInt32, height: cxx.num.UInt32, pixelFormat: cxx.ConstRef<winrt.windows.graphics.directx.DirectXPixelFormat>, colorSpace: cxx.ConstRef<winrt.windows.graphics.directx.DirectXColorSpace>, isStereo: Bool, multisampleDescription: cxx.ConstRef<winrt.windows.graphics.directx.direct3d11.Direct3DMultisampleDescription>): winrt.windows.devices.display.core.DisplayPrimaryDescription;
+    function new(width: cxx.num.UInt32, height: cxx.num.UInt32, pixelFormat: cxx.ConstRef<winrt.windows.graphics.directx.DirectXPixelFormat>, colorSpace: cxx.ConstRef<winrt.windows.graphics.directx.DirectXColorSpace>, isStereo: Bool, multisampleDescription: cxx.ConstRef<winrt.windows.graphics.directx.direct3d11.Direct3DMultisampleDescription>);
     overload function Width(): cxx.num.UInt32;
     overload function Height(): cxx.num.UInt32;
     overload function Format(): winrt.windows.graphics.directx.DirectXPixelFormat;

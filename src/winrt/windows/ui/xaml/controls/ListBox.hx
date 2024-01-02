@@ -8,8 +8,7 @@ extern class ListBox
     implements winrt.windows.ui.xaml.controls.IListBox
     implements winrt.windows.ui.xaml.controls.IListBox2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::ListBox")
-    static overload function make(): winrt.windows.ui.xaml.controls.ListBox;
+    function new();
     overload function SelectedItems(): winrt.windows.foundation.collections.IVector<winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;
     overload function SelectionMode(): winrt.windows.ui.xaml.controls.SelectionMode;
     overload function SelectionMode(value: cxx.ConstRef<winrt.windows.ui.xaml.controls.SelectionMode>): Void;

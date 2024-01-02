@@ -6,8 +6,7 @@ package winrt.windows.devices.sms;
 extern class SmsFilterRule
     implements winrt.windows.devices.sms.ISmsFilterRule
 {
-    @:native("winrt::Windows::Devices::Sms::SmsFilterRule")
-    /* explicit */ static overload function make(messageType: cxx.ConstRef<winrt.windows.devices.sms.SmsMessageType>): winrt.windows.devices.sms.SmsFilterRule;
+    /* explicit */ function new(messageType: cxx.ConstRef<winrt.windows.devices.sms.SmsMessageType>);
     overload function MessageType(): winrt.windows.devices.sms.SmsMessageType;
     overload function ImsiPrefixes(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function DeviceIds(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;

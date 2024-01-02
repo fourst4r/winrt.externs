@@ -7,8 +7,7 @@ extern class CalendarViewDayItem
     extends winrt.microsoft.ui.xaml.controls.Control
     implements winrt.microsoft.ui.xaml.controls.ICalendarViewDayItem
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::CalendarViewDayItem")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.CalendarViewDayItem;
+    function new();
     overload function IsBlackout(): Bool;
     overload function IsBlackout(value: Bool): Void;
     overload function Date(): winrt.windows.foundation.DateTime;

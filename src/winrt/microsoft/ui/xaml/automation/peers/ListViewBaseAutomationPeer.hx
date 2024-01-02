@@ -8,8 +8,7 @@ extern class ListViewBaseAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IListViewBaseAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IDropTargetProvider
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.ListViewBase>): winrt.microsoft.ui.xaml.automation.peers.ListViewBaseAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.ListViewBase>);
     overload function DropEffect(): winrt.HString;
     overload function DropEffects(): winrt.ComArray<winrt.HString>;
 }

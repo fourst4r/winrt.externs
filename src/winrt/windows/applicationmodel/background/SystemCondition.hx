@@ -7,7 +7,6 @@ extern class SystemCondition
     implements winrt.windows.applicationmodel.background.IBackgroundCondition
     implements winrt.windows.applicationmodel.background.ISystemCondition
 {
-    @:native("winrt::Windows::ApplicationModel::Background::SystemCondition")
-    /* explicit */ static overload function make(conditionType: cxx.ConstRef<winrt.windows.applicationmodel.background.SystemConditionType>): winrt.windows.applicationmodel.background.SystemCondition;
+    /* explicit */ function new(conditionType: cxx.ConstRef<winrt.windows.applicationmodel.background.SystemConditionType>);
     overload function ConditionType(): winrt.windows.applicationmodel.background.SystemConditionType;
 }

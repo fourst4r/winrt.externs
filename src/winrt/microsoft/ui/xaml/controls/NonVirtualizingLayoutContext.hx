@@ -8,8 +8,7 @@ extern class NonVirtualizingLayoutContext
     implements winrt.microsoft.ui.xaml.controls.INonVirtualizingLayoutContext
     implements winrt.microsoft.ui.xaml.controls.INonVirtualizingLayoutContextOverrides
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::NonVirtualizingLayoutContext")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.NonVirtualizingLayoutContext;
+    function new();
     overload function Children(): winrt.windows.foundation.collections.IVectorView<winrt.microsoft.ui.xaml.UIElement> /* GenericTypeInstSig */;
     overload function ChildrenCore(): winrt.windows.foundation.collections.IVectorView<winrt.microsoft.ui.xaml.UIElement> /* GenericTypeInstSig */;
 }

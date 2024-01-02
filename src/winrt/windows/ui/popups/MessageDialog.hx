@@ -6,8 +6,7 @@ package winrt.windows.ui.popups;
 extern class MessageDialog
     implements winrt.windows.ui.popups.IMessageDialog
 {
-    @:native("winrt::Windows::UI::Popups::MessageDialog")
-    /* explicit */ static overload function make(content: cxx.ConstRef<winrt.HString>): winrt.windows.ui.popups.MessageDialog;
+    /* explicit */ function new(content: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::UI::Popups::MessageDialog")
     static overload function make(content: cxx.ConstRef<winrt.HString>, title: cxx.ConstRef<winrt.HString>): winrt.windows.ui.popups.MessageDialog;
     overload function Title(): winrt.HString;

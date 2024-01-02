@@ -14,8 +14,7 @@ extern class CurrencyFormatter
     implements winrt.windows.globalization.numberformatting.INumberRounderOption
     implements winrt.windows.globalization.numberformatting.ISignedZeroOption
 {
-    @:native("winrt::Windows::Globalization::NumberFormatting::CurrencyFormatter")
-    /* explicit */ static overload function make(currencyCode: cxx.ConstRef<winrt.HString>): winrt.windows.globalization.numberformatting.CurrencyFormatter;
+    /* explicit */ function new(currencyCode: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::Globalization::NumberFormatting::CurrencyFormatter")
     static overload function make(currencyCode: cxx.ConstRef<winrt.HString>, languages: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, geographicRegion: cxx.ConstRef<winrt.HString>): winrt.windows.globalization.numberformatting.CurrencyFormatter;
     overload function Currency(): winrt.HString;

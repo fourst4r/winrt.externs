@@ -8,7 +8,6 @@ extern class ButtonAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IButtonAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IInvokeProvider
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::ButtonAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.Button>): winrt.microsoft.ui.xaml.automation.peers.ButtonAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.Button>);
     function Invoke(): Void;
 }

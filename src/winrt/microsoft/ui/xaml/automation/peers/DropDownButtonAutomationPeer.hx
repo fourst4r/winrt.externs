@@ -8,8 +8,7 @@ extern class DropDownButtonAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IDropDownButtonAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IExpandCollapseProvider
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::DropDownButtonAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.DropDownButton>): winrt.microsoft.ui.xaml.automation.peers.DropDownButtonAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.DropDownButton>);
     overload function ExpandCollapseState(): winrt.microsoft.ui.xaml.automation.ExpandCollapseState;
     function Collapse(): Void;
     function Expand(): Void;

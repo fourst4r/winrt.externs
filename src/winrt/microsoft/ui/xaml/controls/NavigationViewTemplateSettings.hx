@@ -8,8 +8,7 @@ extern class NavigationViewTemplateSettings
     implements winrt.microsoft.ui.xaml.controls.INavigationViewTemplateSettings
     implements winrt.microsoft.ui.xaml.controls.INavigationViewTemplateSettings2
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::NavigationViewTemplateSettings")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.NavigationViewTemplateSettings;
+    function new();
     overload function TopPadding(): cxx.num.Float64;
     overload function OverflowButtonVisibility(): winrt.microsoft.ui.xaml.Visibility;
     overload function PaneToggleButtonVisibility(): winrt.microsoft.ui.xaml.Visibility;

@@ -7,8 +7,7 @@ extern class MidiChannelPressureMessage
     implements winrt.windows.devices.midi.IMidiMessage
     implements winrt.windows.devices.midi.IMidiChannelPressureMessage
 {
-    @:native("winrt::Windows::Devices::Midi::MidiChannelPressureMessage")
-    static overload function make(channel: cxx.num.UInt8, pressure: cxx.num.UInt8): winrt.windows.devices.midi.MidiChannelPressureMessage;
+    function new(channel: cxx.num.UInt8, pressure: cxx.num.UInt8);
     overload function Channel(): cxx.num.UInt8;
     overload function Pressure(): cxx.num.UInt8;
     overload function Timestamp(): winrt.windows.foundation.TimeSpan;

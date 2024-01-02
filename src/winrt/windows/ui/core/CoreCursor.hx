@@ -6,8 +6,7 @@ package winrt.windows.ui.core;
 extern class CoreCursor
     implements winrt.windows.ui.core.ICoreCursor
 {
-    @:native("winrt::Windows::UI::Core::CoreCursor")
-    static overload function make(type: cxx.ConstRef<winrt.windows.ui.core.CoreCursorType>, id: cxx.num.UInt32): winrt.windows.ui.core.CoreCursor;
+    function new(type: cxx.ConstRef<winrt.windows.ui.core.CoreCursorType>, id: cxx.num.UInt32);
     overload function Id(): cxx.num.UInt32;
     overload function Type(): winrt.windows.ui.core.CoreCursorType;
 }

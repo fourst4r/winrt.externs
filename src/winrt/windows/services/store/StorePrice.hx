@@ -5,6 +5,7 @@ package winrt.windows.services.store;
 @:native("winrt::Windows::Services::Store::StorePrice")
 extern class StorePrice
     implements winrt.windows.services.store.IStorePrice
+    implements winrt.windows.services.store.IStorePrice2
 {
     overload function FormattedBasePrice(): winrt.HString;
     overload function FormattedPrice(): winrt.HString;
@@ -12,4 +13,7 @@ extern class StorePrice
     overload function SaleEndDate(): winrt.windows.foundation.DateTime;
     overload function CurrencyCode(): winrt.HString;
     overload function FormattedRecurrencePrice(): winrt.HString;
+    overload function UnformattedBasePrice(): winrt.HString;
+    overload function UnformattedPrice(): winrt.HString;
+    overload function UnformattedRecurrencePrice(): winrt.HString;
 }

@@ -7,8 +7,7 @@ extern class HttpContentRangeHeaderValue
     implements winrt.windows.web.http.headers.IHttpContentRangeHeaderValue
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue")
-    /* explicit */ static overload function make(length: cxx.num.UInt64): winrt.windows.web.http.headers.HttpContentRangeHeaderValue;
+    /* explicit */ function new(length: cxx.num.UInt64);
     @:native("winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue")
     static overload function make(from: cxx.num.UInt64, to: cxx.num.UInt64): winrt.windows.web.http.headers.HttpContentRangeHeaderValue;
     @:native("winrt::Windows::Web::Http::Headers::HttpContentRangeHeaderValue")

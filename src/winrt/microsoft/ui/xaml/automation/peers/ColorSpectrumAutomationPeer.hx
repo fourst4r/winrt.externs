@@ -7,6 +7,5 @@ extern class ColorSpectrumAutomationPeer
     extends winrt.microsoft.ui.xaml.automation.peers.FrameworkElementAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IColorSpectrumAutomationPeer
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.primitives.ColorSpectrum>): winrt.microsoft.ui.xaml.automation.peers.ColorSpectrumAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.primitives.ColorSpectrum>);
 }

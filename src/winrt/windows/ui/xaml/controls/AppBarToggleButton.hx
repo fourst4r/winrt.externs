@@ -12,8 +12,7 @@ extern class AppBarToggleButton
     implements winrt.windows.ui.xaml.controls.ICommandBarElement
     implements winrt.windows.ui.xaml.controls.ICommandBarElement2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::AppBarToggleButton")
-    static overload function make(): winrt.windows.ui.xaml.controls.AppBarToggleButton;
+    function new();
     overload function Label(): winrt.HString;
     overload function Label(value: cxx.ConstRef<winrt.HString>): Void;
     overload function Icon(): winrt.windows.ui.xaml.controls.IconElement;

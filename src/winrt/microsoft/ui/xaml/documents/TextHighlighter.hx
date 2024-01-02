@@ -6,8 +6,7 @@ package winrt.microsoft.ui.xaml.documents;
 extern class TextHighlighter
     implements winrt.microsoft.ui.xaml.documents.ITextHighlighter
 {
-    @:native("winrt::Microsoft::UI::Xaml::Documents::TextHighlighter")
-    static overload function make(): winrt.microsoft.ui.xaml.documents.TextHighlighter;
+    function new();
     overload function Ranges(): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.xaml.documents.TextRange> /* GenericTypeInstSig */;
     overload function Foreground(): winrt.microsoft.ui.xaml.media.Brush;
     overload function Foreground(value: cxx.ConstRef<winrt.microsoft.ui.xaml.media.Brush>): Void;

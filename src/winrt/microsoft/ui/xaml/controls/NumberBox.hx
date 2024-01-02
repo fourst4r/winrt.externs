@@ -7,8 +7,7 @@ extern class NumberBox
     extends winrt.microsoft.ui.xaml.controls.Control
     implements winrt.microsoft.ui.xaml.controls.INumberBox
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::NumberBox")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.NumberBox;
+    function new();
     overload function Minimum(): cxx.num.Float64;
     overload function Minimum(value: cxx.num.Float64): Void;
     overload function Maximum(): cxx.num.Float64;

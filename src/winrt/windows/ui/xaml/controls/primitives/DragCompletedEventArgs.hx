@@ -7,8 +7,7 @@ extern class DragCompletedEventArgs
     extends winrt.windows.ui.xaml.RoutedEventArgs
     implements winrt.windows.ui.xaml.controls.primitives.IDragCompletedEventArgs
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgs")
-    static overload function make(horizontalChange: cxx.num.Float64, verticalChange: cxx.num.Float64, canceled: Bool): winrt.windows.ui.xaml.controls.primitives.DragCompletedEventArgs;
+    function new(horizontalChange: cxx.num.Float64, verticalChange: cxx.num.Float64, canceled: Bool);
     overload function HorizontalChange(): cxx.num.Float64;
     overload function VerticalChange(): cxx.num.Float64;
     overload function Canceled(): Bool;

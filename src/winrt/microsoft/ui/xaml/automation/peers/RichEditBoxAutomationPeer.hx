@@ -7,6 +7,5 @@ extern class RichEditBoxAutomationPeer
     extends winrt.microsoft.ui.xaml.automation.peers.FrameworkElementAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IRichEditBoxAutomationPeer
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.RichEditBox>): winrt.microsoft.ui.xaml.automation.peers.RichEditBoxAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.RichEditBox>);
 }

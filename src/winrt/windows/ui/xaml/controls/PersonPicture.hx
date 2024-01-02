@@ -7,8 +7,7 @@ extern class PersonPicture
     extends winrt.windows.ui.xaml.controls.Control
     implements winrt.windows.ui.xaml.controls.IPersonPicture
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::PersonPicture")
-    static overload function make(): winrt.windows.ui.xaml.controls.PersonPicture;
+    function new();
     overload function BadgeNumber(): cxx.num.Int32;
     overload function BadgeNumber(value: cxx.num.Int32): Void;
     overload function BadgeGlyph(): winrt.HString;

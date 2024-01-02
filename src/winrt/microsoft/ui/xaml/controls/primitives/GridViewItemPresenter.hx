@@ -7,8 +7,7 @@ extern class GridViewItemPresenter
     extends winrt.microsoft.ui.xaml.controls.ContentPresenter
     implements winrt.microsoft.ui.xaml.controls.primitives.IGridViewItemPresenter
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::GridViewItemPresenter")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.primitives.GridViewItemPresenter;
+    function new();
     overload function SelectionCheckMarkVisualEnabled(): Bool;
     overload function SelectionCheckMarkVisualEnabled(value: Bool): Void;
     overload function CheckHintBrush(): winrt.microsoft.ui.xaml.media.Brush;

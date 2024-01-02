@@ -10,8 +10,7 @@ extern class AppBarAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IToggleProvider
     implements winrt.microsoft.ui.xaml.automation.provider.IWindowProvider
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.AppBar>): winrt.microsoft.ui.xaml.automation.peers.AppBarAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.AppBar>);
     overload function ExpandCollapseState(): winrt.microsoft.ui.xaml.automation.ExpandCollapseState;
     function Collapse(): Void;
     function Expand(): Void;

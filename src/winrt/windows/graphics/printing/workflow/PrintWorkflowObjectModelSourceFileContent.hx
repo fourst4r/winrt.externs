@@ -6,6 +6,5 @@ package winrt.windows.graphics.printing.workflow;
 extern class PrintWorkflowObjectModelSourceFileContent
     implements winrt.windows.graphics.printing.workflow.IPrintWorkflowObjectModelSourceFileContent
 {
-    @:native("winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelSourceFileContent")
-    /* explicit */ static overload function make(xpsStream: cxx.ConstRef<winrt.windows.storage.streams.IInputStream>): winrt.windows.graphics.printing.workflow.PrintWorkflowObjectModelSourceFileContent;
+    /* explicit */ function new(xpsStream: cxx.ConstRef<winrt.windows.storage.streams.IInputStream>);
 }

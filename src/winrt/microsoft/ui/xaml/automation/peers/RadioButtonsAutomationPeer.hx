@@ -7,6 +7,5 @@ extern class RadioButtonsAutomationPeer
     extends winrt.microsoft.ui.xaml.automation.peers.FrameworkElementAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IRadioButtonsAutomationPeer
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::RadioButtonsAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.RadioButtons>): winrt.microsoft.ui.xaml.automation.peers.RadioButtonsAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.RadioButtons>);
 }

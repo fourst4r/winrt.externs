@@ -8,8 +8,7 @@ extern class ToggleButtonAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IToggleButtonAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.IToggleProvider
 {
-    @:native("winrt::Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.windows.ui.xaml.controls.primitives.ToggleButton>): winrt.windows.ui.xaml.automation.peers.ToggleButtonAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.windows.ui.xaml.controls.primitives.ToggleButton>);
     overload function ToggleState(): winrt.windows.ui.xaml.automation.ToggleState;
     function Toggle(): Void;
 }

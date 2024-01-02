@@ -8,8 +8,7 @@ extern class AudioFrame
     implements winrt.windows.media.IMediaFrame
     implements winrt.windows.media.IAudioFrame
 {
-    @:native("winrt::Windows::Media::AudioFrame")
-    /* explicit */ static overload function make(capacity: cxx.num.UInt32): winrt.windows.media.AudioFrame;
+    /* explicit */ function new(capacity: cxx.num.UInt32);
     function LockBuffer(mode: cxx.ConstRef<winrt.windows.media.AudioBufferAccessMode>): winrt.windows.media.AudioBuffer;
     overload function Type(): winrt.HString;
     overload function IsReadOnly(): Bool;

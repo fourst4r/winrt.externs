@@ -7,8 +7,7 @@ extern class GroupStyle
     implements winrt.microsoft.ui.xaml.controls.IGroupStyle
     implements winrt.microsoft.ui.xaml.data.INotifyPropertyChanged
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::GroupStyle")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.GroupStyle;
+    function new();
     overload function Panel(): winrt.microsoft.ui.xaml.controls.ItemsPanelTemplate;
     overload function Panel(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.ItemsPanelTemplate>): Void;
     overload function ContainerStyle(): winrt.microsoft.ui.xaml.Style;

@@ -6,8 +6,7 @@ package winrt.windows.devices.spi.provider;
 extern class ProviderSpiConnectionSettings
     implements winrt.windows.devices.spi.provider.IProviderSpiConnectionSettings
 {
-    @:native("winrt::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings")
-    /* explicit */ static overload function make(chipSelectLine: cxx.num.Int32): winrt.windows.devices.spi.provider.ProviderSpiConnectionSettings;
+    /* explicit */ function new(chipSelectLine: cxx.num.Int32);
     overload function ChipSelectLine(): cxx.num.Int32;
     overload function ChipSelectLine(value: cxx.num.Int32): Void;
     overload function Mode(): winrt.windows.devices.spi.provider.ProviderSpiMode;

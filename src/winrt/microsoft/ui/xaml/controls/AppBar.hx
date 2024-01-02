@@ -8,8 +8,7 @@ extern class AppBar
     implements winrt.microsoft.ui.xaml.controls.IAppBar
     implements winrt.microsoft.ui.xaml.controls.IAppBarOverrides
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::AppBar")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.AppBar;
+    function new();
     overload function IsOpen(): Bool;
     overload function IsOpen(value: Bool): Void;
     overload function IsSticky(): Bool;

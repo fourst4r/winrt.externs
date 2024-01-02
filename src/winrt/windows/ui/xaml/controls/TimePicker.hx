@@ -9,8 +9,7 @@ extern class TimePicker
     implements winrt.windows.ui.xaml.controls.ITimePicker2
     implements winrt.windows.ui.xaml.controls.ITimePicker3
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::TimePicker")
-    static overload function make(): winrt.windows.ui.xaml.controls.TimePicker;
+    function new();
     overload function Header(): winrt.windows.foundation.IInspectable;
     overload function Header(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function HeaderTemplate(): winrt.windows.ui.xaml.DataTemplate;

@@ -7,8 +7,7 @@ extern class MapBillboard
     extends winrt.windows.ui.xaml.controls.maps.MapElement
     implements winrt.windows.ui.xaml.controls.maps.IMapBillboard
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapBillboard")
-    /* explicit */ static overload function make(camera: cxx.ConstRef<winrt.windows.ui.xaml.controls.maps.MapCamera>): winrt.windows.ui.xaml.controls.maps.MapBillboard;
+    /* explicit */ function new(camera: cxx.ConstRef<winrt.windows.ui.xaml.controls.maps.MapCamera>);
     overload function Location(): winrt.windows.devices.geolocation.Geopoint;
     overload function Location(value: cxx.ConstRef<winrt.windows.devices.geolocation.Geopoint>): Void;
     overload function NormalizedAnchorPoint(): winrt.windows.foundation.Point;

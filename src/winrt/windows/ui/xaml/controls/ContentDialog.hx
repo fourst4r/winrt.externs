@@ -9,8 +9,7 @@ extern class ContentDialog
     implements winrt.windows.ui.xaml.controls.IContentDialog2
     implements winrt.windows.ui.xaml.controls.IContentDialog3
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::ContentDialog")
-    static overload function make(): winrt.windows.ui.xaml.controls.ContentDialog;
+    function new();
     overload function Title(): winrt.windows.foundation.IInspectable;
     overload function Title(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function TitleTemplate(): winrt.windows.ui.xaml.DataTemplate;

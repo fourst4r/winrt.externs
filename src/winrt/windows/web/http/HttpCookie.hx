@@ -7,8 +7,7 @@ extern class HttpCookie
     implements winrt.windows.web.http.IHttpCookie
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::HttpCookie")
-    static overload function make(name: cxx.ConstRef<winrt.HString>, domain: cxx.ConstRef<winrt.HString>, path: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.HttpCookie;
+    function new(name: cxx.ConstRef<winrt.HString>, domain: cxx.ConstRef<winrt.HString>, path: cxx.ConstRef<winrt.HString>);
     overload function Name(): winrt.HString;
     overload function Domain(): winrt.HString;
     overload function Path(): winrt.HString;

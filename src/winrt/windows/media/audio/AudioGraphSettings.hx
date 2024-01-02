@@ -7,8 +7,7 @@ extern class AudioGraphSettings
     implements winrt.windows.media.audio.IAudioGraphSettings
     implements winrt.windows.media.audio.IAudioGraphSettings2
 {
-    @:native("winrt::Windows::Media::Audio::AudioGraphSettings")
-    /* explicit */ static overload function make(audioRenderCategory: cxx.ConstRef<winrt.windows.media.render.AudioRenderCategory>): winrt.windows.media.audio.AudioGraphSettings;
+    /* explicit */ function new(audioRenderCategory: cxx.ConstRef<winrt.windows.media.render.AudioRenderCategory>);
     overload function EncodingProperties(): winrt.windows.media.mediaproperties.AudioEncodingProperties;
     overload function EncodingProperties(value: cxx.ConstRef<winrt.windows.media.mediaproperties.AudioEncodingProperties>): Void;
     overload function PrimaryRenderDevice(): winrt.windows.devices.enumeration.DeviceInformation;

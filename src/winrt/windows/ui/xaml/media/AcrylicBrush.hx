@@ -8,8 +8,7 @@ extern class AcrylicBrush
     implements winrt.windows.ui.xaml.media.IAcrylicBrush
     implements winrt.windows.ui.xaml.media.IAcrylicBrush2
 {
-    @:native("winrt::Windows::UI::Xaml::Media::AcrylicBrush")
-    static overload function make(): winrt.windows.ui.xaml.media.AcrylicBrush;
+    function new();
     overload function BackgroundSource(): winrt.windows.ui.xaml.media.AcrylicBackgroundSource;
     overload function BackgroundSource(value: cxx.ConstRef<winrt.windows.ui.xaml.media.AcrylicBackgroundSource>): Void;
     overload function TintColor(): winrt.windows.ui.Color;

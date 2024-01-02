@@ -7,8 +7,7 @@ extern class MidiSongPositionPointerMessage
     implements winrt.windows.devices.midi.IMidiMessage
     implements winrt.windows.devices.midi.IMidiSongPositionPointerMessage
 {
-    @:native("winrt::Windows::Devices::Midi::MidiSongPositionPointerMessage")
-    /* explicit */ static overload function make(beats: cxx.num.UInt16): winrt.windows.devices.midi.MidiSongPositionPointerMessage;
+    /* explicit */ function new(beats: cxx.num.UInt16);
     overload function Beats(): cxx.num.UInt16;
     overload function Timestamp(): winrt.windows.foundation.TimeSpan;
     overload function RawData(): winrt.windows.storage.streams.IBuffer;

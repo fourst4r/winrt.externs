@@ -8,8 +8,7 @@ extern class NavigationViewItem
     implements winrt.windows.ui.xaml.controls.INavigationViewItem
     implements winrt.windows.ui.xaml.controls.INavigationViewItem2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::NavigationViewItem")
-    static overload function make(): winrt.windows.ui.xaml.controls.NavigationViewItem;
+    function new();
     overload function Icon(): winrt.windows.ui.xaml.controls.IconElement;
     overload function Icon(value: cxx.ConstRef<winrt.windows.ui.xaml.controls.IconElement>): Void;
     overload function CompactPaneLength(): cxx.num.Float64;

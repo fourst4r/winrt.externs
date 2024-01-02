@@ -9,8 +9,7 @@ extern class LoggingActivity
     implements winrt.windows.foundation.diagnostics.ILoggingTarget
     implements winrt.windows.foundation.diagnostics.ILoggingActivity2
 {
-    @:native("winrt::Windows::Foundation::Diagnostics::LoggingActivity")
-    static overload function make(activityName: cxx.ConstRef<winrt.HString>, loggingChannel: cxx.ConstRef<winrt.windows.foundation.diagnostics.ILoggingChannel>): winrt.windows.foundation.diagnostics.LoggingActivity;
+    function new(activityName: cxx.ConstRef<winrt.HString>, loggingChannel: cxx.ConstRef<winrt.windows.foundation.diagnostics.ILoggingChannel>);
     @:native("winrt::Windows::Foundation::Diagnostics::LoggingActivity")
     static overload function make(activityName: cxx.ConstRef<winrt.HString>, loggingChannel: cxx.ConstRef<winrt.windows.foundation.diagnostics.ILoggingChannel>, level: cxx.ConstRef<winrt.windows.foundation.diagnostics.LoggingLevel>): winrt.windows.foundation.diagnostics.LoggingActivity;
     overload function Name(): winrt.HString;

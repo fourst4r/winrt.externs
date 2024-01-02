@@ -8,8 +8,7 @@ extern class Uri
     implements winrt.windows.foundation.IUriRuntimeClassWithAbsoluteCanonicalUri
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Foundation::Uri")
-    /* explicit */ static overload function make(uri: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.Uri;
+    /* explicit */ function new(uri: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::Foundation::Uri")
     static overload function make(baseUri: cxx.ConstRef<winrt.HString>, relativeUri: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.Uri;
     overload function AbsoluteUri(): winrt.HString;

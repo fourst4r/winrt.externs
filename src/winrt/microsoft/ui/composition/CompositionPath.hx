@@ -7,6 +7,5 @@ extern class CompositionPath
     implements winrt.microsoft.ui.composition.ICompositionPath
     implements winrt.windows.graphics.IGeometrySource2D
 {
-    @:native("winrt::Microsoft::UI::Composition::CompositionPath")
-    /* explicit */ static overload function make(source: cxx.ConstRef<winrt.windows.graphics.IGeometrySource2D>): winrt.microsoft.ui.composition.CompositionPath;
+    /* explicit */ function new(source: cxx.ConstRef<winrt.windows.graphics.IGeometrySource2D>);
 }

@@ -6,8 +6,7 @@ package winrt.microsoft.windows.applicationmodel.resources;
 extern class ResourceCandidate
     implements winrt.microsoft.windows.applicationmodel.resources.IResourceCandidate
 {
-    @:native("winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceCandidate")
-    static overload function make(kind: cxx.ConstRef<winrt.microsoft.windows.applicationmodel.resources.ResourceCandidateKind>, data: cxx.ConstRef<winrt.HString>): winrt.microsoft.windows.applicationmodel.resources.ResourceCandidate;
+    function new(kind: cxx.ConstRef<winrt.microsoft.windows.applicationmodel.resources.ResourceCandidateKind>, data: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceCandidate")
     /* explicit */ static overload function make(data: winrt.ArrayView<cxx.num.UInt8>): winrt.microsoft.windows.applicationmodel.resources.ResourceCandidate;
     overload function ValueAsString(): winrt.HString;

@@ -7,7 +7,6 @@ extern class RemoteSystemAuthorizationKindFilter
     implements winrt.windows.system.remotesystems.IRemoteSystemAuthorizationKindFilter
     implements winrt.windows.system.remotesystems.IRemoteSystemFilter
 {
-    @:native("winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKindFilter")
-    /* explicit */ static overload function make(remoteSystemAuthorizationKind: cxx.ConstRef<winrt.windows.system.remotesystems.RemoteSystemAuthorizationKind>): winrt.windows.system.remotesystems.RemoteSystemAuthorizationKindFilter;
+    /* explicit */ function new(remoteSystemAuthorizationKind: cxx.ConstRef<winrt.windows.system.remotesystems.RemoteSystemAuthorizationKind>);
     overload function RemoteSystemAuthorizationKind(): winrt.windows.system.remotesystems.RemoteSystemAuthorizationKind;
 }

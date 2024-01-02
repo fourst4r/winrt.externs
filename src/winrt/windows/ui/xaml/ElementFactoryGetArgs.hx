@@ -6,8 +6,7 @@ package winrt.windows.ui.xaml;
 extern class ElementFactoryGetArgs
     implements winrt.windows.ui.xaml.IElementFactoryGetArgs
 {
-    @:native("winrt::Windows::UI::Xaml::ElementFactoryGetArgs")
-    static overload function make(): winrt.windows.ui.xaml.ElementFactoryGetArgs;
+    function new();
     overload function Data(): winrt.windows.foundation.IInspectable;
     overload function Data(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function Parent(): winrt.windows.ui.xaml.UIElement;

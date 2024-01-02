@@ -7,8 +7,7 @@ extern class BreadcrumbBar
     extends winrt.microsoft.ui.xaml.controls.Control
     implements winrt.microsoft.ui.xaml.controls.IBreadcrumbBar
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::BreadcrumbBar")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.BreadcrumbBar;
+    function new();
     overload function ItemsSource(): winrt.windows.foundation.IInspectable;
     overload function ItemsSource(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function ItemTemplate(): winrt.windows.foundation.IInspectable;

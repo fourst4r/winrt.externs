@@ -7,8 +7,7 @@ extern class UniformGridLayout
     extends winrt.microsoft.ui.xaml.controls.VirtualizingLayout
     implements winrt.microsoft.ui.xaml.controls.IUniformGridLayout
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::UniformGridLayout")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.UniformGridLayout;
+    function new();
     overload function Orientation(): winrt.microsoft.ui.xaml.controls.Orientation;
     overload function Orientation(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.Orientation>): Void;
     overload function MinItemWidth(): cxx.num.Float64;

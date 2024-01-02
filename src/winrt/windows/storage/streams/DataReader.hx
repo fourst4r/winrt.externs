@@ -7,8 +7,7 @@ extern class DataReader
     implements winrt.windows.storage.streams.IDataReader
     implements winrt.windows.foundation.IClosable
 {
-    @:native("winrt::Windows::Storage::Streams::DataReader")
-    /* explicit */ static overload function make(inputStream: cxx.ConstRef<winrt.windows.storage.streams.IInputStream>): winrt.windows.storage.streams.DataReader;
+    /* explicit */ function new(inputStream: cxx.ConstRef<winrt.windows.storage.streams.IInputStream>);
     overload function UnconsumedBufferLength(): cxx.num.UInt32;
     overload function UnicodeEncoding(): winrt.windows.storage.streams.UnicodeEncoding;
     overload function UnicodeEncoding(value: cxx.ConstRef<winrt.windows.storage.streams.UnicodeEncoding>): Void;

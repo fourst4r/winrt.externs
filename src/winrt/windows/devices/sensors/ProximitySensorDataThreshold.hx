@@ -6,6 +6,5 @@ package winrt.windows.devices.sensors;
 extern class ProximitySensorDataThreshold
     implements winrt.windows.devices.sensors.ISensorDataThreshold
 {
-    @:native("winrt::Windows::Devices::Sensors::ProximitySensorDataThreshold")
-    /* explicit */ static overload function make(sensor: cxx.ConstRef<winrt.windows.devices.sensors.ProximitySensor>): winrt.windows.devices.sensors.ProximitySensorDataThreshold;
+    /* explicit */ function new(sensor: cxx.ConstRef<winrt.windows.devices.sensors.ProximitySensor>);
 }

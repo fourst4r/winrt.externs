@@ -7,8 +7,7 @@ extern class DatePicker
     extends winrt.microsoft.ui.xaml.controls.Control
     implements winrt.microsoft.ui.xaml.controls.IDatePicker
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::DatePicker")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.DatePicker;
+    function new();
     overload function Header(): winrt.windows.foundation.IInspectable;
     overload function Header(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function HeaderTemplate(): winrt.microsoft.ui.xaml.DataTemplate;

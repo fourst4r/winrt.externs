@@ -6,8 +6,7 @@ package winrt.microsoft.ui.xaml.data;
 extern class ItemIndexRange
     implements winrt.microsoft.ui.xaml.data.IItemIndexRange
 {
-    @:native("winrt::Microsoft::UI::Xaml::Data::ItemIndexRange")
-    static overload function make(firstIndex: cxx.num.Int32, length: cxx.num.UInt32): winrt.microsoft.ui.xaml.data.ItemIndexRange;
+    function new(firstIndex: cxx.num.Int32, length: cxx.num.UInt32);
     overload function FirstIndex(): cxx.num.Int32;
     overload function Length(): cxx.num.UInt32;
     overload function LastIndex(): cxx.num.Int32;

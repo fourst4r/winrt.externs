@@ -7,8 +7,7 @@ extern class SurfaceImageSource
     extends winrt.microsoft.ui.xaml.media.ImageSource
     implements winrt.microsoft.ui.xaml.media.imaging.ISurfaceImageSource
 {
-    @:native("winrt::Microsoft::UI::Xaml::Media::Imaging::SurfaceImageSource")
-    static overload function make(pixelWidth: cxx.num.Int32, pixelHeight: cxx.num.Int32): winrt.microsoft.ui.xaml.media.imaging.SurfaceImageSource;
+    function new(pixelWidth: cxx.num.Int32, pixelHeight: cxx.num.Int32);
     @:native("winrt::Microsoft::UI::Xaml::Media::Imaging::SurfaceImageSource")
     static overload function make(pixelWidth: cxx.num.Int32, pixelHeight: cxx.num.Int32, isOpaque: Bool): winrt.microsoft.ui.xaml.media.imaging.SurfaceImageSource;
 }

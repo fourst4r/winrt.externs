@@ -10,8 +10,7 @@ extern class Grid
     implements winrt.windows.ui.xaml.controls.IGrid3
     implements winrt.windows.ui.xaml.controls.IGrid4
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Grid")
-    static overload function make(): winrt.windows.ui.xaml.controls.Grid;
+    function new();
     overload function RowDefinitions(): winrt.windows.ui.xaml.controls.RowDefinitionCollection;
     overload function ColumnDefinitions(): winrt.windows.ui.xaml.controls.ColumnDefinitionCollection;
     overload function BorderBrush(): winrt.windows.ui.xaml.media.Brush;

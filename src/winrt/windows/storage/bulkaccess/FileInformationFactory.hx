@@ -6,8 +6,7 @@ package winrt.windows.storage.bulkaccess;
 extern class FileInformationFactory
     implements winrt.windows.storage.bulkaccess.IFileInformationFactory
 {
-    @:native("winrt::Windows::Storage::BulkAccess::FileInformationFactory")
-    static overload function make(queryResult: cxx.ConstRef<winrt.windows.storage.search.IStorageQueryResultBase>, mode: cxx.ConstRef<winrt.windows.storage.fileproperties.ThumbnailMode>): winrt.windows.storage.bulkaccess.FileInformationFactory;
+    function new(queryResult: cxx.ConstRef<winrt.windows.storage.search.IStorageQueryResultBase>, mode: cxx.ConstRef<winrt.windows.storage.fileproperties.ThumbnailMode>);
     @:native("winrt::Windows::Storage::BulkAccess::FileInformationFactory")
     static overload function make(queryResult: cxx.ConstRef<winrt.windows.storage.search.IStorageQueryResultBase>, mode: cxx.ConstRef<winrt.windows.storage.fileproperties.ThumbnailMode>, requestedThumbnailSize: cxx.num.UInt32): winrt.windows.storage.bulkaccess.FileInformationFactory;
     @:native("winrt::Windows::Storage::BulkAccess::FileInformationFactory")

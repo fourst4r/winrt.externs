@@ -8,8 +8,7 @@ extern class ScrollViewerAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IScrollViewerAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IScrollProvider
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.ScrollViewer>): winrt.microsoft.ui.xaml.automation.peers.ScrollViewerAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.ScrollViewer>);
     overload function HorizontallyScrollable(): Bool;
     overload function HorizontalScrollPercent(): cxx.num.Float64;
     overload function HorizontalViewSize(): cxx.num.Float64;

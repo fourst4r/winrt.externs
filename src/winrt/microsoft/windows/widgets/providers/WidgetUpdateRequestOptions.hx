@@ -6,8 +6,7 @@ package winrt.microsoft.windows.widgets.providers;
 extern class WidgetUpdateRequestOptions
     implements winrt.microsoft.windows.widgets.providers.IWidgetUpdateRequestOptions
 {
-    @:native("winrt::Microsoft::Windows::Widgets::Providers::WidgetUpdateRequestOptions")
-    /* explicit */ static overload function make(widgetId: cxx.ConstRef<winrt.HString>): winrt.microsoft.windows.widgets.providers.WidgetUpdateRequestOptions;
+    /* explicit */ function new(widgetId: cxx.ConstRef<winrt.HString>);
     overload function WidgetId(): winrt.HString;
     overload function Template(): winrt.HString;
     overload function Template(value: cxx.ConstRef<winrt.HString>): Void;

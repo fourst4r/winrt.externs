@@ -7,7 +7,6 @@ extern class NetworkOperatorNotificationTrigger
     implements winrt.windows.applicationmodel.background.IBackgroundTrigger
     implements winrt.windows.applicationmodel.background.INetworkOperatorNotificationTrigger
 {
-    @:native("winrt::Windows::ApplicationModel::Background::NetworkOperatorNotificationTrigger")
-    /* explicit */ static overload function make(networkAccountId: cxx.ConstRef<winrt.HString>): winrt.windows.applicationmodel.background.NetworkOperatorNotificationTrigger;
+    /* explicit */ function new(networkAccountId: cxx.ConstRef<winrt.HString>);
     overload function NetworkAccountId(): winrt.HString;
 }

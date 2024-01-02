@@ -5,6 +5,7 @@ package winrt.windows.devices.lights;
 @:native("winrt::Windows::Devices::Lights::LampArray")
 extern class LampArray
     implements winrt.windows.devices.lights.ILampArray
+    implements winrt.windows.devices.lights.ILampArray2
 {
     overload function DeviceId(): winrt.HString;
     overload function HardwareVendorId(): cxx.num.UInt16;
@@ -32,6 +33,9 @@ extern class LampArray
     function SetColorsForPurposes(desiredColor: cxx.ConstRef<winrt.windows.ui.Color>, purposes: cxx.ConstRef<winrt.windows.devices.lights.LampPurposes>): Void;
     function SendMessageAsync(messageId: cxx.num.Int32, message: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.foundation.IAsyncAction;
     function RequestMessageAsync(messageId: cxx.num.Int32): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.streams.IBuffer> /* GenericTypeInstSig */;
+    overload function IsAvailable(): Bool;
+    overload function AvailabilityChanged(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.lights.LampArray, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function AvailabilityChanged(token: cxx.ConstRef<winrt.EventToken>): Void;
     function GetDeviceSelector(): winrt.HString;
     function FromIdAsync(deviceId: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.lights.LampArray> /* GenericTypeInstSig */;
     static function GetDeviceSelector(): winrt.HString;

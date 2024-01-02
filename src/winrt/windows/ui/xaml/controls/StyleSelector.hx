@@ -7,8 +7,7 @@ extern class StyleSelector
     implements winrt.windows.ui.xaml.controls.IStyleSelector
     implements winrt.windows.ui.xaml.controls.IStyleSelectorOverrides
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::StyleSelector")
-    static overload function make(): winrt.windows.ui.xaml.controls.StyleSelector;
+    function new();
     function SelectStyle(item: cxx.ConstRef<winrt.windows.foundation.IInspectable>, container: cxx.ConstRef<winrt.windows.ui.xaml.DependencyObject>): winrt.windows.ui.xaml.Style;
     function SelectStyleCore(item: cxx.ConstRef<winrt.windows.foundation.IInspectable>, container: cxx.ConstRef<winrt.windows.ui.xaml.DependencyObject>): winrt.windows.ui.xaml.Style;
 }

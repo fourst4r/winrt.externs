@@ -7,8 +7,7 @@ extern class RadioButton
     extends winrt.windows.ui.xaml.controls.primitives.ToggleButton
     implements winrt.windows.ui.xaml.controls.IRadioButton
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::RadioButton")
-    static overload function make(): winrt.windows.ui.xaml.controls.RadioButton;
+    function new();
     overload function GroupName(): winrt.HString;
     overload function GroupName(value: cxx.ConstRef<winrt.HString>): Void;
     overload function GroupNameProperty(): winrt.windows.ui.xaml.DependencyProperty;

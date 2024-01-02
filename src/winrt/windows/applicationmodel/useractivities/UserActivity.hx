@@ -8,8 +8,7 @@ extern class UserActivity
     implements winrt.windows.applicationmodel.useractivities.IUserActivity2
     implements winrt.windows.applicationmodel.useractivities.IUserActivity3
 {
-    @:native("winrt::Windows::ApplicationModel::UserActivities::UserActivity")
-    /* explicit */ static overload function make(activityId: cxx.ConstRef<winrt.HString>): winrt.windows.applicationmodel.useractivities.UserActivity;
+    /* explicit */ function new(activityId: cxx.ConstRef<winrt.HString>);
     overload function State(): winrt.windows.applicationmodel.useractivities.UserActivityState;
     overload function ActivityId(): winrt.HString;
     overload function VisualElements(): winrt.windows.applicationmodel.useractivities.UserActivityVisualElements;

@@ -6,8 +6,7 @@ package winrt.windows.system.remotesystems;
 extern class RemoteSystemSessionController
     implements winrt.windows.system.remotesystems.IRemoteSystemSessionController
 {
-    @:native("winrt::Windows::System::RemoteSystems::RemoteSystemSessionController")
-    /* explicit */ static overload function make(displayName: cxx.ConstRef<winrt.HString>): winrt.windows.system.remotesystems.RemoteSystemSessionController;
+    /* explicit */ function new(displayName: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::System::RemoteSystems::RemoteSystemSessionController")
     static overload function make(displayName: cxx.ConstRef<winrt.HString>, options: cxx.ConstRef<winrt.windows.system.remotesystems.RemoteSystemSessionOptions>): winrt.windows.system.remotesystems.RemoteSystemSessionController;
     overload function JoinRequested(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.system.remotesystems.RemoteSystemSessionController, winrt.windows.system.remotesystems.RemoteSystemSessionJoinRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;

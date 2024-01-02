@@ -7,8 +7,7 @@ extern class MicaBackdrop
     extends winrt.microsoft.ui.xaml.media.SystemBackdrop
     implements winrt.microsoft.ui.xaml.media.IMicaBackdrop
 {
-    @:native("winrt::Microsoft::UI::Xaml::Media::MicaBackdrop")
-    static overload function make(): winrt.microsoft.ui.xaml.media.MicaBackdrop;
+    function new();
     overload function Kind(): winrt.microsoft.ui.composition.systembackdrops.MicaKind;
     overload function Kind(value: cxx.ConstRef<winrt.microsoft.ui.composition.systembackdrops.MicaKind>): Void;
     overload function KindProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

@@ -8,8 +8,7 @@ extern class VirtualizingLayoutContext
     implements winrt.microsoft.ui.xaml.controls.IVirtualizingLayoutContext
     implements winrt.microsoft.ui.xaml.controls.IVirtualizingLayoutContextOverrides
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::VirtualizingLayoutContext")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.VirtualizingLayoutContext;
+    function new();
     overload function ItemCount(): cxx.num.Int32;
     function GetItemAt(index: cxx.num.Int32): winrt.windows.foundation.IInspectable;
     overload function RealizationRect(): winrt.windows.foundation.Rect;

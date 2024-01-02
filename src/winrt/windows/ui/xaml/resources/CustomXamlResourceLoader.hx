@@ -7,8 +7,7 @@ extern class CustomXamlResourceLoader
     implements winrt.windows.ui.xaml.resources.ICustomXamlResourceLoader
     implements winrt.windows.ui.xaml.resources.ICustomXamlResourceLoaderOverrides
 {
-    @:native("winrt::Windows::UI::Xaml::Resources::CustomXamlResourceLoader")
-    static overload function make(): winrt.windows.ui.xaml.resources.CustomXamlResourceLoader;
+    function new();
     function GetResource(resourceId: cxx.ConstRef<winrt.HString>, objectType: cxx.ConstRef<winrt.HString>, propertyName: cxx.ConstRef<winrt.HString>, propertyType: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.IInspectable;
     overload function Current(): winrt.windows.ui.xaml.resources.CustomXamlResourceLoader;
     overload function Current(value: cxx.ConstRef<winrt.windows.ui.xaml.resources.CustomXamlResourceLoader>): Void;

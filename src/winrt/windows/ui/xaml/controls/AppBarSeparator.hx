@@ -9,8 +9,7 @@ extern class AppBarSeparator
     implements winrt.windows.ui.xaml.controls.ICommandBarElement
     implements winrt.windows.ui.xaml.controls.ICommandBarElement2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::AppBarSeparator")
-    static overload function make(): winrt.windows.ui.xaml.controls.AppBarSeparator;
+    function new();
     overload function IsCompact(): Bool;
     overload function IsCompact(value: Bool): Void;
     overload function IsInOverflow(): Bool;

@@ -9,8 +9,7 @@ extern class MediaPlaybackItem
     implements winrt.windows.media.playback.IMediaPlaybackItem2
     implements winrt.windows.media.playback.IMediaPlaybackItem3
 {
-    @:native("winrt::Windows::Media::Playback::MediaPlaybackItem")
-    /* explicit */ static overload function make(source: cxx.ConstRef<winrt.windows.media.core.MediaSource>): winrt.windows.media.playback.MediaPlaybackItem;
+    /* explicit */ function new(source: cxx.ConstRef<winrt.windows.media.core.MediaSource>);
     @:native("winrt::Windows::Media::Playback::MediaPlaybackItem")
     static overload function make(source: cxx.ConstRef<winrt.windows.media.core.MediaSource>, startTime: cxx.ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.media.playback.MediaPlaybackItem;
     @:native("winrt::Windows::Media::Playback::MediaPlaybackItem")

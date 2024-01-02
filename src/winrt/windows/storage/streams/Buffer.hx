@@ -6,8 +6,7 @@ package winrt.windows.storage.streams;
 extern class Buffer
     implements winrt.windows.storage.streams.IBuffer
 {
-    @:native("winrt::Windows::Storage::Streams::Buffer")
-    /* explicit */ static overload function make(capacity: cxx.num.UInt32): winrt.windows.storage.streams.Buffer;
+    /* explicit */ function new(capacity: cxx.num.UInt32);
     overload function Capacity(): cxx.num.UInt32;
     overload function Length(): cxx.num.UInt32;
     overload function Length(value: cxx.num.UInt32): Void;

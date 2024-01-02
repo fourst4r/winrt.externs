@@ -7,8 +7,7 @@ extern class MemoryBuffer
     implements winrt.windows.foundation.IClosable
     implements winrt.windows.foundation.IMemoryBuffer
 {
-    @:native("winrt::Windows::Foundation::MemoryBuffer")
-    /* explicit */ static overload function make(capacity: cxx.num.UInt32): winrt.windows.foundation.MemoryBuffer;
+    /* explicit */ function new(capacity: cxx.num.UInt32);
     function CreateReference(): winrt.windows.foundation.IMemoryBufferReference;
     function Close(): Void;
 }

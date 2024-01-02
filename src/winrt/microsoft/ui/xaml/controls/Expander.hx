@@ -7,8 +7,7 @@ extern class Expander
     extends winrt.microsoft.ui.xaml.controls.ContentControl
     implements winrt.microsoft.ui.xaml.controls.IExpander
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::Expander")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.Expander;
+    function new();
     overload function Header(): winrt.windows.foundation.IInspectable;
     overload function Header(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function HeaderTemplate(): winrt.microsoft.ui.xaml.DataTemplate;

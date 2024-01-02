@@ -6,8 +6,7 @@ package winrt.microsoft.ui.xaml;
 extern class BrushTransition
     implements winrt.microsoft.ui.xaml.IBrushTransition
 {
-    @:native("winrt::Microsoft::UI::Xaml::BrushTransition")
-    static overload function make(): winrt.microsoft.ui.xaml.BrushTransition;
+    function new();
     overload function Duration(): winrt.windows.foundation.TimeSpan;
     overload function Duration(value: cxx.ConstRef<winrt.windows.foundation.TimeSpan>): Void;
 }

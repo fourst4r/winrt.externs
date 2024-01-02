@@ -9,8 +9,7 @@ extern class NavigationView
     implements winrt.windows.ui.xaml.controls.INavigationView2
     implements winrt.windows.ui.xaml.controls.INavigationView3
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::NavigationView")
-    static overload function make(): winrt.windows.ui.xaml.controls.NavigationView;
+    function new();
     overload function IsPaneOpen(): Bool;
     overload function IsPaneOpen(value: Bool): Void;
     overload function CompactModeThresholdWidth(): cxx.num.Float64;

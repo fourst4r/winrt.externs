@@ -6,8 +6,7 @@ package winrt.microsoft.ui.xaml;
 extern class Vector3Transition
     implements winrt.microsoft.ui.xaml.IVector3Transition
 {
-    @:native("winrt::Microsoft::UI::Xaml::Vector3Transition")
-    static overload function make(): winrt.microsoft.ui.xaml.Vector3Transition;
+    function new();
     overload function Duration(): winrt.windows.foundation.TimeSpan;
     overload function Duration(value: cxx.ConstRef<winrt.windows.foundation.TimeSpan>): Void;
     overload function Components(): winrt.microsoft.ui.xaml.Vector3TransitionComponents;

@@ -6,8 +6,7 @@ package winrt.windows.devices.spi;
 extern class SpiConnectionSettings
     implements winrt.windows.devices.spi.ISpiConnectionSettings
 {
-    @:native("winrt::Windows::Devices::Spi::SpiConnectionSettings")
-    /* explicit */ static overload function make(chipSelectLine: cxx.num.Int32): winrt.windows.devices.spi.SpiConnectionSettings;
+    /* explicit */ function new(chipSelectLine: cxx.num.Int32);
     overload function ChipSelectLine(): cxx.num.Int32;
     overload function ChipSelectLine(value: cxx.num.Int32): Void;
     overload function Mode(): winrt.windows.devices.spi.SpiMode;

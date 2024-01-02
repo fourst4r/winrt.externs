@@ -7,8 +7,7 @@ extern class TabViewItem
     extends winrt.microsoft.ui.xaml.controls.ListViewItem
     implements winrt.microsoft.ui.xaml.controls.ITabViewItem
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::TabViewItem")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.TabViewItem;
+    function new();
     overload function Header(): winrt.windows.foundation.IInspectable;
     overload function Header(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function HeaderTemplate(): winrt.microsoft.ui.xaml.DataTemplate;

@@ -7,8 +7,7 @@ extern class MediaPlayerElement
     extends winrt.microsoft.ui.xaml.controls.Control
     implements winrt.microsoft.ui.xaml.controls.IMediaPlayerElement
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::MediaPlayerElement")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.MediaPlayerElement;
+    function new();
     overload function Source(): winrt.windows.media.playback.IMediaPlaybackSource;
     overload function Source(value: cxx.ConstRef<winrt.windows.media.playback.IMediaPlaybackSource>): Void;
     overload function TransportControls(): winrt.microsoft.ui.xaml.controls.MediaTransportControls;

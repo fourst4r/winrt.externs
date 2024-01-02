@@ -7,8 +7,7 @@ extern class ManipulationStartedRoutedEventArgs
     extends winrt.microsoft.ui.xaml.RoutedEventArgs
     implements winrt.microsoft.ui.xaml.input.IManipulationStartedRoutedEventArgs
 {
-    @:native("winrt::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs")
-    static overload function make(): winrt.microsoft.ui.xaml.input.ManipulationStartedRoutedEventArgs;
+    function new();
     overload function Container(): winrt.microsoft.ui.xaml.UIElement;
     overload function Position(): winrt.windows.foundation.Point;
     overload function Handled(): Bool;

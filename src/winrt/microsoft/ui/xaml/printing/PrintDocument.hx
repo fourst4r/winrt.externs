@@ -7,8 +7,7 @@ extern class PrintDocument
     extends winrt.microsoft.ui.xaml.DependencyObject
     implements winrt.microsoft.ui.xaml.printing.IPrintDocument
 {
-    @:native("winrt::Microsoft::UI::Xaml::Printing::PrintDocument")
-    static overload function make(): winrt.microsoft.ui.xaml.printing.PrintDocument;
+    function new();
     overload function DocumentSource(): winrt.windows.graphics.printing.IPrintDocumentSource;
     overload function Paginate(handler: cxx.ConstRef<winrt.microsoft.ui.xaml.printing.PaginateEventHandler>): winrt.EventToken;
     @:noExcept overload function Paginate(token: cxx.ConstRef<winrt.EventToken>): Void;

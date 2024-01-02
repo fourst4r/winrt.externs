@@ -7,8 +7,7 @@ extern class PhoneTrigger
     implements winrt.windows.applicationmodel.background.IBackgroundTrigger
     implements winrt.windows.applicationmodel.background.IPhoneTrigger
 {
-    @:native("winrt::Windows::ApplicationModel::Background::PhoneTrigger")
-    static overload function make(type: cxx.ConstRef<winrt.windows.applicationmodel.calls.background.PhoneTriggerType>, oneShot: Bool): winrt.windows.applicationmodel.background.PhoneTrigger;
+    function new(type: cxx.ConstRef<winrt.windows.applicationmodel.calls.background.PhoneTriggerType>, oneShot: Bool);
     overload function OneShot(): Bool;
     overload function TriggerType(): winrt.windows.applicationmodel.calls.background.PhoneTriggerType;
 }

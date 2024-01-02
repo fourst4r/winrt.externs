@@ -7,8 +7,7 @@ extern class MenuBarItem
     extends winrt.microsoft.ui.xaml.controls.Control
     implements winrt.microsoft.ui.xaml.controls.IMenuBarItem
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::MenuBarItem")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.MenuBarItem;
+    function new();
     overload function Title(): winrt.HString;
     overload function Title(value: cxx.ConstRef<winrt.HString>): Void;
     overload function Items(): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.xaml.controls.MenuFlyoutItemBase> /* GenericTypeInstSig */;

@@ -7,8 +7,7 @@ extern class WebAccount
     implements winrt.windows.security.credentials.IWebAccount
     implements winrt.windows.security.credentials.IWebAccount2
 {
-    @:native("winrt::Windows::Security::Credentials::WebAccount")
-    static overload function make(webAccountProvider: cxx.ConstRef<winrt.windows.security.credentials.WebAccountProvider>, userName: cxx.ConstRef<winrt.HString>, state: cxx.ConstRef<winrt.windows.security.credentials.WebAccountState>): winrt.windows.security.credentials.WebAccount;
+    function new(webAccountProvider: cxx.ConstRef<winrt.windows.security.credentials.WebAccountProvider>, userName: cxx.ConstRef<winrt.HString>, state: cxx.ConstRef<winrt.windows.security.credentials.WebAccountState>);
     overload function WebAccountProvider(): winrt.windows.security.credentials.WebAccountProvider;
     overload function UserName(): winrt.HString;
     overload function State(): winrt.windows.security.credentials.WebAccountState;

@@ -6,8 +6,7 @@ package winrt.windows.ui.applicationsettings;
 extern class CredentialCommand
     implements winrt.windows.ui.applicationsettings.ICredentialCommand
 {
-    @:native("winrt::Windows::UI::ApplicationSettings::CredentialCommand")
-    /* explicit */ static overload function make(passwordCredential: cxx.ConstRef<winrt.windows.security.credentials.PasswordCredential>): winrt.windows.ui.applicationsettings.CredentialCommand;
+    /* explicit */ function new(passwordCredential: cxx.ConstRef<winrt.windows.security.credentials.PasswordCredential>);
     @:native("winrt::Windows::UI::ApplicationSettings::CredentialCommand")
     static overload function make(passwordCredential: cxx.ConstRef<winrt.windows.security.credentials.PasswordCredential>, deleted: cxx.ConstRef<winrt.windows.ui.applicationsettings.CredentialCommandCredentialDeletedHandler>): winrt.windows.ui.applicationsettings.CredentialCommand;
     overload function PasswordCredential(): winrt.windows.security.credentials.PasswordCredential;

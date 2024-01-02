@@ -7,8 +7,7 @@ extern class RadioButtons
     extends winrt.microsoft.ui.xaml.controls.Control
     implements winrt.microsoft.ui.xaml.controls.IRadioButtons
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::RadioButtons")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.RadioButtons;
+    function new();
     overload function ItemsSource(): winrt.windows.foundation.IInspectable;
     overload function ItemsSource(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function Items(): winrt.windows.foundation.collections.IVector<winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;

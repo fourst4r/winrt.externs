@@ -14,8 +14,7 @@ extern class RichEditBox
     implements winrt.windows.ui.xaml.controls.IRichEditBox7
     implements winrt.windows.ui.xaml.controls.IRichEditBox8
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::RichEditBox")
-    static overload function make(): winrt.windows.ui.xaml.controls.RichEditBox;
+    function new();
     overload function IsReadOnly(): Bool;
     overload function IsReadOnly(value: Bool): Void;
     overload function AcceptsReturn(): Bool;

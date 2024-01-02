@@ -7,8 +7,7 @@ extern class InfoBadgeTemplateSettings
     extends winrt.microsoft.ui.xaml.DependencyObject
     implements winrt.microsoft.ui.xaml.controls.IInfoBadgeTemplateSettings
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::InfoBadgeTemplateSettings")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.InfoBadgeTemplateSettings;
+    function new();
     overload function InfoBadgeCornerRadius(): winrt.microsoft.ui.xaml.CornerRadius;
     overload function InfoBadgeCornerRadius(value: cxx.ConstRef<winrt.microsoft.ui.xaml.CornerRadius>): Void;
     overload function IconElement(): winrt.microsoft.ui.xaml.controls.IconElement;

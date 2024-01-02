@@ -6,8 +6,7 @@ package winrt.windows.media.devices;
 extern class AudioDeviceModulesManager
     implements winrt.windows.media.devices.IAudioDeviceModulesManager
 {
-    @:native("winrt::Windows::Media::Devices::AudioDeviceModulesManager")
-    /* explicit */ static overload function make(deviceId: cxx.ConstRef<winrt.HString>): winrt.windows.media.devices.AudioDeviceModulesManager;
+    /* explicit */ function new(deviceId: cxx.ConstRef<winrt.HString>);
     overload function ModuleNotificationReceived(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.devices.AudioDeviceModulesManager, winrt.windows.media.devices.AudioDeviceModuleNotificationEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
     @:noExcept overload function ModuleNotificationReceived(token: cxx.ConstRef<winrt.EventToken>): Void;
     function FindAllById(moduleId: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.devices.AudioDeviceModule> /* GenericTypeInstSig */;

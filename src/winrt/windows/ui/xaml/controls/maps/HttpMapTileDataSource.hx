@@ -7,8 +7,7 @@ extern class HttpMapTileDataSource
     extends winrt.windows.ui.xaml.controls.maps.MapTileDataSource
     implements winrt.windows.ui.xaml.controls.maps.IHttpMapTileDataSource
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource")
-    static overload function make(): winrt.windows.ui.xaml.controls.maps.HttpMapTileDataSource;
+    function new();
     @:native("winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource")
     /* explicit */ static overload function make(uriFormatString: cxx.ConstRef<winrt.HString>): winrt.windows.ui.xaml.controls.maps.HttpMapTileDataSource;
     overload function UriFormatString(): winrt.HString;

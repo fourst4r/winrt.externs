@@ -8,8 +8,7 @@ extern class Compressor
     implements winrt.windows.storage.streams.IOutputStream
     implements winrt.windows.storage.compression.ICompressor
 {
-    @:native("winrt::Windows::Storage::Compression::Compressor")
-    /* explicit */ static overload function make(underlyingStream: cxx.ConstRef<winrt.windows.storage.streams.IOutputStream>): winrt.windows.storage.compression.Compressor;
+    /* explicit */ function new(underlyingStream: cxx.ConstRef<winrt.windows.storage.streams.IOutputStream>);
     @:native("winrt::Windows::Storage::Compression::Compressor")
     static overload function make(underlyingStream: cxx.ConstRef<winrt.windows.storage.streams.IOutputStream>, algorithm: cxx.ConstRef<winrt.windows.storage.compression.CompressAlgorithm>, blockSize: cxx.num.UInt32): winrt.windows.storage.compression.Compressor;
     function FinishAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;

@@ -6,8 +6,7 @@ package winrt.windows.globalization;
 extern class CurrencyAmount
     implements winrt.windows.globalization.ICurrencyAmount
 {
-    @:native("winrt::Windows::Globalization::CurrencyAmount")
-    static overload function make(amount: cxx.ConstRef<winrt.HString>, currency: cxx.ConstRef<winrt.HString>): winrt.windows.globalization.CurrencyAmount;
+    function new(amount: cxx.ConstRef<winrt.HString>, currency: cxx.ConstRef<winrt.HString>);
     overload function Amount(): winrt.HString;
     overload function Currency(): winrt.HString;
 }

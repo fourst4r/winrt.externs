@@ -6,8 +6,7 @@ package winrt.windows.applicationmodel.payments;
 extern class PaymentToken
     implements winrt.windows.applicationmodel.payments.IPaymentToken
 {
-    @:native("winrt::Windows::ApplicationModel::Payments::PaymentToken")
-    /* explicit */ static overload function make(paymentMethodId: cxx.ConstRef<winrt.HString>): winrt.windows.applicationmodel.payments.PaymentToken;
+    /* explicit */ function new(paymentMethodId: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::ApplicationModel::Payments::PaymentToken")
     static overload function make(paymentMethodId: cxx.ConstRef<winrt.HString>, jsonDetails: cxx.ConstRef<winrt.HString>): winrt.windows.applicationmodel.payments.PaymentToken;
     overload function PaymentMethodId(): winrt.HString;

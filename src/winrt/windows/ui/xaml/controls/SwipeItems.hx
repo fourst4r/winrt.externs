@@ -9,8 +9,7 @@ extern class SwipeItems
     implements winrt.windows.foundation.collections.IIterable<winrt.windows.ui.xaml.controls.SwipeItem> /* GenericTypeInstSig */
     implements winrt.windows.foundation.collections.IVector<winrt.windows.ui.xaml.controls.SwipeItem> /* GenericTypeInstSig */
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::SwipeItems")
-    static overload function make(): winrt.windows.ui.xaml.controls.SwipeItems;
+    function new();
     overload function Mode(): winrt.windows.ui.xaml.controls.SwipeMode;
     overload function Mode(value: cxx.ConstRef<winrt.windows.ui.xaml.controls.SwipeMode>): Void;
     function GetAt(index: cxx.num.UInt32): winrt.windows.ui.xaml.controls.SwipeItem;

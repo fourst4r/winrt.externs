@@ -6,7 +6,6 @@ package winrt.windows.networking.vpn;
 extern class VpnInterfaceId
     implements winrt.windows.networking.vpn.IVpnInterfaceId
 {
-    @:native("winrt::Windows::Networking::Vpn::VpnInterfaceId")
-    /* explicit */ static overload function make(address: winrt.ArrayView<cxx.num.UInt8>): winrt.windows.networking.vpn.VpnInterfaceId;
+    /* explicit */ function new(address: winrt.ArrayView<cxx.num.UInt8>);
     function GetAddressInfo(id: cxx.Ref<winrt.ComArray<cxx.num.UInt8>>): Void;
 }

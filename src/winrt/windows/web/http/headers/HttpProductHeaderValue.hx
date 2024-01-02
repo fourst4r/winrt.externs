@@ -7,8 +7,7 @@ extern class HttpProductHeaderValue
     implements winrt.windows.web.http.headers.IHttpProductHeaderValue
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::Headers::HttpProductHeaderValue")
-    /* explicit */ static overload function make(productName: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpProductHeaderValue;
+    /* explicit */ function new(productName: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::Web::Http::Headers::HttpProductHeaderValue")
     static overload function make(productName: cxx.ConstRef<winrt.HString>, productVersion: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpProductHeaderValue;
     overload function Name(): winrt.HString;

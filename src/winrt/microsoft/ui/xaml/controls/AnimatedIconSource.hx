@@ -7,8 +7,7 @@ extern class AnimatedIconSource
     extends winrt.microsoft.ui.xaml.controls.IconSource
     implements winrt.microsoft.ui.xaml.controls.IAnimatedIconSource
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::AnimatedIconSource")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.AnimatedIconSource;
+    function new();
     overload function Source(): winrt.microsoft.ui.xaml.controls.IAnimatedVisualSource2;
     overload function Source(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.IAnimatedVisualSource2>): Void;
     overload function FallbackIconSource(): winrt.microsoft.ui.xaml.controls.IconSource;

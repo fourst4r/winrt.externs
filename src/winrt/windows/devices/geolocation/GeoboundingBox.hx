@@ -7,8 +7,7 @@ extern class GeoboundingBox
     implements winrt.windows.devices.geolocation.IGeoshape
     implements winrt.windows.devices.geolocation.IGeoboundingBox
 {
-    @:native("winrt::Windows::Devices::Geolocation::GeoboundingBox")
-    static overload function make(northwestCorner: cxx.ConstRef<winrt.windows.devices.geolocation.BasicGeoposition>, southeastCorner: cxx.ConstRef<winrt.windows.devices.geolocation.BasicGeoposition>): winrt.windows.devices.geolocation.GeoboundingBox;
+    function new(northwestCorner: cxx.ConstRef<winrt.windows.devices.geolocation.BasicGeoposition>, southeastCorner: cxx.ConstRef<winrt.windows.devices.geolocation.BasicGeoposition>);
     @:native("winrt::Windows::Devices::Geolocation::GeoboundingBox")
     static overload function make(northwestCorner: cxx.ConstRef<winrt.windows.devices.geolocation.BasicGeoposition>, southeastCorner: cxx.ConstRef<winrt.windows.devices.geolocation.BasicGeoposition>, altitudeReferenceSystem: cxx.ConstRef<winrt.windows.devices.geolocation.AltitudeReferenceSystem>): winrt.windows.devices.geolocation.GeoboundingBox;
     @:native("winrt::Windows::Devices::Geolocation::GeoboundingBox")

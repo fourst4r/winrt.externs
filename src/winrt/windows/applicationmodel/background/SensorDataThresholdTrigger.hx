@@ -7,6 +7,5 @@ extern class SensorDataThresholdTrigger
     implements winrt.windows.applicationmodel.background.IBackgroundTrigger
     implements winrt.windows.applicationmodel.background.ISensorDataThresholdTrigger
 {
-    @:native("winrt::Windows::ApplicationModel::Background::SensorDataThresholdTrigger")
-    /* explicit */ static overload function make(threshold: cxx.ConstRef<winrt.windows.devices.sensors.ISensorDataThreshold>): winrt.windows.applicationmodel.background.SensorDataThresholdTrigger;
+    /* explicit */ function new(threshold: cxx.ConstRef<winrt.windows.devices.sensors.ISensorDataThreshold>);
 }

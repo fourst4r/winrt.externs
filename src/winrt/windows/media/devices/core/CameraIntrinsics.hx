@@ -7,8 +7,7 @@ extern class CameraIntrinsics
     implements winrt.windows.media.devices.core.ICameraIntrinsics
     implements winrt.windows.media.devices.core.ICameraIntrinsics2
 {
-    @:native("winrt::Windows::Media::Devices::Core::CameraIntrinsics")
-    static overload function make(focalLength: cxx.ConstRef<winrt.windows.foundation.numerics.Vector2>, principalPoint: cxx.ConstRef<winrt.windows.foundation.numerics.Vector2>, radialDistortion: cxx.ConstRef<winrt.windows.foundation.numerics.Vector3>, tangentialDistortion: cxx.ConstRef<winrt.windows.foundation.numerics.Vector2>, imageWidth: cxx.num.UInt32, imageHeight: cxx.num.UInt32): winrt.windows.media.devices.core.CameraIntrinsics;
+    function new(focalLength: cxx.ConstRef<winrt.windows.foundation.numerics.Vector2>, principalPoint: cxx.ConstRef<winrt.windows.foundation.numerics.Vector2>, radialDistortion: cxx.ConstRef<winrt.windows.foundation.numerics.Vector3>, tangentialDistortion: cxx.ConstRef<winrt.windows.foundation.numerics.Vector2>, imageWidth: cxx.num.UInt32, imageHeight: cxx.num.UInt32);
     overload function FocalLength(): winrt.windows.foundation.numerics.Vector2;
     overload function PrincipalPoint(): winrt.windows.foundation.numerics.Vector2;
     overload function RadialDistortion(): winrt.windows.foundation.numerics.Vector3;

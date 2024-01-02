@@ -8,8 +8,7 @@ extern class HttpStringContent
     implements winrt.windows.web.http.IHttpContent
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::HttpStringContent")
-    /* explicit */ static overload function make(content: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.HttpStringContent;
+    /* explicit */ function new(content: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::Web::Http::HttpStringContent")
     static overload function make(content: cxx.ConstRef<winrt.HString>, encoding: cxx.ConstRef<winrt.windows.storage.streams.UnicodeEncoding>): winrt.windows.web.http.HttpStringContent;
     @:native("winrt::Windows::Web::Http::HttpStringContent")

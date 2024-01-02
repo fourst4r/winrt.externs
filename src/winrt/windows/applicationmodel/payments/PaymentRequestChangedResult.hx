@@ -6,8 +6,7 @@ package winrt.windows.applicationmodel.payments;
 extern class PaymentRequestChangedResult
     implements winrt.windows.applicationmodel.payments.IPaymentRequestChangedResult
 {
-    @:native("winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult")
-    /* explicit */ static overload function make(changeAcceptedByMerchant: Bool): winrt.windows.applicationmodel.payments.PaymentRequestChangedResult;
+    /* explicit */ function new(changeAcceptedByMerchant: Bool);
     @:native("winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult")
     static overload function make(changeAcceptedByMerchant: Bool, updatedPaymentDetails: cxx.ConstRef<winrt.windows.applicationmodel.payments.PaymentDetails>): winrt.windows.applicationmodel.payments.PaymentRequestChangedResult;
     overload function ChangeAcceptedByMerchant(): Bool;

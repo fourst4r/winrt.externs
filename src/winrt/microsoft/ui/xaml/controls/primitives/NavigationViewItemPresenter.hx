@@ -8,8 +8,7 @@ extern class NavigationViewItemPresenter
     implements winrt.microsoft.ui.xaml.controls.primitives.INavigationViewItemPresenter
     implements winrt.microsoft.ui.xaml.controls.primitives.INavigationViewItemPresenter2
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.primitives.NavigationViewItemPresenter;
+    function new();
     overload function Icon(): winrt.microsoft.ui.xaml.controls.IconElement;
     overload function Icon(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.IconElement>): Void;
     overload function TemplateSettings(): winrt.microsoft.ui.xaml.controls.primitives.NavigationViewItemPresenterTemplateSettings;

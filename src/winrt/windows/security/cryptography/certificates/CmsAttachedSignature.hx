@@ -6,8 +6,7 @@ package winrt.windows.security.cryptography.certificates;
 extern class CmsAttachedSignature
     implements winrt.windows.security.cryptography.certificates.ICmsAttachedSignature
 {
-    @:native("winrt::Windows::Security::Cryptography::Certificates::CmsAttachedSignature")
-    /* explicit */ static overload function make(inputBlob: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.security.cryptography.certificates.CmsAttachedSignature;
+    /* explicit */ function new(inputBlob: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>);
     overload function Certificates(): winrt.windows.foundation.collections.IVectorView<winrt.windows.security.cryptography.certificates.Certificate> /* GenericTypeInstSig */;
     overload function Content(): winrt.ComArray<cxx.num.UInt8>;
     overload function Signers(): winrt.windows.foundation.collections.IVectorView<winrt.windows.security.cryptography.certificates.CmsSignerInfo> /* GenericTypeInstSig */;

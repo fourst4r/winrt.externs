@@ -7,8 +7,7 @@ extern class Deferral
     implements winrt.windows.foundation.IClosable
     implements winrt.windows.foundation.IDeferral
 {
-    @:native("winrt::Windows::Foundation::Deferral")
-    /* explicit */ static overload function make(handler: cxx.ConstRef<winrt.windows.foundation.DeferralCompletedHandler>): winrt.windows.foundation.Deferral;
+    /* explicit */ function new(handler: cxx.ConstRef<winrt.windows.foundation.DeferralCompletedHandler>);
     function Complete(): Void;
     function Close(): Void;
 }

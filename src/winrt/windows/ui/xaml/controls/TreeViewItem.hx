@@ -8,8 +8,7 @@ extern class TreeViewItem
     implements winrt.windows.ui.xaml.controls.ITreeViewItem
     implements winrt.windows.ui.xaml.controls.ITreeViewItem2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::TreeViewItem")
-    static overload function make(): winrt.windows.ui.xaml.controls.TreeViewItem;
+    function new();
     overload function GlyphOpacity(): cxx.num.Float64;
     overload function GlyphOpacity(value: cxx.num.Float64): Void;
     overload function GlyphBrush(): winrt.windows.ui.xaml.media.Brush;

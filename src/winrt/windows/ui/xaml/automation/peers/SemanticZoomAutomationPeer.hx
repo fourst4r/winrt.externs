@@ -8,8 +8,7 @@ extern class SemanticZoomAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.ISemanticZoomAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.IToggleProvider
 {
-    @:native("winrt::Windows::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.windows.ui.xaml.controls.SemanticZoom>): winrt.windows.ui.xaml.automation.peers.SemanticZoomAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.windows.ui.xaml.controls.SemanticZoom>);
     overload function ToggleState(): winrt.windows.ui.xaml.automation.ToggleState;
     function Toggle(): Void;
 }

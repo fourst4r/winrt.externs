@@ -31,6 +31,8 @@ extern class VideoEncodingProperties
     overload function StereoscopicVideoPackingMode(): winrt.windows.media.mediaproperties.StereoscopicVideoPackingMode;
     overload function SphericalVideoFrameFormat(): winrt.windows.media.mediaproperties.SphericalVideoFrameFormat;
     function Copy(): winrt.windows.media.mediaproperties.VideoEncodingProperties;
+    function CreateVp9(): winrt.windows.media.mediaproperties.VideoEncodingProperties;
+    function CreateAv1(): winrt.windows.media.mediaproperties.VideoEncodingProperties;
     function CreateHevc(): winrt.windows.media.mediaproperties.VideoEncodingProperties;
     function CreateH264(): winrt.windows.media.mediaproperties.VideoEncodingProperties;
     function CreateMpeg2(): winrt.windows.media.mediaproperties.VideoEncodingProperties;
@@ -39,4 +41,6 @@ extern class VideoEncodingProperties
     static function CreateMpeg2(): winrt.windows.media.mediaproperties.VideoEncodingProperties;
     static function CreateUncompressed(subtype: cxx.ConstRef<winrt.HString>, width: cxx.num.UInt32, height: cxx.num.UInt32): winrt.windows.media.mediaproperties.VideoEncodingProperties;
     static function CreateHevc(): winrt.windows.media.mediaproperties.VideoEncodingProperties;
+    static function CreateVp9(): winrt.windows.media.mediaproperties.VideoEncodingProperties;
+    static function CreateAv1(): winrt.windows.media.mediaproperties.VideoEncodingProperties;
 }

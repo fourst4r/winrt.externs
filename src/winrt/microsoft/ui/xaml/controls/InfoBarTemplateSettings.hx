@@ -7,8 +7,7 @@ extern class InfoBarTemplateSettings
     extends winrt.microsoft.ui.xaml.DependencyObject
     implements winrt.microsoft.ui.xaml.controls.IInfoBarTemplateSettings
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::InfoBarTemplateSettings")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.InfoBarTemplateSettings;
+    function new();
     overload function IconElement(): winrt.microsoft.ui.xaml.controls.IconElement;
     overload function IconElement(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.IconElement>): Void;
     overload function IconElementProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

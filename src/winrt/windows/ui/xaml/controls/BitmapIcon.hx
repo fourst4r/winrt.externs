@@ -8,8 +8,7 @@ extern class BitmapIcon
     implements winrt.windows.ui.xaml.controls.IBitmapIcon
     implements winrt.windows.ui.xaml.controls.IBitmapIcon2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::BitmapIcon")
-    static overload function make(): winrt.windows.ui.xaml.controls.BitmapIcon;
+    function new();
     overload function UriSource(): winrt.windows.foundation.Uri;
     overload function UriSource(value: cxx.ConstRef<winrt.windows.foundation.Uri>): Void;
     overload function ShowAsMonochrome(): Bool;

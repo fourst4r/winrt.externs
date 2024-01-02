@@ -9,8 +9,7 @@ extern class SplitButtonAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IExpandCollapseProvider
     implements winrt.microsoft.ui.xaml.automation.provider.IInvokeProvider
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::SplitButtonAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.SplitButton>): winrt.microsoft.ui.xaml.automation.peers.SplitButtonAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.SplitButton>);
     overload function ExpandCollapseState(): winrt.microsoft.ui.xaml.automation.ExpandCollapseState;
     function Collapse(): Void;
     function Expand(): Void;

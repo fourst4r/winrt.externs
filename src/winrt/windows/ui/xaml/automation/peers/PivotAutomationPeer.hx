@@ -9,8 +9,7 @@ extern class PivotAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.ISelectionProvider
     implements winrt.windows.ui.xaml.automation.provider.IScrollProvider
 {
-    @:native("winrt::Windows::UI::Xaml::Automation::Peers::PivotAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.windows.ui.xaml.controls.Pivot>): winrt.windows.ui.xaml.automation.peers.PivotAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.windows.ui.xaml.controls.Pivot>);
     overload function CanSelectMultiple(): Bool;
     overload function IsSelectionRequired(): Bool;
     function GetSelection(): winrt.ComArray<winrt.windows.ui.xaml.automation.provider.IRawElementProviderSimple>;

@@ -7,8 +7,7 @@ extern class InfoBar
     extends winrt.microsoft.ui.xaml.controls.Control
     implements winrt.microsoft.ui.xaml.controls.IInfoBar
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::InfoBar")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.InfoBar;
+    function new();
     overload function IsOpen(): Bool;
     overload function IsOpen(value: Bool): Void;
     overload function Title(): winrt.HString;

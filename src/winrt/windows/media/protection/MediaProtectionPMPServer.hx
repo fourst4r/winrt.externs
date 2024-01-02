@@ -6,7 +6,6 @@ package winrt.windows.media.protection;
 extern class MediaProtectionPMPServer
     implements winrt.windows.media.protection.IMediaProtectionPMPServer
 {
-    @:native("winrt::Windows::Media::Protection::MediaProtectionPMPServer")
-    /* explicit */ static overload function make(pProperties: cxx.ConstRef<winrt.windows.foundation.collections.IPropertySet>): winrt.windows.media.protection.MediaProtectionPMPServer;
+    /* explicit */ function new(pProperties: cxx.ConstRef<winrt.windows.foundation.collections.IPropertySet>);
     overload function Properties(): winrt.windows.foundation.collections.IPropertySet;
 }

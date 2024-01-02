@@ -9,8 +9,7 @@ extern class DependencyObjectCollection
     implements winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.xaml.DependencyObject> /* GenericTypeInstSig */
     implements winrt.windows.foundation.collections.IObservableVector<winrt.microsoft.ui.xaml.DependencyObject> /* GenericTypeInstSig */
 {
-    @:native("winrt::Microsoft::UI::Xaml::DependencyObjectCollection")
-    static overload function make(): winrt.microsoft.ui.xaml.DependencyObjectCollection;
+    function new();
     overload function VectorChanged(vhnd: cxx.ConstRef<winrt.windows.foundation.collections.VectorChangedEventHandler<winrt.microsoft.ui.xaml.DependencyObject> /* temp_GenericTypeInstSig */>): winrt.EventToken;
     @:noExcept overload function VectorChanged(token: cxx.ConstRef<winrt.EventToken>): Void;
     function GetAt(index: cxx.num.UInt32): winrt.microsoft.ui.xaml.DependencyObject;

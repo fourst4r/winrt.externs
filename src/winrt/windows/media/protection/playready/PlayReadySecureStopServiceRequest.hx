@@ -8,8 +8,7 @@ extern class PlayReadySecureStopServiceRequest
     implements winrt.windows.media.protection.playready.IPlayReadyServiceRequest
     implements winrt.windows.media.protection.playready.IPlayReadySecureStopServiceRequest
 {
-    @:native("winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest")
-    /* explicit */ static overload function make(publisherCertBytes: winrt.ArrayView<cxx.num.UInt8>): winrt.windows.media.protection.playready.PlayReadySecureStopServiceRequest;
+    /* explicit */ function new(publisherCertBytes: winrt.ArrayView<cxx.num.UInt8>);
     @:native("winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest")
     static overload function make(sessionID: cxx.ConstRef<winrt.Guid>, publisherCertBytes: winrt.ArrayView<cxx.num.UInt8>): winrt.windows.media.protection.playready.PlayReadySecureStopServiceRequest;
     overload function SessionID(): winrt.Guid;

@@ -8,8 +8,7 @@ extern class ToggleMenuFlyoutItemAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IToggleMenuFlyoutItemAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.IToggleProvider
 {
-    @:native("winrt::Windows::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.windows.ui.xaml.controls.ToggleMenuFlyoutItem>): winrt.windows.ui.xaml.automation.peers.ToggleMenuFlyoutItemAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.windows.ui.xaml.controls.ToggleMenuFlyoutItem>);
     overload function ToggleState(): winrt.windows.ui.xaml.automation.ToggleState;
     function Toggle(): Void;
 }

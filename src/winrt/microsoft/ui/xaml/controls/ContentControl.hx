@@ -8,8 +8,7 @@ extern class ContentControl
     implements winrt.microsoft.ui.xaml.controls.IContentControl
     implements winrt.microsoft.ui.xaml.controls.IContentControlOverrides
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::ContentControl")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.ContentControl;
+    function new();
     overload function Content(): winrt.windows.foundation.IInspectable;
     overload function Content(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function ContentTemplate(): winrt.microsoft.ui.xaml.DataTemplate;

@@ -8,8 +8,7 @@ extern class Hub
     implements winrt.windows.ui.xaml.controls.IHub
     implements winrt.windows.ui.xaml.controls.ISemanticZoomInformation
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Hub")
-    static overload function make(): winrt.windows.ui.xaml.controls.Hub;
+    function new();
     overload function Header(): winrt.windows.foundation.IInspectable;
     overload function Header(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function HeaderTemplate(): winrt.windows.ui.xaml.DataTemplate;

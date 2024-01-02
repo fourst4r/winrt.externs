@@ -7,6 +7,5 @@ extern class RepeaterAutomationPeer
     extends winrt.microsoft.ui.xaml.automation.peers.FrameworkElementAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IRepeaterAutomationPeer
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::RepeaterAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.ItemsRepeater>): winrt.microsoft.ui.xaml.automation.peers.RepeaterAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.ItemsRepeater>);
 }

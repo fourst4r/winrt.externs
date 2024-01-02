@@ -6,8 +6,7 @@ package winrt.microsoft.windows.applicationmodel.dynamicdependency;
 extern class PackageDependencyContext
     implements winrt.microsoft.windows.applicationmodel.dynamicdependency.IPackageDependencyContext
 {
-    @:native("winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContext")
-    /* explicit */ static overload function make(contextId: cxx.ConstRef<winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContextId>): winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContext;
+    /* explicit */ function new(contextId: cxx.ConstRef<winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContextId>);
     overload function ContextId(): winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContextId;
     overload function PackageDependencyId(): winrt.HString;
     overload function PackageFullName(): winrt.HString;

@@ -6,8 +6,7 @@ package winrt.windows.devices.alljoyn;
 extern class AllJoynServiceInfo
     implements winrt.windows.devices.alljoyn.IAllJoynServiceInfo
 {
-    @:native("winrt::Windows::Devices::AllJoyn::AllJoynServiceInfo")
-    static overload function make(uniqueName: cxx.ConstRef<winrt.HString>, objectPath: cxx.ConstRef<winrt.HString>, sessionPort: cxx.num.UInt16): winrt.windows.devices.alljoyn.AllJoynServiceInfo;
+    function new(uniqueName: cxx.ConstRef<winrt.HString>, objectPath: cxx.ConstRef<winrt.HString>, sessionPort: cxx.num.UInt16);
     overload function UniqueName(): winrt.HString;
     overload function ObjectPath(): winrt.HString;
     overload function SessionPort(): cxx.num.UInt16;

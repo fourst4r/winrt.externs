@@ -7,8 +7,7 @@ extern class MidiNoteOnMessage
     implements winrt.windows.devices.midi.IMidiMessage
     implements winrt.windows.devices.midi.IMidiNoteOnMessage
 {
-    @:native("winrt::Windows::Devices::Midi::MidiNoteOnMessage")
-    static overload function make(channel: cxx.num.UInt8, note: cxx.num.UInt8, velocity: cxx.num.UInt8): winrt.windows.devices.midi.MidiNoteOnMessage;
+    function new(channel: cxx.num.UInt8, note: cxx.num.UInt8, velocity: cxx.num.UInt8);
     overload function Channel(): cxx.num.UInt8;
     overload function Note(): cxx.num.UInt8;
     overload function Velocity(): cxx.num.UInt8;

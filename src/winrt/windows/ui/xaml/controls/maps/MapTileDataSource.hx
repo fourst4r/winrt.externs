@@ -7,6 +7,5 @@ extern class MapTileDataSource
     extends winrt.windows.ui.xaml.DependencyObject
     implements winrt.windows.ui.xaml.controls.maps.IMapTileDataSource
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource")
-    static overload function make(): winrt.windows.ui.xaml.controls.maps.MapTileDataSource;
+    function new();
 }

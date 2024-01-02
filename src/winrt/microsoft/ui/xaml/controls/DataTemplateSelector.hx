@@ -8,8 +8,7 @@ extern class DataTemplateSelector
     implements winrt.microsoft.ui.xaml.controls.IDataTemplateSelectorOverrides
     implements winrt.microsoft.ui.xaml.IElementFactory
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::DataTemplateSelector")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.DataTemplateSelector;
+    function new();
     overload function SelectTemplate(item: cxx.ConstRef<winrt.windows.foundation.IInspectable>, container: cxx.ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.DataTemplate;
     overload function SelectTemplate(item: cxx.ConstRef<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.DataTemplate;
     overload function SelectTemplateCore(item: cxx.ConstRef<winrt.windows.foundation.IInspectable>, container: cxx.ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.DataTemplate;

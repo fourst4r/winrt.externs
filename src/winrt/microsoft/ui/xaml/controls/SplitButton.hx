@@ -7,8 +7,7 @@ extern class SplitButton
     extends winrt.microsoft.ui.xaml.controls.ContentControl
     implements winrt.microsoft.ui.xaml.controls.ISplitButton
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::SplitButton")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.SplitButton;
+    function new();
     overload function Flyout(): winrt.microsoft.ui.xaml.controls.primitives.FlyoutBase;
     overload function Flyout(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.primitives.FlyoutBase>): Void;
     overload function Command(): winrt.microsoft.ui.xaml.input.ICommand;

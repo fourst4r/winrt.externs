@@ -7,8 +7,7 @@ extern class InfoBarPanel
     extends winrt.microsoft.ui.xaml.controls.Panel
     implements winrt.microsoft.ui.xaml.controls.primitives.IInfoBarPanel
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::InfoBarPanel")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.primitives.InfoBarPanel;
+    function new();
     overload function HorizontalOrientationPadding(): winrt.microsoft.ui.xaml.Thickness;
     overload function HorizontalOrientationPadding(value: cxx.ConstRef<winrt.microsoft.ui.xaml.Thickness>): Void;
     overload function VerticalOrientationPadding(): winrt.microsoft.ui.xaml.Thickness;

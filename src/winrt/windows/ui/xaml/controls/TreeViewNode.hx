@@ -7,8 +7,7 @@ extern class TreeViewNode
     extends winrt.windows.ui.xaml.DependencyObject
     implements winrt.windows.ui.xaml.controls.ITreeViewNode
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::TreeViewNode")
-    static overload function make(): winrt.windows.ui.xaml.controls.TreeViewNode;
+    function new();
     overload function Content(): winrt.windows.foundation.IInspectable;
     overload function Content(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function Parent(): winrt.windows.ui.xaml.controls.TreeViewNode;

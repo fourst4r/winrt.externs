@@ -7,6 +7,5 @@ extern class RatingItemInfo
     extends winrt.windows.ui.xaml.DependencyObject
     implements winrt.windows.ui.xaml.controls.IRatingItemInfo
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::RatingItemInfo")
-    static overload function make(): winrt.windows.ui.xaml.controls.RatingItemInfo;
+    function new();
 }

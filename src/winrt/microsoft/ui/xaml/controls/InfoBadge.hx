@@ -7,8 +7,7 @@ extern class InfoBadge
     extends winrt.microsoft.ui.xaml.controls.Control
     implements winrt.microsoft.ui.xaml.controls.IInfoBadge
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::InfoBadge")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.InfoBadge;
+    function new();
     overload function Value(): cxx.num.Int32;
     overload function Value(value: cxx.num.Int32): Void;
     overload function IconSource(): winrt.microsoft.ui.xaml.controls.IconSource;

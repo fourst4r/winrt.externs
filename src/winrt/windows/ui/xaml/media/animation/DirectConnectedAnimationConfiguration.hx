@@ -7,6 +7,5 @@ extern class DirectConnectedAnimationConfiguration
     extends winrt.windows.ui.xaml.media.animation.ConnectedAnimationConfiguration
     implements winrt.windows.ui.xaml.media.animation.IDirectConnectedAnimationConfiguration
 {
-    @:native("winrt::Windows::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration")
-    static overload function make(): winrt.windows.ui.xaml.media.animation.DirectConnectedAnimationConfiguration;
+    function new();
 }

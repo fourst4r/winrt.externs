@@ -8,8 +8,7 @@ extern class HandwritingView
     implements winrt.windows.ui.xaml.controls.IHandwritingView
     implements winrt.windows.ui.xaml.controls.IHandwritingView2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::HandwritingView")
-    static overload function make(): winrt.windows.ui.xaml.controls.HandwritingView;
+    function new();
     overload function PlacementTarget(): winrt.windows.ui.xaml.UIElement;
     overload function PlacementTarget(value: cxx.ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
     overload function PlacementAlignment(): winrt.windows.ui.xaml.controls.HandwritingPanelPlacementAlignment;

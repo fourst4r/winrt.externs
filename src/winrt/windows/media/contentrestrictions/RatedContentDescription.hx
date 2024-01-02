@@ -6,8 +6,7 @@ package winrt.windows.media.contentrestrictions;
 extern class RatedContentDescription
     implements winrt.windows.media.contentrestrictions.IRatedContentDescription
 {
-    @:native("winrt::Windows::Media::ContentRestrictions::RatedContentDescription")
-    static overload function make(id: cxx.ConstRef<winrt.HString>, title: cxx.ConstRef<winrt.HString>, category: cxx.ConstRef<winrt.windows.media.contentrestrictions.RatedContentCategory>): winrt.windows.media.contentrestrictions.RatedContentDescription;
+    function new(id: cxx.ConstRef<winrt.HString>, title: cxx.ConstRef<winrt.HString>, category: cxx.ConstRef<winrt.windows.media.contentrestrictions.RatedContentCategory>);
     overload function Id(): winrt.HString;
     overload function Id(value: cxx.ConstRef<winrt.HString>): Void;
     overload function Title(): winrt.HString;

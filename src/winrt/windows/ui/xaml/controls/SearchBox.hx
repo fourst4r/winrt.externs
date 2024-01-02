@@ -7,8 +7,7 @@ extern class SearchBox
     extends winrt.windows.ui.xaml.controls.Control
     implements winrt.windows.ui.xaml.controls.ISearchBox
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::SearchBox")
-    static overload function make(): winrt.windows.ui.xaml.controls.SearchBox;
+    function new();
     overload function SearchHistoryEnabled(): Bool;
     overload function SearchHistoryEnabled(value: Bool): Void;
     overload function SearchHistoryContext(): winrt.HString;

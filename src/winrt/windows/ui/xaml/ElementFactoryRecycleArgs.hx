@@ -6,8 +6,7 @@ package winrt.windows.ui.xaml;
 extern class ElementFactoryRecycleArgs
     implements winrt.windows.ui.xaml.IElementFactoryRecycleArgs
 {
-    @:native("winrt::Windows::UI::Xaml::ElementFactoryRecycleArgs")
-    static overload function make(): winrt.windows.ui.xaml.ElementFactoryRecycleArgs;
+    function new();
     overload function Element(): winrt.windows.ui.xaml.UIElement;
     overload function Element(value: cxx.ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
     overload function Parent(): winrt.windows.ui.xaml.UIElement;

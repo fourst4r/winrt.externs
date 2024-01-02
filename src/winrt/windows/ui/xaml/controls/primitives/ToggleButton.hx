@@ -8,8 +8,7 @@ extern class ToggleButton
     implements winrt.windows.ui.xaml.controls.primitives.IToggleButton
     implements winrt.windows.ui.xaml.controls.primitives.IToggleButtonOverrides
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton")
-    static overload function make(): winrt.windows.ui.xaml.controls.primitives.ToggleButton;
+    function new();
     overload function IsChecked(): winrt.windows.foundation.IReference<Bool> /* GenericTypeInstSig */;
     overload function IsChecked(value: cxx.ConstRef<winrt.windows.foundation.IReference<Bool> /* temp_GenericTypeInstSig */>): Void;
     overload function IsThreeState(): Bool;

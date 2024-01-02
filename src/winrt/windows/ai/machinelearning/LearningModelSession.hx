@@ -7,8 +7,7 @@ extern class LearningModelSession
     implements winrt.windows.ai.machinelearning.ILearningModelSession
     implements winrt.windows.foundation.IClosable
 {
-    @:native("winrt::Windows::AI::MachineLearning::LearningModelSession")
-    /* explicit */ static overload function make(model: cxx.ConstRef<winrt.windows.ai.machinelearning.LearningModel>): winrt.windows.ai.machinelearning.LearningModelSession;
+    /* explicit */ function new(model: cxx.ConstRef<winrt.windows.ai.machinelearning.LearningModel>);
     @:native("winrt::Windows::AI::MachineLearning::LearningModelSession")
     static overload function make(model: cxx.ConstRef<winrt.windows.ai.machinelearning.LearningModel>, deviceToRunOn: cxx.ConstRef<winrt.windows.ai.machinelearning.LearningModelDevice>): winrt.windows.ai.machinelearning.LearningModelSession;
     @:native("winrt::Windows::AI::MachineLearning::LearningModelSession")

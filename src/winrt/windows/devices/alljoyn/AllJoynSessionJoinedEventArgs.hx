@@ -6,7 +6,6 @@ package winrt.windows.devices.alljoyn;
 extern class AllJoynSessionJoinedEventArgs
     implements winrt.windows.devices.alljoyn.IAllJoynSessionJoinedEventArgs
 {
-    @:native("winrt::Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs")
-    /* explicit */ static overload function make(session: cxx.ConstRef<winrt.windows.devices.alljoyn.AllJoynSession>): winrt.windows.devices.alljoyn.AllJoynSessionJoinedEventArgs;
+    /* explicit */ function new(session: cxx.ConstRef<winrt.windows.devices.alljoyn.AllJoynSession>);
     overload function Session(): winrt.windows.devices.alljoyn.AllJoynSession;
 }

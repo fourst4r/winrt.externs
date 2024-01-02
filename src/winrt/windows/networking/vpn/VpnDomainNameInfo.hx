@@ -7,8 +7,7 @@ extern class VpnDomainNameInfo
     implements winrt.windows.networking.vpn.IVpnDomainNameInfo
     implements winrt.windows.networking.vpn.IVpnDomainNameInfo2
 {
-    @:native("winrt::Windows::Networking::Vpn::VpnDomainNameInfo")
-    static overload function make(name: cxx.ConstRef<winrt.HString>, nameType: cxx.ConstRef<winrt.windows.networking.vpn.VpnDomainNameType>, dnsServerList: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.networking.HostName> /* temp_GenericTypeInstSig */>, proxyServerList: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.networking.HostName> /* temp_GenericTypeInstSig */>): winrt.windows.networking.vpn.VpnDomainNameInfo;
+    function new(name: cxx.ConstRef<winrt.HString>, nameType: cxx.ConstRef<winrt.windows.networking.vpn.VpnDomainNameType>, dnsServerList: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.networking.HostName> /* temp_GenericTypeInstSig */>, proxyServerList: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.networking.HostName> /* temp_GenericTypeInstSig */>);
     overload function DomainName(value: cxx.ConstRef<winrt.windows.networking.HostName>): Void;
     overload function DomainName(): winrt.windows.networking.HostName;
     overload function DomainNameType(value: cxx.ConstRef<winrt.windows.networking.vpn.VpnDomainNameType>): Void;

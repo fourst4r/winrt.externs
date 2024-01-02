@@ -7,8 +7,7 @@ extern class ColorSpectrum
     extends winrt.microsoft.ui.xaml.controls.Control
     implements winrt.microsoft.ui.xaml.controls.primitives.IColorSpectrum
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorSpectrum")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.primitives.ColorSpectrum;
+    function new();
     overload function Color(): winrt.windows.ui.Color;
     overload function Color(value: cxx.ConstRef<winrt.windows.ui.Color>): Void;
     overload function HsvColor(): winrt.windows.foundation.numerics.Vector4;

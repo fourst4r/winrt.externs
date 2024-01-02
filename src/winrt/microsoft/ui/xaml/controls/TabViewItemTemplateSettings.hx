@@ -8,8 +8,7 @@ extern class TabViewItemTemplateSettings
     implements winrt.microsoft.ui.xaml.controls.ITabViewItemTemplateSettings
     implements winrt.microsoft.ui.xaml.controls.ITabViewItemTemplateSettings2
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::TabViewItemTemplateSettings")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.TabViewItemTemplateSettings;
+    function new();
     overload function IconElement(): winrt.microsoft.ui.xaml.controls.IconElement;
     overload function IconElement(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.IconElement>): Void;
     overload function TabGeometry(): winrt.microsoft.ui.xaml.media.Geometry;

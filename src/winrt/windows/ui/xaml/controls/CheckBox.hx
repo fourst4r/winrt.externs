@@ -7,6 +7,5 @@ extern class CheckBox
     extends winrt.windows.ui.xaml.controls.primitives.ToggleButton
     implements winrt.windows.ui.xaml.controls.ICheckBox
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::CheckBox")
-    static overload function make(): winrt.windows.ui.xaml.controls.CheckBox;
+    function new();
 }

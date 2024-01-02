@@ -9,8 +9,7 @@ extern class InkToolbar
     implements winrt.windows.ui.xaml.controls.IInkToolbar2
     implements winrt.windows.ui.xaml.controls.IInkToolbar3
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::InkToolbar")
-    static overload function make(): winrt.windows.ui.xaml.controls.InkToolbar;
+    function new();
     overload function InitialControls(): winrt.windows.ui.xaml.controls.InkToolbarInitialControls;
     overload function InitialControls(value: cxx.ConstRef<winrt.windows.ui.xaml.controls.InkToolbarInitialControls>): Void;
     overload function Children(): winrt.windows.ui.xaml.DependencyObjectCollection;

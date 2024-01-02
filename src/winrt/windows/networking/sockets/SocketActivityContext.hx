@@ -6,7 +6,6 @@ package winrt.windows.networking.sockets;
 extern class SocketActivityContext
     implements winrt.windows.networking.sockets.ISocketActivityContext
 {
-    @:native("winrt::Windows::Networking::Sockets::SocketActivityContext")
-    /* explicit */ static overload function make(data: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.networking.sockets.SocketActivityContext;
+    /* explicit */ function new(data: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>);
     overload function Data(): winrt.windows.storage.streams.IBuffer;
 }

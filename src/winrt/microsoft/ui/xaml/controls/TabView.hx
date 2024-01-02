@@ -7,8 +7,7 @@ extern class TabView
     extends winrt.microsoft.ui.xaml.controls.Control
     implements winrt.microsoft.ui.xaml.controls.ITabView
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::TabView")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.TabView;
+    function new();
     overload function TabWidthMode(): winrt.microsoft.ui.xaml.controls.TabViewWidthMode;
     overload function TabWidthMode(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.TabViewWidthMode>): Void;
     overload function CloseButtonOverlayMode(): winrt.microsoft.ui.xaml.controls.TabViewCloseButtonOverlayMode;

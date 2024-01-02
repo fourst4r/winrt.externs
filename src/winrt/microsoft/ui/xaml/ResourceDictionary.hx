@@ -9,8 +9,7 @@ extern class ResourceDictionary
     implements winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IKeyValuePair<winrt.windows.foundation.IInspectable, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */> /* GenericTypeInstSig */
     implements winrt.windows.foundation.collections.IMap<winrt.windows.foundation.IInspectable, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */
 {
-    @:native("winrt::Microsoft::UI::Xaml::ResourceDictionary")
-    static overload function make(): winrt.microsoft.ui.xaml.ResourceDictionary;
+    function new();
     overload function Source(): winrt.windows.foundation.Uri;
     overload function Source(value: cxx.ConstRef<winrt.windows.foundation.Uri>): Void;
     overload function MergedDictionaries(): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.xaml.ResourceDictionary> /* GenericTypeInstSig */;

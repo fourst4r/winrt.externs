@@ -8,8 +8,7 @@ extern class MapControlDataHelper
     implements winrt.windows.ui.xaml.controls.maps.IMapControlDataHelper
     implements winrt.windows.ui.xaml.controls.maps.IMapControlDataHelper2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapControlDataHelper")
-    /* explicit */ static overload function make(map: cxx.ConstRef<winrt.windows.ui.xaml.controls.maps.MapControl>): winrt.windows.ui.xaml.controls.maps.MapControlDataHelper;
+    /* explicit */ function new(map: cxx.ConstRef<winrt.windows.ui.xaml.controls.maps.MapControl>);
     overload function BusinessLandmarkClick(value: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.xaml.controls.maps.MapControl, winrt.windows.ui.xaml.controls.maps.MapControlBusinessLandmarkClickEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
     @:noExcept overload function BusinessLandmarkClick(token: cxx.ConstRef<winrt.EventToken>): Void;
     overload function TransitFeatureClick(value: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.xaml.controls.maps.MapControl, winrt.windows.ui.xaml.controls.maps.MapControlTransitFeatureClickEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;

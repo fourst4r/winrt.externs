@@ -7,8 +7,7 @@ extern class MenuFlyoutPresenter
     extends winrt.microsoft.ui.xaml.controls.ItemsControl
     implements winrt.microsoft.ui.xaml.controls.IMenuFlyoutPresenter
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::MenuFlyoutPresenter")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.MenuFlyoutPresenter;
+    function new();
     overload function TemplateSettings(): winrt.microsoft.ui.xaml.controls.primitives.MenuFlyoutPresenterTemplateSettings;
     overload function IsDefaultShadowEnabled(): Bool;
     overload function IsDefaultShadowEnabled(value: Bool): Void;

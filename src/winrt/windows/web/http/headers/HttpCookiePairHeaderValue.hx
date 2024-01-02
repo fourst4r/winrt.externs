@@ -7,8 +7,7 @@ extern class HttpCookiePairHeaderValue
     implements winrt.windows.web.http.headers.IHttpCookiePairHeaderValue
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue")
-    /* explicit */ static overload function make(name: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpCookiePairHeaderValue;
+    /* explicit */ function new(name: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue")
     static overload function make(name: cxx.ConstRef<winrt.HString>, value: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpCookiePairHeaderValue;
     overload function Name(): winrt.HString;

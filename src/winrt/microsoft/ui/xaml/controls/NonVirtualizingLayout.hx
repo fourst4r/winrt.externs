@@ -8,8 +8,7 @@ extern class NonVirtualizingLayout
     implements winrt.microsoft.ui.xaml.controls.INonVirtualizingLayout
     implements winrt.microsoft.ui.xaml.controls.INonVirtualizingLayoutOverrides
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::NonVirtualizingLayout")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.NonVirtualizingLayout;
+    function new();
     function InitializeForContextCore(context: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.NonVirtualizingLayoutContext>): Void;
     function UninitializeForContextCore(context: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.NonVirtualizingLayoutContext>): Void;
     function MeasureOverride(context: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.NonVirtualizingLayoutContext>, availableSize: cxx.ConstRef<winrt.windows.foundation.Size>): winrt.windows.foundation.Size;

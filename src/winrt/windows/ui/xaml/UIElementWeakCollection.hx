@@ -8,8 +8,7 @@ extern class UIElementWeakCollection
     implements winrt.windows.foundation.collections.IIterable<winrt.windows.ui.xaml.UIElement> /* GenericTypeInstSig */
     implements winrt.windows.foundation.collections.IVector<winrt.windows.ui.xaml.UIElement> /* GenericTypeInstSig */
 {
-    @:native("winrt::Windows::UI::Xaml::UIElementWeakCollection")
-    static overload function make(): winrt.windows.ui.xaml.UIElementWeakCollection;
+    function new();
     function GetAt(index: cxx.num.UInt32): winrt.windows.ui.xaml.UIElement;
     overload function Size(): cxx.num.UInt32;
     function GetView(): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.xaml.UIElement> /* GenericTypeInstSig */;

@@ -7,8 +7,7 @@ extern class ParallaxView
     extends winrt.microsoft.ui.xaml.FrameworkElement
     implements winrt.microsoft.ui.xaml.controls.IParallaxView
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::ParallaxView")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.ParallaxView;
+    function new();
     overload function Child(): winrt.microsoft.ui.xaml.UIElement;
     overload function Child(value: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
     overload function HorizontalShift(): cxx.num.Float64;

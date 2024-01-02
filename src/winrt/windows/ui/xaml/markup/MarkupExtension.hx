@@ -7,7 +7,6 @@ extern class MarkupExtension
     implements winrt.windows.ui.xaml.markup.IMarkupExtension
     implements winrt.windows.ui.xaml.markup.IMarkupExtensionOverrides
 {
-    @:native("winrt::Windows::UI::Xaml::Markup::MarkupExtension")
-    static overload function make(): winrt.windows.ui.xaml.markup.MarkupExtension;
+    function new();
     function ProvideValue(): winrt.windows.foundation.IInspectable;
 }

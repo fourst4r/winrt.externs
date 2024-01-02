@@ -6,8 +6,7 @@ package winrt.microsoft.ui.xaml.media;
 extern class FontFamily
     implements winrt.microsoft.ui.xaml.media.IFontFamily
 {
-    @:native("winrt::Microsoft::UI::Xaml::Media::FontFamily")
-    /* explicit */ static overload function make(familyName: cxx.ConstRef<winrt.HString>): winrt.microsoft.ui.xaml.media.FontFamily;
+    /* explicit */ function new(familyName: cxx.ConstRef<winrt.HString>);
     overload function Source(): winrt.HString;
     overload function XamlAutoFontFamily(): winrt.microsoft.ui.xaml.media.FontFamily;
     static overload function XamlAutoFontFamily(): winrt.microsoft.ui.xaml.media.FontFamily;

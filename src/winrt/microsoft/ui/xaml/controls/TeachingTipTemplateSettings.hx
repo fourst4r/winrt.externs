@@ -7,8 +7,7 @@ extern class TeachingTipTemplateSettings
     extends winrt.microsoft.ui.xaml.DependencyObject
     implements winrt.microsoft.ui.xaml.controls.ITeachingTipTemplateSettings
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::TeachingTipTemplateSettings")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.TeachingTipTemplateSettings;
+    function new();
     overload function TopRightHighlightMargin(): winrt.microsoft.ui.xaml.Thickness;
     overload function TopRightHighlightMargin(value: cxx.ConstRef<winrt.microsoft.ui.xaml.Thickness>): Void;
     overload function TopLeftHighlightMargin(): winrt.microsoft.ui.xaml.Thickness;

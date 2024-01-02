@@ -7,8 +7,7 @@ extern class HttpNameValueHeaderValue
     implements winrt.windows.web.http.headers.IHttpNameValueHeaderValue
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue")
-    /* explicit */ static overload function make(name: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpNameValueHeaderValue;
+    /* explicit */ function new(name: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue")
     static overload function make(name: cxx.ConstRef<winrt.HString>, value: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpNameValueHeaderValue;
     overload function Name(): winrt.HString;

@@ -7,8 +7,7 @@ extern class TextPredictionGenerator
     implements winrt.windows.data.text.ITextPredictionGenerator
     implements winrt.windows.data.text.ITextPredictionGenerator2
 {
-    @:native("winrt::Windows::Data::Text::TextPredictionGenerator")
-    /* explicit */ static overload function make(languageTag: cxx.ConstRef<winrt.HString>): winrt.windows.data.text.TextPredictionGenerator;
+    /* explicit */ function new(languageTag: cxx.ConstRef<winrt.HString>);
     overload function ResolvedLanguage(): winrt.HString;
     overload function LanguageAvailableButNotInstalled(): Bool;
     overload function GetCandidatesAsync(input: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */> /* GenericTypeInstSig */;

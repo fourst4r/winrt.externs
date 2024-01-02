@@ -8,8 +8,7 @@ extern class RelativePanel
     implements winrt.windows.ui.xaml.controls.IRelativePanel
     implements winrt.windows.ui.xaml.controls.IRelativePanel2
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::RelativePanel")
-    static overload function make(): winrt.windows.ui.xaml.controls.RelativePanel;
+    function new();
     overload function BorderBrush(): winrt.windows.ui.xaml.media.Brush;
     overload function BorderBrush(value: cxx.ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
     overload function BorderThickness(): winrt.windows.ui.xaml.Thickness;

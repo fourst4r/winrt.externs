@@ -8,8 +8,7 @@ extern class XamlUICommand
     implements winrt.microsoft.ui.xaml.input.IXamlUICommand
     implements winrt.microsoft.ui.xaml.input.ICommand
 {
-    @:native("winrt::Microsoft::UI::Xaml::Input::XamlUICommand")
-    static overload function make(): winrt.microsoft.ui.xaml.input.XamlUICommand;
+    function new();
     overload function Label(): winrt.HString;
     overload function Label(value: cxx.ConstRef<winrt.HString>): Void;
     overload function IconSource(): winrt.microsoft.ui.xaml.controls.IconSource;

@@ -7,8 +7,7 @@ extern class SwapChainPanel
     extends winrt.windows.ui.xaml.controls.Grid
     implements winrt.windows.ui.xaml.controls.ISwapChainPanel
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::SwapChainPanel")
-    static overload function make(): winrt.windows.ui.xaml.controls.SwapChainPanel;
+    function new();
     overload function CompositionScaleX(): cxx.num.Float32;
     overload function CompositionScaleY(): cxx.num.Float32;
     overload function CompositionScaleChanged(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.xaml.controls.SwapChainPanel, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;

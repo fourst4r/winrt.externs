@@ -7,8 +7,7 @@ extern class HttpTransferCodingHeaderValue
     implements winrt.windows.web.http.headers.IHttpTransferCodingHeaderValue
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue")
-    /* explicit */ static overload function make(input: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpTransferCodingHeaderValue;
+    /* explicit */ function new(input: cxx.ConstRef<winrt.HString>);
     overload function Parameters(): winrt.windows.foundation.collections.IVector<winrt.windows.web.http.headers.HttpNameValueHeaderValue> /* GenericTypeInstSig */;
     overload function Value(): winrt.HString;
     function ToString(): winrt.HString;

@@ -6,7 +6,6 @@ package winrt.windows.ui.xaml;
 extern class RoutedEventArgs
     implements winrt.windows.ui.xaml.IRoutedEventArgs
 {
-    @:native("winrt::Windows::UI::Xaml::RoutedEventArgs")
-    static overload function make(): winrt.windows.ui.xaml.RoutedEventArgs;
+    function new();
     overload function OriginalSource(): winrt.windows.foundation.IInspectable;
 }

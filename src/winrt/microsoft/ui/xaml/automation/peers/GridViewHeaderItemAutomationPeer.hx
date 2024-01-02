@@ -7,6 +7,5 @@ extern class GridViewHeaderItemAutomationPeer
     extends winrt.microsoft.ui.xaml.automation.peers.ListViewBaseHeaderItemAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IGridViewHeaderItemAutomationPeer
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.GridViewHeaderItem>): winrt.microsoft.ui.xaml.automation.peers.GridViewHeaderItemAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.GridViewHeaderItem>);
 }

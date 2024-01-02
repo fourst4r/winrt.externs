@@ -7,8 +7,7 @@ extern class MediaTransportControls
     extends winrt.microsoft.ui.xaml.controls.Control
     implements winrt.microsoft.ui.xaml.controls.IMediaTransportControls
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::MediaTransportControls")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.MediaTransportControls;
+    function new();
     overload function IsZoomButtonVisible(): Bool;
     overload function IsZoomButtonVisible(value: Bool): Void;
     overload function IsZoomEnabled(): Bool;

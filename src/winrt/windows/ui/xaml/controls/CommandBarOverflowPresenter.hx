@@ -7,6 +7,5 @@ extern class CommandBarOverflowPresenter
     extends winrt.windows.ui.xaml.controls.ItemsControl
     implements winrt.windows.ui.xaml.controls.ICommandBarOverflowPresenter
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::CommandBarOverflowPresenter")
-    static overload function make(): winrt.windows.ui.xaml.controls.CommandBarOverflowPresenter;
+    function new();
 }

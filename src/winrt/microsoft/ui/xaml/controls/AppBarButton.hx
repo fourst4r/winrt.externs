@@ -8,8 +8,7 @@ extern class AppBarButton
     implements winrt.microsoft.ui.xaml.controls.IAppBarButton
     implements winrt.microsoft.ui.xaml.controls.ICommandBarElement
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::AppBarButton")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.AppBarButton;
+    function new();
     overload function Label(): winrt.HString;
     overload function Label(value: cxx.ConstRef<winrt.HString>): Void;
     overload function Icon(): winrt.microsoft.ui.xaml.controls.IconElement;

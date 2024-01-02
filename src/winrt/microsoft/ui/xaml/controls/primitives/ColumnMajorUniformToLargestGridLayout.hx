@@ -7,8 +7,7 @@ extern class ColumnMajorUniformToLargestGridLayout
     extends winrt.microsoft.ui.xaml.controls.NonVirtualizingLayout
     implements winrt.microsoft.ui.xaml.controls.primitives.IColumnMajorUniformToLargestGridLayout
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::ColumnMajorUniformToLargestGridLayout")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.primitives.ColumnMajorUniformToLargestGridLayout;
+    function new();
     overload function MaxColumns(): cxx.num.Int32;
     overload function MaxColumns(value: cxx.num.Int32): Void;
     overload function ColumnSpacing(): cxx.num.Float64;

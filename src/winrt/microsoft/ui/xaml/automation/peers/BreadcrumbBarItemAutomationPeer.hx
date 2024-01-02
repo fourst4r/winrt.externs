@@ -8,7 +8,6 @@ extern class BreadcrumbBarItemAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IBreadcrumbBarItemAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IInvokeProvider
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::BreadcrumbBarItemAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.BreadcrumbBarItem>): winrt.microsoft.ui.xaml.automation.peers.BreadcrumbBarItemAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.BreadcrumbBarItem>);
     function Invoke(): Void;
 }

@@ -7,8 +7,7 @@ extern class PipsPager
     extends winrt.microsoft.ui.xaml.controls.Control
     implements winrt.microsoft.ui.xaml.controls.IPipsPager
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::PipsPager")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.PipsPager;
+    function new();
     overload function NumberOfPages(): cxx.num.Int32;
     overload function NumberOfPages(value: cxx.num.Int32): Void;
     overload function SelectedPageIndex(): cxx.num.Int32;

@@ -6,8 +6,7 @@ package winrt.windows.ui.notifications;
 extern class ScheduledTileNotification
     implements winrt.windows.ui.notifications.IScheduledTileNotification
 {
-    @:native("winrt::Windows::UI::Notifications::ScheduledTileNotification")
-    static overload function make(content: cxx.ConstRef<winrt.windows.data.xml.dom.XmlDocument>, deliveryTime: cxx.ConstRef<winrt.windows.foundation.DateTime>): winrt.windows.ui.notifications.ScheduledTileNotification;
+    function new(content: cxx.ConstRef<winrt.windows.data.xml.dom.XmlDocument>, deliveryTime: cxx.ConstRef<winrt.windows.foundation.DateTime>);
     overload function Content(): winrt.windows.data.xml.dom.XmlDocument;
     overload function DeliveryTime(): winrt.windows.foundation.DateTime;
     overload function ExpirationTime(value: cxx.ConstRef<winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* temp_GenericTypeInstSig */>): Void;

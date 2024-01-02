@@ -8,8 +8,7 @@ extern class TimedMetadataTrack
     implements winrt.windows.media.core.ITimedMetadataTrack
     implements winrt.windows.media.core.ITimedMetadataTrack2
 {
-    @:native("winrt::Windows::Media::Core::TimedMetadataTrack")
-    static overload function make(id: cxx.ConstRef<winrt.HString>, language: cxx.ConstRef<winrt.HString>, kind: cxx.ConstRef<winrt.windows.media.core.TimedMetadataKind>): winrt.windows.media.core.TimedMetadataTrack;
+    function new(id: cxx.ConstRef<winrt.HString>, language: cxx.ConstRef<winrt.HString>, kind: cxx.ConstRef<winrt.windows.media.core.TimedMetadataKind>);
     overload function CueEntered(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.TimedMetadataTrack, winrt.windows.media.core.MediaCueEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
     @:noExcept overload function CueEntered(token: cxx.ConstRef<winrt.EventToken>): Void;
     overload function CueExited(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.TimedMetadataTrack, winrt.windows.media.core.MediaCueEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;

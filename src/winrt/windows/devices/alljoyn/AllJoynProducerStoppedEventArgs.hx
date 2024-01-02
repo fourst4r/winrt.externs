@@ -6,7 +6,6 @@ package winrt.windows.devices.alljoyn;
 extern class AllJoynProducerStoppedEventArgs
     implements winrt.windows.devices.alljoyn.IAllJoynProducerStoppedEventArgs
 {
-    @:native("winrt::Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs")
-    /* explicit */ static overload function make(status: cxx.num.Int32): winrt.windows.devices.alljoyn.AllJoynProducerStoppedEventArgs;
+    /* explicit */ function new(status: cxx.num.Int32);
     overload function Status(): cxx.num.Int32;
 }

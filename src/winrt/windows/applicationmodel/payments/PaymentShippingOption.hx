@@ -6,8 +6,7 @@ package winrt.windows.applicationmodel.payments;
 extern class PaymentShippingOption
     implements winrt.windows.applicationmodel.payments.IPaymentShippingOption
 {
-    @:native("winrt::Windows::ApplicationModel::Payments::PaymentShippingOption")
-    static overload function make(label: cxx.ConstRef<winrt.HString>, amount: cxx.ConstRef<winrt.windows.applicationmodel.payments.PaymentCurrencyAmount>): winrt.windows.applicationmodel.payments.PaymentShippingOption;
+    function new(label: cxx.ConstRef<winrt.HString>, amount: cxx.ConstRef<winrt.windows.applicationmodel.payments.PaymentCurrencyAmount>);
     @:native("winrt::Windows::ApplicationModel::Payments::PaymentShippingOption")
     static overload function make(label: cxx.ConstRef<winrt.HString>, amount: cxx.ConstRef<winrt.windows.applicationmodel.payments.PaymentCurrencyAmount>, selected: Bool): winrt.windows.applicationmodel.payments.PaymentShippingOption;
     @:native("winrt::Windows::ApplicationModel::Payments::PaymentShippingOption")

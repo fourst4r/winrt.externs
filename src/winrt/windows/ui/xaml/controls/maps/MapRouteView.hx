@@ -7,8 +7,7 @@ extern class MapRouteView
     extends winrt.windows.ui.xaml.DependencyObject
     implements winrt.windows.ui.xaml.controls.maps.IMapRouteView
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView")
-    /* explicit */ static overload function make(route: cxx.ConstRef<winrt.windows.services.maps.MapRoute>): winrt.windows.ui.xaml.controls.maps.MapRouteView;
+    /* explicit */ function new(route: cxx.ConstRef<winrt.windows.services.maps.MapRoute>);
     overload function RouteColor(): winrt.windows.ui.Color;
     overload function RouteColor(value: cxx.ConstRef<winrt.windows.ui.Color>): Void;
     overload function OutlineColor(): winrt.windows.ui.Color;

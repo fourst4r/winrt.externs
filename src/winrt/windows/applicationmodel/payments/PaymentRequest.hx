@@ -7,8 +7,7 @@ extern class PaymentRequest
     implements winrt.windows.applicationmodel.payments.IPaymentRequest
     implements winrt.windows.applicationmodel.payments.IPaymentRequest2
 {
-    @:native("winrt::Windows::ApplicationModel::Payments::PaymentRequest")
-    static overload function make(details: cxx.ConstRef<winrt.windows.applicationmodel.payments.PaymentDetails>, methodData: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.applicationmodel.payments.PaymentMethodData> /* temp_GenericTypeInstSig */>): winrt.windows.applicationmodel.payments.PaymentRequest;
+    function new(details: cxx.ConstRef<winrt.windows.applicationmodel.payments.PaymentDetails>, methodData: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.applicationmodel.payments.PaymentMethodData> /* temp_GenericTypeInstSig */>);
     @:native("winrt::Windows::ApplicationModel::Payments::PaymentRequest")
     static overload function make(details: cxx.ConstRef<winrt.windows.applicationmodel.payments.PaymentDetails>, methodData: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.applicationmodel.payments.PaymentMethodData> /* temp_GenericTypeInstSig */>, merchantInfo: cxx.ConstRef<winrt.windows.applicationmodel.payments.PaymentMerchantInfo>): winrt.windows.applicationmodel.payments.PaymentRequest;
     @:native("winrt::Windows::ApplicationModel::Payments::PaymentRequest")

@@ -9,8 +9,7 @@ extern class VisualStateManager
     implements winrt.microsoft.ui.xaml.IVisualStateManagerProtected
     implements winrt.microsoft.ui.xaml.IVisualStateManagerOverrides
 {
-    @:native("winrt::Microsoft::UI::Xaml::VisualStateManager")
-    static overload function make(): winrt.microsoft.ui.xaml.VisualStateManager;
+    function new();
     function RaiseCurrentStateChanging(stateGroup: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualStateGroup>, oldState: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualState>, newState: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualState>, control: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.Control>): Void;
     function RaiseCurrentStateChanged(stateGroup: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualStateGroup>, oldState: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualState>, newState: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualState>, control: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.Control>): Void;
     function GoToStateCore(control: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.Control>, templateRoot: cxx.ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>, stateName: cxx.ConstRef<winrt.HString>, group: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualStateGroup>, state: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualState>, useTransitions: Bool): Bool;

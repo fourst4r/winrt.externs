@@ -7,8 +7,7 @@ extern class RatingItemImageInfo
     extends winrt.windows.ui.xaml.controls.RatingItemInfo
     implements winrt.windows.ui.xaml.controls.IRatingItemImageInfo
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::RatingItemImageInfo")
-    static overload function make(): winrt.windows.ui.xaml.controls.RatingItemImageInfo;
+    function new();
     overload function DisabledImage(): winrt.windows.ui.xaml.media.ImageSource;
     overload function DisabledImage(value: cxx.ConstRef<winrt.windows.ui.xaml.media.ImageSource>): Void;
     overload function Image(): winrt.windows.ui.xaml.media.ImageSource;

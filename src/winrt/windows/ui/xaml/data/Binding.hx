@@ -8,8 +8,7 @@ extern class Binding
     implements winrt.windows.ui.xaml.data.IBinding
     implements winrt.windows.ui.xaml.data.IBinding2
 {
-    @:native("winrt::Windows::UI::Xaml::Data::Binding")
-    static overload function make(): winrt.windows.ui.xaml.data.Binding;
+    function new();
     overload function Path(): winrt.windows.ui.xaml.PropertyPath;
     overload function Path(value: cxx.ConstRef<winrt.windows.ui.xaml.PropertyPath>): Void;
     overload function Mode(): winrt.windows.ui.xaml.data.BindingMode;

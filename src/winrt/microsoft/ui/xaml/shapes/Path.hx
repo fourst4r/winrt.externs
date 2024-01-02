@@ -7,8 +7,7 @@ extern class Path
     extends winrt.microsoft.ui.xaml.shapes.Shape
     implements winrt.microsoft.ui.xaml.shapes.IPath
 {
-    @:native("winrt::Microsoft::UI::Xaml::Shapes::Path")
-    static overload function make(): winrt.microsoft.ui.xaml.shapes.Path;
+    function new();
     overload function Data(): winrt.microsoft.ui.xaml.media.Geometry;
     overload function Data(value: cxx.ConstRef<winrt.microsoft.ui.xaml.media.Geometry>): Void;
     overload function DataProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

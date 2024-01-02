@@ -6,7 +6,6 @@ package winrt.windows.applicationmodel.payments;
 extern class PaymentCanMakePaymentResult
     implements winrt.windows.applicationmodel.payments.IPaymentCanMakePaymentResult
 {
-    @:native("winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult")
-    /* explicit */ static overload function make(value: cxx.ConstRef<winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResultStatus>): winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResult;
+    /* explicit */ function new(value: cxx.ConstRef<winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResultStatus>);
     overload function Status(): winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResultStatus;
 }

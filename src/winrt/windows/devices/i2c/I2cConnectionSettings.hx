@@ -6,8 +6,7 @@ package winrt.windows.devices.i2c;
 extern class I2cConnectionSettings
     implements winrt.windows.devices.i2c.II2cConnectionSettings
 {
-    @:native("winrt::Windows::Devices::I2c::I2cConnectionSettings")
-    /* explicit */ static overload function make(slaveAddress: cxx.num.Int32): winrt.windows.devices.i2c.I2cConnectionSettings;
+    /* explicit */ function new(slaveAddress: cxx.num.Int32);
     overload function SlaveAddress(): cxx.num.Int32;
     overload function SlaveAddress(value: cxx.num.Int32): Void;
     overload function BusSpeed(): winrt.windows.devices.i2c.I2cBusSpeed;

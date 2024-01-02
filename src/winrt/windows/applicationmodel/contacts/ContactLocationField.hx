@@ -7,8 +7,7 @@ extern class ContactLocationField
     implements winrt.windows.applicationmodel.contacts.IContactField
     implements winrt.windows.applicationmodel.contacts.IContactLocationField
 {
-    @:native("winrt::Windows::ApplicationModel::Contacts::ContactLocationField")
-    /* explicit */ static overload function make(unstructuredAddress: cxx.ConstRef<winrt.HString>): winrt.windows.applicationmodel.contacts.ContactLocationField;
+    /* explicit */ function new(unstructuredAddress: cxx.ConstRef<winrt.HString>);
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactLocationField")
     static overload function make(unstructuredAddress: cxx.ConstRef<winrt.HString>, category: cxx.ConstRef<winrt.windows.applicationmodel.contacts.ContactFieldCategory>): winrt.windows.applicationmodel.contacts.ContactLocationField;
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactLocationField")

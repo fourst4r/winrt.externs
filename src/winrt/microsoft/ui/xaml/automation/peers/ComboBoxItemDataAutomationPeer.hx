@@ -8,7 +8,6 @@ extern class ComboBoxItemDataAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IComboBoxItemDataAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IScrollItemProvider
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer")
-    static overload function make(item: cxx.ConstRef<winrt.windows.foundation.IInspectable>, parent: cxx.ConstRef<winrt.microsoft.ui.xaml.automation.peers.ComboBoxAutomationPeer>): winrt.microsoft.ui.xaml.automation.peers.ComboBoxItemDataAutomationPeer;
+    function new(item: cxx.ConstRef<winrt.windows.foundation.IInspectable>, parent: cxx.ConstRef<winrt.microsoft.ui.xaml.automation.peers.ComboBoxAutomationPeer>);
     function ScrollIntoView(): Void;
 }

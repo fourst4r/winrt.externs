@@ -7,8 +7,7 @@ extern class HttpMediaTypeHeaderValue
     implements winrt.windows.web.http.headers.IHttpMediaTypeHeaderValue
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::Headers::HttpMediaTypeHeaderValue")
-    /* explicit */ static overload function make(mediaType: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpMediaTypeHeaderValue;
+    /* explicit */ function new(mediaType: cxx.ConstRef<winrt.HString>);
     overload function CharSet(): winrt.HString;
     overload function CharSet(value: cxx.ConstRef<winrt.HString>): Void;
     overload function MediaType(): winrt.HString;

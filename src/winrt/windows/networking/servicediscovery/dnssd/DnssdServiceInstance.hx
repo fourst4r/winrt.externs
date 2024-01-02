@@ -7,8 +7,7 @@ extern class DnssdServiceInstance
     implements winrt.windows.networking.servicediscovery.dnssd.IDnssdServiceInstance
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance")
-    static overload function make(dnssdServiceInstanceName: cxx.ConstRef<winrt.HString>, hostName: cxx.ConstRef<winrt.windows.networking.HostName>, port: cxx.num.UInt16): winrt.windows.networking.servicediscovery.dnssd.DnssdServiceInstance;
+    function new(dnssdServiceInstanceName: cxx.ConstRef<winrt.HString>, hostName: cxx.ConstRef<winrt.windows.networking.HostName>, port: cxx.num.UInt16);
     overload function DnssdServiceInstanceName(): winrt.HString;
     overload function DnssdServiceInstanceName(value: cxx.ConstRef<winrt.HString>): Void;
     overload function HostName(): winrt.windows.networking.HostName;

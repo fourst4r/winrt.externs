@@ -7,8 +7,7 @@ extern class Application
     implements winrt.microsoft.ui.xaml.IApplication
     implements winrt.microsoft.ui.xaml.IApplicationOverrides
 {
-    @:native("winrt::Microsoft::UI::Xaml::Application")
-    static overload function make(): winrt.microsoft.ui.xaml.Application;
+    function new();
     overload function Resources(): winrt.microsoft.ui.xaml.ResourceDictionary;
     overload function Resources(value: cxx.ConstRef<winrt.microsoft.ui.xaml.ResourceDictionary>): Void;
     overload function DebugSettings(): winrt.microsoft.ui.xaml.DebugSettings;

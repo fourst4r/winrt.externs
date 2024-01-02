@@ -6,8 +6,7 @@ package winrt.windows.applicationmodel.wallet;
 extern class WalletItem
     implements winrt.windows.applicationmodel.wallet.IWalletItem
 {
-    @:native("winrt::Windows::ApplicationModel::Wallet::WalletItem")
-    static overload function make(kind: cxx.ConstRef<winrt.windows.applicationmodel.wallet.WalletItemKind>, displayName: cxx.ConstRef<winrt.HString>): winrt.windows.applicationmodel.wallet.WalletItem;
+    function new(kind: cxx.ConstRef<winrt.windows.applicationmodel.wallet.WalletItemKind>, displayName: cxx.ConstRef<winrt.HString>);
     overload function DisplayName(): winrt.HString;
     overload function DisplayName(value: cxx.ConstRef<winrt.HString>): Void;
     overload function Id(): winrt.HString;

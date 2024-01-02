@@ -6,8 +6,7 @@ package winrt.windows.devices.midi;
 extern class MidiSystemExclusiveMessage
     implements winrt.windows.devices.midi.IMidiMessage
 {
-    @:native("winrt::Windows::Devices::Midi::MidiSystemExclusiveMessage")
-    /* explicit */ static overload function make(rawData: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.devices.midi.MidiSystemExclusiveMessage;
+    /* explicit */ function new(rawData: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>);
     overload function Timestamp(): winrt.windows.foundation.TimeSpan;
     overload function RawData(): winrt.windows.storage.streams.IBuffer;
     overload function Type(): winrt.windows.devices.midi.MidiMessageType;

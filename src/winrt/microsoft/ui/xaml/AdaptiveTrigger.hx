@@ -7,8 +7,7 @@ extern class AdaptiveTrigger
     extends winrt.microsoft.ui.xaml.StateTriggerBase
     implements winrt.microsoft.ui.xaml.IAdaptiveTrigger
 {
-    @:native("winrt::Microsoft::UI::Xaml::AdaptiveTrigger")
-    static overload function make(): winrt.microsoft.ui.xaml.AdaptiveTrigger;
+    function new();
     overload function MinWindowWidth(): cxx.num.Float64;
     overload function MinWindowWidth(value: cxx.num.Float64): Void;
     overload function MinWindowHeight(): cxx.num.Float64;

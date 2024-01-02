@@ -7,6 +7,5 @@ extern class GridViewAutomationPeer
     extends winrt.microsoft.ui.xaml.automation.peers.ListViewBaseAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IGridViewAutomationPeer
 {
-    @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewAutomationPeer")
-    /* explicit */ static overload function make(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.GridView>): winrt.microsoft.ui.xaml.automation.peers.GridViewAutomationPeer;
+    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.GridView>);
 }

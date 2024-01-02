@@ -7,8 +7,7 @@ extern class RatingItemFontInfo
     extends winrt.windows.ui.xaml.controls.RatingItemInfo
     implements winrt.windows.ui.xaml.controls.IRatingItemFontInfo
 {
-    @:native("winrt::Windows::UI::Xaml::Controls::RatingItemFontInfo")
-    static overload function make(): winrt.windows.ui.xaml.controls.RatingItemFontInfo;
+    function new();
     overload function DisabledGlyph(): winrt.HString;
     overload function DisabledGlyph(value: cxx.ConstRef<winrt.HString>): Void;
     overload function Glyph(): winrt.HString;

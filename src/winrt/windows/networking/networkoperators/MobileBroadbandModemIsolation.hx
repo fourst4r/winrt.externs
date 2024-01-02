@@ -6,8 +6,7 @@ package winrt.windows.networking.networkoperators;
 extern class MobileBroadbandModemIsolation
     implements winrt.windows.networking.networkoperators.IMobileBroadbandModemIsolation
 {
-    @:native("winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemIsolation")
-    static overload function make(modemDeviceId: cxx.ConstRef<winrt.HString>, ruleGroupId: cxx.ConstRef<winrt.HString>): winrt.windows.networking.networkoperators.MobileBroadbandModemIsolation;
+    function new(modemDeviceId: cxx.ConstRef<winrt.HString>, ruleGroupId: cxx.ConstRef<winrt.HString>);
     function AddAllowedHost(host: cxx.ConstRef<winrt.windows.networking.HostName>): Void;
     function AddAllowedHostRange(first: cxx.ConstRef<winrt.windows.networking.HostName>, last: cxx.ConstRef<winrt.windows.networking.HostName>): Void;
     function ApplyConfigurationAsync(): winrt.windows.foundation.IAsyncAction;

@@ -7,8 +7,7 @@ extern class HttpContentDispositionHeaderValue
     implements winrt.windows.web.http.headers.IHttpContentDispositionHeaderValue
     implements winrt.windows.foundation.IStringable
 {
-    @:native("winrt::Windows::Web::Http::Headers::HttpContentDispositionHeaderValue")
-    /* explicit */ static overload function make(dispositionType: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpContentDispositionHeaderValue;
+    /* explicit */ function new(dispositionType: cxx.ConstRef<winrt.HString>);
     overload function DispositionType(): winrt.HString;
     overload function DispositionType(value: cxx.ConstRef<winrt.HString>): Void;
     overload function FileName(): winrt.HString;

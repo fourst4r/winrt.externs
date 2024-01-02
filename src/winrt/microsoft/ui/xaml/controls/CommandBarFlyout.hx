@@ -8,8 +8,7 @@ extern class CommandBarFlyout
     implements winrt.microsoft.ui.xaml.controls.ICommandBarFlyout
     implements winrt.microsoft.ui.xaml.controls.ICommandBarFlyout2
 {
-    @:native("winrt::Microsoft::UI::Xaml::Controls::CommandBarFlyout")
-    static overload function make(): winrt.microsoft.ui.xaml.controls.CommandBarFlyout;
+    function new();
     overload function PrimaryCommands(): winrt.windows.foundation.collections.IObservableVector<winrt.microsoft.ui.xaml.controls.ICommandBarElement> /* GenericTypeInstSig */;
     overload function SecondaryCommands(): winrt.windows.foundation.collections.IObservableVector<winrt.microsoft.ui.xaml.controls.ICommandBarElement> /* GenericTypeInstSig */;
     overload function AlwaysExpanded(): Bool;
