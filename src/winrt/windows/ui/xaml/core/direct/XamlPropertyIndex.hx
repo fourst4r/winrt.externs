@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.core.direct;
 
 @:include("winrt/Windows.UI.Xaml.Core.Direct.h", true)
 @:native("winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex")
-extern enum abstract XamlPropertyIndex(cxx.num.Int32)
+extern enum abstract XamlPropertyIndex(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex::AutomationProperties_AcceleratorKey") final AutomationProperties_AcceleratorKey;
     @:native("winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex::AutomationProperties_AccessibilityView") final AutomationProperties_AccessibilityView;

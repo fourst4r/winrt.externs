@@ -1,6 +1,9 @@
 package winrt.windows.devices.perception.provider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Perception.Provider.h", true)
 @:native("winrt::Windows::Devices::Perception::Provider::IPerceptionCorrelationGroup")
 extern interface IPerceptionCorrelationGroup extends winrt.windows.foundation.IInspectable

@@ -2,7 +2,7 @@ package winrt.microsoft.ui.input;
 
 @:include("winrt/Microsoft.UI.Input.h", true)
 @:native("winrt::Microsoft::UI::Input::InputSystemCursorShape")
-extern enum abstract InputSystemCursorShape(cxx.num.Int32)
+extern enum abstract InputSystemCursorShape(Int32)
 {
     @:native("winrt::Microsoft::UI::Input::InputSystemCursorShape::Arrow") final Arrow;
     @:native("winrt::Microsoft::UI::Input::InputSystemCursorShape::Cross") final Cross;

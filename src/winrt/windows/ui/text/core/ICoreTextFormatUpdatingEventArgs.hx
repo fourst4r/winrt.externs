@@ -1,6 +1,9 @@
 package winrt.windows.ui.text.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Text.Core.h", true)
 @:native("winrt::Windows::UI::Text::Core::ICoreTextFormatUpdatingEventArgs")
 extern interface ICoreTextFormatUpdatingEventArgs extends winrt.windows.foundation.IInspectable
@@ -12,7 +15,7 @@ extern interface ICoreTextFormatUpdatingEventArgs extends winrt.windows.foundati
     overload function UnderlineType(): winrt.windows.foundation.IReference<winrt.windows.ui.text.UnderlineType> /* GenericTypeInstSig */;
     overload function Reason(): winrt.windows.ui.text.core.CoreTextFormatUpdatingReason;
     overload function Result(): winrt.windows.ui.text.core.CoreTextFormatUpdatingResult;
-    overload function Result(value: cxx.ConstRef<winrt.windows.ui.text.core.CoreTextFormatUpdatingResult>): Void;
+    overload function Result(value: ConstRef<winrt.windows.ui.text.core.CoreTextFormatUpdatingResult>): Void;
     overload function IsCanceled(): Bool;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

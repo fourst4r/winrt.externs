@@ -1,13 +1,16 @@
 package winrt.windows.devices.pointofservice;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.PointOfService.h", true)
 @:native("winrt::Windows::Devices::PointOfService::MagneticStripeReaderCapabilities")
 extern class MagneticStripeReaderCapabilities
     implements winrt.windows.devices.pointofservice.IMagneticStripeReaderCapabilities
 {
     overload function CardAuthentication(): winrt.HString;
-    overload function SupportedEncryptionAlgorithms(): cxx.num.UInt32;
+    overload function SupportedEncryptionAlgorithms(): UInt32;
     overload function AuthenticationLevel(): winrt.windows.devices.pointofservice.MagneticStripeReaderAuthenticationLevel;
     overload function IsIsoSupported(): Bool;
     overload function IsJisOneSupported(): Bool;

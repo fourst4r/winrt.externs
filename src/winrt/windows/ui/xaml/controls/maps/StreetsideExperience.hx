@@ -1,15 +1,18 @@
 package winrt.windows.ui.xaml.controls.maps;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.Maps.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::Maps::StreetsideExperience")
 extern class StreetsideExperience
     extends winrt.windows.ui.xaml.controls.maps.MapCustomExperience
     implements winrt.windows.ui.xaml.controls.maps.IStreetsideExperience
 {
-    /* explicit */ function new(panorama: cxx.ConstRef<winrt.windows.ui.xaml.controls.maps.StreetsidePanorama>);
+    /* explicit */ function new(panorama: ConstRef<winrt.windows.ui.xaml.controls.maps.StreetsidePanorama>);
     @:native("winrt::Windows::UI::Xaml::Controls::Maps::StreetsideExperience")
-    static overload function make(panorama: cxx.ConstRef<winrt.windows.ui.xaml.controls.maps.StreetsidePanorama>, headingInDegrees: cxx.num.Float64, pitchInDegrees: cxx.num.Float64, fieldOfViewInDegrees: cxx.num.Float64): winrt.windows.ui.xaml.controls.maps.StreetsideExperience;
+    static overload function make(panorama: ConstRef<winrt.windows.ui.xaml.controls.maps.StreetsidePanorama>, headingInDegrees: Float64, pitchInDegrees: Float64, fieldOfViewInDegrees: Float64): winrt.windows.ui.xaml.controls.maps.StreetsideExperience;
     overload function AddressTextVisible(): Bool;
     overload function AddressTextVisible(value: Bool): Void;
     overload function CursorVisible(): Bool;

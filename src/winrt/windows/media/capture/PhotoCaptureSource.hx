@@ -2,7 +2,7 @@ package winrt.windows.media.capture;
 
 @:include("winrt/Windows.Media.Capture.h", true)
 @:native("winrt::Windows::Media::Capture::PhotoCaptureSource")
-extern enum abstract PhotoCaptureSource(cxx.num.Int32)
+extern enum abstract PhotoCaptureSource(Int32)
 {
     @:native("winrt::Windows::Media::Capture::PhotoCaptureSource::Auto") final Auto;
     @:native("winrt::Windows::Media::Capture::PhotoCaptureSource::VideoPreview") final VideoPreview;

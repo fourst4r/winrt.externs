@@ -2,7 +2,7 @@ package winrt.windows.devices.bluetooth;
 
 @:include("winrt/Windows.Devices.Bluetooth.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::BluetoothServiceCapabilities")
-extern enum abstract BluetoothServiceCapabilities(cxx.num.UInt32)
+extern enum abstract BluetoothServiceCapabilities(UInt32)
 {
     @:native("winrt::Windows::Devices::Bluetooth::BluetoothServiceCapabilities::None") final None;
     @:native("winrt::Windows::Devices::Bluetooth::BluetoothServiceCapabilities::LimitedDiscoverableMode") final LimitedDiscoverableMode;

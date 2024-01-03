@@ -1,6 +1,9 @@
 package winrt.windows.storage.streams;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Storage.Streams.h", true)
 @:native("winrt::Windows::Storage::Streams::DataWriter")
 extern class DataWriter
@@ -9,30 +12,30 @@ extern class DataWriter
 {
     function new();
     @:native("winrt::Windows::Storage::Streams::DataWriter")
-    /* explicit */ static overload function make(outputStream: cxx.ConstRef<winrt.windows.storage.streams.IOutputStream>): winrt.windows.storage.streams.DataWriter;
-    overload function UnstoredBufferLength(): cxx.num.UInt32;
+    /* explicit */ static overload function make(outputStream: ConstRef<winrt.windows.storage.streams.IOutputStream>): winrt.windows.storage.streams.DataWriter;
+    overload function UnstoredBufferLength(): UInt32;
     overload function UnicodeEncoding(): winrt.windows.storage.streams.UnicodeEncoding;
-    overload function UnicodeEncoding(value: cxx.ConstRef<winrt.windows.storage.streams.UnicodeEncoding>): Void;
+    overload function UnicodeEncoding(value: ConstRef<winrt.windows.storage.streams.UnicodeEncoding>): Void;
     overload function ByteOrder(): winrt.windows.storage.streams.ByteOrder;
-    overload function ByteOrder(value: cxx.ConstRef<winrt.windows.storage.streams.ByteOrder>): Void;
-    function WriteByte(value: cxx.num.UInt8): Void;
-    function WriteBytes(value: winrt.ArrayView<cxx.num.UInt8>): Void;
-    overload function WriteBuffer(buffer: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>): Void;
-    overload function WriteBuffer(buffer: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>, start: cxx.num.UInt32, count: cxx.num.UInt32): Void;
+    overload function ByteOrder(value: ConstRef<winrt.windows.storage.streams.ByteOrder>): Void;
+    function WriteByte(value: UInt8): Void;
+    function WriteBytes(value: winrt.ArrayView<UInt8>): Void;
+    overload function WriteBuffer(buffer: ConstRef<winrt.windows.storage.streams.IBuffer>): Void;
+    overload function WriteBuffer(buffer: ConstRef<winrt.windows.storage.streams.IBuffer>, start: UInt32, count: UInt32): Void;
     function WriteBoolean(value: Bool): Void;
-    function WriteGuid(value: cxx.ConstRef<winrt.Guid>): Void;
-    function WriteInt16(value: cxx.num.Int16): Void;
-    function WriteInt32(value: cxx.num.Int32): Void;
-    function WriteInt64(value: cxx.num.Int64): Void;
-    function WriteUInt16(value: cxx.num.UInt16): Void;
-    function WriteUInt32(value: cxx.num.UInt32): Void;
-    function WriteUInt64(value: cxx.num.UInt64): Void;
-    function WriteSingle(value: cxx.num.Float32): Void;
-    function WriteDouble(value: cxx.num.Float64): Void;
-    function WriteDateTime(value: cxx.ConstRef<winrt.windows.foundation.DateTime>): Void;
-    function WriteTimeSpan(value: cxx.ConstRef<winrt.windows.foundation.TimeSpan>): Void;
-    function WriteString(value: cxx.ConstRef<winrt.HString>): cxx.num.UInt32;
-    function MeasureString(value: cxx.ConstRef<winrt.HString>): cxx.num.UInt32;
+    function WriteGuid(value: ConstRef<winrt.Guid>): Void;
+    function WriteInt16(value: Int16): Void;
+    function WriteInt32(value: Int32): Void;
+    function WriteInt64(value: Int64): Void;
+    function WriteUInt16(value: UInt16): Void;
+    function WriteUInt32(value: UInt32): Void;
+    function WriteUInt64(value: UInt64): Void;
+    function WriteSingle(value: Float32): Void;
+    function WriteDouble(value: Float64): Void;
+    function WriteDateTime(value: ConstRef<winrt.windows.foundation.DateTime>): Void;
+    function WriteTimeSpan(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    function WriteString(value: ConstRef<winrt.HString>): UInt32;
+    function MeasureString(value: ConstRef<winrt.HString>): UInt32;
     function StoreAsync(): winrt.windows.storage.streams.DataWriterStoreOperation;
     function FlushAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     function DetachBuffer(): winrt.windows.storage.streams.IBuffer;

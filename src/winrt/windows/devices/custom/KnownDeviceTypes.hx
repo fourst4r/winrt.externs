@@ -4,5 +4,5 @@ package winrt.windows.devices.custom;
 @:native("winrt::Windows::Devices::Custom::KnownDeviceTypes")
 extern class KnownDeviceTypes
 {
-    static overload function Unknown(): cxx.num.UInt16;
+    static overload function Unknown(): UInt16;
 }

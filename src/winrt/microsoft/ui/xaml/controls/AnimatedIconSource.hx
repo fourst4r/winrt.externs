@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::AnimatedIconSource")
 extern class AnimatedIconSource
@@ -9,9 +12,9 @@ extern class AnimatedIconSource
 {
     function new();
     overload function Source(): winrt.microsoft.ui.xaml.controls.IAnimatedVisualSource2;
-    overload function Source(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.IAnimatedVisualSource2>): Void;
+    overload function Source(value: ConstRef<winrt.microsoft.ui.xaml.controls.IAnimatedVisualSource2>): Void;
     overload function FallbackIconSource(): winrt.microsoft.ui.xaml.controls.IconSource;
-    overload function FallbackIconSource(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.IconSource>): Void;
+    overload function FallbackIconSource(value: ConstRef<winrt.microsoft.ui.xaml.controls.IconSource>): Void;
     overload function MirroredWhenRightToLeft(): Bool;
     overload function MirroredWhenRightToLeft(value: Bool): Void;
     overload function SourceProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

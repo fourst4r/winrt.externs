@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.media;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Media.h", true)
 @:native("winrt::Windows::UI::Xaml::Media::SkewTransform")
 extern class SkewTransform
@@ -8,14 +11,14 @@ extern class SkewTransform
     implements winrt.windows.ui.xaml.media.ISkewTransform
 {
     function new();
-    overload function CenterX(): cxx.num.Float64;
-    overload function CenterX(value: cxx.num.Float64): Void;
-    overload function CenterY(): cxx.num.Float64;
-    overload function CenterY(value: cxx.num.Float64): Void;
-    overload function AngleX(): cxx.num.Float64;
-    overload function AngleX(value: cxx.num.Float64): Void;
-    overload function AngleY(): cxx.num.Float64;
-    overload function AngleY(value: cxx.num.Float64): Void;
+    overload function CenterX(): Float64;
+    overload function CenterX(value: Float64): Void;
+    overload function CenterY(): Float64;
+    overload function CenterY(value: Float64): Void;
+    overload function AngleX(): Float64;
+    overload function AngleX(value: Float64): Void;
+    overload function AngleY(): Float64;
+    overload function AngleY(value: Float64): Void;
     overload function CenterXProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function CenterYProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function AngleXProperty(): winrt.windows.ui.xaml.DependencyProperty;

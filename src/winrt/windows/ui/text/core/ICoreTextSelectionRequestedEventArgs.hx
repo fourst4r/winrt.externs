@@ -1,6 +1,9 @@
 package winrt.windows.ui.text.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Text.Core.h", true)
 @:native("winrt::Windows::UI::Text::Core::ICoreTextSelectionRequestedEventArgs")
 extern interface ICoreTextSelectionRequestedEventArgs extends winrt.windows.foundation.IInspectable

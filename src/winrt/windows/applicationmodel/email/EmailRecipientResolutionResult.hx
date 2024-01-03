@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.email;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Email.h", true)
 @:native("winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionResult")
 extern class EmailRecipientResolutionResult
@@ -10,6 +13,6 @@ extern class EmailRecipientResolutionResult
     function new();
     overload function Status(): winrt.windows.applicationmodel.email.EmailRecipientResolutionStatus;
     overload function PublicKeys(): winrt.windows.foundation.collections.IVectorView<winrt.windows.security.cryptography.certificates.Certificate> /* GenericTypeInstSig */;
-    overload function Status(value: cxx.ConstRef<winrt.windows.applicationmodel.email.EmailRecipientResolutionStatus>): Void;
-    function SetPublicKeys(value: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.security.cryptography.certificates.Certificate> /* temp_GenericTypeInstSig */>): Void;
+    overload function Status(value: ConstRef<winrt.windows.applicationmodel.email.EmailRecipientResolutionStatus>): Void;
+    function SetPublicKeys(value: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.security.cryptography.certificates.Certificate> /* temp_GenericTypeInstSig */>): Void;
 }

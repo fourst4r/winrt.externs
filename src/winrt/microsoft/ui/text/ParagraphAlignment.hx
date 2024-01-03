@@ -2,7 +2,7 @@ package winrt.microsoft.ui.text;
 
 @:include("winrt/Microsoft.UI.Text.h", true)
 @:native("winrt::Microsoft::UI::Text::ParagraphAlignment")
-extern enum abstract ParagraphAlignment(cxx.num.Int32)
+extern enum abstract ParagraphAlignment(Int32)
 {
     @:native("winrt::Microsoft::UI::Text::ParagraphAlignment::Undefined") final Undefined;
     @:native("winrt::Microsoft::UI::Text::ParagraphAlignment::Left") final Left;

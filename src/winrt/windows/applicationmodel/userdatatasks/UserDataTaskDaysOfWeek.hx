@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.userdatatasks;
 
 @:include("winrt/Windows.ApplicationModel.UserDataTasks.h", true)
 @:native("winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskDaysOfWeek")
-extern enum abstract UserDataTaskDaysOfWeek(cxx.num.UInt32)
+extern enum abstract UserDataTaskDaysOfWeek(UInt32)
 {
     @:native("winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskDaysOfWeek::None") final None;
     @:native("winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskDaysOfWeek::Sunday") final Sunday;

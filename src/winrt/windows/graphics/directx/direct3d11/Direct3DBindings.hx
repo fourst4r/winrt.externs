@@ -2,7 +2,7 @@ package winrt.windows.graphics.directx.direct3d11;
 
 @:include("winrt/Windows.Graphics.DirectX.Direct3D11.h", true)
 @:native("winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DBindings")
-extern enum abstract Direct3DBindings(cxx.num.UInt32)
+extern enum abstract Direct3DBindings(UInt32)
 {
     @:native("winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DBindings::VertexBuffer") final VertexBuffer;
     @:native("winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DBindings::IndexBuffer") final IndexBuffer;

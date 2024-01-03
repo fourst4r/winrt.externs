@@ -1,6 +1,9 @@
 package winrt.windows.web.atompub;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Web.AtomPub.h", true)
 @:native("winrt::Windows::Web::AtomPub::IResourceCollection")
 extern interface IResourceCollection extends winrt.windows.foundation.IInspectable

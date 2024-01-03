@@ -2,7 +2,7 @@ package winrt.windows.media.protection;
 
 @:include("winrt/Windows.Media.Protection.h", true)
 @:native("winrt::Windows::Media::Protection::GraphicsTrustStatus")
-extern enum abstract GraphicsTrustStatus(cxx.num.Int32)
+extern enum abstract GraphicsTrustStatus(Int32)
 {
     @:native("winrt::Windows::Media::Protection::GraphicsTrustStatus::TrustNotRequired") final TrustNotRequired;
     @:native("winrt::Windows::Media::Protection::GraphicsTrustStatus::TrustEstablished") final TrustEstablished;

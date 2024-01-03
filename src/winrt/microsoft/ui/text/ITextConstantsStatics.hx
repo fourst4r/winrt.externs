@@ -1,16 +1,19 @@
 package winrt.microsoft.ui.text;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Text.h", true)
 @:native("winrt::Microsoft::UI::Text::ITextConstantsStatics")
 extern interface ITextConstantsStatics extends winrt.windows.foundation.IInspectable
 {
     overload function AutoColor(): winrt.windows.ui.Color;
-    overload function MinUnitCount(): cxx.num.Int32;
-    overload function MaxUnitCount(): cxx.num.Int32;
+    overload function MinUnitCount(): Int32;
+    overload function MaxUnitCount(): Int32;
     overload function UndefinedColor(): winrt.windows.ui.Color;
-    overload function UndefinedFloatValue(): cxx.num.Float32;
-    overload function UndefinedInt32Value(): cxx.num.Int32;
+    overload function UndefinedFloatValue(): Float32;
+    overload function UndefinedInt32Value(): Int32;
     overload function UndefinedFontStretch(): winrt.windows.ui.text.FontStretch;
     overload function UndefinedFontStyle(): winrt.windows.ui.text.FontStyle;
 }

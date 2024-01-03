@@ -2,7 +2,7 @@ package winrt.microsoft.windows.applicationmodel.windowsappruntime;
 
 @:include("winrt/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.h", true)
 @:native("winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentStatus")
-extern enum abstract DeploymentStatus(cxx.num.Int32)
+extern enum abstract DeploymentStatus(Int32)
 {
     @:native("winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentStatus::Unknown") final Unknown;
     @:native("winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentStatus::Ok") final Ok;

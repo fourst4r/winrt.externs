@@ -1,6 +1,9 @@
 package winrt.windows.networking.servicediscovery.dnssd;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Networking.ServiceDiscovery.Dnssd.h", true)
 @:native("winrt::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdRegistrationResult")
 extern interface IDnssdRegistrationResult extends winrt.windows.foundation.IInspectable

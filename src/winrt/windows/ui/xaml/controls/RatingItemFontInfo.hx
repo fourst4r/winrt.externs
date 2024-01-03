@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::RatingItemFontInfo")
 extern class RatingItemFontInfo
@@ -9,17 +12,17 @@ extern class RatingItemFontInfo
 {
     function new();
     overload function DisabledGlyph(): winrt.HString;
-    overload function DisabledGlyph(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function DisabledGlyph(value: ConstRef<winrt.HString>): Void;
     overload function Glyph(): winrt.HString;
-    overload function Glyph(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function Glyph(value: ConstRef<winrt.HString>): Void;
     overload function PointerOverGlyph(): winrt.HString;
-    overload function PointerOverGlyph(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function PointerOverGlyph(value: ConstRef<winrt.HString>): Void;
     overload function PointerOverPlaceholderGlyph(): winrt.HString;
-    overload function PointerOverPlaceholderGlyph(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function PointerOverPlaceholderGlyph(value: ConstRef<winrt.HString>): Void;
     overload function PlaceholderGlyph(): winrt.HString;
-    overload function PlaceholderGlyph(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function PlaceholderGlyph(value: ConstRef<winrt.HString>): Void;
     overload function UnsetGlyph(): winrt.HString;
-    overload function UnsetGlyph(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function UnsetGlyph(value: ConstRef<winrt.HString>): Void;
     overload function DisabledGlyphProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function GlyphProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function PlaceholderGlyphProperty(): winrt.windows.ui.xaml.DependencyProperty;

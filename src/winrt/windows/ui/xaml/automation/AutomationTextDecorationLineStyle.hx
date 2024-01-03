@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.automation;
 
 @:include("winrt/Windows.UI.Xaml.Automation.h", true)
 @:native("winrt::Windows::UI::Xaml::Automation::AutomationTextDecorationLineStyle")
-extern enum abstract AutomationTextDecorationLineStyle(cxx.num.Int32)
+extern enum abstract AutomationTextDecorationLineStyle(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Automation::AutomationTextDecorationLineStyle::None") final None;
     @:native("winrt::Windows::UI::Xaml::Automation::AutomationTextDecorationLineStyle::Single") final Single;

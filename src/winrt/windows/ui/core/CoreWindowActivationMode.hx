@@ -2,7 +2,7 @@ package winrt.windows.ui.core;
 
 @:include("winrt/Windows.UI.Core.h", true)
 @:native("winrt::Windows::UI::Core::CoreWindowActivationMode")
-extern enum abstract CoreWindowActivationMode(cxx.num.Int32)
+extern enum abstract CoreWindowActivationMode(Int32)
 {
     @:native("winrt::Windows::UI::Core::CoreWindowActivationMode::None") final None;
     @:native("winrt::Windows::UI::Core::CoreWindowActivationMode::Deactivated") final Deactivated;

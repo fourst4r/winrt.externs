@@ -2,7 +2,7 @@ package winrt.windows.security.credentials.ui;
 
 @:include("winrt/Windows.Security.Credentials.UI.h", true)
 @:native("winrt::Windows::Security::Credentials::UI::UserConsentVerificationResult")
-extern enum abstract UserConsentVerificationResult(cxx.num.Int32)
+extern enum abstract UserConsentVerificationResult(Int32)
 {
     @:native("winrt::Windows::Security::Credentials::UI::UserConsentVerificationResult::Verified") final Verified;
     @:native("winrt::Windows::Security::Credentials::UI::UserConsentVerificationResult::DeviceNotPresent") final DeviceNotPresent;

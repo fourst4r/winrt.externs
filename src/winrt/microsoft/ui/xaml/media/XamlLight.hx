@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.media;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Media.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Media::XamlLight")
 extern class XamlLight
@@ -11,16 +14,16 @@ extern class XamlLight
 {
     function new();
     overload function CompositionLight(): winrt.microsoft.ui.composition.CompositionLight;
-    overload function CompositionLight(value: cxx.ConstRef<winrt.microsoft.ui.composition.CompositionLight>): Void;
+    overload function CompositionLight(value: ConstRef<winrt.microsoft.ui.composition.CompositionLight>): Void;
     function GetId(): winrt.HString;
-    function OnConnected(newElement: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
-    function OnDisconnected(oldElement: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
-    function AddTargetElement(lightId: cxx.ConstRef<winrt.HString>, element: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
-    function RemoveTargetElement(lightId: cxx.ConstRef<winrt.HString>, element: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
-    function AddTargetBrush(lightId: cxx.ConstRef<winrt.HString>, brush: cxx.ConstRef<winrt.microsoft.ui.xaml.media.Brush>): Void;
-    function RemoveTargetBrush(lightId: cxx.ConstRef<winrt.HString>, brush: cxx.ConstRef<winrt.microsoft.ui.xaml.media.Brush>): Void;
-    static function AddTargetElement(lightId: cxx.ConstRef<winrt.HString>, element: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
-    static function RemoveTargetElement(lightId: cxx.ConstRef<winrt.HString>, element: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
-    static function AddTargetBrush(lightId: cxx.ConstRef<winrt.HString>, brush: cxx.ConstRef<winrt.microsoft.ui.xaml.media.Brush>): Void;
-    static function RemoveTargetBrush(lightId: cxx.ConstRef<winrt.HString>, brush: cxx.ConstRef<winrt.microsoft.ui.xaml.media.Brush>): Void;
+    function OnConnected(newElement: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    function OnDisconnected(oldElement: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    function AddTargetElement(lightId: ConstRef<winrt.HString>, element: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    function RemoveTargetElement(lightId: ConstRef<winrt.HString>, element: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    function AddTargetBrush(lightId: ConstRef<winrt.HString>, brush: ConstRef<winrt.microsoft.ui.xaml.media.Brush>): Void;
+    function RemoveTargetBrush(lightId: ConstRef<winrt.HString>, brush: ConstRef<winrt.microsoft.ui.xaml.media.Brush>): Void;
+    static function AddTargetElement(lightId: ConstRef<winrt.HString>, element: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    static function RemoveTargetElement(lightId: ConstRef<winrt.HString>, element: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    static function AddTargetBrush(lightId: ConstRef<winrt.HString>, brush: ConstRef<winrt.microsoft.ui.xaml.media.Brush>): Void;
+    static function RemoveTargetBrush(lightId: ConstRef<winrt.HString>, brush: ConstRef<winrt.microsoft.ui.xaml.media.Brush>): Void;
 }

@@ -1,6 +1,9 @@
 package winrt.windows.devices.pointofservice.provider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.PointOfService.Provider.h", true)
 @:native("winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerEnableScannerRequestEventArgs")
 extern interface IBarcodeScannerEnableScannerRequestEventArgs extends winrt.windows.foundation.IInspectable

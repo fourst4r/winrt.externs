@@ -2,4 +2,4 @@ package winrt.windows.ui.xaml.controls;
 
 
 @:extern 
-typedef SemanticZoomViewChangedEventHandler = (sender: cxx.ConstRef<winrt.windows.foundation.IInspectable>, e: cxx.ConstRef<winrt.windows.ui.xaml.controls.SemanticZoomViewChangedEventArgs>)->Void;
+typedef SemanticZoomViewChangedEventHandler = Fn<(sender: ConstRef<winrt.windows.foundation.IInspectable>, e: ConstRef<winrt.windows.ui.xaml.controls.SemanticZoomViewChangedEventArgs>)->Void>;

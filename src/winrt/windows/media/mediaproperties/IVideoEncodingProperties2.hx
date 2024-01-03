@@ -1,12 +1,15 @@
 package winrt.windows.media.mediaproperties;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.MediaProperties.h", true)
 @:native("winrt::Windows::Media::MediaProperties::IVideoEncodingProperties2")
 extern interface IVideoEncodingProperties2 extends winrt.windows.foundation.IInspectable
 {
-    function SetFormatUserData(value: winrt.ArrayView<cxx.num.UInt8>): Void;
-    function GetFormatUserData(value: cxx.Ref<winrt.ComArray<cxx.num.UInt8>>): Void;
-    overload function ProfileId(value: cxx.num.Int32): Void;
-    overload function ProfileId(): cxx.num.Int32;
+    function SetFormatUserData(value: winrt.ArrayView<UInt8>): Void;
+    function GetFormatUserData(value: Ref<winrt.ComArray<UInt8>>): Void;
+    overload function ProfileId(value: Int32): Void;
+    overload function ProfileId(): Int32;
 }

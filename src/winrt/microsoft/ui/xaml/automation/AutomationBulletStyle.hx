@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.automation;
 
 @:include("winrt/Microsoft.UI.Xaml.Automation.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::AutomationBulletStyle")
-extern enum abstract AutomationBulletStyle(cxx.num.Int32)
+extern enum abstract AutomationBulletStyle(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Automation::AutomationBulletStyle::None") final None;
     @:native("winrt::Microsoft::UI::Xaml::Automation::AutomationBulletStyle::HollowRoundBullet") final HollowRoundBullet;

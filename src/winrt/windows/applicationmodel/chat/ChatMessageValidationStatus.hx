@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.chat;
 
 @:include("winrt/Windows.ApplicationModel.Chat.h", true)
 @:native("winrt::Windows::ApplicationModel::Chat::ChatMessageValidationStatus")
-extern enum abstract ChatMessageValidationStatus(cxx.num.Int32)
+extern enum abstract ChatMessageValidationStatus(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Chat::ChatMessageValidationStatus::Valid") final Valid;
     @:native("winrt::Windows::ApplicationModel::Chat::ChatMessageValidationStatus::NoRecipients") final NoRecipients;

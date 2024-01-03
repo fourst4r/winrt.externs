@@ -4,5 +4,5 @@ package winrt.windows.ui.text.core;
 @:native("winrt::Windows::UI::Text::Core::CoreTextServicesConstants")
 extern class CoreTextServicesConstants
 {
-    static overload function HiddenCharacter(): cxx.Char;
+    static overload function HiddenCharacter(): Char;
 }

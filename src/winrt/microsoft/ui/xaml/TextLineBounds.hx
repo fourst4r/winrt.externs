@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml;
 
 @:include("winrt/Microsoft.UI.Xaml.h", true)
 @:native("winrt::Microsoft::UI::Xaml::TextLineBounds")
-extern enum abstract TextLineBounds(cxx.num.Int32)
+extern enum abstract TextLineBounds(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::TextLineBounds::Full") final Full;
     @:native("winrt::Microsoft::UI::Xaml::TextLineBounds::TrimToCapHeight") final TrimToCapHeight;

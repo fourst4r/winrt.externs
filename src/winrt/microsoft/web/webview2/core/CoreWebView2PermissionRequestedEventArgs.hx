@@ -1,6 +1,9 @@
 package winrt.microsoft.web.webview2.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.Web.WebView2.Core.h", true)
 @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs")
 extern class CoreWebView2PermissionRequestedEventArgs
@@ -16,6 +19,6 @@ extern class CoreWebView2PermissionRequestedEventArgs
     overload function PermissionKind(): winrt.microsoft.web.webview2.core.CoreWebView2PermissionKind;
     overload function IsUserInitiated(): Bool;
     overload function State(): winrt.microsoft.web.webview2.core.CoreWebView2PermissionState;
-    overload function State(value: cxx.ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2PermissionState>): Void;
+    overload function State(value: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2PermissionState>): Void;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

@@ -2,7 +2,7 @@ package winrt.windows.graphics.printing.workflow;
 
 @:include("winrt/Windows.Graphics.Printing.Workflow.h", true)
 @:native("winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJobStatus")
-extern enum abstract PrintWorkflowPrinterJobStatus(cxx.num.Int32)
+extern enum abstract PrintWorkflowPrinterJobStatus(Int32)
 {
     @:native("winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJobStatus::Error") final Error;
     @:native("winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJobStatus::Aborted") final Aborted;

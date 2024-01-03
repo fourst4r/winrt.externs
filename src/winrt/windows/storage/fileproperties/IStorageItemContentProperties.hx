@@ -1,6 +1,9 @@
 package winrt.windows.storage.fileproperties;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Storage.FileProperties.h", true)
 @:native("winrt::Windows::Storage::FileProperties::IStorageItemContentProperties")
 extern interface IStorageItemContentProperties extends winrt.windows.foundation.IInspectable

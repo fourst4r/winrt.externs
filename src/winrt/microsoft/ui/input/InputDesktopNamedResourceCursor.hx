@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.input;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Input.h", true)
 @:native("winrt::Microsoft::UI::Input::InputDesktopNamedResourceCursor")
 extern class InputDesktopNamedResourceCursor
@@ -9,8 +12,8 @@ extern class InputDesktopNamedResourceCursor
 {
     overload function ModuleName(): winrt.HString;
     overload function ResourceName(): winrt.HString;
-    function Create(resourceName: cxx.ConstRef<winrt.HString>): winrt.microsoft.ui.input.InputDesktopNamedResourceCursor;
-    function CreateFromModule(moduleName: cxx.ConstRef<winrt.HString>, resourceName: cxx.ConstRef<winrt.HString>): winrt.microsoft.ui.input.InputDesktopNamedResourceCursor;
-    static function Create(resourceName: cxx.ConstRef<winrt.HString>): winrt.microsoft.ui.input.InputDesktopNamedResourceCursor;
-    static function CreateFromModule(moduleName: cxx.ConstRef<winrt.HString>, resourceName: cxx.ConstRef<winrt.HString>): winrt.microsoft.ui.input.InputDesktopNamedResourceCursor;
+    function Create(resourceName: ConstRef<winrt.HString>): winrt.microsoft.ui.input.InputDesktopNamedResourceCursor;
+    function CreateFromModule(moduleName: ConstRef<winrt.HString>, resourceName: ConstRef<winrt.HString>): winrt.microsoft.ui.input.InputDesktopNamedResourceCursor;
+    static function Create(resourceName: ConstRef<winrt.HString>): winrt.microsoft.ui.input.InputDesktopNamedResourceCursor;
+    static function CreateFromModule(moduleName: ConstRef<winrt.HString>, resourceName: ConstRef<winrt.HString>): winrt.microsoft.ui.input.InputDesktopNamedResourceCursor;
 }

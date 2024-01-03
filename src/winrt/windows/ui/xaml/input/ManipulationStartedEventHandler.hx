@@ -2,4 +2,4 @@ package winrt.windows.ui.xaml.input;
 
 
 @:extern 
-typedef ManipulationStartedEventHandler = (sender: cxx.ConstRef<winrt.windows.foundation.IInspectable>, e: cxx.ConstRef<winrt.windows.ui.xaml.input.ManipulationStartedRoutedEventArgs>)->Void;
+typedef ManipulationStartedEventHandler = Fn<(sender: ConstRef<winrt.windows.foundation.IInspectable>, e: ConstRef<winrt.windows.ui.xaml.input.ManipulationStartedRoutedEventArgs>)->Void>;

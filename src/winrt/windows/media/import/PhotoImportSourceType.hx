@@ -2,7 +2,7 @@ package winrt.windows.media.import;
 
 @:include("winrt/Windows.Media.Import.h", true)
 @:native("winrt::Windows::Media::Import::PhotoImportSourceType")
-extern enum abstract PhotoImportSourceType(cxx.num.Int32)
+extern enum abstract PhotoImportSourceType(Int32)
 {
     @:native("winrt::Windows::Media::Import::PhotoImportSourceType::Generic") final Generic;
     @:native("winrt::Windows::Media::Import::PhotoImportSourceType::Camera") final Camera;

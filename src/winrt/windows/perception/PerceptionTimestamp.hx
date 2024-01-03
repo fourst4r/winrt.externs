@@ -1,6 +1,9 @@
 package winrt.windows.perception;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Perception.h", true)
 @:native("winrt::Windows::Perception::PerceptionTimestamp")
 extern class PerceptionTimestamp

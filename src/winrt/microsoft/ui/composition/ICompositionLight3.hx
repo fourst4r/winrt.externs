@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Composition.h", true)
 @:native("winrt::Microsoft::UI::Composition::ICompositionLight3")
 extern interface ICompositionLight3 extends winrt.windows.foundation.IInspectable

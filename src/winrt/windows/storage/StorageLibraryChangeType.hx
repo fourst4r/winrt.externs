@@ -2,7 +2,7 @@ package winrt.windows.storage;
 
 @:include("winrt/Windows.Storage.h", true)
 @:native("winrt::Windows::Storage::StorageLibraryChangeType")
-extern enum abstract StorageLibraryChangeType(cxx.num.Int32)
+extern enum abstract StorageLibraryChangeType(Int32)
 {
     @:native("winrt::Windows::Storage::StorageLibraryChangeType::Created") final Created;
     @:native("winrt::Windows::Storage::StorageLibraryChangeType::Deleted") final Deleted;

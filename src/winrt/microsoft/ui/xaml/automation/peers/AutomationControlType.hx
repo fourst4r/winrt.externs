@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.automation.peers;
 
 @:include("winrt/Microsoft.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationControlType")
-extern enum abstract AutomationControlType(cxx.num.Int32)
+extern enum abstract AutomationControlType(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationControlType::Button") final Button;
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationControlType::Calendar") final Calendar;

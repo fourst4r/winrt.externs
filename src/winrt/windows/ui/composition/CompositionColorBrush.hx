@@ -1,6 +1,9 @@
 package winrt.windows.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::CompositionColorBrush")
 extern class CompositionColorBrush
@@ -8,5 +11,5 @@ extern class CompositionColorBrush
     implements winrt.windows.ui.composition.ICompositionColorBrush
 {
     overload function Color(): winrt.windows.ui.Color;
-    overload function Color(value: cxx.ConstRef<winrt.windows.ui.Color>): Void;
+    overload function Color(value: ConstRef<winrt.windows.ui.Color>): Void;
 }

@@ -2,7 +2,7 @@ package winrt.microsoft.web.webview2.core;
 
 @:include("winrt/Microsoft.Web.WebView2.Core.h", true)
 @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2MouseEventKind")
-extern enum abstract CoreWebView2MouseEventKind(cxx.num.Int32)
+extern enum abstract CoreWebView2MouseEventKind(Int32)
 {
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2MouseEventKind::HorizontalWheel") final HorizontalWheel;
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2MouseEventKind::LeftButtonDoubleClick") final LeftButtonDoubleClick;

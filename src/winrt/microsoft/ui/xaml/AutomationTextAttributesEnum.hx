@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml;
 
 @:include("winrt/Microsoft.UI.Xaml.h", true)
 @:native("winrt::Microsoft::UI::Xaml::AutomationTextAttributesEnum")
-extern enum abstract AutomationTextAttributesEnum(cxx.num.Int32)
+extern enum abstract AutomationTextAttributesEnum(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::AutomationTextAttributesEnum::AnimationStyleAttribute") final AnimationStyleAttribute;
     @:native("winrt::Microsoft::UI::Xaml::AutomationTextAttributesEnum::BackgroundColorAttribute") final BackgroundColorAttribute;

@@ -2,7 +2,7 @@ package winrt.windows.devices.wifi;
 
 @:include("winrt/Windows.Devices.WiFi.h", true)
 @:native("winrt::Windows::Devices::WiFi::WiFiPhyKind")
-extern enum abstract WiFiPhyKind(cxx.num.Int32)
+extern enum abstract WiFiPhyKind(Int32)
 {
     @:native("winrt::Windows::Devices::WiFi::WiFiPhyKind::Unknown") final Unknown;
     @:native("winrt::Windows::Devices::WiFi::WiFiPhyKind::Fhss") final Fhss;

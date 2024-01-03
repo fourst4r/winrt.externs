@@ -2,7 +2,7 @@ package winrt.microsoft.ui.text;
 
 @:include("winrt/Microsoft.UI.Text.h", true)
 @:native("winrt::Microsoft::UI::Text::TextGetOptions")
-extern enum abstract TextGetOptions(cxx.num.UInt32)
+extern enum abstract TextGetOptions(UInt32)
 {
     @:native("winrt::Microsoft::UI::Text::TextGetOptions::None") final None;
     @:native("winrt::Microsoft::UI::Text::TextGetOptions::AdjustCrlf") final AdjustCrlf;

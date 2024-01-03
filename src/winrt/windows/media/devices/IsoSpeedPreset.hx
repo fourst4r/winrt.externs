@@ -2,7 +2,7 @@ package winrt.windows.media.devices;
 
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::IsoSpeedPreset")
-extern enum abstract IsoSpeedPreset(cxx.num.Int32)
+extern enum abstract IsoSpeedPreset(Int32)
 {
     @:native("winrt::Windows::Media::Devices::IsoSpeedPreset::Auto") final Auto;
     @:native("winrt::Windows::Media::Devices::IsoSpeedPreset::Iso50") final Iso50;

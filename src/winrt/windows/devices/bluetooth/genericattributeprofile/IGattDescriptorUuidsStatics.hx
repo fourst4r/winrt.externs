@@ -1,6 +1,9 @@
 package winrt.windows.devices.bluetooth.genericattributeprofile;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Bluetooth.GenericAttributeProfile.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptorUuidsStatics")
 extern interface IGattDescriptorUuidsStatics extends winrt.windows.foundation.IInspectable

@@ -1,6 +1,9 @@
 package winrt.windows.media.streaming.adaptive;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Streaming.Adaptive.h", true)
 @:native("winrt::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadRequestedEventArgs3")
 extern interface IAdaptiveMediaSourceDownloadRequestedEventArgs3 extends winrt.windows.foundation.IInspectable

@@ -2,7 +2,7 @@ package winrt.windows.media.core;
 
 @:include("winrt/Windows.Media.Core.h", true)
 @:native("winrt::Windows::Media::Core::TimedTextRubyReserve")
-extern enum abstract TimedTextRubyReserve(cxx.num.Int32)
+extern enum abstract TimedTextRubyReserve(Int32)
 {
     @:native("winrt::Windows::Media::Core::TimedTextRubyReserve::None") final None;
     @:native("winrt::Windows::Media::Core::TimedTextRubyReserve::Before") final Before;

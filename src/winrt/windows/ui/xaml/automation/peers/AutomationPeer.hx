@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.automation.peers;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer")
 extern class AutomationPeer
@@ -25,10 +28,10 @@ extern class AutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IAutomationPeerOverrides9
 {
     overload function EventsSource(): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
-    overload function EventsSource(value: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationPeer>): Void;
-    function GetPattern(patternInterface: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.PatternInterface>): winrt.windows.foundation.IInspectable;
-    function RaiseAutomationEvent(eventId: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationEvents>): Void;
-    function RaisePropertyChangedEvent(automationProperty: cxx.ConstRef<winrt.windows.ui.xaml.automation.AutomationProperty>, oldValue: cxx.ConstRef<winrt.windows.foundation.IInspectable>, newValue: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function EventsSource(value: ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationPeer>): Void;
+    function GetPattern(patternInterface: ConstRef<winrt.windows.ui.xaml.automation.peers.PatternInterface>): winrt.windows.foundation.IInspectable;
+    function RaiseAutomationEvent(eventId: ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationEvents>): Void;
+    function RaisePropertyChangedEvent(automationProperty: ConstRef<winrt.windows.ui.xaml.automation.AutomationProperty>, oldValue: ConstRef<winrt.windows.foundation.IInspectable>, newValue: ConstRef<winrt.windows.foundation.IInspectable>): Void;
     function GetAcceleratorKey(): winrt.HString;
     function GetAccessKey(): winrt.HString;
     function GetAutomationControlType(): winrt.windows.ui.xaml.automation.peers.AutomationControlType;
@@ -55,32 +58,32 @@ extern class AutomationPeer
     function SetFocus(): Void;
     function GetParent(): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
     function InvalidatePeer(): Void;
-    function GetPeerFromPoint(point: cxx.ConstRef<winrt.windows.foundation.Point>): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
+    function GetPeerFromPoint(point: ConstRef<winrt.windows.foundation.Point>): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
     function GetLiveSetting(): winrt.windows.ui.xaml.automation.peers.AutomationLiveSetting;
-    function Navigate(direction: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationNavigationDirection>): winrt.windows.foundation.IInspectable;
-    function GetElementFromPoint(pointInWindowCoordinates: cxx.ConstRef<winrt.windows.foundation.Point>): winrt.windows.foundation.IInspectable;
+    function Navigate(direction: ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationNavigationDirection>): winrt.windows.foundation.IInspectable;
+    function GetElementFromPoint(pointInWindowCoordinates: ConstRef<winrt.windows.foundation.Point>): winrt.windows.foundation.IInspectable;
     function GetFocusedElement(): winrt.windows.foundation.IInspectable;
     function ShowContextMenu(): Void;
     function GetControlledPeers(): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.xaml.automation.peers.AutomationPeer> /* GenericTypeInstSig */;
     function GetAnnotations(): winrt.windows.foundation.collections.IVector<winrt.windows.ui.xaml.automation.peers.AutomationPeerAnnotation> /* GenericTypeInstSig */;
-    function SetParent(peer: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationPeer>): Void;
-    function RaiseTextEditTextChangedEvent(automationTextEditChangeType: cxx.ConstRef<winrt.windows.ui.xaml.automation.AutomationTextEditChangeType>, changedData: cxx.ConstRef<winrt.windows.foundation.collections.IVectorView<winrt.HString> /* temp_GenericTypeInstSig */>): Void;
-    function GetPositionInSet(): cxx.num.Int32;
-    function GetSizeOfSet(): cxx.num.Int32;
-    function GetLevel(): cxx.num.Int32;
-    function RaiseStructureChangedEvent(structureChangeType: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationStructureChangeType>, child: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationPeer>): Void;
+    function SetParent(peer: ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationPeer>): Void;
+    function RaiseTextEditTextChangedEvent(automationTextEditChangeType: ConstRef<winrt.windows.ui.xaml.automation.AutomationTextEditChangeType>, changedData: ConstRef<winrt.windows.foundation.collections.IVectorView<winrt.HString> /* temp_GenericTypeInstSig */>): Void;
+    function GetPositionInSet(): Int32;
+    function GetSizeOfSet(): Int32;
+    function GetLevel(): Int32;
+    function RaiseStructureChangedEvent(structureChangeType: ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationStructureChangeType>, child: ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationPeer>): Void;
     function GetLandmarkType(): winrt.windows.ui.xaml.automation.peers.AutomationLandmarkType;
     function GetLocalizedLandmarkType(): winrt.HString;
     function IsPeripheral(): Bool;
     function IsDataValidForForm(): Bool;
     function GetFullDescription(): winrt.HString;
-    function GetCulture(): cxx.num.Int32;
-    function RaiseNotificationEvent(notificationKind: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationNotificationKind>, notificationProcessing: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationNotificationProcessing>, displayString: cxx.ConstRef<winrt.HString>, activityId: cxx.ConstRef<winrt.HString>): Void;
+    function GetCulture(): Int32;
+    function RaiseNotificationEvent(notificationKind: ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationNotificationKind>, notificationProcessing: ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationNotificationProcessing>, displayString: ConstRef<winrt.HString>, activityId: ConstRef<winrt.HString>): Void;
     function GetHeadingLevel(): winrt.windows.ui.xaml.automation.peers.AutomationHeadingLevel;
     function IsDialog(): Bool;
-    function PeerFromProvider(provider: cxx.ConstRef<winrt.windows.ui.xaml.automation.provider.IRawElementProviderSimple>): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
-    function ProviderFromPeer(peer: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationPeer>): winrt.windows.ui.xaml.automation.provider.IRawElementProviderSimple;
-    function GetPatternCore(patternInterface: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.PatternInterface>): winrt.windows.foundation.IInspectable;
+    function PeerFromProvider(provider: ConstRef<winrt.windows.ui.xaml.automation.provider.IRawElementProviderSimple>): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
+    function ProviderFromPeer(peer: ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationPeer>): winrt.windows.ui.xaml.automation.provider.IRawElementProviderSimple;
+    function GetPatternCore(patternInterface: ConstRef<winrt.windows.ui.xaml.automation.peers.PatternInterface>): winrt.windows.foundation.IInspectable;
     function GetAcceleratorKeyCore(): winrt.HString;
     function GetAccessKeyCore(): winrt.HString;
     function GetAutomationControlTypeCore(): winrt.windows.ui.xaml.automation.peers.AutomationControlType;
@@ -105,17 +108,17 @@ extern class AutomationPeer
     function IsPasswordCore(): Bool;
     function IsRequiredForFormCore(): Bool;
     function SetFocusCore(): Void;
-    function GetPeerFromPointCore(point: cxx.ConstRef<winrt.windows.foundation.Point>): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
+    function GetPeerFromPointCore(point: ConstRef<winrt.windows.foundation.Point>): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
     function GetLiveSettingCore(): winrt.windows.ui.xaml.automation.peers.AutomationLiveSetting;
     function ShowContextMenuCore(): Void;
     function GetControlledPeersCore(): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.xaml.automation.peers.AutomationPeer> /* GenericTypeInstSig */;
-    function NavigateCore(direction: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationNavigationDirection>): winrt.windows.foundation.IInspectable;
-    function GetElementFromPointCore(pointInWindowCoordinates: cxx.ConstRef<winrt.windows.foundation.Point>): winrt.windows.foundation.IInspectable;
+    function NavigateCore(direction: ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationNavigationDirection>): winrt.windows.foundation.IInspectable;
+    function GetElementFromPointCore(pointInWindowCoordinates: ConstRef<winrt.windows.foundation.Point>): winrt.windows.foundation.IInspectable;
     function GetFocusedElementCore(): winrt.windows.foundation.IInspectable;
     function GetAnnotationsCore(): winrt.windows.foundation.collections.IVector<winrt.windows.ui.xaml.automation.peers.AutomationPeerAnnotation> /* GenericTypeInstSig */;
-    function GetPositionInSetCore(): cxx.num.Int32;
-    function GetSizeOfSetCore(): cxx.num.Int32;
-    function GetLevelCore(): cxx.num.Int32;
+    function GetPositionInSetCore(): Int32;
+    function GetSizeOfSetCore(): Int32;
+    function GetLevelCore(): Int32;
     function GetLandmarkTypeCore(): winrt.windows.ui.xaml.automation.peers.AutomationLandmarkType;
     function GetLocalizedLandmarkTypeCore(): winrt.HString;
     function IsPeripheralCore(): Bool;
@@ -124,11 +127,11 @@ extern class AutomationPeer
     function GetDescribedByCore(): winrt.windows.foundation.collections.IIterable<winrt.windows.ui.xaml.automation.peers.AutomationPeer> /* GenericTypeInstSig */;
     function GetFlowsToCore(): winrt.windows.foundation.collections.IIterable<winrt.windows.ui.xaml.automation.peers.AutomationPeer> /* GenericTypeInstSig */;
     function GetFlowsFromCore(): winrt.windows.foundation.collections.IIterable<winrt.windows.ui.xaml.automation.peers.AutomationPeer> /* GenericTypeInstSig */;
-    function GetCultureCore(): cxx.num.Int32;
+    function GetCultureCore(): Int32;
     function GetHeadingLevelCore(): winrt.windows.ui.xaml.automation.peers.AutomationHeadingLevel;
     function IsDialogCore(): Bool;
     function GenerateRawElementProviderRuntimeId(): winrt.windows.ui.xaml.automation.peers.RawElementProviderRuntimeId;
-    function ListenerExists(eventId: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationEvents>): Bool;
-    static function ListenerExists(eventId: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationEvents>): Bool;
+    function ListenerExists(eventId: ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationEvents>): Bool;
+    static function ListenerExists(eventId: ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationEvents>): Bool;
     static function GenerateRawElementProviderRuntimeId(): winrt.windows.ui.xaml.automation.peers.RawElementProviderRuntimeId;
 }

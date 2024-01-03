@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.automation.peers;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer")
 extern class NavigationViewItemAutomationPeer
@@ -8,7 +11,7 @@ extern class NavigationViewItemAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.INavigationViewItemAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IExpandCollapseProvider
 {
-    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.NavigationViewItem>);
+    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.NavigationViewItem>);
     overload function ExpandCollapseState(): winrt.microsoft.ui.xaml.automation.ExpandCollapseState;
     function Collapse(): Void;
     function Expand(): Void;

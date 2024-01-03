@@ -2,7 +2,7 @@ package winrt.windows.networking.networkoperators;
 
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::ESimOperationStatus")
-extern enum abstract ESimOperationStatus(cxx.num.Int32)
+extern enum abstract ESimOperationStatus(Int32)
 {
     @:native("winrt::Windows::Networking::NetworkOperators::ESimOperationStatus::Success") final Success;
     @:native("winrt::Windows::Networking::NetworkOperators::ESimOperationStatus::NotAuthorized") final NotAuthorized;

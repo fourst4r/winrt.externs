@@ -2,4 +2,4 @@ package winrt.windows.ui.xaml.controls;
 
 
 @:extern 
-typedef ListViewKeyToItemHandler = (key: cxx.ConstRef<winrt.HString>)->Void;
+typedef ListViewKeyToItemHandler = Fn<(key: ConstRef<winrt.HString>)->Void>;

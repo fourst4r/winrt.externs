@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.email;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Email.h", true)
 @:native("winrt::Windows::ApplicationModel::Email::IEmailMailboxCapabilities3")
 extern interface IEmailMailboxCapabilities3 extends winrt.windows.foundation.IInspectable

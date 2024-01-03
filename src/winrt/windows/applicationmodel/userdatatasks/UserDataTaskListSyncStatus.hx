@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.userdatatasks;
 
 @:include("winrt/Windows.ApplicationModel.UserDataTasks.h", true)
 @:native("winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncStatus")
-extern enum abstract UserDataTaskListSyncStatus(cxx.num.Int32)
+extern enum abstract UserDataTaskListSyncStatus(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncStatus::Idle") final Idle;
     @:native("winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncStatus::Syncing") final Syncing;

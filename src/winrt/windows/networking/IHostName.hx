@@ -1,6 +1,9 @@
 package winrt.windows.networking;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Networking.h", true)
 @:native("winrt::Windows::Networking::IHostName")
 extern interface IHostName extends winrt.windows.foundation.IInspectable
@@ -10,5 +13,5 @@ extern interface IHostName extends winrt.windows.foundation.IInspectable
     overload function DisplayName(): winrt.HString;
     overload function CanonicalName(): winrt.HString;
     overload function Type(): winrt.windows.networking.HostNameType;
-    function IsEqual(hostName: cxx.ConstRef<winrt.windows.networking.HostName>): Bool;
+    function IsEqual(hostName: ConstRef<winrt.windows.networking.HostName>): Bool;
 }

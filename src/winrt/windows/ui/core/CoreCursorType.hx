@@ -2,7 +2,7 @@ package winrt.windows.ui.core;
 
 @:include("winrt/Windows.UI.Core.h", true)
 @:native("winrt::Windows::UI::Core::CoreCursorType")
-extern enum abstract CoreCursorType(cxx.num.Int32)
+extern enum abstract CoreCursorType(Int32)
 {
     @:native("winrt::Windows::UI::Core::CoreCursorType::Arrow") final Arrow;
     @:native("winrt::Windows::UI::Core::CoreCursorType::Cross") final Cross;

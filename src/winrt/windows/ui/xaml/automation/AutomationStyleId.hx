@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.automation;
 
 @:include("winrt/Windows.UI.Xaml.Automation.h", true)
 @:native("winrt::Windows::UI::Xaml::Automation::AutomationStyleId")
-extern enum abstract AutomationStyleId(cxx.num.Int32)
+extern enum abstract AutomationStyleId(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Automation::AutomationStyleId::Heading1") final Heading1;
     @:native("winrt::Windows::UI::Xaml::Automation::AutomationStyleId::Heading2") final Heading2;

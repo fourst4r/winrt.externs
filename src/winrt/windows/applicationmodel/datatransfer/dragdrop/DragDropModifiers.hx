@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.datatransfer.dragdrop;
 
 @:include("winrt/Windows.ApplicationModel.DataTransfer.DragDrop.h", true)
 @:native("winrt::Windows::ApplicationModel::DataTransfer::DragDrop::DragDropModifiers")
-extern enum abstract DragDropModifiers(cxx.num.UInt32)
+extern enum abstract DragDropModifiers(UInt32)
 {
     @:native("winrt::Windows::ApplicationModel::DataTransfer::DragDrop::DragDropModifiers::None") final None;
     @:native("winrt::Windows::ApplicationModel::DataTransfer::DragDrop::DragDropModifiers::Shift") final Shift;

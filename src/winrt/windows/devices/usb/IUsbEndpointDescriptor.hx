@@ -1,11 +1,14 @@
 package winrt.windows.devices.usb;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Usb.h", true)
 @:native("winrt::Windows::Devices::Usb::IUsbEndpointDescriptor")
 extern interface IUsbEndpointDescriptor extends winrt.windows.foundation.IInspectable
 {
-    overload function EndpointNumber(): cxx.num.UInt8;
+    overload function EndpointNumber(): UInt8;
     overload function Direction(): winrt.windows.devices.usb.UsbTransferDirection;
     overload function EndpointType(): winrt.windows.devices.usb.UsbEndpointType;
     overload function AsBulkInEndpointDescriptor(): winrt.windows.devices.usb.UsbBulkInEndpointDescriptor;

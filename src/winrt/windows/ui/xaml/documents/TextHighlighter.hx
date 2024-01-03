@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.documents;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Documents.h", true)
 @:native("winrt::Windows::UI::Xaml::Documents::TextHighlighter")
 extern class TextHighlighter
@@ -9,9 +12,9 @@ extern class TextHighlighter
     function new();
     overload function Ranges(): winrt.windows.foundation.collections.IVector<winrt.windows.ui.xaml.documents.TextRange> /* GenericTypeInstSig */;
     overload function Foreground(): winrt.windows.ui.xaml.media.Brush;
-    overload function Foreground(value: cxx.ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
+    overload function Foreground(value: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
     overload function Background(): winrt.windows.ui.xaml.media.Brush;
-    overload function Background(value: cxx.ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
+    overload function Background(value: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
     overload function ForegroundProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function BackgroundProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function ForegroundProperty(): winrt.windows.ui.xaml.DependencyProperty;

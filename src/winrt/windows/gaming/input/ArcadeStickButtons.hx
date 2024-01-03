@@ -2,7 +2,7 @@ package winrt.windows.gaming.input;
 
 @:include("winrt/Windows.Gaming.Input.h", true)
 @:native("winrt::Windows::Gaming::Input::ArcadeStickButtons")
-extern enum abstract ArcadeStickButtons(cxx.num.UInt32)
+extern enum abstract ArcadeStickButtons(UInt32)
 {
     @:native("winrt::Windows::Gaming::Input::ArcadeStickButtons::None") final None;
     @:native("winrt::Windows::Gaming::Input::ArcadeStickButtons::StickUp") final StickUp;

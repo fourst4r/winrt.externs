@@ -1,6 +1,9 @@
 package winrt.microsoft.windows.applicationmodel.dynamicdependency;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.Windows.ApplicationModel.DynamicDependency.h", true)
 @:native("winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::IPackageDependencyContext")
 extern interface IPackageDependencyContext extends winrt.windows.foundation.IInspectable

@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.media.animation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Media.Animation.h", true)
 @:native("winrt::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition")
 extern class NavigationThemeTransition
@@ -9,7 +12,7 @@ extern class NavigationThemeTransition
 {
     function new();
     overload function DefaultNavigationTransitionInfo(): winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo;
-    overload function DefaultNavigationTransitionInfo(value: cxx.ConstRef<winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo>): Void;
+    overload function DefaultNavigationTransitionInfo(value: ConstRef<winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo>): Void;
     overload function DefaultNavigationTransitionInfoProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function DefaultNavigationTransitionInfoProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

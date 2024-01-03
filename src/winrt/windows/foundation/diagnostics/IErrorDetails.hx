@@ -1,6 +1,9 @@
 package winrt.windows.foundation.diagnostics;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Foundation.Diagnostics.h", true)
 @:native("winrt::Windows::Foundation::Diagnostics::IErrorDetails")
 extern interface IErrorDetails extends winrt.windows.foundation.IInspectable

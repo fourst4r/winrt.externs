@@ -1,6 +1,9 @@
 package winrt.windows.graphics.holographic;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Graphics.Holographic.h", true)
 @:native("winrt::Windows::Graphics::Holographic::IHolographicSpaceCameraAddedEventArgs")
 extern interface IHolographicSpaceCameraAddedEventArgs extends winrt.windows.foundation.IInspectable

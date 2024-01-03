@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.data;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Data.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Data::IBindingExpression")
 extern interface IBindingExpression extends winrt.windows.foundation.IInspectable

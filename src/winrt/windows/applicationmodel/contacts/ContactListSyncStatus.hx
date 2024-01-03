@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.contacts;
 
 @:include("winrt/Windows.ApplicationModel.Contacts.h", true)
 @:native("winrt::Windows::ApplicationModel::Contacts::ContactListSyncStatus")
-extern enum abstract ContactListSyncStatus(cxx.num.Int32)
+extern enum abstract ContactListSyncStatus(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactListSyncStatus::Idle") final Idle;
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactListSyncStatus::Syncing") final Syncing;

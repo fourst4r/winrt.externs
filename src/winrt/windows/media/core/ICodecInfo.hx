@@ -1,6 +1,9 @@
 package winrt.windows.media.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Core.h", true)
 @:native("winrt::Windows::Media::Core::ICodecInfo")
 extern interface ICodecInfo extends winrt.windows.foundation.IInspectable

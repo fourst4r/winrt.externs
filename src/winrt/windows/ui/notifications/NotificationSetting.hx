@@ -2,7 +2,7 @@ package winrt.windows.ui.notifications;
 
 @:include("winrt/Windows.UI.Notifications.h", true)
 @:native("winrt::Windows::UI::Notifications::NotificationSetting")
-extern enum abstract NotificationSetting(cxx.num.Int32)
+extern enum abstract NotificationSetting(Int32)
 {
     @:native("winrt::Windows::UI::Notifications::NotificationSetting::Enabled") final Enabled;
     @:native("winrt::Windows::UI::Notifications::NotificationSetting::DisabledForApplication") final DisabledForApplication;

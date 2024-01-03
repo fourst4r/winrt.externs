@@ -2,7 +2,7 @@ package winrt.windows.media.devices;
 
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::ColorTemperaturePreset")
-extern enum abstract ColorTemperaturePreset(cxx.num.Int32)
+extern enum abstract ColorTemperaturePreset(Int32)
 {
     @:native("winrt::Windows::Media::Devices::ColorTemperaturePreset::Auto") final Auto;
     @:native("winrt::Windows::Media::Devices::ColorTemperaturePreset::Manual") final Manual;

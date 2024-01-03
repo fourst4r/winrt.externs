@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.automation;
 
 @:include("winrt/Microsoft.UI.Xaml.Automation.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::ExpandCollapseState")
-extern enum abstract ExpandCollapseState(cxx.num.Int32)
+extern enum abstract ExpandCollapseState(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Automation::ExpandCollapseState::Collapsed") final Collapsed;
     @:native("winrt::Microsoft::UI::Xaml::Automation::ExpandCollapseState::Expanded") final Expanded;

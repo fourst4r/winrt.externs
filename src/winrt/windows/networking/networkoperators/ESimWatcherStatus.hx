@@ -2,7 +2,7 @@ package winrt.windows.networking.networkoperators;
 
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::ESimWatcherStatus")
-extern enum abstract ESimWatcherStatus(cxx.num.Int32)
+extern enum abstract ESimWatcherStatus(Int32)
 {
     @:native("winrt::Windows::Networking::NetworkOperators::ESimWatcherStatus::Created") final Created;
     @:native("winrt::Windows::Networking::NetworkOperators::ESimWatcherStatus::Started") final Started;

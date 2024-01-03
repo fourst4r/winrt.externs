@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.email;
 
 @:include("winrt/Windows.ApplicationModel.Email.h", true)
 @:native("winrt::Windows::ApplicationModel::Email::EmailAttachmentDownloadState")
-extern enum abstract EmailAttachmentDownloadState(cxx.num.Int32)
+extern enum abstract EmailAttachmentDownloadState(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Email::EmailAttachmentDownloadState::NotDownloaded") final NotDownloaded;
     @:native("winrt::Windows::ApplicationModel::Email::EmailAttachmentDownloadState::Downloading") final Downloading;

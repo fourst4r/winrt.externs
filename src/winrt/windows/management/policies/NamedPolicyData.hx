@@ -1,6 +1,9 @@
 package winrt.windows.management.policies;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Management.Policies.h", true)
 @:native("winrt::Windows::Management::Policies::NamedPolicyData")
 extern class NamedPolicyData
@@ -14,9 +17,9 @@ extern class NamedPolicyData
     overload function User(): winrt.windows.system.User;
     function GetBoolean(): Bool;
     function GetBinary(): winrt.windows.storage.streams.IBuffer;
-    function GetInt32(): cxx.num.Int32;
-    function GetInt64(): cxx.num.Int64;
+    function GetInt32(): Int32;
+    function GetInt64(): Int64;
     function GetString(): winrt.HString;
-    overload function Changed(changedHandler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.management.policies.NamedPolicyData, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Changed(cookie: cxx.ConstRef<winrt.EventToken>): Void;
+    overload function Changed(changedHandler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.management.policies.NamedPolicyData, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Changed(cookie: ConstRef<winrt.EventToken>): Void;
 }

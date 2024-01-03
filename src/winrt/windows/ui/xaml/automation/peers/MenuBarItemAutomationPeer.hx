@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.automation.peers;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer")
 extern class MenuBarItemAutomationPeer
@@ -9,7 +12,7 @@ extern class MenuBarItemAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.IExpandCollapseProvider
     implements winrt.windows.ui.xaml.automation.provider.IInvokeProvider
 {
-    /* explicit */ function new(owner: cxx.ConstRef<winrt.windows.ui.xaml.controls.MenuBarItem>);
+    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.MenuBarItem>);
     overload function ExpandCollapseState(): winrt.windows.ui.xaml.automation.ExpandCollapseState;
     function Collapse(): Void;
     function Expand(): Void;

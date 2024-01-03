@@ -1,6 +1,9 @@
 package winrt.windows.storage.search;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Storage.Search.h", true)
 @:native("winrt::Windows::Storage::Search::IQueryOptionsWithProviderFilter")
 extern interface IQueryOptionsWithProviderFilter extends winrt.windows.foundation.IInspectable

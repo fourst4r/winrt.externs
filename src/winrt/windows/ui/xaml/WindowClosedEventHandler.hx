@@ -2,4 +2,4 @@ package winrt.windows.ui.xaml;
 
 
 @:extern 
-typedef WindowClosedEventHandler = (sender: cxx.ConstRef<winrt.windows.foundation.IInspectable>, e: cxx.ConstRef<winrt.windows.ui.core.CoreWindowEventArgs>)->Void;
+typedef WindowClosedEventHandler = Fn<(sender: ConstRef<winrt.windows.foundation.IInspectable>, e: ConstRef<winrt.windows.ui.core.CoreWindowEventArgs>)->Void>;

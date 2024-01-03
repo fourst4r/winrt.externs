@@ -1,6 +1,9 @@
 package winrt.windows.security.authentication.web.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Security.Authentication.Web.Core.h", true)
 @:native("winrt::Windows::Security::Authentication::Web::Core::IWebTokenResponse")
 extern interface IWebTokenResponse extends winrt.windows.foundation.IInspectable

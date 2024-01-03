@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.h", true)
 @:native("winrt::Microsoft::UI::Xaml::IWindowEventArgs")
 extern interface IWindowEventArgs extends winrt.windows.foundation.IInspectable

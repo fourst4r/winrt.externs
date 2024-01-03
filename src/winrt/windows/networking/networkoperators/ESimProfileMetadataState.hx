@@ -2,7 +2,7 @@ package winrt.windows.networking.networkoperators;
 
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::ESimProfileMetadataState")
-extern enum abstract ESimProfileMetadataState(cxx.num.Int32)
+extern enum abstract ESimProfileMetadataState(Int32)
 {
     @:native("winrt::Windows::Networking::NetworkOperators::ESimProfileMetadataState::Unknown") final Unknown;
     @:native("winrt::Windows::Networking::NetworkOperators::ESimProfileMetadataState::WaitingForInstall") final WaitingForInstall;

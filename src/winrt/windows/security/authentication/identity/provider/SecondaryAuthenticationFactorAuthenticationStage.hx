@@ -2,7 +2,7 @@ package winrt.windows.security.authentication.identity.provider;
 
 @:include("winrt/Windows.Security.Authentication.Identity.Provider.h", true)
 @:native("winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStage")
-extern enum abstract SecondaryAuthenticationFactorAuthenticationStage(cxx.num.Int32)
+extern enum abstract SecondaryAuthenticationFactorAuthenticationStage(Int32)
 {
     @:native("winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStage::NotStarted") final NotStarted;
     @:native("winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStage::WaitingForUserConfirmation") final WaitingForUserConfirmation;

@@ -1,6 +1,9 @@
 package winrt.windows.storage;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Storage.h", true)
 @:native("winrt::Windows::Storage::ISystemMusicProperties")
 extern interface ISystemMusicProperties extends winrt.windows.foundation.IInspectable

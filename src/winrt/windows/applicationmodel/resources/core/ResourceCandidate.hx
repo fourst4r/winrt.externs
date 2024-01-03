@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.resources.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Resources.Core.h", true)
 @:native("winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate")
 extern class ResourceCandidate
@@ -14,7 +17,7 @@ extern class ResourceCandidate
     overload function IsDefault(): Bool;
     overload function ValueAsString(): winrt.HString;
     function GetValueAsFileAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.StorageFile> /* GenericTypeInstSig */;
-    function GetQualifierValue(qualifierName: cxx.ConstRef<winrt.HString>): winrt.HString;
+    function GetQualifierValue(qualifierName: ConstRef<winrt.HString>): winrt.HString;
     function GetValueAsStreamAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.streams.IRandomAccessStream> /* GenericTypeInstSig */;
     overload function Kind(): winrt.windows.applicationmodel.resources.core.ResourceCandidateKind;
 }

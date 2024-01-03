@@ -1,6 +1,9 @@
 package winrt.windows.perception.spatial.surfaces;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Perception.Spatial.Surfaces.h", true)
 @:native("winrt::Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMesh")
 extern interface ISpatialSurfaceMesh extends winrt.windows.foundation.IInspectable

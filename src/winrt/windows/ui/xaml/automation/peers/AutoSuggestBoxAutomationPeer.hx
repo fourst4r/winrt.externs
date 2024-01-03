@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.automation.peers;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Windows::UI::Xaml::Automation::Peers::AutoSuggestBoxAutomationPeer")
 extern class AutoSuggestBoxAutomationPeer
@@ -8,6 +11,6 @@ extern class AutoSuggestBoxAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IAutoSuggestBoxAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.IInvokeProvider
 {
-    /* explicit */ function new(owner: cxx.ConstRef<winrt.windows.ui.xaml.controls.AutoSuggestBox>);
+    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.AutoSuggestBox>);
     function Invoke(): Void;
 }

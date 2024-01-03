@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.input;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Input.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Input::StandardUICommand")
 extern class StandardUICommand
@@ -9,9 +12,9 @@ extern class StandardUICommand
 {
     function new();
     @:native("winrt::Microsoft::UI::Xaml::Input::StandardUICommand")
-    /* explicit */ static overload function make(kind: cxx.ConstRef<winrt.microsoft.ui.xaml.input.StandardUICommandKind>): winrt.microsoft.ui.xaml.input.StandardUICommand;
+    /* explicit */ static overload function make(kind: ConstRef<winrt.microsoft.ui.xaml.input.StandardUICommandKind>): winrt.microsoft.ui.xaml.input.StandardUICommand;
     overload function Kind(): winrt.microsoft.ui.xaml.input.StandardUICommandKind;
-    overload function Kind(value: cxx.ConstRef<winrt.microsoft.ui.xaml.input.StandardUICommandKind>): Void;
+    overload function Kind(value: ConstRef<winrt.microsoft.ui.xaml.input.StandardUICommandKind>): Void;
     overload function KindProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function KindProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
 }

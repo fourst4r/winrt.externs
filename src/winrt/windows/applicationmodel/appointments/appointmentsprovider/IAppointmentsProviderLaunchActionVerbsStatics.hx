@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.appointments.appointmentsprovider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Appointments.AppointmentsProvider.h", true)
 @:native("winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::IAppointmentsProviderLaunchActionVerbsStatics")
 extern interface IAppointmentsProviderLaunchActionVerbsStatics extends winrt.windows.foundation.IInspectable

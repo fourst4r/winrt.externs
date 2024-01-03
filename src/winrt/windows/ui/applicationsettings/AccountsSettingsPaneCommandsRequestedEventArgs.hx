@@ -1,6 +1,9 @@
 package winrt.windows.ui.applicationsettings;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.ApplicationSettings.h", true)
 @:native("winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs")
 extern class AccountsSettingsPaneCommandsRequestedEventArgs
@@ -12,7 +15,7 @@ extern class AccountsSettingsPaneCommandsRequestedEventArgs
     overload function CredentialCommands(): winrt.windows.foundation.collections.IVector<winrt.windows.ui.applicationsettings.CredentialCommand> /* GenericTypeInstSig */;
     overload function Commands(): winrt.windows.foundation.collections.IVector<winrt.windows.ui.applicationsettings.SettingsCommand> /* GenericTypeInstSig */;
     overload function HeaderText(): winrt.HString;
-    overload function HeaderText(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function HeaderText(value: ConstRef<winrt.HString>): Void;
     function GetDeferral(): winrt.windows.ui.applicationsettings.AccountsSettingsPaneEventDeferral;
     overload function User(): winrt.windows.system.User;
 }

@@ -1,6 +1,9 @@
 package winrt.windows.media.devices;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::HdrVideoControl")
 extern class HdrVideoControl
@@ -9,5 +12,5 @@ extern class HdrVideoControl
     overload function Supported(): Bool;
     overload function SupportedModes(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.devices.HdrVideoMode> /* GenericTypeInstSig */;
     overload function Mode(): winrt.windows.media.devices.HdrVideoMode;
-    overload function Mode(value: cxx.ConstRef<winrt.windows.media.devices.HdrVideoMode>): Void;
+    overload function Mode(value: ConstRef<winrt.windows.media.devices.HdrVideoMode>): Void;
 }

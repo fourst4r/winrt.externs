@@ -1,6 +1,9 @@
 package winrt.windows.security.exchangeactivesyncprovisioning;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Security.ExchangeActiveSyncProvisioning.h", true)
 @:native("winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasClientDeviceInformation")
 extern class EasClientDeviceInformation

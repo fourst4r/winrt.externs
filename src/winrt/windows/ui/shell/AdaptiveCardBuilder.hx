@@ -4,5 +4,5 @@ package winrt.windows.ui.shell;
 @:native("winrt::Windows::UI::Shell::AdaptiveCardBuilder")
 extern class AdaptiveCardBuilder
 {
-    static function CreateAdaptiveCardFromJson(value: cxx.ConstRef<winrt.HString>): winrt.windows.ui.shell.IAdaptiveCard;
+    static function CreateAdaptiveCardFromJson(value: ConstRef<winrt.HString>): winrt.windows.ui.shell.IAdaptiveCard;
 }

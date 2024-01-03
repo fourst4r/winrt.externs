@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.input;
 
 @:include("winrt/Microsoft.UI.Xaml.Input.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Input::FocusInputDeviceKind")
-extern enum abstract FocusInputDeviceKind(cxx.num.Int32)
+extern enum abstract FocusInputDeviceKind(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Input::FocusInputDeviceKind::None") final None;
     @:native("winrt::Microsoft::UI::Xaml::Input::FocusInputDeviceKind::Mouse") final Mouse;

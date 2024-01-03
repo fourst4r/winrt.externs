@@ -2,7 +2,7 @@ package winrt.windows.ui.text;
 
 @:include("winrt/Windows.UI.Text.h", true)
 @:native("winrt::Windows::UI::Text::UnderlineType")
-extern enum abstract UnderlineType(cxx.num.Int32)
+extern enum abstract UnderlineType(Int32)
 {
     @:native("winrt::Windows::UI::Text::UnderlineType::Undefined") final Undefined;
     @:native("winrt::Windows::UI::Text::UnderlineType::None") final None;

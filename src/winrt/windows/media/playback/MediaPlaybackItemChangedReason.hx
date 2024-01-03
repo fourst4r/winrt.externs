@@ -2,7 +2,7 @@ package winrt.windows.media.playback;
 
 @:include("winrt/Windows.Media.Playback.h", true)
 @:native("winrt::Windows::Media::Playback::MediaPlaybackItemChangedReason")
-extern enum abstract MediaPlaybackItemChangedReason(cxx.num.Int32)
+extern enum abstract MediaPlaybackItemChangedReason(Int32)
 {
     @:native("winrt::Windows::Media::Playback::MediaPlaybackItemChangedReason::InitialItem") final InitialItem;
     @:native("winrt::Windows::Media::Playback::MediaPlaybackItemChangedReason::EndOfStream") final EndOfStream;

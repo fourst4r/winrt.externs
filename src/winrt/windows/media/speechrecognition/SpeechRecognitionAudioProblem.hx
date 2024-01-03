@@ -2,7 +2,7 @@ package winrt.windows.media.speechrecognition;
 
 @:include("winrt/Windows.Media.SpeechRecognition.h", true)
 @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognitionAudioProblem")
-extern enum abstract SpeechRecognitionAudioProblem(cxx.num.Int32)
+extern enum abstract SpeechRecognitionAudioProblem(Int32)
 {
     @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognitionAudioProblem::None") final None;
     @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognitionAudioProblem::TooNoisy") final TooNoisy;

@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.appointments;
 
 @:include("winrt/Windows.ApplicationModel.Appointments.h", true)
 @:native("winrt::Windows::ApplicationModel::Appointments::AppointmentRecurrenceUnit")
-extern enum abstract AppointmentRecurrenceUnit(cxx.num.Int32)
+extern enum abstract AppointmentRecurrenceUnit(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Appointments::AppointmentRecurrenceUnit::Daily") final Daily;
     @:native("winrt::Windows::ApplicationModel::Appointments::AppointmentRecurrenceUnit::Weekly") final Weekly;

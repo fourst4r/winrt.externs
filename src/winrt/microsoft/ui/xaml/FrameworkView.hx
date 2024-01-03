@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.h", true)
 @:native("winrt::Microsoft::UI::Xaml::FrameworkView")
 extern class FrameworkView
@@ -8,9 +11,9 @@ extern class FrameworkView
     implements winrt.windows.applicationmodel.core.IFrameworkView
 {
     function new();
-    function Initialize(applicationView: cxx.ConstRef<winrt.windows.applicationmodel.core.CoreApplicationView>): Void;
-    function SetWindow(window: cxx.ConstRef<winrt.windows.ui.core.CoreWindow>): Void;
-    function Load(entryPoint: cxx.ConstRef<winrt.HString>): Void;
+    function Initialize(applicationView: ConstRef<winrt.windows.applicationmodel.core.CoreApplicationView>): Void;
+    function SetWindow(window: ConstRef<winrt.windows.ui.core.CoreWindow>): Void;
+    function Load(entryPoint: ConstRef<winrt.HString>): Void;
     function Run(): Void;
     function Uninitialize(): Void;
 }

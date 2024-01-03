@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.media.animation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Media.Animation.h", true)
 @:native("winrt::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation")
 extern class SwipeHintThemeAnimation
@@ -9,11 +12,11 @@ extern class SwipeHintThemeAnimation
 {
     function new();
     overload function TargetName(): winrt.HString;
-    overload function TargetName(value: cxx.ConstRef<winrt.HString>): Void;
-    overload function ToHorizontalOffset(): cxx.num.Float64;
-    overload function ToHorizontalOffset(value: cxx.num.Float64): Void;
-    overload function ToVerticalOffset(): cxx.num.Float64;
-    overload function ToVerticalOffset(value: cxx.num.Float64): Void;
+    overload function TargetName(value: ConstRef<winrt.HString>): Void;
+    overload function ToHorizontalOffset(): Float64;
+    overload function ToHorizontalOffset(value: Float64): Void;
+    overload function ToVerticalOffset(): Float64;
+    overload function ToVerticalOffset(value: Float64): Void;
     overload function TargetNameProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function ToHorizontalOffsetProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function ToVerticalOffsetProperty(): winrt.windows.ui.xaml.DependencyProperty;

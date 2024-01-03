@@ -2,7 +2,7 @@ package winrt.windows.devices.display;
 
 @:include("winrt/Windows.Devices.Display.h", true)
 @:native("winrt::Windows::Devices::Display::DisplayMonitorPhysicalConnectorKind")
-extern enum abstract DisplayMonitorPhysicalConnectorKind(cxx.num.Int32)
+extern enum abstract DisplayMonitorPhysicalConnectorKind(Int32)
 {
     @:native("winrt::Windows::Devices::Display::DisplayMonitorPhysicalConnectorKind::Unknown") final Unknown;
     @:native("winrt::Windows::Devices::Display::DisplayMonitorPhysicalConnectorKind::HD15") final HD15;

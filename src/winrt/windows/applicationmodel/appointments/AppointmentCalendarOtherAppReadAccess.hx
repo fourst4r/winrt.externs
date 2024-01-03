@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.appointments;
 
 @:include("winrt/Windows.ApplicationModel.Appointments.h", true)
 @:native("winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarOtherAppReadAccess")
-extern enum abstract AppointmentCalendarOtherAppReadAccess(cxx.num.Int32)
+extern enum abstract AppointmentCalendarOtherAppReadAccess(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarOtherAppReadAccess::SystemOnly") final SystemOnly;
     @:native("winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarOtherAppReadAccess::Limited") final Limited;

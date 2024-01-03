@@ -2,7 +2,7 @@ package winrt.windows.devices.printers;
 
 @:include("winrt/Windows.Devices.Printers.h", true)
 @:native("winrt::Windows::Devices::Printers::IppAttributeValueKind")
-extern enum abstract IppAttributeValueKind(cxx.num.Int32)
+extern enum abstract IppAttributeValueKind(Int32)
 {
     @:native("winrt::Windows::Devices::Printers::IppAttributeValueKind::Unsupported") final Unsupported;
     @:native("winrt::Windows::Devices::Printers::IppAttributeValueKind::Unknown") final Unknown;

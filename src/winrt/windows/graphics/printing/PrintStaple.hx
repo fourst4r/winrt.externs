@@ -2,7 +2,7 @@ package winrt.windows.graphics.printing;
 
 @:include("winrt/Windows.Graphics.Printing.h", true)
 @:native("winrt::Windows::Graphics::Printing::PrintStaple")
-extern enum abstract PrintStaple(cxx.num.Int32)
+extern enum abstract PrintStaple(Int32)
 {
     @:native("winrt::Windows::Graphics::Printing::PrintStaple::Default") final Default;
     @:native("winrt::Windows::Graphics::Printing::PrintStaple::NotAvailable") final NotAvailable;

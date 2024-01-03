@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::PersonPicture")
 extern class PersonPicture
@@ -8,26 +11,26 @@ extern class PersonPicture
     implements winrt.microsoft.ui.xaml.controls.IPersonPicture
 {
     function new();
-    overload function BadgeNumber(): cxx.num.Int32;
-    overload function BadgeNumber(value: cxx.num.Int32): Void;
+    overload function BadgeNumber(): Int32;
+    overload function BadgeNumber(value: Int32): Void;
     overload function BadgeGlyph(): winrt.HString;
-    overload function BadgeGlyph(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function BadgeGlyph(value: ConstRef<winrt.HString>): Void;
     overload function BadgeImageSource(): winrt.microsoft.ui.xaml.media.ImageSource;
-    overload function BadgeImageSource(value: cxx.ConstRef<winrt.microsoft.ui.xaml.media.ImageSource>): Void;
+    overload function BadgeImageSource(value: ConstRef<winrt.microsoft.ui.xaml.media.ImageSource>): Void;
     overload function BadgeText(): winrt.HString;
-    overload function BadgeText(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function BadgeText(value: ConstRef<winrt.HString>): Void;
     overload function IsGroup(): Bool;
     overload function IsGroup(value: Bool): Void;
     overload function Contact(): winrt.windows.applicationmodel.contacts.Contact;
-    overload function Contact(value: cxx.ConstRef<winrt.windows.applicationmodel.contacts.Contact>): Void;
+    overload function Contact(value: ConstRef<winrt.windows.applicationmodel.contacts.Contact>): Void;
     overload function DisplayName(): winrt.HString;
-    overload function DisplayName(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function DisplayName(value: ConstRef<winrt.HString>): Void;
     overload function Initials(): winrt.HString;
-    overload function Initials(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function Initials(value: ConstRef<winrt.HString>): Void;
     overload function PreferSmallImage(): Bool;
     overload function PreferSmallImage(value: Bool): Void;
     overload function ProfilePicture(): winrt.microsoft.ui.xaml.media.ImageSource;
-    overload function ProfilePicture(value: cxx.ConstRef<winrt.microsoft.ui.xaml.media.ImageSource>): Void;
+    overload function ProfilePicture(value: ConstRef<winrt.microsoft.ui.xaml.media.ImageSource>): Void;
     overload function TemplateSettings(): winrt.microsoft.ui.xaml.controls.PersonPictureTemplateSettings;
     overload function BadgeNumberProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function BadgeGlyphProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

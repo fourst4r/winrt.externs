@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.email;
 
 @:include("winrt/Windows.ApplicationModel.Email.h", true)
 @:native("winrt::Windows::ApplicationModel::Email::EmailCertificateValidationStatus")
-extern enum abstract EmailCertificateValidationStatus(cxx.num.Int32)
+extern enum abstract EmailCertificateValidationStatus(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Email::EmailCertificateValidationStatus::Success") final Success;
     @:native("winrt::Windows::ApplicationModel::Email::EmailCertificateValidationStatus::NoMatch") final NoMatch;

@@ -4,6 +4,6 @@ package winrt.windows.devices.bluetooth;
 @:native("winrt::Windows::Devices::Bluetooth::BluetoothUuidHelper")
 extern class BluetoothUuidHelper
 {
-    static function FromShortId(shortId: cxx.num.UInt32): winrt.Guid;
-    static function TryGetShortId(uuid: cxx.ConstRef<winrt.Guid>): winrt.windows.foundation.IReference<cxx.num.UInt32> /* GenericTypeInstSig */;
+    static function FromShortId(shortId: UInt32): winrt.Guid;
+    static function TryGetShortId(uuid: ConstRef<winrt.Guid>): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
 }

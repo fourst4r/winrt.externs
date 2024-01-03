@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::NavigationViewItem")
 extern class NavigationViewItem
@@ -10,8 +13,8 @@ extern class NavigationViewItem
 {
     function new();
     overload function Icon(): winrt.windows.ui.xaml.controls.IconElement;
-    overload function Icon(value: cxx.ConstRef<winrt.windows.ui.xaml.controls.IconElement>): Void;
-    overload function CompactPaneLength(): cxx.num.Float64;
+    overload function Icon(value: ConstRef<winrt.windows.ui.xaml.controls.IconElement>): Void;
+    overload function CompactPaneLength(): Float64;
     overload function SelectsOnInvoked(): Bool;
     overload function SelectsOnInvoked(value: Bool): Void;
     overload function SelectsOnInvokedProperty(): winrt.windows.ui.xaml.DependencyProperty;

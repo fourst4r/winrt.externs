@@ -2,7 +2,7 @@ package winrt.windows.ui.input.preview.injection;
 
 @:include("winrt/Windows.UI.Input.Preview.Injection.h", true)
 @:native("winrt::Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode")
-extern enum abstract InjectedInputVisualizationMode(cxx.num.Int32)
+extern enum abstract InjectedInputVisualizationMode(Int32)
 {
     @:native("winrt::Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode::None") final None;
     @:native("winrt::Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode::Default") final Default;

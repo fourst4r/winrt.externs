@@ -4,5 +4,5 @@ package winrt.windows.system.profile;
 @:native("winrt::Windows::System::Profile::HardwareIdentification")
 extern class HardwareIdentification
 {
-    static function GetPackageSpecificToken(nonce: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.system.profile.HardwareToken;
+    static function GetPackageSpecificToken(nonce: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.system.profile.HardwareToken;
 }

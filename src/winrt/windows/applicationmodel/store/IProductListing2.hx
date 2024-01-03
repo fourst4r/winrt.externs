@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.store;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Store.h", true)
 @:native("winrt::Windows::ApplicationModel::Store::IProductListing2")
 extern interface IProductListing2 extends winrt.windows.foundation.IInspectable

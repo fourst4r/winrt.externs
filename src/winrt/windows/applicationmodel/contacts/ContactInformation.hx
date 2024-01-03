@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.contacts;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Contacts.h", true)
 @:native("winrt::Windows::ApplicationModel::Contacts::ContactInformation")
 extern class ContactInformation
@@ -13,5 +16,5 @@ extern class ContactInformation
     overload function Locations(): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.contacts.ContactLocationField> /* GenericTypeInstSig */;
     overload function InstantMessages(): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.contacts.ContactInstantMessageField> /* GenericTypeInstSig */;
     overload function CustomFields(): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.contacts.ContactField> /* GenericTypeInstSig */;
-    function QueryCustomFields(customName: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.contacts.ContactField> /* GenericTypeInstSig */;
+    function QueryCustomFields(customName: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.contacts.ContactField> /* GenericTypeInstSig */;
 }

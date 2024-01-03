@@ -1,6 +1,9 @@
 package winrt.windows.data.pdf;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Data.Pdf.h", true)
 @:native("winrt::Windows::Data::Pdf::PdfPageDimensions")
 extern class PdfPageDimensions

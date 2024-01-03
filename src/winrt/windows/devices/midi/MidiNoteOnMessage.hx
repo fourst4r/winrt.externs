@@ -1,16 +1,19 @@
 package winrt.windows.devices.midi;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Midi.h", true)
 @:native("winrt::Windows::Devices::Midi::MidiNoteOnMessage")
 extern class MidiNoteOnMessage
     implements winrt.windows.devices.midi.IMidiMessage
     implements winrt.windows.devices.midi.IMidiNoteOnMessage
 {
-    function new(channel: cxx.num.UInt8, note: cxx.num.UInt8, velocity: cxx.num.UInt8);
-    overload function Channel(): cxx.num.UInt8;
-    overload function Note(): cxx.num.UInt8;
-    overload function Velocity(): cxx.num.UInt8;
+    function new(channel: UInt8, note: UInt8, velocity: UInt8);
+    overload function Channel(): UInt8;
+    overload function Note(): UInt8;
+    overload function Velocity(): UInt8;
     overload function Timestamp(): winrt.windows.foundation.TimeSpan;
     overload function RawData(): winrt.windows.storage.streams.IBuffer;
     overload function Type(): winrt.windows.devices.midi.MidiMessageType;

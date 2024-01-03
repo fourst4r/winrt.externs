@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::AutoSuggestBoxTextChangedEventArgs")
 extern class AutoSuggestBoxTextChangedEventArgs
@@ -9,7 +12,7 @@ extern class AutoSuggestBoxTextChangedEventArgs
 {
     function new();
     overload function Reason(): winrt.windows.ui.xaml.controls.AutoSuggestionBoxTextChangeReason;
-    overload function Reason(value: cxx.ConstRef<winrt.windows.ui.xaml.controls.AutoSuggestionBoxTextChangeReason>): Void;
+    overload function Reason(value: ConstRef<winrt.windows.ui.xaml.controls.AutoSuggestionBoxTextChangeReason>): Void;
     function CheckCurrent(): Bool;
     overload function ReasonProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function ReasonProperty(): winrt.windows.ui.xaml.DependencyProperty;

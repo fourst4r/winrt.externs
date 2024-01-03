@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.appservice;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.AppService.h", true)
 @:native("winrt::Windows::ApplicationModel::AppService::IAppServiceTriggerDetails")
 extern interface IAppServiceTriggerDetails extends winrt.windows.foundation.IInspectable

@@ -1,6 +1,9 @@
 package winrt.windows.security.cryptography.certificates;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Security.Cryptography.Certificates.h", true)
 @:native("winrt::Windows::Security::Cryptography::Certificates::ChainBuildingParameters")
 extern class ChainBuildingParameters
@@ -9,7 +12,7 @@ extern class ChainBuildingParameters
     function new();
     overload function EnhancedKeyUsages(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function ValidationTimestamp(): winrt.windows.foundation.DateTime;
-    overload function ValidationTimestamp(value: cxx.ConstRef<winrt.windows.foundation.DateTime>): Void;
+    overload function ValidationTimestamp(value: ConstRef<winrt.windows.foundation.DateTime>): Void;
     overload function RevocationCheckEnabled(): Bool;
     overload function RevocationCheckEnabled(value: Bool): Void;
     overload function NetworkRetrievalEnabled(): Bool;

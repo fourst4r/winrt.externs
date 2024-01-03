@@ -1,6 +1,9 @@
 package winrt.windows.media.devices;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::IExposureControl")
 extern interface IExposureControl extends winrt.windows.foundation.IInspectable
@@ -12,5 +15,5 @@ extern interface IExposureControl extends winrt.windows.foundation.IInspectable
     overload function Max(): winrt.windows.foundation.TimeSpan;
     overload function Step(): winrt.windows.foundation.TimeSpan;
     overload function Value(): winrt.windows.foundation.TimeSpan;
-    function SetValueAsync(shutterDuration: cxx.ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.foundation.IAsyncAction;
+    function SetValueAsync(shutterDuration: ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.foundation.IAsyncAction;
 }

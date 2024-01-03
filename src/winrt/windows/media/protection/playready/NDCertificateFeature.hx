@@ -2,7 +2,7 @@ package winrt.windows.media.protection.playready;
 
 @:include("winrt/Windows.Media.Protection.PlayReady.h", true)
 @:native("winrt::Windows::Media::Protection::PlayReady::NDCertificateFeature")
-extern enum abstract NDCertificateFeature(cxx.num.Int32)
+extern enum abstract NDCertificateFeature(Int32)
 {
     @:native("winrt::Windows::Media::Protection::PlayReady::NDCertificateFeature::Transmitter") final Transmitter;
     @:native("winrt::Windows::Media::Protection::PlayReady::NDCertificateFeature::Receiver") final Receiver;

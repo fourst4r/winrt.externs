@@ -2,7 +2,7 @@ package winrt.windows.services.store;
 
 @:include("winrt/Windows.Services.Store.h", true)
 @:native("winrt::Windows::Services::Store::StoreQueueItemState")
-extern enum abstract StoreQueueItemState(cxx.num.Int32)
+extern enum abstract StoreQueueItemState(Int32)
 {
     @:native("winrt::Windows::Services::Store::StoreQueueItemState::Active") final Active;
     @:native("winrt::Windows::Services::Store::StoreQueueItemState::Completed") final Completed;

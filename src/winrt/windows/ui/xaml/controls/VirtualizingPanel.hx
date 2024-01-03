@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::VirtualizingPanel")
 extern class VirtualizingPanel
@@ -10,10 +13,10 @@ extern class VirtualizingPanel
     implements winrt.windows.ui.xaml.controls.IVirtualizingPanelOverrides
 {
     overload function ItemContainerGenerator(): winrt.windows.ui.xaml.controls.ItemContainerGenerator;
-    function AddInternalChild(child: cxx.ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
-    function InsertInternalChild(index: cxx.num.Int32, child: cxx.ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
-    function RemoveInternalChildRange(index: cxx.num.Int32, range: cxx.num.Int32): Void;
-    function OnItemsChanged(sender: cxx.ConstRef<winrt.windows.foundation.IInspectable>, args: cxx.ConstRef<winrt.windows.ui.xaml.controls.primitives.ItemsChangedEventArgs>): Void;
+    function AddInternalChild(child: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
+    function InsertInternalChild(index: Int32, child: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
+    function RemoveInternalChildRange(index: Int32, range: Int32): Void;
+    function OnItemsChanged(sender: ConstRef<winrt.windows.foundation.IInspectable>, args: ConstRef<winrt.windows.ui.xaml.controls.primitives.ItemsChangedEventArgs>): Void;
     function OnClearChildren(): Void;
-    function BringIndexIntoView(index: cxx.num.Int32): Void;
+    function BringIndexIntoView(index: Int32): Void;
 }

@@ -1,6 +1,9 @@
 package winrt.windows.devices.sensors.custom;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Sensors.Custom.h", true)
 @:native("winrt::Windows::Devices::Sensors::Custom::ICustomSensorReading")
 extern interface ICustomSensorReading extends winrt.windows.foundation.IInspectable

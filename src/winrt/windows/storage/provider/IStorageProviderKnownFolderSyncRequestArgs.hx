@@ -1,6 +1,9 @@
 package winrt.windows.storage.provider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Storage.Provider.h", true)
 @:native("winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncRequestArgs")
 extern interface IStorageProviderKnownFolderSyncRequestArgs extends winrt.windows.foundation.IInspectable

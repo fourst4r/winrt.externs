@@ -2,7 +2,7 @@ package winrt.windows.devices.lights;
 
 @:include("winrt/Windows.Devices.Lights.h", true)
 @:native("winrt::Windows::Devices::Lights::LampPurposes")
-extern enum abstract LampPurposes(cxx.num.UInt32)
+extern enum abstract LampPurposes(UInt32)
 {
     @:native("winrt::Windows::Devices::Lights::LampPurposes::Undefined") final Undefined;
     @:native("winrt::Windows::Devices::Lights::LampPurposes::Control") final Control;

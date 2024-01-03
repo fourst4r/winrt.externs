@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.background;
 
 @:include("winrt/Windows.ApplicationModel.Background.h", true)
 @:native("winrt::Windows::ApplicationModel::Background::DeviceTriggerResult")
-extern enum abstract DeviceTriggerResult(cxx.num.Int32)
+extern enum abstract DeviceTriggerResult(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Background::DeviceTriggerResult::Allowed") final Allowed;
     @:native("winrt::Windows::ApplicationModel::Background::DeviceTriggerResult::DeniedByUser") final DeniedByUser;

@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.h", true)
 @:native("winrt::Windows::ApplicationModel::IPackageCatalogRemoveResourcePackagesResult")
 extern interface IPackageCatalogRemoveResourcePackagesResult extends winrt.windows.foundation.IInspectable

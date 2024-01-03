@@ -2,7 +2,7 @@ package winrt.windows.system;
 
 @:include("winrt/Windows.System.h", true)
 @:native("winrt::Windows::System::VirtualKeyModifiers")
-extern enum abstract VirtualKeyModifiers(cxx.num.UInt32)
+extern enum abstract VirtualKeyModifiers(UInt32)
 {
     @:native("winrt::Windows::System::VirtualKeyModifiers::None") final None;
     @:native("winrt::Windows::System::VirtualKeyModifiers::Control") final Control;

@@ -1,6 +1,9 @@
 package winrt.windows.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::ICompositionDrawingSurface")
 extern interface ICompositionDrawingSurface extends winrt.windows.foundation.IInspectable

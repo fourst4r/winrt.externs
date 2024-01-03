@@ -1,30 +1,33 @@
 package winrt.windows.devices.bluetooth;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Bluetooth.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::IBluetoothLEAppearanceCategoriesStatics")
 extern interface IBluetoothLEAppearanceCategoriesStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function Uncategorized(): cxx.num.UInt16;
-    overload function Phone(): cxx.num.UInt16;
-    overload function Computer(): cxx.num.UInt16;
-    overload function Watch(): cxx.num.UInt16;
-    overload function Clock(): cxx.num.UInt16;
-    overload function Display(): cxx.num.UInt16;
-    overload function RemoteControl(): cxx.num.UInt16;
-    overload function EyeGlasses(): cxx.num.UInt16;
-    overload function Tag(): cxx.num.UInt16;
-    overload function Keyring(): cxx.num.UInt16;
-    overload function MediaPlayer(): cxx.num.UInt16;
-    overload function BarcodeScanner(): cxx.num.UInt16;
-    overload function Thermometer(): cxx.num.UInt16;
-    overload function HeartRate(): cxx.num.UInt16;
-    overload function BloodPressure(): cxx.num.UInt16;
-    overload function HumanInterfaceDevice(): cxx.num.UInt16;
-    overload function GlucoseMeter(): cxx.num.UInt16;
-    overload function RunningWalking(): cxx.num.UInt16;
-    overload function Cycling(): cxx.num.UInt16;
-    overload function PulseOximeter(): cxx.num.UInt16;
-    overload function WeightScale(): cxx.num.UInt16;
-    overload function OutdoorSportActivity(): cxx.num.UInt16;
+    overload function Uncategorized(): UInt16;
+    overload function Phone(): UInt16;
+    overload function Computer(): UInt16;
+    overload function Watch(): UInt16;
+    overload function Clock(): UInt16;
+    overload function Display(): UInt16;
+    overload function RemoteControl(): UInt16;
+    overload function EyeGlasses(): UInt16;
+    overload function Tag(): UInt16;
+    overload function Keyring(): UInt16;
+    overload function MediaPlayer(): UInt16;
+    overload function BarcodeScanner(): UInt16;
+    overload function Thermometer(): UInt16;
+    overload function HeartRate(): UInt16;
+    overload function BloodPressure(): UInt16;
+    overload function HumanInterfaceDevice(): UInt16;
+    overload function GlucoseMeter(): UInt16;
+    overload function RunningWalking(): UInt16;
+    overload function Cycling(): UInt16;
+    overload function PulseOximeter(): UInt16;
+    overload function WeightScale(): UInt16;
+    overload function OutdoorSportActivity(): UInt16;
 }

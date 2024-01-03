@@ -2,7 +2,7 @@ package winrt.windows.ui.startscreen;
 
 @:include("winrt/Windows.UI.StartScreen.h", true)
 @:native("winrt::Windows::UI::StartScreen::TileSize")
-extern enum abstract TileSize(cxx.num.Int32)
+extern enum abstract TileSize(Int32)
 {
     @:native("winrt::Windows::UI::StartScreen::TileSize::Default") final Default;
     @:native("winrt::Windows::UI::StartScreen::TileSize::Square30x30") final Square30x30;

@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.activation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Activation.h", true)
 @:native("winrt::Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs")
 extern class ProtocolActivatedEventArgs
@@ -17,7 +20,7 @@ extern class ProtocolActivatedEventArgs
     overload function SplashScreen(): winrt.windows.applicationmodel.activation.SplashScreen;
     overload function CallerPackageFamilyName(): winrt.HString;
     overload function Data(): winrt.windows.foundation.collections.ValueSet;
-    overload function CurrentlyShownApplicationViewId(): cxx.num.Int32;
+    overload function CurrentlyShownApplicationViewId(): Int32;
     overload function ViewSwitcher(): winrt.windows.ui.viewmanagement.ActivationViewSwitcher;
     overload function User(): winrt.windows.system.User;
 }

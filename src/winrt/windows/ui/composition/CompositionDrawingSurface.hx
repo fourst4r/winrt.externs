@@ -1,6 +1,9 @@
 package winrt.windows.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::CompositionDrawingSurface")
 extern class CompositionDrawingSurface
@@ -13,9 +16,9 @@ extern class CompositionDrawingSurface
     overload function PixelFormat(): winrt.windows.graphics.directx.DirectXPixelFormat;
     overload function Size(): winrt.windows.foundation.Size;
     overload function SizeInt32(): winrt.windows.graphics.SizeInt32;
-    function Resize(sizePixels: cxx.ConstRef<winrt.windows.graphics.SizeInt32>): Void;
-    overload function Scroll(offset: cxx.ConstRef<winrt.windows.graphics.PointInt32>): Void;
-    overload function Scroll(offset: cxx.ConstRef<winrt.windows.graphics.PointInt32>, scrollRect: cxx.ConstRef<winrt.windows.graphics.RectInt32>): Void;
-    overload function ScrollWithClip(offset: cxx.ConstRef<winrt.windows.graphics.PointInt32>, clipRect: cxx.ConstRef<winrt.windows.graphics.RectInt32>): Void;
-    overload function ScrollWithClip(offset: cxx.ConstRef<winrt.windows.graphics.PointInt32>, clipRect: cxx.ConstRef<winrt.windows.graphics.RectInt32>, scrollRect: cxx.ConstRef<winrt.windows.graphics.RectInt32>): Void;
+    function Resize(sizePixels: ConstRef<winrt.windows.graphics.SizeInt32>): Void;
+    overload function Scroll(offset: ConstRef<winrt.windows.graphics.PointInt32>): Void;
+    overload function Scroll(offset: ConstRef<winrt.windows.graphics.PointInt32>, scrollRect: ConstRef<winrt.windows.graphics.RectInt32>): Void;
+    overload function ScrollWithClip(offset: ConstRef<winrt.windows.graphics.PointInt32>, clipRect: ConstRef<winrt.windows.graphics.RectInt32>): Void;
+    overload function ScrollWithClip(offset: ConstRef<winrt.windows.graphics.PointInt32>, clipRect: ConstRef<winrt.windows.graphics.RectInt32>, scrollRect: ConstRef<winrt.windows.graphics.RectInt32>): Void;
 }

@@ -1,6 +1,9 @@
 package winrt.windows.devices.display.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Display.Core.h", true)
 @:native("winrt::Windows::Devices::Display::Core::IDisplayManagerPathsFailedOrInvalidatedEventArgs")
 extern interface IDisplayManagerPathsFailedOrInvalidatedEventArgs extends winrt.windows.foundation.IInspectable

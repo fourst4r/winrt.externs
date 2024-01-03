@@ -1,6 +1,9 @@
 package winrt.windows.web.http.headers;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Web.Http.Headers.h", true)
 @:native("winrt::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValue")
 extern interface IHttpTransferCodingHeaderValue extends winrt.windows.foundation.IInspectable

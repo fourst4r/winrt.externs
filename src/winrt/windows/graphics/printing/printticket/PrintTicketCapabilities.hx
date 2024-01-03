@@ -1,6 +1,9 @@
 package winrt.windows.graphics.printing.printticket;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Graphics.Printing.PrintTicket.h", true)
 @:native("winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities")
 extern class PrintTicketCapabilities
@@ -24,6 +27,6 @@ extern class PrintTicketCapabilities
     overload function PageOutputColorFeature(): winrt.windows.graphics.printing.printticket.PrintTicketFeature;
     overload function PageOutputQualityFeature(): winrt.windows.graphics.printing.printticket.PrintTicketFeature;
     overload function PageResolutionFeature(): winrt.windows.graphics.printing.printticket.PrintTicketFeature;
-    function GetFeature(name: cxx.ConstRef<winrt.HString>, xmlNamespace: cxx.ConstRef<winrt.HString>): winrt.windows.graphics.printing.printticket.PrintTicketFeature;
-    function GetParameterDefinition(name: cxx.ConstRef<winrt.HString>, xmlNamespace: cxx.ConstRef<winrt.HString>): winrt.windows.graphics.printing.printticket.PrintTicketParameterDefinition;
+    function GetFeature(name: ConstRef<winrt.HString>, xmlNamespace: ConstRef<winrt.HString>): winrt.windows.graphics.printing.printticket.PrintTicketFeature;
+    function GetParameterDefinition(name: ConstRef<winrt.HString>, xmlNamespace: ConstRef<winrt.HString>): winrt.windows.graphics.printing.printticket.PrintTicketParameterDefinition;
 }

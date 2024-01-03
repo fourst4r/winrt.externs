@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.datatransfer.sharetarget;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.DataTransfer.ShareTarget.h", true)
 @:native("winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink")
 extern class QuickLink
@@ -8,11 +11,11 @@ extern class QuickLink
 {
     function new();
     overload function Title(): winrt.HString;
-    overload function Title(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function Title(value: ConstRef<winrt.HString>): Void;
     overload function Thumbnail(): winrt.windows.storage.streams.RandomAccessStreamReference;
-    overload function Thumbnail(value: cxx.ConstRef<winrt.windows.storage.streams.RandomAccessStreamReference>): Void;
+    overload function Thumbnail(value: ConstRef<winrt.windows.storage.streams.RandomAccessStreamReference>): Void;
     overload function Id(): winrt.HString;
-    overload function Id(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function Id(value: ConstRef<winrt.HString>): Void;
     overload function SupportedDataFormats(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function SupportedFileTypes(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
 }

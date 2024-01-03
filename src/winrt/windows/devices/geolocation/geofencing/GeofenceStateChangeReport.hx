@@ -1,6 +1,9 @@
 package winrt.windows.devices.geolocation.geofencing;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Geolocation.Geofencing.h", true)
 @:native("winrt::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport")
 extern class GeofenceStateChangeReport

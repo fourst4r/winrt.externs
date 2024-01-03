@@ -1,6 +1,9 @@
 package winrt.windows.system.update;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.System.Update.h", true)
 @:native("winrt::Windows::System::Update::ISystemUpdateLastErrorInfo")
 extern interface ISystemUpdateLastErrorInfo extends winrt.windows.foundation.IInspectable

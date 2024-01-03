@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.automation.peers;
 
 @:include("winrt/Microsoft.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationHeadingLevel")
-extern enum abstract AutomationHeadingLevel(cxx.num.Int32)
+extern enum abstract AutomationHeadingLevel(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationHeadingLevel::None") final None;
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationHeadingLevel::Level1") final Level1;

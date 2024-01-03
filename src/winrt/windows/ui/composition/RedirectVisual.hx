@@ -1,6 +1,9 @@
 package winrt.windows.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::RedirectVisual")
 extern class RedirectVisual
@@ -8,5 +11,5 @@ extern class RedirectVisual
     implements winrt.windows.ui.composition.IRedirectVisual
 {
     overload function Source(): winrt.windows.ui.composition.Visual;
-    overload function Source(value: cxx.ConstRef<winrt.windows.ui.composition.Visual>): Void;
+    overload function Source(value: ConstRef<winrt.windows.ui.composition.Visual>): Void;
 }

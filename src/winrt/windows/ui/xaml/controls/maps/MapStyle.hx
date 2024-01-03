@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.controls.maps;
 
 @:include("winrt/Windows.UI.Xaml.Controls.Maps.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapStyle")
-extern enum abstract MapStyle(cxx.num.Int32)
+extern enum abstract MapStyle(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapStyle::None") final None;
     @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapStyle::Road") final Road;

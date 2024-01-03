@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.payments;
 
 @:include("winrt/Windows.ApplicationModel.Payments.h", true)
 @:native("winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence")
-extern enum abstract PaymentOptionPresence(cxx.num.Int32)
+extern enum abstract PaymentOptionPresence(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence::None") final None;
     @:native("winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence::Optional") final Optional;

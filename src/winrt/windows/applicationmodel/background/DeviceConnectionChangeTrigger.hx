@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.background;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Background.h", true)
 @:native("winrt::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger")
 extern class DeviceConnectionChangeTrigger
@@ -11,6 +14,6 @@ extern class DeviceConnectionChangeTrigger
     overload function CanMaintainConnection(): Bool;
     overload function MaintainConnection(): Bool;
     overload function MaintainConnection(value: Bool): Void;
-    function FromIdAsync(deviceId: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.background.DeviceConnectionChangeTrigger> /* GenericTypeInstSig */;
-    static function FromIdAsync(deviceId: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.background.DeviceConnectionChangeTrigger> /* GenericTypeInstSig */;
+    function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.background.DeviceConnectionChangeTrigger> /* GenericTypeInstSig */;
+    static function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.background.DeviceConnectionChangeTrigger> /* GenericTypeInstSig */;
 }

@@ -1,9 +1,12 @@
 package winrt.windows.ui.xaml.controls.maps;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.Maps.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::Maps::IMapLayerFactory")
 extern interface IMapLayerFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(baseInterface: cxx.ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: cxx.Ref<winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.controls.maps.MapLayer;
+    function CreateInstance(baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.controls.maps.MapLayer;
 }

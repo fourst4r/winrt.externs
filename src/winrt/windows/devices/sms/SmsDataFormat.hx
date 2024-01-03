@@ -2,7 +2,7 @@ package winrt.windows.devices.sms;
 
 @:include("winrt/Windows.Devices.Sms.h", true)
 @:native("winrt::Windows::Devices::Sms::SmsDataFormat")
-extern enum abstract SmsDataFormat(cxx.num.Int32)
+extern enum abstract SmsDataFormat(Int32)
 {
     @:native("winrt::Windows::Devices::Sms::SmsDataFormat::Unknown") final Unknown;
     @:native("winrt::Windows::Devices::Sms::SmsDataFormat::CdmaSubmit") final CdmaSubmit;

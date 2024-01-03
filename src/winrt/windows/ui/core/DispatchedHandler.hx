@@ -2,4 +2,4 @@ package winrt.windows.ui.core;
 
 
 @:extern 
-typedef DispatchedHandler = ()->Void;
+typedef DispatchedHandler = Fn<()->Void>;

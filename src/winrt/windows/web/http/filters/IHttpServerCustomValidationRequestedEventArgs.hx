@@ -1,6 +1,9 @@
 package winrt.windows.web.http.filters;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Web.Http.Filters.h", true)
 @:native("winrt::Windows::Web::Http::Filters::IHttpServerCustomValidationRequestedEventArgs")
 extern interface IHttpServerCustomValidationRequestedEventArgs extends winrt.windows.foundation.IInspectable

@@ -1,6 +1,9 @@
 package winrt.windows.storage;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Storage.h", true)
 @:native("winrt::Windows::Storage::StorageLibraryChangeReader")
 extern class StorageLibraryChangeReader
@@ -9,5 +12,5 @@ extern class StorageLibraryChangeReader
 {
     function ReadBatchAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.storage.StorageLibraryChange> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
     function AcceptChangesAsync(): winrt.windows.foundation.IAsyncAction;
-    function GetLastChangeId(): cxx.num.UInt64;
+    function GetLastChangeId(): UInt64;
 }

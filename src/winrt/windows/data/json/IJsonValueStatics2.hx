@@ -1,6 +1,9 @@
 package winrt.windows.data.json;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Data.Json.h", true)
 @:native("winrt::Windows::Data::Json::IJsonValueStatics2")
 extern interface IJsonValueStatics2 extends winrt.windows.foundation.IInspectable

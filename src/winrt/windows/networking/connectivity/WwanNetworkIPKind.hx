@@ -2,7 +2,7 @@ package winrt.windows.networking.connectivity;
 
 @:include("winrt/Windows.Networking.Connectivity.h", true)
 @:native("winrt::Windows::Networking::Connectivity::WwanNetworkIPKind")
-extern enum abstract WwanNetworkIPKind(cxx.num.Int32)
+extern enum abstract WwanNetworkIPKind(Int32)
 {
     @:native("winrt::Windows::Networking::Connectivity::WwanNetworkIPKind::None") final None;
     @:native("winrt::Windows::Networking::Connectivity::WwanNetworkIPKind::Ipv4") final Ipv4;

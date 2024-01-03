@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.controls.maps;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.Maps.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::Maps::IMapControlStatics")
 extern interface IMapControlStatics extends winrt.windows.foundation.IInspectable
@@ -24,9 +27,9 @@ extern interface IMapControlStatics extends winrt.windows.foundation.IInspectabl
     overload function RoutesProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function TileSourcesProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function LocationProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetLocation(element: cxx.ConstRef<winrt.windows.ui.xaml.DependencyObject>): winrt.windows.devices.geolocation.Geopoint;
-    function SetLocation(element: cxx.ConstRef<winrt.windows.ui.xaml.DependencyObject>, value: cxx.ConstRef<winrt.windows.devices.geolocation.Geopoint>): Void;
+    function GetLocation(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>): winrt.windows.devices.geolocation.Geopoint;
+    function SetLocation(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>, value: ConstRef<winrt.windows.devices.geolocation.Geopoint>): Void;
     overload function NormalizedAnchorPointProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetNormalizedAnchorPoint(element: cxx.ConstRef<winrt.windows.ui.xaml.DependencyObject>): winrt.windows.foundation.Point;
-    function SetNormalizedAnchorPoint(element: cxx.ConstRef<winrt.windows.ui.xaml.DependencyObject>, value: cxx.ConstRef<winrt.windows.foundation.Point>): Void;
+    function GetNormalizedAnchorPoint(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>): winrt.windows.foundation.Point;
+    function SetNormalizedAnchorPoint(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>, value: ConstRef<winrt.windows.foundation.Point>): Void;
 }

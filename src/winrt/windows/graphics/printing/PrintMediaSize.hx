@@ -2,7 +2,7 @@ package winrt.windows.graphics.printing;
 
 @:include("winrt/Windows.Graphics.Printing.h", true)
 @:native("winrt::Windows::Graphics::Printing::PrintMediaSize")
-extern enum abstract PrintMediaSize(cxx.num.Int32)
+extern enum abstract PrintMediaSize(Int32)
 {
     @:native("winrt::Windows::Graphics::Printing::PrintMediaSize::Default") final Default;
     @:native("winrt::Windows::Graphics::Printing::PrintMediaSize::NotAvailable") final NotAvailable;

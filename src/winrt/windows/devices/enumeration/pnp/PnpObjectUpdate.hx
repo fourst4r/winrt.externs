@@ -1,6 +1,9 @@
 package winrt.windows.devices.enumeration.pnp;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Enumeration.Pnp.h", true)
 @:native("winrt::Windows::Devices::Enumeration::Pnp::PnpObjectUpdate")
 extern class PnpObjectUpdate

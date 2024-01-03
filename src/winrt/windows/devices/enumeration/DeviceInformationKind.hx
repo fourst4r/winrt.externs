@@ -2,7 +2,7 @@ package winrt.windows.devices.enumeration;
 
 @:include("winrt/Windows.Devices.Enumeration.h", true)
 @:native("winrt::Windows::Devices::Enumeration::DeviceInformationKind")
-extern enum abstract DeviceInformationKind(cxx.num.Int32)
+extern enum abstract DeviceInformationKind(Int32)
 {
     @:native("winrt::Windows::Devices::Enumeration::DeviceInformationKind::Unknown") final Unknown;
     @:native("winrt::Windows::Devices::Enumeration::DeviceInformationKind::DeviceInterface") final DeviceInterface;

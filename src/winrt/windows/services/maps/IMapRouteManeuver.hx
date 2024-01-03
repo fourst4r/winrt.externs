@@ -1,12 +1,15 @@
 package winrt.windows.services.maps;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Services.Maps.h", true)
 @:native("winrt::Windows::Services::Maps::IMapRouteManeuver")
 extern interface IMapRouteManeuver extends winrt.windows.foundation.IInspectable
 {
     overload function StartingPoint(): winrt.windows.devices.geolocation.Geopoint;
-    overload function LengthInMeters(): cxx.num.Float64;
+    overload function LengthInMeters(): Float64;
     overload function InstructionText(): winrt.HString;
     overload function Kind(): winrt.windows.services.maps.MapRouteManeuverKind;
     overload function ExitNumber(): winrt.HString;

@@ -1,6 +1,9 @@
 package winrt.windows.services.maps.guidance;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Services.Maps.Guidance.h", true)
 @:native("winrt::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs")
 extern class GuidanceUpdatedEventArgs
@@ -8,11 +11,11 @@ extern class GuidanceUpdatedEventArgs
 {
     overload function Mode(): winrt.windows.services.maps.guidance.GuidanceMode;
     overload function NextManeuver(): winrt.windows.services.maps.guidance.GuidanceManeuver;
-    overload function NextManeuverDistance(): cxx.num.Int32;
+    overload function NextManeuverDistance(): Int32;
     overload function AfterNextManeuver(): winrt.windows.services.maps.guidance.GuidanceManeuver;
-    overload function AfterNextManeuverDistance(): cxx.num.Int32;
-    overload function DistanceToDestination(): cxx.num.Int32;
-    overload function ElapsedDistance(): cxx.num.Int32;
+    overload function AfterNextManeuverDistance(): Int32;
+    overload function DistanceToDestination(): Int32;
+    overload function ElapsedDistance(): Int32;
     overload function ElapsedTime(): winrt.windows.foundation.TimeSpan;
     overload function TimeToDestination(): winrt.windows.foundation.TimeSpan;
     overload function RoadName(): winrt.HString;

@@ -2,7 +2,7 @@ package winrt.windows.devices.bluetooth.genericattributeprofile;
 
 @:include("winrt/Windows.Devices.Bluetooth.GenericAttributeProfile.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattOpenStatus")
-extern enum abstract GattOpenStatus(cxx.num.Int32)
+extern enum abstract GattOpenStatus(Int32)
 {
     @:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattOpenStatus::Unspecified") final Unspecified;
     @:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattOpenStatus::Success") final Success;

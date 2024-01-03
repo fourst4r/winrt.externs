@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.automation.peers;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer")
 extern class ComboBoxAutomationPeer
@@ -10,10 +13,10 @@ extern class ComboBoxAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IExpandCollapseProvider
     implements winrt.microsoft.ui.xaml.automation.provider.IWindowProvider
 {
-    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.ComboBox>);
+    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.ComboBox>);
     overload function IsReadOnly(): Bool;
     overload function Value(): winrt.HString;
-    function SetValue(value: cxx.ConstRef<winrt.HString>): Void;
+    function SetValue(value: ConstRef<winrt.HString>): Void;
     overload function ExpandCollapseState(): winrt.microsoft.ui.xaml.automation.ExpandCollapseState;
     function Collapse(): Void;
     function Expand(): Void;
@@ -24,6 +27,6 @@ extern class ComboBoxAutomationPeer
     overload function InteractionState(): winrt.microsoft.ui.xaml.automation.WindowInteractionState;
     overload function VisualState(): winrt.microsoft.ui.xaml.automation.WindowVisualState;
     function Close(): Void;
-    function SetVisualState(state: cxx.ConstRef<winrt.microsoft.ui.xaml.automation.WindowVisualState>): Void;
-    function WaitForInputIdle(milliseconds: cxx.num.Int32): Bool;
+    function SetVisualState(state: ConstRef<winrt.microsoft.ui.xaml.automation.WindowVisualState>): Void;
+    function WaitForInputIdle(milliseconds: Int32): Bool;
 }

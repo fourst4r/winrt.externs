@@ -1,6 +1,9 @@
 package winrt.windows.graphics.holographic;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Graphics.Holographic.h", true)
 @:native("winrt::Windows::Graphics::Holographic::IHolographicViewConfiguration2")
 extern interface IHolographicViewConfiguration2 extends winrt.windows.foundation.IInspectable

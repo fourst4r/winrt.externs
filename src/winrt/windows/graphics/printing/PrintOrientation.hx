@@ -2,7 +2,7 @@ package winrt.windows.graphics.printing;
 
 @:include("winrt/Windows.Graphics.Printing.h", true)
 @:native("winrt::Windows::Graphics::Printing::PrintOrientation")
-extern enum abstract PrintOrientation(cxx.num.Int32)
+extern enum abstract PrintOrientation(Int32)
 {
     @:native("winrt::Windows::Graphics::Printing::PrintOrientation::Default") final Default;
     @:native("winrt::Windows::Graphics::Printing::PrintOrientation::NotAvailable") final NotAvailable;

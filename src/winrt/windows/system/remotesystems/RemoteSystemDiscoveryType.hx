@@ -2,7 +2,7 @@ package winrt.windows.system.remotesystems;
 
 @:include("winrt/Windows.System.RemoteSystems.h", true)
 @:native("winrt::Windows::System::RemoteSystems::RemoteSystemDiscoveryType")
-extern enum abstract RemoteSystemDiscoveryType(cxx.num.Int32)
+extern enum abstract RemoteSystemDiscoveryType(Int32)
 {
     @:native("winrt::Windows::System::RemoteSystems::RemoteSystemDiscoveryType::Any") final Any;
     @:native("winrt::Windows::System::RemoteSystems::RemoteSystemDiscoveryType::Proximal") final Proximal;

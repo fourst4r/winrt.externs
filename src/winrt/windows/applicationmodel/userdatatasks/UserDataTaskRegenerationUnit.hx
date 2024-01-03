@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.userdatatasks;
 
 @:include("winrt/Windows.ApplicationModel.UserDataTasks.h", true)
 @:native("winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationUnit")
-extern enum abstract UserDataTaskRegenerationUnit(cxx.num.Int32)
+extern enum abstract UserDataTaskRegenerationUnit(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationUnit::Daily") final Daily;
     @:native("winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationUnit::Weekly") final Weekly;

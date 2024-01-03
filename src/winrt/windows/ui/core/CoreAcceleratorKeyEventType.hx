@@ -2,7 +2,7 @@ package winrt.windows.ui.core;
 
 @:include("winrt/Windows.UI.Core.h", true)
 @:native("winrt::Windows::UI::Core::CoreAcceleratorKeyEventType")
-extern enum abstract CoreAcceleratorKeyEventType(cxx.num.Int32)
+extern enum abstract CoreAcceleratorKeyEventType(Int32)
 {
     @:native("winrt::Windows::UI::Core::CoreAcceleratorKeyEventType::Character") final Character;
     @:native("winrt::Windows::UI::Core::CoreAcceleratorKeyEventType::DeadCharacter") final DeadCharacter;

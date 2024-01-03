@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.email;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Email.h", true)
 @:native("winrt::Windows::ApplicationModel::Email::EmailIrmInfo")
 extern class EmailIrmInfo
@@ -8,7 +11,7 @@ extern class EmailIrmInfo
 {
     function new();
     @:native("winrt::Windows::ApplicationModel::Email::EmailIrmInfo")
-    static overload function make(expiration: cxx.ConstRef<winrt.windows.foundation.DateTime>, irmTemplate: cxx.ConstRef<winrt.windows.applicationmodel.email.EmailIrmTemplate>): winrt.windows.applicationmodel.email.EmailIrmInfo;
+    static overload function make(expiration: ConstRef<winrt.windows.foundation.DateTime>, irmTemplate: ConstRef<winrt.windows.applicationmodel.email.EmailIrmTemplate>): winrt.windows.applicationmodel.email.EmailIrmInfo;
     overload function CanEdit(): Bool;
     overload function CanEdit(value: Bool): Void;
     overload function CanExtractData(): Bool;
@@ -26,11 +29,11 @@ extern class EmailIrmInfo
     overload function CanReplyAll(): Bool;
     overload function CanReplyAll(value: Bool): Void;
     overload function ExpirationDate(): winrt.windows.foundation.DateTime;
-    overload function ExpirationDate(value: cxx.ConstRef<winrt.windows.foundation.DateTime>): Void;
+    overload function ExpirationDate(value: ConstRef<winrt.windows.foundation.DateTime>): Void;
     overload function IsIrmOriginator(): Bool;
     overload function IsIrmOriginator(value: Bool): Void;
     overload function IsProgramaticAccessAllowed(): Bool;
     overload function IsProgramaticAccessAllowed(value: Bool): Void;
     overload function Template(): winrt.windows.applicationmodel.email.EmailIrmTemplate;
-    overload function Template(value: cxx.ConstRef<winrt.windows.applicationmodel.email.EmailIrmTemplate>): Void;
+    overload function Template(value: ConstRef<winrt.windows.applicationmodel.email.EmailIrmTemplate>): Void;
 }

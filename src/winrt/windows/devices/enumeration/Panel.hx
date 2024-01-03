@@ -2,7 +2,7 @@ package winrt.windows.devices.enumeration;
 
 @:include("winrt/Windows.Devices.Enumeration.h", true)
 @:native("winrt::Windows::Devices::Enumeration::Panel")
-extern enum abstract Panel(cxx.num.Int32)
+extern enum abstract Panel(Int32)
 {
     @:native("winrt::Windows::Devices::Enumeration::Panel::Unknown") final Unknown;
     @:native("winrt::Windows::Devices::Enumeration::Panel::Front") final Front;

@@ -2,7 +2,7 @@ package winrt.windows.globalization.numberformatting;
 
 @:include("winrt/Windows.Globalization.NumberFormatting.h", true)
 @:native("winrt::Windows::Globalization::NumberFormatting::RoundingAlgorithm")
-extern enum abstract RoundingAlgorithm(cxx.num.Int32)
+extern enum abstract RoundingAlgorithm(Int32)
 {
     @:native("winrt::Windows::Globalization::NumberFormatting::RoundingAlgorithm::None") final None;
     @:native("winrt::Windows::Globalization::NumberFormatting::RoundingAlgorithm::RoundDown") final RoundDown;

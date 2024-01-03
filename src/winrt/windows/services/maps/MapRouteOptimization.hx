@@ -2,7 +2,7 @@ package winrt.windows.services.maps;
 
 @:include("winrt/Windows.Services.Maps.h", true)
 @:native("winrt::Windows::Services::Maps::MapRouteOptimization")
-extern enum abstract MapRouteOptimization(cxx.num.Int32)
+extern enum abstract MapRouteOptimization(Int32)
 {
     @:native("winrt::Windows::Services::Maps::MapRouteOptimization::Time") final Time;
     @:native("winrt::Windows::Services::Maps::MapRouteOptimization::Distance") final Distance;

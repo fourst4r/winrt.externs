@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.media.animation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Media.Animation.h", true)
 @:native("winrt::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition")
 extern class EdgeUIThemeTransition
@@ -9,7 +12,7 @@ extern class EdgeUIThemeTransition
 {
     function new();
     overload function Edge(): winrt.windows.ui.xaml.controls.primitives.EdgeTransitionLocation;
-    overload function Edge(value: cxx.ConstRef<winrt.windows.ui.xaml.controls.primitives.EdgeTransitionLocation>): Void;
+    overload function Edge(value: ConstRef<winrt.windows.ui.xaml.controls.primitives.EdgeTransitionLocation>): Void;
     overload function EdgeProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function EdgeProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

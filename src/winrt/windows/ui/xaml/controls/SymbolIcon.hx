@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::SymbolIcon")
 extern class SymbolIcon
@@ -9,9 +12,9 @@ extern class SymbolIcon
 {
     function new();
     @:native("winrt::Windows::UI::Xaml::Controls::SymbolIcon")
-    /* explicit */ static overload function make(symbol: cxx.ConstRef<winrt.windows.ui.xaml.controls.Symbol>): winrt.windows.ui.xaml.controls.SymbolIcon;
+    /* explicit */ static overload function make(symbol: ConstRef<winrt.windows.ui.xaml.controls.Symbol>): winrt.windows.ui.xaml.controls.SymbolIcon;
     overload function Symbol(): winrt.windows.ui.xaml.controls.Symbol;
-    overload function Symbol(value: cxx.ConstRef<winrt.windows.ui.xaml.controls.Symbol>): Void;
+    overload function Symbol(value: ConstRef<winrt.windows.ui.xaml.controls.Symbol>): Void;
     overload function SymbolProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function SymbolProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

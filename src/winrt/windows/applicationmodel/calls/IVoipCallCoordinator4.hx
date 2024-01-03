@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.calls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Calls.h", true)
 @:native("winrt::Windows::ApplicationModel::Calls::IVoipCallCoordinator4")
 extern interface IVoipCallCoordinator4 extends winrt.windows.foundation.IInspectable

@@ -2,7 +2,7 @@ package winrt.windows.gaming.input;
 
 @:include("winrt/Windows.Gaming.Input.h", true)
 @:native("winrt::Windows::Gaming::Input::OptionalUINavigationButtons")
-extern enum abstract OptionalUINavigationButtons(cxx.num.UInt32)
+extern enum abstract OptionalUINavigationButtons(UInt32)
 {
     @:native("winrt::Windows::Gaming::Input::OptionalUINavigationButtons::None") final None;
     @:native("winrt::Windows::Gaming::Input::OptionalUINavigationButtons::Context1") final Context1;

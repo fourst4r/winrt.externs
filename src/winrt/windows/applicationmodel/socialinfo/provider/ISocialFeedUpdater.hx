@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.socialinfo.provider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.SocialInfo.Provider.h", true)
 @:native("winrt::Windows::ApplicationModel::SocialInfo::Provider::ISocialFeedUpdater")
 extern interface ISocialFeedUpdater extends winrt.windows.foundation.IInspectable

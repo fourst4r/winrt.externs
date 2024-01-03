@@ -2,7 +2,7 @@ package winrt.windows.devices.bluetooth;
 
 @:include("winrt/Windows.Devices.Bluetooth.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::BluetoothMinorClass")
-extern enum abstract BluetoothMinorClass(cxx.num.Int32)
+extern enum abstract BluetoothMinorClass(Int32)
 {
     @:native("winrt::Windows::Devices::Bluetooth::BluetoothMinorClass::Uncategorized") final Uncategorized;
     @:native("winrt::Windows::Devices::Bluetooth::BluetoothMinorClass::ComputerDesktop") final ComputerDesktop;

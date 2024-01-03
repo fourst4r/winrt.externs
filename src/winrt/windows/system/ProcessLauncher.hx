@@ -4,6 +4,6 @@ package winrt.windows.system;
 @:native("winrt::Windows::System::ProcessLauncher")
 extern class ProcessLauncher
 {
-    static overload function RunToCompletionAsync(fileName: cxx.ConstRef<winrt.HString>, args: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.system.ProcessLauncherResult> /* GenericTypeInstSig */;
-    static overload function RunToCompletionAsync(fileName: cxx.ConstRef<winrt.HString>, args: cxx.ConstRef<winrt.HString>, options: cxx.ConstRef<winrt.windows.system.ProcessLauncherOptions>): winrt.windows.foundation.IAsyncOperation<winrt.windows.system.ProcessLauncherResult> /* GenericTypeInstSig */;
+    static overload function RunToCompletionAsync(fileName: ConstRef<winrt.HString>, args: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.system.ProcessLauncherResult> /* GenericTypeInstSig */;
+    static overload function RunToCompletionAsync(fileName: ConstRef<winrt.HString>, args: ConstRef<winrt.HString>, options: ConstRef<winrt.windows.system.ProcessLauncherOptions>): winrt.windows.foundation.IAsyncOperation<winrt.windows.system.ProcessLauncherResult> /* GenericTypeInstSig */;
 }

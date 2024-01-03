@@ -1,6 +1,9 @@
 package winrt.windows.ui.input;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Input.h", true)
 @:native("winrt::Windows::UI::Input::ManipulationUpdatedEventArgs")
 extern class ManipulationUpdatedEventArgs
@@ -12,6 +15,6 @@ extern class ManipulationUpdatedEventArgs
     overload function Delta(): winrt.windows.ui.input.ManipulationDelta;
     overload function Cumulative(): winrt.windows.ui.input.ManipulationDelta;
     overload function Velocities(): winrt.windows.ui.input.ManipulationVelocities;
-    overload function ContactCount(): cxx.num.UInt32;
-    overload function CurrentContactCount(): cxx.num.UInt32;
+    overload function ContactCount(): UInt32;
+    overload function CurrentContactCount(): UInt32;
 }

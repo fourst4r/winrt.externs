@@ -2,7 +2,7 @@ package winrt.windows.system;
 
 @:include("winrt/Windows.System.h", true)
 @:native("winrt::Windows::System::RemoteLaunchUriStatus")
-extern enum abstract RemoteLaunchUriStatus(cxx.num.Int32)
+extern enum abstract RemoteLaunchUriStatus(Int32)
 {
     @:native("winrt::Windows::System::RemoteLaunchUriStatus::Unknown") final Unknown;
     @:native("winrt::Windows::System::RemoteLaunchUriStatus::Success") final Success;

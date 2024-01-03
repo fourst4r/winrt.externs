@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.automation.peers;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::BreadcrumbBarItemAutomationPeer")
 extern class BreadcrumbBarItemAutomationPeer
@@ -8,6 +11,6 @@ extern class BreadcrumbBarItemAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IBreadcrumbBarItemAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IInvokeProvider
 {
-    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.BreadcrumbBarItem>);
+    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.BreadcrumbBarItem>);
     function Invoke(): Void;
 }

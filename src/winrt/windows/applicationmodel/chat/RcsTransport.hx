@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.chat;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Chat.h", true)
 @:native("winrt::Windows::ApplicationModel::Chat::RcsTransport")
 extern class RcsTransport
@@ -11,8 +14,8 @@ extern class RcsTransport
     overload function TransportFriendlyName(): winrt.HString;
     overload function TransportId(): winrt.HString;
     overload function Configuration(): winrt.windows.applicationmodel.chat.RcsTransportConfiguration;
-    function IsStoreAndForwardEnabled(serviceKind: cxx.ConstRef<winrt.windows.applicationmodel.chat.RcsServiceKind>): Bool;
-    function IsServiceKindSupported(serviceKind: cxx.ConstRef<winrt.windows.applicationmodel.chat.RcsServiceKind>): Bool;
-    overload function ServiceKindSupportedChanged(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.chat.RcsTransport, winrt.windows.applicationmodel.chat.RcsServiceKindSupportedChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function ServiceKindSupportedChanged(token: cxx.ConstRef<winrt.EventToken>): Void;
+    function IsStoreAndForwardEnabled(serviceKind: ConstRef<winrt.windows.applicationmodel.chat.RcsServiceKind>): Bool;
+    function IsServiceKindSupported(serviceKind: ConstRef<winrt.windows.applicationmodel.chat.RcsServiceKind>): Bool;
+    overload function ServiceKindSupportedChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.chat.RcsTransport, winrt.windows.applicationmodel.chat.RcsServiceKindSupportedChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function ServiceKindSupportedChanged(token: ConstRef<winrt.EventToken>): Void;
 }

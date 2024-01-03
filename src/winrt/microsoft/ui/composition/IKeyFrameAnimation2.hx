@@ -1,10 +1,13 @@
 package winrt.microsoft.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Composition.h", true)
 @:native("winrt::Microsoft::UI::Composition::IKeyFrameAnimation2")
 extern interface IKeyFrameAnimation2 extends winrt.windows.foundation.IInspectable
 {
     overload function Direction(): winrt.microsoft.ui.composition.AnimationDirection;
-    overload function Direction(value: cxx.ConstRef<winrt.microsoft.ui.composition.AnimationDirection>): Void;
+    overload function Direction(value: ConstRef<winrt.microsoft.ui.composition.AnimationDirection>): Void;
 }

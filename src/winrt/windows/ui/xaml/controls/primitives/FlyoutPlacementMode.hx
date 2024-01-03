@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.controls.primitives;
 
 @:include("winrt/Windows.UI.Xaml.Controls.Primitives.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode")
-extern enum abstract FlyoutPlacementMode(cxx.num.Int32)
+extern enum abstract FlyoutPlacementMode(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode::Top") final Top;
     @:native("winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode::Bottom") final Bottom;

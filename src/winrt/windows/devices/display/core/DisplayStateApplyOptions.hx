@@ -2,7 +2,7 @@ package winrt.windows.devices.display.core;
 
 @:include("winrt/Windows.Devices.Display.Core.h", true)
 @:native("winrt::Windows::Devices::Display::Core::DisplayStateApplyOptions")
-extern enum abstract DisplayStateApplyOptions(cxx.num.UInt32)
+extern enum abstract DisplayStateApplyOptions(UInt32)
 {
     @:native("winrt::Windows::Devices::Display::Core::DisplayStateApplyOptions::None") final None;
     @:native("winrt::Windows::Devices::Display::Core::DisplayStateApplyOptions::FailIfStateChanged") final FailIfStateChanged;

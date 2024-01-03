@@ -1,6 +1,9 @@
 package winrt.windows.gaming.input;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Gaming.Input.h", true)
 @:native("winrt::Windows::Gaming::Input::IRawGameController2")
 extern interface IRawGameController2 extends winrt.windows.foundation.IInspectable

@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.email;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Email.h", true)
 @:native("winrt::Windows::ApplicationModel::Email::IEmailIrmInfo")
 extern interface IEmailIrmInfo extends winrt.windows.foundation.IInspectable
@@ -22,11 +25,11 @@ extern interface IEmailIrmInfo extends winrt.windows.foundation.IInspectable
     overload function CanReplyAll(): Bool;
     overload function CanReplyAll(value: Bool): Void;
     overload function ExpirationDate(): winrt.windows.foundation.DateTime;
-    overload function ExpirationDate(value: cxx.ConstRef<winrt.windows.foundation.DateTime>): Void;
+    overload function ExpirationDate(value: ConstRef<winrt.windows.foundation.DateTime>): Void;
     overload function IsIrmOriginator(): Bool;
     overload function IsIrmOriginator(value: Bool): Void;
     overload function IsProgramaticAccessAllowed(): Bool;
     overload function IsProgramaticAccessAllowed(value: Bool): Void;
     overload function Template(): winrt.windows.applicationmodel.email.EmailIrmTemplate;
-    overload function Template(value: cxx.ConstRef<winrt.windows.applicationmodel.email.EmailIrmTemplate>): Void;
+    overload function Template(value: ConstRef<winrt.windows.applicationmodel.email.EmailIrmTemplate>): Void;
 }

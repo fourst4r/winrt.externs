@@ -2,4 +2,4 @@ package winrt.microsoft.ui.xaml;
 
 
 @:extern 
-typedef DependencyPropertyChangedCallback = (sender: cxx.ConstRef<winrt.microsoft.ui.xaml.DependencyObject>, dp: cxx.ConstRef<winrt.microsoft.ui.xaml.DependencyProperty>)->Void;
+typedef DependencyPropertyChangedCallback = Fn<(sender: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>, dp: ConstRef<winrt.microsoft.ui.xaml.DependencyProperty>)->Void>;

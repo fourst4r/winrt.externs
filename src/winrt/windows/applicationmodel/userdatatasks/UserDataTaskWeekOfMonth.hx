@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.userdatatasks;
 
 @:include("winrt/Windows.ApplicationModel.UserDataTasks.h", true)
 @:native("winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskWeekOfMonth")
-extern enum abstract UserDataTaskWeekOfMonth(cxx.num.Int32)
+extern enum abstract UserDataTaskWeekOfMonth(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskWeekOfMonth::First") final First;
     @:native("winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskWeekOfMonth::Second") final Second;

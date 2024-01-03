@@ -1,6 +1,9 @@
 package winrt.windows.security.credentials;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Security.Credentials.h", true)
 @:native("winrt::Windows::Security::Credentials::WebAccountProvider")
 extern class WebAccountProvider
@@ -9,7 +12,7 @@ extern class WebAccountProvider
     implements winrt.windows.security.credentials.IWebAccountProvider3
     implements winrt.windows.security.credentials.IWebAccountProvider4
 {
-    function new(id: cxx.ConstRef<winrt.HString>, displayName: cxx.ConstRef<winrt.HString>, iconUri: cxx.ConstRef<winrt.windows.foundation.Uri>);
+    function new(id: ConstRef<winrt.HString>, displayName: ConstRef<winrt.HString>, iconUri: ConstRef<winrt.windows.foundation.Uri>);
     overload function Id(): winrt.HString;
     overload function DisplayName(): winrt.HString;
     overload function IconUri(): winrt.windows.foundation.Uri;

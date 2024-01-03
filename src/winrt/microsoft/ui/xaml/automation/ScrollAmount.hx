@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.automation;
 
 @:include("winrt/Microsoft.UI.Xaml.Automation.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::ScrollAmount")
-extern enum abstract ScrollAmount(cxx.num.Int32)
+extern enum abstract ScrollAmount(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Automation::ScrollAmount::LargeDecrement") final LargeDecrement;
     @:native("winrt::Microsoft::UI::Xaml::Automation::ScrollAmount::SmallDecrement") final SmallDecrement;

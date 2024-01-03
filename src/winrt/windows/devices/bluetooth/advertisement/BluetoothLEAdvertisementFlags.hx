@@ -2,7 +2,7 @@ package winrt.windows.devices.bluetooth.advertisement;
 
 @:include("winrt/Windows.Devices.Bluetooth.Advertisement.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFlags")
-extern enum abstract BluetoothLEAdvertisementFlags(cxx.num.UInt32)
+extern enum abstract BluetoothLEAdvertisementFlags(UInt32)
 {
     @:native("winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFlags::None") final None;
     @:native("winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFlags::LimitedDiscoverableMode") final LimitedDiscoverableMode;

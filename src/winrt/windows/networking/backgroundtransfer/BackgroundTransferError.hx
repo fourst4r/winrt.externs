@@ -4,5 +4,5 @@ package winrt.windows.networking.backgroundtransfer;
 @:native("winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferError")
 extern class BackgroundTransferError
 {
-    static function GetStatus(hresult: cxx.num.Int32): winrt.windows.web.WebErrorStatus;
+    static function GetStatus(hresult: Int32): winrt.windows.web.WebErrorStatus;
 }

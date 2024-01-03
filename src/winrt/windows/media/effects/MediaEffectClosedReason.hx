@@ -2,7 +2,7 @@ package winrt.windows.media.effects;
 
 @:include("winrt/Windows.Media.Effects.h", true)
 @:native("winrt::Windows::Media::Effects::MediaEffectClosedReason")
-extern enum abstract MediaEffectClosedReason(cxx.num.Int32)
+extern enum abstract MediaEffectClosedReason(Int32)
 {
     @:native("winrt::Windows::Media::Effects::MediaEffectClosedReason::Done") final Done;
     @:native("winrt::Windows::Media::Effects::MediaEffectClosedReason::UnknownError") final UnknownError;

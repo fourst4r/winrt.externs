@@ -1,6 +1,9 @@
 package winrt.windows.media.playto;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.PlayTo.h", true)
 @:native("winrt::Windows::Media::PlayTo::SourceChangeRequestedEventArgs")
 extern class SourceChangeRequestedEventArgs
@@ -14,6 +17,6 @@ extern class SourceChangeRequestedEventArgs
     overload function Description(): winrt.HString;
     overload function Date(): winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* GenericTypeInstSig */;
     overload function Thumbnail(): winrt.windows.storage.streams.IRandomAccessStreamReference;
-    overload function Rating(): winrt.windows.foundation.IReference<cxx.num.UInt32> /* GenericTypeInstSig */;
+    overload function Rating(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
     overload function Properties(): winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;
 }

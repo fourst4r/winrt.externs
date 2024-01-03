@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Composition.h", true)
 @:native("winrt::Microsoft::UI::Composition::SpriteVisual")
 extern class SpriteVisual
@@ -9,7 +12,7 @@ extern class SpriteVisual
     implements winrt.microsoft.ui.composition.ISpriteVisual2
 {
     overload function Brush(): winrt.microsoft.ui.composition.CompositionBrush;
-    overload function Shadow(value: cxx.ConstRef<winrt.microsoft.ui.composition.CompositionShadow>): Void;
-    overload function Brush(value: cxx.ConstRef<winrt.microsoft.ui.composition.CompositionBrush>): Void;
+    overload function Shadow(value: ConstRef<winrt.microsoft.ui.composition.CompositionShadow>): Void;
+    overload function Brush(value: ConstRef<winrt.microsoft.ui.composition.CompositionBrush>): Void;
     overload function Shadow(): winrt.microsoft.ui.composition.CompositionShadow;
 }

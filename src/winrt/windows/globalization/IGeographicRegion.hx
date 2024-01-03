@@ -1,6 +1,9 @@
 package winrt.windows.globalization;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Globalization.h", true)
 @:native("winrt::Windows::Globalization::IGeographicRegion")
 extern interface IGeographicRegion extends winrt.windows.foundation.IInspectable

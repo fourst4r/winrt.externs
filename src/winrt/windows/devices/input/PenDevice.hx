@@ -1,6 +1,9 @@
 package winrt.windows.devices.input;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Input.h", true)
 @:native("winrt::Windows::Devices::Input::PenDevice")
 extern class PenDevice
@@ -9,6 +12,6 @@ extern class PenDevice
 {
     overload function PenId(): winrt.Guid;
     overload function SimpleHapticsController(): winrt.windows.devices.haptics.SimpleHapticsController;
-    function GetFromPointerId(pointerId: cxx.num.UInt32): winrt.windows.devices.input.PenDevice;
-    static function GetFromPointerId(pointerId: cxx.num.UInt32): winrt.windows.devices.input.PenDevice;
+    function GetFromPointerId(pointerId: UInt32): winrt.windows.devices.input.PenDevice;
+    static function GetFromPointerId(pointerId: UInt32): winrt.windows.devices.input.PenDevice;
 }

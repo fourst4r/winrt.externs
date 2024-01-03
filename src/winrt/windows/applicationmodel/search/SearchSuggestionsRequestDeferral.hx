@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.search;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Search.h", true)
 @:native("winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequestDeferral")
 extern class SearchSuggestionsRequestDeferral

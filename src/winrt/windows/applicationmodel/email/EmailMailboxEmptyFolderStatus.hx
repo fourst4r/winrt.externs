@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.email;
 
 @:include("winrt/Windows.ApplicationModel.Email.h", true)
 @:native("winrt::Windows::ApplicationModel::Email::EmailMailboxEmptyFolderStatus")
-extern enum abstract EmailMailboxEmptyFolderStatus(cxx.num.Int32)
+extern enum abstract EmailMailboxEmptyFolderStatus(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Email::EmailMailboxEmptyFolderStatus::Success") final Success;
     @:native("winrt::Windows::ApplicationModel::Email::EmailMailboxEmptyFolderStatus::NetworkError") final NetworkError;

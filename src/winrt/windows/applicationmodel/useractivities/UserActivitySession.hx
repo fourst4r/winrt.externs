@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.useractivities;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.UserActivities.h", true)
 @:native("winrt::Windows::ApplicationModel::UserActivities::UserActivitySession")
 extern class UserActivitySession

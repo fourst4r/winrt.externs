@@ -1,11 +1,14 @@
 package winrt.windows.storage.search;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Storage.Search.h", true)
 @:native("winrt::Windows::Storage::Search::StorageLibraryContentChangedTriggerDetails")
 extern class StorageLibraryContentChangedTriggerDetails
     implements winrt.windows.storage.search.IStorageLibraryContentChangedTriggerDetails
 {
     overload function Folder(): winrt.windows.storage.StorageFolder;
-    function CreateModifiedSinceQuery(lastQueryTime: cxx.ConstRef<winrt.windows.foundation.DateTime>): winrt.windows.storage.search.StorageItemQueryResult;
+    function CreateModifiedSinceQuery(lastQueryTime: ConstRef<winrt.windows.foundation.DateTime>): winrt.windows.storage.search.StorageItemQueryResult;
 }

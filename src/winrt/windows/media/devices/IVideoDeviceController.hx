@@ -1,6 +1,9 @@
 package winrt.windows.media.devices;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::IVideoDeviceController")
 extern interface IVideoDeviceController extends winrt.windows.foundation.IInspectable
@@ -16,6 +19,6 @@ extern interface IVideoDeviceController extends winrt.windows.foundation.IInspec
     overload function Roll(): winrt.windows.media.devices.MediaDeviceControl;
     overload function Exposure(): winrt.windows.media.devices.MediaDeviceControl;
     overload function Focus(): winrt.windows.media.devices.MediaDeviceControl;
-    function TrySetPowerlineFrequency(value: cxx.ConstRef<winrt.windows.media.capture.PowerlineFrequency>): Bool;
-    function TryGetPowerlineFrequency(value: cxx.Ref<winrt.windows.media.capture.PowerlineFrequency>): Bool;
+    function TrySetPowerlineFrequency(value: ConstRef<winrt.windows.media.capture.PowerlineFrequency>): Bool;
+    function TryGetPowerlineFrequency(value: Ref<winrt.windows.media.capture.PowerlineFrequency>): Bool;
 }

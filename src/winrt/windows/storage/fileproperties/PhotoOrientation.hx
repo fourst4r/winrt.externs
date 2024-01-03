@@ -2,7 +2,7 @@ package winrt.windows.storage.fileproperties;
 
 @:include("winrt/Windows.Storage.FileProperties.h", true)
 @:native("winrt::Windows::Storage::FileProperties::PhotoOrientation")
-extern enum abstract PhotoOrientation(cxx.num.Int32)
+extern enum abstract PhotoOrientation(Int32)
 {
     @:native("winrt::Windows::Storage::FileProperties::PhotoOrientation::Unspecified") final Unspecified;
     @:native("winrt::Windows::Storage::FileProperties::PhotoOrientation::Normal") final Normal;

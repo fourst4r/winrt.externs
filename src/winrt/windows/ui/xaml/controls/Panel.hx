@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::Panel")
 extern class Panel
@@ -10,12 +13,12 @@ extern class Panel
 {
     overload function Children(): winrt.windows.ui.xaml.controls.UIElementCollection;
     overload function Background(): winrt.windows.ui.xaml.media.Brush;
-    overload function Background(value: cxx.ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
+    overload function Background(value: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
     overload function IsItemsHost(): Bool;
     overload function ChildrenTransitions(): winrt.windows.ui.xaml.media.animation.TransitionCollection;
-    overload function ChildrenTransitions(value: cxx.ConstRef<winrt.windows.ui.xaml.media.animation.TransitionCollection>): Void;
+    overload function ChildrenTransitions(value: ConstRef<winrt.windows.ui.xaml.media.animation.TransitionCollection>): Void;
     overload function BackgroundTransition(): winrt.windows.ui.xaml.BrushTransition;
-    overload function BackgroundTransition(value: cxx.ConstRef<winrt.windows.ui.xaml.BrushTransition>): Void;
+    overload function BackgroundTransition(value: ConstRef<winrt.windows.ui.xaml.BrushTransition>): Void;
     overload function BackgroundProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function IsItemsHostProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function ChildrenTransitionsProperty(): winrt.windows.ui.xaml.DependencyProperty;

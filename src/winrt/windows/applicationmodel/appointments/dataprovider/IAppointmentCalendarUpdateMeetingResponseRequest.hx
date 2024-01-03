@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.appointments.dataprovider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Appointments.DataProvider.h", true)
 @:native("winrt::Windows::ApplicationModel::Appointments::DataProvider::IAppointmentCalendarUpdateMeetingResponseRequest")
 extern interface IAppointmentCalendarUpdateMeetingResponseRequest extends winrt.windows.foundation.IInspectable

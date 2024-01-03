@@ -1,6 +1,9 @@
 package winrt.windows.networking.vpn;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Networking.Vpn.h", true)
 @:native("winrt::Windows::Networking::Vpn::VpnPlugInProfile")
 extern class VpnPlugInProfile
@@ -11,11 +14,11 @@ extern class VpnPlugInProfile
     function new();
     overload function ServerUris(): winrt.windows.foundation.collections.IVector<winrt.windows.foundation.Uri> /* GenericTypeInstSig */;
     overload function CustomConfiguration(): winrt.HString;
-    overload function CustomConfiguration(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function CustomConfiguration(value: ConstRef<winrt.HString>): Void;
     overload function VpnPluginPackageFamilyName(): winrt.HString;
-    overload function VpnPluginPackageFamilyName(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function VpnPluginPackageFamilyName(value: ConstRef<winrt.HString>): Void;
     overload function ProfileName(): winrt.HString;
-    overload function ProfileName(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function ProfileName(value: ConstRef<winrt.HString>): Void;
     overload function AppTriggers(): winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnAppId> /* GenericTypeInstSig */;
     overload function Routes(): winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnRoute> /* GenericTypeInstSig */;
     overload function DomainNameInfoList(): winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnDomainNameInfo> /* GenericTypeInstSig */;

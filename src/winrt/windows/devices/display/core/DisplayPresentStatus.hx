@@ -2,7 +2,7 @@ package winrt.windows.devices.display.core;
 
 @:include("winrt/Windows.Devices.Display.Core.h", true)
 @:native("winrt::Windows::Devices::Display::Core::DisplayPresentStatus")
-extern enum abstract DisplayPresentStatus(cxx.num.Int32)
+extern enum abstract DisplayPresentStatus(Int32)
 {
     @:native("winrt::Windows::Devices::Display::Core::DisplayPresentStatus::Success") final Success;
     @:native("winrt::Windows::Devices::Display::Core::DisplayPresentStatus::SourceStatusPreventedPresent") final SourceStatusPreventedPresent;

@@ -2,7 +2,7 @@ package winrt.windows.graphics.printing;
 
 @:include("winrt/Windows.Graphics.Printing.h", true)
 @:native("winrt::Windows::Graphics::Printing::PrintColorMode")
-extern enum abstract PrintColorMode(cxx.num.Int32)
+extern enum abstract PrintColorMode(Int32)
 {
     @:native("winrt::Windows::Graphics::Printing::PrintColorMode::Default") final Default;
     @:native("winrt::Windows::Graphics::Printing::PrintColorMode::NotAvailable") final NotAvailable;

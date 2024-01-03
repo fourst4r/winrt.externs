@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.core.direct;
 
 @:include("winrt/Windows.UI.Xaml.Core.Direct.h", true)
 @:native("winrt::Windows::UI::Xaml::Core::Direct::XamlEventIndex")
-extern enum abstract XamlEventIndex(cxx.num.Int32)
+extern enum abstract XamlEventIndex(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Core::Direct::XamlEventIndex::FrameworkElement_DataContextChanged") final FrameworkElement_DataContextChanged;
     @:native("winrt::Windows::UI::Xaml::Core::Direct::XamlEventIndex::FrameworkElement_SizeChanged") final FrameworkElement_SizeChanged;

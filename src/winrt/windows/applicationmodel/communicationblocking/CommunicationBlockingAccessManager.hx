@@ -5,9 +5,9 @@ package winrt.windows.applicationmodel.communicationblocking;
 extern class CommunicationBlockingAccessManager
 {
     static overload function IsBlockingActive(): Bool;
-    static function IsBlockedNumberAsync(number: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
-    static function ShowBlockNumbersUI(phoneNumbers: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): Bool;
-    static function ShowUnblockNumbersUI(phoneNumbers: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): Bool;
+    static function IsBlockedNumberAsync(number: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    static function ShowBlockNumbersUI(phoneNumbers: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): Bool;
+    static function ShowUnblockNumbersUI(phoneNumbers: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): Bool;
     static function ShowBlockedCallsUI(): Void;
     static function ShowBlockedMessagesUI(): Void;
 }

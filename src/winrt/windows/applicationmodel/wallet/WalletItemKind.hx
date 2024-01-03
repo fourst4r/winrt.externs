@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.wallet;
 
 @:include("winrt/Windows.ApplicationModel.Wallet.h", true)
 @:native("winrt::Windows::ApplicationModel::Wallet::WalletItemKind")
-extern enum abstract WalletItemKind(cxx.num.Int32)
+extern enum abstract WalletItemKind(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Wallet::WalletItemKind::Invalid") final Invalid;
     @:native("winrt::Windows::ApplicationModel::Wallet::WalletItemKind::Deal") final Deal;

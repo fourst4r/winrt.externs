@@ -1,6 +1,9 @@
 package winrt.windows.devices.bluetooth.genericattributeprofile;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Bluetooth.GenericAttributeProfile.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientNotificationResult")
 extern class GattClientNotificationResult
@@ -9,6 +12,6 @@ extern class GattClientNotificationResult
 {
     overload function SubscribedClient(): winrt.windows.devices.bluetooth.genericattributeprofile.GattSubscribedClient;
     overload function Status(): winrt.windows.devices.bluetooth.genericattributeprofile.GattCommunicationStatus;
-    overload function ProtocolError(): winrt.windows.foundation.IReference<cxx.num.UInt8> /* GenericTypeInstSig */;
-    overload function BytesSent(): cxx.num.UInt16;
+    overload function ProtocolError(): winrt.windows.foundation.IReference<UInt8> /* GenericTypeInstSig */;
+    overload function BytesSent(): UInt16;
 }

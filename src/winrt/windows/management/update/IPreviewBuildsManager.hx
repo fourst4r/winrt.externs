@@ -1,6 +1,9 @@
 package winrt.windows.management.update;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Management.Update.h", true)
 @:native("winrt::Windows::Management::Update::IPreviewBuildsManager")
 extern interface IPreviewBuildsManager extends winrt.windows.foundation.IInspectable

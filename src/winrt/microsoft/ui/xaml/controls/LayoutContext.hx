@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::LayoutContext")
 extern class LayoutContext
@@ -9,7 +12,7 @@ extern class LayoutContext
     implements winrt.microsoft.ui.xaml.controls.ILayoutContextOverrides
 {
     overload function LayoutState(): winrt.windows.foundation.IInspectable;
-    overload function LayoutState(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function LayoutState(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function LayoutStateCore(): winrt.windows.foundation.IInspectable;
-    overload function LayoutStateCore(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function LayoutStateCore(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
 }

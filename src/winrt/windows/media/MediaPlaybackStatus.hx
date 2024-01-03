@@ -2,7 +2,7 @@ package winrt.windows.media;
 
 @:include("winrt/Windows.Media.h", true)
 @:native("winrt::Windows::Media::MediaPlaybackStatus")
-extern enum abstract MediaPlaybackStatus(cxx.num.Int32)
+extern enum abstract MediaPlaybackStatus(Int32)
 {
     @:native("winrt::Windows::Media::MediaPlaybackStatus::Closed") final Closed;
     @:native("winrt::Windows::Media::MediaPlaybackStatus::Changing") final Changing;

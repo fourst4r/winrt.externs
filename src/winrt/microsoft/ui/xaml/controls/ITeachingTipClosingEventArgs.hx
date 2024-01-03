@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosingEventArgs")
 extern interface ITeachingTipClosingEventArgs extends winrt.windows.foundation.IInspectable

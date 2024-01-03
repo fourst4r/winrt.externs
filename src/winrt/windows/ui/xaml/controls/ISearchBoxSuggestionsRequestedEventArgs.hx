@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::ISearchBoxSuggestionsRequestedEventArgs")
 extern interface ISearchBoxSuggestionsRequestedEventArgs extends winrt.windows.foundation.IInspectable

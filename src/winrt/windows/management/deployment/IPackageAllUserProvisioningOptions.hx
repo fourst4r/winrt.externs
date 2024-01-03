@@ -1,6 +1,9 @@
 package winrt.windows.management.deployment;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Management.Deployment.h", true)
 @:native("winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions")
 extern interface IPackageAllUserProvisioningOptions extends winrt.windows.foundation.IInspectable

@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.datatransfer;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.DataTransfer.h", true)
 @:native("winrt::Windows::ApplicationModel::DataTransfer::ShareUIOptions")
 extern class ShareUIOptions
@@ -8,7 +11,7 @@ extern class ShareUIOptions
 {
     function new();
     overload function Theme(): winrt.windows.applicationmodel.datatransfer.ShareUITheme;
-    overload function Theme(value: cxx.ConstRef<winrt.windows.applicationmodel.datatransfer.ShareUITheme>): Void;
+    overload function Theme(value: ConstRef<winrt.windows.applicationmodel.datatransfer.ShareUITheme>): Void;
     overload function SelectionRect(): winrt.windows.foundation.IReference<winrt.windows.foundation.Rect> /* GenericTypeInstSig */;
-    overload function SelectionRect(value: cxx.ConstRef<winrt.windows.foundation.IReference<winrt.windows.foundation.Rect> /* temp_GenericTypeInstSig */>): Void;
+    overload function SelectionRect(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.foundation.Rect> /* temp_GenericTypeInstSig */>): Void;
 }

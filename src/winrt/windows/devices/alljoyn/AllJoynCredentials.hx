@@ -1,6 +1,9 @@
 package winrt.windows.devices.alljoyn;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.AllJoyn.h", true)
 @:native("winrt::Windows::Devices::AllJoyn::AllJoynCredentials")
 extern class AllJoynCredentials
@@ -8,9 +11,9 @@ extern class AllJoynCredentials
 {
     overload function AuthenticationMechanism(): winrt.windows.devices.alljoyn.AllJoynAuthenticationMechanism;
     overload function Certificate(): winrt.windows.security.cryptography.certificates.Certificate;
-    overload function Certificate(value: cxx.ConstRef<winrt.windows.security.cryptography.certificates.Certificate>): Void;
+    overload function Certificate(value: ConstRef<winrt.windows.security.cryptography.certificates.Certificate>): Void;
     overload function PasswordCredential(): winrt.windows.security.credentials.PasswordCredential;
-    overload function PasswordCredential(value: cxx.ConstRef<winrt.windows.security.credentials.PasswordCredential>): Void;
+    overload function PasswordCredential(value: ConstRef<winrt.windows.security.credentials.PasswordCredential>): Void;
     overload function Timeout(): winrt.windows.foundation.TimeSpan;
-    overload function Timeout(value: cxx.ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function Timeout(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
 }

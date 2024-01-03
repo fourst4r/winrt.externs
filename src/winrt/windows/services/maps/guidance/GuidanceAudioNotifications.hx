@@ -2,7 +2,7 @@ package winrt.windows.services.maps.guidance;
 
 @:include("winrt/Windows.Services.Maps.Guidance.h", true)
 @:native("winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotifications")
-extern enum abstract GuidanceAudioNotifications(cxx.num.UInt32)
+extern enum abstract GuidanceAudioNotifications(UInt32)
 {
     @:native("winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotifications::None") final None;
     @:native("winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotifications::Maneuver") final Maneuver;

@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.controls;
 
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::CalendarViewSelectionMode")
-extern enum abstract CalendarViewSelectionMode(cxx.num.Int32)
+extern enum abstract CalendarViewSelectionMode(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Controls::CalendarViewSelectionMode::None") final None;
     @:native("winrt::Microsoft::UI::Xaml::Controls::CalendarViewSelectionMode::Single") final Single;

@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.h", true)
 @:native("winrt::Windows::UI::Xaml::ScalarTransition")
 extern class ScalarTransition
@@ -8,5 +11,5 @@ extern class ScalarTransition
 {
     function new();
     overload function Duration(): winrt.windows.foundation.TimeSpan;
-    overload function Duration(value: cxx.ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function Duration(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
 }

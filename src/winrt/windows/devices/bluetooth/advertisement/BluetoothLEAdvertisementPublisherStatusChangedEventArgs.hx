@@ -1,6 +1,9 @@
 package winrt.windows.devices.bluetooth.advertisement;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Bluetooth.Advertisement.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisherStatusChangedEventArgs")
 extern class BluetoothLEAdvertisementPublisherStatusChangedEventArgs
@@ -9,5 +12,5 @@ extern class BluetoothLEAdvertisementPublisherStatusChangedEventArgs
 {
     overload function Status(): winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementPublisherStatus;
     overload function Error(): winrt.windows.devices.bluetooth.BluetoothError;
-    overload function SelectedTransmitPowerLevelInDBm(): winrt.windows.foundation.IReference<cxx.num.Int16> /* GenericTypeInstSig */;
+    overload function SelectedTransmitPowerLevelInDBm(): winrt.windows.foundation.IReference<Int16> /* GenericTypeInstSig */;
 }

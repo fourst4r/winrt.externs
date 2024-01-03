@@ -4,5 +4,5 @@ package winrt.windows.ui.notifications.preview;
 @:native("winrt::Windows::UI::Notifications::Preview::ToastOcclusionManagerPreview")
 extern class ToastOcclusionManagerPreview
 {
-    static function SetToastWindowMargin(appWindowId: cxx.ConstRef<winrt.windows.ui.WindowId>, margin: cxx.num.Float64): Void;
+    static function SetToastWindowMargin(appWindowId: ConstRef<winrt.windows.ui.WindowId>, margin: Float64): Void;
 }

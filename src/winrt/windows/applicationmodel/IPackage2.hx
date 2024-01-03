@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.h", true)
 @:native("winrt::Windows::ApplicationModel::IPackage2")
 extern interface IPackage2 extends winrt.windows.foundation.IInspectable

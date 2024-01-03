@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::AppBarToggleButton")
 extern class AppBarToggleButton
@@ -10,19 +13,19 @@ extern class AppBarToggleButton
 {
     function new();
     overload function Label(): winrt.HString;
-    overload function Label(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function Label(value: ConstRef<winrt.HString>): Void;
     overload function Icon(): winrt.microsoft.ui.xaml.controls.IconElement;
-    overload function Icon(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.IconElement>): Void;
+    overload function Icon(value: ConstRef<winrt.microsoft.ui.xaml.controls.IconElement>): Void;
     overload function LabelPosition(): winrt.microsoft.ui.xaml.controls.CommandBarLabelPosition;
-    overload function LabelPosition(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.CommandBarLabelPosition>): Void;
+    overload function LabelPosition(value: ConstRef<winrt.microsoft.ui.xaml.controls.CommandBarLabelPosition>): Void;
     overload function KeyboardAcceleratorTextOverride(): winrt.HString;
-    overload function KeyboardAcceleratorTextOverride(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function KeyboardAcceleratorTextOverride(value: ConstRef<winrt.HString>): Void;
     overload function TemplateSettings(): winrt.microsoft.ui.xaml.controls.primitives.AppBarToggleButtonTemplateSettings;
     overload function IsCompact(): Bool;
     overload function IsCompact(value: Bool): Void;
     overload function IsInOverflow(): Bool;
-    overload function DynamicOverflowOrder(): cxx.num.Int32;
-    overload function DynamicOverflowOrder(value: cxx.num.Int32): Void;
+    overload function DynamicOverflowOrder(): Int32;
+    overload function DynamicOverflowOrder(value: Int32): Void;
     overload function LabelProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function IconProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function LabelPositionProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

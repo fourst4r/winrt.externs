@@ -1,6 +1,9 @@
 package winrt.windows.ui.windowmanagement;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.WindowManagement.h", true)
 @:native("winrt::Windows::UI::WindowManagement::IAppWindowPlacement")
 extern interface IAppWindowPlacement extends winrt.windows.foundation.IInspectable

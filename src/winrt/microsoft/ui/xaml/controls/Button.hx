@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::Button")
 extern class Button
@@ -9,7 +12,7 @@ extern class Button
 {
     function new();
     overload function Flyout(): winrt.microsoft.ui.xaml.controls.primitives.FlyoutBase;
-    overload function Flyout(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.primitives.FlyoutBase>): Void;
+    overload function Flyout(value: ConstRef<winrt.microsoft.ui.xaml.controls.primitives.FlyoutBase>): Void;
     overload function FlyoutProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function FlyoutProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
 }

@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.media.imaging;
 
 @:include("winrt/Windows.UI.Xaml.Media.Imaging.h", true)
 @:native("winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceLoadStatus")
-extern enum abstract SvgImageSourceLoadStatus(cxx.num.Int32)
+extern enum abstract SvgImageSourceLoadStatus(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceLoadStatus::Success") final Success;
     @:native("winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceLoadStatus::NetworkError") final NetworkError;

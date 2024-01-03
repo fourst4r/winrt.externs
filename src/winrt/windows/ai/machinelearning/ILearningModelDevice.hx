@@ -1,6 +1,9 @@
 package winrt.windows.ai.machinelearning;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.AI.MachineLearning.h", true)
 @:native("winrt::Windows::AI::MachineLearning::ILearningModelDevice")
 extern interface ILearningModelDevice extends winrt.windows.foundation.IInspectable

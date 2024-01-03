@@ -5,6 +5,6 @@ package winrt.microsoft.ui.xaml.controls.primitives;
 extern class CommandBarFlyoutCommandBarAutomationProperties
 {
     static overload function ControlTypeProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    static function GetControlType(element: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>): winrt.microsoft.ui.xaml.automation.peers.AutomationControlType;
-    static function SetControlType(element: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>, value: cxx.ConstRef<winrt.microsoft.ui.xaml.automation.peers.AutomationControlType>): Void;
+    static function GetControlType(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>): winrt.microsoft.ui.xaml.automation.peers.AutomationControlType;
+    static function SetControlType(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>, value: ConstRef<winrt.microsoft.ui.xaml.automation.peers.AutomationControlType>): Void;
 }

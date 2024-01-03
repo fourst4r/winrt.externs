@@ -1,6 +1,9 @@
 package winrt.windows.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::CompositionTarget")
 extern class CompositionTarget
@@ -8,5 +11,5 @@ extern class CompositionTarget
     implements winrt.windows.ui.composition.ICompositionTarget
 {
     overload function Root(): winrt.windows.ui.composition.Visual;
-    overload function Root(value: cxx.ConstRef<winrt.windows.ui.composition.Visual>): Void;
+    overload function Root(value: ConstRef<winrt.windows.ui.composition.Visual>): Void;
 }

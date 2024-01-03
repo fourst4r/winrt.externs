@@ -1,6 +1,9 @@
 package winrt.windows.media.import;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Import.h", true)
 @:native("winrt::Windows::Media::Import::IPhotoImportSource")
 extern interface IPhotoImportSource extends winrt.windows.foundation.IInspectable
@@ -15,7 +18,7 @@ extern interface IPhotoImportSource extends winrt.windows.foundation.IInspectabl
     overload function ConnectionTransport(): winrt.windows.media.import.PhotoImportConnectionTransport;
     overload function Type(): winrt.windows.media.import.PhotoImportSourceType;
     overload function PowerSource(): winrt.windows.media.import.PhotoImportPowerSource;
-    overload function BatteryLevelPercent(): winrt.windows.foundation.IReference<cxx.num.UInt32> /* GenericTypeInstSig */;
+    overload function BatteryLevelPercent(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
     overload function DateTime(): winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* GenericTypeInstSig */;
     overload function StorageMedia(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.import.PhotoImportStorageMedium> /* GenericTypeInstSig */;
     overload function IsLocked(): winrt.windows.foundation.IReference<Bool> /* GenericTypeInstSig */;

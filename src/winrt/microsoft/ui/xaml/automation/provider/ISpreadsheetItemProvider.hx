@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.automation.provider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Automation.Provider.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider")
 extern interface ISpreadsheetItemProvider extends winrt.windows.foundation.IInspectable

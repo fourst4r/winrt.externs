@@ -4,8 +4,8 @@ package winrt.windows.foundation;
 @:native("winrt::Windows::Foundation::Size")
 extern class Size
 {
-    @:native("Width") var width:cxx.num.Float32;
-    @:native("Height") var height:cxx.num.Float32;
+    @:native("Width") var width:Float32;
+    @:native("Height") var height:Float32;
     
     function new();
 }

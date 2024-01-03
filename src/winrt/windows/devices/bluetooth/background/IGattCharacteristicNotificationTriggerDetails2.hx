@@ -1,6 +1,9 @@
 package winrt.windows.devices.bluetooth.background;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Bluetooth.Background.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::Background::IGattCharacteristicNotificationTriggerDetails2")
 extern interface IGattCharacteristicNotificationTriggerDetails2 extends winrt.windows.foundation.IInspectable

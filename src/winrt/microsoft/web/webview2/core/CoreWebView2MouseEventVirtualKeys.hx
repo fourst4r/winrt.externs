@@ -2,7 +2,7 @@ package winrt.microsoft.web.webview2.core;
 
 @:include("winrt/Microsoft.Web.WebView2.Core.h", true)
 @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2MouseEventVirtualKeys")
-extern enum abstract CoreWebView2MouseEventVirtualKeys(cxx.num.UInt32)
+extern enum abstract CoreWebView2MouseEventVirtualKeys(UInt32)
 {
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2MouseEventVirtualKeys::None") final None;
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2MouseEventVirtualKeys::LeftButton") final LeftButton;

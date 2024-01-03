@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.datatransfer;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.DataTransfer.h", true)
 @:native("winrt::Windows::ApplicationModel::DataTransfer::IClipboardHistoryItem")
 extern interface IClipboardHistoryItem extends winrt.windows.foundation.IInspectable

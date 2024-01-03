@@ -4,5 +4,5 @@ package winrt.windows.media.protection.playready;
 @:native("winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseManagement")
 extern class PlayReadyLicenseManagement
 {
-    static function DeleteLicenses(contentHeader: cxx.ConstRef<winrt.windows.media.protection.playready.PlayReadyContentHeader>): winrt.windows.foundation.IAsyncAction;
+    static function DeleteLicenses(contentHeader: ConstRef<winrt.windows.media.protection.playready.PlayReadyContentHeader>): winrt.windows.foundation.IAsyncAction;
 }

@@ -2,7 +2,7 @@ package winrt.windows.security.isolation;
 
 @:include("winrt/Windows.Security.Isolation.h", true)
 @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentSignInProgress")
-extern enum abstract IsolatedWindowsEnvironmentSignInProgress(cxx.num.Int32)
+extern enum abstract IsolatedWindowsEnvironmentSignInProgress(Int32)
 {
     @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentSignInProgress::Connecting") final Connecting;
     @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentSignInProgress::Connected") final Connected;

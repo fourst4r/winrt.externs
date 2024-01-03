@@ -2,4 +2,4 @@ package winrt.windows.ui.xaml.data;
 
 
 @:extern 
-typedef PropertyChangedEventHandler = (sender: cxx.ConstRef<winrt.windows.foundation.IInspectable>, e: cxx.ConstRef<winrt.windows.ui.xaml.data.PropertyChangedEventArgs>)->Void;
+typedef PropertyChangedEventHandler = Fn<(sender: ConstRef<winrt.windows.foundation.IInspectable>, e: ConstRef<winrt.windows.ui.xaml.data.PropertyChangedEventArgs>)->Void>;

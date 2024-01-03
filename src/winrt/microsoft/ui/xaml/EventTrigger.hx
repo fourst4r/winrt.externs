@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.h", true)
 @:native("winrt::Microsoft::UI::Xaml::EventTrigger")
 extern class EventTrigger
@@ -9,6 +12,6 @@ extern class EventTrigger
 {
     function new();
     overload function RoutedEvent(): winrt.microsoft.ui.xaml.RoutedEvent;
-    overload function RoutedEvent(value: cxx.ConstRef<winrt.microsoft.ui.xaml.RoutedEvent>): Void;
+    overload function RoutedEvent(value: ConstRef<winrt.microsoft.ui.xaml.RoutedEvent>): Void;
     overload function Actions(): winrt.microsoft.ui.xaml.TriggerActionCollection;
 }

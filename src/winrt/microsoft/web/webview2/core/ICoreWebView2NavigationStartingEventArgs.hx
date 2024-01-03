@@ -1,6 +1,9 @@
 package winrt.microsoft.web.webview2.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.Web.WebView2.Core.h", true)
 @:native("winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NavigationStartingEventArgs")
 extern interface ICoreWebView2NavigationStartingEventArgs extends winrt.windows.foundation.IInspectable
@@ -11,5 +14,5 @@ extern interface ICoreWebView2NavigationStartingEventArgs extends winrt.windows.
     overload function RequestHeaders(): winrt.microsoft.web.webview2.core.CoreWebView2HttpRequestHeaders;
     overload function Cancel(): Bool;
     overload function Cancel(value: Bool): Void;
-    overload function NavigationId(): cxx.num.UInt64;
+    overload function NavigationId(): UInt64;
 }

@@ -2,7 +2,7 @@ package winrt.windows.graphics.printing;
 
 @:include("winrt/Windows.Graphics.Printing.h", true)
 @:native("winrt::Windows::Graphics::Printing::PrintHolePunch")
-extern enum abstract PrintHolePunch(cxx.num.Int32)
+extern enum abstract PrintHolePunch(Int32)
 {
     @:native("winrt::Windows::Graphics::Printing::PrintHolePunch::Default") final Default;
     @:native("winrt::Windows::Graphics::Printing::PrintHolePunch::NotAvailable") final NotAvailable;

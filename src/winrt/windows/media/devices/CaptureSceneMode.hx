@@ -2,7 +2,7 @@ package winrt.windows.media.devices;
 
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::CaptureSceneMode")
-extern enum abstract CaptureSceneMode(cxx.num.Int32)
+extern enum abstract CaptureSceneMode(Int32)
 {
     @:native("winrt::Windows::Media::Devices::CaptureSceneMode::Auto") final Auto;
     @:native("winrt::Windows::Media::Devices::CaptureSceneMode::Manual") final Manual;

@@ -1,6 +1,9 @@
 package winrt.windows.services.maps.localsearch;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Services.Maps.LocalSearch.h", true)
 @:native("winrt::Windows::Services::Maps::LocalSearch::ILocalLocation2")
 extern interface ILocalLocation2 extends winrt.windows.foundation.IInspectable

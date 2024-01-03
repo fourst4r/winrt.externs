@@ -1,6 +1,9 @@
 package winrt.windows.networking.networkoperators;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringClient")
 extern interface INetworkOperatorTetheringClient extends winrt.windows.foundation.IInspectable

@@ -1,6 +1,9 @@
 package winrt.windows.globalization.datetimeformatting;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Globalization.DateTimeFormatting.h", true)
 @:native("winrt::Windows::Globalization::DateTimeFormatting::IDateTimeFormatterStatics")
 extern interface IDateTimeFormatterStatics extends winrt.windows.foundation.IInspectable

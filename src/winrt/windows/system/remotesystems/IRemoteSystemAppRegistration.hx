@@ -1,6 +1,9 @@
 package winrt.windows.system.remotesystems;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.System.RemoteSystems.h", true)
 @:native("winrt::Windows::System::RemoteSystems::IRemoteSystemAppRegistration")
 extern interface IRemoteSystemAppRegistration extends winrt.windows.foundation.IInspectable

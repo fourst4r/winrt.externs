@@ -1,6 +1,9 @@
 package winrt.windows.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::ExponentialEasingFunction")
 extern class ExponentialEasingFunction
@@ -8,5 +11,5 @@ extern class ExponentialEasingFunction
     implements winrt.windows.ui.composition.IExponentialEasingFunction
 {
     overload function Mode(): winrt.windows.ui.composition.CompositionEasingFunctionMode;
-    overload function Exponent(): cxx.num.Float32;
+    overload function Exponent(): Float32;
 }

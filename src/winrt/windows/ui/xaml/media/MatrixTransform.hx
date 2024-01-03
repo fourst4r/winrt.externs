@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.media;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Media.h", true)
 @:native("winrt::Windows::UI::Xaml::Media::MatrixTransform")
 extern class MatrixTransform
@@ -9,7 +12,7 @@ extern class MatrixTransform
 {
     function new();
     overload function Matrix(): winrt.windows.ui.xaml.media.Matrix;
-    overload function Matrix(value: cxx.ConstRef<winrt.windows.ui.xaml.media.Matrix>): Void;
+    overload function Matrix(value: ConstRef<winrt.windows.ui.xaml.media.Matrix>): Void;
     overload function MatrixProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function MatrixProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

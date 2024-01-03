@@ -2,7 +2,7 @@ package winrt.microsoft.ui.composition;
 
 @:include("winrt/Microsoft.UI.Composition.h", true)
 @:native("winrt::Microsoft::UI::Composition::CompositionEffectFactoryLoadStatus")
-extern enum abstract CompositionEffectFactoryLoadStatus(cxx.num.Int32)
+extern enum abstract CompositionEffectFactoryLoadStatus(Int32)
 {
     @:native("winrt::Microsoft::UI::Composition::CompositionEffectFactoryLoadStatus::Success") final Success;
     @:native("winrt::Microsoft::UI::Composition::CompositionEffectFactoryLoadStatus::EffectTooComplex") final EffectTooComplex;

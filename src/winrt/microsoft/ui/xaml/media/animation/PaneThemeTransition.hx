@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.media.animation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Media.Animation.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Media::Animation::PaneThemeTransition")
 extern class PaneThemeTransition
@@ -9,7 +12,7 @@ extern class PaneThemeTransition
 {
     function new();
     overload function Edge(): winrt.microsoft.ui.xaml.controls.primitives.EdgeTransitionLocation;
-    overload function Edge(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.primitives.EdgeTransitionLocation>): Void;
+    overload function Edge(value: ConstRef<winrt.microsoft.ui.xaml.controls.primitives.EdgeTransitionLocation>): Void;
     overload function EdgeProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function EdgeProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
 }

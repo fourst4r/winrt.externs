@@ -1,6 +1,9 @@
 package winrt.windows.networking.connectivity;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Networking.Connectivity.h", true)
 @:native("winrt::Windows::Networking::Connectivity::ConnectionCost")
 extern class ConnectionCost

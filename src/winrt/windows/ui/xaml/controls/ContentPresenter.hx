@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::ContentPresenter")
 extern class ContentPresenter
@@ -14,61 +17,61 @@ extern class ContentPresenter
 {
     function new();
     overload function Content(): winrt.windows.foundation.IInspectable;
-    overload function Content(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Content(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function ContentTemplate(): winrt.windows.ui.xaml.DataTemplate;
-    overload function ContentTemplate(value: cxx.ConstRef<winrt.windows.ui.xaml.DataTemplate>): Void;
+    overload function ContentTemplate(value: ConstRef<winrt.windows.ui.xaml.DataTemplate>): Void;
     overload function ContentTemplateSelector(): winrt.windows.ui.xaml.controls.DataTemplateSelector;
-    overload function ContentTemplateSelector(value: cxx.ConstRef<winrt.windows.ui.xaml.controls.DataTemplateSelector>): Void;
+    overload function ContentTemplateSelector(value: ConstRef<winrt.windows.ui.xaml.controls.DataTemplateSelector>): Void;
     overload function ContentTransitions(): winrt.windows.ui.xaml.media.animation.TransitionCollection;
-    overload function ContentTransitions(value: cxx.ConstRef<winrt.windows.ui.xaml.media.animation.TransitionCollection>): Void;
-    overload function FontSize(): cxx.num.Float64;
-    overload function FontSize(value: cxx.num.Float64): Void;
+    overload function ContentTransitions(value: ConstRef<winrt.windows.ui.xaml.media.animation.TransitionCollection>): Void;
+    overload function FontSize(): Float64;
+    overload function FontSize(value: Float64): Void;
     overload function FontFamily(): winrt.windows.ui.xaml.media.FontFamily;
-    overload function FontFamily(value: cxx.ConstRef<winrt.windows.ui.xaml.media.FontFamily>): Void;
+    overload function FontFamily(value: ConstRef<winrt.windows.ui.xaml.media.FontFamily>): Void;
     overload function FontWeight(): winrt.windows.ui.text.FontWeight;
-    overload function FontWeight(value: cxx.ConstRef<winrt.windows.ui.text.FontWeight>): Void;
+    overload function FontWeight(value: ConstRef<winrt.windows.ui.text.FontWeight>): Void;
     overload function FontStyle(): winrt.windows.ui.text.FontStyle;
-    overload function FontStyle(value: cxx.ConstRef<winrt.windows.ui.text.FontStyle>): Void;
+    overload function FontStyle(value: ConstRef<winrt.windows.ui.text.FontStyle>): Void;
     overload function FontStretch(): winrt.windows.ui.text.FontStretch;
-    overload function FontStretch(value: cxx.ConstRef<winrt.windows.ui.text.FontStretch>): Void;
-    overload function CharacterSpacing(): cxx.num.Int32;
-    overload function CharacterSpacing(value: cxx.num.Int32): Void;
+    overload function FontStretch(value: ConstRef<winrt.windows.ui.text.FontStretch>): Void;
+    overload function CharacterSpacing(): Int32;
+    overload function CharacterSpacing(value: Int32): Void;
     overload function Foreground(): winrt.windows.ui.xaml.media.Brush;
-    overload function Foreground(value: cxx.ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
+    overload function Foreground(value: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
     overload function OpticalMarginAlignment(): winrt.windows.ui.xaml.OpticalMarginAlignment;
-    overload function OpticalMarginAlignment(value: cxx.ConstRef<winrt.windows.ui.xaml.OpticalMarginAlignment>): Void;
+    overload function OpticalMarginAlignment(value: ConstRef<winrt.windows.ui.xaml.OpticalMarginAlignment>): Void;
     overload function TextLineBounds(): winrt.windows.ui.xaml.TextLineBounds;
-    overload function TextLineBounds(value: cxx.ConstRef<winrt.windows.ui.xaml.TextLineBounds>): Void;
+    overload function TextLineBounds(value: ConstRef<winrt.windows.ui.xaml.TextLineBounds>): Void;
     overload function IsTextScaleFactorEnabled(): Bool;
     overload function IsTextScaleFactorEnabled(value: Bool): Void;
     overload function TextWrapping(): winrt.windows.ui.xaml.TextWrapping;
-    overload function TextWrapping(value: cxx.ConstRef<winrt.windows.ui.xaml.TextWrapping>): Void;
-    overload function MaxLines(): cxx.num.Int32;
-    overload function MaxLines(value: cxx.num.Int32): Void;
+    overload function TextWrapping(value: ConstRef<winrt.windows.ui.xaml.TextWrapping>): Void;
+    overload function MaxLines(): Int32;
+    overload function MaxLines(value: Int32): Void;
     overload function LineStackingStrategy(): winrt.windows.ui.xaml.LineStackingStrategy;
-    overload function LineStackingStrategy(value: cxx.ConstRef<winrt.windows.ui.xaml.LineStackingStrategy>): Void;
-    overload function LineHeight(): cxx.num.Float64;
-    overload function LineHeight(value: cxx.num.Float64): Void;
+    overload function LineStackingStrategy(value: ConstRef<winrt.windows.ui.xaml.LineStackingStrategy>): Void;
+    overload function LineHeight(): Float64;
+    overload function LineHeight(value: Float64): Void;
     overload function BorderBrush(): winrt.windows.ui.xaml.media.Brush;
-    overload function BorderBrush(value: cxx.ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
+    overload function BorderBrush(value: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
     overload function BorderThickness(): winrt.windows.ui.xaml.Thickness;
-    overload function BorderThickness(value: cxx.ConstRef<winrt.windows.ui.xaml.Thickness>): Void;
+    overload function BorderThickness(value: ConstRef<winrt.windows.ui.xaml.Thickness>): Void;
     overload function CornerRadius(): winrt.windows.ui.xaml.CornerRadius;
-    overload function CornerRadius(value: cxx.ConstRef<winrt.windows.ui.xaml.CornerRadius>): Void;
+    overload function CornerRadius(value: ConstRef<winrt.windows.ui.xaml.CornerRadius>): Void;
     overload function Padding(): winrt.windows.ui.xaml.Thickness;
-    overload function Padding(value: cxx.ConstRef<winrt.windows.ui.xaml.Thickness>): Void;
+    overload function Padding(value: ConstRef<winrt.windows.ui.xaml.Thickness>): Void;
     overload function Background(): winrt.windows.ui.xaml.media.Brush;
-    overload function Background(value: cxx.ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
+    overload function Background(value: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
     overload function HorizontalContentAlignment(): winrt.windows.ui.xaml.HorizontalAlignment;
-    overload function HorizontalContentAlignment(value: cxx.ConstRef<winrt.windows.ui.xaml.HorizontalAlignment>): Void;
+    overload function HorizontalContentAlignment(value: ConstRef<winrt.windows.ui.xaml.HorizontalAlignment>): Void;
     overload function VerticalContentAlignment(): winrt.windows.ui.xaml.VerticalAlignment;
-    overload function VerticalContentAlignment(value: cxx.ConstRef<winrt.windows.ui.xaml.VerticalAlignment>): Void;
+    overload function VerticalContentAlignment(value: ConstRef<winrt.windows.ui.xaml.VerticalAlignment>): Void;
     overload function BackgroundTransition(): winrt.windows.ui.xaml.BrushTransition;
-    overload function BackgroundTransition(value: cxx.ConstRef<winrt.windows.ui.xaml.BrushTransition>): Void;
+    overload function BackgroundTransition(value: ConstRef<winrt.windows.ui.xaml.BrushTransition>): Void;
     overload function BackgroundSizing(): winrt.windows.ui.xaml.controls.BackgroundSizing;
-    overload function BackgroundSizing(value: cxx.ConstRef<winrt.windows.ui.xaml.controls.BackgroundSizing>): Void;
-    function OnContentTemplateChanged(oldContentTemplate: cxx.ConstRef<winrt.windows.ui.xaml.DataTemplate>, newContentTemplate: cxx.ConstRef<winrt.windows.ui.xaml.DataTemplate>): Void;
-    function OnContentTemplateSelectorChanged(oldContentTemplateSelector: cxx.ConstRef<winrt.windows.ui.xaml.controls.DataTemplateSelector>, newContentTemplateSelector: cxx.ConstRef<winrt.windows.ui.xaml.controls.DataTemplateSelector>): Void;
+    overload function BackgroundSizing(value: ConstRef<winrt.windows.ui.xaml.controls.BackgroundSizing>): Void;
+    function OnContentTemplateChanged(oldContentTemplate: ConstRef<winrt.windows.ui.xaml.DataTemplate>, newContentTemplate: ConstRef<winrt.windows.ui.xaml.DataTemplate>): Void;
+    function OnContentTemplateSelectorChanged(oldContentTemplateSelector: ConstRef<winrt.windows.ui.xaml.controls.DataTemplateSelector>, newContentTemplateSelector: ConstRef<winrt.windows.ui.xaml.controls.DataTemplateSelector>): Void;
     overload function BackgroundSizingProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function TextWrappingProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function MaxLinesProperty(): winrt.windows.ui.xaml.DependencyProperty;

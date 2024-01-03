@@ -1,6 +1,9 @@
 package winrt.windows.devices.sensors;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Sensors.h", true)
 @:native("winrt::Windows::Devices::Sensors::ILightSensorReading2")
 extern interface ILightSensorReading2 extends winrt.windows.foundation.IInspectable

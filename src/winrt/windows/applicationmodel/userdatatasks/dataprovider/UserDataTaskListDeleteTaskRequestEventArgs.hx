@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.userdatatasks.dataprovider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.UserDataTasks.DataProvider.h", true)
 @:native("winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequestEventArgs")
 extern class UserDataTaskListDeleteTaskRequestEventArgs

@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.automation.peers;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer")
 extern class ItemsControlAutomationPeer
@@ -9,8 +12,8 @@ extern class ItemsControlAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IItemsControlAutomationPeerOverrides
     implements winrt.microsoft.ui.xaml.automation.provider.IItemContainerProvider
 {
-    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.ItemsControl>);
-    function CreateItemAutomationPeer(item: cxx.ConstRef<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.automation.peers.ItemAutomationPeer;
-    function OnCreateItemAutomationPeer(item: cxx.ConstRef<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.automation.peers.ItemAutomationPeer;
-    function FindItemByProperty(startAfter: cxx.ConstRef<winrt.microsoft.ui.xaml.automation.provider.IRawElementProviderSimple>, automationProperty: cxx.ConstRef<winrt.microsoft.ui.xaml.automation.AutomationProperty>, value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.automation.provider.IRawElementProviderSimple;
+    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.ItemsControl>);
+    function CreateItemAutomationPeer(item: ConstRef<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.automation.peers.ItemAutomationPeer;
+    function OnCreateItemAutomationPeer(item: ConstRef<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.automation.peers.ItemAutomationPeer;
+    function FindItemByProperty(startAfter: ConstRef<winrt.microsoft.ui.xaml.automation.provider.IRawElementProviderSimple>, automationProperty: ConstRef<winrt.microsoft.ui.xaml.automation.AutomationProperty>, value: ConstRef<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.automation.provider.IRawElementProviderSimple;
 }

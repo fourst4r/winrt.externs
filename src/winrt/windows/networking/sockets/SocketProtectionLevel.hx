@@ -2,7 +2,7 @@ package winrt.windows.networking.sockets;
 
 @:include("winrt/Windows.Networking.Sockets.h", true)
 @:native("winrt::Windows::Networking::Sockets::SocketProtectionLevel")
-extern enum abstract SocketProtectionLevel(cxx.num.Int32)
+extern enum abstract SocketProtectionLevel(Int32)
 {
     @:native("winrt::Windows::Networking::Sockets::SocketProtectionLevel::PlainSocket") final PlainSocket;
     @:native("winrt::Windows::Networking::Sockets::SocketProtectionLevel::Ssl") final Ssl;

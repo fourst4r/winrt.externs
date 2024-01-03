@@ -2,7 +2,7 @@ package winrt.windows.services.store;
 
 @:include("winrt/Windows.Services.Store.h", true)
 @:native("winrt::Windows::Services::Store::StoreCanLicenseStatus")
-extern enum abstract StoreCanLicenseStatus(cxx.num.Int32)
+extern enum abstract StoreCanLicenseStatus(Int32)
 {
     @:native("winrt::Windows::Services::Store::StoreCanLicenseStatus::NotLicensableToUser") final NotLicensableToUser;
     @:native("winrt::Windows::Services::Store::StoreCanLicenseStatus::Licensable") final Licensable;

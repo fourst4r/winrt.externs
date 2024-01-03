@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::NavigationViewTemplateSettings")
 extern class NavigationViewTemplateSettings
@@ -8,7 +11,7 @@ extern class NavigationViewTemplateSettings
     implements winrt.windows.ui.xaml.controls.INavigationViewTemplateSettings
 {
     function new();
-    overload function TopPadding(): cxx.num.Float64;
+    overload function TopPadding(): Float64;
     overload function OverflowButtonVisibility(): winrt.windows.ui.xaml.Visibility;
     overload function PaneToggleButtonVisibility(): winrt.windows.ui.xaml.Visibility;
     overload function BackButtonVisibility(): winrt.windows.ui.xaml.Visibility;

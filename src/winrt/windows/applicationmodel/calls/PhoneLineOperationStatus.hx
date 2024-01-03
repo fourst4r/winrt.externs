@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.calls;
 
 @:include("winrt/Windows.ApplicationModel.Calls.h", true)
 @:native("winrt::Windows::ApplicationModel::Calls::PhoneLineOperationStatus")
-extern enum abstract PhoneLineOperationStatus(cxx.num.Int32)
+extern enum abstract PhoneLineOperationStatus(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Calls::PhoneLineOperationStatus::Succeeded") final Succeeded;
     @:native("winrt::Windows::ApplicationModel::Calls::PhoneLineOperationStatus::OtherFailure") final OtherFailure;

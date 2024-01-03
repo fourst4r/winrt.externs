@@ -2,7 +2,7 @@ package winrt.windows.services.maps.guidance;
 
 @:include("winrt/Windows.Services.Maps.Guidance.h", true)
 @:native("winrt::Windows::Services::Maps::Guidance::GuidanceLaneMarkers")
-extern enum abstract GuidanceLaneMarkers(cxx.num.UInt32)
+extern enum abstract GuidanceLaneMarkers(UInt32)
 {
     @:native("winrt::Windows::Services::Maps::Guidance::GuidanceLaneMarkers::None") final None;
     @:native("winrt::Windows::Services::Maps::Guidance::GuidanceLaneMarkers::LightRight") final LightRight;

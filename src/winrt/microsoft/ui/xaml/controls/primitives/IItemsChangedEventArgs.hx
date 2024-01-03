@@ -1,13 +1,16 @@
 package winrt.microsoft.ui.xaml.controls.primitives;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.Primitives.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::IItemsChangedEventArgs")
 extern interface IItemsChangedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function Action(): cxx.num.Int32;
+    overload function Action(): Int32;
     overload function Position(): winrt.microsoft.ui.xaml.controls.primitives.GeneratorPosition;
     overload function OldPosition(): winrt.microsoft.ui.xaml.controls.primitives.GeneratorPosition;
-    overload function ItemCount(): cxx.num.Int32;
-    overload function ItemUICount(): cxx.num.Int32;
+    overload function ItemCount(): Int32;
+    overload function ItemUICount(): Int32;
 }

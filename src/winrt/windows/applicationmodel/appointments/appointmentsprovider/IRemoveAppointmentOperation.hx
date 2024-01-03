@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.appointments.appointmentsprovider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Appointments.AppointmentsProvider.h", true)
 @:native("winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::IRemoveAppointmentOperation")
 extern interface IRemoveAppointmentOperation extends winrt.windows.foundation.IInspectable
@@ -10,6 +13,6 @@ extern interface IRemoveAppointmentOperation extends winrt.windows.foundation.II
     overload function SourcePackageFamilyName(): winrt.HString;
     function ReportCompleted(): Void;
     function ReportCanceled(): Void;
-    function ReportError(value: cxx.ConstRef<winrt.HString>): Void;
+    function ReportError(value: ConstRef<winrt.HString>): Void;
     function DismissUI(): Void;
 }

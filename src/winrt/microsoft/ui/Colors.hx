@@ -1,6 +1,9 @@
 package winrt.microsoft.ui;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.h", true)
 @:native("winrt::Microsoft::UI::Colors")
 extern class Colors

@@ -1,9 +1,12 @@
 package winrt.windows.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::IRefreshInteractionRatioChangedEventArgs")
 extern interface IRefreshInteractionRatioChangedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function InteractionRatio(): cxx.num.Float64;
+    overload function InteractionRatio(): Float64;
 }

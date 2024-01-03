@@ -2,7 +2,7 @@ package winrt.windows.ui.composition;
 
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::CompositionStrokeCap")
-extern enum abstract CompositionStrokeCap(cxx.num.Int32)
+extern enum abstract CompositionStrokeCap(Int32)
 {
     @:native("winrt::Windows::UI::Composition::CompositionStrokeCap::Flat") final Flat;
     @:native("winrt::Windows::UI::Composition::CompositionStrokeCap::Square") final Square;

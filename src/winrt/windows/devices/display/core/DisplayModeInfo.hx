@@ -1,6 +1,9 @@
 package winrt.windows.devices.display.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Display.Core.h", true)
 @:native("winrt::Windows::Devices::Display::Core::DisplayModeInfo")
 extern class DisplayModeInfo
@@ -13,8 +16,8 @@ extern class DisplayModeInfo
     overload function TargetResolution(): winrt.windows.graphics.SizeInt32;
     overload function PresentationRate(): winrt.windows.devices.display.core.DisplayPresentationRate;
     overload function IsInterlaced(): Bool;
-    function GetWireFormatSupportedBitsPerChannel(encoding: cxx.ConstRef<winrt.windows.devices.display.core.DisplayWireFormatPixelEncoding>): winrt.windows.devices.display.core.DisplayBitsPerChannel;
-    function IsWireFormatSupported(wireFormat: cxx.ConstRef<winrt.windows.devices.display.core.DisplayWireFormat>): Bool;
+    function GetWireFormatSupportedBitsPerChannel(encoding: ConstRef<winrt.windows.devices.display.core.DisplayWireFormatPixelEncoding>): winrt.windows.devices.display.core.DisplayBitsPerChannel;
+    function IsWireFormatSupported(wireFormat: ConstRef<winrt.windows.devices.display.core.DisplayWireFormat>): Bool;
     overload function Properties(): winrt.windows.foundation.collections.IMapView<winrt.Guid, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;
     overload function PhysicalPresentationRate(): winrt.windows.devices.display.core.DisplayPresentationRate;
 }

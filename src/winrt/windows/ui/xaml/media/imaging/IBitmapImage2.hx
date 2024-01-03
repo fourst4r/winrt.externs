@@ -1,10 +1,13 @@
 package winrt.windows.ui.xaml.media.imaging;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Media.Imaging.h", true)
 @:native("winrt::Windows::UI::Xaml::Media::Imaging::IBitmapImage2")
 extern interface IBitmapImage2 extends winrt.windows.foundation.IInspectable
 {
     overload function DecodePixelType(): winrt.windows.ui.xaml.media.imaging.DecodePixelType;
-    overload function DecodePixelType(value: cxx.ConstRef<winrt.windows.ui.xaml.media.imaging.DecodePixelType>): Void;
+    overload function DecodePixelType(value: ConstRef<winrt.windows.ui.xaml.media.imaging.DecodePixelType>): Void;
 }

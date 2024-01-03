@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.store.preview.installcontrol;
 
 @:include("winrt/Windows.ApplicationModel.Store.Preview.InstallControl.h", true)
 @:native("winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallState")
-extern enum abstract AppInstallState(cxx.num.Int32)
+extern enum abstract AppInstallState(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallState::Pending") final Pending;
     @:native("winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallState::Starting") final Starting;

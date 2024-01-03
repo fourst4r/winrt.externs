@@ -1,6 +1,9 @@
 package winrt.windows.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::CompositionPathGeometry")
 extern class CompositionPathGeometry
@@ -8,5 +11,5 @@ extern class CompositionPathGeometry
     implements winrt.windows.ui.composition.ICompositionPathGeometry
 {
     overload function Path(): winrt.windows.ui.composition.CompositionPath;
-    overload function Path(value: cxx.ConstRef<winrt.windows.ui.composition.CompositionPath>): Void;
+    overload function Path(value: ConstRef<winrt.windows.ui.composition.CompositionPath>): Void;
 }

@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.activation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Activation.h", true)
 @:native("winrt::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs")
 extern class LaunchActivatedEventArgs
@@ -17,7 +20,7 @@ extern class LaunchActivatedEventArgs
     overload function Kind(): winrt.windows.applicationmodel.activation.ActivationKind;
     overload function PreviousExecutionState(): winrt.windows.applicationmodel.activation.ApplicationExecutionState;
     overload function SplashScreen(): winrt.windows.applicationmodel.activation.SplashScreen;
-    overload function CurrentlyShownApplicationViewId(): cxx.num.Int32;
+    overload function CurrentlyShownApplicationViewId(): Int32;
     overload function PrelaunchActivated(): Bool;
     overload function ViewSwitcher(): winrt.windows.ui.viewmanagement.ActivationViewSwitcher;
     overload function TileActivatedInfo(): winrt.windows.applicationmodel.activation.TileActivatedInfo;

@@ -2,7 +2,7 @@ package winrt.windows.graphics.imaging;
 
 @:include("winrt/Windows.Graphics.Imaging.h", true)
 @:native("winrt::Windows::Graphics::Imaging::BitmapPixelFormat")
-extern enum abstract BitmapPixelFormat(cxx.num.Int32)
+extern enum abstract BitmapPixelFormat(Int32)
 {
     @:native("winrt::Windows::Graphics::Imaging::BitmapPixelFormat::Unknown") final Unknown;
     @:native("winrt::Windows::Graphics::Imaging::BitmapPixelFormat::Rgba16") final Rgba16;

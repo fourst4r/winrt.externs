@@ -1,6 +1,9 @@
 package winrt.microsoft.graphics.display;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.Graphics.Display.h", true)
 @:native("winrt::Microsoft::Graphics::Display::IDisplayAdvancedColorInfo")
 extern interface IDisplayAdvancedColorInfo extends winrt.windows.foundation.IInspectable
@@ -10,10 +13,10 @@ extern interface IDisplayAdvancedColorInfo extends winrt.windows.foundation.IIns
     overload function GreenPrimary(): winrt.windows.foundation.Point;
     overload function BluePrimary(): winrt.windows.foundation.Point;
     overload function WhitePoint(): winrt.windows.foundation.Point;
-    overload function MaxLuminanceInNits(): cxx.num.Float64;
-    overload function MinLuminanceInNits(): cxx.num.Float64;
-    overload function MaxAverageFullFrameLuminanceInNits(): cxx.num.Float64;
-    overload function SdrWhiteLevelInNits(): cxx.num.Float64;
-    function IsHdrMetadataFormatCurrentlySupported(format: cxx.ConstRef<winrt.microsoft.graphics.display.DisplayHdrMetadataFormat>): Bool;
-    function IsAdvancedColorKindAvailable(kind: cxx.ConstRef<winrt.microsoft.graphics.display.DisplayAdvancedColorKind>): Bool;
+    overload function MaxLuminanceInNits(): Float64;
+    overload function MinLuminanceInNits(): Float64;
+    overload function MaxAverageFullFrameLuminanceInNits(): Float64;
+    overload function SdrWhiteLevelInNits(): Float64;
+    function IsHdrMetadataFormatCurrentlySupported(format: ConstRef<winrt.microsoft.graphics.display.DisplayHdrMetadataFormat>): Bool;
+    function IsAdvancedColorKindAvailable(kind: ConstRef<winrt.microsoft.graphics.display.DisplayAdvancedColorKind>): Bool;
 }

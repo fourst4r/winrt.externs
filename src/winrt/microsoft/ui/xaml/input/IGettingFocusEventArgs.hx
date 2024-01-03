@@ -1,13 +1,16 @@
 package winrt.microsoft.ui.xaml.input;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Input.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Input::IGettingFocusEventArgs")
 extern interface IGettingFocusEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function OldFocusedElement(): winrt.microsoft.ui.xaml.DependencyObject;
     overload function NewFocusedElement(): winrt.microsoft.ui.xaml.DependencyObject;
-    overload function NewFocusedElement(value: cxx.ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): Void;
+    overload function NewFocusedElement(value: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): Void;
     overload function FocusState(): winrt.microsoft.ui.xaml.FocusState;
     overload function Direction(): winrt.microsoft.ui.xaml.input.FocusNavigationDirection;
     overload function Handled(): Bool;
@@ -17,5 +20,5 @@ extern interface IGettingFocusEventArgs extends winrt.windows.foundation.IInspec
     overload function Cancel(value: Bool): Void;
     overload function CorrelationId(): winrt.Guid;
     function TryCancel(): Bool;
-    function TrySetNewFocusedElement(element: cxx.ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): Bool;
+    function TrySetNewFocusedElement(element: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): Bool;
 }

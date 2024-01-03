@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Composition.h", true)
 @:native("winrt::Microsoft::UI::Composition::VisualUnorderedCollection")
 extern class VisualUnorderedCollection
@@ -9,8 +12,8 @@ extern class VisualUnorderedCollection
     implements winrt.windows.foundation.collections.IIterable<winrt.microsoft.ui.composition.Visual> /* GenericTypeInstSig */
 {
     function RemoveAll(): Void;
-    function Add(newVisual: cxx.ConstRef<winrt.microsoft.ui.composition.Visual>): Void;
-    function Remove(visual: cxx.ConstRef<winrt.microsoft.ui.composition.Visual>): Void;
-    overload function Count(): cxx.num.Int32;
+    function Add(newVisual: ConstRef<winrt.microsoft.ui.composition.Visual>): Void;
+    function Remove(visual: ConstRef<winrt.microsoft.ui.composition.Visual>): Void;
+    overload function Count(): Int32;
     function First(): winrt.windows.foundation.collections.IIterator<winrt.microsoft.ui.composition.Visual> /* GenericTypeInstSig */;
 }

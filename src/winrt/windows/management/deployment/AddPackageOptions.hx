@@ -1,6 +1,9 @@
 package winrt.windows.management.deployment;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Management.Deployment.h", true)
 @:native("winrt::Windows::Management::Deployment::AddPackageOptions")
 extern class AddPackageOptions
@@ -10,14 +13,14 @@ extern class AddPackageOptions
     function new();
     overload function DependencyPackageUris(): winrt.windows.foundation.collections.IVector<winrt.windows.foundation.Uri> /* GenericTypeInstSig */;
     overload function TargetVolume(): winrt.windows.management.deployment.PackageVolume;
-    overload function TargetVolume(value: cxx.ConstRef<winrt.windows.management.deployment.PackageVolume>): Void;
+    overload function TargetVolume(value: ConstRef<winrt.windows.management.deployment.PackageVolume>): Void;
     overload function OptionalPackageFamilyNames(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function OptionalPackageUris(): winrt.windows.foundation.collections.IVector<winrt.windows.foundation.Uri> /* GenericTypeInstSig */;
     overload function RelatedPackageUris(): winrt.windows.foundation.collections.IVector<winrt.windows.foundation.Uri> /* GenericTypeInstSig */;
     overload function ExternalLocationUri(): winrt.windows.foundation.Uri;
-    overload function ExternalLocationUri(value: cxx.ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function ExternalLocationUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
     overload function StubPackageOption(): winrt.windows.management.deployment.StubPackageOption;
-    overload function StubPackageOption(value: cxx.ConstRef<winrt.windows.management.deployment.StubPackageOption>): Void;
+    overload function StubPackageOption(value: ConstRef<winrt.windows.management.deployment.StubPackageOption>): Void;
     overload function DeveloperMode(): Bool;
     overload function DeveloperMode(value: Bool): Void;
     overload function ForceAppShutdown(): Bool;

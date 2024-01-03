@@ -2,7 +2,7 @@ package winrt.windows.media.miracast;
 
 @:include("winrt/Windows.Media.Miracast.h", true)
 @:native("winrt::Windows::Media::Miracast::MiracastReceiverDisconnectReason")
-extern enum abstract MiracastReceiverDisconnectReason(cxx.num.Int32)
+extern enum abstract MiracastReceiverDisconnectReason(Int32)
 {
     @:native("winrt::Windows::Media::Miracast::MiracastReceiverDisconnectReason::Finished") final Finished;
     @:native("winrt::Windows::Media::Miracast::MiracastReceiverDisconnectReason::AppSpecificError") final AppSpecificError;

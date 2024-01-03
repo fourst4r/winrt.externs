@@ -2,7 +2,7 @@ package winrt.windows.system.preview;
 
 @:include("winrt/Windows.System.Preview.h", true)
 @:native("winrt::Windows::System::Preview::HingeState")
-extern enum abstract HingeState(cxx.num.Int32)
+extern enum abstract HingeState(Int32)
 {
     @:native("winrt::Windows::System::Preview::HingeState::Unknown") final Unknown;
     @:native("winrt::Windows::System::Preview::HingeState::Closed") final Closed;

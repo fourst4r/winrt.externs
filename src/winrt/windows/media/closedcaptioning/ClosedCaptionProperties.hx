@@ -16,6 +16,6 @@ extern class ClosedCaptionProperties
     static overload function RegionColor(): winrt.windows.media.closedcaptioning.ClosedCaptionColor;
     static overload function ComputedRegionColor(): winrt.windows.ui.Color;
     static overload function RegionOpacity(): winrt.windows.media.closedcaptioning.ClosedCaptionOpacity;
-    static overload function PropertiesChanged(handler: cxx.ConstRef<winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    static overload function PropertiesChanged(token: cxx.ConstRef<winrt.EventToken>): Void;
+    static overload function PropertiesChanged(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    static overload function PropertiesChanged(token: ConstRef<winrt.EventToken>): Void;
 }

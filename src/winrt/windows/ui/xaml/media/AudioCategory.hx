@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.media;
 
 @:include("winrt/Windows.UI.Xaml.Media.h", true)
 @:native("winrt::Windows::UI::Xaml::Media::AudioCategory")
-extern enum abstract AudioCategory(cxx.num.Int32)
+extern enum abstract AudioCategory(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Media::AudioCategory::Other") final Other;
     @:native("winrt::Windows::UI::Xaml::Media::AudioCategory::ForegroundOnlyMedia") final ForegroundOnlyMedia;

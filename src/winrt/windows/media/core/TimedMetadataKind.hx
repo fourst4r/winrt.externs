@@ -2,7 +2,7 @@ package winrt.windows.media.core;
 
 @:include("winrt/Windows.Media.Core.h", true)
 @:native("winrt::Windows::Media::Core::TimedMetadataKind")
-extern enum abstract TimedMetadataKind(cxx.num.Int32)
+extern enum abstract TimedMetadataKind(Int32)
 {
     @:native("winrt::Windows::Media::Core::TimedMetadataKind::Caption") final Caption;
     @:native("winrt::Windows::Media::Core::TimedMetadataKind::Chapter") final Chapter;

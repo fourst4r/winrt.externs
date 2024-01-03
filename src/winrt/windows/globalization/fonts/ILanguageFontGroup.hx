@@ -1,6 +1,9 @@
 package winrt.windows.globalization.fonts;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Globalization.Fonts.h", true)
 @:native("winrt::Windows::Globalization::Fonts::ILanguageFontGroup")
 extern interface ILanguageFontGroup extends winrt.windows.foundation.IInspectable

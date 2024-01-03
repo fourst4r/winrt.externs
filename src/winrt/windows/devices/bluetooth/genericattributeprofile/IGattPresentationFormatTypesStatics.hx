@@ -1,35 +1,38 @@
 package winrt.windows.devices.bluetooth.genericattributeprofile;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Bluetooth.GenericAttributeProfile.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatTypesStatics")
 extern interface IGattPresentationFormatTypesStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function Boolean(): cxx.num.UInt8;
-    overload function Bit2(): cxx.num.UInt8;
-    overload function Nibble(): cxx.num.UInt8;
-    overload function UInt8(): cxx.num.UInt8;
-    overload function UInt12(): cxx.num.UInt8;
-    overload function UInt16(): cxx.num.UInt8;
-    overload function UInt24(): cxx.num.UInt8;
-    overload function UInt32(): cxx.num.UInt8;
-    overload function UInt48(): cxx.num.UInt8;
-    overload function UInt64(): cxx.num.UInt8;
-    overload function UInt128(): cxx.num.UInt8;
-    overload function SInt8(): cxx.num.UInt8;
-    overload function SInt12(): cxx.num.UInt8;
-    overload function SInt16(): cxx.num.UInt8;
-    overload function SInt24(): cxx.num.UInt8;
-    overload function SInt32(): cxx.num.UInt8;
-    overload function SInt48(): cxx.num.UInt8;
-    overload function SInt64(): cxx.num.UInt8;
-    overload function SInt128(): cxx.num.UInt8;
-    overload function Float32(): cxx.num.UInt8;
-    overload function Float64(): cxx.num.UInt8;
-    overload function SFloat(): cxx.num.UInt8;
-    overload function Float(): cxx.num.UInt8;
-    overload function DUInt16(): cxx.num.UInt8;
-    overload function Utf8(): cxx.num.UInt8;
-    overload function Utf16(): cxx.num.UInt8;
-    overload function Struct(): cxx.num.UInt8;
+    overload function Boolean(): UInt8;
+    overload function Bit2(): UInt8;
+    overload function Nibble(): UInt8;
+    overload function UInt8(): UInt8;
+    overload function UInt12(): UInt8;
+    overload function UInt16(): UInt8;
+    overload function UInt24(): UInt8;
+    overload function UInt32(): UInt8;
+    overload function UInt48(): UInt8;
+    overload function UInt64(): UInt8;
+    overload function UInt128(): UInt8;
+    overload function SInt8(): UInt8;
+    overload function SInt12(): UInt8;
+    overload function SInt16(): UInt8;
+    overload function SInt24(): UInt8;
+    overload function SInt32(): UInt8;
+    overload function SInt48(): UInt8;
+    overload function SInt64(): UInt8;
+    overload function SInt128(): UInt8;
+    overload function Float32(): UInt8;
+    overload function Float64(): UInt8;
+    overload function SFloat(): UInt8;
+    overload function Float(): UInt8;
+    overload function DUInt16(): UInt8;
+    overload function Utf8(): UInt8;
+    overload function Utf16(): UInt8;
+    overload function Struct(): UInt8;
 }

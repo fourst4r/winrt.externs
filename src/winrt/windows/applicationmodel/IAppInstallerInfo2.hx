@@ -1,12 +1,15 @@
 package winrt.windows.applicationmodel;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.h", true)
 @:native("winrt::Windows::ApplicationModel::IAppInstallerInfo2")
 extern interface IAppInstallerInfo2 extends winrt.windows.foundation.IInspectable
 {
     overload function OnLaunch(): Bool;
-    overload function HoursBetweenUpdateChecks(): cxx.num.UInt32;
+    overload function HoursBetweenUpdateChecks(): UInt32;
     overload function ShowPrompt(): Bool;
     overload function UpdateBlocksActivation(): Bool;
     overload function AutomaticBackgroundTask(): Bool;

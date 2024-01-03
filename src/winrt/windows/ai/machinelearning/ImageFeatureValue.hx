@@ -1,6 +1,9 @@
 package winrt.windows.ai.machinelearning;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.AI.MachineLearning.h", true)
 @:native("winrt::Windows::AI::MachineLearning::ImageFeatureValue")
 extern class ImageFeatureValue
@@ -9,6 +12,6 @@ extern class ImageFeatureValue
 {
     overload function VideoFrame(): winrt.windows.media.VideoFrame;
     overload function Kind(): winrt.windows.ai.machinelearning.LearningModelFeatureKind;
-    function CreateFromVideoFrame(image: cxx.ConstRef<winrt.windows.media.VideoFrame>): winrt.windows.ai.machinelearning.ImageFeatureValue;
-    static function CreateFromVideoFrame(image: cxx.ConstRef<winrt.windows.media.VideoFrame>): winrt.windows.ai.machinelearning.ImageFeatureValue;
+    function CreateFromVideoFrame(image: ConstRef<winrt.windows.media.VideoFrame>): winrt.windows.ai.machinelearning.ImageFeatureValue;
+    static function CreateFromVideoFrame(image: ConstRef<winrt.windows.media.VideoFrame>): winrt.windows.ai.machinelearning.ImageFeatureValue;
 }

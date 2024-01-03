@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.controls.primitives;
 
 @:include("winrt/Microsoft.UI.Xaml.Controls.Primitives.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusFilterKind")
-extern enum abstract CornerRadiusFilterKind(cxx.num.Int32)
+extern enum abstract CornerRadiusFilterKind(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusFilterKind::None") final None;
     @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusFilterKind::Top") final Top;

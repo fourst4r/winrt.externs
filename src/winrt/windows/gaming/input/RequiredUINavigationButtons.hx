@@ -2,7 +2,7 @@ package winrt.windows.gaming.input;
 
 @:include("winrt/Windows.Gaming.Input.h", true)
 @:native("winrt::Windows::Gaming::Input::RequiredUINavigationButtons")
-extern enum abstract RequiredUINavigationButtons(cxx.num.UInt32)
+extern enum abstract RequiredUINavigationButtons(UInt32)
 {
     @:native("winrt::Windows::Gaming::Input::RequiredUINavigationButtons::None") final None;
     @:native("winrt::Windows::Gaming::Input::RequiredUINavigationButtons::Menu") final Menu;

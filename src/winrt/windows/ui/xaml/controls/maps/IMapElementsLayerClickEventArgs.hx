@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.controls.maps;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.Maps.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::Maps::IMapElementsLayerClickEventArgs")
 extern interface IMapElementsLayerClickEventArgs extends winrt.windows.foundation.IInspectable

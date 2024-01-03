@@ -1,6 +1,9 @@
 package winrt.windows.security.dataprotection;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Security.DataProtection.h", true)
 @:native("winrt::Windows::Security::DataProtection::UserDataBufferUnprotectResult")
 extern class UserDataBufferUnprotectResult

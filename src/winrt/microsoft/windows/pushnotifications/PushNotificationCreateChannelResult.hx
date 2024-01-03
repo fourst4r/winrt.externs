@@ -1,6 +1,9 @@
 package winrt.microsoft.windows.pushnotifications;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.Windows.PushNotifications.h", true)
 @:native("winrt::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelResult")
 extern class PushNotificationCreateChannelResult

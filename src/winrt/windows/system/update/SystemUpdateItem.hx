@@ -1,6 +1,9 @@
 package winrt.windows.system.update;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.System.Update.h", true)
 @:native("winrt::Windows::System::Update::SystemUpdateItem")
 extern class SystemUpdateItem
@@ -10,8 +13,8 @@ extern class SystemUpdateItem
     overload function Title(): winrt.HString;
     overload function Description(): winrt.HString;
     overload function Id(): winrt.HString;
-    overload function Revision(): cxx.num.UInt32;
-    overload function DownloadProgress(): cxx.num.Float64;
-    overload function InstallProgress(): cxx.num.Float64;
+    overload function Revision(): UInt32;
+    overload function DownloadProgress(): Float64;
+    overload function InstallProgress(): Float64;
     overload function ExtendedError(): winrt.HResult;
 }

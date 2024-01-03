@@ -1,9 +1,12 @@
 package winrt.windows.ui.composition.scenes;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.Scenes.h", true)
 @:native("winrt::Windows::UI::Composition::Scenes::ISceneVisualStatics")
 extern interface ISceneVisualStatics extends winrt.windows.foundation.IInspectable
 {
-    function Create(compositor: cxx.ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneVisual;
+    function Create(compositor: ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneVisual;
 }

@@ -2,7 +2,7 @@ package winrt.windows.ai.machinelearning;
 
 @:include("winrt/Windows.AI.MachineLearning.h", true)
 @:native("winrt::Windows::AI::MachineLearning::TensorKind")
-extern enum abstract TensorKind(cxx.num.Int32)
+extern enum abstract TensorKind(Int32)
 {
     @:native("winrt::Windows::AI::MachineLearning::TensorKind::Undefined") final Undefined;
     @:native("winrt::Windows::AI::MachineLearning::TensorKind::Float") final Float;

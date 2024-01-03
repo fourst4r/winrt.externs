@@ -2,7 +2,7 @@ package winrt.microsoft.ui.composition.interactions;
 
 @:include("winrt/Microsoft.UI.Composition.Interactions.h", true)
 @:native("winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSourceRedirectionMode")
-extern enum abstract VisualInteractionSourceRedirectionMode(cxx.num.Int32)
+extern enum abstract VisualInteractionSourceRedirectionMode(Int32)
 {
     @:native("winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSourceRedirectionMode::Off") final Off;
     @:native("winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSourceRedirectionMode::CapableTouchpadOnly") final CapableTouchpadOnly;

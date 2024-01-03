@@ -2,7 +2,7 @@ package winrt.windows.devices.bluetooth;
 
 @:include("winrt/Windows.Devices.Bluetooth.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::BluetoothError")
-extern enum abstract BluetoothError(cxx.num.Int32)
+extern enum abstract BluetoothError(Int32)
 {
     @:native("winrt::Windows::Devices::Bluetooth::BluetoothError::Success") final Success;
     @:native("winrt::Windows::Devices::Bluetooth::BluetoothError::RadioNotAvailable") final RadioNotAvailable;

@@ -2,7 +2,7 @@ package winrt.windows.web.syndication;
 
 @:include("winrt/Windows.Web.Syndication.h", true)
 @:native("winrt::Windows::Web::Syndication::SyndicationFormat")
-extern enum abstract SyndicationFormat(cxx.num.Int32)
+extern enum abstract SyndicationFormat(Int32)
 {
     @:native("winrt::Windows::Web::Syndication::SyndicationFormat::Atom10") final Atom10;
     @:native("winrt::Windows::Web::Syndication::SyndicationFormat::Rss20") final Rss20;

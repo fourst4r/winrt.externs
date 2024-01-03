@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.calls.background;
 
 @:include("winrt/Windows.ApplicationModel.Calls.Background.h", true)
 @:native("winrt::Windows::ApplicationModel::Calls::Background::PhoneTriggerType")
-extern enum abstract PhoneTriggerType(cxx.num.Int32)
+extern enum abstract PhoneTriggerType(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Calls::Background::PhoneTriggerType::NewVoicemailMessage") final NewVoicemailMessage;
     @:native("winrt::Windows::ApplicationModel::Calls::Background::PhoneTriggerType::CallHistoryChanged") final CallHistoryChanged;

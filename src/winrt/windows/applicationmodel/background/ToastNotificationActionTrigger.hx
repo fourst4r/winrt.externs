@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.background;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Background.h", true)
 @:native("winrt::Windows::ApplicationModel::Background::ToastNotificationActionTrigger")
 extern class ToastNotificationActionTrigger
@@ -8,5 +11,5 @@ extern class ToastNotificationActionTrigger
 {
     function new();
     @:native("winrt::Windows::ApplicationModel::Background::ToastNotificationActionTrigger")
-    /* explicit */ static overload function make(applicationId: cxx.ConstRef<winrt.HString>): winrt.windows.applicationmodel.background.ToastNotificationActionTrigger;
+    /* explicit */ static overload function make(applicationId: ConstRef<winrt.HString>): winrt.windows.applicationmodel.background.ToastNotificationActionTrigger;
 }

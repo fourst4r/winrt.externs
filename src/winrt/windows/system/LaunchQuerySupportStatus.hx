@@ -2,7 +2,7 @@ package winrt.windows.system;
 
 @:include("winrt/Windows.System.h", true)
 @:native("winrt::Windows::System::LaunchQuerySupportStatus")
-extern enum abstract LaunchQuerySupportStatus(cxx.num.Int32)
+extern enum abstract LaunchQuerySupportStatus(Int32)
 {
     @:native("winrt::Windows::System::LaunchQuerySupportStatus::Available") final Available;
     @:native("winrt::Windows::System::LaunchQuerySupportStatus::AppNotInstalled") final AppNotInstalled;

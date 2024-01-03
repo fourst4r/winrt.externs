@@ -2,7 +2,7 @@ package winrt.windows.devices.pointofservice;
 
 @:include("winrt/Windows.Devices.PointOfService.h", true)
 @:native("winrt::Windows::Devices::PointOfService::UnifiedPosErrorReason")
-extern enum abstract UnifiedPosErrorReason(cxx.num.Int32)
+extern enum abstract UnifiedPosErrorReason(Int32)
 {
     @:native("winrt::Windows::Devices::PointOfService::UnifiedPosErrorReason::UnknownErrorReason") final UnknownErrorReason;
     @:native("winrt::Windows::Devices::PointOfService::UnifiedPosErrorReason::NoService") final NoService;

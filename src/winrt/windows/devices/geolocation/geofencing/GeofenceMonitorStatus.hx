@@ -2,7 +2,7 @@ package winrt.windows.devices.geolocation.geofencing;
 
 @:include("winrt/Windows.Devices.Geolocation.Geofencing.h", true)
 @:native("winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitorStatus")
-extern enum abstract GeofenceMonitorStatus(cxx.num.Int32)
+extern enum abstract GeofenceMonitorStatus(Int32)
 {
     @:native("winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitorStatus::Ready") final Ready;
     @:native("winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitorStatus::Initializing") final Initializing;

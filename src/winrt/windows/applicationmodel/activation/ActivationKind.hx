@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.activation;
 
 @:include("winrt/Windows.ApplicationModel.Activation.h", true)
 @:native("winrt::Windows::ApplicationModel::Activation::ActivationKind")
-extern enum abstract ActivationKind(cxx.num.Int32)
+extern enum abstract ActivationKind(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Activation::ActivationKind::Launch") final Launch;
     @:native("winrt::Windows::ApplicationModel::Activation::ActivationKind::Search") final Search;

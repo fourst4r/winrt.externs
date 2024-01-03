@@ -2,7 +2,7 @@ package winrt.microsoft.ui.input;
 
 @:include("winrt/Microsoft.UI.Input.h", true)
 @:native("winrt::Microsoft::UI::Input::CrossSlidingState")
-extern enum abstract CrossSlidingState(cxx.num.Int32)
+extern enum abstract CrossSlidingState(Int32)
 {
     @:native("winrt::Microsoft::UI::Input::CrossSlidingState::Started") final Started;
     @:native("winrt::Microsoft::UI::Input::CrossSlidingState::Dragging") final Dragging;

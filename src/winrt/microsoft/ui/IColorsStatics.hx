@@ -1,6 +1,9 @@
 package winrt.microsoft.ui;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.h", true)
 @:native("winrt::Microsoft::UI::IColorsStatics")
 extern interface IColorsStatics extends winrt.windows.foundation.IInspectable

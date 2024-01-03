@@ -2,7 +2,7 @@ package winrt.windows.system;
 
 @:include("winrt/Windows.System.h", true)
 @:native("winrt::Windows::System::AppResourceGroupInfoWatcherStatus")
-extern enum abstract AppResourceGroupInfoWatcherStatus(cxx.num.Int32)
+extern enum abstract AppResourceGroupInfoWatcherStatus(Int32)
 {
     @:native("winrt::Windows::System::AppResourceGroupInfoWatcherStatus::Created") final Created;
     @:native("winrt::Windows::System::AppResourceGroupInfoWatcherStatus::Started") final Started;

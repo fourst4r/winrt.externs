@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.automation.peers;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer")
 extern class AppBarAutomationPeer
@@ -10,7 +13,7 @@ extern class AppBarAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IToggleProvider
     implements winrt.microsoft.ui.xaml.automation.provider.IWindowProvider
 {
-    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.AppBar>);
+    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.AppBar>);
     overload function ExpandCollapseState(): winrt.microsoft.ui.xaml.automation.ExpandCollapseState;
     function Collapse(): Void;
     function Expand(): Void;
@@ -23,6 +26,6 @@ extern class AppBarAutomationPeer
     overload function InteractionState(): winrt.microsoft.ui.xaml.automation.WindowInteractionState;
     overload function VisualState(): winrt.microsoft.ui.xaml.automation.WindowVisualState;
     function Close(): Void;
-    function SetVisualState(state: cxx.ConstRef<winrt.microsoft.ui.xaml.automation.WindowVisualState>): Void;
-    function WaitForInputIdle(milliseconds: cxx.num.Int32): Bool;
+    function SetVisualState(state: ConstRef<winrt.microsoft.ui.xaml.automation.WindowVisualState>): Void;
+    function WaitForInputIdle(milliseconds: Int32): Bool;
 }

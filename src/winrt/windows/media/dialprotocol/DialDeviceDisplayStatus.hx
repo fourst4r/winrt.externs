@@ -2,7 +2,7 @@ package winrt.windows.media.dialprotocol;
 
 @:include("winrt/Windows.Media.DialProtocol.h", true)
 @:native("winrt::Windows::Media::DialProtocol::DialDeviceDisplayStatus")
-extern enum abstract DialDeviceDisplayStatus(cxx.num.Int32)
+extern enum abstract DialDeviceDisplayStatus(Int32)
 {
     @:native("winrt::Windows::Media::DialProtocol::DialDeviceDisplayStatus::None") final None;
     @:native("winrt::Windows::Media::DialProtocol::DialDeviceDisplayStatus::Connecting") final Connecting;

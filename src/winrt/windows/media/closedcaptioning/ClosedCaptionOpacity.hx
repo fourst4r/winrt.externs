@@ -2,7 +2,7 @@ package winrt.windows.media.closedcaptioning;
 
 @:include("winrt/Windows.Media.ClosedCaptioning.h", true)
 @:native("winrt::Windows::Media::ClosedCaptioning::ClosedCaptionOpacity")
-extern enum abstract ClosedCaptionOpacity(cxx.num.Int32)
+extern enum abstract ClosedCaptionOpacity(Int32)
 {
     @:native("winrt::Windows::Media::ClosedCaptioning::ClosedCaptionOpacity::Default") final Default;
     @:native("winrt::Windows::Media::ClosedCaptioning::ClosedCaptionOpacity::OneHundredPercent") final OneHundredPercent;

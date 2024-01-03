@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.activation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Activation.h", true)
 @:native("winrt::Windows::ApplicationModel::Activation::ToastNotificationActivatedEventArgs")
 extern class ToastNotificationActivatedEventArgs
@@ -15,5 +18,5 @@ extern class ToastNotificationActivatedEventArgs
     overload function PreviousExecutionState(): winrt.windows.applicationmodel.activation.ApplicationExecutionState;
     overload function SplashScreen(): winrt.windows.applicationmodel.activation.SplashScreen;
     overload function User(): winrt.windows.system.User;
-    overload function CurrentlyShownApplicationViewId(): cxx.num.Int32;
+    overload function CurrentlyShownApplicationViewId(): Int32;
 }

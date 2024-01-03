@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.h", true)
 @:native("winrt::Windows::ApplicationModel::AppInstallerInfo")
 extern class AppInstallerInfo
@@ -9,7 +12,7 @@ extern class AppInstallerInfo
 {
     overload function Uri(): winrt.windows.foundation.Uri;
     overload function OnLaunch(): Bool;
-    overload function HoursBetweenUpdateChecks(): cxx.num.UInt32;
+    overload function HoursBetweenUpdateChecks(): UInt32;
     overload function ShowPrompt(): Bool;
     overload function UpdateBlocksActivation(): Bool;
     overload function AutomaticBackgroundTask(): Bool;

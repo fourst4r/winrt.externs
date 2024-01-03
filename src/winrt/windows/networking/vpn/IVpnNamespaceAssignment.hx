@@ -1,12 +1,15 @@
 package winrt.windows.networking.vpn;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Networking.Vpn.h", true)
 @:native("winrt::Windows::Networking::Vpn::IVpnNamespaceAssignment")
 extern interface IVpnNamespaceAssignment extends winrt.windows.foundation.IInspectable
 {
-    overload function NamespaceList(value: cxx.ConstRef<winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnNamespaceInfo> /* temp_GenericTypeInstSig */>): Void;
+    overload function NamespaceList(value: ConstRef<winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnNamespaceInfo> /* temp_GenericTypeInstSig */>): Void;
     overload function NamespaceList(): winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnNamespaceInfo> /* GenericTypeInstSig */;
-    overload function ProxyAutoConfigUri(value: cxx.ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function ProxyAutoConfigUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
     overload function ProxyAutoConfigUri(): winrt.windows.foundation.Uri;
 }

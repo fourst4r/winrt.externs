@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.core.direct;
 
 @:include("winrt/Windows.UI.Xaml.Core.Direct.h", true)
 @:native("winrt::Windows::UI::Xaml::Core::Direct::XamlTypeIndex")
-extern enum abstract XamlTypeIndex(cxx.num.Int32)
+extern enum abstract XamlTypeIndex(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Core::Direct::XamlTypeIndex::AutoSuggestBoxSuggestionChosenEventArgs") final AutoSuggestBoxSuggestionChosenEventArgs;
     @:native("winrt::Windows::UI::Xaml::Core::Direct::XamlTypeIndex::AutoSuggestBoxTextChangedEventArgs") final AutoSuggestBoxTextChangedEventArgs;

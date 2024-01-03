@@ -4,5 +4,5 @@ package winrt.windows.system;
 @:native("winrt::Windows::System::DateTimeSettings")
 extern class DateTimeSettings
 {
-    static function SetSystemDateTime(utcDateTime: cxx.ConstRef<winrt.windows.foundation.DateTime>): Void;
+    static function SetSystemDateTime(utcDateTime: ConstRef<winrt.windows.foundation.DateTime>): Void;
 }

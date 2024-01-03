@@ -2,7 +2,7 @@ package winrt.windows.storage;
 
 @:include("winrt/Windows.Storage.h", true)
 @:native("winrt::Windows::Storage::FileAttributes")
-extern enum abstract FileAttributes(cxx.num.UInt32)
+extern enum abstract FileAttributes(UInt32)
 {
     @:native("winrt::Windows::Storage::FileAttributes::Normal") final Normal;
     @:native("winrt::Windows::Storage::FileAttributes::ReadOnly") final ReadOnly;

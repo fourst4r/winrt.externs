@@ -2,7 +2,7 @@ package winrt.microsoft.ui.windowing;
 
 @:include("winrt/Microsoft.UI.Windowing.h", true)
 @:native("winrt::Microsoft::UI::Windowing::AppWindowPresenterKind")
-extern enum abstract AppWindowPresenterKind(cxx.num.Int32)
+extern enum abstract AppWindowPresenterKind(Int32)
 {
     @:native("winrt::Microsoft::UI::Windowing::AppWindowPresenterKind::Default") final Default;
     @:native("winrt::Microsoft::UI::Windowing::AppWindowPresenterKind::CompactOverlay") final CompactOverlay;

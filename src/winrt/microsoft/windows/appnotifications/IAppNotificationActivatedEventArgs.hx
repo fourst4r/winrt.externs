@@ -1,6 +1,9 @@
 package winrt.microsoft.windows.appnotifications;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.Windows.AppNotifications.h", true)
 @:native("winrt::Microsoft::Windows::AppNotifications::IAppNotificationActivatedEventArgs")
 extern interface IAppNotificationActivatedEventArgs extends winrt.windows.foundation.IInspectable

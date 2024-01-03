@@ -1,14 +1,17 @@
 package winrt.windows.data.xml.dom;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Data.Xml.Dom.h", true)
 @:native("winrt::Windows::Data::Xml::Dom::XmlLoadSettings")
 extern class XmlLoadSettings
     implements winrt.windows.data.xml.dom.IXmlLoadSettings
 {
     function new();
-    overload function MaxElementDepth(): cxx.num.UInt32;
-    overload function MaxElementDepth(value: cxx.num.UInt32): Void;
+    overload function MaxElementDepth(): UInt32;
+    overload function MaxElementDepth(value: UInt32): Void;
     overload function ProhibitDtd(): Bool;
     overload function ProhibitDtd(value: Bool): Void;
     overload function ResolveExternals(): Bool;

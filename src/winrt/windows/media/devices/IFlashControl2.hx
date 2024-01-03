@@ -1,6 +1,9 @@
 package winrt.windows.media.devices;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::IFlashControl2")
 extern interface IFlashControl2 extends winrt.windows.foundation.IInspectable

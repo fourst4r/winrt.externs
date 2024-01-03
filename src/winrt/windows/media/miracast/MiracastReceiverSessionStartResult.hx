@@ -1,6 +1,9 @@
 package winrt.windows.media.miracast;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Miracast.h", true)
 @:native("winrt::Windows::Media::Miracast::MiracastReceiverSessionStartResult")
 extern class MiracastReceiverSessionStartResult

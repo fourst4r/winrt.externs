@@ -2,7 +2,7 @@ package winrt.windows.devices.display.core;
 
 @:include("winrt/Windows.Devices.Display.Core.h", true)
 @:native("winrt::Windows::Devices::Display::Core::DisplayStateOperationStatus")
-extern enum abstract DisplayStateOperationStatus(cxx.num.Int32)
+extern enum abstract DisplayStateOperationStatus(Int32)
 {
     @:native("winrt::Windows::Devices::Display::Core::DisplayStateOperationStatus::Success") final Success;
     @:native("winrt::Windows::Devices::Display::Core::DisplayStateOperationStatus::PartialFailure") final PartialFailure;

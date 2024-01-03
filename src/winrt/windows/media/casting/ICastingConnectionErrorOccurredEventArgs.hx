@@ -1,6 +1,9 @@
 package winrt.windows.media.casting;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Casting.h", true)
 @:native("winrt::Windows::Media::Casting::ICastingConnectionErrorOccurredEventArgs")
 extern interface ICastingConnectionErrorOccurredEventArgs extends winrt.windows.foundation.IInspectable

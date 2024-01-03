@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.automation.peers;
 
 @:include("winrt/Microsoft.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationEvents")
-extern enum abstract AutomationEvents(cxx.num.Int32)
+extern enum abstract AutomationEvents(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationEvents::ToolTipOpened") final ToolTipOpened;
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationEvents::ToolTipClosed") final ToolTipClosed;

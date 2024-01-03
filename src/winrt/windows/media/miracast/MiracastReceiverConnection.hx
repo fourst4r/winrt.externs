@@ -1,14 +1,17 @@
 package winrt.windows.media.miracast;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Miracast.h", true)
 @:native("winrt::Windows::Media::Miracast::MiracastReceiverConnection")
 extern class MiracastReceiverConnection
     implements winrt.windows.media.miracast.IMiracastReceiverConnection
     implements winrt.windows.foundation.IClosable
 {
-    overload function Disconnect(reason: cxx.ConstRef<winrt.windows.media.miracast.MiracastReceiverDisconnectReason>): Void;
-    overload function Disconnect(reason: cxx.ConstRef<winrt.windows.media.miracast.MiracastReceiverDisconnectReason>, message: cxx.ConstRef<winrt.HString>): Void;
+    overload function Disconnect(reason: ConstRef<winrt.windows.media.miracast.MiracastReceiverDisconnectReason>): Void;
+    overload function Disconnect(reason: ConstRef<winrt.windows.media.miracast.MiracastReceiverDisconnectReason>, message: ConstRef<winrt.HString>): Void;
     function Pause(): Void;
     function PauseAsync(): winrt.windows.foundation.IAsyncAction;
     function Resume(): Void;

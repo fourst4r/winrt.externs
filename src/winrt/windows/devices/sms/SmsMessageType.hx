@@ -2,7 +2,7 @@ package winrt.windows.devices.sms;
 
 @:include("winrt/Windows.Devices.Sms.h", true)
 @:native("winrt::Windows::Devices::Sms::SmsMessageType")
-extern enum abstract SmsMessageType(cxx.num.Int32)
+extern enum abstract SmsMessageType(Int32)
 {
     @:native("winrt::Windows::Devices::Sms::SmsMessageType::Binary") final Binary;
     @:native("winrt::Windows::Devices::Sms::SmsMessageType::Text") final Text;

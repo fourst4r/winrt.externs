@@ -4,7 +4,7 @@ package winrt.windows.devices.pointofservice;
 @:native("winrt::Windows::Devices::PointOfService::MagneticStripeReaderEncryptionAlgorithms")
 extern class MagneticStripeReaderEncryptionAlgorithms
 {
-    static overload function None(): cxx.num.UInt32;
-    static overload function TripleDesDukpt(): cxx.num.UInt32;
-    static overload function ExtendedBase(): cxx.num.UInt32;
+    static overload function None(): UInt32;
+    static overload function TripleDesDukpt(): UInt32;
+    static overload function ExtendedBase(): UInt32;
 }

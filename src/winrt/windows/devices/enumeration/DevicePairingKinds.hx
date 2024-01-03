@@ -2,7 +2,7 @@ package winrt.windows.devices.enumeration;
 
 @:include("winrt/Windows.Devices.Enumeration.h", true)
 @:native("winrt::Windows::Devices::Enumeration::DevicePairingKinds")
-extern enum abstract DevicePairingKinds(cxx.num.UInt32)
+extern enum abstract DevicePairingKinds(UInt32)
 {
     @:native("winrt::Windows::Devices::Enumeration::DevicePairingKinds::None") final None;
     @:native("winrt::Windows::Devices::Enumeration::DevicePairingKinds::ConfirmOnly") final ConfirmOnly;

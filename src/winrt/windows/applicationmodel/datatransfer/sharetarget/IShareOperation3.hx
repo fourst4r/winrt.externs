@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.datatransfer.sharetarget;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.DataTransfer.ShareTarget.h", true)
 @:native("winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::IShareOperation3")
 extern interface IShareOperation3 extends winrt.windows.foundation.IInspectable

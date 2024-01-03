@@ -1,18 +1,21 @@
 package winrt.windows.devices.pointofservice;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.PointOfService.h", true)
 @:native("winrt::Windows::Devices::PointOfService::MagneticStripeReaderReport")
 extern class MagneticStripeReaderReport
     implements winrt.windows.devices.pointofservice.IMagneticStripeReaderReport
 {
-    overload function CardType(): cxx.num.UInt32;
+    overload function CardType(): UInt32;
     overload function Track1(): winrt.windows.devices.pointofservice.MagneticStripeReaderTrackData;
     overload function Track2(): winrt.windows.devices.pointofservice.MagneticStripeReaderTrackData;
     overload function Track3(): winrt.windows.devices.pointofservice.MagneticStripeReaderTrackData;
     overload function Track4(): winrt.windows.devices.pointofservice.MagneticStripeReaderTrackData;
     overload function Properties(): winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.HString> /* GenericTypeInstSig */;
     overload function CardAuthenticationData(): winrt.windows.storage.streams.IBuffer;
-    overload function CardAuthenticationDataLength(): cxx.num.UInt32;
+    overload function CardAuthenticationDataLength(): UInt32;
     overload function AdditionalSecurityInformation(): winrt.windows.storage.streams.IBuffer;
 }

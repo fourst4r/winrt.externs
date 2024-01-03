@@ -1,6 +1,9 @@
 package winrt.windows.devices.bluetooth.advertisement;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Bluetooth.Advertisement.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufacturerData")
 extern class BluetoothLEManufacturerData
@@ -8,9 +11,9 @@ extern class BluetoothLEManufacturerData
 {
     function new();
     @:native("winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufacturerData")
-    static overload function make(companyId: cxx.num.UInt16, data: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.devices.bluetooth.advertisement.BluetoothLEManufacturerData;
-    overload function CompanyId(): cxx.num.UInt16;
-    overload function CompanyId(value: cxx.num.UInt16): Void;
+    static overload function make(companyId: UInt16, data: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.devices.bluetooth.advertisement.BluetoothLEManufacturerData;
+    overload function CompanyId(): UInt16;
+    overload function CompanyId(value: UInt16): Void;
     overload function Data(): winrt.windows.storage.streams.IBuffer;
-    overload function Data(value: cxx.ConstRef<winrt.windows.storage.streams.IBuffer>): Void;
+    overload function Data(value: ConstRef<winrt.windows.storage.streams.IBuffer>): Void;
 }

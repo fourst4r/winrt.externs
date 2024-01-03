@@ -2,7 +2,7 @@ package winrt.windows.devices.midi;
 
 @:include("winrt/Windows.Devices.Midi.h", true)
 @:native("winrt::Windows::Devices::Midi::MidiMessageType")
-extern enum abstract MidiMessageType(cxx.num.Int32)
+extern enum abstract MidiMessageType(Int32)
 {
     @:native("winrt::Windows::Devices::Midi::MidiMessageType::None") final None;
     @:native("winrt::Windows::Devices::Midi::MidiMessageType::NoteOff") final NoteOff;

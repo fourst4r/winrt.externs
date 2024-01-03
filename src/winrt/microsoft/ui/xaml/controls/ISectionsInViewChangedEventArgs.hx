@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::ISectionsInViewChangedEventArgs")
 extern interface ISectionsInViewChangedEventArgs extends winrt.windows.foundation.IInspectable

@@ -2,7 +2,7 @@ package winrt.microsoft.web.webview2.core;
 
 @:include("winrt/Microsoft.Web.WebView2.Core.h", true)
 @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessKind")
-extern enum abstract CoreWebView2ProcessKind(cxx.num.Int32)
+extern enum abstract CoreWebView2ProcessKind(Int32)
 {
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessKind::Browser") final Browser;
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessKind::Renderer") final Renderer;

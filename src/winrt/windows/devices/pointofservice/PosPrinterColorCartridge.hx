@@ -2,7 +2,7 @@ package winrt.windows.devices.pointofservice;
 
 @:include("winrt/Windows.Devices.PointOfService.h", true)
 @:native("winrt::Windows::Devices::PointOfService::PosPrinterColorCartridge")
-extern enum abstract PosPrinterColorCartridge(cxx.num.Int32)
+extern enum abstract PosPrinterColorCartridge(Int32)
 {
     @:native("winrt::Windows::Devices::PointOfService::PosPrinterColorCartridge::Unknown") final Unknown;
     @:native("winrt::Windows::Devices::PointOfService::PosPrinterColorCartridge::Primary") final Primary;

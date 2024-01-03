@@ -1,14 +1,17 @@
 package winrt.windows.devices.pointofservice;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.PointOfService.h", true)
 @:native("winrt::Windows::Devices::PointOfService::IPosPrinterPrintOptions")
 extern interface IPosPrinterPrintOptions extends winrt.windows.foundation.IInspectable
 {
     overload function TypeFace(): winrt.HString;
-    overload function TypeFace(value: cxx.ConstRef<winrt.HString>): Void;
-    overload function CharacterHeight(): cxx.num.UInt32;
-    overload function CharacterHeight(value: cxx.num.UInt32): Void;
+    overload function TypeFace(value: ConstRef<winrt.HString>): Void;
+    overload function CharacterHeight(): UInt32;
+    overload function CharacterHeight(value: UInt32): Void;
     overload function Bold(): Bool;
     overload function Bold(value: Bool): Void;
     overload function Italic(): Bool;
@@ -28,7 +31,7 @@ extern interface IPosPrinterPrintOptions extends winrt.windows.foundation.IInspe
     overload function DoubleHigh(): Bool;
     overload function DoubleHigh(value: Bool): Void;
     overload function Alignment(): winrt.windows.devices.pointofservice.PosPrinterAlignment;
-    overload function Alignment(value: cxx.ConstRef<winrt.windows.devices.pointofservice.PosPrinterAlignment>): Void;
-    overload function CharacterSet(): cxx.num.UInt32;
-    overload function CharacterSet(value: cxx.num.UInt32): Void;
+    overload function Alignment(value: ConstRef<winrt.windows.devices.pointofservice.PosPrinterAlignment>): Void;
+    overload function CharacterSet(): UInt32;
+    overload function CharacterSet(value: UInt32): Void;
 }

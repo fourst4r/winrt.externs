@@ -1,14 +1,17 @@
 package winrt.windows.devices.printers;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Printers.h", true)
 @:native("winrt::Windows::Devices::Printers::IIppAttributeValue")
 extern interface IIppAttributeValue extends winrt.windows.foundation.IInspectable
 {
     overload function Kind(): winrt.windows.devices.printers.IppAttributeValueKind;
-    function GetIntegerArray(): winrt.windows.foundation.collections.IVector<cxx.num.Int32> /* GenericTypeInstSig */;
+    function GetIntegerArray(): winrt.windows.foundation.collections.IVector<Int32> /* GenericTypeInstSig */;
     function GetBooleanArray(): winrt.windows.foundation.collections.IVector<Bool> /* GenericTypeInstSig */;
-    function GetEnumArray(): winrt.windows.foundation.collections.IVector<cxx.num.Int32> /* GenericTypeInstSig */;
+    function GetEnumArray(): winrt.windows.foundation.collections.IVector<Int32> /* GenericTypeInstSig */;
     function GetOctetStringArray(): winrt.windows.foundation.collections.IVector<winrt.windows.storage.streams.IBuffer> /* GenericTypeInstSig */;
     function GetDateTimeArray(): winrt.windows.foundation.collections.IVector<winrt.windows.foundation.DateTime> /* GenericTypeInstSig */;
     function GetResolutionArray(): winrt.windows.foundation.collections.IVector<winrt.windows.devices.printers.IppResolution> /* GenericTypeInstSig */;

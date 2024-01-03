@@ -1,6 +1,9 @@
 package winrt.windows.ui.viewmanagement;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.ViewManagement.h", true)
 @:native("winrt::Windows::UI::ViewManagement::IApplicationView9")
 extern interface IApplicationView9 extends winrt.windows.foundation.IInspectable

@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.datatransfer.sharetarget;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.DataTransfer.ShareTarget.h", true)
 @:native("winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation")
 extern class ShareOperation
@@ -14,9 +17,9 @@ extern class ShareOperation
     function ReportStarted(): Void;
     function ReportDataRetrieved(): Void;
     function ReportSubmittedBackgroundTask(): Void;
-    overload function ReportCompleted(quicklink: cxx.ConstRef<winrt.windows.applicationmodel.datatransfer.sharetarget.QuickLink>): Void;
+    overload function ReportCompleted(quicklink: ConstRef<winrt.windows.applicationmodel.datatransfer.sharetarget.QuickLink>): Void;
     overload function ReportCompleted(): Void;
-    function ReportError(value: cxx.ConstRef<winrt.HString>): Void;
+    function ReportError(value: ConstRef<winrt.HString>): Void;
     function DismissUI(): Void;
     overload function Contacts(): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.contacts.Contact> /* GenericTypeInstSig */;
 }

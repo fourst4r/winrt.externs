@@ -2,7 +2,7 @@ package winrt.windows.media.streaming.adaptive;
 
 @:include("winrt/Windows.Media.Streaming.Adaptive.h", true)
 @:native("winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticType")
-extern enum abstract AdaptiveMediaSourceDiagnosticType(cxx.num.Int32)
+extern enum abstract AdaptiveMediaSourceDiagnosticType(Int32)
 {
     @:native("winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticType::ManifestUnchangedUponReload") final ManifestUnchangedUponReload;
     @:native("winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticType::ManifestMismatchUponReload") final ManifestMismatchUponReload;

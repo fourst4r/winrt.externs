@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.automation.peers;
 
 @:include("winrt/Microsoft.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationStructureChangeType")
-extern enum abstract AutomationStructureChangeType(cxx.num.Int32)
+extern enum abstract AutomationStructureChangeType(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationStructureChangeType::ChildAdded") final ChildAdded;
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationStructureChangeType::ChildRemoved") final ChildRemoved;

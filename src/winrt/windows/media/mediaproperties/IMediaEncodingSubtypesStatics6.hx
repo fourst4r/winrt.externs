@@ -1,6 +1,9 @@
 package winrt.windows.media.mediaproperties;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.MediaProperties.h", true)
 @:native("winrt::Windows::Media::MediaProperties::IMediaEncodingSubtypesStatics6")
 extern interface IMediaEncodingSubtypesStatics6 extends winrt.windows.foundation.IInspectable

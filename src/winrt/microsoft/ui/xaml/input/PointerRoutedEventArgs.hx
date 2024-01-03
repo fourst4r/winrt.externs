@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.input;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Input.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Input::PointerRoutedEventArgs")
 extern class PointerRoutedEventArgs
@@ -12,6 +15,6 @@ extern class PointerRoutedEventArgs
     overload function Handled(): Bool;
     overload function Handled(value: Bool): Void;
     overload function IsGenerated(): Bool;
-    function GetCurrentPoint(relativeTo: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>): winrt.microsoft.ui.input.PointerPoint;
-    function GetIntermediatePoints(relativeTo: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.input.PointerPoint> /* GenericTypeInstSig */;
+    function GetCurrentPoint(relativeTo: ConstRef<winrt.microsoft.ui.xaml.UIElement>): winrt.microsoft.ui.input.PointerPoint;
+    function GetIntermediatePoints(relativeTo: ConstRef<winrt.microsoft.ui.xaml.UIElement>): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.input.PointerPoint> /* GenericTypeInstSig */;
 }

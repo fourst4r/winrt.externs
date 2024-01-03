@@ -2,7 +2,7 @@ package winrt.windows.media.closedcaptioning;
 
 @:include("winrt/Windows.Media.ClosedCaptioning.h", true)
 @:native("winrt::Windows::Media::ClosedCaptioning::ClosedCaptionEdgeEffect")
-extern enum abstract ClosedCaptionEdgeEffect(cxx.num.Int32)
+extern enum abstract ClosedCaptionEdgeEffect(Int32)
 {
     @:native("winrt::Windows::Media::ClosedCaptioning::ClosedCaptionEdgeEffect::Default") final Default;
     @:native("winrt::Windows::Media::ClosedCaptioning::ClosedCaptionEdgeEffect::None") final None;

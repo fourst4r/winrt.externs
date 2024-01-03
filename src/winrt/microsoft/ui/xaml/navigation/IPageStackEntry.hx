@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.navigation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Navigation.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Navigation::IPageStackEntry")
 extern interface IPageStackEntry extends winrt.windows.foundation.IInspectable

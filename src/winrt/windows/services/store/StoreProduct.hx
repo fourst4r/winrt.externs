@@ -1,6 +1,9 @@
 package winrt.windows.services.store;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Services.Store.h", true)
 @:native("winrt::Windows::Services::Store::StoreProduct")
 extern class StoreProduct
@@ -22,6 +25,6 @@ extern class StoreProduct
     overload function LinkUri(): winrt.windows.foundation.Uri;
     function GetIsAnySkuInstalledAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     overload function RequestPurchaseAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.store.StorePurchaseResult> /* GenericTypeInstSig */;
-    overload function RequestPurchaseAsync(storePurchaseProperties: cxx.ConstRef<winrt.windows.services.store.StorePurchaseProperties>): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.store.StorePurchaseResult> /* GenericTypeInstSig */;
+    overload function RequestPurchaseAsync(storePurchaseProperties: ConstRef<winrt.windows.services.store.StorePurchaseProperties>): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.store.StorePurchaseResult> /* GenericTypeInstSig */;
     overload function InAppOfferToken(): winrt.HString;
 }

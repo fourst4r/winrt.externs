@@ -1,6 +1,9 @@
 package winrt.windows.ui.input;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Input.h", true)
 @:native("winrt::Windows::UI::Input::RightTappedEventArgs")
 extern class RightTappedEventArgs
@@ -9,5 +12,5 @@ extern class RightTappedEventArgs
 {
     overload function PointerDeviceType(): winrt.windows.devices.input.PointerDeviceType;
     overload function Position(): winrt.windows.foundation.Point;
-    overload function ContactCount(): cxx.num.UInt32;
+    overload function ContactCount(): UInt32;
 }

@@ -1,6 +1,9 @@
 package winrt.windows.system;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.System.h", true)
 @:native("winrt::Windows::System::IAppResourceGroupInfo2")
 extern interface IAppResourceGroupInfo2 extends winrt.windows.foundation.IInspectable

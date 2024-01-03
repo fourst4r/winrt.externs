@@ -2,7 +2,7 @@ package winrt.windows.foundation;
 
 @:include("winrt/Windows.Foundation.h", true)
 @:native("winrt::Windows::Foundation::PropertyType")
-extern enum abstract PropertyType(cxx.num.Int32)
+extern enum abstract PropertyType(Int32)
 {
     @:native("winrt::Windows::Foundation::PropertyType::Empty") final Empty;
     @:native("winrt::Windows::Foundation::PropertyType::UInt8") final UInt8;

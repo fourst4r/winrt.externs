@@ -2,7 +2,7 @@ package winrt.windows.system.update;
 
 @:include("winrt/Windows.System.Update.h", true)
 @:native("winrt::Windows::System::Update::SystemUpdateItemState")
-extern enum abstract SystemUpdateItemState(cxx.num.Int32)
+extern enum abstract SystemUpdateItemState(Int32)
 {
     @:native("winrt::Windows::System::Update::SystemUpdateItemState::NotStarted") final NotStarted;
     @:native("winrt::Windows::System::Update::SystemUpdateItemState::Initializing") final Initializing;

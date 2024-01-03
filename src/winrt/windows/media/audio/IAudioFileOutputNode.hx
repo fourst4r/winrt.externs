@@ -1,6 +1,9 @@
 package winrt.windows.media.audio;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Audio.h", true)
 @:native("winrt::Windows::Media::Audio::IAudioFileOutputNode")
 extern interface IAudioFileOutputNode extends winrt.windows.foundation.IInspectable

@@ -2,7 +2,7 @@ package winrt.windows.devices.wifi;
 
 @:include("winrt/Windows.Devices.WiFi.h", true)
 @:native("winrt::Windows::Devices::WiFi::WiFiConnectionStatus")
-extern enum abstract WiFiConnectionStatus(cxx.num.Int32)
+extern enum abstract WiFiConnectionStatus(Int32)
 {
     @:native("winrt::Windows::Devices::WiFi::WiFiConnectionStatus::UnspecifiedFailure") final UnspecifiedFailure;
     @:native("winrt::Windows::Devices::WiFi::WiFiConnectionStatus::Success") final Success;

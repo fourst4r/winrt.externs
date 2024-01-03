@@ -1,6 +1,9 @@
 package winrt.windows.security.authentication.web;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Security.Authentication.Web.h", true)
 @:native("winrt::Windows::Security::Authentication::Web::WebAuthenticationResult")
 extern class WebAuthenticationResult
@@ -8,5 +11,5 @@ extern class WebAuthenticationResult
 {
     overload function ResponseData(): winrt.HString;
     overload function ResponseStatus(): winrt.windows.security.authentication.web.WebAuthenticationStatus;
-    overload function ResponseErrorDetail(): cxx.num.UInt32;
+    overload function ResponseErrorDetail(): UInt32;
 }

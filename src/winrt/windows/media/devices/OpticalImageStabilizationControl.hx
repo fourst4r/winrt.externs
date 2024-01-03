@@ -1,6 +1,9 @@
 package winrt.windows.media.devices;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::OpticalImageStabilizationControl")
 extern class OpticalImageStabilizationControl
@@ -9,5 +12,5 @@ extern class OpticalImageStabilizationControl
     overload function Supported(): Bool;
     overload function SupportedModes(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.devices.OpticalImageStabilizationMode> /* GenericTypeInstSig */;
     overload function Mode(): winrt.windows.media.devices.OpticalImageStabilizationMode;
-    overload function Mode(value: cxx.ConstRef<winrt.windows.media.devices.OpticalImageStabilizationMode>): Void;
+    overload function Mode(value: ConstRef<winrt.windows.media.devices.OpticalImageStabilizationMode>): Void;
 }

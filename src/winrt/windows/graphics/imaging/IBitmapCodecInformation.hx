@@ -1,6 +1,9 @@
 package winrt.windows.graphics.imaging;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Graphics.Imaging.h", true)
 @:native("winrt::Windows::Graphics::Imaging::IBitmapCodecInformation")
 extern interface IBitmapCodecInformation extends winrt.windows.foundation.IInspectable

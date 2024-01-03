@@ -1,6 +1,9 @@
 package winrt.windows.networking.backgroundtransfer;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Networking.BackgroundTransfer.h", true)
 @:native("winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup")
 extern class BackgroundTransferGroup
@@ -8,7 +11,7 @@ extern class BackgroundTransferGroup
 {
     overload function Name(): winrt.HString;
     overload function TransferBehavior(): winrt.windows.networking.backgroundtransfer.BackgroundTransferBehavior;
-    overload function TransferBehavior(value: cxx.ConstRef<winrt.windows.networking.backgroundtransfer.BackgroundTransferBehavior>): Void;
-    function CreateGroup(name: cxx.ConstRef<winrt.HString>): winrt.windows.networking.backgroundtransfer.BackgroundTransferGroup;
-    static function CreateGroup(name: cxx.ConstRef<winrt.HString>): winrt.windows.networking.backgroundtransfer.BackgroundTransferGroup;
+    overload function TransferBehavior(value: ConstRef<winrt.windows.networking.backgroundtransfer.BackgroundTransferBehavior>): Void;
+    function CreateGroup(name: ConstRef<winrt.HString>): winrt.windows.networking.backgroundtransfer.BackgroundTransferGroup;
+    static function CreateGroup(name: ConstRef<winrt.HString>): winrt.windows.networking.backgroundtransfer.BackgroundTransferGroup;
 }

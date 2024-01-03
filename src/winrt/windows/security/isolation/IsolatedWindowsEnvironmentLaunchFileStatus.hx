@@ -2,7 +2,7 @@ package winrt.windows.security.isolation;
 
 @:include("winrt/Windows.Security.Isolation.h", true)
 @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileStatus")
-extern enum abstract IsolatedWindowsEnvironmentLaunchFileStatus(cxx.num.Int32)
+extern enum abstract IsolatedWindowsEnvironmentLaunchFileStatus(Int32)
 {
     @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileStatus::Success") final Success;
     @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileStatus::UnknownFailure") final UnknownFailure;

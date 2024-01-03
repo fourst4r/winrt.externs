@@ -1,18 +1,21 @@
 package winrt.windows.management.deployment;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Management.Deployment.h", true)
 @:native("winrt::Windows::Management::Deployment::IAutoUpdateSettingsOptions")
 extern interface IAutoUpdateSettingsOptions extends winrt.windows.foundation.IInspectable
 {
     overload function Version(): winrt.windows.applicationmodel.PackageVersion;
-    overload function Version(value: cxx.ConstRef<winrt.windows.applicationmodel.PackageVersion>): Void;
+    overload function Version(value: ConstRef<winrt.windows.applicationmodel.PackageVersion>): Void;
     overload function AppInstallerUri(): winrt.windows.foundation.Uri;
-    overload function AppInstallerUri(value: cxx.ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function AppInstallerUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
     overload function OnLaunch(): Bool;
     overload function OnLaunch(value: Bool): Void;
-    overload function HoursBetweenUpdateChecks(): cxx.num.UInt32;
-    overload function HoursBetweenUpdateChecks(value: cxx.num.UInt32): Void;
+    overload function HoursBetweenUpdateChecks(): UInt32;
+    overload function HoursBetweenUpdateChecks(value: UInt32): Void;
     overload function ShowPrompt(): Bool;
     overload function ShowPrompt(value: Bool): Void;
     overload function UpdateBlocksActivation(): Bool;

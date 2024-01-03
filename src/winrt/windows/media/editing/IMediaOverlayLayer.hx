@@ -1,6 +1,9 @@
 package winrt.windows.media.editing;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Editing.h", true)
 @:native("winrt::Windows::Media::Editing::IMediaOverlayLayer")
 extern interface IMediaOverlayLayer extends winrt.windows.foundation.IInspectable

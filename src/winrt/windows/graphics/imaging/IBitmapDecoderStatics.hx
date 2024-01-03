@@ -1,6 +1,9 @@
 package winrt.windows.graphics.imaging;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Graphics.Imaging.h", true)
 @:native("winrt::Windows::Graphics::Imaging::IBitmapDecoderStatics")
 extern interface IBitmapDecoderStatics extends winrt.windows.foundation.IInspectable
@@ -13,6 +16,6 @@ extern interface IBitmapDecoderStatics extends winrt.windows.foundation.IInspect
     overload function JpegXRDecoderId(): winrt.Guid;
     overload function IcoDecoderId(): winrt.Guid;
     function GetDecoderInformationEnumerator(): winrt.windows.foundation.collections.IVectorView<winrt.windows.graphics.imaging.BitmapCodecInformation> /* GenericTypeInstSig */;
-    overload function CreateAsync(stream: cxx.ConstRef<winrt.windows.storage.streams.IRandomAccessStream>): winrt.windows.foundation.IAsyncOperation<winrt.windows.graphics.imaging.BitmapDecoder> /* GenericTypeInstSig */;
-    overload function CreateAsync(decoderId: cxx.ConstRef<winrt.Guid>, stream: cxx.ConstRef<winrt.windows.storage.streams.IRandomAccessStream>): winrt.windows.foundation.IAsyncOperation<winrt.windows.graphics.imaging.BitmapDecoder> /* GenericTypeInstSig */;
+    overload function CreateAsync(stream: ConstRef<winrt.windows.storage.streams.IRandomAccessStream>): winrt.windows.foundation.IAsyncOperation<winrt.windows.graphics.imaging.BitmapDecoder> /* GenericTypeInstSig */;
+    overload function CreateAsync(decoderId: ConstRef<winrt.Guid>, stream: ConstRef<winrt.windows.storage.streams.IRandomAccessStream>): winrt.windows.foundation.IAsyncOperation<winrt.windows.graphics.imaging.BitmapDecoder> /* GenericTypeInstSig */;
 }

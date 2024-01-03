@@ -1,16 +1,19 @@
 package winrt.windows.ui.xaml.input;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Input.h", true)
 @:native("winrt::Windows::UI::Xaml::Input::IFindNextElementOptions")
 extern interface IFindNextElementOptions extends winrt.windows.foundation.IInspectable
 {
     overload function SearchRoot(): winrt.windows.ui.xaml.DependencyObject;
-    overload function SearchRoot(value: cxx.ConstRef<winrt.windows.ui.xaml.DependencyObject>): Void;
+    overload function SearchRoot(value: ConstRef<winrt.windows.ui.xaml.DependencyObject>): Void;
     overload function ExclusionRect(): winrt.windows.foundation.Rect;
-    overload function ExclusionRect(value: cxx.ConstRef<winrt.windows.foundation.Rect>): Void;
+    overload function ExclusionRect(value: ConstRef<winrt.windows.foundation.Rect>): Void;
     overload function HintRect(): winrt.windows.foundation.Rect;
-    overload function HintRect(value: cxx.ConstRef<winrt.windows.foundation.Rect>): Void;
+    overload function HintRect(value: ConstRef<winrt.windows.foundation.Rect>): Void;
     overload function XYFocusNavigationStrategyOverride(): winrt.windows.ui.xaml.input.XYFocusNavigationStrategyOverride;
-    overload function XYFocusNavigationStrategyOverride(value: cxx.ConstRef<winrt.windows.ui.xaml.input.XYFocusNavigationStrategyOverride>): Void;
+    overload function XYFocusNavigationStrategyOverride(value: ConstRef<winrt.windows.ui.xaml.input.XYFocusNavigationStrategyOverride>): Void;
 }

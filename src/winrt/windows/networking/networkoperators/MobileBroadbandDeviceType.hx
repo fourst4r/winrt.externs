@@ -2,7 +2,7 @@ package winrt.windows.networking.networkoperators;
 
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceType")
-extern enum abstract MobileBroadbandDeviceType(cxx.num.Int32)
+extern enum abstract MobileBroadbandDeviceType(Int32)
 {
     @:native("winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceType::Unknown") final Unknown;
     @:native("winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceType::Embedded") final Embedded;

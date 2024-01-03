@@ -1,11 +1,14 @@
 package winrt.windows.devices.alljoyn;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.AllJoyn.h", true)
 @:native("winrt::Windows::Devices::AllJoyn::AllJoynMessageInfo")
 extern class AllJoynMessageInfo
     implements winrt.windows.devices.alljoyn.IAllJoynMessageInfo
 {
-    /* explicit */ function new(senderUniqueName: cxx.ConstRef<winrt.HString>);
+    /* explicit */ function new(senderUniqueName: ConstRef<winrt.HString>);
     overload function SenderUniqueName(): winrt.HString;
 }

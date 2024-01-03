@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.activation;
 
 @:include("winrt/Windows.ApplicationModel.Activation.h", true)
 @:native("winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState")
-extern enum abstract ApplicationExecutionState(cxx.num.Int32)
+extern enum abstract ApplicationExecutionState(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState::NotRunning") final NotRunning;
     @:native("winrt::Windows::ApplicationModel::Activation::ApplicationExecutionState::Running") final Running;

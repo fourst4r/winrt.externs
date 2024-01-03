@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.calls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Calls.h", true)
 @:native("winrt::Windows::ApplicationModel::Calls::IPhoneCallBlockingStatics")
 extern interface IPhoneCallBlockingStatics extends winrt.windows.foundation.IInspectable
@@ -9,5 +12,5 @@ extern interface IPhoneCallBlockingStatics extends winrt.windows.foundation.IIns
     overload function BlockUnknownNumbers(value: Bool): Void;
     overload function BlockPrivateNumbers(): Bool;
     overload function BlockPrivateNumbers(value: Bool): Void;
-    function SetCallBlockingListAsync(phoneNumberList: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function SetCallBlockingListAsync(phoneNumberList: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

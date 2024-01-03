@@ -2,4 +2,4 @@ package winrt.windows.foundation;
 
 
 @:extern 
-typedef AsyncActionCompletedHandler = (asyncInfo: cxx.ConstRef<winrt.windows.foundation.IAsyncAction>, asyncStatus: cxx.ConstRef<winrt.windows.foundation.AsyncStatus>)->Void;
+typedef AsyncActionCompletedHandler = Fn<(asyncInfo: ConstRef<winrt.windows.foundation.IAsyncAction>, asyncStatus: ConstRef<winrt.windows.foundation.AsyncStatus>)->Void>;

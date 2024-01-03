@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.appointments;
 
 @:include("winrt/Windows.ApplicationModel.Appointments.h", true)
 @:native("winrt::Windows::ApplicationModel::Appointments::AppointmentDaysOfWeek")
-extern enum abstract AppointmentDaysOfWeek(cxx.num.UInt32)
+extern enum abstract AppointmentDaysOfWeek(UInt32)
 {
     @:native("winrt::Windows::ApplicationModel::Appointments::AppointmentDaysOfWeek::None") final None;
     @:native("winrt::Windows::ApplicationModel::Appointments::AppointmentDaysOfWeek::Sunday") final Sunday;

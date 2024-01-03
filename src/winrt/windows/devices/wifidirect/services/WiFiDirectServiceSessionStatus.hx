@@ -2,7 +2,7 @@ package winrt.windows.devices.wifidirect.services;
 
 @:include("winrt/Windows.Devices.WiFiDirect.Services.h", true)
 @:native("winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionStatus")
-extern enum abstract WiFiDirectServiceSessionStatus(cxx.num.Int32)
+extern enum abstract WiFiDirectServiceSessionStatus(Int32)
 {
     @:native("winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionStatus::Closed") final Closed;
     @:native("winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionStatus::Initiated") final Initiated;

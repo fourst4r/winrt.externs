@@ -2,7 +2,7 @@ package winrt.windows.services.maps;
 
 @:include("winrt/Windows.Services.Maps.h", true)
 @:native("winrt::Windows::Services::Maps::MapRouteRestrictions")
-extern enum abstract MapRouteRestrictions(cxx.num.UInt32)
+extern enum abstract MapRouteRestrictions(UInt32)
 {
     @:native("winrt::Windows::Services::Maps::MapRouteRestrictions::None") final None;
     @:native("winrt::Windows::Services::Maps::MapRouteRestrictions::Highways") final Highways;

@@ -2,7 +2,7 @@ package winrt.windows.media.capture.frames;
 
 @:include("winrt/Windows.Media.Capture.Frames.h", true)
 @:native("winrt::Windows::Media::Capture::Frames::MediaFrameSourceKind")
-extern enum abstract MediaFrameSourceKind(cxx.num.Int32)
+extern enum abstract MediaFrameSourceKind(Int32)
 {
     @:native("winrt::Windows::Media::Capture::Frames::MediaFrameSourceKind::Custom") final Custom;
     @:native("winrt::Windows::Media::Capture::Frames::MediaFrameSourceKind::Color") final Color;

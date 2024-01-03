@@ -4,5 +4,5 @@ package winrt.windows.ui.input.preview;
 @:native("winrt::Windows::UI::Input::Preview::InputActivationListenerPreview")
 extern class InputActivationListenerPreview
 {
-    static function CreateForApplicationWindow(window: cxx.ConstRef<winrt.windows.ui.windowmanagement.AppWindow>): winrt.windows.ui.input.InputActivationListener;
+    static function CreateForApplicationWindow(window: ConstRef<winrt.windows.ui.windowmanagement.AppWindow>): winrt.windows.ui.input.InputActivationListener;
 }

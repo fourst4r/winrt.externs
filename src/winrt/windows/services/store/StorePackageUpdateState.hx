@@ -2,7 +2,7 @@ package winrt.windows.services.store;
 
 @:include("winrt/Windows.Services.Store.h", true)
 @:native("winrt::Windows::Services::Store::StorePackageUpdateState")
-extern enum abstract StorePackageUpdateState(cxx.num.Int32)
+extern enum abstract StorePackageUpdateState(Int32)
 {
     @:native("winrt::Windows::Services::Store::StorePackageUpdateState::Pending") final Pending;
     @:native("winrt::Windows::Services::Store::StorePackageUpdateState::Downloading") final Downloading;

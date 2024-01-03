@@ -1,6 +1,9 @@
 package winrt.windows.networking.sockets;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Networking.Sockets.h", true)
 @:native("winrt::Windows::Networking::Sockets::StreamSocketControl")
 extern class StreamSocketControl
@@ -13,17 +16,17 @@ extern class StreamSocketControl
     overload function NoDelay(value: Bool): Void;
     overload function KeepAlive(): Bool;
     overload function KeepAlive(value: Bool): Void;
-    overload function OutboundBufferSizeInBytes(): cxx.num.UInt32;
-    overload function OutboundBufferSizeInBytes(value: cxx.num.UInt32): Void;
+    overload function OutboundBufferSizeInBytes(): UInt32;
+    overload function OutboundBufferSizeInBytes(value: UInt32): Void;
     overload function QualityOfService(): winrt.windows.networking.sockets.SocketQualityOfService;
-    overload function QualityOfService(value: cxx.ConstRef<winrt.windows.networking.sockets.SocketQualityOfService>): Void;
-    overload function OutboundUnicastHopLimit(): cxx.num.UInt8;
-    overload function OutboundUnicastHopLimit(value: cxx.num.UInt8): Void;
+    overload function QualityOfService(value: ConstRef<winrt.windows.networking.sockets.SocketQualityOfService>): Void;
+    overload function OutboundUnicastHopLimit(): UInt8;
+    overload function OutboundUnicastHopLimit(value: UInt8): Void;
     overload function IgnorableServerCertificateErrors(): winrt.windows.foundation.collections.IVector<winrt.windows.security.cryptography.certificates.ChainValidationResult> /* GenericTypeInstSig */;
     overload function SerializeConnectionAttempts(): Bool;
     overload function SerializeConnectionAttempts(value: Bool): Void;
     overload function ClientCertificate(): winrt.windows.security.cryptography.certificates.Certificate;
-    overload function ClientCertificate(value: cxx.ConstRef<winrt.windows.security.cryptography.certificates.Certificate>): Void;
+    overload function ClientCertificate(value: ConstRef<winrt.windows.security.cryptography.certificates.Certificate>): Void;
     overload function MinProtectionLevel(): winrt.windows.networking.sockets.SocketProtectionLevel;
-    overload function MinProtectionLevel(value: cxx.ConstRef<winrt.windows.networking.sockets.SocketProtectionLevel>): Void;
+    overload function MinProtectionLevel(value: ConstRef<winrt.windows.networking.sockets.SocketProtectionLevel>): Void;
 }

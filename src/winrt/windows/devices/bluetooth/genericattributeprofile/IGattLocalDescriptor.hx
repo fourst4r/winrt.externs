@@ -1,6 +1,9 @@
 package winrt.windows.devices.bluetooth.genericattributeprofile;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Bluetooth.GenericAttributeProfile.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattLocalDescriptor")
 extern interface IGattLocalDescriptor extends winrt.windows.foundation.IInspectable
@@ -9,8 +12,8 @@ extern interface IGattLocalDescriptor extends winrt.windows.foundation.IInspecta
     overload function StaticValue(): winrt.windows.storage.streams.IBuffer;
     overload function ReadProtectionLevel(): winrt.windows.devices.bluetooth.genericattributeprofile.GattProtectionLevel;
     overload function WriteProtectionLevel(): winrt.windows.devices.bluetooth.genericattributeprofile.GattProtectionLevel;
-    overload function ReadRequested(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.bluetooth.genericattributeprofile.GattLocalDescriptor, winrt.windows.devices.bluetooth.genericattributeprofile.GattReadRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function ReadRequested(token: cxx.ConstRef<winrt.EventToken>): Void;
-    overload function WriteRequested(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.bluetooth.genericattributeprofile.GattLocalDescriptor, winrt.windows.devices.bluetooth.genericattributeprofile.GattWriteRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function WriteRequested(token: cxx.ConstRef<winrt.EventToken>): Void;
+    overload function ReadRequested(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.bluetooth.genericattributeprofile.GattLocalDescriptor, winrt.windows.devices.bluetooth.genericattributeprofile.GattReadRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function ReadRequested(token: ConstRef<winrt.EventToken>): Void;
+    overload function WriteRequested(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.bluetooth.genericattributeprofile.GattLocalDescriptor, winrt.windows.devices.bluetooth.genericattributeprofile.GattWriteRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function WriteRequested(token: ConstRef<winrt.EventToken>): Void;
 }

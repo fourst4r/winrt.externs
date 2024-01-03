@@ -2,7 +2,7 @@ package winrt.windows.ui.applicationsettings;
 
 @:include("winrt/Windows.UI.ApplicationSettings.h", true)
 @:native("winrt::Windows::UI::ApplicationSettings::SupportedWebAccountActions")
-extern enum abstract SupportedWebAccountActions(cxx.num.UInt32)
+extern enum abstract SupportedWebAccountActions(UInt32)
 {
     @:native("winrt::Windows::UI::ApplicationSettings::SupportedWebAccountActions::None") final None;
     @:native("winrt::Windows::UI::ApplicationSettings::SupportedWebAccountActions::Reconnect") final Reconnect;

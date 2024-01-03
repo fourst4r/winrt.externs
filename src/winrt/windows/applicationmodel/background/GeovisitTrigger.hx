@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.background;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Background.h", true)
 @:native("winrt::Windows::ApplicationModel::Background::GeovisitTrigger")
 extern class GeovisitTrigger
@@ -9,5 +12,5 @@ extern class GeovisitTrigger
 {
     function new();
     overload function MonitoringScope(): winrt.windows.devices.geolocation.VisitMonitoringScope;
-    overload function MonitoringScope(value: cxx.ConstRef<winrt.windows.devices.geolocation.VisitMonitoringScope>): Void;
+    overload function MonitoringScope(value: ConstRef<winrt.windows.devices.geolocation.VisitMonitoringScope>): Void;
 }

@@ -1,6 +1,9 @@
 package winrt.windows.storage.provider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Storage.Provider.h", true)
 @:native("winrt::Windows::Storage::Provider::IStorageProviderUICommand")
 extern interface IStorageProviderUICommand extends winrt.windows.foundation.IInspectable

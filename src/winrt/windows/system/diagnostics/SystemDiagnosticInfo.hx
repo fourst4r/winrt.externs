@@ -1,6 +1,9 @@
 package winrt.windows.system.diagnostics;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.System.Diagnostics.h", true)
 @:native("winrt::Windows::System::Diagnostics::SystemDiagnosticInfo")
 extern class SystemDiagnosticInfo
@@ -8,10 +11,10 @@ extern class SystemDiagnosticInfo
 {
     overload function MemoryUsage(): winrt.windows.system.diagnostics.SystemMemoryUsage;
     overload function CpuUsage(): winrt.windows.system.diagnostics.SystemCpuUsage;
-    function IsArchitectureSupported(type: cxx.ConstRef<winrt.windows.system.ProcessorArchitecture>): Bool;
+    function IsArchitectureSupported(type: ConstRef<winrt.windows.system.ProcessorArchitecture>): Bool;
     overload function PreferredArchitecture(): winrt.windows.system.ProcessorArchitecture;
     function GetForCurrentSystem(): winrt.windows.system.diagnostics.SystemDiagnosticInfo;
     static function GetForCurrentSystem(): winrt.windows.system.diagnostics.SystemDiagnosticInfo;
-    static function IsArchitectureSupported(type: cxx.ConstRef<winrt.windows.system.ProcessorArchitecture>): Bool;
+    static function IsArchitectureSupported(type: ConstRef<winrt.windows.system.ProcessorArchitecture>): Bool;
     static overload function PreferredArchitecture(): winrt.windows.system.ProcessorArchitecture;
 }

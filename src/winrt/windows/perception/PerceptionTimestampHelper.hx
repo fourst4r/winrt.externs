@@ -4,6 +4,6 @@ package winrt.windows.perception;
 @:native("winrt::Windows::Perception::PerceptionTimestampHelper")
 extern class PerceptionTimestampHelper
 {
-    static function FromHistoricalTargetTime(targetTime: cxx.ConstRef<winrt.windows.foundation.DateTime>): winrt.windows.perception.PerceptionTimestamp;
-    static function FromSystemRelativeTargetTime(targetTime: cxx.ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.perception.PerceptionTimestamp;
+    static function FromHistoricalTargetTime(targetTime: ConstRef<winrt.windows.foundation.DateTime>): winrt.windows.perception.PerceptionTimestamp;
+    static function FromSystemRelativeTargetTime(targetTime: ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.perception.PerceptionTimestamp;
 }

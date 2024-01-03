@@ -2,4 +2,4 @@ package winrt.microsoft.ui.xaml;
 
 
 @:extern 
-typedef CreateDefaultValueCallback = ()->Void;
+typedef CreateDefaultValueCallback = Fn<()->Void>;

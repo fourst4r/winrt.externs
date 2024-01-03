@@ -2,7 +2,7 @@ package winrt.windows.media.speechrecognition;
 
 @:include("winrt/Windows.Media.SpeechRecognition.h", true)
 @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResultStatus")
-extern enum abstract SpeechRecognitionResultStatus(cxx.num.Int32)
+extern enum abstract SpeechRecognitionResultStatus(Int32)
 {
     @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResultStatus::Success") final Success;
     @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResultStatus::TopicLanguageNotSupported") final TopicLanguageNotSupported;

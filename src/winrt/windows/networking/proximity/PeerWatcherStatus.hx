@@ -2,7 +2,7 @@ package winrt.windows.networking.proximity;
 
 @:include("winrt/Windows.Networking.Proximity.h", true)
 @:native("winrt::Windows::Networking::Proximity::PeerWatcherStatus")
-extern enum abstract PeerWatcherStatus(cxx.num.Int32)
+extern enum abstract PeerWatcherStatus(Int32)
 {
     @:native("winrt::Windows::Networking::Proximity::PeerWatcherStatus::Created") final Created;
     @:native("winrt::Windows::Networking::Proximity::PeerWatcherStatus::Started") final Started;

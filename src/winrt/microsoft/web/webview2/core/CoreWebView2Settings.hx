@@ -1,6 +1,9 @@
 package winrt.microsoft.web.webview2.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.Web.WebView2.Core.h", true)
 @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2Settings")
 extern class CoreWebView2Settings
@@ -14,7 +17,7 @@ extern class CoreWebView2Settings
     implements winrt.microsoft.web.webview2.core.ICoreWebView2Settings
 {
     overload function UserAgent(): winrt.HString;
-    overload function UserAgent(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function UserAgent(value: ConstRef<winrt.HString>): Void;
     overload function AreBrowserAcceleratorKeysEnabled(): Bool;
     overload function AreBrowserAcceleratorKeysEnabled(value: Bool): Void;
     overload function IsPasswordAutosaveEnabled(): Bool;
@@ -26,9 +29,9 @@ extern class CoreWebView2Settings
     overload function IsSwipeNavigationEnabled(): Bool;
     overload function IsSwipeNavigationEnabled(value: Bool): Void;
     overload function HiddenPdfToolbarItems(): winrt.microsoft.web.webview2.core.CoreWebView2PdfToolbarItems;
-    overload function HiddenPdfToolbarItems(value: cxx.ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2PdfToolbarItems>): Void;
+    overload function HiddenPdfToolbarItems(value: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2PdfToolbarItems>): Void;
     overload function HostObjectDispatchAdapter(): winrt.microsoft.web.webview2.core.ICoreWebView2DispatchAdapter;
-    overload function HostObjectDispatchAdapter(value: cxx.ConstRef<winrt.microsoft.web.webview2.core.ICoreWebView2DispatchAdapter>): Void;
+    overload function HostObjectDispatchAdapter(value: ConstRef<winrt.microsoft.web.webview2.core.ICoreWebView2DispatchAdapter>): Void;
     overload function IsScriptEnabled(): Bool;
     overload function IsScriptEnabled(value: Bool): Void;
     overload function IsWebMessageEnabled(): Bool;

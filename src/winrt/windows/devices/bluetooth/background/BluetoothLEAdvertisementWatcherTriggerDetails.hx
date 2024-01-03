@@ -1,6 +1,9 @@
 package winrt.windows.devices.bluetooth.background;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Bluetooth.Background.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementWatcherTriggerDetails")
 extern class BluetoothLEAdvertisementWatcherTriggerDetails

@@ -1,6 +1,9 @@
 package winrt.windows.media.closedcaptioning;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.ClosedCaptioning.h", true)
 @:native("winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics")
 extern interface IClosedCaptionPropertiesStatics extends winrt.windows.foundation.IInspectable

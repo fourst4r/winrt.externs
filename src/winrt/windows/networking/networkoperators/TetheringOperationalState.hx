@@ -2,7 +2,7 @@ package winrt.windows.networking.networkoperators;
 
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::TetheringOperationalState")
-extern enum abstract TetheringOperationalState(cxx.num.Int32)
+extern enum abstract TetheringOperationalState(Int32)
 {
     @:native("winrt::Windows::Networking::NetworkOperators::TetheringOperationalState::Unknown") final Unknown;
     @:native("winrt::Windows::Networking::NetworkOperators::TetheringOperationalState::On") final On;

@@ -1,6 +1,9 @@
 package winrt.windows.media.mediaproperties;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.MediaProperties.h", true)
 @:native("winrt::Windows::Media::MediaProperties::ContainerEncodingProperties")
 extern class ContainerEncodingProperties
@@ -11,7 +14,7 @@ extern class ContainerEncodingProperties
     function new();
     overload function Properties(): winrt.windows.media.mediaproperties.MediaPropertySet;
     overload function Type(): winrt.HString;
-    overload function Subtype(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function Subtype(value: ConstRef<winrt.HString>): Void;
     overload function Subtype(): winrt.HString;
     function Copy(): winrt.windows.media.mediaproperties.ContainerEncodingProperties;
 }

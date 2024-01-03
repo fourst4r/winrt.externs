@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::TreeViewItemTemplateSettings")
 extern class TreeViewItemTemplateSettings
@@ -11,7 +14,7 @@ extern class TreeViewItemTemplateSettings
     overload function ExpandedGlyphVisibility(): winrt.microsoft.ui.xaml.Visibility;
     overload function CollapsedGlyphVisibility(): winrt.microsoft.ui.xaml.Visibility;
     overload function Indentation(): winrt.microsoft.ui.xaml.Thickness;
-    overload function DragItemsCount(): cxx.num.Int32;
+    overload function DragItemsCount(): Int32;
     overload function ExpandedGlyphVisibilityProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function CollapsedGlyphVisibilityProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function IndentationProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

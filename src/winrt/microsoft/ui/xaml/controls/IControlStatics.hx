@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::IControlStatics")
 extern interface IControlStatics extends winrt.windows.foundation.IInspectable
@@ -31,9 +34,9 @@ extern interface IControlStatics extends winrt.windows.foundation.IInspectable
     overload function ElementSoundModeProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function CornerRadiusProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function IsTemplateFocusTargetProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetIsTemplateFocusTarget(element: cxx.ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): Bool;
-    function SetIsTemplateFocusTarget(element: cxx.ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>, value: Bool): Void;
+    function GetIsTemplateFocusTarget(element: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): Bool;
+    function SetIsTemplateFocusTarget(element: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>, value: Bool): Void;
     overload function IsTemplateKeyTipTargetProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetIsTemplateKeyTipTarget(element: cxx.ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): Bool;
-    function SetIsTemplateKeyTipTarget(element: cxx.ConstRef<winrt.microsoft.ui.xaml.DependencyObject>, value: Bool): Void;
+    function GetIsTemplateKeyTipTarget(element: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): Bool;
+    function SetIsTemplateKeyTipTarget(element: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>, value: Bool): Void;
 }

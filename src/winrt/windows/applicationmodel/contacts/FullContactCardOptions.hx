@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.contacts;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Contacts.h", true)
 @:native("winrt::Windows::ApplicationModel::Contacts::FullContactCardOptions")
 extern class FullContactCardOptions
@@ -8,5 +11,5 @@ extern class FullContactCardOptions
 {
     function new();
     overload function DesiredRemainingView(): winrt.windows.ui.viewmanagement.ViewSizePreference;
-    overload function DesiredRemainingView(value: cxx.ConstRef<winrt.windows.ui.viewmanagement.ViewSizePreference>): Void;
+    overload function DesiredRemainingView(value: ConstRef<winrt.windows.ui.viewmanagement.ViewSizePreference>): Void;
 }

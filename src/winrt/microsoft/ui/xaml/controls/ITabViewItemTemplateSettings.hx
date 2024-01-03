@@ -1,10 +1,13 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::ITabViewItemTemplateSettings")
 extern interface ITabViewItemTemplateSettings extends winrt.windows.foundation.IInspectable
 {
     overload function IconElement(): winrt.microsoft.ui.xaml.controls.IconElement;
-    overload function IconElement(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.IconElement>): Void;
+    overload function IconElement(value: ConstRef<winrt.microsoft.ui.xaml.controls.IconElement>): Void;
 }

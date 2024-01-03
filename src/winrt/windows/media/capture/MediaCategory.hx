@@ -2,7 +2,7 @@ package winrt.windows.media.capture;
 
 @:include("winrt/Windows.Media.Capture.h", true)
 @:native("winrt::Windows::Media::Capture::MediaCategory")
-extern enum abstract MediaCategory(cxx.num.Int32)
+extern enum abstract MediaCategory(Int32)
 {
     @:native("winrt::Windows::Media::Capture::MediaCategory::Other") final Other;
     @:native("winrt::Windows::Media::Capture::MediaCategory::Communications") final Communications;

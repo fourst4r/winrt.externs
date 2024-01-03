@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.input;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Input.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Input::FindNextElementOptions")
 extern class FindNextElementOptions
@@ -8,11 +11,11 @@ extern class FindNextElementOptions
 {
     function new();
     overload function SearchRoot(): winrt.microsoft.ui.xaml.DependencyObject;
-    overload function SearchRoot(value: cxx.ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): Void;
+    overload function SearchRoot(value: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): Void;
     overload function ExclusionRect(): winrt.windows.foundation.Rect;
-    overload function ExclusionRect(value: cxx.ConstRef<winrt.windows.foundation.Rect>): Void;
+    overload function ExclusionRect(value: ConstRef<winrt.windows.foundation.Rect>): Void;
     overload function HintRect(): winrt.windows.foundation.Rect;
-    overload function HintRect(value: cxx.ConstRef<winrt.windows.foundation.Rect>): Void;
+    overload function HintRect(value: ConstRef<winrt.windows.foundation.Rect>): Void;
     overload function XYFocusNavigationStrategyOverride(): winrt.microsoft.ui.xaml.input.XYFocusNavigationStrategyOverride;
-    overload function XYFocusNavigationStrategyOverride(value: cxx.ConstRef<winrt.microsoft.ui.xaml.input.XYFocusNavigationStrategyOverride>): Void;
+    overload function XYFocusNavigationStrategyOverride(value: ConstRef<winrt.microsoft.ui.xaml.input.XYFocusNavigationStrategyOverride>): Void;
 }

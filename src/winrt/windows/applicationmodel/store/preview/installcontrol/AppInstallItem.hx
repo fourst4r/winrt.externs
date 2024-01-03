@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.store.preview.installcontrol;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Store.Preview.InstallControl.h", true)
 @:native("winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem")
 extern class AppInstallItem
@@ -18,13 +21,13 @@ extern class AppInstallItem
     overload function Cancel(): Void;
     overload function Pause(): Void;
     overload function Restart(): Void;
-    overload function Completed(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallItem, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Completed(token: cxx.ConstRef<winrt.EventToken>): Void;
-    overload function StatusChanged(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallItem, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function StatusChanged(token: cxx.ConstRef<winrt.EventToken>): Void;
-    overload function Cancel(correlationVector: cxx.ConstRef<winrt.HString>): Void;
-    overload function Pause(correlationVector: cxx.ConstRef<winrt.HString>): Void;
-    overload function Restart(correlationVector: cxx.ConstRef<winrt.HString>): Void;
+    overload function Completed(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallItem, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Completed(token: ConstRef<winrt.EventToken>): Void;
+    overload function StatusChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallItem, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function StatusChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function Cancel(correlationVector: ConstRef<winrt.HString>): Void;
+    overload function Pause(correlationVector: ConstRef<winrt.HString>): Void;
+    overload function Restart(correlationVector: ConstRef<winrt.HString>): Void;
     overload function Children(): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallItem> /* GenericTypeInstSig */;
     overload function ItemOperationsMightAffectOtherItems(): Bool;
     overload function LaunchAfterInstall(): Bool;
@@ -36,7 +39,7 @@ extern class AppInstallItem
     overload function PinToTaskbarAfterInstall(): Bool;
     overload function PinToTaskbarAfterInstall(value: Bool): Void;
     overload function CompletedInstallToastNotificationMode(): winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallationToastNotificationMode;
-    overload function CompletedInstallToastNotificationMode(value: cxx.ConstRef<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallationToastNotificationMode>): Void;
+    overload function CompletedInstallToastNotificationMode(value: ConstRef<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallationToastNotificationMode>): Void;
     overload function InstallInProgressToastNotificationMode(): winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallationToastNotificationMode;
-    overload function InstallInProgressToastNotificationMode(value: cxx.ConstRef<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallationToastNotificationMode>): Void;
+    overload function InstallInProgressToastNotificationMode(value: ConstRef<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallationToastNotificationMode>): Void;
 }

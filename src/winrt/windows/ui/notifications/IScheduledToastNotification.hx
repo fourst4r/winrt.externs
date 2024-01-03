@@ -1,6 +1,9 @@
 package winrt.windows.ui.notifications;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Notifications.h", true)
 @:native("winrt::Windows::UI::Notifications::IScheduledToastNotification")
 extern interface IScheduledToastNotification extends winrt.windows.foundation.IInspectable
@@ -8,7 +11,7 @@ extern interface IScheduledToastNotification extends winrt.windows.foundation.II
     overload function Content(): winrt.windows.data.xml.dom.XmlDocument;
     overload function DeliveryTime(): winrt.windows.foundation.DateTime;
     overload function SnoozeInterval(): winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* GenericTypeInstSig */;
-    overload function MaximumSnoozeCount(): cxx.num.UInt32;
-    overload function Id(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function MaximumSnoozeCount(): UInt32;
+    overload function Id(value: ConstRef<winrt.HString>): Void;
     overload function Id(): winrt.HString;
 }

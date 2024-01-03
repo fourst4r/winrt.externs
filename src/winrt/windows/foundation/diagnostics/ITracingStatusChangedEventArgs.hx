@@ -1,6 +1,9 @@
 package winrt.windows.foundation.diagnostics;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Foundation.Diagnostics.h", true)
 @:native("winrt::Windows::Foundation::Diagnostics::ITracingStatusChangedEventArgs")
 extern interface ITracingStatusChangedEventArgs extends winrt.windows.foundation.IInspectable

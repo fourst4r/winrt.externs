@@ -2,7 +2,7 @@ package winrt.microsoft.web.webview2.core;
 
 @:include("winrt/Microsoft.Web.WebView2.Core.h", true)
 @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionKind")
-extern enum abstract CoreWebView2PermissionKind(cxx.num.Int32)
+extern enum abstract CoreWebView2PermissionKind(Int32)
 {
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionKind::UnknownPermission") final UnknownPermission;
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionKind::Microphone") final Microphone;

@@ -2,7 +2,7 @@ package winrt.windows.networking.sockets;
 
 @:include("winrt/Windows.Networking.Sockets.h", true)
 @:native("winrt::Windows::Networking::Sockets::SocketActivityTriggerReason")
-extern enum abstract SocketActivityTriggerReason(cxx.num.Int32)
+extern enum abstract SocketActivityTriggerReason(Int32)
 {
     @:native("winrt::Windows::Networking::Sockets::SocketActivityTriggerReason::None") final None;
     @:native("winrt::Windows::Networking::Sockets::SocketActivityTriggerReason::SocketActivity") final SocketActivity;

@@ -2,7 +2,7 @@ package winrt.windows.devices.pointofservice;
 
 @:include("winrt/Windows.Devices.PointOfService.h", true)
 @:native("winrt::Windows::Devices::PointOfService::LineDisplayCursorType")
-extern enum abstract LineDisplayCursorType(cxx.num.Int32)
+extern enum abstract LineDisplayCursorType(Int32)
 {
     @:native("winrt::Windows::Devices::PointOfService::LineDisplayCursorType::None") final None;
     @:native("winrt::Windows::Devices::PointOfService::LineDisplayCursorType::Block") final Block;

@@ -1,6 +1,9 @@
 package winrt.windows.media.protection.playready;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Protection.PlayReady.h", true)
 @:native("winrt::Windows::Media::Protection::PlayReady::IPlayReadyStatics")
 extern interface IPlayReadyStatics extends winrt.windows.foundation.IInspectable
@@ -12,5 +15,5 @@ extern interface IPlayReadyStatics extends winrt.windows.foundation.IInspectable
     overload function MeteringReportServiceRequestType(): winrt.Guid;
     overload function RevocationServiceRequestType(): winrt.Guid;
     overload function MediaProtectionSystemId(): winrt.Guid;
-    overload function PlayReadySecurityVersion(): cxx.num.UInt32;
+    overload function PlayReadySecurityVersion(): UInt32;
 }

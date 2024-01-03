@@ -1,10 +1,13 @@
 package winrt.windows.ui.viewmanagement;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.ViewManagement.h", true)
 @:native("winrt::Windows::UI::ViewManagement::IApplicationViewTransferContext")
 extern interface IApplicationViewTransferContext extends winrt.windows.foundation.IInspectable
 {
-    overload function ViewId(): cxx.num.Int32;
-    overload function ViewId(value: cxx.num.Int32): Void;
+    overload function ViewId(): Int32;
+    overload function ViewId(value: Int32): Void;
 }

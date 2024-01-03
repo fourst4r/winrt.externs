@@ -2,7 +2,7 @@ package winrt.windows.ui.input.preview.injection;
 
 @:include("winrt/Windows.UI.Input.Preview.Injection.h", true)
 @:native("winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters")
-extern enum abstract InjectedInputTouchParameters(cxx.num.UInt32)
+extern enum abstract InjectedInputTouchParameters(UInt32)
 {
     @:native("winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters::None") final None;
     @:native("winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters::Contact") final Contact;

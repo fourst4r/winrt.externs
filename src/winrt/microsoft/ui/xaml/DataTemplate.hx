@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.h", true)
 @:native("winrt::Microsoft::UI::Xaml::DataTemplate")
 extern class DataTemplate
@@ -10,12 +13,12 @@ extern class DataTemplate
 {
     function new();
     function LoadContent(): winrt.microsoft.ui.xaml.DependencyObject;
-    function GetElement(args: cxx.ConstRef<winrt.microsoft.ui.xaml.ElementFactoryGetArgs>): winrt.microsoft.ui.xaml.UIElement;
-    function RecycleElement(args: cxx.ConstRef<winrt.microsoft.ui.xaml.ElementFactoryRecycleArgs>): Void;
+    function GetElement(args: ConstRef<winrt.microsoft.ui.xaml.ElementFactoryGetArgs>): winrt.microsoft.ui.xaml.UIElement;
+    function RecycleElement(args: ConstRef<winrt.microsoft.ui.xaml.ElementFactoryRecycleArgs>): Void;
     overload function ExtensionInstanceProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetExtensionInstance(element: cxx.ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.microsoft.ui.xaml.IDataTemplateExtension;
-    function SetExtensionInstance(element: cxx.ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>, value: cxx.ConstRef<winrt.microsoft.ui.xaml.IDataTemplateExtension>): Void;
+    function GetExtensionInstance(element: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.microsoft.ui.xaml.IDataTemplateExtension;
+    function SetExtensionInstance(element: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>, value: ConstRef<winrt.microsoft.ui.xaml.IDataTemplateExtension>): Void;
     static overload function ExtensionInstanceProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    static function GetExtensionInstance(element: cxx.ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.microsoft.ui.xaml.IDataTemplateExtension;
-    static function SetExtensionInstance(element: cxx.ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>, value: cxx.ConstRef<winrt.microsoft.ui.xaml.IDataTemplateExtension>): Void;
+    static function GetExtensionInstance(element: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.microsoft.ui.xaml.IDataTemplateExtension;
+    static function SetExtensionInstance(element: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>, value: ConstRef<winrt.microsoft.ui.xaml.IDataTemplateExtension>): Void;
 }

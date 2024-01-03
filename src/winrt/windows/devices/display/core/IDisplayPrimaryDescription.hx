@@ -1,12 +1,15 @@
 package winrt.windows.devices.display.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Display.Core.h", true)
 @:native("winrt::Windows::Devices::Display::Core::IDisplayPrimaryDescription")
 extern interface IDisplayPrimaryDescription extends winrt.windows.foundation.IInspectable
 {
-    overload function Width(): cxx.num.UInt32;
-    overload function Height(): cxx.num.UInt32;
+    overload function Width(): UInt32;
+    overload function Height(): UInt32;
     overload function Format(): winrt.windows.graphics.directx.DirectXPixelFormat;
     overload function ColorSpace(): winrt.windows.graphics.directx.DirectXColorSpace;
     overload function IsStereo(): Bool;

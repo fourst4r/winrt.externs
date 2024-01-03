@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.chat;
 
 @:include("winrt/Windows.ApplicationModel.Chat.h", true)
 @:native("winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingKind")
-extern enum abstract ChatConversationThreadingKind(cxx.num.Int32)
+extern enum abstract ChatConversationThreadingKind(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingKind::Participants") final Participants;
     @:native("winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingKind::ContactId") final ContactId;

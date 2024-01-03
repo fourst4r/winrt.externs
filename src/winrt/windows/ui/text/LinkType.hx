@@ -2,7 +2,7 @@ package winrt.windows.ui.text;
 
 @:include("winrt/Windows.UI.Text.h", true)
 @:native("winrt::Windows::UI::Text::LinkType")
-extern enum abstract LinkType(cxx.num.Int32)
+extern enum abstract LinkType(Int32)
 {
     @:native("winrt::Windows::UI::Text::LinkType::Undefined") final Undefined;
     @:native("winrt::Windows::UI::Text::LinkType::NotALink") final NotALink;

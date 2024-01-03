@@ -2,7 +2,7 @@ package winrt.windows.ui.composition.scenes;
 
 @:include("winrt/Windows.UI.Composition.Scenes.h", true)
 @:native("winrt::Windows::UI::Composition::Scenes::SceneAttributeSemantic")
-extern enum abstract SceneAttributeSemantic(cxx.num.Int32)
+extern enum abstract SceneAttributeSemantic(Int32)
 {
     @:native("winrt::Windows::UI::Composition::Scenes::SceneAttributeSemantic::Index") final Index;
     @:native("winrt::Windows::UI::Composition::Scenes::SceneAttributeSemantic::Vertex") final Vertex;

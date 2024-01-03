@@ -1,6 +1,9 @@
 package winrt.windows.media.devices;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController9")
 extern interface IAdvancedVideoCaptureDeviceController9 extends winrt.windows.foundation.IInspectable

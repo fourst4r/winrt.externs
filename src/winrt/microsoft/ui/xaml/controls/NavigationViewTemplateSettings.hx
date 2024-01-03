@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::NavigationViewTemplateSettings")
 extern class NavigationViewTemplateSettings
@@ -9,16 +12,16 @@ extern class NavigationViewTemplateSettings
     implements winrt.microsoft.ui.xaml.controls.INavigationViewTemplateSettings2
 {
     function new();
-    overload function TopPadding(): cxx.num.Float64;
+    overload function TopPadding(): Float64;
     overload function OverflowButtonVisibility(): winrt.microsoft.ui.xaml.Visibility;
     overload function PaneToggleButtonVisibility(): winrt.microsoft.ui.xaml.Visibility;
     overload function BackButtonVisibility(): winrt.microsoft.ui.xaml.Visibility;
     overload function TopPaneVisibility(): winrt.microsoft.ui.xaml.Visibility;
     overload function LeftPaneVisibility(): winrt.microsoft.ui.xaml.Visibility;
     overload function SingleSelectionFollowsFocus(): Bool;
-    overload function PaneToggleButtonWidth(): cxx.num.Float64;
-    overload function SmallerPaneToggleButtonWidth(): cxx.num.Float64;
-    overload function OpenPaneLength(): cxx.num.Float64;
+    overload function PaneToggleButtonWidth(): Float64;
+    overload function SmallerPaneToggleButtonWidth(): Float64;
+    overload function OpenPaneLength(): Float64;
     overload function OpenPaneLengthProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function TopPaddingProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function OverflowButtonVisibilityProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

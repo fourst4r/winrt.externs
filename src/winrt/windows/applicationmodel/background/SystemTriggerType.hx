@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.background;
 
 @:include("winrt/Windows.ApplicationModel.Background.h", true)
 @:native("winrt::Windows::ApplicationModel::Background::SystemTriggerType")
-extern enum abstract SystemTriggerType(cxx.num.Int32)
+extern enum abstract SystemTriggerType(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Background::SystemTriggerType::Invalid") final Invalid;
     @:native("winrt::Windows::ApplicationModel::Background::SystemTriggerType::SmsReceived") final SmsReceived;

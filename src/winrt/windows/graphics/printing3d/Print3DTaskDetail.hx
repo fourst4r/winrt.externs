@@ -2,7 +2,7 @@ package winrt.windows.graphics.printing3d;
 
 @:include("winrt/Windows.Graphics.Printing3D.h", true)
 @:native("winrt::Windows::Graphics::Printing3D::Print3DTaskDetail")
-extern enum abstract Print3DTaskDetail(cxx.num.Int32)
+extern enum abstract Print3DTaskDetail(Int32)
 {
     @:native("winrt::Windows::Graphics::Printing3D::Print3DTaskDetail::Unknown") final Unknown;
     @:native("winrt::Windows::Graphics::Printing3D::Print3DTaskDetail::ModelExceedsPrintBed") final ModelExceedsPrintBed;

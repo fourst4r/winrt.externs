@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.userdataaccounts.systemaccess;
 
 @:include("winrt/Windows.ApplicationModel.UserDataAccounts.SystemAccess.h", true)
 @:native("winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId")
-extern enum abstract DeviceAccountIconId(cxx.num.Int32)
+extern enum abstract DeviceAccountIconId(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId::Exchange") final Exchange;
     @:native("winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId::Msa") final Msa;

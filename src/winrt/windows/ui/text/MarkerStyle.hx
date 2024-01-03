@@ -2,7 +2,7 @@ package winrt.windows.ui.text;
 
 @:include("winrt/Windows.UI.Text.h", true)
 @:native("winrt::Windows::UI::Text::MarkerStyle")
-extern enum abstract MarkerStyle(cxx.num.Int32)
+extern enum abstract MarkerStyle(Int32)
 {
     @:native("winrt::Windows::UI::Text::MarkerStyle::Undefined") final Undefined;
     @:native("winrt::Windows::UI::Text::MarkerStyle::Parenthesis") final Parenthesis;

@@ -2,4 +2,4 @@ package winrt.windows.applicationmodel.background;
 
 
 @:extern 
-typedef BackgroundTaskProgressEventHandler = (sender: cxx.ConstRef<winrt.windows.applicationmodel.background.BackgroundTaskRegistration>, args: cxx.ConstRef<winrt.windows.applicationmodel.background.BackgroundTaskProgressEventArgs>)->Void;
+typedef BackgroundTaskProgressEventHandler = Fn<(sender: ConstRef<winrt.windows.applicationmodel.background.BackgroundTaskRegistration>, args: ConstRef<winrt.windows.applicationmodel.background.BackgroundTaskProgressEventArgs>)->Void>;

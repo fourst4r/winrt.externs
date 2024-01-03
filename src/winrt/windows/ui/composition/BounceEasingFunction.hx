@@ -1,6 +1,9 @@
 package winrt.windows.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::BounceEasingFunction")
 extern class BounceEasingFunction
@@ -8,6 +11,6 @@ extern class BounceEasingFunction
     implements winrt.windows.ui.composition.IBounceEasingFunction
 {
     overload function Mode(): winrt.windows.ui.composition.CompositionEasingFunctionMode;
-    overload function Bounces(): cxx.num.Int32;
-    overload function Bounciness(): cxx.num.Float32;
+    overload function Bounces(): Int32;
+    overload function Bounciness(): Float32;
 }

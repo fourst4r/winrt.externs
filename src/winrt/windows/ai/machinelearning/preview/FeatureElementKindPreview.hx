@@ -2,7 +2,7 @@ package winrt.windows.ai.machinelearning.preview;
 
 @:include("winrt/Windows.AI.MachineLearning.Preview.h", true)
 @:native("winrt::Windows::AI::MachineLearning::Preview::FeatureElementKindPreview")
-extern enum abstract FeatureElementKindPreview(cxx.num.Int32)
+extern enum abstract FeatureElementKindPreview(Int32)
 {
     @:native("winrt::Windows::AI::MachineLearning::Preview::FeatureElementKindPreview::Undefined") final Undefined;
     @:native("winrt::Windows::AI::MachineLearning::Preview::FeatureElementKindPreview::Float") final Float;

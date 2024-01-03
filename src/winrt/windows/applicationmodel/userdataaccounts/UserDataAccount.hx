@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.userdataaccounts;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.UserDataAccounts.h", true)
 @:native("winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount")
 extern class UserDataAccount
@@ -11,9 +14,9 @@ extern class UserDataAccount
 {
     overload function Id(): winrt.HString;
     overload function UserDisplayName(): winrt.HString;
-    overload function UserDisplayName(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function UserDisplayName(value: ConstRef<winrt.HString>): Void;
     overload function OtherAppReadAccess(): winrt.windows.applicationmodel.userdataaccounts.UserDataAccountOtherAppReadAccess;
-    overload function OtherAppReadAccess(value: cxx.ConstRef<winrt.windows.applicationmodel.userdataaccounts.UserDataAccountOtherAppReadAccess>): Void;
+    overload function OtherAppReadAccess(value: ConstRef<winrt.windows.applicationmodel.userdataaccounts.UserDataAccountOtherAppReadAccess>): Void;
     overload function Icon(): winrt.windows.storage.streams.IRandomAccessStreamReference;
     overload function DeviceAccountTypeId(): winrt.HString;
     overload function PackageFamilyName(): winrt.HString;
@@ -27,7 +30,7 @@ extern class UserDataAccount
     overload function IsProtectedUnderLock(): Bool;
     overload function ExplictReadAccessPackageFamilyNames(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function DisplayName(): winrt.HString;
-    overload function DisplayName(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function DisplayName(value: ConstRef<winrt.HString>): Void;
     overload function CanShowCreateContactGroup(): Bool;
     overload function CanShowCreateContactGroup(value: Bool): Void;
     overload function ProviderProperties(): winrt.windows.foundation.collections.IPropertySet;
@@ -35,5 +38,5 @@ extern class UserDataAccount
     function FindContactGroupsAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.contacts.ContactGroup> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
     function TryShowCreateContactGroupAsync(): winrt.windows.foundation.IAsyncOperation<winrt.HString> /* GenericTypeInstSig */;
     overload function IsProtectedUnderLock(value: Bool): Void;
-    overload function Icon(value: cxx.ConstRef<winrt.windows.storage.streams.IRandomAccessStreamReference>): Void;
+    overload function Icon(value: ConstRef<winrt.windows.storage.streams.IRandomAccessStreamReference>): Void;
 }

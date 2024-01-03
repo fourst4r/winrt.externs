@@ -1,6 +1,9 @@
 package winrt.windows.services.maps.offlinemaps;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Services.Maps.OfflineMaps.h", true)
 @:native("winrt::Windows::Services::Maps::OfflineMaps::IOfflineMapPackageQueryResult")
 extern interface IOfflineMapPackageQueryResult extends winrt.windows.foundation.IInspectable

@@ -1,6 +1,9 @@
 package winrt.windows.media.devices.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Devices.Core.h", true)
 @:native("winrt::Windows::Media::Devices::Core::FrameExposureCapabilities")
 extern class FrameExposureCapabilities

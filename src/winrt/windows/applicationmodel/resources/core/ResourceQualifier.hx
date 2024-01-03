@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.resources.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Resources.Core.h", true)
 @:native("winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier")
 extern class ResourceQualifier
@@ -10,5 +13,5 @@ extern class ResourceQualifier
     overload function QualifierValue(): winrt.HString;
     overload function IsDefault(): Bool;
     overload function IsMatch(): Bool;
-    overload function Score(): cxx.num.Float64;
+    overload function Score(): Float64;
 }

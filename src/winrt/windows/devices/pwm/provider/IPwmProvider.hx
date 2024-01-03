@@ -1,6 +1,9 @@
 package winrt.windows.devices.pwm.provider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Pwm.Provider.h", true)
 @:native("winrt::Windows::Devices::Pwm::Provider::IPwmProvider")
 extern interface IPwmProvider extends winrt.windows.foundation.IInspectable

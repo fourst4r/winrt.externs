@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.input;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Input.h", true)
 @:native("winrt::Microsoft::UI::Input::PointerPointProperties")
 extern class PointerPointProperties
@@ -19,12 +22,12 @@ extern class PointerPointProperties
     overload function IsRightButtonPressed(): Bool;
     overload function IsXButton1Pressed(): Bool;
     overload function IsXButton2Pressed(): Bool;
-    overload function MouseWheelDelta(): cxx.num.Int32;
-    overload function Orientation(): cxx.num.Float32;
+    overload function MouseWheelDelta(): Int32;
+    overload function Orientation(): Float32;
     overload function PointerUpdateKind(): winrt.microsoft.ui.input.PointerUpdateKind;
-    overload function Pressure(): cxx.num.Float32;
+    overload function Pressure(): Float32;
     overload function TouchConfidence(): Bool;
-    overload function Twist(): cxx.num.Float32;
-    overload function XTilt(): cxx.num.Float32;
-    overload function YTilt(): cxx.num.Float32;
+    overload function Twist(): Float32;
+    overload function XTilt(): Float32;
+    overload function YTilt(): Float32;
 }

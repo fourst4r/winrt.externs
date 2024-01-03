@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml;
 
 @:include("winrt/Microsoft.UI.Xaml.h", true)
 @:native("winrt::Microsoft::UI::Xaml::FontEastAsianLanguage")
-extern enum abstract FontEastAsianLanguage(cxx.num.Int32)
+extern enum abstract FontEastAsianLanguage(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::FontEastAsianLanguage::Normal") final Normal;
     @:native("winrt::Microsoft::UI::Xaml::FontEastAsianLanguage::HojoKanji") final HojoKanji;

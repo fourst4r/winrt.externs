@@ -1,6 +1,9 @@
 package winrt.windows.globalization.collation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Globalization.Collation.h", true)
 @:native("winrt::Windows::Globalization::Collation::CharacterGroupings")
 extern class CharacterGroupings
@@ -10,11 +13,11 @@ extern class CharacterGroupings
 {
     function new();
     @:native("winrt::Windows::Globalization::Collation::CharacterGroupings")
-    /* explicit */ static overload function make(language: cxx.ConstRef<winrt.HString>): winrt.windows.globalization.collation.CharacterGroupings;
-    function Lookup(text: cxx.ConstRef<winrt.HString>): winrt.HString;
-    function GetAt(index: cxx.num.UInt32): winrt.windows.globalization.collation.CharacterGrouping;
-    overload function Size(): cxx.num.UInt32;
-    function IndexOf(value: cxx.ConstRef<winrt.windows.globalization.collation.CharacterGrouping>, index: cxx.Ref<cxx.num.UInt32>): Bool;
-    function GetMany(startIndex: cxx.num.UInt32, items: winrt.ArrayView<winrt.windows.globalization.collation.CharacterGrouping>): cxx.num.UInt32;
+    /* explicit */ static overload function make(language: ConstRef<winrt.HString>): winrt.windows.globalization.collation.CharacterGroupings;
+    function Lookup(text: ConstRef<winrt.HString>): winrt.HString;
+    function GetAt(index: UInt32): winrt.windows.globalization.collation.CharacterGrouping;
+    overload function Size(): UInt32;
+    function IndexOf(value: ConstRef<winrt.windows.globalization.collation.CharacterGrouping>, index: Ref<UInt32>): Bool;
+    function GetMany(startIndex: UInt32, items: winrt.ArrayView<winrt.windows.globalization.collation.CharacterGrouping>): UInt32;
     function First(): winrt.windows.foundation.collections.IIterator<winrt.windows.globalization.collation.CharacterGrouping> /* GenericTypeInstSig */;
 }

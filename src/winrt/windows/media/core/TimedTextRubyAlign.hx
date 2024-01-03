@@ -2,7 +2,7 @@ package winrt.windows.media.core;
 
 @:include("winrt/Windows.Media.Core.h", true)
 @:native("winrt::Windows::Media::Core::TimedTextRubyAlign")
-extern enum abstract TimedTextRubyAlign(cxx.num.Int32)
+extern enum abstract TimedTextRubyAlign(Int32)
 {
     @:native("winrt::Windows::Media::Core::TimedTextRubyAlign::Center") final Center;
     @:native("winrt::Windows::Media::Core::TimedTextRubyAlign::Start") final Start;

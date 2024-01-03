@@ -1,6 +1,9 @@
 package winrt.windows.devices.gpio.provider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Gpio.Provider.h", true)
 @:native("winrt::Windows::Devices::Gpio::Provider::IGpioProvider")
 extern interface IGpioProvider extends winrt.windows.foundation.IInspectable

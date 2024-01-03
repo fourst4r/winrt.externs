@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.chat;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Chat.h", true)
 @:native("winrt::Windows::ApplicationModel::Chat::ChatQueryOptions")
 extern class ChatQueryOptions
@@ -8,5 +11,5 @@ extern class ChatQueryOptions
 {
     function new();
     overload function SearchString(): winrt.HString;
-    overload function SearchString(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function SearchString(value: ConstRef<winrt.HString>): Void;
 }

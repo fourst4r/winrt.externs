@@ -2,7 +2,7 @@ package winrt.windows.media.playback;
 
 @:include("winrt/Windows.Media.Playback.h", true)
 @:native("winrt::Windows::Media::Playback::MediaPlaybackSessionVideoConstrictionReason")
-extern enum abstract MediaPlaybackSessionVideoConstrictionReason(cxx.num.Int32)
+extern enum abstract MediaPlaybackSessionVideoConstrictionReason(Int32)
 {
     @:native("winrt::Windows::Media::Playback::MediaPlaybackSessionVideoConstrictionReason::None") final None;
     @:native("winrt::Windows::Media::Playback::MediaPlaybackSessionVideoConstrictionReason::VirtualMachine") final VirtualMachine;

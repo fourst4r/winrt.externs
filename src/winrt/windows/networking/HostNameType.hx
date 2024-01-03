@@ -2,7 +2,7 @@ package winrt.windows.networking;
 
 @:include("winrt/Windows.Networking.h", true)
 @:native("winrt::Windows::Networking::HostNameType")
-extern enum abstract HostNameType(cxx.num.Int32)
+extern enum abstract HostNameType(Int32)
 {
     @:native("winrt::Windows::Networking::HostNameType::DomainName") final DomainName;
     @:native("winrt::Windows::Networking::HostNameType::Ipv4") final Ipv4;

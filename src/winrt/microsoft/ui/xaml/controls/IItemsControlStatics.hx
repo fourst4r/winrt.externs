@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::IItemsControlStatics")
 extern interface IItemsControlStatics extends winrt.windows.foundation.IInspectable
@@ -15,6 +18,6 @@ extern interface IItemsControlStatics extends winrt.windows.foundation.IInspecta
     overload function ItemContainerTransitionsProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function GroupStyleSelectorProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function IsGroupingProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetItemsOwner(element: cxx.ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.controls.ItemsControl;
-    function ItemsControlFromItemContainer(container: cxx.ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.controls.ItemsControl;
+    function GetItemsOwner(element: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.controls.ItemsControl;
+    function ItemsControlFromItemContainer(container: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.controls.ItemsControl;
 }

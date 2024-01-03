@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.media.animation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Media.Animation.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo")
 extern class EntranceNavigationTransitionInfo
@@ -9,9 +12,9 @@ extern class EntranceNavigationTransitionInfo
 {
     function new();
     overload function IsTargetElementProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetIsTargetElement(element: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>): Bool;
-    function SetIsTargetElement(element: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>, value: Bool): Void;
+    function GetIsTargetElement(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Bool;
+    function SetIsTargetElement(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>, value: Bool): Void;
     static overload function IsTargetElementProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    static function GetIsTargetElement(element: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>): Bool;
-    static function SetIsTargetElement(element: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>, value: Bool): Void;
+    static function GetIsTargetElement(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Bool;
+    static function SetIsTargetElement(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>, value: Bool): Void;
 }

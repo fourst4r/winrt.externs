@@ -1,6 +1,9 @@
 package winrt.windows.devices.geolocation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Geolocation.h", true)
 @:native("winrt::Windows::Devices::Geolocation::IVenueData")
 extern interface IVenueData extends winrt.windows.foundation.IInspectable

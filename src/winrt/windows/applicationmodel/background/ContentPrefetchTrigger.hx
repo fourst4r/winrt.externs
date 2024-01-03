@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.background;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Background.h", true)
 @:native("winrt::Windows::ApplicationModel::Background::ContentPrefetchTrigger")
 extern class ContentPrefetchTrigger
@@ -9,6 +12,6 @@ extern class ContentPrefetchTrigger
 {
     function new();
     @:native("winrt::Windows::ApplicationModel::Background::ContentPrefetchTrigger")
-    /* explicit */ static overload function make(waitInterval: cxx.ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.applicationmodel.background.ContentPrefetchTrigger;
+    /* explicit */ static overload function make(waitInterval: ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.applicationmodel.background.ContentPrefetchTrigger;
     overload function WaitInterval(): winrt.windows.foundation.TimeSpan;
 }

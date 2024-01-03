@@ -1,6 +1,9 @@
 package winrt.windows.ui.composition.scenes;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.Scenes.h", true)
 @:native("winrt::Windows::UI::Composition::Scenes::SceneNode")
 extern class SceneNode
@@ -11,7 +14,7 @@ extern class SceneNode
     overload function Components(): winrt.windows.ui.composition.scenes.SceneComponentCollection;
     overload function Parent(): winrt.windows.ui.composition.scenes.SceneNode;
     overload function Transform(): winrt.windows.ui.composition.scenes.SceneModelTransform;
-    function FindFirstComponentOfType(value: cxx.ConstRef<winrt.windows.ui.composition.scenes.SceneComponentType>): winrt.windows.ui.composition.scenes.SceneComponent;
-    function Create(compositor: cxx.ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneNode;
-    static function Create(compositor: cxx.ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneNode;
+    function FindFirstComponentOfType(value: ConstRef<winrt.windows.ui.composition.scenes.SceneComponentType>): winrt.windows.ui.composition.scenes.SceneComponent;
+    function Create(compositor: ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneNode;
+    static function Create(compositor: ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneNode;
 }

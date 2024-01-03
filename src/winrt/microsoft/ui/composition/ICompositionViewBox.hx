@@ -1,18 +1,21 @@
 package winrt.microsoft.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Composition.h", true)
 @:native("winrt::Microsoft::UI::Composition::ICompositionViewBox")
 extern interface ICompositionViewBox extends winrt.windows.foundation.IInspectable
 {
-    overload function HorizontalAlignmentRatio(): cxx.num.Float32;
-    overload function HorizontalAlignmentRatio(value: cxx.num.Float32): Void;
+    overload function HorizontalAlignmentRatio(): Float32;
+    overload function HorizontalAlignmentRatio(value: Float32): Void;
     overload function Offset(): winrt.windows.foundation.numerics.Vector2;
-    overload function Offset(value: cxx.ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function Offset(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
     overload function Size(): winrt.windows.foundation.numerics.Vector2;
-    overload function Size(value: cxx.ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function Size(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
     overload function Stretch(): winrt.microsoft.ui.composition.CompositionStretch;
-    overload function Stretch(value: cxx.ConstRef<winrt.microsoft.ui.composition.CompositionStretch>): Void;
-    overload function VerticalAlignmentRatio(): cxx.num.Float32;
-    overload function VerticalAlignmentRatio(value: cxx.num.Float32): Void;
+    overload function Stretch(value: ConstRef<winrt.microsoft.ui.composition.CompositionStretch>): Void;
+    overload function VerticalAlignmentRatio(): Float32;
+    overload function VerticalAlignmentRatio(value: Float32): Void;
 }

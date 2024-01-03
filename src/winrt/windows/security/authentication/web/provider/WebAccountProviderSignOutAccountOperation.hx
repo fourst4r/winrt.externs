@@ -1,6 +1,9 @@
 package winrt.windows.security.authentication.web.provider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Security.Authentication.Web.Provider.h", true)
 @:native("winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderSignOutAccountOperation")
 extern class WebAccountProviderSignOutAccountOperation
@@ -13,5 +16,5 @@ extern class WebAccountProviderSignOutAccountOperation
     overload function ClientId(): winrt.HString;
     overload function Kind(): winrt.windows.security.authentication.web.provider.WebAccountProviderOperationKind;
     function ReportCompleted(): Void;
-    function ReportError(value: cxx.ConstRef<winrt.windows.security.authentication.web.core.WebProviderError>): Void;
+    function ReportError(value: ConstRef<winrt.windows.security.authentication.web.core.WebProviderError>): Void;
 }

@@ -1,11 +1,14 @@
 package winrt.windows.devices.adc;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Adc.h", true)
 @:native("winrt::Windows::Devices::Adc::IAdcChannel")
 extern interface IAdcChannel extends winrt.windows.foundation.IInspectable
 {
     overload function Controller(): winrt.windows.devices.adc.AdcController;
-    function ReadValue(): cxx.num.Int32;
-    function ReadRatio(): cxx.num.Float64;
+    function ReadValue(): Int32;
+    function ReadRatio(): Float64;
 }

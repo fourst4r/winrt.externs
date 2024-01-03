@@ -2,7 +2,7 @@ package winrt.windows.media;
 
 @:include("winrt/Windows.Media.h", true)
 @:native("winrt::Windows::Media::MediaPlaybackType")
-extern enum abstract MediaPlaybackType(cxx.num.Int32)
+extern enum abstract MediaPlaybackType(Int32)
 {
     @:native("winrt::Windows::Media::MediaPlaybackType::Unknown") final Unknown;
     @:native("winrt::Windows::Media::MediaPlaybackType::Music") final Music;

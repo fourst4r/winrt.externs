@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.input;
 
 @:include("winrt/Microsoft.UI.Xaml.Input.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Input::InputScopeNameValue")
-extern enum abstract InputScopeNameValue(cxx.num.Int32)
+extern enum abstract InputScopeNameValue(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Input::InputScopeNameValue::Default") final Default;
     @:native("winrt::Microsoft::UI::Xaml::Input::InputScopeNameValue::Url") final Url;

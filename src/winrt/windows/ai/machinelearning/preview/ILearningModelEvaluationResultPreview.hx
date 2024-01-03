@@ -1,6 +1,9 @@
 package winrt.windows.ai.machinelearning.preview;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.AI.MachineLearning.Preview.h", true)
 @:native("winrt::Windows::AI::MachineLearning::Preview::ILearningModelEvaluationResultPreview")
 extern interface ILearningModelEvaluationResultPreview extends winrt.windows.foundation.IInspectable

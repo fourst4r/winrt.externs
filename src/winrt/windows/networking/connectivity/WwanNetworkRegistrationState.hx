@@ -2,7 +2,7 @@ package winrt.windows.networking.connectivity;
 
 @:include("winrt/Windows.Networking.Connectivity.h", true)
 @:native("winrt::Windows::Networking::Connectivity::WwanNetworkRegistrationState")
-extern enum abstract WwanNetworkRegistrationState(cxx.num.Int32)
+extern enum abstract WwanNetworkRegistrationState(Int32)
 {
     @:native("winrt::Windows::Networking::Connectivity::WwanNetworkRegistrationState::None") final None;
     @:native("winrt::Windows::Networking::Connectivity::WwanNetworkRegistrationState::Deregistered") final Deregistered;

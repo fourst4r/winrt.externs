@@ -4,4 +4,5 @@ package winrt.windows.foundation;
 @:native("winrt::Windows::Foundation::IInspectable")
 extern interface IInspectable extends winrt.windows.foundation.IUnknown 
 {
+
 }

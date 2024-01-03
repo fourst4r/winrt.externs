@@ -2,7 +2,7 @@ package winrt.windows.ui.input.preview.injection;
 
 @:include("winrt/Windows.UI.Input.Preview.Injection.h", true)
 @:native("winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions")
-extern enum abstract InjectedInputPointerOptions(cxx.num.UInt32)
+extern enum abstract InjectedInputPointerOptions(UInt32)
 {
     @:native("winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions::None") final None;
     @:native("winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions::New") final New;

@@ -1,6 +1,9 @@
 package winrt.windows.media.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Core.h", true)
 @:native("winrt::Windows::Media::Core::IMediaStreamSample2")
 extern interface IMediaStreamSample2 extends winrt.windows.foundation.IInspectable

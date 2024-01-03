@@ -2,7 +2,7 @@ package winrt.windows.ui.input.preview.injection;
 
 @:include("winrt/Windows.UI.Input.Preview.Injection.h", true)
 @:native("winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions")
-extern enum abstract InjectedInputMouseOptions(cxx.num.UInt32)
+extern enum abstract InjectedInputMouseOptions(UInt32)
 {
     @:native("winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions::None") final None;
     @:native("winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions::Move") final Move;

@@ -4,4 +4,5 @@ package winrt.windows.foundation;
 @:native("winrt::Windows::Foundation::IUnknown")
 extern interface IUnknown
 {
+
 }

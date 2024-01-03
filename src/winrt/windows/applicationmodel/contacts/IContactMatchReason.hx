@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.contacts;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Contacts.h", true)
 @:native("winrt::Windows::ApplicationModel::Contacts::IContactMatchReason")
 extern interface IContactMatchReason extends winrt.windows.foundation.IInspectable

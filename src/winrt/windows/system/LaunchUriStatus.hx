@@ -2,7 +2,7 @@ package winrt.windows.system;
 
 @:include("winrt/Windows.System.h", true)
 @:native("winrt::Windows::System::LaunchUriStatus")
-extern enum abstract LaunchUriStatus(cxx.num.Int32)
+extern enum abstract LaunchUriStatus(Int32)
 {
     @:native("winrt::Windows::System::LaunchUriStatus::Success") final Success;
     @:native("winrt::Windows::System::LaunchUriStatus::AppUnavailable") final AppUnavailable;

@@ -5,5 +5,5 @@ package winrt.windows.system.profile;
 extern class SystemIdentification
 {
     static function GetSystemIdForPublisher(): winrt.windows.system.profile.SystemIdentificationInfo;
-    static function GetSystemIdForUser(user: cxx.ConstRef<winrt.windows.system.User>): winrt.windows.system.profile.SystemIdentificationInfo;
+    static function GetSystemIdForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.system.profile.SystemIdentificationInfo;
 }

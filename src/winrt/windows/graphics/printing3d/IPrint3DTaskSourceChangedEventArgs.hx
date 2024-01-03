@@ -1,6 +1,9 @@
 package winrt.windows.graphics.printing3d;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Graphics.Printing3D.h", true)
 @:native("winrt::Windows::Graphics::Printing3D::IPrint3DTaskSourceChangedEventArgs")
 extern interface IPrint3DTaskSourceChangedEventArgs extends winrt.windows.foundation.IInspectable

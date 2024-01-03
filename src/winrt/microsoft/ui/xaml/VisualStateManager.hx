@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.h", true)
 @:native("winrt::Microsoft::UI::Xaml::VisualStateManager")
 extern class VisualStateManager
@@ -10,17 +13,17 @@ extern class VisualStateManager
     implements winrt.microsoft.ui.xaml.IVisualStateManagerOverrides
 {
     function new();
-    function RaiseCurrentStateChanging(stateGroup: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualStateGroup>, oldState: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualState>, newState: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualState>, control: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.Control>): Void;
-    function RaiseCurrentStateChanged(stateGroup: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualStateGroup>, oldState: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualState>, newState: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualState>, control: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.Control>): Void;
-    function GoToStateCore(control: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.Control>, templateRoot: cxx.ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>, stateName: cxx.ConstRef<winrt.HString>, group: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualStateGroup>, state: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualState>, useTransitions: Bool): Bool;
-    function GetVisualStateGroups(obj: cxx.ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.xaml.VisualStateGroup> /* GenericTypeInstSig */;
+    function RaiseCurrentStateChanging(stateGroup: ConstRef<winrt.microsoft.ui.xaml.VisualStateGroup>, oldState: ConstRef<winrt.microsoft.ui.xaml.VisualState>, newState: ConstRef<winrt.microsoft.ui.xaml.VisualState>, control: ConstRef<winrt.microsoft.ui.xaml.controls.Control>): Void;
+    function RaiseCurrentStateChanged(stateGroup: ConstRef<winrt.microsoft.ui.xaml.VisualStateGroup>, oldState: ConstRef<winrt.microsoft.ui.xaml.VisualState>, newState: ConstRef<winrt.microsoft.ui.xaml.VisualState>, control: ConstRef<winrt.microsoft.ui.xaml.controls.Control>): Void;
+    function GoToStateCore(control: ConstRef<winrt.microsoft.ui.xaml.controls.Control>, templateRoot: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>, stateName: ConstRef<winrt.HString>, group: ConstRef<winrt.microsoft.ui.xaml.VisualStateGroup>, state: ConstRef<winrt.microsoft.ui.xaml.VisualState>, useTransitions: Bool): Bool;
+    function GetVisualStateGroups(obj: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.xaml.VisualStateGroup> /* GenericTypeInstSig */;
     overload function CustomVisualStateManagerProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetCustomVisualStateManager(obj: cxx.ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.microsoft.ui.xaml.VisualStateManager;
-    function SetCustomVisualStateManager(obj: cxx.ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>, value: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualStateManager>): Void;
-    function GoToState(control: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.Control>, stateName: cxx.ConstRef<winrt.HString>, useTransitions: Bool): Bool;
-    static function GetVisualStateGroups(obj: cxx.ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.xaml.VisualStateGroup> /* GenericTypeInstSig */;
+    function GetCustomVisualStateManager(obj: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.microsoft.ui.xaml.VisualStateManager;
+    function SetCustomVisualStateManager(obj: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>, value: ConstRef<winrt.microsoft.ui.xaml.VisualStateManager>): Void;
+    function GoToState(control: ConstRef<winrt.microsoft.ui.xaml.controls.Control>, stateName: ConstRef<winrt.HString>, useTransitions: Bool): Bool;
+    static function GetVisualStateGroups(obj: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.xaml.VisualStateGroup> /* GenericTypeInstSig */;
     static overload function CustomVisualStateManagerProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    static function GetCustomVisualStateManager(obj: cxx.ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.microsoft.ui.xaml.VisualStateManager;
-    static function SetCustomVisualStateManager(obj: cxx.ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>, value: cxx.ConstRef<winrt.microsoft.ui.xaml.VisualStateManager>): Void;
-    static function GoToState(control: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.Control>, stateName: cxx.ConstRef<winrt.HString>, useTransitions: Bool): Bool;
+    static function GetCustomVisualStateManager(obj: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.microsoft.ui.xaml.VisualStateManager;
+    static function SetCustomVisualStateManager(obj: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>, value: ConstRef<winrt.microsoft.ui.xaml.VisualStateManager>): Void;
+    static function GoToState(control: ConstRef<winrt.microsoft.ui.xaml.controls.Control>, stateName: ConstRef<winrt.HString>, useTransitions: Bool): Bool;
 }

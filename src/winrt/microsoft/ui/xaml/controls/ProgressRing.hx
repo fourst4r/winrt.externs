@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::ProgressRing")
 extern class ProgressRing
@@ -13,12 +16,12 @@ extern class ProgressRing
     overload function IsIndeterminate(): Bool;
     overload function IsIndeterminate(value: Bool): Void;
     overload function TemplateSettings(): winrt.microsoft.ui.xaml.controls.ProgressRingTemplateSettings;
-    overload function Value(): cxx.num.Float64;
-    overload function Value(value: cxx.num.Float64): Void;
-    overload function Minimum(): cxx.num.Float64;
-    overload function Minimum(value: cxx.num.Float64): Void;
-    overload function Maximum(): cxx.num.Float64;
-    overload function Maximum(value: cxx.num.Float64): Void;
+    overload function Value(): Float64;
+    overload function Value(value: Float64): Void;
+    overload function Minimum(): Float64;
+    overload function Minimum(value: Float64): Void;
+    overload function Maximum(): Float64;
+    overload function Maximum(value: Float64): Void;
     overload function IsActiveProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function IsIndeterminateProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function ValueProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

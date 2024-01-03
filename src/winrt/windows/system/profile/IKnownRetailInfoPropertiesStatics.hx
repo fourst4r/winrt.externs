@@ -1,6 +1,9 @@
 package winrt.windows.system.profile;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.System.Profile.h", true)
 @:native("winrt::Windows::System::Profile::IKnownRetailInfoPropertiesStatics")
 extern interface IKnownRetailInfoPropertiesStatics extends winrt.windows.foundation.IInspectable

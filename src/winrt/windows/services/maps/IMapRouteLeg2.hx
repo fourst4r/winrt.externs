@@ -1,6 +1,9 @@
 package winrt.windows.services.maps;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Services.Maps.h", true)
 @:native("winrt::Windows::Services::Maps::IMapRouteLeg2")
 extern interface IMapRouteLeg2 extends winrt.windows.foundation.IInspectable

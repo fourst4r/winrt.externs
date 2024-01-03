@@ -1,6 +1,9 @@
 package winrt.windows.media.capture.frames;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Capture.Frames.h", true)
 @:native("winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat")
 extern class VideoMediaFrameFormat
@@ -8,6 +11,6 @@ extern class VideoMediaFrameFormat
 {
     overload function MediaFrameFormat(): winrt.windows.media.capture.frames.MediaFrameFormat;
     overload function DepthFormat(): winrt.windows.media.capture.frames.DepthMediaFrameFormat;
-    overload function Width(): cxx.num.UInt32;
-    overload function Height(): cxx.num.UInt32;
+    overload function Width(): UInt32;
+    overload function Height(): UInt32;
 }

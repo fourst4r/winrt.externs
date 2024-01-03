@@ -4,8 +4,8 @@ package winrt.windows.foundation.numerics;
 @:native("winrt::Windows::Foundation::Numerics::float2")
 extern class Vector2
 {
-    var x:cxx.num.Float32;
-    var y:cxx.num.Float32;
+    var x:Float32;
+    var y:Float32;
     
     function new();
 }

@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.appextensions;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.AppExtensions.h", true)
 @:native("winrt::Windows::ApplicationModel::AppExtensions::IAppExtension")
 extern interface IAppExtension extends winrt.windows.foundation.IInspectable

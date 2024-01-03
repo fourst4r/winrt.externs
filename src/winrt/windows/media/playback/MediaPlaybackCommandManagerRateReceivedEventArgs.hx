@@ -1,6 +1,9 @@
 package winrt.windows.media.playback;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Playback.h", true)
 @:native("winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRateReceivedEventArgs")
 extern class MediaPlaybackCommandManagerRateReceivedEventArgs
@@ -8,6 +11,6 @@ extern class MediaPlaybackCommandManagerRateReceivedEventArgs
 {
     overload function Handled(): Bool;
     overload function Handled(value: Bool): Void;
-    overload function PlaybackRate(): cxx.num.Float64;
+    overload function PlaybackRate(): Float64;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

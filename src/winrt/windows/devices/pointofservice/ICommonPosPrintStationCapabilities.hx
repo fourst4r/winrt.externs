@@ -1,6 +1,9 @@
 package winrt.windows.devices.pointofservice;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.PointOfService.h", true)
 @:native("winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities")
 extern interface ICommonPosPrintStationCapabilities extends winrt.windows.foundation.IInspectable
@@ -17,5 +20,5 @@ extern interface ICommonPosPrintStationCapabilities extends winrt.windows.founda
     overload function IsDoubleHighDoubleWidePrintSupported(): Bool;
     overload function IsPaperEmptySensorSupported(): Bool;
     overload function IsPaperNearEndSensorSupported(): Bool;
-    overload function SupportedCharactersPerLine(): winrt.windows.foundation.collections.IVectorView<cxx.num.UInt32> /* GenericTypeInstSig */;
+    overload function SupportedCharactersPerLine(): winrt.windows.foundation.collections.IVectorView<UInt32> /* GenericTypeInstSig */;
 }

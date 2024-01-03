@@ -2,7 +2,7 @@ package winrt.windows.media.devices;
 
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::AdvancedPhotoMode")
-extern enum abstract AdvancedPhotoMode(cxx.num.Int32)
+extern enum abstract AdvancedPhotoMode(Int32)
 {
     @:native("winrt::Windows::Media::Devices::AdvancedPhotoMode::Auto") final Auto;
     @:native("winrt::Windows::Media::Devices::AdvancedPhotoMode::Standard") final Standard;

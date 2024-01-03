@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.controls.maps;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.Maps.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapElement")
 extern class MapElement
@@ -11,18 +14,18 @@ extern class MapElement
     implements winrt.windows.ui.xaml.controls.maps.IMapElement4
 {
     function new();
-    overload function ZIndex(): cxx.num.Int32;
-    overload function ZIndex(value: cxx.num.Int32): Void;
+    overload function ZIndex(): Int32;
+    overload function ZIndex(value: Int32): Void;
     overload function Visible(): Bool;
     overload function Visible(value: Bool): Void;
-    overload function MapTabIndex(): cxx.num.Int32;
-    overload function MapTabIndex(value: cxx.num.Int32): Void;
+    overload function MapTabIndex(): Int32;
+    overload function MapTabIndex(value: Int32): Void;
     overload function MapStyleSheetEntry(): winrt.HString;
-    overload function MapStyleSheetEntry(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function MapStyleSheetEntry(value: ConstRef<winrt.HString>): Void;
     overload function MapStyleSheetEntryState(): winrt.HString;
-    overload function MapStyleSheetEntryState(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function MapStyleSheetEntryState(value: ConstRef<winrt.HString>): Void;
     overload function Tag(): winrt.windows.foundation.IInspectable;
-    overload function Tag(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Tag(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function IsEnabled(): Bool;
     overload function IsEnabled(value: Bool): Void;
     overload function IsEnabledProperty(): winrt.windows.ui.xaml.DependencyProperty;

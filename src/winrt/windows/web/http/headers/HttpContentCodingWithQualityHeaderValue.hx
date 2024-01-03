@@ -1,20 +1,23 @@
 package winrt.windows.web.http.headers;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Web.Http.Headers.h", true)
 @:native("winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue")
 extern class HttpContentCodingWithQualityHeaderValue
     implements winrt.windows.web.http.headers.IHttpContentCodingWithQualityHeaderValue
     implements winrt.windows.foundation.IStringable
 {
-    /* explicit */ function new(contentCoding: cxx.ConstRef<winrt.HString>);
+    /* explicit */ function new(contentCoding: ConstRef<winrt.HString>);
     @:native("winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue")
-    static overload function make(contentCoding: cxx.ConstRef<winrt.HString>, quality: cxx.num.Float64): winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValue;
+    static overload function make(contentCoding: ConstRef<winrt.HString>, quality: Float64): winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValue;
     overload function ContentCoding(): winrt.HString;
-    overload function Quality(): winrt.windows.foundation.IReference<cxx.num.Float64> /* GenericTypeInstSig */;
+    overload function Quality(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
     function ToString(): winrt.HString;
-    function Parse(input: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValue;
-    function TryParse(input: cxx.ConstRef<winrt.HString>, contentCodingWithQualityHeaderValue: cxx.Ref<winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValue>): Bool;
-    static function Parse(input: cxx.ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValue;
-    static function TryParse(input: cxx.ConstRef<winrt.HString>, contentCodingWithQualityHeaderValue: cxx.Ref<winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValue>): Bool;
+    function Parse(input: ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValue;
+    function TryParse(input: ConstRef<winrt.HString>, contentCodingWithQualityHeaderValue: Ref<winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValue>): Bool;
+    static function Parse(input: ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValue;
+    static function TryParse(input: ConstRef<winrt.HString>, contentCodingWithQualityHeaderValue: Ref<winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValue>): Bool;
 }

@@ -4,6 +4,6 @@ package winrt.windows.security.isolation;
 @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistration")
 extern class IsolatedWindowsEnvironmentOwnerRegistration
 {
-    static function Register(ownerName: cxx.ConstRef<winrt.HString>, ownerRegistrationData: cxx.ConstRef<winrt.windows.security.isolation.IsolatedWindowsEnvironmentOwnerRegistrationData>): winrt.windows.security.isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult;
-    static function Unregister(ownerName: cxx.ConstRef<winrt.HString>): Void;
+    static function Register(ownerName: ConstRef<winrt.HString>, ownerRegistrationData: ConstRef<winrt.windows.security.isolation.IsolatedWindowsEnvironmentOwnerRegistrationData>): winrt.windows.security.isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult;
+    static function Unregister(ownerName: ConstRef<winrt.HString>): Void;
 }

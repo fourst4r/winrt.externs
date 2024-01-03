@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.media.imaging;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Media.Imaging.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Media::Imaging::SoftwareBitmapSource")
 extern class SoftwareBitmapSource
@@ -9,6 +12,6 @@ extern class SoftwareBitmapSource
     implements winrt.windows.foundation.IClosable
 {
     function new();
-    function SetBitmapAsync(softwareBitmap: cxx.ConstRef<winrt.windows.graphics.imaging.SoftwareBitmap>): winrt.windows.foundation.IAsyncAction;
+    function SetBitmapAsync(softwareBitmap: ConstRef<winrt.windows.graphics.imaging.SoftwareBitmap>): winrt.windows.foundation.IAsyncAction;
     function Close(): Void;
 }

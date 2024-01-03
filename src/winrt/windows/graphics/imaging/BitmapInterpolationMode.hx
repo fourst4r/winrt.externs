@@ -2,7 +2,7 @@ package winrt.windows.graphics.imaging;
 
 @:include("winrt/Windows.Graphics.Imaging.h", true)
 @:native("winrt::Windows::Graphics::Imaging::BitmapInterpolationMode")
-extern enum abstract BitmapInterpolationMode(cxx.num.Int32)
+extern enum abstract BitmapInterpolationMode(Int32)
 {
     @:native("winrt::Windows::Graphics::Imaging::BitmapInterpolationMode::NearestNeighbor") final NearestNeighbor;
     @:native("winrt::Windows::Graphics::Imaging::BitmapInterpolationMode::Linear") final Linear;

@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.h", true)
 @:native("winrt::Microsoft::UI::Xaml::IDebugSettings")
 extern interface IDebugSettings extends winrt.windows.foundation.IInspectable
@@ -13,6 +16,6 @@ extern interface IDebugSettings extends winrt.windows.foundation.IInspectable
     overload function IsTextPerformanceVisualizationEnabled(value: Bool): Void;
     overload function FailFastOnErrors(): Bool;
     overload function FailFastOnErrors(value: Bool): Void;
-    overload function BindingFailed(handler: cxx.ConstRef<winrt.microsoft.ui.xaml.BindingFailedEventHandler>): winrt.EventToken;
-    @:noExcept overload function BindingFailed(token: cxx.ConstRef<winrt.EventToken>): Void;
+    overload function BindingFailed(handler: ConstRef<winrt.microsoft.ui.xaml.BindingFailedEventHandler>): winrt.EventToken;
+    @:noExcept overload function BindingFailed(token: ConstRef<winrt.EventToken>): Void;
 }

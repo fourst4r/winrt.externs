@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.controls;
 
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::ScrollBarVisibility")
-extern enum abstract ScrollBarVisibility(cxx.num.Int32)
+extern enum abstract ScrollBarVisibility(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Controls::ScrollBarVisibility::Disabled") final Disabled;
     @:native("winrt::Microsoft::UI::Xaml::Controls::ScrollBarVisibility::Auto") final Auto;

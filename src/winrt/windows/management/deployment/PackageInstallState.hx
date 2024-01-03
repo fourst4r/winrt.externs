@@ -2,7 +2,7 @@ package winrt.windows.management.deployment;
 
 @:include("winrt/Windows.Management.Deployment.h", true)
 @:native("winrt::Windows::Management::Deployment::PackageInstallState")
-extern enum abstract PackageInstallState(cxx.num.Int32)
+extern enum abstract PackageInstallState(Int32)
 {
     @:native("winrt::Windows::Management::Deployment::PackageInstallState::NotInstalled") final NotInstalled;
     @:native("winrt::Windows::Management::Deployment::PackageInstallState::Staged") final Staged;

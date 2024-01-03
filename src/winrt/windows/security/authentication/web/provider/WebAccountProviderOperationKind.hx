@@ -2,7 +2,7 @@ package winrt.windows.security.authentication.web.provider;
 
 @:include("winrt/Windows.Security.Authentication.Web.Provider.h", true)
 @:native("winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderOperationKind")
-extern enum abstract WebAccountProviderOperationKind(cxx.num.Int32)
+extern enum abstract WebAccountProviderOperationKind(Int32)
 {
     @:native("winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderOperationKind::RequestToken") final RequestToken;
     @:native("winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderOperationKind::GetTokenSilently") final GetTokenSilently;

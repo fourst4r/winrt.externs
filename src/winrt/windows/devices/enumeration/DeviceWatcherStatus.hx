@@ -2,7 +2,7 @@ package winrt.windows.devices.enumeration;
 
 @:include("winrt/Windows.Devices.Enumeration.h", true)
 @:native("winrt::Windows::Devices::Enumeration::DeviceWatcherStatus")
-extern enum abstract DeviceWatcherStatus(cxx.num.Int32)
+extern enum abstract DeviceWatcherStatus(Int32)
 {
     @:native("winrt::Windows::Devices::Enumeration::DeviceWatcherStatus::Created") final Created;
     @:native("winrt::Windows::Devices::Enumeration::DeviceWatcherStatus::Started") final Started;

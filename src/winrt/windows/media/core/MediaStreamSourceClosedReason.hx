@@ -2,7 +2,7 @@ package winrt.windows.media.core;
 
 @:include("winrt/Windows.Media.Core.h", true)
 @:native("winrt::Windows::Media::Core::MediaStreamSourceClosedReason")
-extern enum abstract MediaStreamSourceClosedReason(cxx.num.Int32)
+extern enum abstract MediaStreamSourceClosedReason(Int32)
 {
     @:native("winrt::Windows::Media::Core::MediaStreamSourceClosedReason::Done") final Done;
     @:native("winrt::Windows::Media::Core::MediaStreamSourceClosedReason::UnknownError") final UnknownError;

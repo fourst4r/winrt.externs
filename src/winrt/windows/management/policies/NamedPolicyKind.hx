@@ -2,7 +2,7 @@ package winrt.windows.management.policies;
 
 @:include("winrt/Windows.Management.Policies.h", true)
 @:native("winrt::Windows::Management::Policies::NamedPolicyKind")
-extern enum abstract NamedPolicyKind(cxx.num.Int32)
+extern enum abstract NamedPolicyKind(Int32)
 {
     @:native("winrt::Windows::Management::Policies::NamedPolicyKind::Invalid") final Invalid;
     @:native("winrt::Windows::Management::Policies::NamedPolicyKind::Binary") final Binary;

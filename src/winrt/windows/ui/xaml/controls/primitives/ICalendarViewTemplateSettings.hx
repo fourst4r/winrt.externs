@@ -1,11 +1,14 @@
 package winrt.windows.ui.xaml.controls.primitives;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.Primitives.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::Primitives::ICalendarViewTemplateSettings")
 extern interface ICalendarViewTemplateSettings extends winrt.windows.foundation.IInspectable
 {
-    overload function MinViewWidth(): cxx.num.Float64;
+    overload function MinViewWidth(): Float64;
     overload function HeaderText(): winrt.HString;
     overload function WeekDay1(): winrt.HString;
     overload function WeekDay2(): winrt.HString;
@@ -18,6 +21,6 @@ extern interface ICalendarViewTemplateSettings extends winrt.windows.foundation.
     overload function HasMoreContentBefore(): Bool;
     overload function HasMoreViews(): Bool;
     overload function ClipRect(): winrt.windows.foundation.Rect;
-    overload function CenterX(): cxx.num.Float64;
-    overload function CenterY(): cxx.num.Float64;
+    overload function CenterX(): Float64;
+    overload function CenterY(): Float64;
 }

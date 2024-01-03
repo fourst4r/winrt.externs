@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.core;
 
 @:include("winrt/Windows.ApplicationModel.Core.h", true)
 @:native("winrt::Windows::ApplicationModel::Core::AppRestartFailureReason")
-extern enum abstract AppRestartFailureReason(cxx.num.Int32)
+extern enum abstract AppRestartFailureReason(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Core::AppRestartFailureReason::RestartPending") final RestartPending;
     @:native("winrt::Windows::ApplicationModel::Core::AppRestartFailureReason::NotInForeground") final NotInForeground;

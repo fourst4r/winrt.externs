@@ -1,6 +1,9 @@
 package winrt.windows.media.devices;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::IFlashControl")
 extern interface IFlashControl extends winrt.windows.foundation.IInspectable
@@ -14,6 +17,6 @@ extern interface IFlashControl extends winrt.windows.foundation.IInspectable
     overload function Auto(value: Bool): Void;
     overload function RedEyeReduction(): Bool;
     overload function RedEyeReduction(value: Bool): Void;
-    overload function PowerPercent(): cxx.num.Float32;
-    overload function PowerPercent(value: cxx.num.Float32): Void;
+    overload function PowerPercent(): Float32;
+    overload function PowerPercent(value: Float32): Void;
 }

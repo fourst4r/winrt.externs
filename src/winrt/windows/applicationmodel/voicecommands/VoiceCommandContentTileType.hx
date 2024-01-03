@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.voicecommands;
 
 @:include("winrt/Windows.ApplicationModel.VoiceCommands.h", true)
 @:native("winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTileType")
-extern enum abstract VoiceCommandContentTileType(cxx.num.Int32)
+extern enum abstract VoiceCommandContentTileType(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTileType::TitleOnly") final TitleOnly;
     @:native("winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTileType::TitleWithText") final TitleWithText;

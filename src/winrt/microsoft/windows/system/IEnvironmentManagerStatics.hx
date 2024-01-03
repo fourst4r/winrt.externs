@@ -1,6 +1,9 @@
 package winrt.microsoft.windows.system;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.Windows.System.h", true)
 @:native("winrt::Microsoft::Windows::System::IEnvironmentManagerStatics")
 extern interface IEnvironmentManagerStatics extends winrt.windows.foundation.IInspectable

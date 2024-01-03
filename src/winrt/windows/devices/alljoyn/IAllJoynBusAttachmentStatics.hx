@@ -1,10 +1,13 @@
 package winrt.windows.devices.alljoyn;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.AllJoyn.h", true)
 @:native("winrt::Windows::Devices::AllJoyn::IAllJoynBusAttachmentStatics")
 extern interface IAllJoynBusAttachmentStatics extends winrt.windows.foundation.IInspectable
 {
     function GetDefault(): winrt.windows.devices.alljoyn.AllJoynBusAttachment;
-    function GetWatcher(requiredInterfaces: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.devices.enumeration.DeviceWatcher;
+    function GetWatcher(requiredInterfaces: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.devices.enumeration.DeviceWatcher;
 }

@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.store.preview.installcontrol;
 
 @:include("winrt/Windows.ApplicationModel.Store.Preview.InstallControl.h", true)
 @:native("winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementStatus")
-extern enum abstract GetEntitlementStatus(cxx.num.Int32)
+extern enum abstract GetEntitlementStatus(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementStatus::Succeeded") final Succeeded;
     @:native("winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementStatus::NoStoreAccount") final NoStoreAccount;

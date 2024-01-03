@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.media.animation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Media.Animation.h", true)
 @:native("winrt::Windows::UI::Xaml::Media::Animation::IDoubleAnimationStatics")
 extern interface IDoubleAnimationStatics extends winrt.windows.foundation.IInspectable

@@ -4,5 +4,5 @@ package winrt.microsoft.ui.composition;
 @:native("winrt::Microsoft::UI::Composition::CompositionApiInformation")
 extern class CompositionApiInformation
 {
-    static overload function ApiVersion(): cxx.num.UInt64;
+    static overload function ApiVersion(): UInt64;
 }

@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.navigation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Navigation.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Navigation::NavigationEventArgs")
 extern class NavigationEventArgs
@@ -12,5 +15,5 @@ extern class NavigationEventArgs
     overload function SourcePageType(): winrt.windows.ui.xaml.interop.TypeName;
     overload function NavigationMode(): winrt.microsoft.ui.xaml.navigation.NavigationMode;
     overload function Uri(): winrt.windows.foundation.Uri;
-    overload function Uri(value: cxx.ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function Uri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
 }

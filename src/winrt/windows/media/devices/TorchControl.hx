@@ -1,6 +1,9 @@
 package winrt.windows.media.devices;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::TorchControl")
 extern class TorchControl
@@ -10,6 +13,6 @@ extern class TorchControl
     overload function PowerSupported(): Bool;
     overload function Enabled(): Bool;
     overload function Enabled(value: Bool): Void;
-    overload function PowerPercent(): cxx.num.Float32;
-    overload function PowerPercent(value: cxx.num.Float32): Void;
+    overload function PowerPercent(): Float32;
+    overload function PowerPercent(value: Float32): Void;
 }

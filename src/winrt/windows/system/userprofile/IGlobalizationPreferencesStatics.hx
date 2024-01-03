@@ -1,6 +1,9 @@
 package winrt.windows.system.userprofile;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.System.UserProfile.h", true)
 @:native("winrt::Windows::System::UserProfile::IGlobalizationPreferencesStatics")
 extern interface IGlobalizationPreferencesStatics extends winrt.windows.foundation.IInspectable

@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.store;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Store.h", true)
 @:native("winrt::Windows::ApplicationModel::Store::IProductListingWithMetadata")
 extern interface IProductListingWithMetadata extends winrt.windows.foundation.IInspectable

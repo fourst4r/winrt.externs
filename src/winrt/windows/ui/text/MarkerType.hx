@@ -2,7 +2,7 @@ package winrt.windows.ui.text;
 
 @:include("winrt/Windows.UI.Text.h", true)
 @:native("winrt::Windows::UI::Text::MarkerType")
-extern enum abstract MarkerType(cxx.num.Int32)
+extern enum abstract MarkerType(Int32)
 {
     @:native("winrt::Windows::UI::Text::MarkerType::Undefined") final Undefined;
     @:native("winrt::Windows::UI::Text::MarkerType::None") final None;

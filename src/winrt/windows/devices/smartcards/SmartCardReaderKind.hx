@@ -2,7 +2,7 @@ package winrt.windows.devices.smartcards;
 
 @:include("winrt/Windows.Devices.SmartCards.h", true)
 @:native("winrt::Windows::Devices::SmartCards::SmartCardReaderKind")
-extern enum abstract SmartCardReaderKind(cxx.num.Int32)
+extern enum abstract SmartCardReaderKind(Int32)
 {
     @:native("winrt::Windows::Devices::SmartCards::SmartCardReaderKind::Any") final Any;
     @:native("winrt::Windows::Devices::SmartCards::SmartCardReaderKind::Generic") final Generic;

@@ -1,6 +1,9 @@
 package winrt.windows.media.ocr;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Ocr.h", true)
 @:native("winrt::Windows::Media::Ocr::IOcrWord")
 extern interface IOcrWord extends winrt.windows.foundation.IInspectable

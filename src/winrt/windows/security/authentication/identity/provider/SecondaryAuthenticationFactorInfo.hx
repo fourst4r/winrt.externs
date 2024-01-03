@@ -1,6 +1,9 @@
 package winrt.windows.security.authentication.identity.provider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Security.Authentication.Identity.Provider.h", true)
 @:native("winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorInfo")
 extern class SecondaryAuthenticationFactorInfo
@@ -12,6 +15,6 @@ extern class SecondaryAuthenticationFactorInfo
     overload function DeviceModelNumber(): winrt.HString;
     overload function DeviceConfigurationData(): winrt.windows.storage.streams.IBuffer;
     overload function PresenceMonitoringMode(): winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorDevicePresenceMonitoringMode;
-    function UpdateDevicePresenceAsync(presenceState: cxx.ConstRef<winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorDevicePresence>): winrt.windows.foundation.IAsyncAction;
+    function UpdateDevicePresenceAsync(presenceState: ConstRef<winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorDevicePresence>): winrt.windows.foundation.IAsyncAction;
     overload function IsAuthenticationSupported(): Bool;
 }

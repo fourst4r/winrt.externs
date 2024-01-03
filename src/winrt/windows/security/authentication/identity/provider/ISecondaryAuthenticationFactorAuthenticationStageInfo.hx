@@ -1,6 +1,9 @@
 package winrt.windows.security.authentication.identity.provider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Security.Authentication.Identity.Provider.h", true)
 @:native("winrt::Windows::Security::Authentication::Identity::Provider::ISecondaryAuthenticationFactorAuthenticationStageInfo")
 extern interface ISecondaryAuthenticationFactorAuthenticationStageInfo extends winrt.windows.foundation.IInspectable

@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::Page")
 extern class Page
@@ -11,14 +14,14 @@ extern class Page
     function new();
     overload function Frame(): winrt.windows.ui.xaml.controls.Frame;
     overload function NavigationCacheMode(): winrt.windows.ui.xaml.navigation.NavigationCacheMode;
-    overload function NavigationCacheMode(value: cxx.ConstRef<winrt.windows.ui.xaml.navigation.NavigationCacheMode>): Void;
+    overload function NavigationCacheMode(value: ConstRef<winrt.windows.ui.xaml.navigation.NavigationCacheMode>): Void;
     overload function TopAppBar(): winrt.windows.ui.xaml.controls.AppBar;
-    overload function TopAppBar(value: cxx.ConstRef<winrt.windows.ui.xaml.controls.AppBar>): Void;
+    overload function TopAppBar(value: ConstRef<winrt.windows.ui.xaml.controls.AppBar>): Void;
     overload function BottomAppBar(): winrt.windows.ui.xaml.controls.AppBar;
-    overload function BottomAppBar(value: cxx.ConstRef<winrt.windows.ui.xaml.controls.AppBar>): Void;
-    function OnNavigatedFrom(e: cxx.ConstRef<winrt.windows.ui.xaml.navigation.NavigationEventArgs>): Void;
-    function OnNavigatedTo(e: cxx.ConstRef<winrt.windows.ui.xaml.navigation.NavigationEventArgs>): Void;
-    function OnNavigatingFrom(e: cxx.ConstRef<winrt.windows.ui.xaml.navigation.NavigatingCancelEventArgs>): Void;
+    overload function BottomAppBar(value: ConstRef<winrt.windows.ui.xaml.controls.AppBar>): Void;
+    function OnNavigatedFrom(e: ConstRef<winrt.windows.ui.xaml.navigation.NavigationEventArgs>): Void;
+    function OnNavigatedTo(e: ConstRef<winrt.windows.ui.xaml.navigation.NavigationEventArgs>): Void;
+    function OnNavigatingFrom(e: ConstRef<winrt.windows.ui.xaml.navigation.NavigatingCancelEventArgs>): Void;
     overload function FrameProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function TopAppBarProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function BottomAppBarProperty(): winrt.windows.ui.xaml.DependencyProperty;

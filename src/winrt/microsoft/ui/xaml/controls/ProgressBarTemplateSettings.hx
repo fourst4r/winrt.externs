@@ -1,21 +1,24 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::ProgressBarTemplateSettings")
 extern class ProgressBarTemplateSettings
     extends winrt.microsoft.ui.xaml.DependencyObject
     implements winrt.microsoft.ui.xaml.controls.IProgressBarTemplateSettings
 {
-    overload function ContainerAnimationStartPosition(): cxx.num.Float64;
-    overload function ContainerAnimationEndPosition(): cxx.num.Float64;
-    overload function Container2AnimationStartPosition(): cxx.num.Float64;
-    overload function Container2AnimationEndPosition(): cxx.num.Float64;
-    overload function ContainerAnimationMidPosition(): cxx.num.Float64;
-    overload function IndicatorLengthDelta(): cxx.num.Float64;
+    overload function ContainerAnimationStartPosition(): Float64;
+    overload function ContainerAnimationEndPosition(): Float64;
+    overload function Container2AnimationStartPosition(): Float64;
+    overload function Container2AnimationEndPosition(): Float64;
+    overload function ContainerAnimationMidPosition(): Float64;
+    overload function IndicatorLengthDelta(): Float64;
     overload function ClipRect(): winrt.microsoft.ui.xaml.media.RectangleGeometry;
-    overload function EllipseAnimationEndPosition(): cxx.num.Float64;
-    overload function EllipseAnimationWellPosition(): cxx.num.Float64;
-    overload function EllipseDiameter(): cxx.num.Float64;
-    overload function EllipseOffset(): cxx.num.Float64;
+    overload function EllipseAnimationEndPosition(): Float64;
+    overload function EllipseAnimationWellPosition(): Float64;
+    overload function EllipseDiameter(): Float64;
+    overload function EllipseOffset(): Float64;
 }

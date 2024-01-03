@@ -1,6 +1,9 @@
 package winrt.windows.ui.input;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Input.h", true)
 @:native("winrt::Windows::UI::Input::HoldingEventArgs")
 extern class HoldingEventArgs
@@ -10,6 +13,6 @@ extern class HoldingEventArgs
     overload function PointerDeviceType(): winrt.windows.devices.input.PointerDeviceType;
     overload function Position(): winrt.windows.foundation.Point;
     overload function HoldingState(): winrt.windows.ui.input.HoldingState;
-    overload function ContactCount(): cxx.num.UInt32;
-    overload function CurrentContactCount(): cxx.num.UInt32;
+    overload function ContactCount(): UInt32;
+    overload function CurrentContactCount(): UInt32;
 }

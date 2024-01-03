@@ -1,6 +1,9 @@
 package winrt.windows.media.speechsynthesis;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.SpeechSynthesis.h", true)
 @:native("winrt::Windows::Media::SpeechSynthesis::IInstalledVoicesStatic")
 extern interface IInstalledVoicesStatic extends winrt.windows.foundation.IInspectable

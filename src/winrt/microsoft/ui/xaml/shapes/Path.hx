@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.shapes;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Shapes.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Shapes::Path")
 extern class Path
@@ -9,7 +12,7 @@ extern class Path
 {
     function new();
     overload function Data(): winrt.microsoft.ui.xaml.media.Geometry;
-    overload function Data(value: cxx.ConstRef<winrt.microsoft.ui.xaml.media.Geometry>): Void;
+    overload function Data(value: ConstRef<winrt.microsoft.ui.xaml.media.Geometry>): Void;
     overload function DataProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function DataProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
 }

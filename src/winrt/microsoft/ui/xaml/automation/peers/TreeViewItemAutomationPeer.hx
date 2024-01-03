@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.automation.peers;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer")
 extern class TreeViewItemAutomationPeer
@@ -8,7 +11,7 @@ extern class TreeViewItemAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.ITreeViewItemAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IExpandCollapseProvider
 {
-    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.TreeViewItem>);
+    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.TreeViewItem>);
     overload function ExpandCollapseState(): winrt.microsoft.ui.xaml.automation.ExpandCollapseState;
     function Collapse(): Void;
     function Expand(): Void;

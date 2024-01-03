@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.automation;
 
 @:include("winrt/Windows.UI.Xaml.Automation.h", true)
 @:native("winrt::Windows::UI::Xaml::Automation::AnnotationType")
-extern enum abstract AnnotationType(cxx.num.Int32)
+extern enum abstract AnnotationType(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Automation::AnnotationType::Unknown") final Unknown;
     @:native("winrt::Windows::UI::Xaml::Automation::AnnotationType::SpellingError") final SpellingError;

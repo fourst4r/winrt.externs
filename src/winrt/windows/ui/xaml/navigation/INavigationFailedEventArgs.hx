@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.navigation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Navigation.h", true)
 @:native("winrt::Windows::UI::Xaml::Navigation::INavigationFailedEventArgs")
 extern interface INavigationFailedEventArgs extends winrt.windows.foundation.IInspectable

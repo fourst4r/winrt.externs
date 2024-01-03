@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.controls.primitives;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.Primitives.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel")
 extern class OrientedVirtualizingPanel
@@ -13,14 +16,14 @@ extern class OrientedVirtualizingPanel
     overload function CanVerticallyScroll(value: Bool): Void;
     overload function CanHorizontallyScroll(): Bool;
     overload function CanHorizontallyScroll(value: Bool): Void;
-    overload function ExtentWidth(): cxx.num.Float64;
-    overload function ExtentHeight(): cxx.num.Float64;
-    overload function ViewportWidth(): cxx.num.Float64;
-    overload function ViewportHeight(): cxx.num.Float64;
-    overload function HorizontalOffset(): cxx.num.Float64;
-    overload function VerticalOffset(): cxx.num.Float64;
+    overload function ExtentWidth(): Float64;
+    overload function ExtentHeight(): Float64;
+    overload function ViewportWidth(): Float64;
+    overload function ViewportHeight(): Float64;
+    overload function HorizontalOffset(): Float64;
+    overload function VerticalOffset(): Float64;
     overload function ScrollOwner(): winrt.windows.foundation.IInspectable;
-    overload function ScrollOwner(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function ScrollOwner(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
     function LineUp(): Void;
     function LineDown(): Void;
     function LineLeft(): Void;
@@ -33,16 +36,16 @@ extern class OrientedVirtualizingPanel
     function MouseWheelDown(): Void;
     function MouseWheelLeft(): Void;
     function MouseWheelRight(): Void;
-    function SetHorizontalOffset(offset: cxx.num.Float64): Void;
-    function SetVerticalOffset(offset: cxx.num.Float64): Void;
-    function MakeVisible(visual: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>, rectangle: cxx.ConstRef<winrt.windows.foundation.Rect>): winrt.windows.foundation.Rect;
+    function SetHorizontalOffset(offset: Float64): Void;
+    function SetVerticalOffset(offset: Float64): Void;
+    function MakeVisible(visual: ConstRef<winrt.microsoft.ui.xaml.UIElement>, rectangle: ConstRef<winrt.windows.foundation.Rect>): winrt.windows.foundation.Rect;
     overload function AreHorizontalSnapPointsRegular(): Bool;
     overload function AreVerticalSnapPointsRegular(): Bool;
-    overload function HorizontalSnapPointsChanged(handler: cxx.ConstRef<winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function HorizontalSnapPointsChanged(token: cxx.ConstRef<winrt.EventToken>): Void;
-    overload function VerticalSnapPointsChanged(handler: cxx.ConstRef<winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function VerticalSnapPointsChanged(token: cxx.ConstRef<winrt.EventToken>): Void;
-    function GetIrregularSnapPoints(orientation: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.Orientation>, alignment: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.primitives.SnapPointsAlignment>): winrt.windows.foundation.collections.IVectorView<cxx.num.Float32> /* GenericTypeInstSig */;
-    function GetRegularSnapPoints(orientation: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.Orientation>, alignment: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.primitives.SnapPointsAlignment>, offset: cxx.Ref<cxx.num.Float32>): cxx.num.Float32;
-    function GetInsertionIndexes(position: cxx.ConstRef<winrt.windows.foundation.Point>, first: cxx.Ref<cxx.num.Int32>, second: cxx.Ref<cxx.num.Int32>): Void;
+    overload function HorizontalSnapPointsChanged(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function HorizontalSnapPointsChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function VerticalSnapPointsChanged(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function VerticalSnapPointsChanged(token: ConstRef<winrt.EventToken>): Void;
+    function GetIrregularSnapPoints(orientation: ConstRef<winrt.microsoft.ui.xaml.controls.Orientation>, alignment: ConstRef<winrt.microsoft.ui.xaml.controls.primitives.SnapPointsAlignment>): winrt.windows.foundation.collections.IVectorView<Float32> /* GenericTypeInstSig */;
+    function GetRegularSnapPoints(orientation: ConstRef<winrt.microsoft.ui.xaml.controls.Orientation>, alignment: ConstRef<winrt.microsoft.ui.xaml.controls.primitives.SnapPointsAlignment>, offset: Ref<Float32>): Float32;
+    function GetInsertionIndexes(position: ConstRef<winrt.windows.foundation.Point>, first: Ref<Int32>, second: Ref<Int32>): Void;
 }

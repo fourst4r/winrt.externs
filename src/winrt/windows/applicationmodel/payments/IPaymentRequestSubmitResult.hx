@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.payments;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Payments.h", true)
 @:native("winrt::Windows::ApplicationModel::Payments::IPaymentRequestSubmitResult")
 extern interface IPaymentRequestSubmitResult extends winrt.windows.foundation.IInspectable

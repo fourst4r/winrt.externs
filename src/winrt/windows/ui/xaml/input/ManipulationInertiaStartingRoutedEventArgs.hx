@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.input;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Input.h", true)
 @:native("winrt::Windows::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs")
 extern class ManipulationInertiaStartingRoutedEventArgs
@@ -10,11 +13,11 @@ extern class ManipulationInertiaStartingRoutedEventArgs
     function new();
     overload function Container(): winrt.windows.ui.xaml.UIElement;
     overload function ExpansionBehavior(): winrt.windows.ui.xaml.input.InertiaExpansionBehavior;
-    overload function ExpansionBehavior(value: cxx.ConstRef<winrt.windows.ui.xaml.input.InertiaExpansionBehavior>): Void;
+    overload function ExpansionBehavior(value: ConstRef<winrt.windows.ui.xaml.input.InertiaExpansionBehavior>): Void;
     overload function RotationBehavior(): winrt.windows.ui.xaml.input.InertiaRotationBehavior;
-    overload function RotationBehavior(value: cxx.ConstRef<winrt.windows.ui.xaml.input.InertiaRotationBehavior>): Void;
+    overload function RotationBehavior(value: ConstRef<winrt.windows.ui.xaml.input.InertiaRotationBehavior>): Void;
     overload function TranslationBehavior(): winrt.windows.ui.xaml.input.InertiaTranslationBehavior;
-    overload function TranslationBehavior(value: cxx.ConstRef<winrt.windows.ui.xaml.input.InertiaTranslationBehavior>): Void;
+    overload function TranslationBehavior(value: ConstRef<winrt.windows.ui.xaml.input.InertiaTranslationBehavior>): Void;
     overload function Handled(): Bool;
     overload function Handled(value: Bool): Void;
     overload function PointerDeviceType(): winrt.windows.devices.input.PointerDeviceType;

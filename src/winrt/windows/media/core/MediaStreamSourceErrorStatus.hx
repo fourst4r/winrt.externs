@@ -2,7 +2,7 @@ package winrt.windows.media.core;
 
 @:include("winrt/Windows.Media.Core.h", true)
 @:native("winrt::Windows::Media::Core::MediaStreamSourceErrorStatus")
-extern enum abstract MediaStreamSourceErrorStatus(cxx.num.Int32)
+extern enum abstract MediaStreamSourceErrorStatus(Int32)
 {
     @:native("winrt::Windows::Media::Core::MediaStreamSourceErrorStatus::Other") final Other;
     @:native("winrt::Windows::Media::Core::MediaStreamSourceErrorStatus::OutOfMemory") final OutOfMemory;

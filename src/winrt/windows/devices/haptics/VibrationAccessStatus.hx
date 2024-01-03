@@ -2,7 +2,7 @@ package winrt.windows.devices.haptics;
 
 @:include("winrt/Windows.Devices.Haptics.h", true)
 @:native("winrt::Windows::Devices::Haptics::VibrationAccessStatus")
-extern enum abstract VibrationAccessStatus(cxx.num.Int32)
+extern enum abstract VibrationAccessStatus(Int32)
 {
     @:native("winrt::Windows::Devices::Haptics::VibrationAccessStatus::Allowed") final Allowed;
     @:native("winrt::Windows::Devices::Haptics::VibrationAccessStatus::DeniedByUser") final DeniedByUser;

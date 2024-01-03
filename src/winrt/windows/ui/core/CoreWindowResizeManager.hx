@@ -1,6 +1,9 @@
 package winrt.windows.ui.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Core.h", true)
 @:native("winrt::Windows::UI::Core::CoreWindowResizeManager")
 extern class CoreWindowResizeManager

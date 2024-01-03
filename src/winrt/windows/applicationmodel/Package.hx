@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.h", true)
 @:native("winrt::Windows::ApplicationModel::Package")
 extern class Package
@@ -31,14 +34,14 @@ extern class Package
     function GetAppListEntriesAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.core.AppListEntry> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
     overload function InstallDate(): winrt.windows.foundation.DateTime;
     function GetThumbnailToken(): winrt.HString;
-    function Launch(parameters: cxx.ConstRef<winrt.HString>): Void;
+    function Launch(parameters: ConstRef<winrt.HString>): Void;
     overload function SignatureKind(): winrt.windows.applicationmodel.PackageSignatureKind;
     overload function IsOptional(): Bool;
     function VerifyContentIntegrityAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     function GetContentGroupsAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.PackageContentGroup> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
-    function GetContentGroupAsync(name: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.PackageContentGroup> /* GenericTypeInstSig */;
-    overload function StageContentGroupsAsync(names: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.PackageContentGroup> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
-    overload function StageContentGroupsAsync(names: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, moveToHeadOfQueue: Bool): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.PackageContentGroup> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+    function GetContentGroupAsync(name: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.PackageContentGroup> /* GenericTypeInstSig */;
+    overload function StageContentGroupsAsync(names: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.PackageContentGroup> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+    overload function StageContentGroupsAsync(names: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, moveToHeadOfQueue: Bool): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.PackageContentGroup> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
     function SetInUseAsync(inUse: Bool): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     function GetAppInstallerInfo(): winrt.windows.applicationmodel.AppInstallerInfo;
     function CheckUpdateAvailabilityAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.PackageUpdateAvailabilityResult> /* GenericTypeInstSig */;
@@ -53,10 +56,10 @@ extern class Package
     overload function EffectiveExternalPath(): winrt.HString;
     overload function MachineExternalPath(): winrt.HString;
     overload function UserExternalPath(): winrt.HString;
-    function GetLogoAsRandomAccessStreamReference(size: cxx.ConstRef<winrt.windows.foundation.Size>): winrt.windows.storage.streams.RandomAccessStreamReference;
+    function GetLogoAsRandomAccessStreamReference(size: ConstRef<winrt.windows.foundation.Size>): winrt.windows.storage.streams.RandomAccessStreamReference;
     function GetAppListEntries(): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.core.AppListEntry> /* GenericTypeInstSig */;
     overload function IsStub(): Bool;
-    function FindRelatedPackages(options: cxx.ConstRef<winrt.windows.applicationmodel.FindRelatedPackagesOptions>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
+    function FindRelatedPackages(options: ConstRef<winrt.windows.applicationmodel.FindRelatedPackagesOptions>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
     overload function SourceUriSchemeName(): winrt.HString;
     overload function Current(): winrt.windows.applicationmodel.Package;
     static overload function Current(): winrt.windows.applicationmodel.Package;

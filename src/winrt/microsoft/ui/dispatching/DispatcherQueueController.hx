@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.dispatching;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Dispatching.h", true)
 @:native("winrt::Microsoft::UI::Dispatching::DispatcherQueueController")
 extern class DispatcherQueueController

@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.h", true)
 @:native("winrt::Microsoft::UI::Xaml::BrushTransition")
 extern class BrushTransition
@@ -8,5 +11,5 @@ extern class BrushTransition
 {
     function new();
     overload function Duration(): winrt.windows.foundation.TimeSpan;
-    overload function Duration(value: cxx.ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function Duration(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
 }

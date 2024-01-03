@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.controls.primitives;
 
 @:include("winrt/Microsoft.UI.Xaml.Controls.Primitives.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::TickPlacement")
-extern enum abstract TickPlacement(cxx.num.Int32)
+extern enum abstract TickPlacement(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::TickPlacement::None") final None;
     @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::TickPlacement::TopLeft") final TopLeft;

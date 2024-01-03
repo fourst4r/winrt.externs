@@ -2,7 +2,7 @@ package winrt.windows.ui.input;
 
 @:include("winrt/Windows.UI.Input.h", true)
 @:native("winrt::Windows::UI::Input::InputActivationState")
-extern enum abstract InputActivationState(cxx.num.Int32)
+extern enum abstract InputActivationState(Int32)
 {
     @:native("winrt::Windows::UI::Input::InputActivationState::None") final None;
     @:native("winrt::Windows::UI::Input::InputActivationState::Deactivated") final Deactivated;

@@ -1,6 +1,9 @@
 package winrt.windows.networking.networkoperators;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::IESimProfileMetadata")
 extern interface IESimProfileMetadata extends winrt.windows.foundation.IInspectable
@@ -14,8 +17,8 @@ extern interface IESimProfileMetadata extends winrt.windows.foundation.IInspecta
     overload function State(): winrt.windows.networking.networkoperators.ESimProfileMetadataState;
     function DenyInstallAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.ESimOperationResult> /* GenericTypeInstSig */;
     overload function ConfirmInstallAsync(): winrt.windows.foundation.IAsyncOperationWithProgress<winrt.windows.networking.networkoperators.ESimOperationResult, winrt.windows.networking.networkoperators.ESimProfileInstallProgress> /* GenericTypeInstSig */;
-    overload function ConfirmInstallAsync(confirmationCode: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperationWithProgress<winrt.windows.networking.networkoperators.ESimOperationResult, winrt.windows.networking.networkoperators.ESimProfileInstallProgress> /* GenericTypeInstSig */;
+    overload function ConfirmInstallAsync(confirmationCode: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperationWithProgress<winrt.windows.networking.networkoperators.ESimOperationResult, winrt.windows.networking.networkoperators.ESimProfileInstallProgress> /* GenericTypeInstSig */;
     function PostponeInstallAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.ESimOperationResult> /* GenericTypeInstSig */;
-    overload function StateChanged(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.networking.networkoperators.ESimProfileMetadata, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function StateChanged(token: cxx.ConstRef<winrt.EventToken>): Void;
+    overload function StateChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.networking.networkoperators.ESimProfileMetadata, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function StateChanged(token: ConstRef<winrt.EventToken>): Void;
 }

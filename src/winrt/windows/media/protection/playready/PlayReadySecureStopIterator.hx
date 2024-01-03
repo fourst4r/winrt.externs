@@ -1,6 +1,9 @@
 package winrt.windows.media.protection.playready;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Protection.PlayReady.h", true)
 @:native("winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterator")
 extern class PlayReadySecureStopIterator
@@ -9,5 +12,5 @@ extern class PlayReadySecureStopIterator
     overload function Current(): winrt.windows.media.protection.playready.IPlayReadySecureStopServiceRequest;
     overload function HasCurrent(): Bool;
     function MoveNext(): Bool;
-    function GetMany(items: winrt.ArrayView<winrt.windows.media.protection.playready.IPlayReadySecureStopServiceRequest>): cxx.num.UInt32;
+    function GetMany(items: winrt.ArrayView<winrt.windows.media.protection.playready.IPlayReadySecureStopServiceRequest>): UInt32;
 }

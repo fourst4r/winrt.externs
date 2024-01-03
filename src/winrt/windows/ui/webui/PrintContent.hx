@@ -2,7 +2,7 @@ package winrt.windows.ui.webui;
 
 @:include("winrt/Windows.UI.WebUI.h", true)
 @:native("winrt::Windows::UI::WebUI::PrintContent")
-extern enum abstract PrintContent(cxx.num.Int32)
+extern enum abstract PrintContent(Int32)
 {
     @:native("winrt::Windows::UI::WebUI::PrintContent::AllPages") final AllPages;
     @:native("winrt::Windows::UI::WebUI::PrintContent::CurrentPage") final CurrentPage;

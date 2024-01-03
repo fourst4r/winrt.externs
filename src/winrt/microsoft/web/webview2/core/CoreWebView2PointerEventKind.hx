@@ -2,7 +2,7 @@ package winrt.microsoft.web.webview2.core;
 
 @:include("winrt/Microsoft.Web.WebView2.Core.h", true)
 @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2PointerEventKind")
-extern enum abstract CoreWebView2PointerEventKind(cxx.num.Int32)
+extern enum abstract CoreWebView2PointerEventKind(Int32)
 {
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2PointerEventKind::Activate") final Activate;
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2PointerEventKind::Down") final Down;

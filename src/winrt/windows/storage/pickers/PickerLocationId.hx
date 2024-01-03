@@ -2,7 +2,7 @@ package winrt.windows.storage.pickers;
 
 @:include("winrt/Windows.Storage.Pickers.h", true)
 @:native("winrt::Windows::Storage::Pickers::PickerLocationId")
-extern enum abstract PickerLocationId(cxx.num.Int32)
+extern enum abstract PickerLocationId(Int32)
 {
     @:native("winrt::Windows::Storage::Pickers::PickerLocationId::DocumentsLibrary") final DocumentsLibrary;
     @:native("winrt::Windows::Storage::Pickers::PickerLocationId::ComputerFolder") final ComputerFolder;

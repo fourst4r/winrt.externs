@@ -2,7 +2,7 @@ package winrt.windows.devices.display.core;
 
 @:include("winrt/Windows.Devices.Display.Core.h", true)
 @:native("winrt::Windows::Devices::Display::Core::DisplayPathScaling")
-extern enum abstract DisplayPathScaling(cxx.num.Int32)
+extern enum abstract DisplayPathScaling(Int32)
 {
     @:native("winrt::Windows::Devices::Display::Core::DisplayPathScaling::Identity") final Identity;
     @:native("winrt::Windows::Devices::Display::Core::DisplayPathScaling::Centered") final Centered;

@@ -2,7 +2,7 @@ package winrt.windows.perception.spatial;
 
 @:include("winrt/Windows.Perception.Spatial.h", true)
 @:native("winrt::Windows::Perception::Spatial::SpatialEntityWatcherStatus")
-extern enum abstract SpatialEntityWatcherStatus(cxx.num.Int32)
+extern enum abstract SpatialEntityWatcherStatus(Int32)
 {
     @:native("winrt::Windows::Perception::Spatial::SpatialEntityWatcherStatus::Created") final Created;
     @:native("winrt::Windows::Perception::Spatial::SpatialEntityWatcherStatus::Started") final Started;

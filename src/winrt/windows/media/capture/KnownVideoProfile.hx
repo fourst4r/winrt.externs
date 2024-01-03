@@ -2,7 +2,7 @@ package winrt.windows.media.capture;
 
 @:include("winrt/Windows.Media.Capture.h", true)
 @:native("winrt::Windows::Media::Capture::KnownVideoProfile")
-extern enum abstract KnownVideoProfile(cxx.num.Int32)
+extern enum abstract KnownVideoProfile(Int32)
 {
     @:native("winrt::Windows::Media::Capture::KnownVideoProfile::VideoRecording") final VideoRecording;
     @:native("winrt::Windows::Media::Capture::KnownVideoProfile::HighQualityPhoto") final HighQualityPhoto;

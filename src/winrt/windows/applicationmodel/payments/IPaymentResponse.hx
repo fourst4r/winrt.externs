@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.payments;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Payments.h", true)
 @:native("winrt::Windows::ApplicationModel::Payments::IPaymentResponse")
 extern interface IPaymentResponse extends winrt.windows.foundation.IInspectable
@@ -11,5 +14,5 @@ extern interface IPaymentResponse extends winrt.windows.foundation.IInspectable
     overload function PayerEmail(): winrt.HString;
     overload function PayerName(): winrt.HString;
     overload function PayerPhoneNumber(): winrt.HString;
-    function CompleteAsync(status: cxx.ConstRef<winrt.windows.applicationmodel.payments.PaymentRequestCompletionStatus>): winrt.windows.foundation.IAsyncAction;
+    function CompleteAsync(status: ConstRef<winrt.windows.applicationmodel.payments.PaymentRequestCompletionStatus>): winrt.windows.foundation.IAsyncAction;
 }

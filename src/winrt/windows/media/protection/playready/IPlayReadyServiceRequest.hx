@@ -1,17 +1,20 @@
 package winrt.windows.media.protection.playready;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Protection.PlayReady.h", true)
 @:native("winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest")
 extern interface IPlayReadyServiceRequest extends winrt.windows.foundation.IInspectable
 {
     overload function Uri(): winrt.windows.foundation.Uri;
-    overload function Uri(value: cxx.ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function Uri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
     overload function ResponseCustomData(): winrt.HString;
     overload function ChallengeCustomData(): winrt.HString;
-    overload function ChallengeCustomData(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function ChallengeCustomData(value: ConstRef<winrt.HString>): Void;
     function BeginServiceRequest(): winrt.windows.foundation.IAsyncAction;
     function NextServiceRequest(): winrt.windows.media.protection.playready.IPlayReadyServiceRequest;
     function GenerateManualEnablingChallenge(): winrt.windows.media.protection.playready.PlayReadySoapMessage;
-    function ProcessManualEnablingResponse(responseBytes: winrt.ArrayView<cxx.num.UInt8>): winrt.HResult;
+    function ProcessManualEnablingResponse(responseBytes: winrt.ArrayView<UInt8>): winrt.HResult;
 }

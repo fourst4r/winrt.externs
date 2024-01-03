@@ -1,6 +1,9 @@
 package winrt.windows.devices.pointofservice;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.PointOfService.h", true)
 @:native("winrt::Windows::Devices::PointOfService::PosPrinterCapabilities")
 extern class PosPrinterCapabilities
@@ -9,7 +12,7 @@ extern class PosPrinterCapabilities
     overload function PowerReportingType(): winrt.windows.devices.pointofservice.UnifiedPosPowerReportingType;
     overload function IsStatisticsReportingSupported(): Bool;
     overload function IsStatisticsUpdatingSupported(): Bool;
-    overload function DefaultCharacterSet(): cxx.num.UInt32;
+    overload function DefaultCharacterSet(): UInt32;
     overload function HasCoverSensor(): Bool;
     overload function CanMapCharacterSet(): Bool;
     overload function IsTransactionSupported(): Bool;

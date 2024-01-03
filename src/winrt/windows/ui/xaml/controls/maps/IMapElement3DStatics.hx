@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.controls.maps;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.Maps.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::Maps::IMapElement3DStatics")
 extern interface IMapElement3DStatics extends winrt.windows.foundation.IInspectable

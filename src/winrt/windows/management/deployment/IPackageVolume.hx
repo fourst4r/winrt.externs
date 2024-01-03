@@ -1,6 +1,9 @@
 package winrt.windows.management.deployment;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Management.Deployment.h", true)
 @:native("winrt::Windows::Management::Deployment::IPackageVolume")
 extern interface IPackageVolume extends winrt.windows.foundation.IInspectable
@@ -12,17 +15,17 @@ extern interface IPackageVolume extends winrt.windows.foundation.IInspectable
     overload function PackageStorePath(): winrt.HString;
     overload function SupportsHardLinks(): Bool;
     overload function FindPackages(): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
-    overload function FindPackages(packageName: cxx.ConstRef<winrt.HString>, packagePublisher: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
-    overload function FindPackages(packageFamilyName: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
-    overload function FindPackagesWithPackageTypes(packageTypes: cxx.ConstRef<winrt.windows.management.deployment.PackageTypes>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
-    overload function FindPackagesWithPackageTypes(packageTypes: cxx.ConstRef<winrt.windows.management.deployment.PackageTypes>, packageName: cxx.ConstRef<winrt.HString>, packagePublisher: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
-    overload function FindPackagesWithPackageTypes(packageTypes: cxx.ConstRef<winrt.windows.management.deployment.PackageTypes>, packageFamilyName: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
-    function FindPackage(packageFullName: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
-    overload function FindPackagesForUser(userSecurityId: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
-    overload function FindPackagesForUser(userSecurityId: cxx.ConstRef<winrt.HString>, packageName: cxx.ConstRef<winrt.HString>, packagePublisher: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
-    overload function FindPackagesForUser(userSecurityId: cxx.ConstRef<winrt.HString>, packageFamilyName: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
-    overload function FindPackagesForUserWithPackageTypes(userSecurityId: cxx.ConstRef<winrt.HString>, packageTypes: cxx.ConstRef<winrt.windows.management.deployment.PackageTypes>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
-    overload function FindPackagesForUserWithPackageTypes(userSecurityId: cxx.ConstRef<winrt.HString>, packageTypes: cxx.ConstRef<winrt.windows.management.deployment.PackageTypes>, packageName: cxx.ConstRef<winrt.HString>, packagePublisher: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
-    overload function FindPackagesForUserWithPackageTypes(userSecurityId: cxx.ConstRef<winrt.HString>, packageTypes: cxx.ConstRef<winrt.windows.management.deployment.PackageTypes>, packageFamilyName: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
-    function FindPackageForUser(userSecurityId: cxx.ConstRef<winrt.HString>, packageFullName: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
+    overload function FindPackages(packageName: ConstRef<winrt.HString>, packagePublisher: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
+    overload function FindPackages(packageFamilyName: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
+    overload function FindPackagesWithPackageTypes(packageTypes: ConstRef<winrt.windows.management.deployment.PackageTypes>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
+    overload function FindPackagesWithPackageTypes(packageTypes: ConstRef<winrt.windows.management.deployment.PackageTypes>, packageName: ConstRef<winrt.HString>, packagePublisher: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
+    overload function FindPackagesWithPackageTypes(packageTypes: ConstRef<winrt.windows.management.deployment.PackageTypes>, packageFamilyName: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
+    function FindPackage(packageFullName: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
+    overload function FindPackagesForUser(userSecurityId: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
+    overload function FindPackagesForUser(userSecurityId: ConstRef<winrt.HString>, packageName: ConstRef<winrt.HString>, packagePublisher: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
+    overload function FindPackagesForUser(userSecurityId: ConstRef<winrt.HString>, packageFamilyName: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
+    overload function FindPackagesForUserWithPackageTypes(userSecurityId: ConstRef<winrt.HString>, packageTypes: ConstRef<winrt.windows.management.deployment.PackageTypes>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
+    overload function FindPackagesForUserWithPackageTypes(userSecurityId: ConstRef<winrt.HString>, packageTypes: ConstRef<winrt.windows.management.deployment.PackageTypes>, packageName: ConstRef<winrt.HString>, packagePublisher: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
+    overload function FindPackagesForUserWithPackageTypes(userSecurityId: ConstRef<winrt.HString>, packageTypes: ConstRef<winrt.windows.management.deployment.PackageTypes>, packageFamilyName: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
+    function FindPackageForUser(userSecurityId: ConstRef<winrt.HString>, packageFullName: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
 }

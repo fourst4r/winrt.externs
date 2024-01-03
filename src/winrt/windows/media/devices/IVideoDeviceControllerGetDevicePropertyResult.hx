@@ -1,6 +1,9 @@
 package winrt.windows.media.devices;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::IVideoDeviceControllerGetDevicePropertyResult")
 extern interface IVideoDeviceControllerGetDevicePropertyResult extends winrt.windows.foundation.IInspectable

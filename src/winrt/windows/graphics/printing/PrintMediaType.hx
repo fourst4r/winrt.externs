@@ -2,7 +2,7 @@ package winrt.windows.graphics.printing;
 
 @:include("winrt/Windows.Graphics.Printing.h", true)
 @:native("winrt::Windows::Graphics::Printing::PrintMediaType")
-extern enum abstract PrintMediaType(cxx.num.Int32)
+extern enum abstract PrintMediaType(Int32)
 {
     @:native("winrt::Windows::Graphics::Printing::PrintMediaType::Default") final Default;
     @:native("winrt::Windows::Graphics::Printing::PrintMediaType::NotAvailable") final NotAvailable;

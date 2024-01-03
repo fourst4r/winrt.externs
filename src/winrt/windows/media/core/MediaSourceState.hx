@@ -2,7 +2,7 @@ package winrt.windows.media.core;
 
 @:include("winrt/Windows.Media.Core.h", true)
 @:native("winrt::Windows::Media::Core::MediaSourceState")
-extern enum abstract MediaSourceState(cxx.num.Int32)
+extern enum abstract MediaSourceState(Int32)
 {
     @:native("winrt::Windows::Media::Core::MediaSourceState::Initial") final Initial;
     @:native("winrt::Windows::Media::Core::MediaSourceState::Opening") final Opening;

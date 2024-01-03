@@ -1,6 +1,9 @@
 package winrt.windows.devices.background;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Background.h", true)
 @:native("winrt::Windows::Devices::Background::DeviceServicingDetails")
 extern class DeviceServicingDetails

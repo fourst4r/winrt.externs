@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.h", true)
 @:native("winrt::Windows::ApplicationModel::ILimitedAccessFeatureRequestResult")
 extern interface ILimitedAccessFeatureRequestResult extends winrt.windows.foundation.IInspectable

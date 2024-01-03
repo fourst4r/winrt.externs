@@ -2,7 +2,7 @@ package winrt.windows.devices.display.core;
 
 @:include("winrt/Windows.Devices.Display.Core.h", true)
 @:native("winrt::Windows::Devices::Display::Core::DisplayBitsPerChannel")
-extern enum abstract DisplayBitsPerChannel(cxx.num.UInt32)
+extern enum abstract DisplayBitsPerChannel(UInt32)
 {
     @:native("winrt::Windows::Devices::Display::Core::DisplayBitsPerChannel::None") final None;
     @:native("winrt::Windows::Devices::Display::Core::DisplayBitsPerChannel::Bpc6") final Bpc6;

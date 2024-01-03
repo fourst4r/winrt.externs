@@ -2,7 +2,7 @@ package winrt.windows.security.authentication.identity.core;
 
 @:include("winrt/Windows.Security.Authentication.Identity.Core.h", true)
 @:native("winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse")
-extern enum abstract MicrosoftAccountMultiFactorServiceResponse(cxx.num.Int32)
+extern enum abstract MicrosoftAccountMultiFactorServiceResponse(Int32)
 {
     @:native("winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse::Success") final Success;
     @:native("winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse::Error") final Error;

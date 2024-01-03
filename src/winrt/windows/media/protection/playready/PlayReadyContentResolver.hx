@@ -4,5 +4,5 @@ package winrt.windows.media.protection.playready;
 @:native("winrt::Windows::Media::Protection::PlayReady::PlayReadyContentResolver")
 extern class PlayReadyContentResolver
 {
-    static function ServiceRequest(contentHeader: cxx.ConstRef<winrt.windows.media.protection.playready.PlayReadyContentHeader>): winrt.windows.media.protection.playready.IPlayReadyServiceRequest;
+    static function ServiceRequest(contentHeader: ConstRef<winrt.windows.media.protection.playready.PlayReadyContentHeader>): winrt.windows.media.protection.playready.IPlayReadyServiceRequest;
 }

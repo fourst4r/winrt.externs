@@ -2,4 +2,4 @@ package winrt.windows.applicationmodel.store;
 
 
 @:extern 
-typedef LicenseChangedEventHandler = ()->Void;
+typedef LicenseChangedEventHandler = Fn<()->Void>;

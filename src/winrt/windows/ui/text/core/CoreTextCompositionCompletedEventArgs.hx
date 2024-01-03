@@ -1,6 +1,9 @@
 package winrt.windows.ui.text.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Text.Core.h", true)
 @:native("winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs")
 extern class CoreTextCompositionCompletedEventArgs

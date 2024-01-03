@@ -2,7 +2,7 @@ package winrt.windows.security.isolation;
 
 @:include("winrt/Windows.Security.Isolation.h", true)
 @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProgressState")
-extern enum abstract IsolatedWindowsEnvironmentProgressState(cxx.num.Int32)
+extern enum abstract IsolatedWindowsEnvironmentProgressState(Int32)
 {
     @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProgressState::Queued") final Queued;
     @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProgressState::Processing") final Processing;

@@ -1,6 +1,9 @@
 package winrt.windows.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::ICompositor2")
 extern interface ICompositor2 extends winrt.windows.foundation.IInspectable
@@ -17,5 +20,5 @@ extern interface ICompositor2 extends winrt.windows.foundation.IInspectable
     function CreatePointLight(): winrt.windows.ui.composition.PointLight;
     function CreateSpotLight(): winrt.windows.ui.composition.SpotLight;
     overload function CreateStepEasingFunction(): winrt.windows.ui.composition.StepEasingFunction;
-    overload function CreateStepEasingFunction(stepCount: cxx.num.Int32): winrt.windows.ui.composition.StepEasingFunction;
+    overload function CreateStepEasingFunction(stepCount: Int32): winrt.windows.ui.composition.StepEasingFunction;
 }

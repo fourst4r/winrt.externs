@@ -1,6 +1,9 @@
 package winrt.windows.security.cryptography.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Security.Cryptography.Core.h", true)
 @:native("winrt::Windows::Security::Cryptography::Core::IHashAlgorithmNamesStatics")
 extern interface IHashAlgorithmNamesStatics extends winrt.windows.foundation.IInspectable

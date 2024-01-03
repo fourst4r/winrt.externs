@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.media.animation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Media.Animation.h", true)
 @:native("winrt::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame")
 extern class SplineDoubleKeyFrame
@@ -9,7 +12,7 @@ extern class SplineDoubleKeyFrame
 {
     function new();
     overload function KeySpline(): winrt.windows.ui.xaml.media.animation.KeySpline;
-    overload function KeySpline(value: cxx.ConstRef<winrt.windows.ui.xaml.media.animation.KeySpline>): Void;
+    overload function KeySpline(value: ConstRef<winrt.windows.ui.xaml.media.animation.KeySpline>): Void;
     overload function KeySplineProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function KeySplineProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

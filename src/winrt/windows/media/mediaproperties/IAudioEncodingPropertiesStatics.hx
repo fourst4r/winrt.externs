@@ -1,13 +1,16 @@
 package winrt.windows.media.mediaproperties;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.MediaProperties.h", true)
 @:native("winrt::Windows::Media::MediaProperties::IAudioEncodingPropertiesStatics")
 extern interface IAudioEncodingPropertiesStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateAac(sampleRate: cxx.num.UInt32, channelCount: cxx.num.UInt32, bitrate: cxx.num.UInt32): winrt.windows.media.mediaproperties.AudioEncodingProperties;
-    function CreateAacAdts(sampleRate: cxx.num.UInt32, channelCount: cxx.num.UInt32, bitrate: cxx.num.UInt32): winrt.windows.media.mediaproperties.AudioEncodingProperties;
-    function CreateMp3(sampleRate: cxx.num.UInt32, channelCount: cxx.num.UInt32, bitrate: cxx.num.UInt32): winrt.windows.media.mediaproperties.AudioEncodingProperties;
-    function CreatePcm(sampleRate: cxx.num.UInt32, channelCount: cxx.num.UInt32, bitsPerSample: cxx.num.UInt32): winrt.windows.media.mediaproperties.AudioEncodingProperties;
-    function CreateWma(sampleRate: cxx.num.UInt32, channelCount: cxx.num.UInt32, bitrate: cxx.num.UInt32): winrt.windows.media.mediaproperties.AudioEncodingProperties;
+    function CreateAac(sampleRate: UInt32, channelCount: UInt32, bitrate: UInt32): winrt.windows.media.mediaproperties.AudioEncodingProperties;
+    function CreateAacAdts(sampleRate: UInt32, channelCount: UInt32, bitrate: UInt32): winrt.windows.media.mediaproperties.AudioEncodingProperties;
+    function CreateMp3(sampleRate: UInt32, channelCount: UInt32, bitrate: UInt32): winrt.windows.media.mediaproperties.AudioEncodingProperties;
+    function CreatePcm(sampleRate: UInt32, channelCount: UInt32, bitsPerSample: UInt32): winrt.windows.media.mediaproperties.AudioEncodingProperties;
+    function CreateWma(sampleRate: UInt32, channelCount: UInt32, bitrate: UInt32): winrt.windows.media.mediaproperties.AudioEncodingProperties;
 }

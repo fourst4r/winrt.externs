@@ -1,6 +1,9 @@
 package winrt.windows.media.devices;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::IAdvancedVideoCaptureDeviceController2")
 extern interface IAdvancedVideoCaptureDeviceController2 extends winrt.windows.foundation.IInspectable
@@ -17,5 +20,5 @@ extern interface IAdvancedVideoCaptureDeviceController2 extends winrt.windows.fo
     overload function IsoSpeedControl(): winrt.windows.media.devices.IsoSpeedControl;
     overload function RegionsOfInterestControl(): winrt.windows.media.devices.RegionsOfInterestControl;
     overload function PrimaryUse(): winrt.windows.media.devices.CaptureUse;
-    overload function PrimaryUse(value: cxx.ConstRef<winrt.windows.media.devices.CaptureUse>): Void;
+    overload function PrimaryUse(value: ConstRef<winrt.windows.media.devices.CaptureUse>): Void;
 }

@@ -1,6 +1,9 @@
 package winrt.windows.gaming.xboxlive.storage;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Gaming.XboxLive.Storage.h", true)
 @:native("winrt::Windows::Gaming::XboxLive::Storage::IGameSaveBlobInfoGetResult")
 extern interface IGameSaveBlobInfoGetResult extends winrt.windows.foundation.IInspectable

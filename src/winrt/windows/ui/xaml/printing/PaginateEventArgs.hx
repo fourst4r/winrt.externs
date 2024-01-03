@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.printing;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Printing.h", true)
 @:native("winrt::Windows::UI::Xaml::Printing::PaginateEventArgs")
 extern class PaginateEventArgs
@@ -8,5 +11,5 @@ extern class PaginateEventArgs
 {
     function new();
     overload function PrintTaskOptions(): winrt.windows.graphics.printing.PrintTaskOptions;
-    overload function CurrentPreviewPageNumber(): cxx.num.Int32;
+    overload function CurrentPreviewPageNumber(): Int32;
 }

@@ -4,6 +4,6 @@ package winrt.windows.applicationmodel.useractivities.core;
 @:native("winrt::Windows::ApplicationModel::UserActivities::Core::CoreUserActivityManager")
 extern class CoreUserActivityManager
 {
-    static function CreateUserActivitySessionInBackground(activity: cxx.ConstRef<winrt.windows.applicationmodel.useractivities.UserActivity>): winrt.windows.applicationmodel.useractivities.UserActivitySession;
-    static function DeleteUserActivitySessionsInTimeRangeAsync(channel: cxx.ConstRef<winrt.windows.applicationmodel.useractivities.UserActivityChannel>, startTime: cxx.ConstRef<winrt.windows.foundation.DateTime>, endTime: cxx.ConstRef<winrt.windows.foundation.DateTime>): winrt.windows.foundation.IAsyncAction;
+    static function CreateUserActivitySessionInBackground(activity: ConstRef<winrt.windows.applicationmodel.useractivities.UserActivity>): winrt.windows.applicationmodel.useractivities.UserActivitySession;
+    static function DeleteUserActivitySessionsInTimeRangeAsync(channel: ConstRef<winrt.windows.applicationmodel.useractivities.UserActivityChannel>, startTime: ConstRef<winrt.windows.foundation.DateTime>, endTime: ConstRef<winrt.windows.foundation.DateTime>): winrt.windows.foundation.IAsyncAction;
 }

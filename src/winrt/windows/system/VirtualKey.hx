@@ -2,7 +2,7 @@ package winrt.windows.system;
 
 @:include("winrt/Windows.System.h", true)
 @:native("winrt::Windows::System::VirtualKey")
-extern enum abstract VirtualKey(cxx.num.Int32)
+extern enum abstract VirtualKey(Int32)
 {
     @:native("winrt::Windows::System::VirtualKey::None") final None;
     @:native("winrt::Windows::System::VirtualKey::LeftButton") final LeftButton;

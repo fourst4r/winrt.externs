@@ -1,6 +1,9 @@
 package winrt.windows.media.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Core.h", true)
 @:native("winrt::Windows::Media::Core::ISceneAnalysisEffectFrame2")
 extern interface ISceneAnalysisEffectFrame2 extends winrt.windows.foundation.IInspectable

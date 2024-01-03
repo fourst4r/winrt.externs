@@ -2,7 +2,7 @@ package winrt.microsoft.graphics.directx;
 
 @:include("winrt/Microsoft.Graphics.DirectX.h", true)
 @:native("winrt::Microsoft::Graphics::DirectX::DirectXPixelFormat")
-extern enum abstract DirectXPixelFormat(cxx.num.Int32)
+extern enum abstract DirectXPixelFormat(Int32)
 {
     @:native("winrt::Microsoft::Graphics::DirectX::DirectXPixelFormat::Unknown") final Unknown;
     @:native("winrt::Microsoft::Graphics::DirectX::DirectXPixelFormat::R32G32B32A32Typeless") final R32G32B32A32Typeless;

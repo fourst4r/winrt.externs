@@ -2,4 +2,4 @@ package winrt.windows.media.capture;
 
 
 @:extern 
-typedef RecordLimitationExceededEventHandler = (sender: cxx.ConstRef<winrt.windows.media.capture.MediaCapture>)->Void;
+typedef RecordLimitationExceededEventHandler = Fn<(sender: ConstRef<winrt.windows.media.capture.MediaCapture>)->Void>;

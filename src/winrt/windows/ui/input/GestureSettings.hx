@@ -2,7 +2,7 @@ package winrt.windows.ui.input;
 
 @:include("winrt/Windows.UI.Input.h", true)
 @:native("winrt::Windows::UI::Input::GestureSettings")
-extern enum abstract GestureSettings(cxx.num.UInt32)
+extern enum abstract GestureSettings(UInt32)
 {
     @:native("winrt::Windows::UI::Input::GestureSettings::None") final None;
     @:native("winrt::Windows::UI::Input::GestureSettings::Tap") final Tap;

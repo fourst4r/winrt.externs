@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.calls.provider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Calls.Provider.h", true)
 @:native("winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin")
 extern class PhoneCallOrigin
@@ -10,13 +13,13 @@ extern class PhoneCallOrigin
 {
     function new();
     overload function Category(): winrt.HString;
-    overload function Category(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function Category(value: ConstRef<winrt.HString>): Void;
     overload function CategoryDescription(): winrt.HString;
-    overload function CategoryDescription(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function CategoryDescription(value: ConstRef<winrt.HString>): Void;
     overload function Location(): winrt.HString;
-    overload function Location(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function Location(value: ConstRef<winrt.HString>): Void;
     overload function DisplayName(): winrt.HString;
-    overload function DisplayName(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function DisplayName(value: ConstRef<winrt.HString>): Void;
     overload function DisplayPicture(): winrt.windows.storage.StorageFile;
-    overload function DisplayPicture(value: cxx.ConstRef<winrt.windows.storage.StorageFile>): Void;
+    overload function DisplayPicture(value: ConstRef<winrt.windows.storage.StorageFile>): Void;
 }

@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.email;
 
 @:include("winrt/Windows.ApplicationModel.Email.h", true)
 @:native("winrt::Windows::ApplicationModel::Email::EmailMessageSmimeKind")
-extern enum abstract EmailMessageSmimeKind(cxx.num.Int32)
+extern enum abstract EmailMessageSmimeKind(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Email::EmailMessageSmimeKind::None") final None;
     @:native("winrt::Windows::ApplicationModel::Email::EmailMessageSmimeKind::ClearSigned") final ClearSigned;

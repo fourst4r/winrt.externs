@@ -2,7 +2,7 @@ package winrt.windows.services.maps.guidance;
 
 @:include("winrt/Windows.Services.Maps.Guidance.h", true)
 @:native("winrt::Windows::Services::Maps::Guidance::GuidanceMode")
-extern enum abstract GuidanceMode(cxx.num.Int32)
+extern enum abstract GuidanceMode(Int32)
 {
     @:native("winrt::Windows::Services::Maps::Guidance::GuidanceMode::None") final None;
     @:native("winrt::Windows::Services::Maps::Guidance::GuidanceMode::Simulation") final Simulation;

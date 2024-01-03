@@ -4,5 +4,5 @@ package winrt.windows.ui.uiautomation.core;
 @:native("winrt::Windows::UI::UIAutomation::Core::RemoteAutomationServer")
 extern class RemoteAutomationServer
 {
-    static function ReportSession(sessionId: cxx.ConstRef<winrt.Guid>): Void;
+    static function ReportSession(sessionId: ConstRef<winrt.Guid>): Void;
 }

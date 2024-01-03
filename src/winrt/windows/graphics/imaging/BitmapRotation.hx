@@ -2,7 +2,7 @@ package winrt.windows.graphics.imaging;
 
 @:include("winrt/Windows.Graphics.Imaging.h", true)
 @:native("winrt::Windows::Graphics::Imaging::BitmapRotation")
-extern enum abstract BitmapRotation(cxx.num.Int32)
+extern enum abstract BitmapRotation(Int32)
 {
     @:native("winrt::Windows::Graphics::Imaging::BitmapRotation::None") final None;
     @:native("winrt::Windows::Graphics::Imaging::BitmapRotation::Clockwise90Degrees") final Clockwise90Degrees;

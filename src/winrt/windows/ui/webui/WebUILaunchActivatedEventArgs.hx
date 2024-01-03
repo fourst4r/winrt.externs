@@ -1,6 +1,9 @@
 package winrt.windows.ui.webui;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.WebUI.h", true)
 @:native("winrt::Windows::UI::WebUI::WebUILaunchActivatedEventArgs")
 extern class WebUILaunchActivatedEventArgs
@@ -18,7 +21,7 @@ extern class WebUILaunchActivatedEventArgs
     overload function PreviousExecutionState(): winrt.windows.applicationmodel.activation.ApplicationExecutionState;
     overload function SplashScreen(): winrt.windows.applicationmodel.activation.SplashScreen;
     overload function PrelaunchActivated(): Bool;
-    overload function CurrentlyShownApplicationViewId(): cxx.num.Int32;
+    overload function CurrentlyShownApplicationViewId(): Int32;
     overload function ActivatedOperation(): winrt.windows.ui.webui.ActivatedOperation;
     overload function User(): winrt.windows.system.User;
     overload function TileActivatedInfo(): winrt.windows.applicationmodel.activation.TileActivatedInfo;

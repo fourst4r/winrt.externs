@@ -1,6 +1,9 @@
 package winrt.windows.globalization.datetimeformatting;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Globalization.DateTimeFormatting.h", true)
 @:native("winrt::Windows::Globalization::DateTimeFormatting::IDateTimeFormatter")
 extern interface IDateTimeFormatter extends winrt.windows.foundation.IInspectable
@@ -10,10 +13,10 @@ extern interface IDateTimeFormatter extends winrt.windows.foundation.IInspectabl
     overload function Calendar(): winrt.HString;
     overload function Clock(): winrt.HString;
     overload function NumeralSystem(): winrt.HString;
-    overload function NumeralSystem(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function NumeralSystem(value: ConstRef<winrt.HString>): Void;
     overload function Patterns(): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
     overload function Template(): winrt.HString;
-    function Format(value: cxx.ConstRef<winrt.windows.foundation.DateTime>): winrt.HString;
+    function Format(value: ConstRef<winrt.windows.foundation.DateTime>): winrt.HString;
     overload function IncludeYear(): winrt.windows.globalization.datetimeformatting.YearFormat;
     overload function IncludeMonth(): winrt.windows.globalization.datetimeformatting.MonthFormat;
     overload function IncludeDayOfWeek(): winrt.windows.globalization.datetimeformatting.DayOfWeekFormat;

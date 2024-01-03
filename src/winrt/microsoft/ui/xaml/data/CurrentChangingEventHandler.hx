@@ -2,4 +2,4 @@ package winrt.microsoft.ui.xaml.data;
 
 
 @:extern 
-typedef CurrentChangingEventHandler = (sender: cxx.ConstRef<winrt.windows.foundation.IInspectable>, e: cxx.ConstRef<winrt.microsoft.ui.xaml.data.CurrentChangingEventArgs>)->Void;
+typedef CurrentChangingEventHandler = Fn<(sender: ConstRef<winrt.windows.foundation.IInspectable>, e: ConstRef<winrt.microsoft.ui.xaml.data.CurrentChangingEventArgs>)->Void>;

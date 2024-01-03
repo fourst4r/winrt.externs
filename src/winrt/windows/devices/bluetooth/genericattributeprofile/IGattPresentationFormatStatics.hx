@@ -1,9 +1,12 @@
 package winrt.windows.devices.bluetooth.genericattributeprofile;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Bluetooth.GenericAttributeProfile.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattPresentationFormatStatics")
 extern interface IGattPresentationFormatStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function BluetoothSigAssignedNumbers(): cxx.num.UInt8;
+    overload function BluetoothSigAssignedNumbers(): UInt8;
 }

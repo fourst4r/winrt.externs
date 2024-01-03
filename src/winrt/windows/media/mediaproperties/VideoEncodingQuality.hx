@@ -2,7 +2,7 @@ package winrt.windows.media.mediaproperties;
 
 @:include("winrt/Windows.Media.MediaProperties.h", true)
 @:native("winrt::Windows::Media::MediaProperties::VideoEncodingQuality")
-extern enum abstract VideoEncodingQuality(cxx.num.Int32)
+extern enum abstract VideoEncodingQuality(Int32)
 {
     @:native("winrt::Windows::Media::MediaProperties::VideoEncodingQuality::Auto") final Auto;
     @:native("winrt::Windows::Media::MediaProperties::VideoEncodingQuality::HD1080p") final HD1080p;

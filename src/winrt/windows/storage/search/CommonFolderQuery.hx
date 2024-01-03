@@ -2,7 +2,7 @@ package winrt.windows.storage.search;
 
 @:include("winrt/Windows.Storage.Search.h", true)
 @:native("winrt::Windows::Storage::Search::CommonFolderQuery")
-extern enum abstract CommonFolderQuery(cxx.num.Int32)
+extern enum abstract CommonFolderQuery(Int32)
 {
     @:native("winrt::Windows::Storage::Search::CommonFolderQuery::DefaultQuery") final DefaultQuery;
     @:native("winrt::Windows::Storage::Search::CommonFolderQuery::GroupByYear") final GroupByYear;

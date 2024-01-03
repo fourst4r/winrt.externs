@@ -1,6 +1,9 @@
 package winrt.windows.web.ui;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Web.UI.h", true)
 @:native("winrt::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs")
 extern class WebViewControlNewWindowRequestedEventArgs
@@ -12,6 +15,6 @@ extern class WebViewControlNewWindowRequestedEventArgs
     overload function Handled(): Bool;
     overload function Handled(value: Bool): Void;
     overload function NewWindow(): winrt.windows.web.ui.IWebViewControl;
-    overload function NewWindow(value: cxx.ConstRef<winrt.windows.web.ui.IWebViewControl>): Void;
+    overload function NewWindow(value: ConstRef<winrt.windows.web.ui.IWebViewControl>): Void;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

@@ -2,7 +2,7 @@ package winrt.windows.foundation.diagnostics;
 
 @:include("winrt/Windows.Foundation.Diagnostics.h", true)
 @:native("winrt::Windows::Foundation::Diagnostics::CausalityRelation")
-extern enum abstract CausalityRelation(cxx.num.Int32)
+extern enum abstract CausalityRelation(Int32)
 {
     @:native("winrt::Windows::Foundation::Diagnostics::CausalityRelation::AssignDelegate") final AssignDelegate;
     @:native("winrt::Windows::Foundation::Diagnostics::CausalityRelation::Join") final Join;

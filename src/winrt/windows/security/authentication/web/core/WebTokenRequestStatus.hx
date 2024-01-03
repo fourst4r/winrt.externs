@@ -2,7 +2,7 @@ package winrt.windows.security.authentication.web.core;
 
 @:include("winrt/Windows.Security.Authentication.Web.Core.h", true)
 @:native("winrt::Windows::Security::Authentication::Web::Core::WebTokenRequestStatus")
-extern enum abstract WebTokenRequestStatus(cxx.num.Int32)
+extern enum abstract WebTokenRequestStatus(Int32)
 {
     @:native("winrt::Windows::Security::Authentication::Web::Core::WebTokenRequestStatus::Success") final Success;
     @:native("winrt::Windows::Security::Authentication::Web::Core::WebTokenRequestStatus::UserCancel") final UserCancel;

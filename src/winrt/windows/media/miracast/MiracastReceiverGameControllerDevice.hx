@@ -1,6 +1,9 @@
 package winrt.windows.media.miracast;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Miracast.h", true)
 @:native("winrt::Windows::Media::Miracast::MiracastReceiverGameControllerDevice")
 extern class MiracastReceiverGameControllerDevice
@@ -11,7 +14,7 @@ extern class MiracastReceiverGameControllerDevice
     overload function IsRequestedByTransmitter(): Bool;
     overload function IsTransmittingInput(): Bool;
     overload function Mode(): winrt.windows.media.miracast.MiracastReceiverGameControllerDeviceUsageMode;
-    overload function Mode(value: cxx.ConstRef<winrt.windows.media.miracast.MiracastReceiverGameControllerDeviceUsageMode>): Void;
-    overload function Changed(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.miracast.MiracastReceiverGameControllerDevice, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Changed(token: cxx.ConstRef<winrt.EventToken>): Void;
+    overload function Mode(value: ConstRef<winrt.windows.media.miracast.MiracastReceiverGameControllerDeviceUsageMode>): Void;
+    overload function Changed(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.miracast.MiracastReceiverGameControllerDevice, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Changed(token: ConstRef<winrt.EventToken>): Void;
 }

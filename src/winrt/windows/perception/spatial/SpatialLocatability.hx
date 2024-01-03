@@ -2,7 +2,7 @@ package winrt.windows.perception.spatial;
 
 @:include("winrt/Windows.Perception.Spatial.h", true)
 @:native("winrt::Windows::Perception::Spatial::SpatialLocatability")
-extern enum abstract SpatialLocatability(cxx.num.Int32)
+extern enum abstract SpatialLocatability(Int32)
 {
     @:native("winrt::Windows::Perception::Spatial::SpatialLocatability::Unavailable") final Unavailable;
     @:native("winrt::Windows::Perception::Spatial::SpatialLocatability::OrientationOnly") final OrientationOnly;

@@ -1,6 +1,9 @@
 package winrt.windows.ui.webui;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.WebUI.h", true)
 @:native("winrt::Windows::UI::WebUI::WebUIFileActivatedEventArgs")
 extern class WebUIFileActivatedEventArgs
@@ -16,7 +19,7 @@ extern class WebUIFileActivatedEventArgs
     overload function Kind(): winrt.windows.applicationmodel.activation.ActivationKind;
     overload function PreviousExecutionState(): winrt.windows.applicationmodel.activation.ApplicationExecutionState;
     overload function SplashScreen(): winrt.windows.applicationmodel.activation.SplashScreen;
-    overload function CurrentlyShownApplicationViewId(): cxx.num.Int32;
+    overload function CurrentlyShownApplicationViewId(): Int32;
     overload function ActivatedOperation(): winrt.windows.ui.webui.ActivatedOperation;
     overload function NeighboringFilesQuery(): winrt.windows.storage.search.StorageFileQueryResult;
     overload function User(): winrt.windows.system.User;

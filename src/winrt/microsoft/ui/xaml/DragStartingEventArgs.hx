@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.h", true)
 @:native("winrt::Microsoft::UI::Xaml::DragStartingEventArgs")
 extern class DragStartingEventArgs
@@ -12,7 +15,7 @@ extern class DragStartingEventArgs
     overload function Data(): winrt.windows.applicationmodel.datatransfer.DataPackage;
     overload function DragUI(): winrt.microsoft.ui.xaml.DragUI;
     overload function AllowedOperations(): winrt.windows.applicationmodel.datatransfer.DataPackageOperation;
-    overload function AllowedOperations(value: cxx.ConstRef<winrt.windows.applicationmodel.datatransfer.DataPackageOperation>): Void;
+    overload function AllowedOperations(value: ConstRef<winrt.windows.applicationmodel.datatransfer.DataPackageOperation>): Void;
     function GetDeferral(): winrt.microsoft.ui.xaml.DragOperationDeferral;
-    function GetPosition(relativeTo: cxx.ConstRef<winrt.microsoft.ui.xaml.UIElement>): winrt.windows.foundation.Point;
+    function GetPosition(relativeTo: ConstRef<winrt.microsoft.ui.xaml.UIElement>): winrt.windows.foundation.Point;
 }

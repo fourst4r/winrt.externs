@@ -5,7 +5,7 @@ package winrt.windows.foundation.numerics;
 extern class Plane
 {
     var normal:winrt.windows.foundation.numerics.Vector3;
-    var d:cxx.num.Float32;
+    var d:Float32;
     
     function new();
 }

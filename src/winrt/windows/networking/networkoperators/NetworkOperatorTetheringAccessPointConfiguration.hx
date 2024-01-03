@@ -1,6 +1,9 @@
 package winrt.windows.networking.networkoperators;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration")
 extern class NetworkOperatorTetheringAccessPointConfiguration
@@ -9,11 +12,11 @@ extern class NetworkOperatorTetheringAccessPointConfiguration
 {
     function new();
     overload function Ssid(): winrt.HString;
-    overload function Ssid(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function Ssid(value: ConstRef<winrt.HString>): Void;
     overload function Passphrase(): winrt.HString;
-    overload function Passphrase(value: cxx.ConstRef<winrt.HString>): Void;
-    function IsBandSupported(band: cxx.ConstRef<winrt.windows.networking.networkoperators.TetheringWiFiBand>): Bool;
-    function IsBandSupportedAsync(band: cxx.ConstRef<winrt.windows.networking.networkoperators.TetheringWiFiBand>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    overload function Passphrase(value: ConstRef<winrt.HString>): Void;
+    function IsBandSupported(band: ConstRef<winrt.windows.networking.networkoperators.TetheringWiFiBand>): Bool;
+    function IsBandSupportedAsync(band: ConstRef<winrt.windows.networking.networkoperators.TetheringWiFiBand>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     overload function Band(): winrt.windows.networking.networkoperators.TetheringWiFiBand;
-    overload function Band(value: cxx.ConstRef<winrt.windows.networking.networkoperators.TetheringWiFiBand>): Void;
+    overload function Band(value: ConstRef<winrt.windows.networking.networkoperators.TetheringWiFiBand>): Void;
 }

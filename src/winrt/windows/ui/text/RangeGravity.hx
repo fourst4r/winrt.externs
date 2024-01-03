@@ -2,7 +2,7 @@ package winrt.windows.ui.text;
 
 @:include("winrt/Windows.UI.Text.h", true)
 @:native("winrt::Windows::UI::Text::RangeGravity")
-extern enum abstract RangeGravity(cxx.num.Int32)
+extern enum abstract RangeGravity(Int32)
 {
     @:native("winrt::Windows::UI::Text::RangeGravity::UIBehavior") final UIBehavior;
     @:native("winrt::Windows::UI::Text::RangeGravity::Backward") final Backward;

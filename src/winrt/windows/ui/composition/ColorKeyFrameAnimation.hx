@@ -1,6 +1,9 @@
 package winrt.windows.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::ColorKeyFrameAnimation")
 extern class ColorKeyFrameAnimation
@@ -8,7 +11,7 @@ extern class ColorKeyFrameAnimation
     implements winrt.windows.ui.composition.IColorKeyFrameAnimation
 {
     overload function InterpolationColorSpace(): winrt.windows.ui.composition.CompositionColorSpace;
-    overload function InterpolationColorSpace(value: cxx.ConstRef<winrt.windows.ui.composition.CompositionColorSpace>): Void;
-    overload function InsertKeyFrame(normalizedProgressKey: cxx.num.Float32, value: cxx.ConstRef<winrt.windows.ui.Color>): Void;
-    overload function InsertKeyFrame(normalizedProgressKey: cxx.num.Float32, value: cxx.ConstRef<winrt.windows.ui.Color>, easingFunction: cxx.ConstRef<winrt.windows.ui.composition.CompositionEasingFunction>): Void;
+    overload function InterpolationColorSpace(value: ConstRef<winrt.windows.ui.composition.CompositionColorSpace>): Void;
+    overload function InsertKeyFrame(normalizedProgressKey: Float32, value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function InsertKeyFrame(normalizedProgressKey: Float32, value: ConstRef<winrt.windows.ui.Color>, easingFunction: ConstRef<winrt.windows.ui.composition.CompositionEasingFunction>): Void;
 }

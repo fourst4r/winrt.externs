@@ -1,6 +1,9 @@
 package winrt.windows.media.playback;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Playback.h", true)
 @:native("winrt::Windows::Media::Playback::IMediaPlaybackCommandManagerPauseReceivedEventArgs")
 extern interface IMediaPlaybackCommandManagerPauseReceivedEventArgs extends winrt.windows.foundation.IInspectable

@@ -2,7 +2,7 @@ package winrt.windows.devices.serialcommunication;
 
 @:include("winrt/Windows.Devices.SerialCommunication.h", true)
 @:native("winrt::Windows::Devices::SerialCommunication::SerialPinChange")
-extern enum abstract SerialPinChange(cxx.num.Int32)
+extern enum abstract SerialPinChange(Int32)
 {
     @:native("winrt::Windows::Devices::SerialCommunication::SerialPinChange::BreakSignal") final BreakSignal;
     @:native("winrt::Windows::Devices::SerialCommunication::SerialPinChange::CarrierDetect") final CarrierDetect;

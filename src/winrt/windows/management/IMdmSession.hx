@@ -1,6 +1,9 @@
 package winrt.windows.management;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Management.h", true)
 @:native("winrt::Windows::Management::IMdmSession")
 extern interface IMdmSession extends winrt.windows.foundation.IInspectable
@@ -12,5 +15,5 @@ extern interface IMdmSession extends winrt.windows.foundation.IInspectable
     function AttachAsync(): winrt.windows.foundation.IAsyncAction;
     function Delete(): Void;
     overload function StartAsync(): winrt.windows.foundation.IAsyncAction;
-    overload function StartAsync(alerts: cxx.ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.management.MdmAlert> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncAction;
+    overload function StartAsync(alerts: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.management.MdmAlert> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncAction;
 }

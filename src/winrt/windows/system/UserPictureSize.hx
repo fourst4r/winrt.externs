@@ -2,7 +2,7 @@ package winrt.windows.system;
 
 @:include("winrt/Windows.System.h", true)
 @:native("winrt::Windows::System::UserPictureSize")
-extern enum abstract UserPictureSize(cxx.num.Int32)
+extern enum abstract UserPictureSize(Int32)
 {
     @:native("winrt::Windows::System::UserPictureSize::Size64x64") final Size64x64;
     @:native("winrt::Windows::System::UserPictureSize::Size208x208") final Size208x208;

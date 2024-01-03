@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.background;
 
 @:include("winrt/Windows.ApplicationModel.Background.h", true)
 @:native("winrt::Windows::ApplicationModel::Background::BackgroundAccessStatus")
-extern enum abstract BackgroundAccessStatus(cxx.num.Int32)
+extern enum abstract BackgroundAccessStatus(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Background::BackgroundAccessStatus::Unspecified") final Unspecified;
     @:native("winrt::Windows::ApplicationModel::Background::BackgroundAccessStatus::AllowedWithAlwaysOnRealTimeConnectivity") final AllowedWithAlwaysOnRealTimeConnectivity;

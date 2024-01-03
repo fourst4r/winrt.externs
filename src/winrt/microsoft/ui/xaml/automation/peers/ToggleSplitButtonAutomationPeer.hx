@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.automation.peers;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeer")
 extern class ToggleSplitButtonAutomationPeer
@@ -9,7 +12,7 @@ extern class ToggleSplitButtonAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IExpandCollapseProvider
     implements winrt.microsoft.ui.xaml.automation.provider.IToggleProvider
 {
-    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.ToggleSplitButton>);
+    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.ToggleSplitButton>);
     overload function ExpandCollapseState(): winrt.microsoft.ui.xaml.automation.ExpandCollapseState;
     function Collapse(): Void;
     function Expand(): Void;

@@ -2,7 +2,7 @@ package winrt.windows.management.deployment;
 
 @:include("winrt/Windows.Management.Deployment.h", true)
 @:native("winrt::Windows::Management::Deployment::DeploymentOptions")
-extern enum abstract DeploymentOptions(cxx.num.UInt32)
+extern enum abstract DeploymentOptions(UInt32)
 {
     @:native("winrt::Windows::Management::Deployment::DeploymentOptions::None") final None;
     @:native("winrt::Windows::Management::Deployment::DeploymentOptions::ForceApplicationShutdown") final ForceApplicationShutdown;

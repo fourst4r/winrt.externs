@@ -2,7 +2,7 @@ package winrt.microsoft.web.webview2.core;
 
 @:include("winrt/Microsoft.Web.WebView2.Core.h", true)
 @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2TrackingPreventionLevel")
-extern enum abstract CoreWebView2TrackingPreventionLevel(cxx.num.Int32)
+extern enum abstract CoreWebView2TrackingPreventionLevel(Int32)
 {
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2TrackingPreventionLevel::None") final None;
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2TrackingPreventionLevel::Basic") final Basic;

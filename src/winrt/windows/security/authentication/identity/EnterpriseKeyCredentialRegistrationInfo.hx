@@ -1,6 +1,9 @@
 package winrt.windows.security.authentication.identity;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Security.Authentication.Identity.h", true)
 @:native("winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo")
 extern class EnterpriseKeyCredentialRegistrationInfo

@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.automation.peers;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer")
 extern class RepeatButtonAutomationPeer
@@ -8,6 +11,6 @@ extern class RepeatButtonAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IRepeatButtonAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IInvokeProvider
 {
-    /* explicit */ function new(owner: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.primitives.RepeatButton>);
+    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.primitives.RepeatButton>);
     function Invoke(): Void;
 }

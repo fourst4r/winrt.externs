@@ -2,7 +2,7 @@ package winrt.windows.networking.connectivity;
 
 @:include("winrt/Windows.Networking.Connectivity.h", true)
 @:native("winrt::Windows::Networking::Connectivity::DataUsageGranularity")
-extern enum abstract DataUsageGranularity(cxx.num.Int32)
+extern enum abstract DataUsageGranularity(Int32)
 {
     @:native("winrt::Windows::Networking::Connectivity::DataUsageGranularity::PerMinute") final PerMinute;
     @:native("winrt::Windows::Networking::Connectivity::DataUsageGranularity::PerHour") final PerHour;

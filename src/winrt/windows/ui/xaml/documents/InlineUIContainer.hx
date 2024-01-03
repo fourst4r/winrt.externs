@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.documents;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Documents.h", true)
 @:native("winrt::Windows::UI::Xaml::Documents::InlineUIContainer")
 extern class InlineUIContainer
@@ -9,5 +12,5 @@ extern class InlineUIContainer
 {
     function new();
     overload function Child(): winrt.windows.ui.xaml.UIElement;
-    overload function Child(value: cxx.ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
+    overload function Child(value: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
 }

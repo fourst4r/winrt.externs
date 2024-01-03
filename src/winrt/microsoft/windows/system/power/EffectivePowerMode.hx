@@ -2,7 +2,7 @@ package winrt.microsoft.windows.system.power;
 
 @:include("winrt/Microsoft.Windows.System.Power.h", true)
 @:native("winrt::Microsoft::Windows::System::Power::EffectivePowerMode")
-extern enum abstract EffectivePowerMode(cxx.num.Int32)
+extern enum abstract EffectivePowerMode(Int32)
 {
     @:native("winrt::Microsoft::Windows::System::Power::EffectivePowerMode::BatterySaver") final BatterySaver;
     @:native("winrt::Microsoft::Windows::System::Power::EffectivePowerMode::BetterBattery") final BetterBattery;

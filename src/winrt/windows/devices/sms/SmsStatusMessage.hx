@@ -1,6 +1,9 @@
 package winrt.windows.devices.sms;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Sms.h", true)
 @:native("winrt::Windows::Devices::Sms::SmsStatusMessage")
 extern class SmsStatusMessage
@@ -10,8 +13,8 @@ extern class SmsStatusMessage
     overload function To(): winrt.HString;
     overload function From(): winrt.HString;
     overload function Body(): winrt.HString;
-    overload function Status(): cxx.num.Int32;
-    overload function MessageReferenceNumber(): cxx.num.Int32;
+    overload function Status(): Int32;
+    overload function MessageReferenceNumber(): Int32;
     overload function ServiceCenterTimestamp(): winrt.windows.foundation.DateTime;
     overload function DischargeTime(): winrt.windows.foundation.DateTime;
     overload function MessageType(): winrt.windows.devices.sms.SmsMessageType;

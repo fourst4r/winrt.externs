@@ -2,7 +2,7 @@ package winrt.windows.ui.core;
 
 @:include("winrt/Windows.UI.Core.h", true)
 @:native("winrt::Windows::UI::Core::CoreProcessEventsOption")
-extern enum abstract CoreProcessEventsOption(cxx.num.Int32)
+extern enum abstract CoreProcessEventsOption(Int32)
 {
     @:native("winrt::Windows::UI::Core::CoreProcessEventsOption::ProcessOneAndAllPending") final ProcessOneAndAllPending;
     @:native("winrt::Windows::UI::Core::CoreProcessEventsOption::ProcessOneIfPresent") final ProcessOneIfPresent;

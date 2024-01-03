@@ -2,7 +2,7 @@ package winrt.windows.devices.enumeration;
 
 @:include("winrt/Windows.Devices.Enumeration.h", true)
 @:native("winrt::Windows::Devices::Enumeration::DeviceClass")
-extern enum abstract DeviceClass(cxx.num.Int32)
+extern enum abstract DeviceClass(Int32)
 {
     @:native("winrt::Windows::Devices::Enumeration::DeviceClass::All") final All;
     @:native("winrt::Windows::Devices::Enumeration::DeviceClass::AudioCapture") final AudioCapture;

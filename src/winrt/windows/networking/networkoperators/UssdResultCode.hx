@@ -2,7 +2,7 @@ package winrt.windows.networking.networkoperators;
 
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::UssdResultCode")
-extern enum abstract UssdResultCode(cxx.num.Int32)
+extern enum abstract UssdResultCode(Int32)
 {
     @:native("winrt::Windows::Networking::NetworkOperators::UssdResultCode::NoActionRequired") final NoActionRequired;
     @:native("winrt::Windows::Networking::NetworkOperators::UssdResultCode::ActionRequired") final ActionRequired;

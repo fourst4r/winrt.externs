@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.store;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Store.h", true)
 @:native("winrt::Windows::ApplicationModel::Store::IListingInformation")
 extern interface IListingInformation extends winrt.windows.foundation.IInspectable
@@ -10,5 +13,5 @@ extern interface IListingInformation extends winrt.windows.foundation.IInspectab
     overload function ProductListings(): winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.windows.applicationmodel.store.ProductListing> /* GenericTypeInstSig */;
     overload function FormattedPrice(): winrt.HString;
     overload function Name(): winrt.HString;
-    overload function AgeRating(): cxx.num.UInt32;
+    overload function AgeRating(): UInt32;
 }

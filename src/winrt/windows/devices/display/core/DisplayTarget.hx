@@ -1,6 +1,9 @@
 package winrt.windows.devices.display.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Display.Core.h", true)
 @:native("winrt::Windows::Devices::Display::Core::DisplayTarget")
 extern class DisplayTarget
@@ -8,7 +11,7 @@ extern class DisplayTarget
 {
     overload function Adapter(): winrt.windows.devices.display.core.DisplayAdapter;
     overload function DeviceInterfacePath(): winrt.HString;
-    overload function AdapterRelativeId(): cxx.num.UInt32;
+    overload function AdapterRelativeId(): UInt32;
     overload function IsConnected(): Bool;
     overload function IsVirtualModeEnabled(): Bool;
     overload function IsVirtualTopologyEnabled(): Bool;
@@ -18,6 +21,6 @@ extern class DisplayTarget
     function TryGetMonitor(): winrt.windows.devices.display.DisplayMonitor;
     overload function Properties(): winrt.windows.foundation.collections.IMapView<winrt.Guid, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;
     overload function IsStale(): Bool;
-    function IsSame(otherTarget: cxx.ConstRef<winrt.windows.devices.display.core.DisplayTarget>): Bool;
-    function IsEqual(otherTarget: cxx.ConstRef<winrt.windows.devices.display.core.DisplayTarget>): Bool;
+    function IsSame(otherTarget: ConstRef<winrt.windows.devices.display.core.DisplayTarget>): Bool;
+    function IsEqual(otherTarget: ConstRef<winrt.windows.devices.display.core.DisplayTarget>): Bool;
 }

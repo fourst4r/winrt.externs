@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.datatransfer;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.DataTransfer.h", true)
 @:native("winrt::Windows::ApplicationModel::DataTransfer::DataPackagePropertySetView")
 extern class DataPackagePropertySetView
@@ -26,9 +29,9 @@ extern class DataPackagePropertySetView
     overload function EnterpriseId(): winrt.HString;
     overload function ContentSourceUserActivityJson(): winrt.HString;
     overload function IsFromRoamingClipboard(): Bool;
-    function Lookup(key: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.IInspectable;
-    overload function Size(): cxx.num.UInt32;
-    function HasKey(key: cxx.ConstRef<winrt.HString>): Bool;
-    function Split(first: cxx.Ref<winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */>, second: cxx.Ref<winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */>): Void;
+    function Lookup(key: ConstRef<winrt.HString>): winrt.windows.foundation.IInspectable;
+    overload function Size(): UInt32;
+    function HasKey(key: ConstRef<winrt.HString>): Bool;
+    function Split(first: Ref<winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */>, second: Ref<winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */>): Void;
     function First(): winrt.windows.foundation.collections.IIterator<winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
 }

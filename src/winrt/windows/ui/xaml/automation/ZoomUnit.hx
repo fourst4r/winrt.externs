@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.automation;
 
 @:include("winrt/Windows.UI.Xaml.Automation.h", true)
 @:native("winrt::Windows::UI::Xaml::Automation::ZoomUnit")
-extern enum abstract ZoomUnit(cxx.num.Int32)
+extern enum abstract ZoomUnit(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Automation::ZoomUnit::NoAmount") final NoAmount;
     @:native("winrt::Windows::UI::Xaml::Automation::ZoomUnit::LargeDecrement") final LargeDecrement;

@@ -2,7 +2,7 @@ package winrt.windows.media.playback;
 
 @:include("winrt/Windows.Media.Playback.h", true)
 @:native("winrt::Windows::Media::Playback::MediaPlayerError")
-extern enum abstract MediaPlayerError(cxx.num.Int32)
+extern enum abstract MediaPlayerError(Int32)
 {
     @:native("winrt::Windows::Media::Playback::MediaPlayerError::Unknown") final Unknown;
     @:native("winrt::Windows::Media::Playback::MediaPlayerError::Aborted") final Aborted;

@@ -1,6 +1,9 @@
 package winrt.windows.globalization;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Globalization.h", true)
 @:native("winrt::Windows::Globalization::INumeralSystemIdentifiersStatics")
 extern interface INumeralSystemIdentifiersStatics extends winrt.windows.foundation.IInspectable

@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Composition.h", true)
 @:native("winrt::Microsoft::UI::Composition::CompositionLineGeometry")
 extern class CompositionLineGeometry
@@ -8,7 +11,7 @@ extern class CompositionLineGeometry
     implements winrt.microsoft.ui.composition.ICompositionLineGeometry
 {
     overload function End(): winrt.windows.foundation.numerics.Vector2;
-    overload function End(value: cxx.ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
-    overload function Start(value: cxx.ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function End(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function Start(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
     overload function Start(): winrt.windows.foundation.numerics.Vector2;
 }

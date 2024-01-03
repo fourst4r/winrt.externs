@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.calls;
 
 @:include("winrt/Windows.ApplicationModel.Calls.h", true)
 @:native("winrt::Windows::ApplicationModel::Calls::PhoneSimState")
-extern enum abstract PhoneSimState(cxx.num.Int32)
+extern enum abstract PhoneSimState(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Calls::PhoneSimState::Unknown") final Unknown;
     @:native("winrt::Windows::ApplicationModel::Calls::PhoneSimState::PinNotRequired") final PinNotRequired;

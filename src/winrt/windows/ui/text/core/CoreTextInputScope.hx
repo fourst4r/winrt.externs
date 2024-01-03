@@ -2,7 +2,7 @@ package winrt.windows.ui.text.core;
 
 @:include("winrt/Windows.UI.Text.Core.h", true)
 @:native("winrt::Windows::UI::Text::Core::CoreTextInputScope")
-extern enum abstract CoreTextInputScope(cxx.num.Int32)
+extern enum abstract CoreTextInputScope(Int32)
 {
     @:native("winrt::Windows::UI::Text::Core::CoreTextInputScope::Default") final Default;
     @:native("winrt::Windows::UI::Text::Core::CoreTextInputScope::Url") final Url;

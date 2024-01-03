@@ -1,6 +1,9 @@
 package winrt.windows.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::CompositionColorGradientStop")
 extern class CompositionColorGradientStop
@@ -8,7 +11,7 @@ extern class CompositionColorGradientStop
     implements winrt.windows.ui.composition.ICompositionColorGradientStop
 {
     overload function Color(): winrt.windows.ui.Color;
-    overload function Color(value: cxx.ConstRef<winrt.windows.ui.Color>): Void;
-    overload function Offset(): cxx.num.Float32;
-    overload function Offset(value: cxx.num.Float32): Void;
+    overload function Color(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function Offset(): Float32;
+    overload function Offset(value: Float32): Void;
 }

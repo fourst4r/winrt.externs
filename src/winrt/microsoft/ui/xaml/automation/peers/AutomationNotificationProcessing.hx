@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.automation.peers;
 
 @:include("winrt/Microsoft.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationNotificationProcessing")
-extern enum abstract AutomationNotificationProcessing(cxx.num.Int32)
+extern enum abstract AutomationNotificationProcessing(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationNotificationProcessing::ImportantAll") final ImportantAll;
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationNotificationProcessing::ImportantMostRecent") final ImportantMostRecent;

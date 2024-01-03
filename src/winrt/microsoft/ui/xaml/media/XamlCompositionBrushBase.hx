@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.media;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Media.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase")
 extern class XamlCompositionBrushBase
@@ -10,9 +13,9 @@ extern class XamlCompositionBrushBase
     implements winrt.microsoft.ui.xaml.media.IXamlCompositionBrushBaseOverrides
 {
     overload function FallbackColor(): winrt.windows.ui.Color;
-    overload function FallbackColor(value: cxx.ConstRef<winrt.windows.ui.Color>): Void;
+    overload function FallbackColor(value: ConstRef<winrt.windows.ui.Color>): Void;
     overload function CompositionBrush(): winrt.microsoft.ui.composition.CompositionBrush;
-    overload function CompositionBrush(value: cxx.ConstRef<winrt.microsoft.ui.composition.CompositionBrush>): Void;
+    overload function CompositionBrush(value: ConstRef<winrt.microsoft.ui.composition.CompositionBrush>): Void;
     function OnConnected(): Void;
     function OnDisconnected(): Void;
     overload function FallbackColorProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

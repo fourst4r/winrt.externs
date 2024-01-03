@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.input;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Input.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Input::LosingFocusEventArgs")
 extern class LosingFocusEventArgs
@@ -9,7 +12,7 @@ extern class LosingFocusEventArgs
 {
     overload function OldFocusedElement(): winrt.microsoft.ui.xaml.DependencyObject;
     overload function NewFocusedElement(): winrt.microsoft.ui.xaml.DependencyObject;
-    overload function NewFocusedElement(value: cxx.ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): Void;
+    overload function NewFocusedElement(value: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): Void;
     overload function FocusState(): winrt.microsoft.ui.xaml.FocusState;
     overload function Direction(): winrt.microsoft.ui.xaml.input.FocusNavigationDirection;
     overload function Handled(): Bool;
@@ -19,5 +22,5 @@ extern class LosingFocusEventArgs
     overload function Cancel(value: Bool): Void;
     overload function CorrelationId(): winrt.Guid;
     function TryCancel(): Bool;
-    function TrySetNewFocusedElement(element: cxx.ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): Bool;
+    function TrySetNewFocusedElement(element: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): Bool;
 }

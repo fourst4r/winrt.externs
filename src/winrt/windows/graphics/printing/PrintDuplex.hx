@@ -2,7 +2,7 @@ package winrt.windows.graphics.printing;
 
 @:include("winrt/Windows.Graphics.Printing.h", true)
 @:native("winrt::Windows::Graphics::Printing::PrintDuplex")
-extern enum abstract PrintDuplex(cxx.num.Int32)
+extern enum abstract PrintDuplex(Int32)
 {
     @:native("winrt::Windows::Graphics::Printing::PrintDuplex::Default") final Default;
     @:native("winrt::Windows::Graphics::Printing::PrintDuplex::NotAvailable") final NotAvailable;

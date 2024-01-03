@@ -1,6 +1,9 @@
 package winrt.windows.security.authentication.web.provider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Security.Authentication.Web.Provider.h", true)
 @:native("winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderRequestTokenOperation")
 extern class WebAccountProviderRequestTokenOperation
@@ -11,10 +14,10 @@ extern class WebAccountProviderRequestTokenOperation
 {
     overload function ProviderRequest(): winrt.windows.security.authentication.web.provider.WebProviderTokenRequest;
     overload function ProviderResponses(): winrt.windows.foundation.collections.IVector<winrt.windows.security.authentication.web.provider.WebProviderTokenResponse> /* GenericTypeInstSig */;
-    overload function CacheExpirationTime(value: cxx.ConstRef<winrt.windows.foundation.DateTime>): Void;
+    overload function CacheExpirationTime(value: ConstRef<winrt.windows.foundation.DateTime>): Void;
     overload function CacheExpirationTime(): winrt.windows.foundation.DateTime;
     overload function Kind(): winrt.windows.security.authentication.web.provider.WebAccountProviderOperationKind;
     function ReportUserCanceled(): Void;
     function ReportCompleted(): Void;
-    function ReportError(value: cxx.ConstRef<winrt.windows.security.authentication.web.core.WebProviderError>): Void;
+    function ReportError(value: ConstRef<winrt.windows.security.authentication.web.core.WebProviderError>): Void;
 }

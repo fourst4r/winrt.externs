@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.composition.interactions;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Composition.Interactions.h", true)
 @:native("winrt::Microsoft::UI::Composition::Interactions::CompositionInteractionSourceCollection")
 extern class CompositionInteractionSourceCollection
@@ -10,7 +13,7 @@ extern class CompositionInteractionSourceCollection
 {
     function RemoveAll(): Void;
     function First(): winrt.windows.foundation.collections.IIterator<winrt.microsoft.ui.composition.interactions.ICompositionInteractionSource> /* GenericTypeInstSig */;
-    function Add(value: cxx.ConstRef<winrt.microsoft.ui.composition.interactions.ICompositionInteractionSource>): Void;
-    function Remove(value: cxx.ConstRef<winrt.microsoft.ui.composition.interactions.ICompositionInteractionSource>): Void;
-    overload function Count(): cxx.num.Int32;
+    function Add(value: ConstRef<winrt.microsoft.ui.composition.interactions.ICompositionInteractionSource>): Void;
+    function Remove(value: ConstRef<winrt.microsoft.ui.composition.interactions.ICompositionInteractionSource>): Void;
+    overload function Count(): Int32;
 }

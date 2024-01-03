@@ -4,5 +4,5 @@ package winrt.windows.networking.sockets;
 @:native("winrt::Windows::Networking::Sockets::SocketError")
 extern class SocketError
 {
-    static function GetStatus(hresult: cxx.num.Int32): winrt.windows.networking.sockets.SocketErrorStatus;
+    static function GetStatus(hresult: Int32): winrt.windows.networking.sockets.SocketErrorStatus;
 }

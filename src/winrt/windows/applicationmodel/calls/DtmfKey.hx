@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.calls;
 
 @:include("winrt/Windows.ApplicationModel.Calls.h", true)
 @:native("winrt::Windows::ApplicationModel::Calls::DtmfKey")
-extern enum abstract DtmfKey(cxx.num.Int32)
+extern enum abstract DtmfKey(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Calls::DtmfKey::D0") final D0;
     @:native("winrt::Windows::ApplicationModel::Calls::DtmfKey::D1") final D1;

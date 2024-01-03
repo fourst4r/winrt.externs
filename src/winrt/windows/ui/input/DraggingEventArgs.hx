@@ -1,6 +1,9 @@
 package winrt.windows.ui.input;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Input.h", true)
 @:native("winrt::Windows::UI::Input::DraggingEventArgs")
 extern class DraggingEventArgs
@@ -10,5 +13,5 @@ extern class DraggingEventArgs
     overload function PointerDeviceType(): winrt.windows.devices.input.PointerDeviceType;
     overload function Position(): winrt.windows.foundation.Point;
     overload function DraggingState(): winrt.windows.ui.input.DraggingState;
-    overload function ContactCount(): cxx.num.UInt32;
+    overload function ContactCount(): UInt32;
 }

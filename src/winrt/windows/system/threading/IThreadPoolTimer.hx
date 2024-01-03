@@ -1,6 +1,9 @@
 package winrt.windows.system.threading;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.System.Threading.h", true)
 @:native("winrt::Windows::System::Threading::IThreadPoolTimer")
 extern interface IThreadPoolTimer extends winrt.windows.foundation.IInspectable

@@ -2,7 +2,7 @@ package winrt.windows.graphics.imaging;
 
 @:include("winrt/Windows.Graphics.Imaging.h", true)
 @:native("winrt::Windows::Graphics::Imaging::PngFilterMode")
-extern enum abstract PngFilterMode(cxx.num.Int32)
+extern enum abstract PngFilterMode(Int32)
 {
     @:native("winrt::Windows::Graphics::Imaging::PngFilterMode::Automatic") final Automatic;
     @:native("winrt::Windows::Graphics::Imaging::PngFilterMode::None") final None;

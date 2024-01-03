@@ -5,5 +5,5 @@ package winrt.windows.security.credentials.ui;
 extern class UserConsentVerifier
 {
     static function CheckAvailabilityAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.security.credentials.ui.UserConsentVerifierAvailability> /* GenericTypeInstSig */;
-    static function RequestVerificationAsync(message: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.security.credentials.ui.UserConsentVerificationResult> /* GenericTypeInstSig */;
+    static function RequestVerificationAsync(message: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.security.credentials.ui.UserConsentVerificationResult> /* GenericTypeInstSig */;
 }

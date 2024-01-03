@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.automation;
 
 @:include("winrt/Windows.UI.Xaml.Automation.h", true)
 @:native("winrt::Windows::UI::Xaml::Automation::SynchronizedInputType")
-extern enum abstract SynchronizedInputType(cxx.num.Int32)
+extern enum abstract SynchronizedInputType(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Automation::SynchronizedInputType::KeyUp") final KeyUp;
     @:native("winrt::Windows::UI::Xaml::Automation::SynchronizedInputType::KeyDown") final KeyDown;

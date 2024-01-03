@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.automation.peers;
 
 @:include("winrt/Microsoft.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::PatternInterface")
-extern enum abstract PatternInterface(cxx.num.Int32)
+extern enum abstract PatternInterface(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::PatternInterface::Invoke") final Invoke;
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::PatternInterface::Selection") final Selection;

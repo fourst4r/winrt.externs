@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.automation.peers;
 
 @:include("winrt/Windows.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Windows::UI::Xaml::Automation::Peers::AutomationNavigationDirection")
-extern enum abstract AutomationNavigationDirection(cxx.num.Int32)
+extern enum abstract AutomationNavigationDirection(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Automation::Peers::AutomationNavigationDirection::Parent") final Parent;
     @:native("winrt::Windows::UI::Xaml::Automation::Peers::AutomationNavigationDirection::NextSibling") final NextSibling;

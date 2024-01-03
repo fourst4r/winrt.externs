@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.calls;
 
 @:include("winrt/Windows.ApplicationModel.Calls.h", true)
 @:native("winrt::Windows::ApplicationModel::Calls::PhoneCallStatus")
-extern enum abstract PhoneCallStatus(cxx.num.Int32)
+extern enum abstract PhoneCallStatus(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Calls::PhoneCallStatus::Lost") final Lost;
     @:native("winrt::Windows::ApplicationModel::Calls::PhoneCallStatus::Incoming") final Incoming;

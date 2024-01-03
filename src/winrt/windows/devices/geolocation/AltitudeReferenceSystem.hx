@@ -2,7 +2,7 @@ package winrt.windows.devices.geolocation;
 
 @:include("winrt/Windows.Devices.Geolocation.h", true)
 @:native("winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem")
-extern enum abstract AltitudeReferenceSystem(cxx.num.Int32)
+extern enum abstract AltitudeReferenceSystem(Int32)
 {
     @:native("winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem::Unspecified") final Unspecified;
     @:native("winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem::Terrain") final Terrain;

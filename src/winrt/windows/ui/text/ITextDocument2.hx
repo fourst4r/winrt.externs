@@ -1,6 +1,9 @@
 package winrt.windows.ui.text;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Text.h", true)
 @:native("winrt::Windows::UI::Text::ITextDocument2")
 extern interface ITextDocument2 extends winrt.windows.foundation.IInspectable

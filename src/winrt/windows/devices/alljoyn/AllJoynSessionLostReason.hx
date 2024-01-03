@@ -2,7 +2,7 @@ package winrt.windows.devices.alljoyn;
 
 @:include("winrt/Windows.Devices.AllJoyn.h", true)
 @:native("winrt::Windows::Devices::AllJoyn::AllJoynSessionLostReason")
-extern enum abstract AllJoynSessionLostReason(cxx.num.Int32)
+extern enum abstract AllJoynSessionLostReason(Int32)
 {
     @:native("winrt::Windows::Devices::AllJoyn::AllJoynSessionLostReason::None") final None;
     @:native("winrt::Windows::Devices::AllJoyn::AllJoynSessionLostReason::ProducerLeftSession") final ProducerLeftSession;

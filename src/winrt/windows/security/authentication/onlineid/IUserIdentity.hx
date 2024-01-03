@@ -1,6 +1,9 @@
 package winrt.windows.security.authentication.onlineid;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Security.Authentication.OnlineId.h", true)
 @:native("winrt::Windows::Security::Authentication::OnlineId::IUserIdentity")
 extern interface IUserIdentity extends winrt.windows.foundation.IInspectable

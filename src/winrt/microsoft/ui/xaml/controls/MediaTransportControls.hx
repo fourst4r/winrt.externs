@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::MediaTransportControls")
 extern class MediaTransportControls
@@ -51,15 +54,15 @@ extern class MediaTransportControls
     overload function IsPreviousTrackButtonVisible(): Bool;
     overload function IsPreviousTrackButtonVisible(value: Bool): Void;
     overload function FastPlayFallbackBehaviour(): winrt.microsoft.ui.xaml.media.FastPlayFallbackBehaviour;
-    overload function FastPlayFallbackBehaviour(value: cxx.ConstRef<winrt.microsoft.ui.xaml.media.FastPlayFallbackBehaviour>): Void;
+    overload function FastPlayFallbackBehaviour(value: ConstRef<winrt.microsoft.ui.xaml.media.FastPlayFallbackBehaviour>): Void;
     overload function ShowAndHideAutomatically(): Bool;
     overload function ShowAndHideAutomatically(value: Bool): Void;
     overload function IsRepeatEnabled(): Bool;
     overload function IsRepeatEnabled(value: Bool): Void;
     overload function IsRepeatButtonVisible(): Bool;
     overload function IsRepeatButtonVisible(value: Bool): Void;
-    overload function ThumbnailRequested(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.microsoft.ui.xaml.controls.MediaTransportControls, winrt.microsoft.ui.xaml.media.MediaTransportControlsThumbnailRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function ThumbnailRequested(token: cxx.ConstRef<winrt.EventToken>): Void;
+    overload function ThumbnailRequested(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.microsoft.ui.xaml.controls.MediaTransportControls, winrt.microsoft.ui.xaml.media.MediaTransportControlsThumbnailRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function ThumbnailRequested(token: ConstRef<winrt.EventToken>): Void;
     function Show(): Void;
     function Hide(): Void;
     overload function IsZoomButtonVisibleProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

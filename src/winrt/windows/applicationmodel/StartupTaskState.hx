@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel;
 
 @:include("winrt/Windows.ApplicationModel.h", true)
 @:native("winrt::Windows::ApplicationModel::StartupTaskState")
-extern enum abstract StartupTaskState(cxx.num.Int32)
+extern enum abstract StartupTaskState(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::StartupTaskState::Disabled") final Disabled;
     @:native("winrt::Windows::ApplicationModel::StartupTaskState::DisabledByUser") final DisabledByUser;

@@ -1,6 +1,9 @@
 package winrt.windows.web.ui.interop;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Web.UI.Interop.h", true)
 @:native("winrt::Windows::Web::UI::Interop::IWebViewControlAcceleratorKeyPressedEventArgs")
 extern interface IWebViewControlAcceleratorKeyPressedEventArgs extends winrt.windows.foundation.IInspectable

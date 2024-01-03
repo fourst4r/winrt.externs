@@ -2,7 +2,7 @@ package winrt.windows.web.http;
 
 @:include("winrt/Windows.Web.Http.h", true)
 @:native("winrt::Windows::Web::Http::HttpStatusCode")
-extern enum abstract HttpStatusCode(cxx.num.Int32)
+extern enum abstract HttpStatusCode(Int32)
 {
     @:native("winrt::Windows::Web::Http::HttpStatusCode::None") final None;
     @:native("winrt::Windows::Web::Http::HttpStatusCode::Continue") final Continue;

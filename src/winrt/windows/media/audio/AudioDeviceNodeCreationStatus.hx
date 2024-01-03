@@ -2,7 +2,7 @@ package winrt.windows.media.audio;
 
 @:include("winrt/Windows.Media.Audio.h", true)
 @:native("winrt::Windows::Media::Audio::AudioDeviceNodeCreationStatus")
-extern enum abstract AudioDeviceNodeCreationStatus(cxx.num.Int32)
+extern enum abstract AudioDeviceNodeCreationStatus(Int32)
 {
     @:native("winrt::Windows::Media::Audio::AudioDeviceNodeCreationStatus::Success") final Success;
     @:native("winrt::Windows::Media::Audio::AudioDeviceNodeCreationStatus::DeviceNotAvailable") final DeviceNotAvailable;

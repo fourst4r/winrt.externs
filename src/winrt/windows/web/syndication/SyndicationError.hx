@@ -4,5 +4,5 @@ package winrt.windows.web.syndication;
 @:native("winrt::Windows::Web::Syndication::SyndicationError")
 extern class SyndicationError
 {
-    static function GetStatus(hresult: cxx.num.Int32): winrt.windows.web.syndication.SyndicationErrorStatus;
+    static function GetStatus(hresult: Int32): winrt.windows.web.syndication.SyndicationErrorStatus;
 }

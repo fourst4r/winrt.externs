@@ -1,18 +1,21 @@
 package winrt.windows.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::IItemsControlOverrides")
 extern interface IItemsControlOverrides extends winrt.windows.foundation.IInspectable
 {
-    function IsItemItsOwnContainerOverride(item: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Bool;
+    function IsItemItsOwnContainerOverride(item: ConstRef<winrt.windows.foundation.IInspectable>): Bool;
     function GetContainerForItemOverride(): winrt.windows.ui.xaml.DependencyObject;
-    function ClearContainerForItemOverride(element: cxx.ConstRef<winrt.windows.ui.xaml.DependencyObject>, item: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
-    function PrepareContainerForItemOverride(element: cxx.ConstRef<winrt.windows.ui.xaml.DependencyObject>, item: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
-    function OnItemsChanged(e: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
-    function OnItemContainerStyleChanged(oldItemContainerStyle: cxx.ConstRef<winrt.windows.ui.xaml.Style>, newItemContainerStyle: cxx.ConstRef<winrt.windows.ui.xaml.Style>): Void;
-    function OnItemContainerStyleSelectorChanged(oldItemContainerStyleSelector: cxx.ConstRef<winrt.windows.ui.xaml.controls.StyleSelector>, newItemContainerStyleSelector: cxx.ConstRef<winrt.windows.ui.xaml.controls.StyleSelector>): Void;
-    function OnItemTemplateChanged(oldItemTemplate: cxx.ConstRef<winrt.windows.ui.xaml.DataTemplate>, newItemTemplate: cxx.ConstRef<winrt.windows.ui.xaml.DataTemplate>): Void;
-    function OnItemTemplateSelectorChanged(oldItemTemplateSelector: cxx.ConstRef<winrt.windows.ui.xaml.controls.DataTemplateSelector>, newItemTemplateSelector: cxx.ConstRef<winrt.windows.ui.xaml.controls.DataTemplateSelector>): Void;
-    function OnGroupStyleSelectorChanged(oldGroupStyleSelector: cxx.ConstRef<winrt.windows.ui.xaml.controls.GroupStyleSelector>, newGroupStyleSelector: cxx.ConstRef<winrt.windows.ui.xaml.controls.GroupStyleSelector>): Void;
+    function ClearContainerForItemOverride(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>, item: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    function PrepareContainerForItemOverride(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>, item: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    function OnItemsChanged(e: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    function OnItemContainerStyleChanged(oldItemContainerStyle: ConstRef<winrt.windows.ui.xaml.Style>, newItemContainerStyle: ConstRef<winrt.windows.ui.xaml.Style>): Void;
+    function OnItemContainerStyleSelectorChanged(oldItemContainerStyleSelector: ConstRef<winrt.windows.ui.xaml.controls.StyleSelector>, newItemContainerStyleSelector: ConstRef<winrt.windows.ui.xaml.controls.StyleSelector>): Void;
+    function OnItemTemplateChanged(oldItemTemplate: ConstRef<winrt.windows.ui.xaml.DataTemplate>, newItemTemplate: ConstRef<winrt.windows.ui.xaml.DataTemplate>): Void;
+    function OnItemTemplateSelectorChanged(oldItemTemplateSelector: ConstRef<winrt.windows.ui.xaml.controls.DataTemplateSelector>, newItemTemplateSelector: ConstRef<winrt.windows.ui.xaml.controls.DataTemplateSelector>): Void;
+    function OnGroupStyleSelectorChanged(oldGroupStyleSelector: ConstRef<winrt.windows.ui.xaml.controls.GroupStyleSelector>, newGroupStyleSelector: ConstRef<winrt.windows.ui.xaml.controls.GroupStyleSelector>): Void;
 }

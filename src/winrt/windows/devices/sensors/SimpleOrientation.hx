@@ -2,7 +2,7 @@ package winrt.windows.devices.sensors;
 
 @:include("winrt/Windows.Devices.Sensors.h", true)
 @:native("winrt::Windows::Devices::Sensors::SimpleOrientation")
-extern enum abstract SimpleOrientation(cxx.num.Int32)
+extern enum abstract SimpleOrientation(Int32)
 {
     @:native("winrt::Windows::Devices::Sensors::SimpleOrientation::NotRotated") final NotRotated;
     @:native("winrt::Windows::Devices::Sensors::SimpleOrientation::Rotated90DegreesCounterclockwise") final Rotated90DegreesCounterclockwise;

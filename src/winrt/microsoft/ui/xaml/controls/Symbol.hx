@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.controls;
 
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::Symbol")
-extern enum abstract Symbol(cxx.num.Int32)
+extern enum abstract Symbol(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Controls::Symbol::Previous") final Previous;
     @:native("winrt::Microsoft::UI::Xaml::Controls::Symbol::Next") final Next;

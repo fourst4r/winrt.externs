@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.store;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Store.h", true)
 @:native("winrt::Windows::ApplicationModel::Store::LicenseInformation")
 extern class LicenseInformation
@@ -10,6 +13,6 @@ extern class LicenseInformation
     overload function IsActive(): Bool;
     overload function IsTrial(): Bool;
     overload function ExpirationDate(): winrt.windows.foundation.DateTime;
-    overload function LicenseChanged(handler: cxx.ConstRef<winrt.windows.applicationmodel.store.LicenseChangedEventHandler>): winrt.EventToken;
-    @:noExcept overload function LicenseChanged(cookie: cxx.ConstRef<winrt.EventToken>): Void;
+    overload function LicenseChanged(handler: ConstRef<winrt.windows.applicationmodel.store.LicenseChangedEventHandler>): winrt.EventToken;
+    @:noExcept overload function LicenseChanged(cookie: ConstRef<winrt.EventToken>): Void;
 }

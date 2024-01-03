@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.media.animation;
 
 @:include("winrt/Windows.UI.Xaml.Media.Animation.h", true)
 @:native("winrt::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionEffect")
-extern enum abstract SlideNavigationTransitionEffect(cxx.num.Int32)
+extern enum abstract SlideNavigationTransitionEffect(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionEffect::FromBottom") final FromBottom;
     @:native("winrt::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionEffect::FromLeft") final FromLeft;

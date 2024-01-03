@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.media;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Media.h", true)
 @:native("winrt::Windows::UI::Xaml::Media::PlaneProjection")
 extern class PlaneProjection
@@ -8,30 +11,30 @@ extern class PlaneProjection
     implements winrt.windows.ui.xaml.media.IPlaneProjection
 {
     function new();
-    overload function LocalOffsetX(): cxx.num.Float64;
-    overload function LocalOffsetX(value: cxx.num.Float64): Void;
-    overload function LocalOffsetY(): cxx.num.Float64;
-    overload function LocalOffsetY(value: cxx.num.Float64): Void;
-    overload function LocalOffsetZ(): cxx.num.Float64;
-    overload function LocalOffsetZ(value: cxx.num.Float64): Void;
-    overload function RotationX(): cxx.num.Float64;
-    overload function RotationX(value: cxx.num.Float64): Void;
-    overload function RotationY(): cxx.num.Float64;
-    overload function RotationY(value: cxx.num.Float64): Void;
-    overload function RotationZ(): cxx.num.Float64;
-    overload function RotationZ(value: cxx.num.Float64): Void;
-    overload function CenterOfRotationX(): cxx.num.Float64;
-    overload function CenterOfRotationX(value: cxx.num.Float64): Void;
-    overload function CenterOfRotationY(): cxx.num.Float64;
-    overload function CenterOfRotationY(value: cxx.num.Float64): Void;
-    overload function CenterOfRotationZ(): cxx.num.Float64;
-    overload function CenterOfRotationZ(value: cxx.num.Float64): Void;
-    overload function GlobalOffsetX(): cxx.num.Float64;
-    overload function GlobalOffsetX(value: cxx.num.Float64): Void;
-    overload function GlobalOffsetY(): cxx.num.Float64;
-    overload function GlobalOffsetY(value: cxx.num.Float64): Void;
-    overload function GlobalOffsetZ(): cxx.num.Float64;
-    overload function GlobalOffsetZ(value: cxx.num.Float64): Void;
+    overload function LocalOffsetX(): Float64;
+    overload function LocalOffsetX(value: Float64): Void;
+    overload function LocalOffsetY(): Float64;
+    overload function LocalOffsetY(value: Float64): Void;
+    overload function LocalOffsetZ(): Float64;
+    overload function LocalOffsetZ(value: Float64): Void;
+    overload function RotationX(): Float64;
+    overload function RotationX(value: Float64): Void;
+    overload function RotationY(): Float64;
+    overload function RotationY(value: Float64): Void;
+    overload function RotationZ(): Float64;
+    overload function RotationZ(value: Float64): Void;
+    overload function CenterOfRotationX(): Float64;
+    overload function CenterOfRotationX(value: Float64): Void;
+    overload function CenterOfRotationY(): Float64;
+    overload function CenterOfRotationY(value: Float64): Void;
+    overload function CenterOfRotationZ(): Float64;
+    overload function CenterOfRotationZ(value: Float64): Void;
+    overload function GlobalOffsetX(): Float64;
+    overload function GlobalOffsetX(value: Float64): Void;
+    overload function GlobalOffsetY(): Float64;
+    overload function GlobalOffsetY(value: Float64): Void;
+    overload function GlobalOffsetZ(): Float64;
+    overload function GlobalOffsetZ(value: Float64): Void;
     overload function ProjectionMatrix(): winrt.windows.ui.xaml.media.media3d.Matrix3D;
     overload function LocalOffsetXProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function LocalOffsetYProperty(): winrt.windows.ui.xaml.DependencyProperty;

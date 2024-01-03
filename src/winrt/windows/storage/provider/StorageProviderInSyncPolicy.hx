@@ -2,7 +2,7 @@ package winrt.windows.storage.provider;
 
 @:include("winrt/Windows.Storage.Provider.h", true)
 @:native("winrt::Windows::Storage::Provider::StorageProviderInSyncPolicy")
-extern enum abstract StorageProviderInSyncPolicy(cxx.num.UInt32)
+extern enum abstract StorageProviderInSyncPolicy(UInt32)
 {
     @:native("winrt::Windows::Storage::Provider::StorageProviderInSyncPolicy::Default") final Default;
     @:native("winrt::Windows::Storage::Provider::StorageProviderInSyncPolicy::FileCreationTime") final FileCreationTime;

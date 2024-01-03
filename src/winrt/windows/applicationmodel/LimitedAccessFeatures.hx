@@ -4,5 +4,5 @@ package winrt.windows.applicationmodel;
 @:native("winrt::Windows::ApplicationModel::LimitedAccessFeatures")
 extern class LimitedAccessFeatures
 {
-    static function TryUnlockFeature(featureId: cxx.ConstRef<winrt.HString>, token: cxx.ConstRef<winrt.HString>, attestation: cxx.ConstRef<winrt.HString>): winrt.windows.applicationmodel.LimitedAccessFeatureRequestResult;
+    static function TryUnlockFeature(featureId: ConstRef<winrt.HString>, token: ConstRef<winrt.HString>, attestation: ConstRef<winrt.HString>): winrt.windows.applicationmodel.LimitedAccessFeatureRequestResult;
 }

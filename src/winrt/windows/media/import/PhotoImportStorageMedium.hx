@@ -1,6 +1,9 @@
 package winrt.windows.media.import;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Import.h", true)
 @:native("winrt::Windows::Media::Import::PhotoImportStorageMedium")
 extern class PhotoImportStorageMedium
@@ -11,7 +14,7 @@ extern class PhotoImportStorageMedium
     overload function SerialNumber(): winrt.HString;
     overload function StorageMediumType(): winrt.windows.media.import.PhotoImportStorageMediumType;
     overload function SupportedAccessMode(): winrt.windows.media.import.PhotoImportAccessMode;
-    overload function CapacityInBytes(): cxx.num.UInt64;
-    overload function AvailableSpaceInBytes(): cxx.num.UInt64;
+    overload function CapacityInBytes(): UInt64;
+    overload function AvailableSpaceInBytes(): UInt64;
     function Refresh(): Void;
 }

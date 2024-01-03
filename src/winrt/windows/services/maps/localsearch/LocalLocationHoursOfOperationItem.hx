@@ -1,6 +1,9 @@
 package winrt.windows.services.maps.localsearch;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Services.Maps.LocalSearch.h", true)
 @:native("winrt::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem")
 extern class LocalLocationHoursOfOperationItem

@@ -2,7 +2,7 @@ package winrt.windows.ui.input.preview.injection;
 
 @:include("winrt/Windows.UI.Input.Preview.Injection.h", true)
 @:native("winrt::Windows::UI::Input::Preview::Injection::InjectedInputButtonChangeKind")
-extern enum abstract InjectedInputButtonChangeKind(cxx.num.Int32)
+extern enum abstract InjectedInputButtonChangeKind(Int32)
 {
     @:native("winrt::Windows::UI::Input::Preview::Injection::InjectedInputButtonChangeKind::None") final None;
     @:native("winrt::Windows::UI::Input::Preview::Injection::InjectedInputButtonChangeKind::FirstButtonDown") final FirstButtonDown;

@@ -2,7 +2,7 @@ package winrt.windows.devices.sms;
 
 @:include("winrt/Windows.Devices.Sms.h", true)
 @:native("winrt::Windows::Devices::Sms::SmsGeographicalScope")
-extern enum abstract SmsGeographicalScope(cxx.num.Int32)
+extern enum abstract SmsGeographicalScope(Int32)
 {
     @:native("winrt::Windows::Devices::Sms::SmsGeographicalScope::None") final None;
     @:native("winrt::Windows::Devices::Sms::SmsGeographicalScope::CellWithImmediateDisplay") final CellWithImmediateDisplay;

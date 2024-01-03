@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::HubSection")
 extern class HubSection
@@ -9,11 +12,11 @@ extern class HubSection
 {
     function new();
     overload function Header(): winrt.windows.foundation.IInspectable;
-    overload function Header(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Header(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function HeaderTemplate(): winrt.microsoft.ui.xaml.DataTemplate;
-    overload function HeaderTemplate(value: cxx.ConstRef<winrt.microsoft.ui.xaml.DataTemplate>): Void;
+    overload function HeaderTemplate(value: ConstRef<winrt.microsoft.ui.xaml.DataTemplate>): Void;
     overload function ContentTemplate(): winrt.microsoft.ui.xaml.DataTemplate;
-    overload function ContentTemplate(value: cxx.ConstRef<winrt.microsoft.ui.xaml.DataTemplate>): Void;
+    overload function ContentTemplate(value: ConstRef<winrt.microsoft.ui.xaml.DataTemplate>): Void;
     overload function IsHeaderInteractive(): Bool;
     overload function IsHeaderInteractive(value: Bool): Void;
     overload function HeaderProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.input;
 
 @:include("winrt/Windows.UI.Xaml.Input.h", true)
 @:native("winrt::Windows::UI::Xaml::Input::FocusNavigationDirection")
-extern enum abstract FocusNavigationDirection(cxx.num.Int32)
+extern enum abstract FocusNavigationDirection(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Input::FocusNavigationDirection::Next") final Next;
     @:native("winrt::Windows::UI::Xaml::Input::FocusNavigationDirection::Previous") final Previous;

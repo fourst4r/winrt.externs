@@ -2,7 +2,7 @@ package winrt.windows.devices.geolocation;
 
 @:include("winrt/Windows.Devices.Geolocation.h", true)
 @:native("winrt::Windows::Devices::Geolocation::PositionSource")
-extern enum abstract PositionSource(cxx.num.Int32)
+extern enum abstract PositionSource(Int32)
 {
     @:native("winrt::Windows::Devices::Geolocation::PositionSource::Cellular") final Cellular;
     @:native("winrt::Windows::Devices::Geolocation::PositionSource::Satellite") final Satellite;

@@ -5,7 +5,7 @@ package winrt.windows.ui.notifications;
 extern class TileFlyoutUpdateManager
 {
     static overload function CreateTileFlyoutUpdaterForApplication(): winrt.windows.ui.notifications.TileFlyoutUpdater;
-    static overload function CreateTileFlyoutUpdaterForApplication(applicationId: cxx.ConstRef<winrt.HString>): winrt.windows.ui.notifications.TileFlyoutUpdater;
-    static function CreateTileFlyoutUpdaterForSecondaryTile(tileId: cxx.ConstRef<winrt.HString>): winrt.windows.ui.notifications.TileFlyoutUpdater;
-    static function GetTemplateContent(type: cxx.ConstRef<winrt.windows.ui.notifications.TileFlyoutTemplateType>): winrt.windows.data.xml.dom.XmlDocument;
+    static overload function CreateTileFlyoutUpdaterForApplication(applicationId: ConstRef<winrt.HString>): winrt.windows.ui.notifications.TileFlyoutUpdater;
+    static function CreateTileFlyoutUpdaterForSecondaryTile(tileId: ConstRef<winrt.HString>): winrt.windows.ui.notifications.TileFlyoutUpdater;
+    static function GetTemplateContent(type: ConstRef<winrt.windows.ui.notifications.TileFlyoutTemplateType>): winrt.windows.data.xml.dom.XmlDocument;
 }

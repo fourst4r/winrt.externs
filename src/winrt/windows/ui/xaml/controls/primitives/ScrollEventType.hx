@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.controls.primitives;
 
 @:include("winrt/Windows.UI.Xaml.Controls.Primitives.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::Primitives::ScrollEventType")
-extern enum abstract ScrollEventType(cxx.num.Int32)
+extern enum abstract ScrollEventType(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Controls::Primitives::ScrollEventType::SmallDecrement") final SmallDecrement;
     @:native("winrt::Windows::UI::Xaml::Controls::Primitives::ScrollEventType::SmallIncrement") final SmallIncrement;

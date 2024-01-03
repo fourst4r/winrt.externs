@@ -1,6 +1,9 @@
 package winrt.windows.devices.bluetooth.rfcomm;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Bluetooth.Rfcomm.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult")
 extern class RfcommDeviceServicesResult

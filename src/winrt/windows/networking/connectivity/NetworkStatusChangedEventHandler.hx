@@ -2,4 +2,4 @@ package winrt.windows.networking.connectivity;
 
 
 @:extern 
-typedef NetworkStatusChangedEventHandler = (sender: cxx.ConstRef<winrt.windows.foundation.IInspectable>)->Void;
+typedef NetworkStatusChangedEventHandler = Fn<(sender: ConstRef<winrt.windows.foundation.IInspectable>)->Void>;

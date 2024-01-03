@@ -1,6 +1,9 @@
 package winrt.windows.ai.machinelearning;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.AI.MachineLearning.h", true)
 @:native("winrt::Windows::AI::MachineLearning::ImageFeatureDescriptor")
 extern class ImageFeatureDescriptor
@@ -10,8 +13,8 @@ extern class ImageFeatureDescriptor
 {
     overload function BitmapPixelFormat(): winrt.windows.graphics.imaging.BitmapPixelFormat;
     overload function BitmapAlphaMode(): winrt.windows.graphics.imaging.BitmapAlphaMode;
-    overload function Width(): cxx.num.UInt32;
-    overload function Height(): cxx.num.UInt32;
+    overload function Width(): UInt32;
+    overload function Height(): UInt32;
     overload function PixelRange(): winrt.windows.ai.machinelearning.LearningModelPixelRange;
     overload function Name(): winrt.HString;
     overload function Description(): winrt.HString;

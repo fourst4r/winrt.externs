@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.controls;
 
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::SelectionMode")
-extern enum abstract SelectionMode(cxx.num.Int32)
+extern enum abstract SelectionMode(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Controls::SelectionMode::Single") final Single;
     @:native("winrt::Microsoft::UI::Xaml::Controls::SelectionMode::Multiple") final Multiple;

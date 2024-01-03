@@ -2,7 +2,7 @@ package winrt.windows.system;
 
 @:include("winrt/Windows.System.h", true)
 @:native("winrt::Windows::System::UserAgeConsentResult")
-extern enum abstract UserAgeConsentResult(cxx.num.Int32)
+extern enum abstract UserAgeConsentResult(Int32)
 {
     @:native("winrt::Windows::System::UserAgeConsentResult::NotEnforced") final NotEnforced;
     @:native("winrt::Windows::System::UserAgeConsentResult::Included") final Included;

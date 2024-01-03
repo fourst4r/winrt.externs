@@ -2,7 +2,7 @@ package winrt.windows.foundation.diagnostics;
 
 @:include("winrt/Windows.Foundation.Diagnostics.h", true)
 @:native("winrt::Windows::Foundation::Diagnostics::LoggingOpcode")
-extern enum abstract LoggingOpcode(cxx.num.Int32)
+extern enum abstract LoggingOpcode(Int32)
 {
     @:native("winrt::Windows::Foundation::Diagnostics::LoggingOpcode::Info") final Info;
     @:native("winrt::Windows::Foundation::Diagnostics::LoggingOpcode::Start") final Start;

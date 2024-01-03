@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml;
 
 @:include("winrt/Microsoft.UI.Xaml.h", true)
 @:native("winrt::Microsoft::UI::Xaml::FontVariants")
-extern enum abstract FontVariants(cxx.num.Int32)
+extern enum abstract FontVariants(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::FontVariants::Normal") final Normal;
     @:native("winrt::Microsoft::UI::Xaml::FontVariants::Superscript") final Superscript;

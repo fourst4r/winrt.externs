@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.email;
 
 @:include("winrt/Windows.ApplicationModel.Email.h", true)
 @:native("winrt::Windows::ApplicationModel::Email::EmailQuerySearchFields")
-extern enum abstract EmailQuerySearchFields(cxx.num.UInt32)
+extern enum abstract EmailQuerySearchFields(UInt32)
 {
     @:native("winrt::Windows::ApplicationModel::Email::EmailQuerySearchFields::None") final None;
     @:native("winrt::Windows::ApplicationModel::Email::EmailQuerySearchFields::Subject") final Subject;

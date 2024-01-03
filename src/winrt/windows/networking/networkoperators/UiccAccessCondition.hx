@@ -2,7 +2,7 @@ package winrt.windows.networking.networkoperators;
 
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::UiccAccessCondition")
-extern enum abstract UiccAccessCondition(cxx.num.Int32)
+extern enum abstract UiccAccessCondition(Int32)
 {
     @:native("winrt::Windows::Networking::NetworkOperators::UiccAccessCondition::AlwaysAllowed") final AlwaysAllowed;
     @:native("winrt::Windows::Networking::NetworkOperators::UiccAccessCondition::Pin1") final Pin1;

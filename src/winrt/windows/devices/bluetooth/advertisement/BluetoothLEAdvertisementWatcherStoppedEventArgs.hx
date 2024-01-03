@@ -1,6 +1,9 @@
 package winrt.windows.devices.bluetooth.advertisement;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Bluetooth.Advertisement.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcherStoppedEventArgs")
 extern class BluetoothLEAdvertisementWatcherStoppedEventArgs

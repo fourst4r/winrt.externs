@@ -1,6 +1,9 @@
 package winrt.windows.ui.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Core.h", true)
 @:native("winrt::Windows::UI::Core::ICoreWindow5")
 extern interface ICoreWindow5 extends winrt.windows.foundation.IInspectable

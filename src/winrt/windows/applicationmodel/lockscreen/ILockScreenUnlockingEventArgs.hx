@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.lockscreen;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.LockScreen.h", true)
 @:native("winrt::Windows::ApplicationModel::LockScreen::ILockScreenUnlockingEventArgs")
 extern interface ILockScreenUnlockingEventArgs extends winrt.windows.foundation.IInspectable

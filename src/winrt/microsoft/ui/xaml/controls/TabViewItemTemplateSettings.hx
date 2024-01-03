@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::TabViewItemTemplateSettings")
 extern class TabViewItemTemplateSettings
@@ -10,9 +13,9 @@ extern class TabViewItemTemplateSettings
 {
     function new();
     overload function IconElement(): winrt.microsoft.ui.xaml.controls.IconElement;
-    overload function IconElement(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.IconElement>): Void;
+    overload function IconElement(value: ConstRef<winrt.microsoft.ui.xaml.controls.IconElement>): Void;
     overload function TabGeometry(): winrt.microsoft.ui.xaml.media.Geometry;
-    overload function TabGeometry(value: cxx.ConstRef<winrt.microsoft.ui.xaml.media.Geometry>): Void;
+    overload function TabGeometry(value: ConstRef<winrt.microsoft.ui.xaml.media.Geometry>): Void;
     overload function TabGeometryProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function IconElementProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function IconElementProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

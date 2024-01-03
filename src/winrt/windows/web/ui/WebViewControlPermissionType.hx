@@ -2,7 +2,7 @@ package winrt.windows.web.ui;
 
 @:include("winrt/Windows.Web.UI.h", true)
 @:native("winrt::Windows::Web::UI::WebViewControlPermissionType")
-extern enum abstract WebViewControlPermissionType(cxx.num.Int32)
+extern enum abstract WebViewControlPermissionType(Int32)
 {
     @:native("winrt::Windows::Web::UI::WebViewControlPermissionType::Geolocation") final Geolocation;
     @:native("winrt::Windows::Web::UI::WebViewControlPermissionType::UnlimitedIndexedDBQuota") final UnlimitedIndexedDBQuota;

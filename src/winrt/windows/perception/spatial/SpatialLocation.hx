@@ -1,6 +1,9 @@
 package winrt.windows.perception.spatial;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Perception.Spatial.h", true)
 @:native("winrt::Windows::Perception::Spatial::SpatialLocation")
 extern class SpatialLocation

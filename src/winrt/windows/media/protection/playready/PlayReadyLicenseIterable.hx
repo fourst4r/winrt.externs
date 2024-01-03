@@ -1,6 +1,9 @@
 package winrt.windows.media.protection.playready;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Protection.PlayReady.h", true)
 @:native("winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterable")
 extern class PlayReadyLicenseIterable
@@ -8,6 +11,6 @@ extern class PlayReadyLicenseIterable
 {
     function new();
     @:native("winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterable")
-    static overload function make(contentHeader: cxx.ConstRef<winrt.windows.media.protection.playready.PlayReadyContentHeader>, fullyEvaluated: Bool): winrt.windows.media.protection.playready.PlayReadyLicenseIterable;
+    static overload function make(contentHeader: ConstRef<winrt.windows.media.protection.playready.PlayReadyContentHeader>, fullyEvaluated: Bool): winrt.windows.media.protection.playready.PlayReadyLicenseIterable;
     function First(): winrt.windows.foundation.collections.IIterator<winrt.windows.media.protection.playready.IPlayReadyLicense> /* GenericTypeInstSig */;
 }

@@ -2,7 +2,7 @@ package winrt.windows.services.maps;
 
 @:include("winrt/Windows.Services.Maps.h", true)
 @:native("winrt::Windows::Services::Maps::TrafficCongestion")
-extern enum abstract TrafficCongestion(cxx.num.Int32)
+extern enum abstract TrafficCongestion(Int32)
 {
     @:native("winrt::Windows::Services::Maps::TrafficCongestion::Unknown") final Unknown;
     @:native("winrt::Windows::Services::Maps::TrafficCongestion::Light") final Light;

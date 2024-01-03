@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.h", true)
 @:native("winrt::Windows::ApplicationModel::AppInfo")
 extern class AppInfo
@@ -17,9 +20,9 @@ extern class AppInfo
     overload function ExecutionContext(): winrt.windows.applicationmodel.AppExecutionContext;
     overload function SupportedFileExtensions(): winrt.ComArray<winrt.HString>;
     overload function Current(): winrt.windows.applicationmodel.AppInfo;
-    function GetFromAppUserModelId(appUserModelId: cxx.ConstRef<winrt.HString>): winrt.windows.applicationmodel.AppInfo;
-    function GetFromAppUserModelIdForUser(user: cxx.ConstRef<winrt.windows.system.User>, appUserModelId: cxx.ConstRef<winrt.HString>): winrt.windows.applicationmodel.AppInfo;
+    function GetFromAppUserModelId(appUserModelId: ConstRef<winrt.HString>): winrt.windows.applicationmodel.AppInfo;
+    function GetFromAppUserModelIdForUser(user: ConstRef<winrt.windows.system.User>, appUserModelId: ConstRef<winrt.HString>): winrt.windows.applicationmodel.AppInfo;
     static overload function Current(): winrt.windows.applicationmodel.AppInfo;
-    static function GetFromAppUserModelId(appUserModelId: cxx.ConstRef<winrt.HString>): winrt.windows.applicationmodel.AppInfo;
-    static function GetFromAppUserModelIdForUser(user: cxx.ConstRef<winrt.windows.system.User>, appUserModelId: cxx.ConstRef<winrt.HString>): winrt.windows.applicationmodel.AppInfo;
+    static function GetFromAppUserModelId(appUserModelId: ConstRef<winrt.HString>): winrt.windows.applicationmodel.AppInfo;
+    static function GetFromAppUserModelIdForUser(user: ConstRef<winrt.windows.system.User>, appUserModelId: ConstRef<winrt.HString>): winrt.windows.applicationmodel.AppInfo;
 }

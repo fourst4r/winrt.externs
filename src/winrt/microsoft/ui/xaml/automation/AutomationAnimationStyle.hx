@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.automation;
 
 @:include("winrt/Microsoft.UI.Xaml.Automation.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::AutomationAnimationStyle")
-extern enum abstract AutomationAnimationStyle(cxx.num.Int32)
+extern enum abstract AutomationAnimationStyle(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Automation::AutomationAnimationStyle::None") final None;
     @:native("winrt::Microsoft::UI::Xaml::Automation::AutomationAnimationStyle::LasVegasLights") final LasVegasLights;

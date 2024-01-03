@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.datatransfer.dragdrop.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.DataTransfer.DragDrop.Core.h", true)
 @:native("winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDragInfo")
 extern interface ICoreDragInfo extends winrt.windows.foundation.IInspectable

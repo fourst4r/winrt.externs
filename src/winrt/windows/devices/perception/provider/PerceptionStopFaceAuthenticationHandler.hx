@@ -2,4 +2,4 @@ package winrt.windows.devices.perception.provider;
 
 
 @:extern 
-typedef PerceptionStopFaceAuthenticationHandler = (sender: cxx.ConstRef<winrt.windows.devices.perception.provider.PerceptionFaceAuthenticationGroup>)->Void;
+typedef PerceptionStopFaceAuthenticationHandler = Fn<(sender: ConstRef<winrt.windows.devices.perception.provider.PerceptionFaceAuthenticationGroup>)->Void>;

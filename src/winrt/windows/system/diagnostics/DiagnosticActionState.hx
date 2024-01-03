@@ -2,7 +2,7 @@ package winrt.windows.system.diagnostics;
 
 @:include("winrt/Windows.System.Diagnostics.h", true)
 @:native("winrt::Windows::System::Diagnostics::DiagnosticActionState")
-extern enum abstract DiagnosticActionState(cxx.num.Int32)
+extern enum abstract DiagnosticActionState(Int32)
 {
     @:native("winrt::Windows::System::Diagnostics::DiagnosticActionState::Initializing") final Initializing;
     @:native("winrt::Windows::System::Diagnostics::DiagnosticActionState::Downloading") final Downloading;

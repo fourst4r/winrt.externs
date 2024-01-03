@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.controls.primitives;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.Primitives.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::Primitives::TickBar")
 extern class TickBar
@@ -9,7 +12,7 @@ extern class TickBar
 {
     function new();
     overload function Fill(): winrt.windows.ui.xaml.media.Brush;
-    overload function Fill(value: cxx.ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
+    overload function Fill(value: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
     overload function FillProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function FillProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

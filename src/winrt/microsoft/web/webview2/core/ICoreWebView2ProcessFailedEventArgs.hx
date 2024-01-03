@@ -1,6 +1,9 @@
 package winrt.microsoft.web.webview2.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.Web.WebView2.Core.h", true)
 @:native("winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessFailedEventArgs")
 extern interface ICoreWebView2ProcessFailedEventArgs extends winrt.windows.foundation.IInspectable

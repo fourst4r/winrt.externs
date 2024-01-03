@@ -1,11 +1,14 @@
 package winrt.windows.ui.xaml.automation.peers;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerOverrides")
 extern interface IAutomationPeerOverrides extends winrt.windows.foundation.IInspectable
 {
-    function GetPatternCore(patternInterface: cxx.ConstRef<winrt.windows.ui.xaml.automation.peers.PatternInterface>): winrt.windows.foundation.IInspectable;
+    function GetPatternCore(patternInterface: ConstRef<winrt.windows.ui.xaml.automation.peers.PatternInterface>): winrt.windows.foundation.IInspectable;
     function GetAcceleratorKeyCore(): winrt.HString;
     function GetAccessKeyCore(): winrt.HString;
     function GetAutomationControlTypeCore(): winrt.windows.ui.xaml.automation.peers.AutomationControlType;
@@ -30,6 +33,6 @@ extern interface IAutomationPeerOverrides extends winrt.windows.foundation.IInsp
     function IsPasswordCore(): Bool;
     function IsRequiredForFormCore(): Bool;
     function SetFocusCore(): Void;
-    function GetPeerFromPointCore(point: cxx.ConstRef<winrt.windows.foundation.Point>): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
+    function GetPeerFromPointCore(point: ConstRef<winrt.windows.foundation.Point>): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
     function GetLiveSettingCore(): winrt.windows.ui.xaml.automation.peers.AutomationLiveSetting;
 }

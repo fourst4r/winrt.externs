@@ -1,6 +1,9 @@
 package winrt.windows.ui.notifications;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Notifications.h", true)
 @:native("winrt::Windows::UI::Notifications::ToastNotificationHistory")
 extern class ToastNotificationHistory
@@ -8,12 +11,12 @@ extern class ToastNotificationHistory
     implements winrt.windows.ui.notifications.IToastNotificationHistory
 {
     overload function GetHistory(): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.notifications.ToastNotification> /* GenericTypeInstSig */;
-    overload function GetHistory(applicationId: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.notifications.ToastNotification> /* GenericTypeInstSig */;
-    overload function RemoveGroup(group: cxx.ConstRef<winrt.HString>): Void;
-    overload function RemoveGroup(group: cxx.ConstRef<winrt.HString>, applicationId: cxx.ConstRef<winrt.HString>): Void;
-    overload function Remove(tag: cxx.ConstRef<winrt.HString>, group: cxx.ConstRef<winrt.HString>, applicationId: cxx.ConstRef<winrt.HString>): Void;
-    overload function Remove(tag: cxx.ConstRef<winrt.HString>, group: cxx.ConstRef<winrt.HString>): Void;
-    overload function Remove(tag: cxx.ConstRef<winrt.HString>): Void;
+    overload function GetHistory(applicationId: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.notifications.ToastNotification> /* GenericTypeInstSig */;
+    overload function RemoveGroup(group: ConstRef<winrt.HString>): Void;
+    overload function RemoveGroup(group: ConstRef<winrt.HString>, applicationId: ConstRef<winrt.HString>): Void;
+    overload function Remove(tag: ConstRef<winrt.HString>, group: ConstRef<winrt.HString>, applicationId: ConstRef<winrt.HString>): Void;
+    overload function Remove(tag: ConstRef<winrt.HString>, group: ConstRef<winrt.HString>): Void;
+    overload function Remove(tag: ConstRef<winrt.HString>): Void;
     overload function Clear(): Void;
-    overload function Clear(applicationId: cxx.ConstRef<winrt.HString>): Void;
+    overload function Clear(applicationId: ConstRef<winrt.HString>): Void;
 }

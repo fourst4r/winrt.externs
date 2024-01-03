@@ -1,6 +1,9 @@
 package winrt.windows.media.devices;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::IFocusControl2")
 extern interface IFocusControl2 extends winrt.windows.foundation.IInspectable
@@ -14,5 +17,5 @@ extern interface IFocusControl2 extends winrt.windows.foundation.IInspectable
     overload function FocusState(): winrt.windows.media.devices.MediaCaptureFocusState;
     function UnlockAsync(): winrt.windows.foundation.IAsyncAction;
     function LockAsync(): winrt.windows.foundation.IAsyncAction;
-    function Configure(settings: cxx.ConstRef<winrt.windows.media.devices.FocusSettings>): Void;
+    function Configure(settings: ConstRef<winrt.windows.media.devices.FocusSettings>): Void;
 }

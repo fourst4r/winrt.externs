@@ -1,6 +1,9 @@
 package winrt.windows.services.store;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Services.Store.h", true)
 @:native("winrt::Windows::Services::Store::IStoreCollectionData")
 extern interface IStoreCollectionData extends winrt.windows.foundation.IInspectable

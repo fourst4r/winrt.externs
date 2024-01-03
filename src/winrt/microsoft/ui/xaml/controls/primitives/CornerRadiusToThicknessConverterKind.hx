@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.controls.primitives;
 
 @:include("winrt/Microsoft.UI.Xaml.Controls.Primitives.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusToThicknessConverterKind")
-extern enum abstract CornerRadiusToThicknessConverterKind(cxx.num.Int32)
+extern enum abstract CornerRadiusToThicknessConverterKind(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusToThicknessConverterKind::FilterTopAndBottomFromLeft") final FilterTopAndBottomFromLeft;
     @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::CornerRadiusToThicknessConverterKind::FilterTopAndBottomFromRight") final FilterTopAndBottomFromRight;

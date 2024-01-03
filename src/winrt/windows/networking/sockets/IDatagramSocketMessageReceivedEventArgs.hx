@@ -1,6 +1,9 @@
 package winrt.windows.networking.sockets;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Networking.Sockets.h", true)
 @:native("winrt::Windows::Networking::Sockets::IDatagramSocketMessageReceivedEventArgs")
 extern interface IDatagramSocketMessageReceivedEventArgs extends winrt.windows.foundation.IInspectable

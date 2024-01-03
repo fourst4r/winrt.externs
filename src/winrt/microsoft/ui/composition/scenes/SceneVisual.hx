@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.composition.scenes;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Composition.Scenes.h", true)
 @:native("winrt::Microsoft::UI::Composition::Scenes::SceneVisual")
 extern class SceneVisual
@@ -8,7 +11,7 @@ extern class SceneVisual
     implements winrt.microsoft.ui.composition.scenes.ISceneVisual
 {
     overload function Root(): winrt.microsoft.ui.composition.scenes.SceneNode;
-    overload function Root(value: cxx.ConstRef<winrt.microsoft.ui.composition.scenes.SceneNode>): Void;
-    function Create(compositor: cxx.ConstRef<winrt.microsoft.ui.composition.Compositor>): winrt.microsoft.ui.composition.scenes.SceneVisual;
-    static function Create(compositor: cxx.ConstRef<winrt.microsoft.ui.composition.Compositor>): winrt.microsoft.ui.composition.scenes.SceneVisual;
+    overload function Root(value: ConstRef<winrt.microsoft.ui.composition.scenes.SceneNode>): Void;
+    function Create(compositor: ConstRef<winrt.microsoft.ui.composition.Compositor>): winrt.microsoft.ui.composition.scenes.SceneVisual;
+    static function Create(compositor: ConstRef<winrt.microsoft.ui.composition.Compositor>): winrt.microsoft.ui.composition.scenes.SceneVisual;
 }

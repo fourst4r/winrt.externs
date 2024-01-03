@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.userdatatasks;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.UserDataTasks.h", true)
 @:native("winrt::Windows::ApplicationModel::UserDataTasks::IUserDataTaskReader")
 extern interface IUserDataTaskReader extends winrt.windows.foundation.IInspectable

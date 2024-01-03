@@ -1,6 +1,9 @@
 package winrt.windows.networking.networkoperators;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::TetheringEntitlementCheckTriggerDetails")
 extern class TetheringEntitlementCheckTriggerDetails
@@ -8,5 +11,5 @@ extern class TetheringEntitlementCheckTriggerDetails
 {
     overload function NetworkAccountId(): winrt.HString;
     function AllowTethering(): Void;
-    function DenyTethering(entitlementFailureReason: cxx.ConstRef<winrt.HString>): Void;
+    function DenyTethering(entitlementFailureReason: ConstRef<winrt.HString>): Void;
 }

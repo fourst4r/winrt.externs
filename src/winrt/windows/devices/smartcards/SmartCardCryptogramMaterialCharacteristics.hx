@@ -1,6 +1,9 @@
 package winrt.windows.devices.smartcards;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.SmartCards.h", true)
 @:native("winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics")
 extern class SmartCardCryptogramMaterialCharacteristics
@@ -13,6 +16,6 @@ extern class SmartCardCryptogramMaterialCharacteristics
     overload function AllowedValidations(): winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.smartcards.SmartCardCryptogramAlgorithm> /* GenericTypeInstSig */;
     overload function MaterialType(): winrt.windows.devices.smartcards.SmartCardCryptogramMaterialType;
     overload function ProtectionMethod(): winrt.windows.devices.smartcards.SmartCardCryptogramMaterialProtectionMethod;
-    overload function ProtectionVersion(): cxx.num.Int32;
-    overload function MaterialLength(): cxx.num.Int32;
+    overload function ProtectionVersion(): Int32;
+    overload function MaterialLength(): Int32;
 }

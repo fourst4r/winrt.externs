@@ -1,6 +1,9 @@
 package winrt.windows.devices.pointofservice;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.PointOfService.h", true)
 @:native("winrt::Windows::Devices::PointOfService::LineDisplayCapabilities")
 extern class LineDisplayCapabilities
@@ -22,6 +25,6 @@ extern class LineDisplayCapabilities
     overload function IsHorizontalMarqueeSupported(): Bool;
     overload function IsVerticalMarqueeSupported(): Bool;
     overload function IsInterCharacterWaitSupported(): Bool;
-    overload function SupportedDescriptors(): cxx.num.UInt32;
-    overload function SupportedWindows(): cxx.num.UInt32;
+    overload function SupportedDescriptors(): UInt32;
+    overload function SupportedWindows(): UInt32;
 }

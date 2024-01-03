@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel;
 
 @:include("winrt/Windows.ApplicationModel.h", true)
 @:native("winrt::Windows::ApplicationModel::AppExecutionContext")
-extern enum abstract AppExecutionContext(cxx.num.Int32)
+extern enum abstract AppExecutionContext(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::AppExecutionContext::Unknown") final Unknown;
     @:native("winrt::Windows::ApplicationModel::AppExecutionContext::Host") final Host;

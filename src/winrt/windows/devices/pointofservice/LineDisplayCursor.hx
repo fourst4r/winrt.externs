@@ -1,6 +1,9 @@
 package winrt.windows.devices.pointofservice;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.PointOfService.h", true)
 @:native("winrt::Windows::Devices::PointOfService::LineDisplayCursor")
 extern class LineDisplayCursor
@@ -14,5 +17,5 @@ extern class LineDisplayCursor
     overload function IsReverseSupported(): Bool;
     overload function IsOtherSupported(): Bool;
     function GetAttributes(): winrt.windows.devices.pointofservice.LineDisplayCursorAttributes;
-    function TryUpdateAttributesAsync(attributes: cxx.ConstRef<winrt.windows.devices.pointofservice.LineDisplayCursorAttributes>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function TryUpdateAttributesAsync(attributes: ConstRef<winrt.windows.devices.pointofservice.LineDisplayCursorAttributes>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

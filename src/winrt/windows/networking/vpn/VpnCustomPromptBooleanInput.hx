@@ -1,6 +1,9 @@
 package winrt.windows.networking.vpn;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Networking.Vpn.h", true)
 @:native("winrt::Windows::Networking::Vpn::VpnCustomPromptBooleanInput")
 extern class VpnCustomPromptBooleanInput
@@ -11,7 +14,7 @@ extern class VpnCustomPromptBooleanInput
     overload function InitialValue(value: Bool): Void;
     overload function InitialValue(): Bool;
     overload function Value(): Bool;
-    overload function DisplayName(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function DisplayName(value: ConstRef<winrt.HString>): Void;
     overload function DisplayName(): winrt.HString;
     overload function Compulsory(value: Bool): Void;
     overload function Compulsory(): Bool;

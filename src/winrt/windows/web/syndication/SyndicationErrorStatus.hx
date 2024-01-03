@@ -2,7 +2,7 @@ package winrt.windows.web.syndication;
 
 @:include("winrt/Windows.Web.Syndication.h", true)
 @:native("winrt::Windows::Web::Syndication::SyndicationErrorStatus")
-extern enum abstract SyndicationErrorStatus(cxx.num.Int32)
+extern enum abstract SyndicationErrorStatus(Int32)
 {
     @:native("winrt::Windows::Web::Syndication::SyndicationErrorStatus::Unknown") final Unknown;
     @:native("winrt::Windows::Web::Syndication::SyndicationErrorStatus::MissingRequiredElement") final MissingRequiredElement;

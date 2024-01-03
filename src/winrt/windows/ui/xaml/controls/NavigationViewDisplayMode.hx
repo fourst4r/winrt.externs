@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.controls;
 
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::NavigationViewDisplayMode")
-extern enum abstract NavigationViewDisplayMode(cxx.num.Int32)
+extern enum abstract NavigationViewDisplayMode(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Controls::NavigationViewDisplayMode::Minimal") final Minimal;
     @:native("winrt::Windows::UI::Xaml::Controls::NavigationViewDisplayMode::Compact") final Compact;

@@ -1,13 +1,16 @@
 package winrt.windows.applicationmodel.chat;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Chat.h", true)
 @:native("winrt::Windows::ApplicationModel::Chat::IChatMessage")
 extern interface IChatMessage extends winrt.windows.foundation.IInspectable
 {
     overload function Attachments(): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.chat.ChatMessageAttachment> /* GenericTypeInstSig */;
     overload function Body(): winrt.HString;
-    overload function Body(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function Body(value: ConstRef<winrt.HString>): Void;
     overload function From(): winrt.HString;
     overload function Id(): winrt.HString;
     overload function IsForwardingDisabled(): Bool;
@@ -21,5 +24,5 @@ extern interface IChatMessage extends winrt.windows.foundation.IInspectable
     overload function Subject(): winrt.HString;
     overload function TransportFriendlyName(): winrt.HString;
     overload function TransportId(): winrt.HString;
-    overload function TransportId(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function TransportId(value: ConstRef<winrt.HString>): Void;
 }

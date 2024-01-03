@@ -1,6 +1,9 @@
 package winrt.windows.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::LayerVisual")
 extern class LayerVisual
@@ -9,7 +12,7 @@ extern class LayerVisual
     implements winrt.windows.ui.composition.ILayerVisual2
 {
     overload function Effect(): winrt.windows.ui.composition.CompositionEffectBrush;
-    overload function Effect(value: cxx.ConstRef<winrt.windows.ui.composition.CompositionEffectBrush>): Void;
+    overload function Effect(value: ConstRef<winrt.windows.ui.composition.CompositionEffectBrush>): Void;
     overload function Shadow(): winrt.windows.ui.composition.CompositionShadow;
-    overload function Shadow(value: cxx.ConstRef<winrt.windows.ui.composition.CompositionShadow>): Void;
+    overload function Shadow(value: ConstRef<winrt.windows.ui.composition.CompositionShadow>): Void;
 }

@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.chat;
 
 @:include("winrt/Windows.ApplicationModel.Chat.h", true)
 @:native("winrt::Windows::ApplicationModel::Chat::ChatTransportInterpretedErrorCode")
-extern enum abstract ChatTransportInterpretedErrorCode(cxx.num.Int32)
+extern enum abstract ChatTransportInterpretedErrorCode(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Chat::ChatTransportInterpretedErrorCode::None") final None;
     @:native("winrt::Windows::ApplicationModel::Chat::ChatTransportInterpretedErrorCode::Unknown") final Unknown;

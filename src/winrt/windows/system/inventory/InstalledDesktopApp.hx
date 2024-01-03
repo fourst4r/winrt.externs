@@ -1,6 +1,9 @@
 package winrt.windows.system.inventory;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.System.Inventory.h", true)
 @:native("winrt::Windows::System::Inventory::InstalledDesktopApp")
 extern class InstalledDesktopApp

@@ -1,6 +1,9 @@
 package winrt.windows.security.cryptography.certificates;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Security.Cryptography.Certificates.h", true)
 @:native("winrt::Windows::Security::Cryptography::Certificates::CertificateQuery")
 extern class CertificateQuery
@@ -10,11 +13,11 @@ extern class CertificateQuery
     function new();
     overload function EnhancedKeyUsages(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function IssuerName(): winrt.HString;
-    overload function IssuerName(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function IssuerName(value: ConstRef<winrt.HString>): Void;
     overload function FriendlyName(): winrt.HString;
-    overload function FriendlyName(value: cxx.ConstRef<winrt.HString>): Void;
-    overload function Thumbprint(): winrt.ComArray<cxx.num.UInt8>;
-    overload function Thumbprint(value: winrt.ArrayView<cxx.num.UInt8>): Void;
+    overload function FriendlyName(value: ConstRef<winrt.HString>): Void;
+    overload function Thumbprint(): winrt.ComArray<UInt8>;
+    overload function Thumbprint(value: winrt.ArrayView<UInt8>): Void;
     overload function HardwareOnly(): Bool;
     overload function HardwareOnly(value: Bool): Void;
     overload function IncludeDuplicates(): Bool;
@@ -22,5 +25,5 @@ extern class CertificateQuery
     overload function IncludeExpiredCertificates(): Bool;
     overload function IncludeExpiredCertificates(value: Bool): Void;
     overload function StoreName(): winrt.HString;
-    overload function StoreName(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function StoreName(value: ConstRef<winrt.HString>): Void;
 }

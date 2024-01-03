@@ -2,4 +2,4 @@ package winrt.windows.ui.xaml.navigation;
 
 
 @:extern 
-typedef NavigationFailedEventHandler = (sender: cxx.ConstRef<winrt.windows.foundation.IInspectable>, e: cxx.ConstRef<winrt.windows.ui.xaml.navigation.NavigationFailedEventArgs>)->Void;
+typedef NavigationFailedEventHandler = Fn<(sender: ConstRef<winrt.windows.foundation.IInspectable>, e: ConstRef<winrt.windows.ui.xaml.navigation.NavigationFailedEventArgs>)->Void>;

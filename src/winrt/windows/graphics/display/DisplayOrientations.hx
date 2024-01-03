@@ -2,7 +2,7 @@ package winrt.windows.graphics.display;
 
 @:include("winrt/Windows.Graphics.Display.h", true)
 @:native("winrt::Windows::Graphics::Display::DisplayOrientations")
-extern enum abstract DisplayOrientations(cxx.num.UInt32)
+extern enum abstract DisplayOrientations(UInt32)
 {
     @:native("winrt::Windows::Graphics::Display::DisplayOrientations::None") final None;
     @:native("winrt::Windows::Graphics::Display::DisplayOrientations::Landscape") final Landscape;

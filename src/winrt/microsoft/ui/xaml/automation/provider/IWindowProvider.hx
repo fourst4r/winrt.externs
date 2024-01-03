@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.automation.provider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Automation.Provider.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Provider::IWindowProvider")
 extern interface IWindowProvider extends winrt.windows.foundation.IInspectable
@@ -12,6 +15,6 @@ extern interface IWindowProvider extends winrt.windows.foundation.IInspectable
     overload function InteractionState(): winrt.microsoft.ui.xaml.automation.WindowInteractionState;
     overload function VisualState(): winrt.microsoft.ui.xaml.automation.WindowVisualState;
     function Close(): Void;
-    function SetVisualState(state: cxx.ConstRef<winrt.microsoft.ui.xaml.automation.WindowVisualState>): Void;
-    function WaitForInputIdle(milliseconds: cxx.num.Int32): Bool;
+    function SetVisualState(state: ConstRef<winrt.microsoft.ui.xaml.automation.WindowVisualState>): Void;
+    function WaitForInputIdle(milliseconds: Int32): Bool;
 }

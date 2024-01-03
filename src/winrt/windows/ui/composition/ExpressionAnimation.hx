@@ -1,6 +1,9 @@
 package winrt.windows.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::ExpressionAnimation")
 extern class ExpressionAnimation
@@ -8,5 +11,5 @@ extern class ExpressionAnimation
     implements winrt.windows.ui.composition.IExpressionAnimation
 {
     overload function Expression(): winrt.HString;
-    overload function Expression(value: cxx.ConstRef<winrt.HString>): Void;
+    overload function Expression(value: ConstRef<winrt.HString>): Void;
 }

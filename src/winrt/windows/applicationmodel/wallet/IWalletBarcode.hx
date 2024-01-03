@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.wallet;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Wallet.h", true)
 @:native("winrt::Windows::ApplicationModel::Wallet::IWalletBarcode")
 extern interface IWalletBarcode extends winrt.windows.foundation.IInspectable

@@ -1,6 +1,9 @@
 package winrt.windows.devices.smartcards;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.SmartCards.h", true)
 @:native("winrt::Windows::Devices::SmartCards::SmartCardTriggerDetails")
 extern class SmartCardTriggerDetails
@@ -12,7 +15,7 @@ extern class SmartCardTriggerDetails
     overload function SourceAppletId(): winrt.windows.storage.streams.IBuffer;
     overload function TriggerData(): winrt.windows.storage.streams.IBuffer;
     overload function Emulator(): winrt.windows.devices.smartcards.SmartCardEmulator;
-    overload function TryLaunchCurrentAppAsync(arguments: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
-    overload function TryLaunchCurrentAppAsync(arguments: cxx.ConstRef<winrt.HString>, behavior: cxx.ConstRef<winrt.windows.devices.smartcards.SmartCardLaunchBehavior>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    overload function TryLaunchCurrentAppAsync(arguments: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    overload function TryLaunchCurrentAppAsync(arguments: ConstRef<winrt.HString>, behavior: ConstRef<winrt.windows.devices.smartcards.SmartCardLaunchBehavior>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     overload function SmartCard(): winrt.windows.devices.smartcards.SmartCard;
 }

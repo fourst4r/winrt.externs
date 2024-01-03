@@ -2,7 +2,7 @@ package winrt.windows.networking.networkoperators;
 
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::NetworkRegistrationState")
-extern enum abstract NetworkRegistrationState(cxx.num.Int32)
+extern enum abstract NetworkRegistrationState(Int32)
 {
     @:native("winrt::Windows::Networking::NetworkOperators::NetworkRegistrationState::None") final None;
     @:native("winrt::Windows::Networking::NetworkOperators::NetworkRegistrationState::Deregistered") final Deregistered;

@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.media;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Media.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Media::SystemBackdrop")
 extern class SystemBackdrop
@@ -8,8 +11,8 @@ extern class SystemBackdrop
     implements winrt.microsoft.ui.xaml.media.ISystemBackdrop
     implements winrt.microsoft.ui.xaml.media.ISystemBackdropOverrides
 {
-    function GetDefaultSystemBackdropConfiguration(target: cxx.ConstRef<winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>, xamlRoot: cxx.ConstRef<winrt.microsoft.ui.xaml.XamlRoot>): winrt.microsoft.ui.composition.systembackdrops.SystemBackdropConfiguration;
-    function OnTargetConnected(connectedTarget: cxx.ConstRef<winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>, xamlRoot: cxx.ConstRef<winrt.microsoft.ui.xaml.XamlRoot>): Void;
-    function OnTargetDisconnected(disconnectedTarget: cxx.ConstRef<winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>): Void;
-    function OnDefaultSystemBackdropConfigurationChanged(target: cxx.ConstRef<winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>, xamlRoot: cxx.ConstRef<winrt.microsoft.ui.xaml.XamlRoot>): Void;
+    function GetDefaultSystemBackdropConfiguration(target: ConstRef<winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>, xamlRoot: ConstRef<winrt.microsoft.ui.xaml.XamlRoot>): winrt.microsoft.ui.composition.systembackdrops.SystemBackdropConfiguration;
+    function OnTargetConnected(connectedTarget: ConstRef<winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>, xamlRoot: ConstRef<winrt.microsoft.ui.xaml.XamlRoot>): Void;
+    function OnTargetDisconnected(disconnectedTarget: ConstRef<winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>): Void;
+    function OnDefaultSystemBackdropConfigurationChanged(target: ConstRef<winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>, xamlRoot: ConstRef<winrt.microsoft.ui.xaml.XamlRoot>): Void;
 }

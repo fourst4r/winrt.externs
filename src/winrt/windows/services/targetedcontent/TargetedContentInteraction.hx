@@ -2,7 +2,7 @@ package winrt.windows.services.targetedcontent;
 
 @:include("winrt/Windows.Services.TargetedContent.h", true)
 @:native("winrt::Windows::Services::TargetedContent::TargetedContentInteraction")
-extern enum abstract TargetedContentInteraction(cxx.num.Int32)
+extern enum abstract TargetedContentInteraction(Int32)
 {
     @:native("winrt::Windows::Services::TargetedContent::TargetedContentInteraction::Impression") final Impression;
     @:native("winrt::Windows::Services::TargetedContent::TargetedContentInteraction::ClickThrough") final ClickThrough;

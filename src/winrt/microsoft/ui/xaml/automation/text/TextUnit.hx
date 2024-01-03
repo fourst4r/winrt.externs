@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.automation.text;
 
 @:include("winrt/Microsoft.UI.Xaml.Automation.Text.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Text::TextUnit")
-extern enum abstract TextUnit(cxx.num.Int32)
+extern enum abstract TextUnit(Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Automation::Text::TextUnit::Character") final Character;
     @:native("winrt::Microsoft::UI::Xaml::Automation::Text::TextUnit::Format") final Format;

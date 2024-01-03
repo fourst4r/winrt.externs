@@ -1,6 +1,9 @@
 package winrt.windows.media.import;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Import.h", true)
 @:native("winrt::Windows::Media::Import::PhotoImportItem")
 extern class PhotoImportItem
@@ -8,9 +11,9 @@ extern class PhotoImportItem
     implements winrt.windows.media.import.IPhotoImportItem2
 {
     overload function Name(): winrt.HString;
-    overload function ItemKey(): cxx.num.UInt64;
+    overload function ItemKey(): UInt64;
     overload function ContentType(): winrt.windows.media.import.PhotoImportContentType;
-    overload function SizeInBytes(): cxx.num.UInt64;
+    overload function SizeInBytes(): UInt64;
     overload function Date(): winrt.windows.foundation.DateTime;
     overload function Sibling(): winrt.windows.media.import.PhotoImportSidecar;
     overload function Sidecars(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.import.PhotoImportSidecar> /* GenericTypeInstSig */;

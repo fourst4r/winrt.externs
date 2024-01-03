@@ -2,7 +2,7 @@ package winrt.windows.media;
 
 @:include("winrt/Windows.Media.h", true)
 @:native("winrt::Windows::Media::SystemMediaTransportControlsButton")
-extern enum abstract SystemMediaTransportControlsButton(cxx.num.Int32)
+extern enum abstract SystemMediaTransportControlsButton(Int32)
 {
     @:native("winrt::Windows::Media::SystemMediaTransportControlsButton::Play") final Play;
     @:native("winrt::Windows::Media::SystemMediaTransportControlsButton::Pause") final Pause;

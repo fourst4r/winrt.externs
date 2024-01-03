@@ -1,32 +1,35 @@
 package winrt.windows.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::ISpotLight")
 extern interface ISpotLight extends winrt.windows.foundation.IInspectable
 {
-    overload function ConstantAttenuation(): cxx.num.Float32;
-    overload function ConstantAttenuation(value: cxx.num.Float32): Void;
+    overload function ConstantAttenuation(): Float32;
+    overload function ConstantAttenuation(value: Float32): Void;
     overload function CoordinateSpace(): winrt.windows.ui.composition.Visual;
-    overload function CoordinateSpace(value: cxx.ConstRef<winrt.windows.ui.composition.Visual>): Void;
+    overload function CoordinateSpace(value: ConstRef<winrt.windows.ui.composition.Visual>): Void;
     overload function Direction(): winrt.windows.foundation.numerics.Vector3;
-    overload function Direction(value: cxx.ConstRef<winrt.windows.foundation.numerics.Vector3>): Void;
-    overload function InnerConeAngle(): cxx.num.Float32;
-    overload function InnerConeAngle(value: cxx.num.Float32): Void;
-    overload function InnerConeAngleInDegrees(): cxx.num.Float32;
-    overload function InnerConeAngleInDegrees(value: cxx.num.Float32): Void;
+    overload function Direction(value: ConstRef<winrt.windows.foundation.numerics.Vector3>): Void;
+    overload function InnerConeAngle(): Float32;
+    overload function InnerConeAngle(value: Float32): Void;
+    overload function InnerConeAngleInDegrees(): Float32;
+    overload function InnerConeAngleInDegrees(value: Float32): Void;
     overload function InnerConeColor(): winrt.windows.ui.Color;
-    overload function InnerConeColor(value: cxx.ConstRef<winrt.windows.ui.Color>): Void;
-    overload function LinearAttenuation(): cxx.num.Float32;
-    overload function LinearAttenuation(value: cxx.num.Float32): Void;
+    overload function InnerConeColor(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function LinearAttenuation(): Float32;
+    overload function LinearAttenuation(value: Float32): Void;
     overload function Offset(): winrt.windows.foundation.numerics.Vector3;
-    overload function Offset(value: cxx.ConstRef<winrt.windows.foundation.numerics.Vector3>): Void;
-    overload function OuterConeAngle(): cxx.num.Float32;
-    overload function OuterConeAngle(value: cxx.num.Float32): Void;
-    overload function OuterConeAngleInDegrees(): cxx.num.Float32;
-    overload function OuterConeAngleInDegrees(value: cxx.num.Float32): Void;
+    overload function Offset(value: ConstRef<winrt.windows.foundation.numerics.Vector3>): Void;
+    overload function OuterConeAngle(): Float32;
+    overload function OuterConeAngle(value: Float32): Void;
+    overload function OuterConeAngleInDegrees(): Float32;
+    overload function OuterConeAngleInDegrees(value: Float32): Void;
     overload function OuterConeColor(): winrt.windows.ui.Color;
-    overload function OuterConeColor(value: cxx.ConstRef<winrt.windows.ui.Color>): Void;
-    overload function QuadraticAttenuation(): cxx.num.Float32;
-    overload function QuadraticAttenuation(value: cxx.num.Float32): Void;
+    overload function OuterConeColor(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function QuadraticAttenuation(): Float32;
+    overload function QuadraticAttenuation(value: Float32): Void;
 }

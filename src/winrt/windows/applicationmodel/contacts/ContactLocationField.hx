@@ -1,17 +1,20 @@
 package winrt.windows.applicationmodel.contacts;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Contacts.h", true)
 @:native("winrt::Windows::ApplicationModel::Contacts::ContactLocationField")
 extern class ContactLocationField
     implements winrt.windows.applicationmodel.contacts.IContactField
     implements winrt.windows.applicationmodel.contacts.IContactLocationField
 {
-    /* explicit */ function new(unstructuredAddress: cxx.ConstRef<winrt.HString>);
+    /* explicit */ function new(unstructuredAddress: ConstRef<winrt.HString>);
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactLocationField")
-    static overload function make(unstructuredAddress: cxx.ConstRef<winrt.HString>, category: cxx.ConstRef<winrt.windows.applicationmodel.contacts.ContactFieldCategory>): winrt.windows.applicationmodel.contacts.ContactLocationField;
+    static overload function make(unstructuredAddress: ConstRef<winrt.HString>, category: ConstRef<winrt.windows.applicationmodel.contacts.ContactFieldCategory>): winrt.windows.applicationmodel.contacts.ContactLocationField;
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactLocationField")
-    static overload function make(unstructuredAddress: cxx.ConstRef<winrt.HString>, category: cxx.ConstRef<winrt.windows.applicationmodel.contacts.ContactFieldCategory>, street: cxx.ConstRef<winrt.HString>, city: cxx.ConstRef<winrt.HString>, region: cxx.ConstRef<winrt.HString>, country: cxx.ConstRef<winrt.HString>, postalCode: cxx.ConstRef<winrt.HString>): winrt.windows.applicationmodel.contacts.ContactLocationField;
+    static overload function make(unstructuredAddress: ConstRef<winrt.HString>, category: ConstRef<winrt.windows.applicationmodel.contacts.ContactFieldCategory>, street: ConstRef<winrt.HString>, city: ConstRef<winrt.HString>, region: ConstRef<winrt.HString>, country: ConstRef<winrt.HString>, postalCode: ConstRef<winrt.HString>): winrt.windows.applicationmodel.contacts.ContactLocationField;
     overload function UnstructuredAddress(): winrt.HString;
     overload function Street(): winrt.HString;
     overload function City(): winrt.HString;

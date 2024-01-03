@@ -1,6 +1,9 @@
 package winrt.windows.media.speechsynthesis;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.SpeechSynthesis.h", true)
 @:native("winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions")
 extern class SpeechSynthesizerOptions
@@ -12,14 +15,14 @@ extern class SpeechSynthesizerOptions
     overload function IncludeWordBoundaryMetadata(value: Bool): Void;
     overload function IncludeSentenceBoundaryMetadata(): Bool;
     overload function IncludeSentenceBoundaryMetadata(value: Bool): Void;
-    overload function AudioVolume(): cxx.num.Float64;
-    overload function AudioVolume(value: cxx.num.Float64): Void;
-    overload function SpeakingRate(): cxx.num.Float64;
-    overload function SpeakingRate(value: cxx.num.Float64): Void;
-    overload function AudioPitch(): cxx.num.Float64;
-    overload function AudioPitch(value: cxx.num.Float64): Void;
+    overload function AudioVolume(): Float64;
+    overload function AudioVolume(value: Float64): Void;
+    overload function SpeakingRate(): Float64;
+    overload function SpeakingRate(value: Float64): Void;
+    overload function AudioPitch(): Float64;
+    overload function AudioPitch(value: Float64): Void;
     overload function AppendedSilence(): winrt.windows.media.speechsynthesis.SpeechAppendedSilence;
-    overload function AppendedSilence(value: cxx.ConstRef<winrt.windows.media.speechsynthesis.SpeechAppendedSilence>): Void;
+    overload function AppendedSilence(value: ConstRef<winrt.windows.media.speechsynthesis.SpeechAppendedSilence>): Void;
     overload function PunctuationSilence(): winrt.windows.media.speechsynthesis.SpeechPunctuationSilence;
-    overload function PunctuationSilence(value: cxx.ConstRef<winrt.windows.media.speechsynthesis.SpeechPunctuationSilence>): Void;
+    overload function PunctuationSilence(value: ConstRef<winrt.windows.media.speechsynthesis.SpeechPunctuationSilence>): Void;
 }

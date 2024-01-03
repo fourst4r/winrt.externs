@@ -1,6 +1,9 @@
 package winrt.windows.ui.notifications;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Notifications.h", true)
 @:native("winrt::Windows::UI::Notifications::IKnownAdaptiveNotificationTextStylesStatics")
 extern interface IKnownAdaptiveNotificationTextStylesStatics extends winrt.windows.foundation.IInspectable

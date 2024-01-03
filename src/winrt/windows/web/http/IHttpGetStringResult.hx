@@ -1,6 +1,9 @@
 package winrt.windows.web.http;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Web.Http.h", true)
 @:native("winrt::Windows::Web::Http::IHttpGetStringResult")
 extern interface IHttpGetStringResult extends winrt.windows.foundation.IInspectable

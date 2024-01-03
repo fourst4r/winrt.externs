@@ -2,7 +2,7 @@ package winrt.windows.security.isolation;
 
 @:include("winrt/Windows.Security.Isolation.h", true)
 @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHostError")
-extern enum abstract IsolatedWindowsEnvironmentHostError(cxx.num.Int32)
+extern enum abstract IsolatedWindowsEnvironmentHostError(Int32)
 {
     @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHostError::AdminPolicyIsDisabledOrNotPresent") final AdminPolicyIsDisabledOrNotPresent;
     @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHostError::FeatureNotInstalled") final FeatureNotInstalled;

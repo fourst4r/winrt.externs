@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.activation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Activation.h", true)
 @:native("winrt::Windows::ApplicationModel::Activation::SearchActivatedEventArgs")
 extern class SearchActivatedEventArgs
@@ -16,7 +19,7 @@ extern class SearchActivatedEventArgs
     overload function Kind(): winrt.windows.applicationmodel.activation.ActivationKind;
     overload function PreviousExecutionState(): winrt.windows.applicationmodel.activation.ApplicationExecutionState;
     overload function SplashScreen(): winrt.windows.applicationmodel.activation.SplashScreen;
-    overload function CurrentlyShownApplicationViewId(): cxx.num.Int32;
+    overload function CurrentlyShownApplicationViewId(): Int32;
     overload function LinguisticDetails(): winrt.windows.applicationmodel.search.SearchPaneQueryLinguisticDetails;
     overload function ViewSwitcher(): winrt.windows.ui.viewmanagement.ActivationViewSwitcher;
     overload function User(): winrt.windows.system.User;

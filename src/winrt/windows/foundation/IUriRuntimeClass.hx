@@ -1,6 +1,9 @@
 package winrt.windows.foundation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Foundation.h", true)
 @:native("winrt::Windows::Foundation::IUriRuntimeClass")
 extern interface IUriRuntimeClass extends winrt.windows.foundation.IInspectable
@@ -18,8 +21,8 @@ extern interface IUriRuntimeClass extends winrt.windows.foundation.IInspectable
     overload function RawUri(): winrt.HString;
     overload function SchemeName(): winrt.HString;
     overload function UserName(): winrt.HString;
-    overload function Port(): cxx.num.Int32;
+    overload function Port(): Int32;
     overload function Suspicious(): Bool;
-    function Equals(pUri: cxx.ConstRef<winrt.windows.foundation.Uri>): Bool;
-    function CombineUri(relativeUri: cxx.ConstRef<winrt.HString>): winrt.windows.foundation.Uri;
+    function Equals(pUri: ConstRef<winrt.windows.foundation.Uri>): Bool;
+    function CombineUri(relativeUri: ConstRef<winrt.HString>): winrt.windows.foundation.Uri;
 }

@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::ItemsRepeaterScrollHost")
 extern class ItemsRepeaterScrollHost
@@ -9,10 +12,10 @@ extern class ItemsRepeaterScrollHost
 {
     function new();
     overload function ScrollViewer(): winrt.microsoft.ui.xaml.controls.ScrollViewer;
-    overload function ScrollViewer(value: cxx.ConstRef<winrt.microsoft.ui.xaml.controls.ScrollViewer>): Void;
+    overload function ScrollViewer(value: ConstRef<winrt.microsoft.ui.xaml.controls.ScrollViewer>): Void;
     overload function CurrentAnchor(): winrt.microsoft.ui.xaml.UIElement;
-    overload function HorizontalAnchorRatio(): cxx.num.Float64;
-    overload function HorizontalAnchorRatio(value: cxx.num.Float64): Void;
-    overload function VerticalAnchorRatio(): cxx.num.Float64;
-    overload function VerticalAnchorRatio(value: cxx.num.Float64): Void;
+    overload function HorizontalAnchorRatio(): Float64;
+    overload function HorizontalAnchorRatio(value: Float64): Void;
+    overload function VerticalAnchorRatio(): Float64;
+    overload function VerticalAnchorRatio(value: Float64): Void;
 }

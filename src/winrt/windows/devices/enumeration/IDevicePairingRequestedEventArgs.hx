@@ -1,6 +1,9 @@
 package winrt.windows.devices.enumeration;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Enumeration.h", true)
 @:native("winrt::Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs")
 extern interface IDevicePairingRequestedEventArgs extends winrt.windows.foundation.IInspectable
@@ -9,6 +12,6 @@ extern interface IDevicePairingRequestedEventArgs extends winrt.windows.foundati
     overload function PairingKind(): winrt.windows.devices.enumeration.DevicePairingKinds;
     overload function Pin(): winrt.HString;
     overload function Accept(): Void;
-    overload function Accept(pin: cxx.ConstRef<winrt.HString>): Void;
+    overload function Accept(pin: ConstRef<winrt.HString>): Void;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

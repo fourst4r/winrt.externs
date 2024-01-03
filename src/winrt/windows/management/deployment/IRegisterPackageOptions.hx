@@ -1,16 +1,19 @@
 package winrt.windows.management.deployment;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Management.Deployment.h", true)
 @:native("winrt::Windows::Management::Deployment::IRegisterPackageOptions")
 extern interface IRegisterPackageOptions extends winrt.windows.foundation.IInspectable
 {
     overload function DependencyPackageUris(): winrt.windows.foundation.collections.IVector<winrt.windows.foundation.Uri> /* GenericTypeInstSig */;
     overload function AppDataVolume(): winrt.windows.management.deployment.PackageVolume;
-    overload function AppDataVolume(value: cxx.ConstRef<winrt.windows.management.deployment.PackageVolume>): Void;
+    overload function AppDataVolume(value: ConstRef<winrt.windows.management.deployment.PackageVolume>): Void;
     overload function OptionalPackageFamilyNames(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function ExternalLocationUri(): winrt.windows.foundation.Uri;
-    overload function ExternalLocationUri(value: cxx.ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function ExternalLocationUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
     overload function DeveloperMode(): Bool;
     overload function DeveloperMode(value: Bool): Void;
     overload function ForceAppShutdown(): Bool;

@@ -1,6 +1,9 @@
 package winrt.windows.graphics.imaging;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Graphics.Imaging.h", true)
 @:native("winrt::Windows::Graphics::Imaging::IBitmapDecoderStatics2")
 extern interface IBitmapDecoderStatics2 extends winrt.windows.foundation.IInspectable

@@ -1,13 +1,16 @@
 package winrt.windows.web.http;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Web.Http.h", true)
 @:native("winrt::Windows::Web::Http::HttpMethod")
 extern class HttpMethod
     implements winrt.windows.web.http.IHttpMethod
     implements winrt.windows.foundation.IStringable
 {
-    /* explicit */ function new(method: cxx.ConstRef<winrt.HString>);
+    /* explicit */ function new(method: ConstRef<winrt.HString>);
     overload function Method(): winrt.HString;
     function ToString(): winrt.HString;
     overload function Delete(): winrt.windows.web.http.HttpMethod;

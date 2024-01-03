@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.store.preview;
 
 @:include("winrt/Windows.ApplicationModel.Store.Preview.h", true)
 @:native("winrt::Windows::ApplicationModel::Store::Preview::StoreSystemFeature")
-extern enum abstract StoreSystemFeature(cxx.num.Int32)
+extern enum abstract StoreSystemFeature(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Store::Preview::StoreSystemFeature::ArchitectureX86") final ArchitectureX86;
     @:native("winrt::Windows::ApplicationModel::Store::Preview::StoreSystemFeature::ArchitectureX64") final ArchitectureX64;

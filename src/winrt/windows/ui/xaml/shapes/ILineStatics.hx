@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.shapes;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Shapes.h", true)
 @:native("winrt::Windows::UI::Xaml::Shapes::ILineStatics")
 extern interface ILineStatics extends winrt.windows.foundation.IInspectable

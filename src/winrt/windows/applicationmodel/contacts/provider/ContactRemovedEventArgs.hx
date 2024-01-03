@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.contacts.provider;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.Contacts.Provider.h", true)
 @:native("winrt::Windows::ApplicationModel::Contacts::Provider::ContactRemovedEventArgs")
 extern class ContactRemovedEventArgs

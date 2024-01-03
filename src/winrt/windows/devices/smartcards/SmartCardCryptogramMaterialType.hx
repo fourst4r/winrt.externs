@@ -2,7 +2,7 @@ package winrt.windows.devices.smartcards;
 
 @:include("winrt/Windows.Devices.SmartCards.h", true)
 @:native("winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialType")
-extern enum abstract SmartCardCryptogramMaterialType(cxx.num.Int32)
+extern enum abstract SmartCardCryptogramMaterialType(Int32)
 {
     @:native("winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialType::None") final None;
     @:native("winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialType::StaticDataAuthentication") final StaticDataAuthentication;

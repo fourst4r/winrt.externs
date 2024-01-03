@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.media.animation;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Media.Animation.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrame")
 extern class ObjectKeyFrame
@@ -8,9 +11,9 @@ extern class ObjectKeyFrame
     implements winrt.microsoft.ui.xaml.media.animation.IObjectKeyFrame
 {
     overload function Value(): winrt.windows.foundation.IInspectable;
-    overload function Value(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Value(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
     overload function KeyTime(): winrt.microsoft.ui.xaml.media.animation.KeyTime;
-    overload function KeyTime(value: cxx.ConstRef<winrt.microsoft.ui.xaml.media.animation.KeyTime>): Void;
+    overload function KeyTime(value: ConstRef<winrt.microsoft.ui.xaml.media.animation.KeyTime>): Void;
     overload function ValueProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function KeyTimeProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function ValueProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

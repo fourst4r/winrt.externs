@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Composition.h", true)
 @:native("winrt::Microsoft::UI::Composition::CompositionScopedBatch")
 extern class CompositionScopedBatch
@@ -11,7 +14,7 @@ extern class CompositionScopedBatch
     function End(): Void;
     overload function IsActive(): Bool;
     function Suspend(): Void;
-    overload function Completed(handler: cxx.ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.foundation.IInspectable, winrt.microsoft.ui.composition.CompositionBatchCompletedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Completed(token: cxx.ConstRef<winrt.EventToken>): Void;
+    overload function Completed(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.foundation.IInspectable, winrt.microsoft.ui.composition.CompositionBatchCompletedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Completed(token: ConstRef<winrt.EventToken>): Void;
     function Resume(): Void;
 }

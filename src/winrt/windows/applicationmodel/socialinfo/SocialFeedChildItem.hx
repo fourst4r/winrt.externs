@@ -1,6 +1,9 @@
 package winrt.windows.applicationmodel.socialinfo;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.ApplicationModel.SocialInfo.h", true)
 @:native("winrt::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem")
 extern class SocialFeedChildItem
@@ -11,10 +14,10 @@ extern class SocialFeedChildItem
     overload function PrimaryContent(): winrt.windows.applicationmodel.socialinfo.SocialFeedContent;
     overload function SecondaryContent(): winrt.windows.applicationmodel.socialinfo.SocialFeedContent;
     overload function Timestamp(): winrt.windows.foundation.DateTime;
-    overload function Timestamp(value: cxx.ConstRef<winrt.windows.foundation.DateTime>): Void;
+    overload function Timestamp(value: ConstRef<winrt.windows.foundation.DateTime>): Void;
     overload function TargetUri(): winrt.windows.foundation.Uri;
-    overload function TargetUri(value: cxx.ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function TargetUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
     overload function Thumbnails(): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.socialinfo.SocialItemThumbnail> /* GenericTypeInstSig */;
     overload function SharedItem(): winrt.windows.applicationmodel.socialinfo.SocialFeedSharedItem;
-    overload function SharedItem(value: cxx.ConstRef<winrt.windows.applicationmodel.socialinfo.SocialFeedSharedItem>): Void;
+    overload function SharedItem(value: ConstRef<winrt.windows.applicationmodel.socialinfo.SocialFeedSharedItem>): Void;
 }

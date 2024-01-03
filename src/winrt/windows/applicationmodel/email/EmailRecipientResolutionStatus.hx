@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.email;
 
 @:include("winrt/Windows.ApplicationModel.Email.h", true)
 @:native("winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionStatus")
-extern enum abstract EmailRecipientResolutionStatus(cxx.num.Int32)
+extern enum abstract EmailRecipientResolutionStatus(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionStatus::Success") final Success;
     @:native("winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionStatus::RecipientNotFound") final RecipientNotFound;

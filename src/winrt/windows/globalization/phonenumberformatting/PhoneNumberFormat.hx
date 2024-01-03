@@ -2,7 +2,7 @@ package winrt.windows.globalization.phonenumberformatting;
 
 @:include("winrt/Windows.Globalization.PhoneNumberFormatting.h", true)
 @:native("winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat")
-extern enum abstract PhoneNumberFormat(cxx.num.Int32)
+extern enum abstract PhoneNumberFormat(Int32)
 {
     @:native("winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat::E164") final E164;
     @:native("winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat::International") final International;

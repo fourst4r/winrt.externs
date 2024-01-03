@@ -1,6 +1,9 @@
 package winrt.microsoft.ui.xaml.data;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Microsoft.UI.Xaml.Data.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Data::RelativeSource")
 extern class RelativeSource
@@ -9,5 +12,5 @@ extern class RelativeSource
 {
     function new();
     overload function Mode(): winrt.microsoft.ui.xaml.data.RelativeSourceMode;
-    overload function Mode(value: cxx.ConstRef<winrt.microsoft.ui.xaml.data.RelativeSourceMode>): Void;
+    overload function Mode(value: ConstRef<winrt.microsoft.ui.xaml.data.RelativeSourceMode>): Void;
 }

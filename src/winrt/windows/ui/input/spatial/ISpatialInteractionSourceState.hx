@@ -1,6 +1,9 @@
 package winrt.windows.ui.input.spatial;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Input.Spatial.h", true)
 @:native("winrt::Windows::UI::Input::Spatial::ISpatialInteractionSourceState")
 extern interface ISpatialInteractionSourceState extends winrt.windows.foundation.IInspectable
@@ -9,5 +12,5 @@ extern interface ISpatialInteractionSourceState extends winrt.windows.foundation
     overload function Properties(): winrt.windows.ui.input.spatial.SpatialInteractionSourceProperties;
     overload function IsPressed(): Bool;
     overload function Timestamp(): winrt.windows.perception.PerceptionTimestamp;
-    function TryGetPointerPose(coordinateSystem: cxx.ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.ui.input.spatial.SpatialPointerPose;
+    function TryGetPointerPose(coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.ui.input.spatial.SpatialPointerPose;
 }

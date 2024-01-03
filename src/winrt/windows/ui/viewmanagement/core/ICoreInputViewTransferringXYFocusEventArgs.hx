@@ -1,6 +1,9 @@
 package winrt.windows.ui.viewmanagement.core;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.ViewManagement.Core.h", true)
 @:native("winrt::Windows::UI::ViewManagement::Core::ICoreInputViewTransferringXYFocusEventArgs")
 extern interface ICoreInputViewTransferringXYFocusEventArgs extends winrt.windows.foundation.IInspectable

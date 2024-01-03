@@ -1,6 +1,9 @@
 package winrt.windows.networking.backgroundtransfer;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Networking.BackgroundTransfer.h", true)
 @:native("winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferCompletionGroup")
 extern interface IBackgroundTransferCompletionGroup extends winrt.windows.foundation.IInspectable

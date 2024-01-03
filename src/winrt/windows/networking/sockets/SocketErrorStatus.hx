@@ -2,7 +2,7 @@ package winrt.windows.networking.sockets;
 
 @:include("winrt/Windows.Networking.Sockets.h", true)
 @:native("winrt::Windows::Networking::Sockets::SocketErrorStatus")
-extern enum abstract SocketErrorStatus(cxx.num.Int32)
+extern enum abstract SocketErrorStatus(Int32)
 {
     @:native("winrt::Windows::Networking::Sockets::SocketErrorStatus::Unknown") final Unknown;
     @:native("winrt::Windows::Networking::Sockets::SocketErrorStatus::OperationAborted") final OperationAborted;

@@ -1,6 +1,9 @@
 package winrt.windows.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::CompositionProjectedShadowReceiver")
 extern class CompositionProjectedShadowReceiver
@@ -8,5 +11,5 @@ extern class CompositionProjectedShadowReceiver
     implements winrt.windows.ui.composition.ICompositionProjectedShadowReceiver
 {
     overload function ReceivingVisual(): winrt.windows.ui.composition.Visual;
-    overload function ReceivingVisual(value: cxx.ConstRef<winrt.windows.ui.composition.Visual>): Void;
+    overload function ReceivingVisual(value: ConstRef<winrt.windows.ui.composition.Visual>): Void;
 }

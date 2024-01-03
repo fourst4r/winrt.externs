@@ -2,7 +2,7 @@ package winrt.windows.devices.wifi;
 
 @:include("winrt/Windows.Devices.WiFi.h", true)
 @:native("winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotCellularBars")
-extern enum abstract WiFiOnDemandHotspotCellularBars(cxx.num.Int32)
+extern enum abstract WiFiOnDemandHotspotCellularBars(Int32)
 {
     @:native("winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotCellularBars::ZeroBars") final ZeroBars;
     @:native("winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotCellularBars::OneBar") final OneBar;

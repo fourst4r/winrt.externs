@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.controls;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::RowDefinition")
 extern class RowDefinition
@@ -9,12 +12,12 @@ extern class RowDefinition
 {
     function new();
     overload function Height(): winrt.windows.ui.xaml.GridLength;
-    overload function Height(value: cxx.ConstRef<winrt.windows.ui.xaml.GridLength>): Void;
-    overload function MaxHeight(): cxx.num.Float64;
-    overload function MaxHeight(value: cxx.num.Float64): Void;
-    overload function MinHeight(): cxx.num.Float64;
-    overload function MinHeight(value: cxx.num.Float64): Void;
-    overload function ActualHeight(): cxx.num.Float64;
+    overload function Height(value: ConstRef<winrt.windows.ui.xaml.GridLength>): Void;
+    overload function MaxHeight(): Float64;
+    overload function MaxHeight(value: Float64): Void;
+    overload function MinHeight(): Float64;
+    overload function MinHeight(value: Float64): Void;
+    overload function ActualHeight(): Float64;
     overload function HeightProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function MaxHeightProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function MinHeightProperty(): winrt.windows.ui.xaml.DependencyProperty;

@@ -2,7 +2,7 @@ package winrt.windows.devices.pointofservice;
 
 @:include("winrt/Windows.Devices.PointOfService.h", true)
 @:native("winrt::Windows::Devices::PointOfService::PosPrinterStatusKind")
-extern enum abstract PosPrinterStatusKind(cxx.num.Int32)
+extern enum abstract PosPrinterStatusKind(Int32)
 {
     @:native("winrt::Windows::Devices::PointOfService::PosPrinterStatusKind::Online") final Online;
     @:native("winrt::Windows::Devices::PointOfService::PosPrinterStatusKind::Off") final Off;

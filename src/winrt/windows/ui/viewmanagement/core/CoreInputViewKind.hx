@@ -2,7 +2,7 @@ package winrt.windows.ui.viewmanagement.core;
 
 @:include("winrt/Windows.UI.ViewManagement.Core.h", true)
 @:native("winrt::Windows::UI::ViewManagement::Core::CoreInputViewKind")
-extern enum abstract CoreInputViewKind(cxx.num.Int32)
+extern enum abstract CoreInputViewKind(Int32)
 {
     @:native("winrt::Windows::UI::ViewManagement::Core::CoreInputViewKind::Default") final Default;
     @:native("winrt::Windows::UI::ViewManagement::Core::CoreInputViewKind::Keyboard") final Keyboard;

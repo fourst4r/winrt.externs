@@ -1,6 +1,9 @@
 package winrt.windows.ui.composition;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::PowerEasingFunction")
 extern class PowerEasingFunction
@@ -8,5 +11,5 @@ extern class PowerEasingFunction
     implements winrt.windows.ui.composition.IPowerEasingFunction
 {
     overload function Mode(): winrt.windows.ui.composition.CompositionEasingFunctionMode;
-    overload function Power(): cxx.num.Float32;
+    overload function Power(): Float32;
 }

@@ -1,6 +1,9 @@
 package winrt.windows.ui.xaml.controls.primitives;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Xaml.Controls.Primitives.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::Primitives::ICarouselPanel")
 extern interface ICarouselPanel extends winrt.windows.foundation.IInspectable
@@ -9,14 +12,14 @@ extern interface ICarouselPanel extends winrt.windows.foundation.IInspectable
     overload function CanVerticallyScroll(value: Bool): Void;
     overload function CanHorizontallyScroll(): Bool;
     overload function CanHorizontallyScroll(value: Bool): Void;
-    overload function ExtentWidth(): cxx.num.Float64;
-    overload function ExtentHeight(): cxx.num.Float64;
-    overload function ViewportWidth(): cxx.num.Float64;
-    overload function ViewportHeight(): cxx.num.Float64;
-    overload function HorizontalOffset(): cxx.num.Float64;
-    overload function VerticalOffset(): cxx.num.Float64;
+    overload function ExtentWidth(): Float64;
+    overload function ExtentHeight(): Float64;
+    overload function ViewportWidth(): Float64;
+    overload function ViewportHeight(): Float64;
+    overload function HorizontalOffset(): Float64;
+    overload function VerticalOffset(): Float64;
     overload function ScrollOwner(): winrt.windows.foundation.IInspectable;
-    overload function ScrollOwner(value: cxx.ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function ScrollOwner(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
     function LineUp(): Void;
     function LineDown(): Void;
     function LineLeft(): Void;
@@ -29,7 +32,7 @@ extern interface ICarouselPanel extends winrt.windows.foundation.IInspectable
     function MouseWheelDown(): Void;
     function MouseWheelLeft(): Void;
     function MouseWheelRight(): Void;
-    function SetHorizontalOffset(offset: cxx.num.Float64): Void;
-    function SetVerticalOffset(offset: cxx.num.Float64): Void;
-    function MakeVisible(visual: cxx.ConstRef<winrt.windows.ui.xaml.UIElement>, rectangle: cxx.ConstRef<winrt.windows.foundation.Rect>): winrt.windows.foundation.Rect;
+    function SetHorizontalOffset(offset: Float64): Void;
+    function SetVerticalOffset(offset: Float64): Void;
+    function MakeVisible(visual: ConstRef<winrt.windows.ui.xaml.UIElement>, rectangle: ConstRef<winrt.windows.foundation.Rect>): winrt.windows.foundation.Rect;
 }

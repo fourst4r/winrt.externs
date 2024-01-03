@@ -1,6 +1,9 @@
 package winrt.windows.media;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.h", true)
 @:native("winrt::Windows::Media::IMediaMarker")
 extern interface IMediaMarker extends winrt.windows.foundation.IInspectable

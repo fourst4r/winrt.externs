@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.contacts;
 
 @:include("winrt/Windows.ApplicationModel.Contacts.h", true)
 @:native("winrt::Windows::ApplicationModel::Contacts::ContactRelationship")
-extern enum abstract ContactRelationship(cxx.num.Int32)
+extern enum abstract ContactRelationship(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactRelationship::Other") final Other;
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactRelationship::Spouse") final Spouse;

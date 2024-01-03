@@ -2,4 +2,4 @@ package winrt.windows.ui.webui;
 
 
 @:extern 
-typedef ResumingEventHandler = (sender: cxx.ConstRef<winrt.windows.foundation.IInspectable>)->Void;
+typedef ResumingEventHandler = Fn<(sender: ConstRef<winrt.windows.foundation.IInspectable>)->Void>;

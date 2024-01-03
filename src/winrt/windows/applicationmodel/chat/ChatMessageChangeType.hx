@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.chat;
 
 @:include("winrt/Windows.ApplicationModel.Chat.h", true)
 @:native("winrt::Windows::ApplicationModel::Chat::ChatMessageChangeType")
-extern enum abstract ChatMessageChangeType(cxx.num.Int32)
+extern enum abstract ChatMessageChangeType(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Chat::ChatMessageChangeType::MessageCreated") final MessageCreated;
     @:native("winrt::Windows::ApplicationModel::Chat::ChatMessageChangeType::MessageModified") final MessageModified;

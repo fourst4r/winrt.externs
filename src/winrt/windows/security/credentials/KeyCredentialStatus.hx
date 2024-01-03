@@ -2,7 +2,7 @@ package winrt.windows.security.credentials;
 
 @:include("winrt/Windows.Security.Credentials.h", true)
 @:native("winrt::Windows::Security::Credentials::KeyCredentialStatus")
-extern enum abstract KeyCredentialStatus(cxx.num.Int32)
+extern enum abstract KeyCredentialStatus(Int32)
 {
     @:native("winrt::Windows::Security::Credentials::KeyCredentialStatus::Success") final Success;
     @:native("winrt::Windows::Security::Credentials::KeyCredentialStatus::UnknownError") final UnknownError;

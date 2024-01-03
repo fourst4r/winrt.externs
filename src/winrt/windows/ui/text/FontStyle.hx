@@ -2,7 +2,7 @@ package winrt.windows.ui.text;
 
 @:include("winrt/Windows.UI.Text.h", true)
 @:native("winrt::Windows::UI::Text::FontStyle")
-extern enum abstract FontStyle(cxx.num.Int32)
+extern enum abstract FontStyle(Int32)
 {
     @:native("winrt::Windows::UI::Text::FontStyle::Normal") final Normal;
     @:native("winrt::Windows::UI::Text::FontStyle::Oblique") final Oblique;

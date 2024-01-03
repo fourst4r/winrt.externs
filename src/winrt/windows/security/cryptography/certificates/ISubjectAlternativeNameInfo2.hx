@@ -1,6 +1,9 @@
 package winrt.windows.security.cryptography.certificates;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Security.Cryptography.Certificates.h", true)
 @:native("winrt::Windows::Security::Cryptography::Certificates::ISubjectAlternativeNameInfo2")
 extern interface ISubjectAlternativeNameInfo2 extends winrt.windows.foundation.IInspectable

@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.contacts;
 
 @:include("winrt/Windows.ApplicationModel.Contacts.h", true)
 @:native("winrt::Windows::ApplicationModel::Contacts::ContactPhoneKind")
-extern enum abstract ContactPhoneKind(cxx.num.Int32)
+extern enum abstract ContactPhoneKind(Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactPhoneKind::Home") final Home;
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactPhoneKind::Mobile") final Mobile;

@@ -2,4 +2,4 @@ package winrt.windows.ui.xaml;
 
 
 @:extern 
-typedef VisualStateChangedEventHandler = (sender: cxx.ConstRef<winrt.windows.foundation.IInspectable>, e: cxx.ConstRef<winrt.windows.ui.xaml.VisualStateChangedEventArgs>)->Void;
+typedef VisualStateChangedEventHandler = Fn<(sender: ConstRef<winrt.windows.foundation.IInspectable>, e: ConstRef<winrt.windows.ui.xaml.VisualStateChangedEventArgs>)->Void>;

@@ -1,6 +1,9 @@
 package winrt.windows.devices.sms;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Devices.Sms.h", true)
 @:native("winrt::Windows::Devices::Sms::ISmsMessageBase")
 extern interface ISmsMessageBase extends winrt.windows.foundation.IInspectable

@@ -2,7 +2,7 @@ package winrt.windows.devices.sms;
 
 @:include("winrt/Windows.Devices.Sms.h", true)
 @:native("winrt::Windows::Devices::Sms::SmsDeviceStatus")
-extern enum abstract SmsDeviceStatus(cxx.num.Int32)
+extern enum abstract SmsDeviceStatus(Int32)
 {
     @:native("winrt::Windows::Devices::Sms::SmsDeviceStatus::Off") final Off;
     @:native("winrt::Windows::Devices::Sms::SmsDeviceStatus::Ready") final Ready;

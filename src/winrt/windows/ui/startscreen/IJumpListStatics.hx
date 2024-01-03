@@ -1,6 +1,9 @@
 package winrt.windows.ui.startscreen;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.StartScreen.h", true)
 @:native("winrt::Windows::UI::StartScreen::IJumpListStatics")
 extern interface IJumpListStatics extends winrt.windows.foundation.IInspectable

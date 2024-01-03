@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.controls;
 
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::DisabledFormattingAccelerators")
-extern enum abstract DisabledFormattingAccelerators(cxx.num.UInt32)
+extern enum abstract DisabledFormattingAccelerators(UInt32)
 {
     @:native("winrt::Windows::UI::Xaml::Controls::DisabledFormattingAccelerators::None") final None;
     @:native("winrt::Windows::UI::Xaml::Controls::DisabledFormattingAccelerators::Bold") final Bold;

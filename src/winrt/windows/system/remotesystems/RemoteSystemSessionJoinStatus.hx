@@ -2,7 +2,7 @@ package winrt.windows.system.remotesystems;
 
 @:include("winrt/Windows.System.RemoteSystems.h", true)
 @:native("winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinStatus")
-extern enum abstract RemoteSystemSessionJoinStatus(cxx.num.Int32)
+extern enum abstract RemoteSystemSessionJoinStatus(Int32)
 {
     @:native("winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinStatus::Success") final Success;
     @:native("winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinStatus::SessionLimitsExceeded") final SessionLimitsExceeded;

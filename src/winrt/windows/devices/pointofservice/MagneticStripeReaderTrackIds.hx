@@ -2,7 +2,7 @@ package winrt.windows.devices.pointofservice;
 
 @:include("winrt/Windows.Devices.PointOfService.h", true)
 @:native("winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackIds")
-extern enum abstract MagneticStripeReaderTrackIds(cxx.num.Int32)
+extern enum abstract MagneticStripeReaderTrackIds(Int32)
 {
     @:native("winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackIds::None") final None;
     @:native("winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackIds::Track1") final Track1;

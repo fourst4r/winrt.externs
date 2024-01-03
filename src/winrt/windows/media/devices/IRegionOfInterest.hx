@@ -1,6 +1,9 @@
 package winrt.windows.media.devices;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::IRegionOfInterest")
 extern interface IRegionOfInterest extends winrt.windows.foundation.IInspectable
@@ -12,5 +15,5 @@ extern interface IRegionOfInterest extends winrt.windows.foundation.IInspectable
     overload function AutoExposureEnabled(): Bool;
     overload function AutoExposureEnabled(value: Bool): Void;
     overload function Bounds(): winrt.windows.foundation.Rect;
-    overload function Bounds(value: cxx.ConstRef<winrt.windows.foundation.Rect>): Void;
+    overload function Bounds(value: ConstRef<winrt.windows.foundation.Rect>): Void;
 }

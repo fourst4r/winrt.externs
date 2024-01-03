@@ -1,6 +1,9 @@
 package winrt.windows.management.deployment;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.Management.Deployment.h", true)
 @:native("winrt::Windows::Management::Deployment::IPackageManager4")
 extern interface IPackageManager4 extends winrt.windows.foundation.IInspectable

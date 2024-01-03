@@ -2,7 +2,7 @@ package winrt.windows.media.miracast;
 
 @:include("winrt/Windows.Media.Miracast.h", true)
 @:native("winrt::Windows::Media::Miracast::MiracastReceiverApplySettingsStatus")
-extern enum abstract MiracastReceiverApplySettingsStatus(cxx.num.Int32)
+extern enum abstract MiracastReceiverApplySettingsStatus(Int32)
 {
     @:native("winrt::Windows::Media::Miracast::MiracastReceiverApplySettingsStatus::Success") final Success;
     @:native("winrt::Windows::Media::Miracast::MiracastReceiverApplySettingsStatus::UnknownFailure") final UnknownFailure;

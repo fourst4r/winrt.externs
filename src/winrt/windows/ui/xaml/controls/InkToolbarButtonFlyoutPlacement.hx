@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.controls;
 
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::InkToolbarButtonFlyoutPlacement")
-extern enum abstract InkToolbarButtonFlyoutPlacement(cxx.num.Int32)
+extern enum abstract InkToolbarButtonFlyoutPlacement(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Controls::InkToolbarButtonFlyoutPlacement::Auto") final Auto;
     @:native("winrt::Windows::UI::Xaml::Controls::InkToolbarButtonFlyoutPlacement::Top") final Top;

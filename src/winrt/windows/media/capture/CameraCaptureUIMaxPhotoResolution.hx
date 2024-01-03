@@ -2,7 +2,7 @@ package winrt.windows.media.capture;
 
 @:include("winrt/Windows.Media.Capture.h", true)
 @:native("winrt::Windows::Media::Capture::CameraCaptureUIMaxPhotoResolution")
-extern enum abstract CameraCaptureUIMaxPhotoResolution(cxx.num.Int32)
+extern enum abstract CameraCaptureUIMaxPhotoResolution(Int32)
 {
     @:native("winrt::Windows::Media::Capture::CameraCaptureUIMaxPhotoResolution::HighestAvailable") final HighestAvailable;
     @:native("winrt::Windows::Media::Capture::CameraCaptureUIMaxPhotoResolution::VerySmallQvga") final VerySmallQvga;

@@ -2,7 +2,7 @@ package winrt.windows.ui.viewmanagement;
 
 @:include("winrt/Windows.UI.ViewManagement.h", true)
 @:native("winrt::Windows::UI::ViewManagement::UIColorType")
-extern enum abstract UIColorType(cxx.num.Int32)
+extern enum abstract UIColorType(Int32)
 {
     @:native("winrt::Windows::UI::ViewManagement::UIColorType::Background") final Background;
     @:native("winrt::Windows::UI::ViewManagement::UIColorType::Foreground") final Foreground;

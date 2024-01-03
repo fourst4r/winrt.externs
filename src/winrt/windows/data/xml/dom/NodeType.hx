@@ -2,7 +2,7 @@ package winrt.windows.data.xml.dom;
 
 @:include("winrt/Windows.Data.Xml.Dom.h", true)
 @:native("winrt::Windows::Data::Xml::Dom::NodeType")
-extern enum abstract NodeType(cxx.num.Int32)
+extern enum abstract NodeType(Int32)
 {
     @:native("winrt::Windows::Data::Xml::Dom::NodeType::Invalid") final Invalid;
     @:native("winrt::Windows::Data::Xml::Dom::NodeType::ElementNode") final ElementNode;

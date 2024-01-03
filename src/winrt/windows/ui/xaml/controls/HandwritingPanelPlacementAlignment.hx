@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.controls;
 
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::HandwritingPanelPlacementAlignment")
-extern enum abstract HandwritingPanelPlacementAlignment(cxx.num.Int32)
+extern enum abstract HandwritingPanelPlacementAlignment(Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Controls::HandwritingPanelPlacementAlignment::Auto") final Auto;
     @:native("winrt::Windows::UI::Xaml::Controls::HandwritingPanelPlacementAlignment::TopLeft") final TopLeft;

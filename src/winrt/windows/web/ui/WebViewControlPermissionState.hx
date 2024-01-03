@@ -2,7 +2,7 @@ package winrt.windows.web.ui;
 
 @:include("winrt/Windows.Web.UI.h", true)
 @:native("winrt::Windows::Web::UI::WebViewControlPermissionState")
-extern enum abstract WebViewControlPermissionState(cxx.num.Int32)
+extern enum abstract WebViewControlPermissionState(Int32)
 {
     @:native("winrt::Windows::Web::UI::WebViewControlPermissionState::Unknown") final Unknown;
     @:native("winrt::Windows::Web::UI::WebViewControlPermissionState::Defer") final Defer;

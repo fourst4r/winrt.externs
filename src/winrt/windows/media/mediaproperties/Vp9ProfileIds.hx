@@ -4,7 +4,7 @@ package winrt.windows.media.mediaproperties;
 @:native("winrt::Windows::Media::MediaProperties::Vp9ProfileIds")
 extern class Vp9ProfileIds
 {
-    static overload function Profile0ChromaSubsampling420BitDepth8(): cxx.num.Int32;
-    static overload function Profile2ChromaSubsampling420BitDepth10(): cxx.num.Int32;
-    static overload function Profile2ChromaSubsampling420BitDepth12(): cxx.num.Int32;
+    static overload function Profile0ChromaSubsampling420BitDepth8(): Int32;
+    static overload function Profile2ChromaSubsampling420BitDepth10(): Int32;
+    static overload function Profile2ChromaSubsampling420BitDepth12(): Int32;
 }

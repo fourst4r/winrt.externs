@@ -4,21 +4,21 @@ package winrt.windows.devices.bluetooth.genericattributeprofile;
 @:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError")
 extern class GattProtocolError
 {
-    static overload function InvalidHandle(): cxx.num.UInt8;
-    static overload function ReadNotPermitted(): cxx.num.UInt8;
-    static overload function WriteNotPermitted(): cxx.num.UInt8;
-    static overload function InvalidPdu(): cxx.num.UInt8;
-    static overload function InsufficientAuthentication(): cxx.num.UInt8;
-    static overload function RequestNotSupported(): cxx.num.UInt8;
-    static overload function InvalidOffset(): cxx.num.UInt8;
-    static overload function InsufficientAuthorization(): cxx.num.UInt8;
-    static overload function PrepareQueueFull(): cxx.num.UInt8;
-    static overload function AttributeNotFound(): cxx.num.UInt8;
-    static overload function AttributeNotLong(): cxx.num.UInt8;
-    static overload function InsufficientEncryptionKeySize(): cxx.num.UInt8;
-    static overload function InvalidAttributeValueLength(): cxx.num.UInt8;
-    static overload function UnlikelyError(): cxx.num.UInt8;
-    static overload function InsufficientEncryption(): cxx.num.UInt8;
-    static overload function UnsupportedGroupType(): cxx.num.UInt8;
-    static overload function InsufficientResources(): cxx.num.UInt8;
+    static overload function InvalidHandle(): UInt8;
+    static overload function ReadNotPermitted(): UInt8;
+    static overload function WriteNotPermitted(): UInt8;
+    static overload function InvalidPdu(): UInt8;
+    static overload function InsufficientAuthentication(): UInt8;
+    static overload function RequestNotSupported(): UInt8;
+    static overload function InvalidOffset(): UInt8;
+    static overload function InsufficientAuthorization(): UInt8;
+    static overload function PrepareQueueFull(): UInt8;
+    static overload function AttributeNotFound(): UInt8;
+    static overload function AttributeNotLong(): UInt8;
+    static overload function InsufficientEncryptionKeySize(): UInt8;
+    static overload function InvalidAttributeValueLength(): UInt8;
+    static overload function UnlikelyError(): UInt8;
+    static overload function InsufficientEncryption(): UInt8;
+    static overload function UnsupportedGroupType(): UInt8;
+    static overload function InsufficientResources(): UInt8;
 }

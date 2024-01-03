@@ -1,6 +1,9 @@
 package winrt.windows.ui.input.spatial;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.UI.Input.Spatial.h", true)
 @:native("winrt::Windows::UI::Input::Spatial::ISpatialInteractionControllerProperties")
 extern interface ISpatialInteractionControllerProperties extends winrt.windows.foundation.IInspectable
@@ -8,8 +11,8 @@ extern interface ISpatialInteractionControllerProperties extends winrt.windows.f
     overload function IsTouchpadTouched(): Bool;
     overload function IsTouchpadPressed(): Bool;
     overload function IsThumbstickPressed(): Bool;
-    overload function ThumbstickX(): cxx.num.Float64;
-    overload function ThumbstickY(): cxx.num.Float64;
-    overload function TouchpadX(): cxx.num.Float64;
-    overload function TouchpadY(): cxx.num.Float64;
+    overload function ThumbstickX(): Float64;
+    overload function ThumbstickY(): Float64;
+    overload function TouchpadX(): Float64;
+    overload function TouchpadY(): Float64;
 }

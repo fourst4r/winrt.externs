@@ -2,7 +2,7 @@ package winrt.windows.media.speechrecognition;
 
 @:include("winrt/Windows.Media.SpeechRecognition.h", true)
 @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognitionScenario")
-extern enum abstract SpeechRecognitionScenario(cxx.num.Int32)
+extern enum abstract SpeechRecognitionScenario(Int32)
 {
     @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognitionScenario::WebSearch") final WebSearch;
     @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognitionScenario::Dictation") final Dictation;

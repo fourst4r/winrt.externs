@@ -1,11 +1,14 @@
 package winrt.windows.system.diagnostics;
 
 @:valueType
+@:unreflective
+@:structAccess
+@:semantics(variable)
 @:include("winrt/Windows.System.Diagnostics.h", true)
 @:native("winrt::Windows::System::Diagnostics::IProcessDiagnosticInfo")
 extern interface IProcessDiagnosticInfo extends winrt.windows.foundation.IInspectable
 {
-    overload function ProcessId(): cxx.num.UInt32;
+    overload function ProcessId(): UInt32;
     overload function ExecutableFileName(): winrt.HString;
     overload function Parent(): winrt.windows.system.diagnostics.ProcessDiagnosticInfo;
     overload function ProcessStartTime(): winrt.windows.foundation.DateTime;
