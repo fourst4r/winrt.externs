@@ -1,14 +1,14 @@
 package winrt;
 
 typedef Fn<T> =
-    #if hxcpp
+    #if cpp
     cpp.Callable<T>;
     #else
     T;
     #end
 
 typedef RawPtr<T> =
-    #if hxcpp
+    #if cpp
     cpp.RawPointer<T>;
     #elseif reflaxe.cpp
     cxx.Ptr<T>;
@@ -16,7 +16,7 @@ typedef RawPtr<T> =
     Dynamic;
     #end
 
-#if hxcpp
+#if cpp
 abstract Ptr<T>(cpp.Pointer<T>) {
 
 }
@@ -27,7 +27,7 @@ typedef Ptr<T> = Dynamic<T>;
 #end
 
 typedef VoidPtr =
-    #if hxcpp
+    #if cpp
     cpp.RawPointer<cpp.Void>;
     #elseif reflaxe.cpp
     cxx.VoidPtr;
@@ -36,7 +36,7 @@ typedef VoidPtr =
     #end
 
 typedef Ref<T> =
-    #if hxcpp
+    #if cpp
     cpp.Reference<T>;
     #elseif reflaxe.cpp
     cxx.Ref<T>;
@@ -44,8 +44,9 @@ typedef Ref<T> =
     Dynamic;
     #end
 
+@:semantics(reference)
 typedef ConstRef<T> =
-    #if hxcpp
+    #if cpp
     cpp.Reference<T>;
     #elseif reflaxe.cpp
     cxx.ConstRef<T>;
@@ -54,7 +55,7 @@ typedef ConstRef<T> =
     #end
 
 typedef Char =
-    #if hxcpp
+    #if cpp
     cpp.Char;
     #elseif reflaxe.cpp
     cxx.Char;
@@ -63,7 +64,7 @@ typedef Char =
     #end
 
 typedef Int8 =
-    #if hxcpp
+    #if cpp
     cpp.Int8;
     #elseif reflaxe.cpp
     cxx.num.Int8;
@@ -72,7 +73,7 @@ typedef Int8 =
     #end
 
 typedef UInt8 =
-    #if hxcpp
+    #if cpp
     cpp.UInt8;
     #elseif reflaxe.cpp
     cxx.num.UInt8;
@@ -81,7 +82,7 @@ typedef UInt8 =
     #end
 
 typedef Int16 =
-    #if hxcpp
+    #if cpp
     cpp.Int16;
     #elseif reflaxe.cpp
     cxx.num.Int16;
@@ -90,7 +91,7 @@ typedef Int16 =
     #end
 
 typedef UInt16 =
-    #if hxcpp
+    #if cpp
     cpp.UInt16;
     #elseif reflaxe.cpp
     cxx.num.UInt16;
@@ -103,7 +104,7 @@ typedef UInt32 = UInt;
 typedef Int64 = haxe.Int64;
 
 typedef UInt64 = 
-    #if hxcpp
+    #if cpp
     cpp.UInt64;
     #elseif reflaxe.cpp
     cxx.num.UInt64;
@@ -112,7 +113,7 @@ typedef UInt64 =
     #end
 
 typedef Float32 = 
-    #if hxcpp
+    #if cpp
     cpp.Float32;
     #elseif reflaxe.cpp
     cxx.num.Float32;
