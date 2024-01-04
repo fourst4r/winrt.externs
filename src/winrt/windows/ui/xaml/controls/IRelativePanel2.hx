@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IRelativePanel2 extends winrt.windows.foundation.IInspectable
 {
     overload function BackgroundSizing(): winrt.windows.ui.xaml.controls.BackgroundSizing;
-    overload function BackgroundSizing(value: ConstRef<winrt.windows.ui.xaml.controls.BackgroundSizing>): Void;
+    overload function BackgroundSizing(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.BackgroundSizing>): Void;
 }

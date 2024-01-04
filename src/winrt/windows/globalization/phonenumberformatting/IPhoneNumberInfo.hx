@@ -8,12 +8,12 @@ package winrt.windows.globalization.phonenumberformatting;
 @:native("winrt::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo")
 extern interface IPhoneNumberInfo extends winrt.windows.foundation.IInspectable
 {
-    overload function CountryCode(): Int32;
+    overload function CountryCode(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function PhoneNumber(): winrt.HString;
-    function GetLengthOfGeographicalAreaCode(): Int32;
+    function GetLengthOfGeographicalAreaCode(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     function GetNationalSignificantNumber(): winrt.HString;
-    function GetLengthOfNationalDestinationCode(): Int32;
+    function GetLengthOfNationalDestinationCode(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     function PredictNumberKind(): winrt.windows.globalization.phonenumberformatting.PredictedPhoneNumberKind;
     function GetGeographicRegionCode(): winrt.HString;
-    function CheckNumberMatch(otherNumber: ConstRef<winrt.windows.globalization.phonenumberformatting.PhoneNumberInfo>): winrt.windows.globalization.phonenumberformatting.PhoneNumberMatchResult;
+    function CheckNumberMatch(otherNumber: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.globalization.phonenumberformatting.PhoneNumberInfo>): winrt.windows.globalization.phonenumberformatting.PhoneNumberMatchResult;
 }

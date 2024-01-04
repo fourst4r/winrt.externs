@@ -8,5 +8,5 @@ package winrt.windows.networking.sockets;
 @:native("winrt::Windows::Networking::Sockets::IDatagramSocket2")
 extern interface IDatagramSocket2 extends winrt.windows.foundation.IInspectable
 {
-    function BindServiceNameAsync(localServiceName: ConstRef<winrt.HString>, adapter: ConstRef<winrt.windows.networking.connectivity.NetworkAdapter>): winrt.windows.foundation.IAsyncAction;
+    function BindServiceNameAsync(localServiceName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, adapter: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.connectivity.NetworkAdapter>): winrt.windows.foundation.IAsyncAction;
 }

@@ -9,9 +9,9 @@ package winrt.windows.applicationmodel.email;
 extern interface IEmailIrmTemplate extends winrt.windows.foundation.IInspectable
 {
     overload function Id(): winrt.HString;
-    overload function Id(value: ConstRef<winrt.HString>): Void;
+    overload function Id(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Description(): winrt.HString;
-    overload function Description(value: ConstRef<winrt.HString>): Void;
+    overload function Description(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Name(): winrt.HString;
-    overload function Name(value: ConstRef<winrt.HString>): Void;
+    overload function Name(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

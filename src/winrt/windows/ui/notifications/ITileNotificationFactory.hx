@@ -8,5 +8,5 @@ package winrt.windows.ui.notifications;
 @:native("winrt::Windows::UI::Notifications::ITileNotificationFactory")
 extern interface ITileNotificationFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateTileNotification(content: ConstRef<winrt.windows.data.xml.dom.XmlDocument>): winrt.windows.ui.notifications.TileNotification;
+    function CreateTileNotification(content: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.data.xml.dom.XmlDocument>): winrt.windows.ui.notifications.TileNotification;
 }

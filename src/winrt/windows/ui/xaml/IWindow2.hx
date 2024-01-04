@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml;
 @:native("winrt::Windows::UI::Xaml::IWindow2")
 extern interface IWindow2 extends winrt.windows.foundation.IInspectable
 {
-    function SetTitleBar(value: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
+    function SetTitleBar(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
 }

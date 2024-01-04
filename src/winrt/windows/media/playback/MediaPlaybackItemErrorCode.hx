@@ -2,7 +2,7 @@ package winrt.windows.media.playback;
 
 @:include("winrt/Windows.Media.Playback.h", true)
 @:native("winrt::Windows::Media::Playback::MediaPlaybackItemErrorCode")
-extern enum abstract MediaPlaybackItemErrorCode(Int32)
+extern enum abstract MediaPlaybackItemErrorCode(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Playback::MediaPlaybackItemErrorCode::None") final None;
     @:native("winrt::Windows::Media::Playback::MediaPlaybackItemErrorCode::Aborted") final Aborted;

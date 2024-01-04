@@ -9,6 +9,6 @@ package winrt.microsoft.ui.xaml.media;
 extern interface ITransformGroup extends winrt.windows.foundation.IInspectable
 {
     overload function Children(): winrt.microsoft.ui.xaml.media.TransformCollection;
-    overload function Children(value: ConstRef<winrt.microsoft.ui.xaml.media.TransformCollection>): Void;
+    overload function Children(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.TransformCollection>): Void;
     overload function Value(): winrt.microsoft.ui.xaml.media.Matrix;
 }

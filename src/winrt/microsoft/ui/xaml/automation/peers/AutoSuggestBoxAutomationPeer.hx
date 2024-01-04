@@ -11,6 +11,6 @@ extern class AutoSuggestBoxAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IAutoSuggestBoxAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IInvokeProvider
 {
-    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.AutoSuggestBox>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.AutoSuggestBox>);
     function Invoke(): Void;
 }

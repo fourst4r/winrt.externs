@@ -2,7 +2,7 @@ package winrt.windows.media.closedcaptioning;
 
 @:include("winrt/Windows.Media.ClosedCaptioning.h", true)
 @:native("winrt::Windows::Media::ClosedCaptioning::ClosedCaptionColor")
-extern enum abstract ClosedCaptionColor(Int32)
+extern enum abstract ClosedCaptionColor(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::ClosedCaptioning::ClosedCaptionColor::Default") final Default;
     @:native("winrt::Windows::Media::ClosedCaptioning::ClosedCaptionColor::White") final White;

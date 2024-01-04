@@ -15,5 +15,5 @@ extern interface IMdmSession extends winrt.windows.foundation.IInspectable
     function AttachAsync(): winrt.windows.foundation.IAsyncAction;
     function Delete(): Void;
     overload function StartAsync(): winrt.windows.foundation.IAsyncAction;
-    overload function StartAsync(alerts: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.management.MdmAlert> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncAction;
+    overload function StartAsync(alerts: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.windows.management.MdmAlert> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncAction;
 }

@@ -12,5 +12,5 @@ extern class EmailMailboxDeleteFolderRequest
     overload function EmailMailboxId(): winrt.HString;
     overload function EmailFolderId(): winrt.HString;
     function ReportCompletedAsync(): winrt.windows.foundation.IAsyncAction;
-    function ReportFailedAsync(status: ConstRef<winrt.windows.applicationmodel.email.EmailMailboxDeleteFolderStatus>): winrt.windows.foundation.IAsyncAction;
+    function ReportFailedAsync(status: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.email.EmailMailboxDeleteFolderStatus>): winrt.windows.foundation.IAsyncAction;
 }

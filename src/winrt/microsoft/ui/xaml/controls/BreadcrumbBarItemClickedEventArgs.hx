@@ -9,6 +9,6 @@ package winrt.microsoft.ui.xaml.controls;
 extern class BreadcrumbBarItemClickedEventArgs
     implements winrt.microsoft.ui.xaml.controls.IBreadcrumbBarItemClickedEventArgs
 {
-    overload function Index(): Int32;
+    overload function Index(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function Item(): winrt.windows.foundation.IInspectable;
 }

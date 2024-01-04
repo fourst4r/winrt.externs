@@ -11,8 +11,8 @@ extern interface IInkStrokeRenderingSegment extends winrt.windows.foundation.IIn
     overload function Position(): winrt.windows.foundation.Point;
     overload function BezierControlPoint1(): winrt.windows.foundation.Point;
     overload function BezierControlPoint2(): winrt.windows.foundation.Point;
-    overload function Pressure(): Float32;
-    overload function TiltX(): Float32;
-    overload function TiltY(): Float32;
-    overload function Twist(): Float32;
+    overload function Pressure(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function TiltX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function TiltY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Twist(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
 }

@@ -8,5 +8,5 @@ package winrt.microsoft.web.webview2.core;
 @:native("winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment9")
 extern interface ICoreWebView2Environment9 extends winrt.windows.foundation.IInspectable
 {
-    function CreateContextMenuItem(Label: ConstRef<winrt.HString>, iconStream: ConstRef<winrt.windows.storage.streams.IRandomAccessStream>, Kind: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2ContextMenuItemKind>): winrt.microsoft.web.webview2.core.CoreWebView2ContextMenuItem;
+    function CreateContextMenuItem(Label: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, iconStream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStream>, Kind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.CoreWebView2ContextMenuItemKind>): winrt.microsoft.web.webview2.core.CoreWebView2ContextMenuItem;
 }

@@ -12,5 +12,5 @@ extern class PaymentRequestChangedArgs
     overload function ChangeKind(): winrt.windows.applicationmodel.payments.PaymentRequestChangeKind;
     overload function ShippingAddress(): winrt.windows.applicationmodel.payments.PaymentAddress;
     overload function SelectedShippingOption(): winrt.windows.applicationmodel.payments.PaymentShippingOption;
-    function Acknowledge(changeResult: ConstRef<winrt.windows.applicationmodel.payments.PaymentRequestChangedResult>): Void;
+    function Acknowledge(changeResult: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.payments.PaymentRequestChangedResult>): Void;
 }

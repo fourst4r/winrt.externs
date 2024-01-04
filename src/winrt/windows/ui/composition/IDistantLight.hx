@@ -9,9 +9,9 @@ package winrt.windows.ui.composition;
 extern interface IDistantLight extends winrt.windows.foundation.IInspectable
 {
     overload function Color(): winrt.windows.ui.Color;
-    overload function Color(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function Color(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
     overload function CoordinateSpace(): winrt.windows.ui.composition.Visual;
-    overload function CoordinateSpace(value: ConstRef<winrt.windows.ui.composition.Visual>): Void;
+    overload function CoordinateSpace(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Visual>): Void;
     overload function Direction(): winrt.windows.foundation.numerics.Vector3;
-    overload function Direction(value: ConstRef<winrt.windows.foundation.numerics.Vector3>): Void;
+    overload function Direction(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector3>): Void;
 }

@@ -13,5 +13,5 @@ extern interface IHostName extends winrt.windows.foundation.IInspectable
     overload function DisplayName(): winrt.HString;
     overload function CanonicalName(): winrt.HString;
     overload function Type(): winrt.windows.networking.HostNameType;
-    function IsEqual(hostName: ConstRef<winrt.windows.networking.HostName>): Bool;
+    function IsEqual(hostName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.HostName>): Bool;
 }

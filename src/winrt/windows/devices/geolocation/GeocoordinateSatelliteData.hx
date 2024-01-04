@@ -10,9 +10,9 @@ extern class GeocoordinateSatelliteData
     implements winrt.windows.devices.geolocation.IGeocoordinateSatelliteData
     implements winrt.windows.devices.geolocation.IGeocoordinateSatelliteData2
 {
-    overload function PositionDilutionOfPrecision(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
-    overload function HorizontalDilutionOfPrecision(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
-    overload function VerticalDilutionOfPrecision(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
-    overload function GeometricDilutionOfPrecision(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
-    overload function TimeDilutionOfPrecision(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
+    overload function PositionDilutionOfPrecision(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
+    overload function HorizontalDilutionOfPrecision(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
+    overload function VerticalDilutionOfPrecision(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
+    overload function GeometricDilutionOfPrecision(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
+    overload function TimeDilutionOfPrecision(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
 }

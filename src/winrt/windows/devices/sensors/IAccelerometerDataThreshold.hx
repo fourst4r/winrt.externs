@@ -8,10 +8,10 @@ package winrt.windows.devices.sensors;
 @:native("winrt::Windows::Devices::Sensors::IAccelerometerDataThreshold")
 extern interface IAccelerometerDataThreshold extends winrt.windows.foundation.IInspectable
 {
-    overload function XAxisInGForce(): Float64;
-    overload function XAxisInGForce(value: Float64): Void;
-    overload function YAxisInGForce(): Float64;
-    overload function YAxisInGForce(value: Float64): Void;
-    overload function ZAxisInGForce(): Float64;
-    overload function ZAxisInGForce(value: Float64): Void;
+    overload function XAxisInGForce(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function XAxisInGForce(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function YAxisInGForce(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function YAxisInGForce(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function ZAxisInGForce(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ZAxisInGForce(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

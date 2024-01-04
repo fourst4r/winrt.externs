@@ -9,19 +9,19 @@ package winrt.windows.applicationmodel.userdatatasks;
 extern interface IUserDataTaskRecurrenceProperties extends winrt.windows.foundation.IInspectable
 {
     overload function Unit(): winrt.windows.applicationmodel.userdatatasks.UserDataTaskRecurrenceUnit;
-    overload function Unit(value: ConstRef<winrt.windows.applicationmodel.userdatatasks.UserDataTaskRecurrenceUnit>): Void;
-    overload function Occurrences(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
-    overload function Occurrences(value: ConstRef<winrt.windows.foundation.IReference<Int32> /* temp_GenericTypeInstSig */>): Void;
+    overload function Unit(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.userdatatasks.UserDataTaskRecurrenceUnit>): Void;
+    overload function Occurrences(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
+    overload function Occurrences(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* temp_GenericTypeInstSig */>): Void;
     overload function Until(): winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* GenericTypeInstSig */;
-    overload function Until(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* temp_GenericTypeInstSig */>): Void;
-    overload function Interval(): Int32;
-    overload function Interval(value: Int32): Void;
+    overload function Until(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* temp_GenericTypeInstSig */>): Void;
+    overload function Interval(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Interval(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function DaysOfWeek(): winrt.windows.foundation.IReference<winrt.windows.applicationmodel.userdatatasks.UserDataTaskDaysOfWeek> /* GenericTypeInstSig */;
-    overload function DaysOfWeek(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.applicationmodel.userdatatasks.UserDataTaskDaysOfWeek> /* temp_GenericTypeInstSig */>): Void;
+    overload function DaysOfWeek(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.applicationmodel.userdatatasks.UserDataTaskDaysOfWeek> /* temp_GenericTypeInstSig */>): Void;
     overload function WeekOfMonth(): winrt.windows.foundation.IReference<winrt.windows.applicationmodel.userdatatasks.UserDataTaskWeekOfMonth> /* GenericTypeInstSig */;
-    overload function WeekOfMonth(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.applicationmodel.userdatatasks.UserDataTaskWeekOfMonth> /* temp_GenericTypeInstSig */>): Void;
-    overload function Month(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
-    overload function Month(value: ConstRef<winrt.windows.foundation.IReference<Int32> /* temp_GenericTypeInstSig */>): Void;
-    overload function Day(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
-    overload function Day(value: ConstRef<winrt.windows.foundation.IReference<Int32> /* temp_GenericTypeInstSig */>): Void;
+    overload function WeekOfMonth(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.applicationmodel.userdatatasks.UserDataTaskWeekOfMonth> /* temp_GenericTypeInstSig */>): Void;
+    overload function Month(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
+    overload function Month(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* temp_GenericTypeInstSig */>): Void;
+    overload function Day(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
+    overload function Day(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* temp_GenericTypeInstSig */>): Void;
 }

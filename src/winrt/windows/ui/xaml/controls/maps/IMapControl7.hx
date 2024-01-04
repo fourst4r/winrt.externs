@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls.maps;
 extern interface IMapControl7 extends winrt.windows.foundation.IInspectable
 {
     overload function Region(): winrt.HString;
-    overload function Region(value: ConstRef<winrt.HString>): Void;
+    overload function Region(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

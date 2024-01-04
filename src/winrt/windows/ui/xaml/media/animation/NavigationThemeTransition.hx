@@ -12,7 +12,7 @@ extern class NavigationThemeTransition
 {
     function new();
     overload function DefaultNavigationTransitionInfo(): winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo;
-    overload function DefaultNavigationTransitionInfo(value: ConstRef<winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo>): Void;
+    overload function DefaultNavigationTransitionInfo(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo>): Void;
     overload function DefaultNavigationTransitionInfoProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function DefaultNavigationTransitionInfoProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

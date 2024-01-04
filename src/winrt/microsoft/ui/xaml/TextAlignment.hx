@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml;
 
 @:include("winrt/Microsoft.UI.Xaml.h", true)
 @:native("winrt::Microsoft::UI::Xaml::TextAlignment")
-extern enum abstract TextAlignment(Int32)
+extern enum abstract TextAlignment(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::TextAlignment::Center") final Center;
     @:native("winrt::Microsoft::UI::Xaml::TextAlignment::Left") final Left;

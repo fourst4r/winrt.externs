@@ -9,7 +9,7 @@ package winrt.windows.ui.xaml.input;
 extern class Pointer
     implements winrt.windows.ui.xaml.input.IPointer
 {
-    overload function PointerId(): UInt32;
+    overload function PointerId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function PointerDeviceType(): winrt.windows.devices.input.PointerDeviceType;
     overload function IsInContact(): Bool;
     overload function IsInRange(): Bool;

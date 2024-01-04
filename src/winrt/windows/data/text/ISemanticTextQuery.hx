@@ -8,6 +8,6 @@ package winrt.windows.data.text;
 @:native("winrt::Windows::Data::Text::ISemanticTextQuery")
 extern interface ISemanticTextQuery extends winrt.windows.foundation.IInspectable
 {
-    function Find(content: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.data.text.TextSegment> /* GenericTypeInstSig */;
-    function FindInProperty(propertyContent: ConstRef<winrt.HString>, propertyName: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.data.text.TextSegment> /* GenericTypeInstSig */;
+    function Find(content: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.data.text.TextSegment> /* GenericTypeInstSig */;
+    function FindInProperty(propertyContent: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, propertyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.data.text.TextSegment> /* GenericTypeInstSig */;
 }

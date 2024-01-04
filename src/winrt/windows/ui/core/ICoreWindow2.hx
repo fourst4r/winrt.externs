@@ -8,5 +8,5 @@ package winrt.windows.ui.core;
 @:native("winrt::Windows::UI::Core::ICoreWindow2")
 extern interface ICoreWindow2 extends winrt.windows.foundation.IInspectable
 {
-    overload function PointerPosition(value: ConstRef<winrt.windows.foundation.Point>): Void;
+    overload function PointerPosition(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
 }

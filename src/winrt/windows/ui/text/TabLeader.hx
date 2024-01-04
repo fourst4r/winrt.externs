@@ -2,7 +2,7 @@ package winrt.windows.ui.text;
 
 @:include("winrt/Windows.UI.Text.h", true)
 @:native("winrt::Windows::UI::Text::TabLeader")
-extern enum abstract TabLeader(Int32)
+extern enum abstract TabLeader(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Text::TabLeader::Spaces") final Spaces;
     @:native("winrt::Windows::UI::Text::TabLeader::Dots") final Dots;

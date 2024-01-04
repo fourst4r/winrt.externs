@@ -12,24 +12,24 @@ extern class CompositionGradientBrush
     implements winrt.windows.ui.composition.ICompositionGradientBrush2
 {
     overload function AnchorPoint(): winrt.windows.foundation.numerics.Vector2;
-    overload function AnchorPoint(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function AnchorPoint(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
     overload function CenterPoint(): winrt.windows.foundation.numerics.Vector2;
-    overload function CenterPoint(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function CenterPoint(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
     overload function ColorStops(): winrt.windows.ui.composition.CompositionColorGradientStopCollection;
     overload function ExtendMode(): winrt.windows.ui.composition.CompositionGradientExtendMode;
-    overload function ExtendMode(value: ConstRef<winrt.windows.ui.composition.CompositionGradientExtendMode>): Void;
+    overload function ExtendMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionGradientExtendMode>): Void;
     overload function InterpolationSpace(): winrt.windows.ui.composition.CompositionColorSpace;
-    overload function InterpolationSpace(value: ConstRef<winrt.windows.ui.composition.CompositionColorSpace>): Void;
+    overload function InterpolationSpace(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionColorSpace>): Void;
     overload function Offset(): winrt.windows.foundation.numerics.Vector2;
-    overload function Offset(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
-    overload function RotationAngle(): Float32;
-    overload function RotationAngle(value: Float32): Void;
-    overload function RotationAngleInDegrees(): Float32;
-    overload function RotationAngleInDegrees(value: Float32): Void;
+    overload function Offset(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function RotationAngle(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function RotationAngle(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function RotationAngleInDegrees(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function RotationAngleInDegrees(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
     overload function Scale(): winrt.windows.foundation.numerics.Vector2;
-    overload function Scale(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function Scale(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
     overload function TransformMatrix(): winrt.windows.foundation.numerics.Matrix3x2;
-    overload function TransformMatrix(value: ConstRef<winrt.windows.foundation.numerics.Matrix3x2>): Void;
+    overload function TransformMatrix(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Matrix3x2>): Void;
     overload function MappingMode(): winrt.windows.ui.composition.CompositionMappingMode;
-    overload function MappingMode(value: ConstRef<winrt.windows.ui.composition.CompositionMappingMode>): Void;
+    overload function MappingMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionMappingMode>): Void;
 }

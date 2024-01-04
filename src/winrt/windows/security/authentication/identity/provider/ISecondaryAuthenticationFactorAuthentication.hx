@@ -12,6 +12,6 @@ extern interface ISecondaryAuthenticationFactorAuthentication extends winrt.wind
     overload function SessionNonce(): winrt.windows.storage.streams.IBuffer;
     overload function DeviceNonce(): winrt.windows.storage.streams.IBuffer;
     overload function DeviceConfigurationData(): winrt.windows.storage.streams.IBuffer;
-    function FinishAuthenticationAsync(deviceHmac: ConstRef<winrt.windows.storage.streams.IBuffer>, sessionHmac: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.foundation.IAsyncOperation<winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorFinishAuthenticationStatus> /* GenericTypeInstSig */;
-    function AbortAuthenticationAsync(errorLogMessage: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncAction;
+    function FinishAuthenticationAsync(deviceHmac: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>, sessionHmac: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.foundation.IAsyncOperation<winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorFinishAuthenticationStatus> /* GenericTypeInstSig */;
+    function AbortAuthenticationAsync(errorLogMessage: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncAction;
 }

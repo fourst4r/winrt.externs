@@ -2,7 +2,7 @@ package winrt.microsoft.ui.composition.interactions;
 
 @:include("winrt/Microsoft.UI.Composition.Interactions.h", true)
 @:native("winrt::Microsoft::UI::Composition::Interactions::InteractionBindingAxisModes")
-extern enum abstract InteractionBindingAxisModes(UInt32)
+extern enum abstract InteractionBindingAxisModes(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Microsoft::UI::Composition::Interactions::InteractionBindingAxisModes::None") final None;
     @:native("winrt::Microsoft::UI::Composition::Interactions::InteractionBindingAxisModes::PositionX") final PositionX;

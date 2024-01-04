@@ -2,7 +2,7 @@ package winrt.windows.ai.machinelearning;
 
 @:include("winrt/Windows.AI.MachineLearning.h", true)
 @:native("winrt::Windows::AI::MachineLearning::LearningModelDeviceKind")
-extern enum abstract LearningModelDeviceKind(Int32)
+extern enum abstract LearningModelDeviceKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::AI::MachineLearning::LearningModelDeviceKind::Default") final Default;
     @:native("winrt::Windows::AI::MachineLearning::LearningModelDeviceKind::Cpu") final Cpu;

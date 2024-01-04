@@ -2,7 +2,7 @@ package winrt.windows.services.cortana;
 
 @:include("winrt/Windows.Services.Cortana.h", true)
 @:native("winrt::Windows::Services::Cortana::CortanaPermission")
-extern enum abstract CortanaPermission(Int32)
+extern enum abstract CortanaPermission(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Services::Cortana::CortanaPermission::BrowsingHistory") final BrowsingHistory;
     @:native("winrt::Windows::Services::Cortana::CortanaPermission::Calendar") final Calendar;

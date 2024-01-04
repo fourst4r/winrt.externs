@@ -2,7 +2,7 @@ package winrt.microsoft.ui.text;
 
 @:include("winrt/Microsoft.UI.Text.h", true)
 @:native("winrt::Microsoft::UI::Text::SelectionOptions")
-extern enum abstract SelectionOptions(UInt32)
+extern enum abstract SelectionOptions(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Microsoft::UI::Text::SelectionOptions::StartActive") final StartActive;
     @:native("winrt::Microsoft::UI::Text::SelectionOptions::AtEndOfLine") final AtEndOfLine;

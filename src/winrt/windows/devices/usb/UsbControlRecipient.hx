@@ -2,7 +2,7 @@ package winrt.windows.devices.usb;
 
 @:include("winrt/Windows.Devices.Usb.h", true)
 @:native("winrt::Windows::Devices::Usb::UsbControlRecipient")
-extern enum abstract UsbControlRecipient(Int32)
+extern enum abstract UsbControlRecipient(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::Usb::UsbControlRecipient::Device") final Device;
     @:native("winrt::Windows::Devices::Usb::UsbControlRecipient::SpecifiedInterface") final SpecifiedInterface;

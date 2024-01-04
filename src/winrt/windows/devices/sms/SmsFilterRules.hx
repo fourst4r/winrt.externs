@@ -9,7 +9,7 @@ package winrt.windows.devices.sms;
 extern class SmsFilterRules
     implements winrt.windows.devices.sms.ISmsFilterRules
 {
-    /* explicit */ function new(actionType: ConstRef<winrt.windows.devices.sms.SmsFilterActionType>);
+    /* explicit */ function new(actionType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.sms.SmsFilterActionType>);
     overload function ActionType(): winrt.windows.devices.sms.SmsFilterActionType;
     overload function Rules(): winrt.windows.foundation.collections.IVector<winrt.windows.devices.sms.SmsFilterRule> /* GenericTypeInstSig */;
 }

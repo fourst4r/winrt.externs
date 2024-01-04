@@ -11,9 +11,9 @@ extern class ContactPhone
 {
     function new();
     overload function Number(): winrt.HString;
-    overload function Number(value: ConstRef<winrt.HString>): Void;
+    overload function Number(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Kind(): winrt.windows.applicationmodel.contacts.ContactPhoneKind;
-    overload function Kind(value: ConstRef<winrt.windows.applicationmodel.contacts.ContactPhoneKind>): Void;
+    overload function Kind(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.contacts.ContactPhoneKind>): Void;
     overload function Description(): winrt.HString;
-    overload function Description(value: ConstRef<winrt.HString>): Void;
+    overload function Description(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

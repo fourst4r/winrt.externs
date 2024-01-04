@@ -8,7 +8,7 @@ package winrt.windows.system.threading.core;
 @:native("winrt::Windows::System::Threading::Core::IPreallocatedWorkItemFactory")
 extern interface IPreallocatedWorkItemFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWorkItem(handler: ConstRef<winrt.windows.system.threading.WorkItemHandler>): winrt.windows.system.threading.core.PreallocatedWorkItem;
-    function CreateWorkItemWithPriority(handler: ConstRef<winrt.windows.system.threading.WorkItemHandler>, priority: ConstRef<winrt.windows.system.threading.WorkItemPriority>): winrt.windows.system.threading.core.PreallocatedWorkItem;
-    function CreateWorkItemWithPriorityAndOptions(handler: ConstRef<winrt.windows.system.threading.WorkItemHandler>, priority: ConstRef<winrt.windows.system.threading.WorkItemPriority>, options: ConstRef<winrt.windows.system.threading.WorkItemOptions>): winrt.windows.system.threading.core.PreallocatedWorkItem;
+    function CreateWorkItem(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.threading.WorkItemHandler>): winrt.windows.system.threading.core.PreallocatedWorkItem;
+    function CreateWorkItemWithPriority(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.threading.WorkItemHandler>, priority: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.threading.WorkItemPriority>): winrt.windows.system.threading.core.PreallocatedWorkItem;
+    function CreateWorkItemWithPriorityAndOptions(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.threading.WorkItemHandler>, priority: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.threading.WorkItemPriority>, options: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.threading.WorkItemOptions>): winrt.windows.system.threading.core.PreallocatedWorkItem;
 }

@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml.controls.primitives;
 @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::IListViewItemTemplateSettings")
 extern interface IListViewItemTemplateSettings extends winrt.windows.foundation.IInspectable
 {
-    overload function DragItemsCount(): Int32;
+    overload function DragItemsCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

@@ -9,6 +9,6 @@ package winrt.windows.system;
 extern class AppMemoryUsageLimitChangingEventArgs
     implements winrt.windows.system.IAppMemoryUsageLimitChangingEventArgs
 {
-    overload function OldLimit(): UInt64;
-    overload function NewLimit(): UInt64;
+    overload function OldLimit(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
+    overload function NewLimit(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

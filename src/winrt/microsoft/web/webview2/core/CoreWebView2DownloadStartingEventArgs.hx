@@ -13,7 +13,7 @@ extern class CoreWebView2DownloadStartingEventArgs
     overload function Cancel(): Bool;
     overload function Cancel(value: Bool): Void;
     overload function ResultFilePath(): winrt.HString;
-    overload function ResultFilePath(value: ConstRef<winrt.HString>): Void;
+    overload function ResultFilePath(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Handled(): Bool;
     overload function Handled(value: Bool): Void;
     function GetDeferral(): winrt.windows.foundation.Deferral;

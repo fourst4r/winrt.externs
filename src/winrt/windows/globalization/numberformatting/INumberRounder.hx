@@ -8,10 +8,10 @@ package winrt.windows.globalization.numberformatting;
 @:native("winrt::Windows::Globalization::NumberFormatting::INumberRounder")
 extern interface INumberRounder extends winrt.windows.foundation.IInspectable
 {
-    function RoundInt32(value: Int32): Int32;
-    function RoundUInt32(value: UInt32): UInt32;
-    function RoundInt64(value: Int64): Int64;
-    function RoundUInt64(value: UInt64): UInt64;
-    function RoundSingle(value: Float32): Float32;
-    function RoundDouble(value: Float64): Float64;
+    function RoundInt32(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function RoundUInt32(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function RoundInt64(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int64): #if reflaxe.cpp cxx.num. #else cpp. #end Int64;
+    function RoundUInt64(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt64): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
+    function RoundSingle(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    function RoundDouble(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

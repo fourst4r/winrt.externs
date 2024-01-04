@@ -10,7 +10,7 @@ extern class MaintenanceTrigger
     implements winrt.windows.applicationmodel.background.IBackgroundTrigger
     implements winrt.windows.applicationmodel.background.IMaintenanceTrigger
 {
-    function new(freshnessTime: UInt32, oneShot: Bool);
-    overload function FreshnessTime(): UInt32;
+    function new(freshnessTime: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, oneShot: Bool);
+    overload function FreshnessTime(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function OneShot(): Bool;
 }

@@ -8,5 +8,5 @@ package winrt.windows.storage.pickers;
 @:native("winrt::Windows::Storage::Pickers::IFileSavePickerStatics")
 extern interface IFileSavePickerStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.storage.pickers.FileSavePicker;
+    function CreateForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.storage.pickers.FileSavePicker;
 }

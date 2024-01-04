@@ -2,7 +2,7 @@ package winrt.windows.graphics.printing.workflow;
 
 @:include("winrt/Windows.Graphics.Printing.Workflow.h", true)
 @:native("winrt::Windows::Graphics::Printing::Workflow::PdlConversionHostBasedProcessingOperations")
-extern enum abstract PdlConversionHostBasedProcessingOperations(UInt32)
+extern enum abstract PdlConversionHostBasedProcessingOperations(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::Graphics::Printing::Workflow::PdlConversionHostBasedProcessingOperations::None") final None;
     @:native("winrt::Windows::Graphics::Printing::Workflow::PdlConversionHostBasedProcessingOperations::PageRotation") final PageRotation;

@@ -8,6 +8,6 @@ package winrt.windows.ui.input;
 @:native("winrt::Windows::UI::Input::IRadialControllerMenuItemStatics")
 extern interface IRadialControllerMenuItemStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateFromIcon(displayText: ConstRef<winrt.HString>, icon: ConstRef<winrt.windows.storage.streams.RandomAccessStreamReference>): winrt.windows.ui.input.RadialControllerMenuItem;
-    function CreateFromKnownIcon(displayText: ConstRef<winrt.HString>, value: ConstRef<winrt.windows.ui.input.RadialControllerMenuKnownIcon>): winrt.windows.ui.input.RadialControllerMenuItem;
+    function CreateFromIcon(displayText: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, icon: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.RandomAccessStreamReference>): winrt.windows.ui.input.RadialControllerMenuItem;
+    function CreateFromKnownIcon(displayText: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.RadialControllerMenuKnownIcon>): winrt.windows.ui.input.RadialControllerMenuItem;
 }

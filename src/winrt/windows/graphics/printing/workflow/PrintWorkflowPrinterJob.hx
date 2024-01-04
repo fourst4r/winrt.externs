@@ -9,12 +9,12 @@ package winrt.windows.graphics.printing.workflow;
 extern class PrintWorkflowPrinterJob
     implements winrt.windows.graphics.printing.workflow.IPrintWorkflowPrinterJob
 {
-    overload function JobId(): Int32;
+    overload function JobId(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function Printer(): winrt.windows.devices.printers.IppPrintDevice;
     function GetJobStatus(): winrt.windows.graphics.printing.workflow.PrintWorkflowPrinterJobStatus;
     function GetJobPrintTicket(): winrt.windows.graphics.printing.printticket.WorkflowPrintTicket;
-    function GetJobAttributesAsBuffer(attributeNames: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.storage.streams.IBuffer;
-    function GetJobAttributes(attributeNames: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.collections.IMap<winrt.HString, winrt.windows.devices.printers.IppAttributeValue> /* GenericTypeInstSig */;
-    function SetJobAttributesFromBuffer(jobAttributesBuffer: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.devices.printers.IppSetAttributesResult;
-    function SetJobAttributes(jobAttributes: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.windows.devices.printers.IppAttributeValue> /* GenericTypeInstSig */> /* temp_GenericTypeInstSig */>): winrt.windows.devices.printers.IppSetAttributesResult;
+    function GetJobAttributesAsBuffer(attributeNames: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.storage.streams.IBuffer;
+    function GetJobAttributes(attributeNames: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.collections.IMap<winrt.HString, winrt.windows.devices.printers.IppAttributeValue> /* GenericTypeInstSig */;
+    function SetJobAttributesFromBuffer(jobAttributesBuffer: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.devices.printers.IppSetAttributesResult;
+    function SetJobAttributes(jobAttributes: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.windows.devices.printers.IppAttributeValue> /* GenericTypeInstSig */> /* temp_GenericTypeInstSig */>): winrt.windows.devices.printers.IppSetAttributesResult;
 }

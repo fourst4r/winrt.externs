@@ -10,5 +10,5 @@ extern class CameraOcclusionState
     implements winrt.windows.media.devices.ICameraOcclusionState
 {
     overload function IsOccluded(): Bool;
-    function IsOcclusionKind(occlusionKind: ConstRef<winrt.windows.media.devices.CameraOcclusionKind>): Bool;
+    function IsOcclusionKind(occlusionKind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.CameraOcclusionKind>): Bool;
 }

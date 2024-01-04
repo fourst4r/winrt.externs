@@ -9,5 +9,5 @@ package winrt.microsoft.ui.composition;
 extern interface IAnimationPropertyInfo extends winrt.windows.foundation.IInspectable
 {
     overload function AccessMode(): winrt.microsoft.ui.composition.AnimationPropertyAccessMode;
-    overload function AccessMode(value: ConstRef<winrt.microsoft.ui.composition.AnimationPropertyAccessMode>): Void;
+    overload function AccessMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.AnimationPropertyAccessMode>): Void;
 }

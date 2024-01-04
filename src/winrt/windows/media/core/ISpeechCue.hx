@@ -9,9 +9,9 @@ package winrt.windows.media.core;
 extern interface ISpeechCue extends winrt.windows.foundation.IInspectable
 {
     overload function Text(): winrt.HString;
-    overload function Text(value: ConstRef<winrt.HString>): Void;
-    overload function StartPositionInInput(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
-    overload function StartPositionInInput(value: ConstRef<winrt.windows.foundation.IReference<Int32> /* temp_GenericTypeInstSig */>): Void;
-    overload function EndPositionInInput(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
-    overload function EndPositionInInput(value: ConstRef<winrt.windows.foundation.IReference<Int32> /* temp_GenericTypeInstSig */>): Void;
+    overload function Text(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function StartPositionInInput(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
+    overload function StartPositionInInput(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* temp_GenericTypeInstSig */>): Void;
+    overload function EndPositionInInput(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
+    overload function EndPositionInInput(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* temp_GenericTypeInstSig */>): Void;
 }

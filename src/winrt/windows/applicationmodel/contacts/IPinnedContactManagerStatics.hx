@@ -9,6 +9,6 @@ package winrt.windows.applicationmodel.contacts;
 extern interface IPinnedContactManagerStatics extends winrt.windows.foundation.IInspectable
 {
     function GetDefault(): winrt.windows.applicationmodel.contacts.PinnedContactManager;
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.applicationmodel.contacts.PinnedContactManager;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.applicationmodel.contacts.PinnedContactManager;
     function IsSupported(): Bool;
 }

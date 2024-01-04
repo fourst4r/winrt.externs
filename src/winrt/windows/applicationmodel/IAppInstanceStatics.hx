@@ -10,7 +10,7 @@ extern interface IAppInstanceStatics extends winrt.windows.foundation.IInspectab
 {
     overload function RecommendedInstance(): winrt.windows.applicationmodel.AppInstance;
     function GetActivatedEventArgs(): winrt.windows.applicationmodel.activation.IActivatedEventArgs;
-    function FindOrRegisterInstanceForKey(key: ConstRef<winrt.HString>): winrt.windows.applicationmodel.AppInstance;
+    function FindOrRegisterInstanceForKey(key: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.AppInstance;
     function Unregister(): Void;
     function GetInstances(): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.AppInstance> /* GenericTypeInstSig */;
 }

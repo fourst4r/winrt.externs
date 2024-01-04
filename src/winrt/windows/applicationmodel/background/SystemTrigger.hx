@@ -10,7 +10,7 @@ extern class SystemTrigger
     implements winrt.windows.applicationmodel.background.IBackgroundTrigger
     implements winrt.windows.applicationmodel.background.ISystemTrigger
 {
-    function new(triggerType: ConstRef<winrt.windows.applicationmodel.background.SystemTriggerType>, oneShot: Bool);
+    function new(triggerType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.background.SystemTriggerType>, oneShot: Bool);
     overload function OneShot(): Bool;
     overload function TriggerType(): winrt.windows.applicationmodel.background.SystemTriggerType;
 }

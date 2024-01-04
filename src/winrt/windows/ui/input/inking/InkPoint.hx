@@ -10,12 +10,12 @@ extern class InkPoint
     implements winrt.windows.ui.input.inking.IInkPoint
     implements winrt.windows.ui.input.inking.IInkPoint2
 {
-    function new(position: ConstRef<winrt.windows.foundation.Point>, pressure: Float32);
+    function new(position: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>, pressure: #if reflaxe.cpp cxx.num. #else cpp. #end Float32);
     @:native("winrt::Windows::UI::Input::Inking::InkPoint")
-    static overload function make(position: ConstRef<winrt.windows.foundation.Point>, pressure: Float32, tiltX: Float32, tiltY: Float32, timestamp: UInt64): winrt.windows.ui.input.inking.InkPoint;
+    static overload function make(position: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>, pressure: #if reflaxe.cpp cxx.num. #else cpp. #end Float32, tiltX: #if reflaxe.cpp cxx.num. #else cpp. #end Float32, tiltY: #if reflaxe.cpp cxx.num. #else cpp. #end Float32, timestamp: #if reflaxe.cpp cxx.num. #else cpp. #end UInt64): winrt.windows.ui.input.inking.InkPoint;
     overload function Position(): winrt.windows.foundation.Point;
-    overload function Pressure(): Float32;
-    overload function TiltX(): Float32;
-    overload function TiltY(): Float32;
-    overload function Timestamp(): UInt64;
+    overload function Pressure(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function TiltX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function TiltY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Timestamp(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

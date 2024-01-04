@@ -9,8 +9,8 @@ package winrt.windows.applicationmodel.datatransfer.dragdrop.core;
 extern class CoreDragDropManager
     implements winrt.windows.applicationmodel.datatransfer.dragdrop.core.ICoreDragDropManager
 {
-    overload function TargetRequested(value: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragDropManager, winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDropOperationTargetRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function TargetRequested(value: ConstRef<winrt.EventToken>): Void;
+    overload function TargetRequested(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragDropManager, winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDropOperationTargetRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function TargetRequested(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function AreConcurrentOperationsEnabled(): Bool;
     overload function AreConcurrentOperationsEnabled(value: Bool): Void;
     function GetForCurrentView(): winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragDropManager;

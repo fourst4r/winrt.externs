@@ -11,12 +11,12 @@ extern class CoreWebView2NavigationStartingEventArgs
     implements winrt.microsoft.web.webview2.core.ICoreWebView2NavigationStartingEventArgs
 {
     overload function AdditionalAllowedFrameAncestors(): winrt.HString;
-    overload function AdditionalAllowedFrameAncestors(value: ConstRef<winrt.HString>): Void;
+    overload function AdditionalAllowedFrameAncestors(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Uri(): winrt.HString;
     overload function IsUserInitiated(): Bool;
     overload function IsRedirected(): Bool;
     overload function RequestHeaders(): winrt.microsoft.web.webview2.core.CoreWebView2HttpRequestHeaders;
     overload function Cancel(): Bool;
     overload function Cancel(value: Bool): Void;
-    overload function NavigationId(): UInt64;
+    overload function NavigationId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

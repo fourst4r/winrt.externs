@@ -10,6 +10,6 @@ extern class PhoneNewVoicemailMessageTriggerDetails
     implements winrt.windows.applicationmodel.calls.background.IPhoneNewVoicemailMessageTriggerDetails
 {
     overload function LineId(): winrt.Guid;
-    overload function VoicemailCount(): Int32;
+    overload function VoicemailCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function OperatorMessage(): winrt.HString;
 }

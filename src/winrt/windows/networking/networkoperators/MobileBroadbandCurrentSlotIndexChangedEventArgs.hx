@@ -9,5 +9,5 @@ package winrt.windows.networking.networkoperators;
 extern class MobileBroadbandCurrentSlotIndexChangedEventArgs
     implements winrt.windows.networking.networkoperators.IMobileBroadbandCurrentSlotIndexChangedEventArgs
 {
-    overload function CurrentSlotIndex(): Int32;
+    overload function CurrentSlotIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

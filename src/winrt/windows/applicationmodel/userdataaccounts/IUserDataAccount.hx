@@ -10,9 +10,9 @@ extern interface IUserDataAccount extends winrt.windows.foundation.IInspectable
 {
     overload function Id(): winrt.HString;
     overload function UserDisplayName(): winrt.HString;
-    overload function UserDisplayName(value: ConstRef<winrt.HString>): Void;
+    overload function UserDisplayName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function OtherAppReadAccess(): winrt.windows.applicationmodel.userdataaccounts.UserDataAccountOtherAppReadAccess;
-    overload function OtherAppReadAccess(value: ConstRef<winrt.windows.applicationmodel.userdataaccounts.UserDataAccountOtherAppReadAccess>): Void;
+    overload function OtherAppReadAccess(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.userdataaccounts.UserDataAccountOtherAppReadAccess>): Void;
     overload function Icon(): winrt.windows.storage.streams.IRandomAccessStreamReference;
     overload function DeviceAccountTypeId(): winrt.HString;
     overload function PackageFamilyName(): winrt.HString;

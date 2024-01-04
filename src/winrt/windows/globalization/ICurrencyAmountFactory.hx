@@ -8,5 +8,5 @@ package winrt.windows.globalization;
 @:native("winrt::Windows::Globalization::ICurrencyAmountFactory")
 extern interface ICurrencyAmountFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(amount: ConstRef<winrt.HString>, currency: ConstRef<winrt.HString>): winrt.windows.globalization.CurrencyAmount;
+    function Create(amount: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, currency: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.globalization.CurrencyAmount;
 }

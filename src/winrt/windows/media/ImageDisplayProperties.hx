@@ -10,7 +10,7 @@ extern class ImageDisplayProperties
     implements winrt.windows.media.IImageDisplayProperties
 {
     overload function Title(): winrt.HString;
-    overload function Title(value: ConstRef<winrt.HString>): Void;
+    overload function Title(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Subtitle(): winrt.HString;
-    overload function Subtitle(value: ConstRef<winrt.HString>): Void;
+    overload function Subtitle(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

@@ -10,10 +10,10 @@ extern interface IUIElementOverrides extends winrt.windows.foundation.IInspectab
 {
     function OnCreateAutomationPeer(): winrt.microsoft.ui.xaml.automation.peers.AutomationPeer;
     function OnDisconnectVisualChildren(): Void;
-    function FindSubElementsForTouchTargeting(point: ConstRef<winrt.windows.foundation.Point>, boundingRect: ConstRef<winrt.windows.foundation.Rect>): winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.Point> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+    function FindSubElementsForTouchTargeting(point: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>, boundingRect: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Rect>): winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.Point> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
     function GetChildrenInTabFocusOrder(): winrt.windows.foundation.collections.IIterable<winrt.microsoft.ui.xaml.DependencyObject> /* GenericTypeInstSig */;
-    function OnKeyboardAcceleratorInvoked(args: ConstRef<winrt.microsoft.ui.xaml.input.KeyboardAcceleratorInvokedEventArgs>): Void;
-    function OnProcessKeyboardAccelerators(args: ConstRef<winrt.microsoft.ui.xaml.input.ProcessKeyboardAcceleratorEventArgs>): Void;
-    function OnBringIntoViewRequested(e: ConstRef<winrt.microsoft.ui.xaml.BringIntoViewRequestedEventArgs>): Void;
-    function PopulatePropertyInfoOverride(propertyName: ConstRef<winrt.HString>, animationPropertyInfo: ConstRef<winrt.microsoft.ui.composition.AnimationPropertyInfo>): Void;
+    function OnKeyboardAcceleratorInvoked(args: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.KeyboardAcceleratorInvokedEventArgs>): Void;
+    function OnProcessKeyboardAccelerators(args: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.ProcessKeyboardAcceleratorEventArgs>): Void;
+    function OnBringIntoViewRequested(e: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.BringIntoViewRequestedEventArgs>): Void;
+    function PopulatePropertyInfoOverride(propertyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, animationPropertyInfo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.AnimationPropertyInfo>): Void;
 }

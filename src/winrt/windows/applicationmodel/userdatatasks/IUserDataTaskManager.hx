@@ -8,6 +8,6 @@ package winrt.windows.applicationmodel.userdatatasks;
 @:native("winrt::Windows::ApplicationModel::UserDataTasks::IUserDataTaskManager")
 extern interface IUserDataTaskManager extends winrt.windows.foundation.IInspectable
 {
-    function RequestStoreAsync(accessType: ConstRef<winrt.windows.applicationmodel.userdatatasks.UserDataTaskStoreAccessType>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.userdatatasks.UserDataTaskStore> /* GenericTypeInstSig */;
+    function RequestStoreAsync(accessType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.userdatatasks.UserDataTaskStoreAccessType>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.userdatatasks.UserDataTaskStore> /* GenericTypeInstSig */;
     overload function User(): winrt.windows.system.User;
 }

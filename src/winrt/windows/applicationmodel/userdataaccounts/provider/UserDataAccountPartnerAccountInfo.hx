@@ -10,6 +10,6 @@ extern class UserDataAccountPartnerAccountInfo
     implements winrt.windows.applicationmodel.userdataaccounts.provider.IUserDataAccountPartnerAccountInfo
 {
     overload function DisplayName(): winrt.HString;
-    overload function Priority(): UInt32;
+    overload function Priority(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function AccountKind(): winrt.windows.applicationmodel.userdataaccounts.provider.UserDataAccountProviderPartnerAccountKind;
 }

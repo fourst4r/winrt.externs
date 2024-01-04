@@ -9,6 +9,6 @@ package winrt.windows.gaming.input;
 extern interface IFlightStick extends winrt.windows.foundation.IInspectable
 {
     overload function HatSwitchKind(): winrt.windows.gaming.input.GameControllerSwitchKind;
-    function GetButtonLabel(button: ConstRef<winrt.windows.gaming.input.FlightStickButtons>): winrt.windows.gaming.input.GameControllerButtonLabel;
+    function GetButtonLabel(button: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.gaming.input.FlightStickButtons>): winrt.windows.gaming.input.GameControllerButtonLabel;
     function GetCurrentReading(): winrt.windows.gaming.input.FlightStickReading;
 }

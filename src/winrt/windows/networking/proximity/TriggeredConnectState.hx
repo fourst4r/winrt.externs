@@ -2,7 +2,7 @@ package winrt.windows.networking.proximity;
 
 @:include("winrt/Windows.Networking.Proximity.h", true)
 @:native("winrt::Windows::Networking::Proximity::TriggeredConnectState")
-extern enum abstract TriggeredConnectState(Int32)
+extern enum abstract TriggeredConnectState(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Networking::Proximity::TriggeredConnectState::PeerFound") final PeerFound;
     @:native("winrt::Windows::Networking::Proximity::TriggeredConnectState::Listening") final Listening;

@@ -8,5 +8,5 @@ package winrt.windows.devices.enumeration;
 @:native("winrt::Windows::Devices::Enumeration::IDevicePairingRequestedEventArgs2")
 extern interface IDevicePairingRequestedEventArgs2 extends winrt.windows.foundation.IInspectable
 {
-    function AcceptWithPasswordCredential(passwordCredential: ConstRef<winrt.windows.security.credentials.PasswordCredential>): Void;
+    function AcceptWithPasswordCredential(passwordCredential: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.PasswordCredential>): Void;
 }

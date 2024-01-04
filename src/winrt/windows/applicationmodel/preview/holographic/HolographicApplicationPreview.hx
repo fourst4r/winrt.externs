@@ -5,5 +5,5 @@ package winrt.windows.applicationmodel.preview.holographic;
 extern class HolographicApplicationPreview
 {
     static function IsCurrentViewPresentedOnHolographicDisplay(): Bool;
-    static function IsHolographicActivation(activatedEventArgs: ConstRef<winrt.windows.applicationmodel.activation.IActivatedEventArgs>): Bool;
+    static function IsHolographicActivation(activatedEventArgs: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.activation.IActivatedEventArgs>): Bool;
 }

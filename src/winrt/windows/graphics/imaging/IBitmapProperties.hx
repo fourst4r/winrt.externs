@@ -8,5 +8,5 @@ package winrt.windows.graphics.imaging;
 @:native("winrt::Windows::Graphics::Imaging::IBitmapProperties")
 extern interface IBitmapProperties extends winrt.windows.foundation.IInspectable
 {
-    function SetPropertiesAsync(propertiesToSet: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.windows.graphics.imaging.BitmapTypedValue> /* GenericTypeInstSig */> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncAction;
+    function SetPropertiesAsync(propertiesToSet: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.windows.graphics.imaging.BitmapTypedValue> /* GenericTypeInstSig */> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncAction;
 }

@@ -8,6 +8,6 @@ package winrt.windows.networking.connectivity;
 @:native("winrt::Windows::Networking::Connectivity::IConnectionProfileFilter3")
 extern interface IConnectionProfileFilter3 extends winrt.windows.foundation.IInspectable
 {
-    overload function PurposeGuid(value: ConstRef<winrt.windows.foundation.IReference<winrt.Guid> /* temp_GenericTypeInstSig */>): Void;
+    overload function PurposeGuid(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.Guid> /* temp_GenericTypeInstSig */>): Void;
     overload function PurposeGuid(): winrt.windows.foundation.IReference<winrt.Guid> /* GenericTypeInstSig */;
 }

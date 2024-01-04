@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.background;
 
 @:include("winrt/Windows.ApplicationModel.Background.h", true)
 @:native("winrt::Windows::ApplicationModel::Background::BackgroundTaskCancellationReason")
-extern enum abstract BackgroundTaskCancellationReason(Int32)
+extern enum abstract BackgroundTaskCancellationReason(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Background::BackgroundTaskCancellationReason::Abort") final Abort;
     @:native("winrt::Windows::ApplicationModel::Background::BackgroundTaskCancellationReason::Terminating") final Terminating;

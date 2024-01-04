@@ -9,5 +9,5 @@ package winrt.windows.networking.vpn;
 extern interface IVpnCustomPromptOptionSelector extends winrt.windows.foundation.IInspectable
 {
     overload function Options(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
-    overload function SelectedIndex(): UInt32;
+    overload function SelectedIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

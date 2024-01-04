@@ -11,6 +11,6 @@ extern class HubSectionAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IHubSectionAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IScrollItemProvider
 {
-    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.HubSection>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.HubSection>);
     function ScrollIntoView(): Void;
 }

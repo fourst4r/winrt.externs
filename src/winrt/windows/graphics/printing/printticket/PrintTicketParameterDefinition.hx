@@ -14,6 +14,6 @@ extern class PrintTicketParameterDefinition
     overload function XmlNode(): winrt.windows.data.xml.dom.IXmlNode;
     overload function DataType(): winrt.windows.graphics.printing.printticket.PrintTicketParameterDataType;
     overload function UnitType(): winrt.HString;
-    overload function RangeMin(): Int32;
-    overload function RangeMax(): Int32;
+    overload function RangeMin(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function RangeMax(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

@@ -9,8 +9,8 @@ package winrt.windows.web.http;
 extern class HttpCookieManager
     implements winrt.windows.web.http.IHttpCookieManager
 {
-    overload function SetCookie(cookie: ConstRef<winrt.windows.web.http.HttpCookie>): Bool;
-    overload function SetCookie(cookie: ConstRef<winrt.windows.web.http.HttpCookie>, thirdParty: Bool): Bool;
-    function DeleteCookie(cookie: ConstRef<winrt.windows.web.http.HttpCookie>): Void;
-    function GetCookies(uri: ConstRef<winrt.windows.foundation.Uri>): winrt.windows.web.http.HttpCookieCollection;
+    overload function SetCookie(cookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.HttpCookie>): Bool;
+    overload function SetCookie(cookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.HttpCookie>, thirdParty: Bool): Bool;
+    function DeleteCookie(cookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.HttpCookie>): Void;
+    function GetCookies(uri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): winrt.windows.web.http.HttpCookieCollection;
 }

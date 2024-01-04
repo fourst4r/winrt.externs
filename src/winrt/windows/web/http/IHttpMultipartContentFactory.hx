@@ -8,6 +8,6 @@ package winrt.windows.web.http;
 @:native("winrt::Windows::Web::Http::IHttpMultipartContentFactory")
 extern interface IHttpMultipartContentFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWithSubtype(subtype: ConstRef<winrt.HString>): winrt.windows.web.http.HttpMultipartContent;
-    function CreateWithSubtypeAndBoundary(subtype: ConstRef<winrt.HString>, boundary: ConstRef<winrt.HString>): winrt.windows.web.http.HttpMultipartContent;
+    function CreateWithSubtype(subtype: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.http.HttpMultipartContent;
+    function CreateWithSubtypeAndBoundary(subtype: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, boundary: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.http.HttpMultipartContent;
 }

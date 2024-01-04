@@ -10,7 +10,7 @@ extern interface IAdaptiveMediaSourceDownloadCompletedEventArgs extends winrt.wi
 {
     overload function ResourceType(): winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceResourceType;
     overload function ResourceUri(): winrt.windows.foundation.Uri;
-    overload function ResourceByteRangeOffset(): winrt.windows.foundation.IReference<UInt64> /* GenericTypeInstSig */;
-    overload function ResourceByteRangeLength(): winrt.windows.foundation.IReference<UInt64> /* GenericTypeInstSig */;
+    overload function ResourceByteRangeOffset(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt64> /* GenericTypeInstSig */;
+    overload function ResourceByteRangeLength(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt64> /* GenericTypeInstSig */;
     overload function HttpResponseMessage(): winrt.windows.web.http.HttpResponseMessage;
 }

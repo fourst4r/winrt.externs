@@ -10,7 +10,7 @@ extern class HttpMethod
     implements winrt.windows.web.http.IHttpMethod
     implements winrt.windows.foundation.IStringable
 {
-    /* explicit */ function new(method: ConstRef<winrt.HString>);
+    /* explicit */ function new(method: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     overload function Method(): winrt.HString;
     function ToString(): winrt.HString;
     overload function Delete(): winrt.windows.web.http.HttpMethod;

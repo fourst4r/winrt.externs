@@ -8,5 +8,5 @@ package winrt.windows.system.remotedesktop.provider;
 @:native("winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfoStatics")
 extern interface IRemoteDesktopConnectionInfoStatics extends winrt.windows.foundation.IInspectable
 {
-    function GetForLaunchUri(launchUri: ConstRef<winrt.windows.foundation.Uri>, windowId: ConstRef<winrt.windows.ui.WindowId>): winrt.windows.system.remotedesktop.provider.RemoteDesktopConnectionInfo;
+    function GetForLaunchUri(launchUri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>, windowId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.WindowId>): winrt.windows.system.remotedesktop.provider.RemoteDesktopConnectionInfo;
 }

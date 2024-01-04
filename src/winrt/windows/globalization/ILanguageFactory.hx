@@ -8,5 +8,5 @@ package winrt.windows.globalization;
 @:native("winrt::Windows::Globalization::ILanguageFactory")
 extern interface ILanguageFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateLanguage(languageTag: ConstRef<winrt.HString>): winrt.windows.globalization.Language;
+    function CreateLanguage(languageTag: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.globalization.Language;
 }

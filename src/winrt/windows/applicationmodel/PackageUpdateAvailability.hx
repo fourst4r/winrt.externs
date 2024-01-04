@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel;
 
 @:include("winrt/Windows.ApplicationModel.h", true)
 @:native("winrt::Windows::ApplicationModel::PackageUpdateAvailability")
-extern enum abstract PackageUpdateAvailability(Int32)
+extern enum abstract PackageUpdateAvailability(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::PackageUpdateAvailability::Unknown") final Unknown;
     @:native("winrt::Windows::ApplicationModel::PackageUpdateAvailability::NoUpdates") final NoUpdates;

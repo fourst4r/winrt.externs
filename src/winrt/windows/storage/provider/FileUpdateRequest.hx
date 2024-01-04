@@ -13,9 +13,9 @@ extern class FileUpdateRequest
     overload function ContentId(): winrt.HString;
     overload function File(): winrt.windows.storage.StorageFile;
     overload function Status(): winrt.windows.storage.provider.FileUpdateStatus;
-    overload function Status(value: ConstRef<winrt.windows.storage.provider.FileUpdateStatus>): Void;
+    overload function Status(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.provider.FileUpdateStatus>): Void;
     function GetDeferral(): winrt.windows.storage.provider.FileUpdateRequestDeferral;
-    function UpdateLocalFile(value: ConstRef<winrt.windows.storage.IStorageFile>): Void;
+    function UpdateLocalFile(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.IStorageFile>): Void;
     overload function UserInputNeededMessage(): winrt.HString;
-    overload function UserInputNeededMessage(value: ConstRef<winrt.HString>): Void;
+    overload function UserInputNeededMessage(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

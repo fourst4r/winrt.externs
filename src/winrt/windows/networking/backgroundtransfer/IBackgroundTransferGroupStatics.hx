@@ -8,5 +8,5 @@ package winrt.windows.networking.backgroundtransfer;
 @:native("winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferGroupStatics")
 extern interface IBackgroundTransferGroupStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateGroup(name: ConstRef<winrt.HString>): winrt.windows.networking.backgroundtransfer.BackgroundTransferGroup;
+    function CreateGroup(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.networking.backgroundtransfer.BackgroundTransferGroup;
 }

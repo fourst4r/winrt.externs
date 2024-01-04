@@ -8,8 +8,8 @@ package winrt.windows.perception.spatial;
 @:native("winrt::Windows::Perception::Spatial::ISpatialBoundingVolumeStatics")
 extern interface ISpatialBoundingVolumeStatics extends winrt.windows.foundation.IInspectable
 {
-    function FromBox(coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>, box: ConstRef<winrt.windows.perception.spatial.SpatialBoundingBox>): winrt.windows.perception.spatial.SpatialBoundingVolume;
-    function FromOrientedBox(coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>, box: ConstRef<winrt.windows.perception.spatial.SpatialBoundingOrientedBox>): winrt.windows.perception.spatial.SpatialBoundingVolume;
-    function FromSphere(coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>, sphere: ConstRef<winrt.windows.perception.spatial.SpatialBoundingSphere>): winrt.windows.perception.spatial.SpatialBoundingVolume;
-    function FromFrustum(coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>, frustum: ConstRef<winrt.windows.perception.spatial.SpatialBoundingFrustum>): winrt.windows.perception.spatial.SpatialBoundingVolume;
+    function FromBox(coordinateSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>, box: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialBoundingBox>): winrt.windows.perception.spatial.SpatialBoundingVolume;
+    function FromOrientedBox(coordinateSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>, box: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialBoundingOrientedBox>): winrt.windows.perception.spatial.SpatialBoundingVolume;
+    function FromSphere(coordinateSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>, sphere: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialBoundingSphere>): winrt.windows.perception.spatial.SpatialBoundingVolume;
+    function FromFrustum(coordinateSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>, frustum: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialBoundingFrustum>): winrt.windows.perception.spatial.SpatialBoundingVolume;
 }

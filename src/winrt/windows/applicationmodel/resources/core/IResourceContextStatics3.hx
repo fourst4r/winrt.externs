@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.resources.core;
 @:native("winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics3")
 extern interface IResourceContextStatics3 extends winrt.windows.foundation.IInspectable
 {
-    function SetGlobalQualifierValue(key: ConstRef<winrt.HString>, value: ConstRef<winrt.HString>, persistence: ConstRef<winrt.windows.applicationmodel.resources.core.ResourceQualifierPersistence>): Void;
+    function SetGlobalQualifierValue(key: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, persistence: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.resources.core.ResourceQualifierPersistence>): Void;
 }

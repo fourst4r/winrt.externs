@@ -9,15 +9,15 @@ package winrt.windows.ui.xaml.controls.maps;
 extern interface IMapElement3D extends winrt.windows.foundation.IInspectable
 {
     overload function Location(): winrt.windows.devices.geolocation.Geopoint;
-    overload function Location(value: ConstRef<winrt.windows.devices.geolocation.Geopoint>): Void;
+    overload function Location(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.geolocation.Geopoint>): Void;
     overload function Model(): winrt.windows.ui.xaml.controls.maps.MapModel3D;
-    overload function Model(value: ConstRef<winrt.windows.ui.xaml.controls.maps.MapModel3D>): Void;
-    overload function Heading(): Float64;
-    overload function Heading(value: Float64): Void;
-    overload function Pitch(): Float64;
-    overload function Pitch(value: Float64): Void;
-    overload function Roll(): Float64;
-    overload function Roll(value: Float64): Void;
+    overload function Model(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.maps.MapModel3D>): Void;
+    overload function Heading(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Heading(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function Pitch(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Pitch(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function Roll(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Roll(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function Scale(): winrt.windows.foundation.numerics.Vector3;
-    overload function Scale(value: ConstRef<winrt.windows.foundation.numerics.Vector3>): Void;
+    overload function Scale(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector3>): Void;
 }

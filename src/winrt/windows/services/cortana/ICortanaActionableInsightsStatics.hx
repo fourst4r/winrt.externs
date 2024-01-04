@@ -9,5 +9,5 @@ package winrt.windows.services.cortana;
 extern interface ICortanaActionableInsightsStatics extends winrt.windows.foundation.IInspectable
 {
     function GetDefault(): winrt.windows.services.cortana.CortanaActionableInsights;
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.services.cortana.CortanaActionableInsights;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.services.cortana.CortanaActionableInsights;
 }

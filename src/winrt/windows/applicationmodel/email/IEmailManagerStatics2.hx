@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.email;
 @:native("winrt::Windows::ApplicationModel::Email::IEmailManagerStatics2")
 extern interface IEmailManagerStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function RequestStoreAsync(accessType: ConstRef<winrt.windows.applicationmodel.email.EmailStoreAccessType>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.email.EmailStore> /* GenericTypeInstSig */;
+    function RequestStoreAsync(accessType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.email.EmailStoreAccessType>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.email.EmailStore> /* GenericTypeInstSig */;
 }

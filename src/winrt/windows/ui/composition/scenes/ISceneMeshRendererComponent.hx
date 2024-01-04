@@ -9,8 +9,8 @@ package winrt.windows.ui.composition.scenes;
 extern interface ISceneMeshRendererComponent extends winrt.windows.foundation.IInspectable
 {
     overload function Material(): winrt.windows.ui.composition.scenes.SceneMaterial;
-    overload function Material(value: ConstRef<winrt.windows.ui.composition.scenes.SceneMaterial>): Void;
+    overload function Material(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.scenes.SceneMaterial>): Void;
     overload function Mesh(): winrt.windows.ui.composition.scenes.SceneMesh;
-    overload function Mesh(value: ConstRef<winrt.windows.ui.composition.scenes.SceneMesh>): Void;
+    overload function Mesh(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.scenes.SceneMesh>): Void;
     overload function UVMappings(): winrt.windows.ui.composition.scenes.SceneMeshMaterialAttributeMap;
 }

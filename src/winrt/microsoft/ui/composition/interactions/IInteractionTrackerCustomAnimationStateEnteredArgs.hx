@@ -8,5 +8,5 @@ package winrt.microsoft.ui.composition.interactions;
 @:native("winrt::Microsoft::UI::Composition::Interactions::IInteractionTrackerCustomAnimationStateEnteredArgs")
 extern interface IInteractionTrackerCustomAnimationStateEnteredArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function RequestId(): Int32;
+    overload function RequestId(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

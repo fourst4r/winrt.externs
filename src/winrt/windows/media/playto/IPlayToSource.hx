@@ -10,6 +10,6 @@ extern interface IPlayToSource extends winrt.windows.foundation.IInspectable
 {
     overload function Connection(): winrt.windows.media.playto.PlayToConnection;
     overload function Next(): winrt.windows.media.playto.PlayToSource;
-    overload function Next(value: ConstRef<winrt.windows.media.playto.PlayToSource>): Void;
+    overload function Next(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.playto.PlayToSource>): Void;
     function PlayNext(): Void;
 }

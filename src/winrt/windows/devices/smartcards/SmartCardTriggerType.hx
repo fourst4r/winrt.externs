@@ -2,7 +2,7 @@ package winrt.windows.devices.smartcards;
 
 @:include("winrt/Windows.Devices.SmartCards.h", true)
 @:native("winrt::Windows::Devices::SmartCards::SmartCardTriggerType")
-extern enum abstract SmartCardTriggerType(Int32)
+extern enum abstract SmartCardTriggerType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::SmartCards::SmartCardTriggerType::EmulatorTransaction") final EmulatorTransaction;
     @:native("winrt::Windows::Devices::SmartCards::SmartCardTriggerType::EmulatorNearFieldEntry") final EmulatorNearFieldEntry;

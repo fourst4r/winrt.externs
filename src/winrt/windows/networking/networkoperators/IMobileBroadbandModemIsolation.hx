@@ -8,8 +8,8 @@ package winrt.windows.networking.networkoperators;
 @:native("winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModemIsolation")
 extern interface IMobileBroadbandModemIsolation extends winrt.windows.foundation.IInspectable
 {
-    function AddAllowedHost(host: ConstRef<winrt.windows.networking.HostName>): Void;
-    function AddAllowedHostRange(first: ConstRef<winrt.windows.networking.HostName>, last: ConstRef<winrt.windows.networking.HostName>): Void;
+    function AddAllowedHost(host: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.HostName>): Void;
+    function AddAllowedHostRange(first: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.HostName>, last: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.HostName>): Void;
     function ApplyConfigurationAsync(): winrt.windows.foundation.IAsyncAction;
     function ClearConfigurationAsync(): winrt.windows.foundation.IAsyncAction;
 }

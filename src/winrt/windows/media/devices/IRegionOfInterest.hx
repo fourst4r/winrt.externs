@@ -15,5 +15,5 @@ extern interface IRegionOfInterest extends winrt.windows.foundation.IInspectable
     overload function AutoExposureEnabled(): Bool;
     overload function AutoExposureEnabled(value: Bool): Void;
     overload function Bounds(): winrt.windows.foundation.Rect;
-    overload function Bounds(value: ConstRef<winrt.windows.foundation.Rect>): Void;
+    overload function Bounds(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Rect>): Void;
 }

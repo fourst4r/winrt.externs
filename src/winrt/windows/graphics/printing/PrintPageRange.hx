@@ -9,9 +9,9 @@ package winrt.windows.graphics.printing;
 extern class PrintPageRange
     implements winrt.windows.graphics.printing.IPrintPageRange
 {
-    function new(firstPage: Int32, lastPage: Int32);
+    function new(firstPage: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, lastPage: #if reflaxe.cpp cxx.num. #else cpp. #end Int32);
     @:native("winrt::Windows::Graphics::Printing::PrintPageRange")
-    /* explicit */ static overload function make(page: Int32): winrt.windows.graphics.printing.PrintPageRange;
-    overload function FirstPageNumber(): Int32;
-    overload function LastPageNumber(): Int32;
+    /* explicit */ static overload function make(page: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.graphics.printing.PrintPageRange;
+    overload function FirstPageNumber(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function LastPageNumber(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

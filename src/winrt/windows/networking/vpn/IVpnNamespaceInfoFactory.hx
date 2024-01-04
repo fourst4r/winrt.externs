@@ -8,5 +8,5 @@ package winrt.windows.networking.vpn;
 @:native("winrt::Windows::Networking::Vpn::IVpnNamespaceInfoFactory")
 extern interface IVpnNamespaceInfoFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateVpnNamespaceInfo(name: ConstRef<winrt.HString>, dnsServerList: ConstRef<winrt.windows.foundation.collections.IVector<winrt.windows.networking.HostName> /* temp_GenericTypeInstSig */>, proxyServerList: ConstRef<winrt.windows.foundation.collections.IVector<winrt.windows.networking.HostName> /* temp_GenericTypeInstSig */>): winrt.windows.networking.vpn.VpnNamespaceInfo;
+    function CreateVpnNamespaceInfo(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, dnsServerList: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IVector<winrt.windows.networking.HostName> /* temp_GenericTypeInstSig */>, proxyServerList: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IVector<winrt.windows.networking.HostName> /* temp_GenericTypeInstSig */>): winrt.windows.networking.vpn.VpnNamespaceInfo;
 }

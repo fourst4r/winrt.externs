@@ -9,6 +9,6 @@ package winrt.windows.devices.pointofservice;
 extern interface IBarcodeScannerStatics extends winrt.windows.foundation.IInspectable
 {
     function GetDefaultAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.pointofservice.BarcodeScanner> /* GenericTypeInstSig */;
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.pointofservice.BarcodeScanner> /* GenericTypeInstSig */;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.pointofservice.BarcodeScanner> /* GenericTypeInstSig */;
     function GetDeviceSelector(): winrt.HString;
 }

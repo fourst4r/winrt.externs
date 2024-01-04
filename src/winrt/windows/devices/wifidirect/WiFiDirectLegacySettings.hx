@@ -12,7 +12,7 @@ extern class WiFiDirectLegacySettings
     overload function IsEnabled(): Bool;
     overload function IsEnabled(value: Bool): Void;
     overload function Ssid(): winrt.HString;
-    overload function Ssid(value: ConstRef<winrt.HString>): Void;
+    overload function Ssid(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Passphrase(): winrt.windows.security.credentials.PasswordCredential;
-    overload function Passphrase(value: ConstRef<winrt.windows.security.credentials.PasswordCredential>): Void;
+    overload function Passphrase(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.PasswordCredential>): Void;
 }

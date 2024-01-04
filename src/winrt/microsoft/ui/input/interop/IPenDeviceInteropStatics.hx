@@ -8,5 +8,5 @@ package winrt.microsoft.ui.input.interop;
 @:native("winrt::Microsoft::UI::Input::Interop::IPenDeviceInteropStatics")
 extern interface IPenDeviceInteropStatics extends winrt.windows.foundation.IInspectable
 {
-    function FromPointerPoint(pointerPoint: ConstRef<winrt.microsoft.ui.input.PointerPoint>): winrt.windows.devices.input.PenDevice;
+    function FromPointerPoint(pointerPoint: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.input.PointerPoint>): winrt.windows.devices.input.PenDevice;
 }

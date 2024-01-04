@@ -8,6 +8,6 @@ package winrt.windows.security.isolation;
 @:native("winrt::Windows::Security::Isolation::IIsolatedWindowsHostMessengerStatics2")
 extern interface IIsolatedWindowsHostMessengerStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function RegisterHostMessageReceiver(receiverId: ConstRef<winrt.Guid>, hostMessageReceivedCallback: ConstRef<winrt.windows.security.isolation.HostMessageReceivedCallback>): Void;
-    function UnregisterHostMessageReceiver(receiverId: ConstRef<winrt.Guid>): Void;
+    function RegisterHostMessageReceiver(receiverId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>, hostMessageReceivedCallback: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.isolation.HostMessageReceivedCallback>): Void;
+    function UnregisterHostMessageReceiver(receiverId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): Void;
 }

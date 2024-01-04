@@ -8,5 +8,5 @@ package winrt.windows.ai.machinelearning;
 @:native("winrt::Windows::AI::MachineLearning::ILearningModelDeviceFactory")
 extern interface ILearningModelDeviceFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(deviceKind: ConstRef<winrt.windows.ai.machinelearning.LearningModelDeviceKind>): winrt.windows.ai.machinelearning.LearningModelDevice;
+    function Create(deviceKind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ai.machinelearning.LearningModelDeviceKind>): winrt.windows.ai.machinelearning.LearningModelDevice;
 }

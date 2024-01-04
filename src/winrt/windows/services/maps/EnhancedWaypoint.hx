@@ -9,7 +9,7 @@ package winrt.windows.services.maps;
 extern class EnhancedWaypoint
     implements winrt.windows.services.maps.IEnhancedWaypoint
 {
-    function new(point: ConstRef<winrt.windows.devices.geolocation.Geopoint>, kind: ConstRef<winrt.windows.services.maps.WaypointKind>);
+    function new(point: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.geolocation.Geopoint>, kind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.services.maps.WaypointKind>);
     overload function Point(): winrt.windows.devices.geolocation.Geopoint;
     overload function Kind(): winrt.windows.services.maps.WaypointKind;
 }

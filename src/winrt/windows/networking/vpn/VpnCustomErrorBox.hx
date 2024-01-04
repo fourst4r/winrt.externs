@@ -11,7 +11,7 @@ extern class VpnCustomErrorBox
     implements winrt.windows.networking.vpn.IVpnCustomErrorBox
 {
     function new();
-    overload function Label(value: ConstRef<winrt.HString>): Void;
+    overload function Label(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Label(): winrt.HString;
     overload function Compulsory(value: Bool): Void;
     overload function Compulsory(): Bool;

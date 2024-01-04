@@ -11,10 +11,10 @@ extern class NotificationData
 {
     function new();
     @:native("winrt::Windows::UI::Notifications::NotificationData")
-    static overload function make(initialValues: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.HString> /* GenericTypeInstSig */> /* temp_GenericTypeInstSig */>, sequenceNumber: UInt32): winrt.windows.ui.notifications.NotificationData;
+    static overload function make(initialValues: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.HString> /* GenericTypeInstSig */> /* temp_GenericTypeInstSig */>, sequenceNumber: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.ui.notifications.NotificationData;
     @:native("winrt::Windows::UI::Notifications::NotificationData")
-    /* explicit */ static overload function make(initialValues: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.HString> /* GenericTypeInstSig */> /* temp_GenericTypeInstSig */>): winrt.windows.ui.notifications.NotificationData;
+    /* explicit */ static overload function make(initialValues: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.HString> /* GenericTypeInstSig */> /* temp_GenericTypeInstSig */>): winrt.windows.ui.notifications.NotificationData;
     overload function Values(): winrt.windows.foundation.collections.IMap<winrt.HString, winrt.HString> /* GenericTypeInstSig */;
-    overload function SequenceNumber(): UInt32;
-    overload function SequenceNumber(value: UInt32): Void;
+    overload function SequenceNumber(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function SequenceNumber(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
 }

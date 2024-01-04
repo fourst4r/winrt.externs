@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.resources.core;
 @:native("winrt::Windows::ApplicationModel::Resources::Core::IResourceContextStatics")
 extern interface IResourceContextStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateMatchingContext(result: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.applicationmodel.resources.core.ResourceQualifier> /* temp_GenericTypeInstSig */>): winrt.windows.applicationmodel.resources.core.ResourceContext;
+    function CreateMatchingContext(result: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.windows.applicationmodel.resources.core.ResourceQualifier> /* temp_GenericTypeInstSig */>): winrt.windows.applicationmodel.resources.core.ResourceContext;
 }

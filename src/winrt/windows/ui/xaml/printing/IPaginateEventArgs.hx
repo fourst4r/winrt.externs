@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.printing;
 extern interface IPaginateEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function PrintTaskOptions(): winrt.windows.graphics.printing.PrintTaskOptions;
-    overload function CurrentPreviewPageNumber(): Int32;
+    overload function CurrentPreviewPageNumber(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

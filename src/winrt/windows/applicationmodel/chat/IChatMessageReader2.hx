@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.chat;
 @:native("winrt::Windows::ApplicationModel::Chat::IChatMessageReader2")
 extern interface IChatMessageReader2 extends winrt.windows.foundation.IInspectable
 {
-    function ReadBatchAsync(count: Int32): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.chat.ChatMessage> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+    function ReadBatchAsync(count: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.chat.ChatMessage> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
 }

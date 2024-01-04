@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.activation;
 @:native("winrt::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs")
 extern interface IApplicationViewActivatedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function CurrentlyShownApplicationViewId(): Int32;
+    overload function CurrentlyShownApplicationViewId(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

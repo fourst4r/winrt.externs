@@ -8,5 +8,5 @@ package winrt.windows.web.atompub;
 @:native("winrt::Windows::Web::AtomPub::IAtomPubClientFactory")
 extern interface IAtomPubClientFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateAtomPubClientWithCredentials(serverCredential: ConstRef<winrt.windows.security.credentials.PasswordCredential>): winrt.windows.web.atompub.AtomPubClient;
+    function CreateAtomPubClientWithCredentials(serverCredential: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.PasswordCredential>): winrt.windows.web.atompub.AtomPubClient;
 }

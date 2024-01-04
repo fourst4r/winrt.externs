@@ -9,8 +9,8 @@ package winrt.windows.foundation.collections;
 
 extern interface IVectorView<T> extends winrt.windows.foundation.IInspectable
 {
-    function GetAt(index: UInt32): T;
-    overload function Size(): UInt32;
-    function IndexOf(value: ConstRef<T>, index: Ref<UInt32>): Bool;
-    function GetMany(startIndex: UInt32, items: winrt.ArrayView<T>): UInt32;
+    function GetAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): T;
+    overload function Size(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function IndexOf(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <T>, index: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <#if reflaxe.cpp cxx.num. #else cpp. #end UInt32>): Bool;
+    function GetMany(startIndex: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, items: winrt.ArrayView<T>): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

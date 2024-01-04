@@ -9,9 +9,9 @@ package winrt.windows.media;
 extern interface IMusicDisplayProperties extends winrt.windows.foundation.IInspectable
 {
     overload function Title(): winrt.HString;
-    overload function Title(value: ConstRef<winrt.HString>): Void;
+    overload function Title(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function AlbumArtist(): winrt.HString;
-    overload function AlbumArtist(value: ConstRef<winrt.HString>): Void;
+    overload function AlbumArtist(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Artist(): winrt.HString;
-    overload function Artist(value: ConstRef<winrt.HString>): Void;
+    overload function Artist(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

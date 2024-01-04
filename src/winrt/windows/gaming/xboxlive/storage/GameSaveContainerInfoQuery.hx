@@ -10,6 +10,6 @@ extern class GameSaveContainerInfoQuery
     implements winrt.windows.gaming.xboxlive.storage.IGameSaveContainerInfoQuery
 {
     overload function GetContainerInfoAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.gaming.xboxlive.storage.GameSaveContainerInfoGetResult> /* GenericTypeInstSig */;
-    overload function GetContainerInfoAsync(startIndex: UInt32, maxNumberOfItems: UInt32): winrt.windows.foundation.IAsyncOperation<winrt.windows.gaming.xboxlive.storage.GameSaveContainerInfoGetResult> /* GenericTypeInstSig */;
-    function GetItemCountAsync(): winrt.windows.foundation.IAsyncOperation<UInt32> /* GenericTypeInstSig */;
+    overload function GetContainerInfoAsync(startIndex: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, maxNumberOfItems: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.foundation.IAsyncOperation<winrt.windows.gaming.xboxlive.storage.GameSaveContainerInfoGetResult> /* GenericTypeInstSig */;
+    function GetItemCountAsync(): winrt.windows.foundation.IAsyncOperation<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
 }

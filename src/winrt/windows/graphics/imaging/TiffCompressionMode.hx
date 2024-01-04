@@ -2,7 +2,7 @@ package winrt.windows.graphics.imaging;
 
 @:include("winrt/Windows.Graphics.Imaging.h", true)
 @:native("winrt::Windows::Graphics::Imaging::TiffCompressionMode")
-extern enum abstract TiffCompressionMode(Int32)
+extern enum abstract TiffCompressionMode(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Graphics::Imaging::TiffCompressionMode::Automatic") final Automatic;
     @:native("winrt::Windows::Graphics::Imaging::TiffCompressionMode::None") final None;

@@ -9,6 +9,6 @@ package winrt.windows.devices.perception.provider;
 extern class PerceptionFaceAuthenticationGroup
     implements winrt.windows.devices.perception.provider.IPerceptionFaceAuthenticationGroup
 {
-    function new(ids: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, startHandler: ConstRef<winrt.windows.devices.perception.provider.PerceptionStartFaceAuthenticationHandler>, stopHandler: ConstRef<winrt.windows.devices.perception.provider.PerceptionStopFaceAuthenticationHandler>);
+    function new(ids: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, startHandler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.perception.provider.PerceptionStartFaceAuthenticationHandler>, stopHandler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.perception.provider.PerceptionStopFaceAuthenticationHandler>);
     overload function FrameProviderIds(): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
 }

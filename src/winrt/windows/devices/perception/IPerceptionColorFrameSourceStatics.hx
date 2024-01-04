@@ -10,6 +10,6 @@ extern interface IPerceptionColorFrameSourceStatics extends winrt.windows.founda
 {
     function CreateWatcher(): winrt.windows.devices.perception.PerceptionColorFrameSourceWatcher;
     function FindAllAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.perception.PerceptionColorFrameSource> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
-    function FromIdAsync(id: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionColorFrameSource> /* GenericTypeInstSig */;
+    function FromIdAsync(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionColorFrameSource> /* GenericTypeInstSig */;
     function RequestAccessAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionFrameSourceAccessStatus> /* GenericTypeInstSig */;
 }

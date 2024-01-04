@@ -10,15 +10,15 @@ extern interface ICoreWebView2Cookie extends winrt.windows.foundation.IInspectab
 {
     overload function Name(): winrt.HString;
     overload function Value(): winrt.HString;
-    overload function Value(value: ConstRef<winrt.HString>): Void;
+    overload function Value(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Domain(): winrt.HString;
     overload function Path(): winrt.HString;
-    overload function Expires(): Float64;
-    overload function Expires(value: Float64): Void;
+    overload function Expires(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Expires(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function IsHttpOnly(): Bool;
     overload function IsHttpOnly(value: Bool): Void;
     overload function SameSite(): winrt.microsoft.web.webview2.core.CoreWebView2CookieSameSiteKind;
-    overload function SameSite(value: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2CookieSameSiteKind>): Void;
+    overload function SameSite(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.CoreWebView2CookieSameSiteKind>): Void;
     overload function IsSecure(): Bool;
     overload function IsSecure(value: Bool): Void;
     overload function IsSession(): Bool;

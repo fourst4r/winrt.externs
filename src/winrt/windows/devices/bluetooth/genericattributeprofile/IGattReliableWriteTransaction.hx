@@ -8,6 +8,6 @@ package winrt.windows.devices.bluetooth.genericattributeprofile;
 @:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattReliableWriteTransaction")
 extern interface IGattReliableWriteTransaction extends winrt.windows.foundation.IInspectable
 {
-    function WriteValue(characteristic: ConstRef<winrt.windows.devices.bluetooth.genericattributeprofile.GattCharacteristic>, value: ConstRef<winrt.windows.storage.streams.IBuffer>): Void;
+    function WriteValue(characteristic: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.bluetooth.genericattributeprofile.GattCharacteristic>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): Void;
     function CommitAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.bluetooth.genericattributeprofile.GattCommunicationStatus> /* GenericTypeInstSig */;
 }

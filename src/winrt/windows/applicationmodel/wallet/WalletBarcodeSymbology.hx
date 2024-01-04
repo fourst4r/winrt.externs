@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.wallet;
 
 @:include("winrt/Windows.ApplicationModel.Wallet.h", true)
 @:native("winrt::Windows::ApplicationModel::Wallet::WalletBarcodeSymbology")
-extern enum abstract WalletBarcodeSymbology(Int32)
+extern enum abstract WalletBarcodeSymbology(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Wallet::WalletBarcodeSymbology::Invalid") final Invalid;
     @:native("winrt::Windows::ApplicationModel::Wallet::WalletBarcodeSymbology::Upca") final Upca;

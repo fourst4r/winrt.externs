@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.calls;
 @:native("winrt::Windows::ApplicationModel::Calls::IPhoneCallHistoryManagerStatics")
 extern interface IPhoneCallHistoryManagerStatics extends winrt.windows.foundation.IInspectable
 {
-    function RequestStoreAsync(accessType: ConstRef<winrt.windows.applicationmodel.calls.PhoneCallHistoryStoreAccessType>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.calls.PhoneCallHistoryStore> /* GenericTypeInstSig */;
+    function RequestStoreAsync(accessType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.calls.PhoneCallHistoryStoreAccessType>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.calls.PhoneCallHistoryStore> /* GenericTypeInstSig */;
 }

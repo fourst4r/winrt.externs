@@ -9,7 +9,7 @@ package winrt.windows.graphics.imaging;
 extern class BitmapTypedValue
     implements winrt.windows.graphics.imaging.IBitmapTypedValue
 {
-    function new(value: ConstRef<winrt.windows.foundation.IInspectable>, type: ConstRef<winrt.windows.foundation.PropertyType>);
+    function new(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.PropertyType>);
     overload function Value(): winrt.windows.foundation.IInspectable;
     overload function Type(): winrt.windows.foundation.PropertyType;
 }

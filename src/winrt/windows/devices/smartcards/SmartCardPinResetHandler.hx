@@ -2,4 +2,4 @@ package winrt.windows.devices.smartcards;
 
 
 @:extern 
-typedef SmartCardPinResetHandler = Fn<(sender: ConstRef<winrt.windows.devices.smartcards.SmartCardProvisioning>, request: ConstRef<winrt.windows.devices.smartcards.SmartCardPinResetRequest>)->Void>;
+typedef SmartCardPinResetHandler = Fn<(sender: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.smartcards.SmartCardProvisioning>, request: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.smartcards.SmartCardPinResetRequest>)->Void>;

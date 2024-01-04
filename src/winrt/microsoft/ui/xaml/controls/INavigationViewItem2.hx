@@ -18,5 +18,5 @@ extern interface INavigationViewItem2 extends winrt.windows.foundation.IInspecta
     overload function IsChildSelected(value: Bool): Void;
     overload function MenuItems(): winrt.windows.foundation.collections.IVector<winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;
     overload function MenuItemsSource(): winrt.windows.foundation.IInspectable;
-    overload function MenuItemsSource(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function MenuItemsSource(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
 }

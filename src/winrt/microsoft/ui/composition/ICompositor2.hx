@@ -20,5 +20,5 @@ extern interface ICompositor2 extends winrt.windows.foundation.IInspectable
     function CreatePointLight(): winrt.microsoft.ui.composition.PointLight;
     function CreateSpotLight(): winrt.microsoft.ui.composition.SpotLight;
     overload function CreateStepEasingFunction(): winrt.microsoft.ui.composition.StepEasingFunction;
-    overload function CreateStepEasingFunction(stepCount: Int32): winrt.microsoft.ui.composition.StepEasingFunction;
+    overload function CreateStepEasingFunction(stepCount: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.microsoft.ui.composition.StepEasingFunction;
 }

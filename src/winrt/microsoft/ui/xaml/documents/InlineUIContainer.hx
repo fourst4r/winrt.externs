@@ -12,5 +12,5 @@ extern class InlineUIContainer
 {
     function new();
     overload function Child(): winrt.microsoft.ui.xaml.UIElement;
-    overload function Child(value: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    overload function Child(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): Void;
 }

@@ -9,8 +9,8 @@ package winrt.windows.media.devices;
 extern interface IMediaDeviceControl extends winrt.windows.foundation.IInspectable
 {
     overload function Capabilities(): winrt.windows.media.devices.MediaDeviceControlCapabilities;
-    function TryGetValue(value: Ref<Float64>): Bool;
-    function TrySetValue(value: Float64): Bool;
-    function TryGetAuto(value: Ref<Bool>): Bool;
+    function TryGetValue(value: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <#if reflaxe.cpp cxx.num. #else cpp. #end Float64>): Bool;
+    function TrySetValue(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Bool;
+    function TryGetAuto(value: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <Bool>): Bool;
     function TrySetAuto(value: Bool): Bool;
 }

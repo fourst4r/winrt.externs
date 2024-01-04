@@ -14,10 +14,10 @@ extern class SpeechRecognitionResult
     overload function Text(): winrt.HString;
     overload function Confidence(): winrt.windows.media.speechrecognition.SpeechRecognitionConfidence;
     overload function SemanticInterpretation(): winrt.windows.media.speechrecognition.SpeechRecognitionSemanticInterpretation;
-    function GetAlternates(maxAlternates: UInt32): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.speechrecognition.SpeechRecognitionResult> /* GenericTypeInstSig */;
+    function GetAlternates(maxAlternates: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.speechrecognition.SpeechRecognitionResult> /* GenericTypeInstSig */;
     overload function Constraint(): winrt.windows.media.speechrecognition.ISpeechRecognitionConstraint;
     overload function RulePath(): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
-    overload function RawConfidence(): Float64;
+    overload function RawConfidence(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function PhraseStartTime(): winrt.windows.foundation.DateTime;
     overload function PhraseDuration(): winrt.windows.foundation.TimeSpan;
 }

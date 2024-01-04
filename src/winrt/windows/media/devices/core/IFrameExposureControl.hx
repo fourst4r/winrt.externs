@@ -11,5 +11,5 @@ extern interface IFrameExposureControl extends winrt.windows.foundation.IInspect
     overload function Auto(): Bool;
     overload function Auto(value: Bool): Void;
     overload function Value(): winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* GenericTypeInstSig */;
-    overload function Value(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* temp_GenericTypeInstSig */>): Void;
+    overload function Value(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* temp_GenericTypeInstSig */>): Void;
 }

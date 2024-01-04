@@ -8,5 +8,5 @@ package winrt.microsoft.windows.widgets.providers;
 @:native("winrt::Microsoft::Windows::Widgets::Providers::IWidgetUpdateRequestOptionsFactory")
 extern interface IWidgetUpdateRequestOptionsFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(widgetId: ConstRef<winrt.HString>): winrt.microsoft.windows.widgets.providers.WidgetUpdateRequestOptions;
+    function CreateInstance(widgetId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.microsoft.windows.widgets.providers.WidgetUpdateRequestOptions;
 }

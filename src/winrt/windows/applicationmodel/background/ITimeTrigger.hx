@@ -8,6 +8,6 @@ package winrt.windows.applicationmodel.background;
 @:native("winrt::Windows::ApplicationModel::Background::ITimeTrigger")
 extern interface ITimeTrigger extends winrt.windows.foundation.IInspectable
 {
-    overload function FreshnessTime(): UInt32;
+    overload function FreshnessTime(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function OneShot(): Bool;
 }

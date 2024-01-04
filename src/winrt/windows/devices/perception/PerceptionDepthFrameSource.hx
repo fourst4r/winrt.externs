@@ -10,16 +10,16 @@ extern class PerceptionDepthFrameSource
     implements winrt.windows.devices.perception.IPerceptionDepthFrameSource
     implements winrt.windows.devices.perception.IPerceptionDepthFrameSource2
 {
-    overload function AvailableChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.perception.PerceptionDepthFrameSource, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function AvailableChanged(token: ConstRef<winrt.EventToken>): Void;
-    overload function ActiveChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.perception.PerceptionDepthFrameSource, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function ActiveChanged(token: ConstRef<winrt.EventToken>): Void;
-    overload function PropertiesChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.perception.PerceptionDepthFrameSource, winrt.windows.devices.perception.PerceptionFrameSourcePropertiesChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function PropertiesChanged(token: ConstRef<winrt.EventToken>): Void;
-    overload function VideoProfileChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.perception.PerceptionDepthFrameSource, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function VideoProfileChanged(token: ConstRef<winrt.EventToken>): Void;
-    overload function CameraIntrinsicsChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.perception.PerceptionDepthFrameSource, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function CameraIntrinsicsChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function AvailableChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.perception.PerceptionDepthFrameSource, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function AvailableChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function ActiveChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.perception.PerceptionDepthFrameSource, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function ActiveChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function PropertiesChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.perception.PerceptionDepthFrameSource, winrt.windows.devices.perception.PerceptionFrameSourcePropertiesChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function PropertiesChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function VideoProfileChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.perception.PerceptionDepthFrameSource, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function VideoProfileChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function CameraIntrinsicsChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.perception.PerceptionDepthFrameSource, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function CameraIntrinsicsChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function Id(): winrt.HString;
     overload function DisplayName(): winrt.HString;
     overload function DeviceKind(): winrt.HString;
@@ -32,20 +32,20 @@ extern class PerceptionDepthFrameSource
     overload function VideoProfile(): winrt.windows.devices.perception.PerceptionVideoProfile;
     overload function CameraIntrinsics(): winrt.windows.media.devices.core.CameraIntrinsics;
     function AcquireControlSession(): winrt.windows.devices.perception.PerceptionControlSession;
-    function CanControlIndependentlyFrom(targetId: ConstRef<winrt.HString>): Bool;
-    function IsCorrelatedWith(targetId: ConstRef<winrt.HString>): Bool;
-    function TryGetTransformTo(targetId: ConstRef<winrt.HString>, result: Ref<winrt.windows.foundation.numerics.Matrix4x4>): Bool;
-    function TryGetDepthCorrelatedCameraIntrinsicsAsync(target: ConstRef<winrt.windows.devices.perception.PerceptionDepthFrameSource>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionDepthCorrelatedCameraIntrinsics> /* GenericTypeInstSig */;
-    function TryGetDepthCorrelatedCoordinateMapperAsync(targetId: ConstRef<winrt.HString>, depthFrameSourceToMapWith: ConstRef<winrt.windows.devices.perception.PerceptionDepthFrameSource>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionDepthCorrelatedCoordinateMapper> /* GenericTypeInstSig */;
-    function TrySetVideoProfileAsync(controlSession: ConstRef<winrt.windows.devices.perception.PerceptionControlSession>, profile: ConstRef<winrt.windows.devices.perception.PerceptionVideoProfile>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionFrameSourcePropertyChangeResult> /* GenericTypeInstSig */;
+    function CanControlIndependentlyFrom(targetId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
+    function IsCorrelatedWith(targetId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
+    function TryGetTransformTo(targetId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, result: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.numerics.Matrix4x4>): Bool;
+    function TryGetDepthCorrelatedCameraIntrinsicsAsync(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.perception.PerceptionDepthFrameSource>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionDepthCorrelatedCameraIntrinsics> /* GenericTypeInstSig */;
+    function TryGetDepthCorrelatedCoordinateMapperAsync(targetId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, depthFrameSourceToMapWith: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.perception.PerceptionDepthFrameSource>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionDepthCorrelatedCoordinateMapper> /* GenericTypeInstSig */;
+    function TrySetVideoProfileAsync(controlSession: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.perception.PerceptionControlSession>, profile: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.perception.PerceptionVideoProfile>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionFrameSourcePropertyChangeResult> /* GenericTypeInstSig */;
     function OpenReader(): winrt.windows.devices.perception.PerceptionDepthFrameReader;
     overload function DeviceId(): winrt.HString;
     function CreateWatcher(): winrt.windows.devices.perception.PerceptionDepthFrameSourceWatcher;
     function FindAllAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.perception.PerceptionDepthFrameSource> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
-    function FromIdAsync(id: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionDepthFrameSource> /* GenericTypeInstSig */;
+    function FromIdAsync(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionDepthFrameSource> /* GenericTypeInstSig */;
     function RequestAccessAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionFrameSourceAccessStatus> /* GenericTypeInstSig */;
     static function CreateWatcher(): winrt.windows.devices.perception.PerceptionDepthFrameSourceWatcher;
     static function FindAllAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.perception.PerceptionDepthFrameSource> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
-    static function FromIdAsync(id: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionDepthFrameSource> /* GenericTypeInstSig */;
+    static function FromIdAsync(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionDepthFrameSource> /* GenericTypeInstSig */;
     static function RequestAccessAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionFrameSourceAccessStatus> /* GenericTypeInstSig */;
 }

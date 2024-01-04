@@ -2,7 +2,7 @@ package winrt.windows.devices.bluetooth;
 
 @:include("winrt/Windows.Devices.Bluetooth.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::BluetoothMajorClass")
-extern enum abstract BluetoothMajorClass(Int32)
+extern enum abstract BluetoothMajorClass(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::Bluetooth::BluetoothMajorClass::Miscellaneous") final Miscellaneous;
     @:native("winrt::Windows::Devices::Bluetooth::BluetoothMajorClass::Computer") final Computer;

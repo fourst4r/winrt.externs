@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.input;
 @:native("winrt::Windows::UI::Xaml::Input::IFocusManagerStatics2")
 extern interface IFocusManagerStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function TryMoveFocus(focusNavigationDirection: ConstRef<winrt.windows.ui.xaml.input.FocusNavigationDirection>): Bool;
+    function TryMoveFocus(focusNavigationDirection: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.input.FocusNavigationDirection>): Bool;
 }

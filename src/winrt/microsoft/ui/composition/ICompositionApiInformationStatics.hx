@@ -8,5 +8,5 @@ package winrt.microsoft.ui.composition;
 @:native("winrt::Microsoft::UI::Composition::ICompositionApiInformationStatics")
 extern interface ICompositionApiInformationStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function ApiVersion(): UInt64;
+    overload function ApiVersion(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

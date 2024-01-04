@@ -8,5 +8,5 @@ package winrt.microsoft.windows.applicationmodel.windowsappruntime;
 @:native("winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::IDeploymentManagerStatics2")
 extern interface IDeploymentManagerStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function Initialize(deploymentInitializeOptions: ConstRef<winrt.microsoft.windows.applicationmodel.windowsappruntime.DeploymentInitializeOptions>): winrt.microsoft.windows.applicationmodel.windowsappruntime.DeploymentResult;
+    function Initialize(deploymentInitializeOptions: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.windows.applicationmodel.windowsappruntime.DeploymentInitializeOptions>): winrt.microsoft.windows.applicationmodel.windowsappruntime.DeploymentResult;
 }

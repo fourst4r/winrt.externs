@@ -8,5 +8,5 @@ package winrt.windows.media.protection.playready;
 @:native("winrt::Windows::Media::Protection::PlayReady::INDCustomDataFactory")
 extern interface INDCustomDataFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(customDataTypeIDBytes: winrt.ArrayView<UInt8>, customDataBytes: winrt.ArrayView<UInt8>): winrt.windows.media.protection.playready.NDCustomData;
+    function CreateInstance(customDataTypeIDBytes: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>, customDataBytes: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): winrt.windows.media.protection.playready.NDCustomData;
 }

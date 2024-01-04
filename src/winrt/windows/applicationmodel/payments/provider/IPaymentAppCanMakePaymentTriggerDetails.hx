@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.payments.provider;
 extern interface IPaymentAppCanMakePaymentTriggerDetails extends winrt.windows.foundation.IInspectable
 {
     overload function Request(): winrt.windows.applicationmodel.payments.PaymentRequest;
-    function ReportCanMakePaymentResult(value: ConstRef<winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResult>): Void;
+    function ReportCanMakePaymentResult(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResult>): Void;
 }

@@ -12,5 +12,5 @@ extern class BluetoothLEAdvertisementPublisherStatusChangedEventArgs
 {
     overload function Status(): winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementPublisherStatus;
     overload function Error(): winrt.windows.devices.bluetooth.BluetoothError;
-    overload function SelectedTransmitPowerLevelInDBm(): winrt.windows.foundation.IReference<Int16> /* GenericTypeInstSig */;
+    overload function SelectedTransmitPowerLevelInDBm(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int16> /* GenericTypeInstSig */;
 }

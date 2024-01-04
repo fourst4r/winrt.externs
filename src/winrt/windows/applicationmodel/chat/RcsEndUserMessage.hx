@@ -14,6 +14,6 @@ extern class RcsEndUserMessage
     overload function Text(): winrt.HString;
     overload function IsPinRequired(): Bool;
     overload function Actions(): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.chat.RcsEndUserMessageAction> /* GenericTypeInstSig */;
-    function SendResponseAsync(action: ConstRef<winrt.windows.applicationmodel.chat.RcsEndUserMessageAction>): winrt.windows.foundation.IAsyncAction;
-    function SendResponseWithPinAsync(action: ConstRef<winrt.windows.applicationmodel.chat.RcsEndUserMessageAction>, pin: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncAction;
+    function SendResponseAsync(action: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.chat.RcsEndUserMessageAction>): winrt.windows.foundation.IAsyncAction;
+    function SendResponseWithPinAsync(action: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.chat.RcsEndUserMessageAction>, pin: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncAction;
 }

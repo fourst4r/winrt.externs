@@ -10,7 +10,7 @@ extern interface IDisplayInformationStatics extends winrt.windows.foundation.IIn
 {
     function GetForCurrentView(): winrt.windows.graphics.display.DisplayInformation;
     overload function AutoRotationPreferences(): winrt.windows.graphics.display.DisplayOrientations;
-    overload function AutoRotationPreferences(value: ConstRef<winrt.windows.graphics.display.DisplayOrientations>): Void;
-    overload function DisplayContentsInvalidated(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.graphics.display.DisplayInformation, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function DisplayContentsInvalidated(token: ConstRef<winrt.EventToken>): Void;
+    overload function AutoRotationPreferences(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.display.DisplayOrientations>): Void;
+    overload function DisplayContentsInvalidated(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.graphics.display.DisplayInformation, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function DisplayContentsInvalidated(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

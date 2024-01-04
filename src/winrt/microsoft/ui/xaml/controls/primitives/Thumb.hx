@@ -12,12 +12,12 @@ extern class Thumb
 {
     function new();
     overload function IsDragging(): Bool;
-    overload function DragStarted(handler: ConstRef<winrt.microsoft.ui.xaml.controls.primitives.DragStartedEventHandler>): winrt.EventToken;
-    @:noExcept overload function DragStarted(token: ConstRef<winrt.EventToken>): Void;
-    overload function DragDelta(handler: ConstRef<winrt.microsoft.ui.xaml.controls.primitives.DragDeltaEventHandler>): winrt.EventToken;
-    @:noExcept overload function DragDelta(token: ConstRef<winrt.EventToken>): Void;
-    overload function DragCompleted(handler: ConstRef<winrt.microsoft.ui.xaml.controls.primitives.DragCompletedEventHandler>): winrt.EventToken;
-    @:noExcept overload function DragCompleted(token: ConstRef<winrt.EventToken>): Void;
+    overload function DragStarted(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.primitives.DragStartedEventHandler>): winrt.EventToken;
+    @:noExcept overload function DragStarted(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function DragDelta(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.primitives.DragDeltaEventHandler>): winrt.EventToken;
+    @:noExcept overload function DragDelta(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function DragCompleted(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.primitives.DragCompletedEventHandler>): winrt.EventToken;
+    @:noExcept overload function DragCompleted(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     function CancelDrag(): Void;
     overload function IsDraggingProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function IsDraggingProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

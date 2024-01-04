@@ -8,12 +8,12 @@ package winrt.microsoft.ui.xaml.controls;
 @:native("winrt::Microsoft::UI::Xaml::Controls::IVirtualizingLayoutContextOverrides")
 extern interface IVirtualizingLayoutContextOverrides extends winrt.windows.foundation.IInspectable
 {
-    function ItemCountCore(): Int32;
-    function GetItemAtCore(index: Int32): winrt.windows.foundation.IInspectable;
+    function ItemCountCore(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function GetItemAtCore(index: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.foundation.IInspectable;
     function RealizationRectCore(): winrt.windows.foundation.Rect;
-    function GetOrCreateElementAtCore(index: Int32, options: ConstRef<winrt.microsoft.ui.xaml.controls.ElementRealizationOptions>): winrt.microsoft.ui.xaml.UIElement;
-    function RecycleElementCore(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
-    overload function RecommendedAnchorIndexCore(): Int32;
+    function GetOrCreateElementAtCore(index: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, options: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.ElementRealizationOptions>): winrt.microsoft.ui.xaml.UIElement;
+    function RecycleElementCore(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): Void;
+    overload function RecommendedAnchorIndexCore(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function LayoutOriginCore(): winrt.windows.foundation.Point;
-    overload function LayoutOriginCore(value: ConstRef<winrt.windows.foundation.Point>): Void;
+    overload function LayoutOriginCore(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
 }

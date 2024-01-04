@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.appservice;
 @:native("winrt::Windows::ApplicationModel::AppService::IAppServiceTriggerDetails3")
 extern interface IAppServiceTriggerDetails3 extends winrt.windows.foundation.IInspectable
 {
-    function CheckCallerForCapabilityAsync(capabilityName: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function CheckCallerForCapabilityAsync(capabilityName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

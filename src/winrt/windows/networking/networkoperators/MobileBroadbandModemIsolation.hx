@@ -9,9 +9,9 @@ package winrt.windows.networking.networkoperators;
 extern class MobileBroadbandModemIsolation
     implements winrt.windows.networking.networkoperators.IMobileBroadbandModemIsolation
 {
-    function new(modemDeviceId: ConstRef<winrt.HString>, ruleGroupId: ConstRef<winrt.HString>);
-    function AddAllowedHost(host: ConstRef<winrt.windows.networking.HostName>): Void;
-    function AddAllowedHostRange(first: ConstRef<winrt.windows.networking.HostName>, last: ConstRef<winrt.windows.networking.HostName>): Void;
+    function new(modemDeviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, ruleGroupId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
+    function AddAllowedHost(host: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.HostName>): Void;
+    function AddAllowedHostRange(first: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.HostName>, last: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.HostName>): Void;
     function ApplyConfigurationAsync(): winrt.windows.foundation.IAsyncAction;
     function ClearConfigurationAsync(): winrt.windows.foundation.IAsyncAction;
 }

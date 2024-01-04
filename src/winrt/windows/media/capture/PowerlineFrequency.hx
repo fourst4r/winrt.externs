@@ -2,7 +2,7 @@ package winrt.windows.media.capture;
 
 @:include("winrt/Windows.Media.Capture.h", true)
 @:native("winrt::Windows::Media::Capture::PowerlineFrequency")
-extern enum abstract PowerlineFrequency(Int32)
+extern enum abstract PowerlineFrequency(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Capture::PowerlineFrequency::Disabled") final Disabled;
     @:native("winrt::Windows::Media::Capture::PowerlineFrequency::FiftyHertz") final FiftyHertz;

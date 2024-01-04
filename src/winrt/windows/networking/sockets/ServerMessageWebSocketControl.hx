@@ -10,5 +10,5 @@ extern class ServerMessageWebSocketControl
     implements winrt.windows.networking.sockets.IServerMessageWebSocketControl
 {
     overload function MessageType(): winrt.windows.networking.sockets.SocketMessageType;
-    overload function MessageType(value: ConstRef<winrt.windows.networking.sockets.SocketMessageType>): Void;
+    overload function MessageType(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.sockets.SocketMessageType>): Void;
 }

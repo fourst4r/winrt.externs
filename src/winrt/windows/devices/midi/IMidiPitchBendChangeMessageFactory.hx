@@ -8,5 +8,5 @@ package winrt.windows.devices.midi;
 @:native("winrt::Windows::Devices::Midi::IMidiPitchBendChangeMessageFactory")
 extern interface IMidiPitchBendChangeMessageFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateMidiPitchBendChangeMessage(channel: UInt8, bend: UInt16): winrt.windows.devices.midi.MidiPitchBendChangeMessage;
+    function CreateMidiPitchBendChangeMessage(channel: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, bend: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.windows.devices.midi.MidiPitchBendChangeMessage;
 }

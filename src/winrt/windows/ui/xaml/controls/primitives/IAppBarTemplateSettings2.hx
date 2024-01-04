@@ -8,7 +8,7 @@ package winrt.windows.ui.xaml.controls.primitives;
 @:native("winrt::Windows::UI::Xaml::Controls::Primitives::IAppBarTemplateSettings2")
 extern interface IAppBarTemplateSettings2 extends winrt.windows.foundation.IInspectable
 {
-    overload function NegativeCompactVerticalDelta(): Float64;
-    overload function NegativeMinimalVerticalDelta(): Float64;
-    overload function NegativeHiddenVerticalDelta(): Float64;
+    overload function NegativeCompactVerticalDelta(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function NegativeMinimalVerticalDelta(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function NegativeHiddenVerticalDelta(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

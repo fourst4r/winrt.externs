@@ -8,6 +8,6 @@ package winrt.windows.media.audio;
 @:native("winrt::Windows::Media::Audio::IAudioNodeEmitterDecayModelStatics")
 extern interface IAudioNodeEmitterDecayModelStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateNatural(minGain: Float64, maxGain: Float64, unityGainDistance: Float64, cutoffDistance: Float64): winrt.windows.media.audio.AudioNodeEmitterDecayModel;
-    function CreateCustom(minGain: Float64, maxGain: Float64): winrt.windows.media.audio.AudioNodeEmitterDecayModel;
+    function CreateNatural(minGain: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, maxGain: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, unityGainDistance: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, cutoffDistance: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.windows.media.audio.AudioNodeEmitterDecayModel;
+    function CreateCustom(minGain: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, maxGain: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.windows.media.audio.AudioNodeEmitterDecayModel;
 }

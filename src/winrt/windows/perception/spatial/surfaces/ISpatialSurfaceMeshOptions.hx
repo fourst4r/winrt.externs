@@ -9,11 +9,11 @@ package winrt.windows.perception.spatial.surfaces;
 extern interface ISpatialSurfaceMeshOptions extends winrt.windows.foundation.IInspectable
 {
     overload function VertexPositionFormat(): winrt.windows.graphics.directx.DirectXPixelFormat;
-    overload function VertexPositionFormat(value: ConstRef<winrt.windows.graphics.directx.DirectXPixelFormat>): Void;
+    overload function VertexPositionFormat(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.directx.DirectXPixelFormat>): Void;
     overload function TriangleIndexFormat(): winrt.windows.graphics.directx.DirectXPixelFormat;
-    overload function TriangleIndexFormat(value: ConstRef<winrt.windows.graphics.directx.DirectXPixelFormat>): Void;
+    overload function TriangleIndexFormat(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.directx.DirectXPixelFormat>): Void;
     overload function VertexNormalFormat(): winrt.windows.graphics.directx.DirectXPixelFormat;
-    overload function VertexNormalFormat(value: ConstRef<winrt.windows.graphics.directx.DirectXPixelFormat>): Void;
+    overload function VertexNormalFormat(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.directx.DirectXPixelFormat>): Void;
     overload function IncludeVertexNormals(): Bool;
     overload function IncludeVertexNormals(value: Bool): Void;
 }

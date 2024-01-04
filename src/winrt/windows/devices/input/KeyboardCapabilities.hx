@@ -10,5 +10,5 @@ extern class KeyboardCapabilities
     implements winrt.windows.devices.input.IKeyboardCapabilities
 {
     function new();
-    overload function KeyboardPresent(): Int32;
+    overload function KeyboardPresent(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

@@ -13,11 +13,11 @@ extern class CornerRadiusFilterConverter
 {
     function new();
     overload function Filter(): winrt.microsoft.ui.xaml.controls.primitives.CornerRadiusFilterKind;
-    overload function Filter(value: ConstRef<winrt.microsoft.ui.xaml.controls.primitives.CornerRadiusFilterKind>): Void;
-    overload function Scale(): Float64;
-    overload function Scale(value: Float64): Void;
-    function Convert(value: ConstRef<winrt.windows.foundation.IInspectable>, targetType: ConstRef<winrt.windows.ui.xaml.interop.TypeName>, parameter: ConstRef<winrt.windows.foundation.IInspectable>, language: ConstRef<winrt.HString>): winrt.windows.foundation.IInspectable;
-    function ConvertBack(value: ConstRef<winrt.windows.foundation.IInspectable>, targetType: ConstRef<winrt.windows.ui.xaml.interop.TypeName>, parameter: ConstRef<winrt.windows.foundation.IInspectable>, language: ConstRef<winrt.HString>): winrt.windows.foundation.IInspectable;
+    overload function Filter(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.primitives.CornerRadiusFilterKind>): Void;
+    overload function Scale(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Scale(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    function Convert(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, targetType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.interop.TypeName>, parameter: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, language: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IInspectable;
+    function ConvertBack(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, targetType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.interop.TypeName>, parameter: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, language: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IInspectable;
     overload function FilterProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function ScaleProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function FilterProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

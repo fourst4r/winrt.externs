@@ -8,5 +8,5 @@ package winrt.windows.media.audio;
 @:native("winrt::Windows::Media::Audio::IAudioGraphSettingsFactory")
 extern interface IAudioGraphSettingsFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(audioRenderCategory: ConstRef<winrt.windows.media.render.AudioRenderCategory>): winrt.windows.media.audio.AudioGraphSettings;
+    function Create(audioRenderCategory: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.render.AudioRenderCategory>): winrt.windows.media.audio.AudioGraphSettings;
 }

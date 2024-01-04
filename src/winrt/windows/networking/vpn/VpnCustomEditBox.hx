@@ -11,12 +11,12 @@ extern class VpnCustomEditBox
     implements winrt.windows.networking.vpn.IVpnCustomEditBox
 {
     function new();
-    overload function DefaultText(value: ConstRef<winrt.HString>): Void;
+    overload function DefaultText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function DefaultText(): winrt.HString;
     overload function NoEcho(value: Bool): Void;
     overload function NoEcho(): Bool;
     overload function Text(): winrt.HString;
-    overload function Label(value: ConstRef<winrt.HString>): Void;
+    overload function Label(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Label(): winrt.HString;
     overload function Compulsory(value: Bool): Void;
     overload function Compulsory(): Bool;

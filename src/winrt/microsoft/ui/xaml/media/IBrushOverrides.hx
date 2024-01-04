@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml.media;
 @:native("winrt::Microsoft::UI::Xaml::Media::IBrushOverrides")
 extern interface IBrushOverrides extends winrt.windows.foundation.IInspectable
 {
-    function PopulatePropertyInfoOverride(propertyName: ConstRef<winrt.HString>, animationPropertyInfo: ConstRef<winrt.microsoft.ui.composition.AnimationPropertyInfo>): Void;
+    function PopulatePropertyInfoOverride(propertyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, animationPropertyInfo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.AnimationPropertyInfo>): Void;
 }

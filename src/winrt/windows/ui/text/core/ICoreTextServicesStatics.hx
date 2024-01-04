@@ -8,5 +8,5 @@ package winrt.windows.ui.text.core;
 @:native("winrt::Windows::UI::Text::Core::ICoreTextServicesStatics")
 extern interface ICoreTextServicesStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function HiddenCharacter(): Char;
+    overload function HiddenCharacter(): #if reflaxe.cpp cxx. #else cpp. #end Char;
 }

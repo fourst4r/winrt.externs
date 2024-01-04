@@ -8,5 +8,5 @@ package winrt.windows.system;
 @:native("winrt::Windows::System::IProtocolForResultsOperation")
 extern interface IProtocolForResultsOperation extends winrt.windows.foundation.IInspectable
 {
-    function ReportCompleted(data: ConstRef<winrt.windows.foundation.collections.ValueSet>): Void;
+    function ReportCompleted(data: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.ValueSet>): Void;
 }

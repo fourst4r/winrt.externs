@@ -20,7 +20,7 @@ extern class WebUIProtocolActivatedEventArgs
     overload function SplashScreen(): winrt.windows.applicationmodel.activation.SplashScreen;
     overload function CallerPackageFamilyName(): winrt.HString;
     overload function Data(): winrt.windows.foundation.collections.ValueSet;
-    overload function CurrentlyShownApplicationViewId(): Int32;
+    overload function CurrentlyShownApplicationViewId(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function ActivatedOperation(): winrt.windows.ui.webui.ActivatedOperation;
     overload function User(): winrt.windows.system.User;
 }

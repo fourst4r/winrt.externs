@@ -34,5 +34,5 @@ extern interface IFrameworkElementStatics extends winrt.windows.foundation.IInsp
     overload function FlowDirectionProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function RequestedThemeProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function ActualThemeProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function DeferTree(element: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): Void;
+    function DeferTree(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyObject>): Void;
 }

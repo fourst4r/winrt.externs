@@ -12,7 +12,7 @@ extern class MenuBarItem
 {
     function new();
     overload function Title(): winrt.HString;
-    overload function Title(value: ConstRef<winrt.HString>): Void;
+    overload function Title(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Items(): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.xaml.controls.MenuFlyoutItemBase> /* GenericTypeInstSig */;
     overload function TitleProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function ItemsProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

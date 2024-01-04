@@ -8,5 +8,5 @@ package winrt.windows.web.http.headers;
 @:native("winrt::Windows::Web::Http::Headers::IHttpTransferCodingHeaderValueFactory")
 extern interface IHttpTransferCodingHeaderValueFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(input: ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpTransferCodingHeaderValue;
+    function Create(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.http.headers.HttpTransferCodingHeaderValue;
 }

@@ -2,7 +2,7 @@ package winrt.windows.services.maps.guidance;
 
 @:include("winrt/Windows.Services.Maps.Guidance.h", true)
 @:native("winrt::Windows::Services::Maps::Guidance::GuidanceManeuverKind")
-extern enum abstract GuidanceManeuverKind(Int32)
+extern enum abstract GuidanceManeuverKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Services::Maps::Guidance::GuidanceManeuverKind::None") final None;
     @:native("winrt::Windows::Services::Maps::Guidance::GuidanceManeuverKind::GoStraight") final GoStraight;

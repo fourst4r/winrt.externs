@@ -10,6 +10,6 @@ extern interface IControlStatics3 extends winrt.windows.foundation.IInspectable
 {
     overload function UseSystemFocusVisualsProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function IsTemplateFocusTargetProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetIsTemplateFocusTarget(element: ConstRef<winrt.windows.ui.xaml.FrameworkElement>): Bool;
-    function SetIsTemplateFocusTarget(element: ConstRef<winrt.windows.ui.xaml.FrameworkElement>, value: Bool): Void;
+    function GetIsTemplateFocusTarget(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.FrameworkElement>): Bool;
+    function SetIsTemplateFocusTarget(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.FrameworkElement>, value: Bool): Void;
 }

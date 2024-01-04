@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.voicecommands;
 @:native("winrt::Windows::ApplicationModel::VoiceCommands::IVoiceCommandServiceConnectionStatics")
 extern interface IVoiceCommandServiceConnectionStatics extends winrt.windows.foundation.IInspectable
 {
-    function FromAppServiceTriggerDetails(triggerDetails: ConstRef<winrt.windows.applicationmodel.appservice.AppServiceTriggerDetails>): winrt.windows.applicationmodel.voicecommands.VoiceCommandServiceConnection;
+    function FromAppServiceTriggerDetails(triggerDetails: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.appservice.AppServiceTriggerDetails>): winrt.windows.applicationmodel.voicecommands.VoiceCommandServiceConnection;
 }

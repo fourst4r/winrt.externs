@@ -10,5 +10,5 @@ extern class ListViewAutomationPeer
     extends winrt.windows.ui.xaml.automation.peers.ListViewBaseAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IListViewAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.ListView>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.ListView>);
 }

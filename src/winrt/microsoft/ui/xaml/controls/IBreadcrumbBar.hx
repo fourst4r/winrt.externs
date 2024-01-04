@@ -9,9 +9,9 @@ package winrt.microsoft.ui.xaml.controls;
 extern interface IBreadcrumbBar extends winrt.windows.foundation.IInspectable
 {
     overload function ItemsSource(): winrt.windows.foundation.IInspectable;
-    overload function ItemsSource(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function ItemsSource(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
     overload function ItemTemplate(): winrt.windows.foundation.IInspectable;
-    overload function ItemTemplate(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
-    overload function ItemClicked(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.microsoft.ui.xaml.controls.BreadcrumbBar, winrt.microsoft.ui.xaml.controls.BreadcrumbBarItemClickedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function ItemClicked(token: ConstRef<winrt.EventToken>): Void;
+    overload function ItemTemplate(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
+    overload function ItemClicked(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.microsoft.ui.xaml.controls.BreadcrumbBar, winrt.microsoft.ui.xaml.controls.BreadcrumbBarItemClickedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function ItemClicked(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

@@ -16,7 +16,7 @@ extern class PenAndInkSettings
     overload function FontFamilyName(): winrt.HString;
     overload function UserConsentsToHandwritingTelemetryCollection(): Bool;
     overload function IsTouchHandwritingEnabled(): Bool;
-    function SetPenHandedness(value: ConstRef<winrt.windows.ui.input.inking.PenHandedness>): Void;
+    function SetPenHandedness(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.inking.PenHandedness>): Void;
     function GetDefault(): winrt.windows.ui.input.inking.PenAndInkSettings;
     static function GetDefault(): winrt.windows.ui.input.inking.PenAndInkSettings;
 }

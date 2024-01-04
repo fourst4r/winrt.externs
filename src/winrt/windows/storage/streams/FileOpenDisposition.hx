@@ -2,7 +2,7 @@ package winrt.windows.storage.streams;
 
 @:include("winrt/Windows.Storage.Streams.h", true)
 @:native("winrt::Windows::Storage::Streams::FileOpenDisposition")
-extern enum abstract FileOpenDisposition(Int32)
+extern enum abstract FileOpenDisposition(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Storage::Streams::FileOpenDisposition::OpenExisting") final OpenExisting;
     @:native("winrt::Windows::Storage::Streams::FileOpenDisposition::OpenAlways") final OpenAlways;

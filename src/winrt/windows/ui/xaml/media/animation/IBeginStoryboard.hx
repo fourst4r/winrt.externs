@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.media.animation;
 extern interface IBeginStoryboard extends winrt.windows.foundation.IInspectable
 {
     overload function Storyboard(): winrt.windows.ui.xaml.media.animation.Storyboard;
-    overload function Storyboard(value: ConstRef<winrt.windows.ui.xaml.media.animation.Storyboard>): Void;
+    overload function Storyboard(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.animation.Storyboard>): Void;
 }

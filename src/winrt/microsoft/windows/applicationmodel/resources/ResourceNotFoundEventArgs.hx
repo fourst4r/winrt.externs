@@ -11,5 +11,5 @@ extern class ResourceNotFoundEventArgs
 {
     overload function Context(): winrt.microsoft.windows.applicationmodel.resources.ResourceContext;
     overload function Name(): winrt.HString;
-    function SetResolvedCandidate(candidate: ConstRef<winrt.microsoft.windows.applicationmodel.resources.ResourceCandidate>): Void;
+    function SetResolvedCandidate(candidate: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.windows.applicationmodel.resources.ResourceCandidate>): Void;
 }

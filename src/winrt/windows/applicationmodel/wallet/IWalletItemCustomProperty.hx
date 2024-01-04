@@ -9,13 +9,13 @@ package winrt.windows.applicationmodel.wallet;
 extern interface IWalletItemCustomProperty extends winrt.windows.foundation.IInspectable
 {
     overload function Name(): winrt.HString;
-    overload function Name(value: ConstRef<winrt.HString>): Void;
+    overload function Name(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Value(): winrt.HString;
-    overload function Value(value: ConstRef<winrt.HString>): Void;
+    overload function Value(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function AutoDetectLinks(): Bool;
     overload function AutoDetectLinks(value: Bool): Void;
     overload function DetailViewPosition(): winrt.windows.applicationmodel.wallet.WalletDetailViewPosition;
-    overload function DetailViewPosition(value: ConstRef<winrt.windows.applicationmodel.wallet.WalletDetailViewPosition>): Void;
+    overload function DetailViewPosition(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.wallet.WalletDetailViewPosition>): Void;
     overload function SummaryViewPosition(): winrt.windows.applicationmodel.wallet.WalletSummaryViewPosition;
-    overload function SummaryViewPosition(value: ConstRef<winrt.windows.applicationmodel.wallet.WalletSummaryViewPosition>): Void;
+    overload function SummaryViewPosition(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.wallet.WalletSummaryViewPosition>): Void;
 }

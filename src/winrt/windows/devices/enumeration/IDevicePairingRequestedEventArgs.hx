@@ -12,6 +12,6 @@ extern interface IDevicePairingRequestedEventArgs extends winrt.windows.foundati
     overload function PairingKind(): winrt.windows.devices.enumeration.DevicePairingKinds;
     overload function Pin(): winrt.HString;
     overload function Accept(): Void;
-    overload function Accept(pin: ConstRef<winrt.HString>): Void;
+    overload function Accept(pin: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.datatransfer;
 extern interface IDataPackagePropertySet4 extends winrt.windows.foundation.IInspectable
 {
     overload function ContentSourceUserActivityJson(): winrt.HString;
-    overload function ContentSourceUserActivityJson(value: ConstRef<winrt.HString>): Void;
+    overload function ContentSourceUserActivityJson(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

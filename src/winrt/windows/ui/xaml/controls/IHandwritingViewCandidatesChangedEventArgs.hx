@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IHandwritingViewCandidatesChangedEventArgs")
 extern interface IHandwritingViewCandidatesChangedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function CandidatesSessionId(): UInt32;
+    overload function CandidatesSessionId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

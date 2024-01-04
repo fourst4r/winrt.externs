@@ -11,5 +11,5 @@ extern interface IStackPanel extends winrt.windows.foundation.IInspectable
     overload function AreScrollSnapPointsRegular(): Bool;
     overload function AreScrollSnapPointsRegular(value: Bool): Void;
     overload function Orientation(): winrt.windows.ui.xaml.controls.Orientation;
-    overload function Orientation(value: ConstRef<winrt.windows.ui.xaml.controls.Orientation>): Void;
+    overload function Orientation(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.Orientation>): Void;
 }

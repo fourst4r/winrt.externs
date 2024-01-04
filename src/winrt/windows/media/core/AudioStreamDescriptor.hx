@@ -13,18 +13,18 @@ extern class AudioStreamDescriptor
     implements winrt.windows.media.core.IMediaStreamDescriptor2
     implements winrt.windows.media.core.IAudioStreamDescriptor3
 {
-    /* explicit */ function new(encodingProperties: ConstRef<winrt.windows.media.mediaproperties.AudioEncodingProperties>);
+    /* explicit */ function new(encodingProperties: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.mediaproperties.AudioEncodingProperties>);
     overload function EncodingProperties(): winrt.windows.media.mediaproperties.AudioEncodingProperties;
     overload function IsSelected(): Bool;
-    overload function Name(value: ConstRef<winrt.HString>): Void;
+    overload function Name(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Name(): winrt.HString;
-    overload function Language(value: ConstRef<winrt.HString>): Void;
+    overload function Language(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Language(): winrt.HString;
-    overload function LeadingEncoderPadding(value: ConstRef<winrt.windows.foundation.IReference<UInt32> /* temp_GenericTypeInstSig */>): Void;
-    overload function LeadingEncoderPadding(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
-    overload function TrailingEncoderPadding(value: ConstRef<winrt.windows.foundation.IReference<UInt32> /* temp_GenericTypeInstSig */>): Void;
-    overload function TrailingEncoderPadding(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
-    overload function Label(value: ConstRef<winrt.HString>): Void;
+    overload function LeadingEncoderPadding(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* temp_GenericTypeInstSig */>): Void;
+    overload function LeadingEncoderPadding(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
+    overload function TrailingEncoderPadding(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* temp_GenericTypeInstSig */>): Void;
+    overload function TrailingEncoderPadding(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
+    overload function Label(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Label(): winrt.HString;
     function Copy(): winrt.windows.media.core.AudioStreamDescriptor;
 }

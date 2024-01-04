@@ -9,8 +9,8 @@ package winrt.windows.devices.humaninterfacedevice;
 extern class HidCollection
     implements winrt.windows.devices.humaninterfacedevice.IHidCollection
 {
-    overload function Id(): UInt32;
+    overload function Id(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function Type(): winrt.windows.devices.humaninterfacedevice.HidCollectionType;
-    overload function UsagePage(): UInt32;
-    overload function UsageId(): UInt32;
+    overload function UsagePage(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function UsageId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

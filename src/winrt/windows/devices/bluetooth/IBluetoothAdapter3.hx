@@ -9,5 +9,5 @@ package winrt.windows.devices.bluetooth;
 extern interface IBluetoothAdapter3 extends winrt.windows.foundation.IInspectable
 {
     overload function IsExtendedAdvertisingSupported(): Bool;
-    overload function MaxAdvertisementDataLength(): UInt32;
+    overload function MaxAdvertisementDataLength(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

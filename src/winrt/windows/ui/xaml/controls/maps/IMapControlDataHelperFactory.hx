@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls.maps;
 @:native("winrt::Windows::UI::Xaml::Controls::Maps::IMapControlDataHelperFactory")
 extern interface IMapControlDataHelperFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(map: ConstRef<winrt.windows.ui.xaml.controls.maps.MapControl>): winrt.windows.ui.xaml.controls.maps.MapControlDataHelper;
+    function CreateInstance(map: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.maps.MapControl>): winrt.windows.ui.xaml.controls.maps.MapControlDataHelper;
 }

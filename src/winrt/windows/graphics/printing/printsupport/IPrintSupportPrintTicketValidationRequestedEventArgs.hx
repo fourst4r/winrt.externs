@@ -9,6 +9,6 @@ package winrt.windows.graphics.printing.printsupport;
 extern interface IPrintSupportPrintTicketValidationRequestedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function PrintTicket(): winrt.windows.graphics.printing.printticket.WorkflowPrintTicket;
-    function SetPrintTicketValidationStatus(status: ConstRef<winrt.windows.graphics.printing.printsupport.WorkflowPrintTicketValidationStatus>): Void;
+    function SetPrintTicketValidationStatus(status: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing.printsupport.WorkflowPrintTicketValidationStatus>): Void;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

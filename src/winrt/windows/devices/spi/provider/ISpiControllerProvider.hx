@@ -8,5 +8,5 @@ package winrt.windows.devices.spi.provider;
 @:native("winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider")
 extern interface ISpiControllerProvider extends winrt.windows.foundation.IInspectable
 {
-    function GetDeviceProvider(settings: ConstRef<winrt.windows.devices.spi.provider.ProviderSpiConnectionSettings>): winrt.windows.devices.spi.provider.ISpiDeviceProvider;
+    function GetDeviceProvider(settings: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.spi.provider.ProviderSpiConnectionSettings>): winrt.windows.devices.spi.provider.ISpiDeviceProvider;
 }

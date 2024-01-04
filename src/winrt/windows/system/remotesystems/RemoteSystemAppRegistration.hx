@@ -13,7 +13,7 @@ extern class RemoteSystemAppRegistration
     overload function Attributes(): winrt.windows.foundation.collections.IMap<winrt.HString, winrt.HString> /* GenericTypeInstSig */;
     function SaveAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     function GetDefault(): winrt.windows.system.remotesystems.RemoteSystemAppRegistration;
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.system.remotesystems.RemoteSystemAppRegistration;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.system.remotesystems.RemoteSystemAppRegistration;
     static function GetDefault(): winrt.windows.system.remotesystems.RemoteSystemAppRegistration;
-    static function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.system.remotesystems.RemoteSystemAppRegistration;
+    static function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.system.remotesystems.RemoteSystemAppRegistration;
 }

@@ -8,6 +8,6 @@ package winrt.windows.data.xml.dom;
 @:native("winrt::Windows::Data::Xml::Dom::IXmlNodeList")
 extern interface IXmlNodeList extends winrt.windows.foundation.IInspectable
 {
-    overload function Length(): UInt32;
-    function Item(index: UInt32): winrt.windows.data.xml.dom.IXmlNode;
+    overload function Length(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function Item(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.data.xml.dom.IXmlNode;
 }

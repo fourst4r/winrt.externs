@@ -11,9 +11,9 @@ extern class VpnCustomPromptText
     implements winrt.windows.networking.vpn.IVpnCustomPromptText
 {
     function new();
-    overload function Text(value: ConstRef<winrt.HString>): Void;
+    overload function Text(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Text(): winrt.HString;
-    overload function DisplayName(value: ConstRef<winrt.HString>): Void;
+    overload function DisplayName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function DisplayName(): winrt.HString;
     overload function Compulsory(value: Bool): Void;
     overload function Compulsory(): Bool;

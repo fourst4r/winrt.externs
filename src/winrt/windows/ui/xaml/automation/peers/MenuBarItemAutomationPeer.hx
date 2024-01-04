@@ -12,7 +12,7 @@ extern class MenuBarItemAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.IExpandCollapseProvider
     implements winrt.windows.ui.xaml.automation.provider.IInvokeProvider
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.MenuBarItem>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.MenuBarItem>);
     overload function ExpandCollapseState(): winrt.windows.ui.xaml.automation.ExpandCollapseState;
     function Collapse(): Void;
     function Expand(): Void;

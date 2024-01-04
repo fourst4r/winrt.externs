@@ -8,9 +8,9 @@ package winrt.windows.ui.xaml;
 @:native("winrt::Windows::UI::Xaml::IElementSoundPlayerStatics")
 extern interface IElementSoundPlayerStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function Volume(): Float64;
-    overload function Volume(value: Float64): Void;
+    overload function Volume(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Volume(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function State(): winrt.windows.ui.xaml.ElementSoundPlayerState;
-    overload function State(value: ConstRef<winrt.windows.ui.xaml.ElementSoundPlayerState>): Void;
-    function Play(sound: ConstRef<winrt.windows.ui.xaml.ElementSoundKind>): Void;
+    overload function State(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.ElementSoundPlayerState>): Void;
+    function Play(sound: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.ElementSoundKind>): Void;
 }

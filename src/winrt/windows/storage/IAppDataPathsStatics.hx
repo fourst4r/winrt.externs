@@ -8,6 +8,6 @@ package winrt.windows.storage;
 @:native("winrt::Windows::Storage::IAppDataPathsStatics")
 extern interface IAppDataPathsStatics extends winrt.windows.foundation.IInspectable
 {
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.storage.AppDataPaths;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.storage.AppDataPaths;
     function GetDefault(): winrt.windows.storage.AppDataPaths;
 }

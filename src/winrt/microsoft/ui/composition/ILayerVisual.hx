@@ -9,5 +9,5 @@ package winrt.microsoft.ui.composition;
 extern interface ILayerVisual extends winrt.windows.foundation.IInspectable
 {
     overload function Effect(): winrt.microsoft.ui.composition.CompositionEffectBrush;
-    overload function Effect(value: ConstRef<winrt.microsoft.ui.composition.CompositionEffectBrush>): Void;
+    overload function Effect(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.CompositionEffectBrush>): Void;
 }

@@ -9,6 +9,6 @@ package winrt.windows.devices.alljoyn;
 extern class AllJoynProducerStoppedEventArgs
     implements winrt.windows.devices.alljoyn.IAllJoynProducerStoppedEventArgs
 {
-    /* explicit */ function new(status: Int32);
-    overload function Status(): Int32;
+    /* explicit */ function new(status: #if reflaxe.cpp cxx.num. #else cpp. #end Int32);
+    overload function Status(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

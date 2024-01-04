@@ -14,7 +14,7 @@ extern class CoreWebView2ScriptDialogOpeningEventArgs
     overload function Message(): winrt.HString;
     overload function DefaultText(): winrt.HString;
     overload function ResultText(): winrt.HString;
-    overload function ResultText(value: ConstRef<winrt.HString>): Void;
+    overload function ResultText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     function Accept(): Void;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

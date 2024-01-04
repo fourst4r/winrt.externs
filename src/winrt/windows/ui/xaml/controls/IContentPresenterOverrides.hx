@@ -8,6 +8,6 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IContentPresenterOverrides")
 extern interface IContentPresenterOverrides extends winrt.windows.foundation.IInspectable
 {
-    function OnContentTemplateChanged(oldContentTemplate: ConstRef<winrt.windows.ui.xaml.DataTemplate>, newContentTemplate: ConstRef<winrt.windows.ui.xaml.DataTemplate>): Void;
-    function OnContentTemplateSelectorChanged(oldContentTemplateSelector: ConstRef<winrt.windows.ui.xaml.controls.DataTemplateSelector>, newContentTemplateSelector: ConstRef<winrt.windows.ui.xaml.controls.DataTemplateSelector>): Void;
+    function OnContentTemplateChanged(oldContentTemplate: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DataTemplate>, newContentTemplate: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DataTemplate>): Void;
+    function OnContentTemplateSelectorChanged(oldContentTemplateSelector: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.DataTemplateSelector>, newContentTemplateSelector: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.DataTemplateSelector>): Void;
 }

@@ -10,5 +10,5 @@ extern class AppBarToggleButtonAutomationPeer
     extends winrt.windows.ui.xaml.automation.peers.ToggleButtonAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IAppBarToggleButtonAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.AppBarToggleButton>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.AppBarToggleButton>);
 }

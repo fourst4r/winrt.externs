@@ -15,6 +15,6 @@ extern class AppListEntry
     overload function DisplayInfo(): winrt.windows.applicationmodel.AppDisplayInfo;
     function LaunchAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     overload function AppUserModelId(): winrt.HString;
-    function LaunchForUserAsync(user: ConstRef<winrt.windows.system.User>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function LaunchForUserAsync(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     overload function AppInfo(): winrt.windows.applicationmodel.AppInfo;
 }

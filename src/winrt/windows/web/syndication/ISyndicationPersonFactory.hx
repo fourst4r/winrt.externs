@@ -8,6 +8,6 @@ package winrt.windows.web.syndication;
 @:native("winrt::Windows::Web::Syndication::ISyndicationPersonFactory")
 extern interface ISyndicationPersonFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateSyndicationPerson(name: ConstRef<winrt.HString>): winrt.windows.web.syndication.SyndicationPerson;
-    function CreateSyndicationPersonEx(name: ConstRef<winrt.HString>, email: ConstRef<winrt.HString>, uri: ConstRef<winrt.windows.foundation.Uri>): winrt.windows.web.syndication.SyndicationPerson;
+    function CreateSyndicationPerson(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.syndication.SyndicationPerson;
+    function CreateSyndicationPersonEx(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, email: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, uri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): winrt.windows.web.syndication.SyndicationPerson;
 }

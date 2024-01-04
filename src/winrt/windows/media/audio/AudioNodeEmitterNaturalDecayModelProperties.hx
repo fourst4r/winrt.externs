@@ -9,6 +9,6 @@ package winrt.windows.media.audio;
 extern class AudioNodeEmitterNaturalDecayModelProperties
     implements winrt.windows.media.audio.IAudioNodeEmitterNaturalDecayModelProperties
 {
-    overload function UnityGainDistance(): Float64;
-    overload function CutoffDistance(): Float64;
+    overload function UnityGainDistance(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function CutoffDistance(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

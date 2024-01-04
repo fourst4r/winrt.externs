@@ -12,11 +12,11 @@ extern class DragOverThemeAnimation
 {
     function new();
     overload function TargetName(): winrt.HString;
-    overload function TargetName(value: ConstRef<winrt.HString>): Void;
-    overload function ToOffset(): Float64;
-    overload function ToOffset(value: Float64): Void;
+    overload function TargetName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function ToOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ToOffset(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function Direction(): winrt.microsoft.ui.xaml.controls.primitives.AnimationDirection;
-    overload function Direction(value: ConstRef<winrt.microsoft.ui.xaml.controls.primitives.AnimationDirection>): Void;
+    overload function Direction(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.primitives.AnimationDirection>): Void;
     overload function TargetNameProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function ToOffsetProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function DirectionProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

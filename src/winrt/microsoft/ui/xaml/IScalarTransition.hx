@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml;
 extern interface IScalarTransition extends winrt.windows.foundation.IInspectable
 {
     overload function Duration(): winrt.windows.foundation.TimeSpan;
-    overload function Duration(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function Duration(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
 }

@@ -11,9 +11,9 @@ extern class InteractionTrackerInertiaRestingValue
     implements winrt.microsoft.ui.composition.interactions.IInteractionTrackerInertiaRestingValue
 {
     overload function Condition(): winrt.microsoft.ui.composition.ExpressionAnimation;
-    overload function RestingValue(value: ConstRef<winrt.microsoft.ui.composition.ExpressionAnimation>): Void;
-    overload function Condition(value: ConstRef<winrt.microsoft.ui.composition.ExpressionAnimation>): Void;
+    overload function RestingValue(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.ExpressionAnimation>): Void;
+    overload function Condition(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.ExpressionAnimation>): Void;
     overload function RestingValue(): winrt.microsoft.ui.composition.ExpressionAnimation;
-    function Create(compositor: ConstRef<winrt.microsoft.ui.composition.Compositor>): winrt.microsoft.ui.composition.interactions.InteractionTrackerInertiaRestingValue;
-    static function Create(compositor: ConstRef<winrt.microsoft.ui.composition.Compositor>): winrt.microsoft.ui.composition.interactions.InteractionTrackerInertiaRestingValue;
+    function Create(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.Compositor>): winrt.microsoft.ui.composition.interactions.InteractionTrackerInertiaRestingValue;
+    static function Create(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.Compositor>): winrt.microsoft.ui.composition.interactions.InteractionTrackerInertiaRestingValue;
 }

@@ -12,7 +12,7 @@ extern interface ILearningModel extends winrt.windows.foundation.IInspectable
     overload function Name(): winrt.HString;
     overload function Domain(): winrt.HString;
     overload function Description(): winrt.HString;
-    overload function Version(): Int64;
+    overload function Version(): #if reflaxe.cpp cxx.num. #else cpp. #end Int64;
     overload function Metadata(): winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.HString> /* GenericTypeInstSig */;
     overload function InputFeatures(): winrt.windows.foundation.collections.IVectorView<winrt.windows.ai.machinelearning.ILearningModelFeatureDescriptor> /* GenericTypeInstSig */;
     overload function OutputFeatures(): winrt.windows.foundation.collections.IVectorView<winrt.windows.ai.machinelearning.ILearningModelFeatureDescriptor> /* GenericTypeInstSig */;

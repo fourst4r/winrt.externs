@@ -9,5 +9,5 @@ package winrt.windows.devices.alljoyn;
 extern interface IAllJoynBusAttachmentStateChangedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function State(): winrt.windows.devices.alljoyn.AllJoynBusAttachmentState;
-    overload function Status(): Int32;
+    overload function Status(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

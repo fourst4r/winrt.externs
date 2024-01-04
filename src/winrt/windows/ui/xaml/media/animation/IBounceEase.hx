@@ -8,8 +8,8 @@ package winrt.windows.ui.xaml.media.animation;
 @:native("winrt::Windows::UI::Xaml::Media::Animation::IBounceEase")
 extern interface IBounceEase extends winrt.windows.foundation.IInspectable
 {
-    overload function Bounces(): Int32;
-    overload function Bounces(value: Int32): Void;
-    overload function Bounciness(): Float64;
-    overload function Bounciness(value: Float64): Void;
+    overload function Bounces(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Bounces(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
+    overload function Bounciness(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Bounciness(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

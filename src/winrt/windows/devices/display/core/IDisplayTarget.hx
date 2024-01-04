@@ -10,7 +10,7 @@ extern interface IDisplayTarget extends winrt.windows.foundation.IInspectable
 {
     overload function Adapter(): winrt.windows.devices.display.core.DisplayAdapter;
     overload function DeviceInterfacePath(): winrt.HString;
-    overload function AdapterRelativeId(): UInt32;
+    overload function AdapterRelativeId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function IsConnected(): Bool;
     overload function IsVirtualModeEnabled(): Bool;
     overload function IsVirtualTopologyEnabled(): Bool;
@@ -20,6 +20,6 @@ extern interface IDisplayTarget extends winrt.windows.foundation.IInspectable
     function TryGetMonitor(): winrt.windows.devices.display.DisplayMonitor;
     overload function Properties(): winrt.windows.foundation.collections.IMapView<winrt.Guid, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;
     overload function IsStale(): Bool;
-    function IsSame(otherTarget: ConstRef<winrt.windows.devices.display.core.DisplayTarget>): Bool;
-    function IsEqual(otherTarget: ConstRef<winrt.windows.devices.display.core.DisplayTarget>): Bool;
+    function IsSame(otherTarget: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.display.core.DisplayTarget>): Bool;
+    function IsEqual(otherTarget: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.display.core.DisplayTarget>): Bool;
 }

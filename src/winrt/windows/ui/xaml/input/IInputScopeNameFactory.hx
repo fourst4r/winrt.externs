@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.input;
 @:native("winrt::Windows::UI::Xaml::Input::IInputScopeNameFactory")
 extern interface IInputScopeNameFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(nameValue: ConstRef<winrt.windows.ui.xaml.input.InputScopeNameValue>): winrt.windows.ui.xaml.input.InputScopeName;
+    function CreateInstance(nameValue: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.input.InputScopeNameValue>): winrt.windows.ui.xaml.input.InputScopeName;
 }

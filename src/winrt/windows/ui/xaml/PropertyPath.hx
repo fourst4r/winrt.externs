@@ -10,6 +10,6 @@ extern class PropertyPath
     extends winrt.windows.ui.xaml.DependencyObject
     implements winrt.windows.ui.xaml.IPropertyPath
 {
-    /* explicit */ function new(path: ConstRef<winrt.HString>);
+    /* explicit */ function new(path: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     overload function Path(): winrt.HString;
 }

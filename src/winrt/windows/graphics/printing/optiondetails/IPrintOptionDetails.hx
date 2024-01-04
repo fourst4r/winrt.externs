@@ -10,10 +10,10 @@ extern interface IPrintOptionDetails extends winrt.windows.foundation.IInspectab
 {
     overload function OptionId(): winrt.HString;
     overload function OptionType(): winrt.windows.graphics.printing.optiondetails.PrintOptionType;
-    overload function ErrorText(value: ConstRef<winrt.HString>): Void;
+    overload function ErrorText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function ErrorText(): winrt.HString;
-    overload function State(value: ConstRef<winrt.windows.graphics.printing.optiondetails.PrintOptionStates>): Void;
+    overload function State(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing.optiondetails.PrintOptionStates>): Void;
     overload function State(): winrt.windows.graphics.printing.optiondetails.PrintOptionStates;
     overload function Value(): winrt.windows.foundation.IInspectable;
-    function TrySetValue(value: ConstRef<winrt.windows.foundation.IInspectable>): Bool;
+    function TrySetValue(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Bool;
 }

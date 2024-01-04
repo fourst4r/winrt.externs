@@ -8,5 +8,5 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::IMseStreamSourceStatics")
 extern interface IMseStreamSourceStatics extends winrt.windows.foundation.IInspectable
 {
-    function IsContentTypeSupported(contentType: ConstRef<winrt.HString>): Bool;
+    function IsContentTypeSupported(contentType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
 }

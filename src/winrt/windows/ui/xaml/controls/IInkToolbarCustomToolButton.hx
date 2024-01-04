@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IInkToolbarCustomToolButton extends winrt.windows.foundation.IInspectable
 {
     overload function ConfigurationContent(): winrt.windows.ui.xaml.UIElement;
-    overload function ConfigurationContent(value: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
+    overload function ConfigurationContent(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
 }

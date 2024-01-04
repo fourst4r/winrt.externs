@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IGroupStyle2 extends winrt.windows.foundation.IInspectable
 {
     overload function HeaderContainerStyle(): winrt.windows.ui.xaml.Style;
-    overload function HeaderContainerStyle(value: ConstRef<winrt.windows.ui.xaml.Style>): Void;
+    overload function HeaderContainerStyle(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.Style>): Void;
 }

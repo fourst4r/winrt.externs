@@ -9,5 +9,5 @@ package winrt.windows.globalization.numberformatting;
 extern interface INumberRounderOption extends winrt.windows.foundation.IInspectable
 {
     overload function NumberRounder(): winrt.windows.globalization.numberformatting.INumberRounder;
-    overload function NumberRounder(value: ConstRef<winrt.windows.globalization.numberformatting.INumberRounder>): Void;
+    overload function NumberRounder(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.globalization.numberformatting.INumberRounder>): Void;
 }

@@ -9,7 +9,7 @@ package winrt.windows.media.protection.playready;
 extern interface IPlayReadyLicenseAcquisitionServiceRequest extends winrt.windows.foundation.IInspectable
 {
     overload function ContentHeader(): winrt.windows.media.protection.playready.PlayReadyContentHeader;
-    overload function ContentHeader(value: ConstRef<winrt.windows.media.protection.playready.PlayReadyContentHeader>): Void;
+    overload function ContentHeader(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.protection.playready.PlayReadyContentHeader>): Void;
     overload function DomainServiceId(): winrt.Guid;
-    overload function DomainServiceId(value: ConstRef<winrt.Guid>): Void;
+    overload function DomainServiceId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): Void;
 }

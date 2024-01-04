@@ -8,8 +8,8 @@ package winrt.microsoft.windows.pushnotifications;
 @:native("winrt::Microsoft::Windows::PushNotifications::IPushNotificationReceivedEventArgs")
 extern interface IPushNotificationReceivedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function Payload(): winrt.ComArray<UInt8>;
+    overload function Payload(): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
     function GetDeferral(): winrt.windows.applicationmodel.background.BackgroundTaskDeferral;
-    overload function Canceled(handler: ConstRef<winrt.windows.applicationmodel.background.BackgroundTaskCanceledEventHandler>): winrt.EventToken;
-    @:noExcept overload function Canceled(token: ConstRef<winrt.EventToken>): Void;
+    overload function Canceled(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.background.BackgroundTaskCanceledEventHandler>): winrt.EventToken;
+    @:noExcept overload function Canceled(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

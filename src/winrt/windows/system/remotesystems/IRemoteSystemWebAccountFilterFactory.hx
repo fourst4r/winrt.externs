@@ -8,5 +8,5 @@ package winrt.windows.system.remotesystems;
 @:native("winrt::Windows::System::RemoteSystems::IRemoteSystemWebAccountFilterFactory")
 extern interface IRemoteSystemWebAccountFilterFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(account: ConstRef<winrt.windows.security.credentials.WebAccount>): winrt.windows.system.remotesystems.RemoteSystemWebAccountFilter;
+    function Create(account: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.WebAccount>): winrt.windows.system.remotesystems.RemoteSystemWebAccountFilter;
 }

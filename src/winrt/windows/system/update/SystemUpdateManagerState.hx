@@ -2,7 +2,7 @@ package winrt.windows.system.update;
 
 @:include("winrt/Windows.System.Update.h", true)
 @:native("winrt::Windows::System::Update::SystemUpdateManagerState")
-extern enum abstract SystemUpdateManagerState(Int32)
+extern enum abstract SystemUpdateManagerState(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::System::Update::SystemUpdateManagerState::Idle") final Idle;
     @:native("winrt::Windows::System::Update::SystemUpdateManagerState::Detecting") final Detecting;

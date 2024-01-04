@@ -10,5 +10,5 @@ extern class AppServiceRequest
     implements winrt.windows.applicationmodel.appservice.IAppServiceRequest
 {
     overload function Message(): winrt.windows.foundation.collections.ValueSet;
-    function SendResponseAsync(message: ConstRef<winrt.windows.foundation.collections.ValueSet>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.appservice.AppServiceResponseStatus> /* GenericTypeInstSig */;
+    function SendResponseAsync(message: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.ValueSet>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.appservice.AppServiceResponseStatus> /* GenericTypeInstSig */;
 }

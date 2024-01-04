@@ -13,6 +13,6 @@ extern interface IPointerRoutedEventArgs extends winrt.windows.foundation.IInspe
     overload function Handled(): Bool;
     overload function Handled(value: Bool): Void;
     overload function IsGenerated(): Bool;
-    function GetCurrentPoint(relativeTo: ConstRef<winrt.microsoft.ui.xaml.UIElement>): winrt.microsoft.ui.input.PointerPoint;
-    function GetIntermediatePoints(relativeTo: ConstRef<winrt.microsoft.ui.xaml.UIElement>): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.input.PointerPoint> /* GenericTypeInstSig */;
+    function GetCurrentPoint(relativeTo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): winrt.microsoft.ui.input.PointerPoint;
+    function GetIntermediatePoints(relativeTo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.input.PointerPoint> /* GenericTypeInstSig */;
 }

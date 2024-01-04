@@ -10,8 +10,8 @@ extern interface ISpiDeviceProvider extends winrt.windows.foundation.IInspectabl
 {
     overload function DeviceId(): winrt.HString;
     overload function ConnectionSettings(): winrt.windows.devices.spi.provider.ProviderSpiConnectionSettings;
-    function Write(buffer: winrt.ArrayView<UInt8>): Void;
-    function Read(buffer: winrt.ArrayView<UInt8>): Void;
-    function TransferSequential(writeBuffer: winrt.ArrayView<UInt8>, readBuffer: winrt.ArrayView<UInt8>): Void;
-    function TransferFullDuplex(writeBuffer: winrt.ArrayView<UInt8>, readBuffer: winrt.ArrayView<UInt8>): Void;
+    function Write(buffer: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): Void;
+    function Read(buffer: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): Void;
+    function TransferSequential(writeBuffer: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>, readBuffer: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): Void;
+    function TransferFullDuplex(writeBuffer: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>, readBuffer: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): Void;
 }

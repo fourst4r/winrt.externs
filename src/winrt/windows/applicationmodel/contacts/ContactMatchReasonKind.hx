@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.contacts;
 
 @:include("winrt/Windows.ApplicationModel.Contacts.h", true)
 @:native("winrt::Windows::ApplicationModel::Contacts::ContactMatchReasonKind")
-extern enum abstract ContactMatchReasonKind(Int32)
+extern enum abstract ContactMatchReasonKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactMatchReasonKind::Name") final Name;
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactMatchReasonKind::EmailAddress") final EmailAddress;

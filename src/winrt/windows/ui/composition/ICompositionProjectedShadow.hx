@@ -8,14 +8,14 @@ package winrt.windows.ui.composition;
 @:native("winrt::Windows::UI::Composition::ICompositionProjectedShadow")
 extern interface ICompositionProjectedShadow extends winrt.windows.foundation.IInspectable
 {
-    overload function BlurRadiusMultiplier(): Float32;
-    overload function BlurRadiusMultiplier(value: Float32): Void;
+    overload function BlurRadiusMultiplier(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function BlurRadiusMultiplier(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
     overload function Casters(): winrt.windows.ui.composition.CompositionProjectedShadowCasterCollection;
     overload function LightSource(): winrt.windows.ui.composition.CompositionLight;
-    overload function LightSource(value: ConstRef<winrt.windows.ui.composition.CompositionLight>): Void;
-    overload function MaxBlurRadius(): Float32;
-    overload function MaxBlurRadius(value: Float32): Void;
-    overload function MinBlurRadius(): Float32;
-    overload function MinBlurRadius(value: Float32): Void;
+    overload function LightSource(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionLight>): Void;
+    overload function MaxBlurRadius(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function MaxBlurRadius(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function MinBlurRadius(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function MinBlurRadius(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
     overload function Receivers(): winrt.windows.ui.composition.CompositionProjectedShadowReceiverUnorderedCollection;
 }

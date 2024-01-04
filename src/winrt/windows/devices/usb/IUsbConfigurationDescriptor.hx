@@ -8,8 +8,8 @@ package winrt.windows.devices.usb;
 @:native("winrt::Windows::Devices::Usb::IUsbConfigurationDescriptor")
 extern interface IUsbConfigurationDescriptor extends winrt.windows.foundation.IInspectable
 {
-    overload function ConfigurationValue(): UInt8;
-    overload function MaxPowerMilliamps(): UInt32;
+    overload function ConfigurationValue(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function MaxPowerMilliamps(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function SelfPowered(): Bool;
     overload function RemoteWakeup(): Bool;
 }

@@ -9,5 +9,5 @@ package winrt.windows.media.protection.playready;
 extern interface IPlayReadyLicenseSession extends winrt.windows.foundation.IInspectable
 {
     function CreateLAServiceRequest(): winrt.windows.media.protection.playready.IPlayReadyLicenseAcquisitionServiceRequest;
-    function ConfigureMediaProtectionManager(mpm: ConstRef<winrt.windows.media.protection.MediaProtectionManager>): Void;
+    function ConfigureMediaProtectionManager(mpm: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.protection.MediaProtectionManager>): Void;
 }

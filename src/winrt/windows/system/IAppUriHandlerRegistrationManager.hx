@@ -9,5 +9,5 @@ package winrt.windows.system;
 extern interface IAppUriHandlerRegistrationManager extends winrt.windows.foundation.IInspectable
 {
     overload function User(): winrt.windows.system.User;
-    function TryGetRegistration(name: ConstRef<winrt.HString>): winrt.windows.system.AppUriHandlerRegistration;
+    function TryGetRegistration(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.system.AppUriHandlerRegistration;
 }

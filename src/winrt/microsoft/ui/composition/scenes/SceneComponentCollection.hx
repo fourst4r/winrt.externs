@@ -12,16 +12,16 @@ extern class SceneComponentCollection
     implements winrt.windows.foundation.collections.IIterable<winrt.microsoft.ui.composition.scenes.SceneComponent> /* GenericTypeInstSig */
     implements winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.composition.scenes.SceneComponent> /* GenericTypeInstSig */
 {
-    function GetMany(startIndex: UInt32, items: winrt.ArrayView<winrt.microsoft.ui.composition.scenes.SceneComponent>): UInt32;
+    function GetMany(startIndex: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, items: winrt.ArrayView<winrt.microsoft.ui.composition.scenes.SceneComponent>): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     function First(): winrt.windows.foundation.collections.IIterator<winrt.microsoft.ui.composition.scenes.SceneComponent> /* GenericTypeInstSig */;
-    function IndexOf(value: ConstRef<winrt.microsoft.ui.composition.scenes.SceneComponent>, index: Ref<UInt32>): Bool;
-    overload function Size(): UInt32;
+    function IndexOf(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.scenes.SceneComponent>, index: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <#if reflaxe.cpp cxx.num. #else cpp. #end UInt32>): Bool;
+    overload function Size(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     function GetView(): winrt.windows.foundation.collections.IVectorView<winrt.microsoft.ui.composition.scenes.SceneComponent> /* GenericTypeInstSig */;
-    function GetAt(index: UInt32): winrt.microsoft.ui.composition.scenes.SceneComponent;
-    function SetAt(index: UInt32, value: ConstRef<winrt.microsoft.ui.composition.scenes.SceneComponent>): Void;
-    function InsertAt(index: UInt32, value: ConstRef<winrt.microsoft.ui.composition.scenes.SceneComponent>): Void;
-    function RemoveAt(index: UInt32): Void;
-    function Append(value: ConstRef<winrt.microsoft.ui.composition.scenes.SceneComponent>): Void;
+    function GetAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.microsoft.ui.composition.scenes.SceneComponent;
+    function SetAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.scenes.SceneComponent>): Void;
+    function InsertAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.scenes.SceneComponent>): Void;
+    function RemoveAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    function Append(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.scenes.SceneComponent>): Void;
     function RemoveAtEnd(): Void;
     function Clear(): Void;
     function ReplaceAll(items: winrt.ArrayView<winrt.microsoft.ui.composition.scenes.SceneComponent>): Void;

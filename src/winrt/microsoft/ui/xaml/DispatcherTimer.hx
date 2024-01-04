@@ -11,10 +11,10 @@ extern class DispatcherTimer
 {
     function new();
     overload function Interval(): winrt.windows.foundation.TimeSpan;
-    overload function Interval(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function Interval(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function IsEnabled(): Bool;
-    overload function Tick(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Tick(token: ConstRef<winrt.EventToken>): Void;
+    overload function Tick(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Tick(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     function Start(): Void;
     function Stop(): Void;
 }

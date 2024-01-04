@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.controls;
 
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::WebViewPermissionState")
-extern enum abstract WebViewPermissionState(Int32)
+extern enum abstract WebViewPermissionState(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Controls::WebViewPermissionState::Unknown") final Unknown;
     @:native("winrt::Windows::UI::Xaml::Controls::WebViewPermissionState::Defer") final Defer;

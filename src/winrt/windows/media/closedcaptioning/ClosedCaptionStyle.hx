@@ -2,7 +2,7 @@ package winrt.windows.media.closedcaptioning;
 
 @:include("winrt/Windows.Media.ClosedCaptioning.h", true)
 @:native("winrt::Windows::Media::ClosedCaptioning::ClosedCaptionStyle")
-extern enum abstract ClosedCaptionStyle(Int32)
+extern enum abstract ClosedCaptionStyle(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::ClosedCaptioning::ClosedCaptionStyle::Default") final Default;
     @:native("winrt::Windows::Media::ClosedCaptioning::ClosedCaptionStyle::MonospacedWithSerifs") final MonospacedWithSerifs;

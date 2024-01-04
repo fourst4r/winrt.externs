@@ -9,7 +9,7 @@ package winrt.windows.ui.xaml.media.animation;
 extern interface IPointKeyFrame extends winrt.windows.foundation.IInspectable
 {
     overload function Value(): winrt.windows.foundation.Point;
-    overload function Value(value: ConstRef<winrt.windows.foundation.Point>): Void;
+    overload function Value(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
     overload function KeyTime(): winrt.windows.ui.xaml.media.animation.KeyTime;
-    overload function KeyTime(value: ConstRef<winrt.windows.ui.xaml.media.animation.KeyTime>): Void;
+    overload function KeyTime(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.animation.KeyTime>): Void;
 }

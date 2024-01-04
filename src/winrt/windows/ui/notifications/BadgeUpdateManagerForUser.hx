@@ -10,7 +10,7 @@ extern class BadgeUpdateManagerForUser
     implements winrt.windows.ui.notifications.IBadgeUpdateManagerForUser
 {
     overload function CreateBadgeUpdaterForApplication(): winrt.windows.ui.notifications.BadgeUpdater;
-    overload function CreateBadgeUpdaterForApplication(applicationId: ConstRef<winrt.HString>): winrt.windows.ui.notifications.BadgeUpdater;
-    function CreateBadgeUpdaterForSecondaryTile(tileId: ConstRef<winrt.HString>): winrt.windows.ui.notifications.BadgeUpdater;
+    overload function CreateBadgeUpdaterForApplication(applicationId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.notifications.BadgeUpdater;
+    function CreateBadgeUpdaterForSecondaryTile(tileId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.notifications.BadgeUpdater;
     overload function User(): winrt.windows.system.User;
 }

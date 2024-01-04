@@ -8,6 +8,6 @@ package winrt.windows.storage.search;
 @:native("winrt::Windows::Storage::Search::IQueryOptionsFactory")
 extern interface IQueryOptionsFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateCommonFileQuery(query: ConstRef<winrt.windows.storage.search.CommonFileQuery>, fileTypeFilter: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.storage.search.QueryOptions;
-    function CreateCommonFolderQuery(query: ConstRef<winrt.windows.storage.search.CommonFolderQuery>): winrt.windows.storage.search.QueryOptions;
+    function CreateCommonFileQuery(query: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.search.CommonFileQuery>, fileTypeFilter: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.storage.search.QueryOptions;
+    function CreateCommonFolderQuery(query: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.search.CommonFolderQuery>): winrt.windows.storage.search.QueryOptions;
 }

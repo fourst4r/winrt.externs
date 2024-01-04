@@ -8,5 +8,5 @@ package winrt.windows.system;
 @:native("winrt::Windows::System::ITimeZoneSettingsStatics2")
 extern interface ITimeZoneSettingsStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function AutoUpdateTimeZoneAsync(timeout: ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.foundation.IAsyncOperation<winrt.windows.system.AutoUpdateTimeZoneStatus> /* GenericTypeInstSig */;
+    function AutoUpdateTimeZoneAsync(timeout: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): winrt.windows.foundation.IAsyncOperation<winrt.windows.system.AutoUpdateTimeZoneStatus> /* GenericTypeInstSig */;
 }

@@ -10,7 +10,7 @@ extern class InkInputProcessingConfiguration
     implements winrt.windows.ui.input.inking.IInkInputProcessingConfiguration
 {
     overload function Mode(): winrt.windows.ui.input.inking.InkInputProcessingMode;
-    overload function Mode(value: ConstRef<winrt.windows.ui.input.inking.InkInputProcessingMode>): Void;
+    overload function Mode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.inking.InkInputProcessingMode>): Void;
     overload function RightDragAction(): winrt.windows.ui.input.inking.InkInputRightDragAction;
-    overload function RightDragAction(value: ConstRef<winrt.windows.ui.input.inking.InkInputRightDragAction>): Void;
+    overload function RightDragAction(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.inking.InkInputRightDragAction>): Void;
 }

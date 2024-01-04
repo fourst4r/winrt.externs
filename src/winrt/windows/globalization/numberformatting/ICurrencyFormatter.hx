@@ -9,5 +9,5 @@ package winrt.windows.globalization.numberformatting;
 extern interface ICurrencyFormatter extends winrt.windows.foundation.IInspectable
 {
     overload function Currency(): winrt.HString;
-    overload function Currency(value: ConstRef<winrt.HString>): Void;
+    overload function Currency(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

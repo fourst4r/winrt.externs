@@ -9,12 +9,12 @@ package winrt.windows.applicationmodel.chat;
 extern interface IChatConversationThreadingInfo extends winrt.windows.foundation.IInspectable
 {
     overload function ContactId(): winrt.HString;
-    overload function ContactId(value: ConstRef<winrt.HString>): Void;
+    overload function ContactId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Custom(): winrt.HString;
-    overload function Custom(value: ConstRef<winrt.HString>): Void;
+    overload function Custom(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function ConversationId(): winrt.HString;
-    overload function ConversationId(value: ConstRef<winrt.HString>): Void;
+    overload function ConversationId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Participants(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function Kind(): winrt.windows.applicationmodel.chat.ChatConversationThreadingKind;
-    overload function Kind(value: ConstRef<winrt.windows.applicationmodel.chat.ChatConversationThreadingKind>): Void;
+    overload function Kind(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.chat.ChatConversationThreadingKind>): Void;
 }

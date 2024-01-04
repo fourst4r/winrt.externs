@@ -8,5 +8,5 @@ package winrt.windows.media.protection.playready;
 @:native("winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSessionFactory")
 extern interface IPlayReadyLicenseSessionFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(configuration: ConstRef<winrt.windows.foundation.collections.IPropertySet>): winrt.windows.media.protection.playready.PlayReadyLicenseSession;
+    function CreateInstance(configuration: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IPropertySet>): winrt.windows.media.protection.playready.PlayReadyLicenseSession;
 }

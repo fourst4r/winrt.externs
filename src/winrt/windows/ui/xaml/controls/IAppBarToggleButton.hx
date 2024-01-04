@@ -9,7 +9,7 @@ package winrt.windows.ui.xaml.controls;
 extern interface IAppBarToggleButton extends winrt.windows.foundation.IInspectable
 {
     overload function Label(): winrt.HString;
-    overload function Label(value: ConstRef<winrt.HString>): Void;
+    overload function Label(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Icon(): winrt.windows.ui.xaml.controls.IconElement;
-    overload function Icon(value: ConstRef<winrt.windows.ui.xaml.controls.IconElement>): Void;
+    overload function Icon(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.IconElement>): Void;
 }

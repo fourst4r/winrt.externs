@@ -10,5 +10,5 @@ extern class MobileBroadbandPinOperationResult
     implements winrt.windows.networking.networkoperators.IMobileBroadbandPinOperationResult
 {
     overload function IsSuccessful(): Bool;
-    overload function AttemptsRemaining(): UInt32;
+    overload function AttemptsRemaining(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

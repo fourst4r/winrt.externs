@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls.primitives;
 @:native("winrt::Windows::UI::Xaml::Controls::Primitives::IFlyoutBaseOverrides4")
 extern interface IFlyoutBaseOverrides4 extends winrt.windows.foundation.IInspectable
 {
-    function OnProcessKeyboardAccelerators(args: ConstRef<winrt.windows.ui.xaml.input.ProcessKeyboardAcceleratorEventArgs>): Void;
+    function OnProcessKeyboardAccelerators(args: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.input.ProcessKeyboardAcceleratorEventArgs>): Void;
 }

@@ -8,6 +8,6 @@ package winrt.windows.ui.xaml;
 @:native("winrt::Windows::UI::Xaml::IVisualStateManagerProtected")
 extern interface IVisualStateManagerProtected extends winrt.windows.foundation.IInspectable
 {
-    function RaiseCurrentStateChanging(stateGroup: ConstRef<winrt.windows.ui.xaml.VisualStateGroup>, oldState: ConstRef<winrt.windows.ui.xaml.VisualState>, newState: ConstRef<winrt.windows.ui.xaml.VisualState>, control: ConstRef<winrt.windows.ui.xaml.controls.Control>): Void;
-    function RaiseCurrentStateChanged(stateGroup: ConstRef<winrt.windows.ui.xaml.VisualStateGroup>, oldState: ConstRef<winrt.windows.ui.xaml.VisualState>, newState: ConstRef<winrt.windows.ui.xaml.VisualState>, control: ConstRef<winrt.windows.ui.xaml.controls.Control>): Void;
+    function RaiseCurrentStateChanging(stateGroup: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.VisualStateGroup>, oldState: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.VisualState>, newState: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.VisualState>, control: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.Control>): Void;
+    function RaiseCurrentStateChanged(stateGroup: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.VisualStateGroup>, oldState: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.VisualState>, newState: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.VisualState>, control: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.Control>): Void;
 }

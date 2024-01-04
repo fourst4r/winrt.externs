@@ -8,6 +8,6 @@ package winrt.windows.ui.uiautomation.core;
 @:native("winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationClientSessionFactory")
 extern interface IRemoteAutomationClientSessionFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(name: ConstRef<winrt.HString>): winrt.windows.ui.uiautomation.core.RemoteAutomationClientSession;
-    function CreateInstance2(name: ConstRef<winrt.HString>, sessionId: ConstRef<winrt.Guid>): winrt.windows.ui.uiautomation.core.RemoteAutomationClientSession;
+    function CreateInstance(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.uiautomation.core.RemoteAutomationClientSession;
+    function CreateInstance2(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, sessionId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): winrt.windows.ui.uiautomation.core.RemoteAutomationClientSession;
 }

@@ -9,6 +9,6 @@ package winrt.windows.graphics.printing.optiondetails;
 extern interface IPrintCustomItemDetails extends winrt.windows.foundation.IInspectable
 {
     overload function ItemId(): winrt.HString;
-    overload function ItemDisplayName(value: ConstRef<winrt.HString>): Void;
+    overload function ItemDisplayName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function ItemDisplayName(): winrt.HString;
 }

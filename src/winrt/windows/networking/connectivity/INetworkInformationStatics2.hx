@@ -8,5 +8,5 @@ package winrt.windows.networking.connectivity;
 @:native("winrt::Windows::Networking::Connectivity::INetworkInformationStatics2")
 extern interface INetworkInformationStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function FindConnectionProfilesAsync(pProfileFilter: ConstRef<winrt.windows.networking.connectivity.ConnectionProfileFilter>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.networking.connectivity.ConnectionProfile> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+    function FindConnectionProfilesAsync(pProfileFilter: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.connectivity.ConnectionProfileFilter>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.networking.connectivity.ConnectionProfile> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
 }

@@ -9,7 +9,7 @@ package winrt.microsoft.web.webview2.core;
 extern interface ICoreWebView2ProcessFailedEventArgs2 extends winrt.windows.foundation.IInspectable
 {
     overload function Reason(): winrt.microsoft.web.webview2.core.CoreWebView2ProcessFailedReason;
-    overload function ExitCode(): Int32;
+    overload function ExitCode(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function ProcessDescription(): winrt.HString;
     overload function FrameInfosForFailedProcess(): winrt.windows.foundation.collections.IVectorView<winrt.microsoft.web.webview2.core.CoreWebView2FrameInfo> /* GenericTypeInstSig */;
 }

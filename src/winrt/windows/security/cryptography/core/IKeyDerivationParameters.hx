@@ -9,6 +9,6 @@ package winrt.windows.security.cryptography.core;
 extern interface IKeyDerivationParameters extends winrt.windows.foundation.IInspectable
 {
     overload function KdfGenericBinary(): winrt.windows.storage.streams.IBuffer;
-    overload function KdfGenericBinary(value: ConstRef<winrt.windows.storage.streams.IBuffer>): Void;
-    overload function IterationCount(): UInt32;
+    overload function KdfGenericBinary(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): Void;
+    overload function IterationCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

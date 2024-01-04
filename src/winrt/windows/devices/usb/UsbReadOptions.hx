@@ -2,7 +2,7 @@ package winrt.windows.devices.usb;
 
 @:include("winrt/Windows.Devices.Usb.h", true)
 @:native("winrt::Windows::Devices::Usb::UsbReadOptions")
-extern enum abstract UsbReadOptions(UInt32)
+extern enum abstract UsbReadOptions(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::Devices::Usb::UsbReadOptions::None") final None;
     @:native("winrt::Windows::Devices::Usb::UsbReadOptions::AutoClearStall") final AutoClearStall;

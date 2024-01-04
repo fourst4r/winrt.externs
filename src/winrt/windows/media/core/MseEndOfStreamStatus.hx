@@ -2,7 +2,7 @@ package winrt.windows.media.core;
 
 @:include("winrt/Windows.Media.Core.h", true)
 @:native("winrt::Windows::Media::Core::MseEndOfStreamStatus")
-extern enum abstract MseEndOfStreamStatus(Int32)
+extern enum abstract MseEndOfStreamStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Core::MseEndOfStreamStatus::Success") final Success;
     @:native("winrt::Windows::Media::Core::MseEndOfStreamStatus::NetworkError") final NetworkError;

@@ -13,10 +13,10 @@ extern class AdaptiveMediaSourceDownloadFailedEventArgs
 {
     overload function ResourceType(): winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceResourceType;
     overload function ResourceUri(): winrt.windows.foundation.Uri;
-    overload function ResourceByteRangeOffset(): winrt.windows.foundation.IReference<UInt64> /* GenericTypeInstSig */;
-    overload function ResourceByteRangeLength(): winrt.windows.foundation.IReference<UInt64> /* GenericTypeInstSig */;
+    overload function ResourceByteRangeOffset(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt64> /* GenericTypeInstSig */;
+    overload function ResourceByteRangeLength(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt64> /* GenericTypeInstSig */;
     overload function HttpResponseMessage(): winrt.windows.web.http.HttpResponseMessage;
-    overload function RequestId(): Int32;
+    overload function RequestId(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function ExtendedError(): winrt.HResult;
     overload function Statistics(): winrt.windows.media.streaming.adaptive.AdaptiveMediaSourceDownloadStatistics;
     overload function Position(): winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* GenericTypeInstSig */;

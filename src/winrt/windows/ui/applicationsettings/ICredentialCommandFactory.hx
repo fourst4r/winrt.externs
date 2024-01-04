@@ -8,6 +8,6 @@ package winrt.windows.ui.applicationsettings;
 @:native("winrt::Windows::UI::ApplicationSettings::ICredentialCommandFactory")
 extern interface ICredentialCommandFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateCredentialCommand(passwordCredential: ConstRef<winrt.windows.security.credentials.PasswordCredential>): winrt.windows.ui.applicationsettings.CredentialCommand;
-    function CreateCredentialCommandWithHandler(passwordCredential: ConstRef<winrt.windows.security.credentials.PasswordCredential>, deleted: ConstRef<winrt.windows.ui.applicationsettings.CredentialCommandCredentialDeletedHandler>): winrt.windows.ui.applicationsettings.CredentialCommand;
+    function CreateCredentialCommand(passwordCredential: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.PasswordCredential>): winrt.windows.ui.applicationsettings.CredentialCommand;
+    function CreateCredentialCommandWithHandler(passwordCredential: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.PasswordCredential>, deleted: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.applicationsettings.CredentialCommandCredentialDeletedHandler>): winrt.windows.ui.applicationsettings.CredentialCommand;
 }

@@ -9,6 +9,6 @@ package winrt.windows.devices.alljoyn;
 extern class AllJoynSessionLostEventArgs
     implements winrt.windows.devices.alljoyn.IAllJoynSessionLostEventArgs
 {
-    /* explicit */ function new(reason: ConstRef<winrt.windows.devices.alljoyn.AllJoynSessionLostReason>);
+    /* explicit */ function new(reason: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.alljoyn.AllJoynSessionLostReason>);
     overload function Reason(): winrt.windows.devices.alljoyn.AllJoynSessionLostReason;
 }

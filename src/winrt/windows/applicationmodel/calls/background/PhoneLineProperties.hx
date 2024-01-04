@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.calls.background;
 
 @:include("winrt/Windows.ApplicationModel.Calls.Background.h", true)
 @:native("winrt::Windows::ApplicationModel::Calls::Background::PhoneLineProperties")
-extern enum abstract PhoneLineProperties(UInt32)
+extern enum abstract PhoneLineProperties(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::ApplicationModel::Calls::Background::PhoneLineProperties::None") final None;
     @:native("winrt::Windows::ApplicationModel::Calls::Background::PhoneLineProperties::BrandingOptions") final BrandingOptions;

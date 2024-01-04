@@ -8,6 +8,6 @@ package winrt.windows.devices.sensors;
 @:native("winrt::Windows::Devices::Sensors::ICompassDataThreshold")
 extern interface ICompassDataThreshold extends winrt.windows.foundation.IInspectable
 {
-    overload function Degrees(): Float64;
-    overload function Degrees(value: Float64): Void;
+    overload function Degrees(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Degrees(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

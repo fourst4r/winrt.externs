@@ -9,5 +9,5 @@ package winrt.windows.devices.display.core;
 extern interface IDisplayTaskPool extends winrt.windows.foundation.IInspectable
 {
     function CreateTask(): winrt.windows.devices.display.core.DisplayTask;
-    function ExecuteTask(task: ConstRef<winrt.windows.devices.display.core.DisplayTask>): Void;
+    function ExecuteTask(task: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.display.core.DisplayTask>): Void;
 }

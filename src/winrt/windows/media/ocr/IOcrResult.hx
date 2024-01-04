@@ -9,6 +9,6 @@ package winrt.windows.media.ocr;
 extern interface IOcrResult extends winrt.windows.foundation.IInspectable
 {
     overload function Lines(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.ocr.OcrLine> /* GenericTypeInstSig */;
-    overload function TextAngle(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
+    overload function TextAngle(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
     overload function Text(): winrt.HString;
 }

@@ -8,7 +8,7 @@ package winrt.windows.devices.geolocation;
 @:native("winrt::Windows::Devices::Geolocation::IGeocoordinateSatelliteData")
 extern interface IGeocoordinateSatelliteData extends winrt.windows.foundation.IInspectable
 {
-    overload function PositionDilutionOfPrecision(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
-    overload function HorizontalDilutionOfPrecision(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
-    overload function VerticalDilutionOfPrecision(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
+    overload function PositionDilutionOfPrecision(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
+    overload function HorizontalDilutionOfPrecision(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
+    overload function VerticalDilutionOfPrecision(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
 }

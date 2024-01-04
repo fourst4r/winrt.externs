@@ -10,5 +10,5 @@ extern class TabViewItemAutomationPeer
     extends winrt.microsoft.ui.xaml.automation.peers.ListViewItemAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.ITabViewItemAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.TabViewItem>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.TabViewItem>);
 }

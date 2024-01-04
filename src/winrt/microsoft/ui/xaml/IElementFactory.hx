@@ -8,6 +8,6 @@ package winrt.microsoft.ui.xaml;
 @:native("winrt::Microsoft::UI::Xaml::IElementFactory")
 extern interface IElementFactory extends winrt.windows.foundation.IInspectable
 {
-    function GetElement(args: ConstRef<winrt.microsoft.ui.xaml.ElementFactoryGetArgs>): winrt.microsoft.ui.xaml.UIElement;
-    function RecycleElement(args: ConstRef<winrt.microsoft.ui.xaml.ElementFactoryRecycleArgs>): Void;
+    function GetElement(args: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.ElementFactoryGetArgs>): winrt.microsoft.ui.xaml.UIElement;
+    function RecycleElement(args: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.ElementFactoryRecycleArgs>): Void;
 }

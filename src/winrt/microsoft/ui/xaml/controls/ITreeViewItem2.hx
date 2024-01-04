@@ -11,5 +11,5 @@ extern interface ITreeViewItem2 extends winrt.windows.foundation.IInspectable
     overload function HasUnrealizedChildren(): Bool;
     overload function HasUnrealizedChildren(value: Bool): Void;
     overload function ItemsSource(): winrt.windows.foundation.IInspectable;
-    overload function ItemsSource(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function ItemsSource(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
 }

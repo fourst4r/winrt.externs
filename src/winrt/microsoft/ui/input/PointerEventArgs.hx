@@ -9,7 +9,7 @@ package winrt.microsoft.ui.input;
 extern class PointerEventArgs
     implements winrt.microsoft.ui.input.IPointerEventArgs
 {
-    function GetIntermediateTransformedPoints(transform: ConstRef<winrt.microsoft.ui.input.IPointerPointTransform>): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.input.PointerPoint> /* GenericTypeInstSig */;
+    function GetIntermediateTransformedPoints(transform: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.input.IPointerPointTransform>): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.input.PointerPoint> /* GenericTypeInstSig */;
     overload function CurrentPoint(): winrt.microsoft.ui.input.PointerPoint;
     overload function Handled(value: Bool): Void;
     overload function KeyModifiers(): winrt.windows.system.VirtualKeyModifiers;

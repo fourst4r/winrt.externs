@@ -8,7 +8,7 @@ package winrt.windows.devices.usb;
 @:native("winrt::Windows::Devices::Usb::IUsbDescriptor")
 extern interface IUsbDescriptor extends winrt.windows.foundation.IInspectable
 {
-    overload function Length(): UInt8;
-    overload function DescriptorType(): UInt8;
-    function ReadDescriptorBuffer(buffer: ConstRef<winrt.windows.storage.streams.IBuffer>): Void;
+    overload function Length(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function DescriptorType(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    function ReadDescriptorBuffer(buffer: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): Void;
 }

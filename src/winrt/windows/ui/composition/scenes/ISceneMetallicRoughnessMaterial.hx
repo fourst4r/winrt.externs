@@ -9,13 +9,13 @@ package winrt.windows.ui.composition.scenes;
 extern interface ISceneMetallicRoughnessMaterial extends winrt.windows.foundation.IInspectable
 {
     overload function BaseColorInput(): winrt.windows.ui.composition.scenes.SceneMaterialInput;
-    overload function BaseColorInput(value: ConstRef<winrt.windows.ui.composition.scenes.SceneMaterialInput>): Void;
+    overload function BaseColorInput(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.scenes.SceneMaterialInput>): Void;
     overload function BaseColorFactor(): winrt.windows.foundation.numerics.Vector4;
-    overload function BaseColorFactor(value: ConstRef<winrt.windows.foundation.numerics.Vector4>): Void;
-    overload function MetallicFactor(): Float32;
-    overload function MetallicFactor(value: Float32): Void;
+    overload function BaseColorFactor(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector4>): Void;
+    overload function MetallicFactor(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function MetallicFactor(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
     overload function MetallicRoughnessInput(): winrt.windows.ui.composition.scenes.SceneMaterialInput;
-    overload function MetallicRoughnessInput(value: ConstRef<winrt.windows.ui.composition.scenes.SceneMaterialInput>): Void;
-    overload function RoughnessFactor(): Float32;
-    overload function RoughnessFactor(value: Float32): Void;
+    overload function MetallicRoughnessInput(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.scenes.SceneMaterialInput>): Void;
+    overload function RoughnessFactor(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function RoughnessFactor(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
 }

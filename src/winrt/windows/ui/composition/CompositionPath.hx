@@ -10,5 +10,5 @@ extern class CompositionPath
     implements winrt.windows.ui.composition.ICompositionPath
     implements winrt.windows.graphics.IGeometrySource2D
 {
-    /* explicit */ function new(source: ConstRef<winrt.windows.graphics.IGeometrySource2D>);
+    /* explicit */ function new(source: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.IGeometrySource2D>);
 }

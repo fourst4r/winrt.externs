@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.controls;
 extern interface IColorPicker2 extends winrt.windows.foundation.IInspectable
 {
     overload function Orientation(): winrt.microsoft.ui.xaml.controls.Orientation;
-    overload function Orientation(value: ConstRef<winrt.microsoft.ui.xaml.controls.Orientation>): Void;
+    overload function Orientation(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.Orientation>): Void;
 }

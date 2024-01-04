@@ -8,6 +8,6 @@ package winrt.windows.applicationmodel.email;
 @:native("winrt::Windows::ApplicationModel::Email::IEmailRecipientFactory")
 extern interface IEmailRecipientFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(address: ConstRef<winrt.HString>): winrt.windows.applicationmodel.email.EmailRecipient;
-    function CreateWithName(address: ConstRef<winrt.HString>, name: ConstRef<winrt.HString>): winrt.windows.applicationmodel.email.EmailRecipient;
+    function Create(address: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.email.EmailRecipient;
+    function CreateWithName(address: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.email.EmailRecipient;
 }

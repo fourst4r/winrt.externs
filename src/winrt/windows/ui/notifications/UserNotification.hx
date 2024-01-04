@@ -11,6 +11,6 @@ extern class UserNotification
 {
     overload function Notification(): winrt.windows.ui.notifications.Notification;
     overload function AppInfo(): winrt.windows.applicationmodel.AppInfo;
-    overload function Id(): UInt32;
+    overload function Id(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function CreationTime(): winrt.windows.foundation.DateTime;
 }

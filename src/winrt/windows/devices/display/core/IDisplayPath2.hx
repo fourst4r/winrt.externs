@@ -9,5 +9,5 @@ package winrt.windows.devices.display.core;
 extern interface IDisplayPath2 extends winrt.windows.foundation.IInspectable
 {
     overload function PhysicalPresentationRate(): winrt.windows.foundation.IReference<winrt.windows.devices.display.core.DisplayPresentationRate> /* GenericTypeInstSig */;
-    overload function PhysicalPresentationRate(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.devices.display.core.DisplayPresentationRate> /* temp_GenericTypeInstSig */>): Void;
+    overload function PhysicalPresentationRate(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.devices.display.core.DisplayPresentationRate> /* temp_GenericTypeInstSig */>): Void;
 }

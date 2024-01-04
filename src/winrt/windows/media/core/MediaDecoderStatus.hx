@@ -2,7 +2,7 @@ package winrt.windows.media.core;
 
 @:include("winrt/Windows.Media.Core.h", true)
 @:native("winrt::Windows::Media::Core::MediaDecoderStatus")
-extern enum abstract MediaDecoderStatus(Int32)
+extern enum abstract MediaDecoderStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Core::MediaDecoderStatus::FullySupported") final FullySupported;
     @:native("winrt::Windows::Media::Core::MediaDecoderStatus::UnsupportedSubtype") final UnsupportedSubtype;

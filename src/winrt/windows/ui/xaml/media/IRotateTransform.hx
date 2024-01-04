@@ -8,10 +8,10 @@ package winrt.windows.ui.xaml.media;
 @:native("winrt::Windows::UI::Xaml::Media::IRotateTransform")
 extern interface IRotateTransform extends winrt.windows.foundation.IInspectable
 {
-    overload function CenterX(): Float64;
-    overload function CenterX(value: Float64): Void;
-    overload function CenterY(): Float64;
-    overload function CenterY(value: Float64): Void;
-    overload function Angle(): Float64;
-    overload function Angle(value: Float64): Void;
+    overload function CenterX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function CenterX(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function CenterY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function CenterY(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function Angle(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Angle(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

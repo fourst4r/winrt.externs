@@ -11,7 +11,7 @@ extern class ZoomSettings
 {
     function new();
     overload function Mode(): winrt.windows.media.devices.ZoomTransitionMode;
-    overload function Mode(value: ConstRef<winrt.windows.media.devices.ZoomTransitionMode>): Void;
-    overload function Value(): Float32;
-    overload function Value(value: Float32): Void;
+    overload function Mode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.ZoomTransitionMode>): Void;
+    overload function Value(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Value(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
 }

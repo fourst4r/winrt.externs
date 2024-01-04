@@ -10,11 +10,11 @@ extern class SceneMeshRendererComponent
     extends winrt.microsoft.ui.composition.scenes.SceneRendererComponent
     implements winrt.microsoft.ui.composition.scenes.ISceneMeshRendererComponent
 {
-    overload function Mesh(value: ConstRef<winrt.microsoft.ui.composition.scenes.SceneMesh>): Void;
+    overload function Mesh(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.scenes.SceneMesh>): Void;
     overload function UVMappings(): winrt.microsoft.ui.composition.scenes.SceneMeshMaterialAttributeMap;
     overload function Material(): winrt.microsoft.ui.composition.scenes.SceneMaterial;
-    overload function Material(value: ConstRef<winrt.microsoft.ui.composition.scenes.SceneMaterial>): Void;
+    overload function Material(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.scenes.SceneMaterial>): Void;
     overload function Mesh(): winrt.microsoft.ui.composition.scenes.SceneMesh;
-    function Create(compositor: ConstRef<winrt.microsoft.ui.composition.Compositor>): winrt.microsoft.ui.composition.scenes.SceneMeshRendererComponent;
-    static function Create(compositor: ConstRef<winrt.microsoft.ui.composition.Compositor>): winrt.microsoft.ui.composition.scenes.SceneMeshRendererComponent;
+    function Create(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.Compositor>): winrt.microsoft.ui.composition.scenes.SceneMeshRendererComponent;
+    static function Create(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.Compositor>): winrt.microsoft.ui.composition.scenes.SceneMeshRendererComponent;
 }

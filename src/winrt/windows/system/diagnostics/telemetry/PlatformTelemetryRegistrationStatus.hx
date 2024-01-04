@@ -2,7 +2,7 @@ package winrt.windows.system.diagnostics.telemetry;
 
 @:include("winrt/Windows.System.Diagnostics.Telemetry.h", true)
 @:native("winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationStatus")
-extern enum abstract PlatformTelemetryRegistrationStatus(Int32)
+extern enum abstract PlatformTelemetryRegistrationStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationStatus::Success") final Success;
     @:native("winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationStatus::SettingsOutOfRange") final SettingsOutOfRange;

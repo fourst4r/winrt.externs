@@ -9,9 +9,9 @@ package winrt.windows.ui.xaml.media;
 extern interface IImageBrush extends winrt.windows.foundation.IInspectable
 {
     overload function ImageSource(): winrt.windows.ui.xaml.media.ImageSource;
-    overload function ImageSource(value: ConstRef<winrt.windows.ui.xaml.media.ImageSource>): Void;
-    overload function ImageFailed(handler: ConstRef<winrt.windows.ui.xaml.ExceptionRoutedEventHandler>): winrt.EventToken;
-    @:noExcept overload function ImageFailed(token: ConstRef<winrt.EventToken>): Void;
-    overload function ImageOpened(handler: ConstRef<winrt.windows.ui.xaml.RoutedEventHandler>): winrt.EventToken;
-    @:noExcept overload function ImageOpened(token: ConstRef<winrt.EventToken>): Void;
+    overload function ImageSource(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.ImageSource>): Void;
+    overload function ImageFailed(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.ExceptionRoutedEventHandler>): winrt.EventToken;
+    @:noExcept overload function ImageFailed(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function ImageOpened(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.RoutedEventHandler>): winrt.EventToken;
+    @:noExcept overload function ImageOpened(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

@@ -12,8 +12,8 @@ extern interface IEmailMailboxServerSearchReadBatchRequest extends winrt.windows
     overload function EmailMailboxId(): winrt.HString;
     overload function EmailFolderId(): winrt.HString;
     overload function Options(): winrt.windows.applicationmodel.email.EmailQueryOptions;
-    overload function SuggestedBatchSize(): UInt32;
-    function SaveMessageAsync(message: ConstRef<winrt.windows.applicationmodel.email.EmailMessage>): winrt.windows.foundation.IAsyncAction;
+    overload function SuggestedBatchSize(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function SaveMessageAsync(message: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.email.EmailMessage>): winrt.windows.foundation.IAsyncAction;
     function ReportCompletedAsync(): winrt.windows.foundation.IAsyncAction;
-    function ReportFailedAsync(batchStatus: ConstRef<winrt.windows.applicationmodel.email.EmailBatchStatus>): winrt.windows.foundation.IAsyncAction;
+    function ReportFailedAsync(batchStatus: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.email.EmailBatchStatus>): winrt.windows.foundation.IAsyncAction;
 }

@@ -8,5 +8,5 @@ package winrt.windows.web.ui.interop;
 @:native("winrt::Windows::Web::UI::Interop::IWebViewControlProcessFactory")
 extern interface IWebViewControlProcessFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWithOptions(processOptions: ConstRef<winrt.windows.web.ui.interop.WebViewControlProcessOptions>): winrt.windows.web.ui.interop.WebViewControlProcess;
+    function CreateWithOptions(processOptions: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.ui.interop.WebViewControlProcessOptions>): winrt.windows.web.ui.interop.WebViewControlProcess;
 }

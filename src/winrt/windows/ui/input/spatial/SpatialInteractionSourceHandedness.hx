@@ -2,7 +2,7 @@ package winrt.windows.ui.input.spatial;
 
 @:include("winrt/Windows.UI.Input.Spatial.h", true)
 @:native("winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceHandedness")
-extern enum abstract SpatialInteractionSourceHandedness(Int32)
+extern enum abstract SpatialInteractionSourceHandedness(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceHandedness::Unspecified") final Unspecified;
     @:native("winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceHandedness::Left") final Left;

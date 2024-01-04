@@ -9,7 +9,7 @@ package winrt.windows.media.speechsynthesis;
 extern interface ISpeechSynthesizerOptions3 extends winrt.windows.foundation.IInspectable
 {
     overload function AppendedSilence(): winrt.windows.media.speechsynthesis.SpeechAppendedSilence;
-    overload function AppendedSilence(value: ConstRef<winrt.windows.media.speechsynthesis.SpeechAppendedSilence>): Void;
+    overload function AppendedSilence(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.speechsynthesis.SpeechAppendedSilence>): Void;
     overload function PunctuationSilence(): winrt.windows.media.speechsynthesis.SpeechPunctuationSilence;
-    overload function PunctuationSilence(value: ConstRef<winrt.windows.media.speechsynthesis.SpeechPunctuationSilence>): Void;
+    overload function PunctuationSilence(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.speechsynthesis.SpeechPunctuationSilence>): Void;
 }

@@ -12,11 +12,11 @@ extern interface IJumpListItem extends winrt.windows.foundation.IInspectable
     overload function Arguments(): winrt.HString;
     overload function RemovedByUser(): Bool;
     overload function Description(): winrt.HString;
-    overload function Description(value: ConstRef<winrt.HString>): Void;
+    overload function Description(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function DisplayName(): winrt.HString;
-    overload function DisplayName(value: ConstRef<winrt.HString>): Void;
+    overload function DisplayName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function GroupName(): winrt.HString;
-    overload function GroupName(value: ConstRef<winrt.HString>): Void;
+    overload function GroupName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Logo(): winrt.windows.foundation.Uri;
-    overload function Logo(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function Logo(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
 }

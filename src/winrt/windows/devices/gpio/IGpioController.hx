@@ -8,8 +8,8 @@ package winrt.windows.devices.gpio;
 @:native("winrt::Windows::Devices::Gpio::IGpioController")
 extern interface IGpioController extends winrt.windows.foundation.IInspectable
 {
-    overload function PinCount(): Int32;
-    overload function OpenPin(pinNumber: Int32): winrt.windows.devices.gpio.GpioPin;
-    overload function OpenPin(pinNumber: Int32, sharingMode: ConstRef<winrt.windows.devices.gpio.GpioSharingMode>): winrt.windows.devices.gpio.GpioPin;
-    function TryOpenPin(pinNumber: Int32, sharingMode: ConstRef<winrt.windows.devices.gpio.GpioSharingMode>, pin: Ref<winrt.windows.devices.gpio.GpioPin>, openStatus: Ref<winrt.windows.devices.gpio.GpioOpenStatus>): Bool;
+    overload function PinCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function OpenPin(pinNumber: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.devices.gpio.GpioPin;
+    overload function OpenPin(pinNumber: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, sharingMode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.gpio.GpioSharingMode>): winrt.windows.devices.gpio.GpioPin;
+    function TryOpenPin(pinNumber: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, sharingMode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.gpio.GpioSharingMode>, pin: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.devices.gpio.GpioPin>, openStatus: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.devices.gpio.GpioOpenStatus>): Bool;
 }

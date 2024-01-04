@@ -9,9 +9,9 @@ package winrt.windows.applicationmodel.email;
 extern interface IEmailQueryTextSearch extends winrt.windows.foundation.IInspectable
 {
     overload function Fields(): winrt.windows.applicationmodel.email.EmailQuerySearchFields;
-    overload function Fields(value: ConstRef<winrt.windows.applicationmodel.email.EmailQuerySearchFields>): Void;
+    overload function Fields(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.email.EmailQuerySearchFields>): Void;
     overload function SearchScope(): winrt.windows.applicationmodel.email.EmailQuerySearchScope;
-    overload function SearchScope(value: ConstRef<winrt.windows.applicationmodel.email.EmailQuerySearchScope>): Void;
+    overload function SearchScope(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.email.EmailQuerySearchScope>): Void;
     overload function Text(): winrt.HString;
-    overload function Text(value: ConstRef<winrt.HString>): Void;
+    overload function Text(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

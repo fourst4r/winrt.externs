@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.media;
 @:native("winrt::Windows::UI::Xaml::Media::IVisualTreeHelperStatics3")
 extern interface IVisualTreeHelperStatics3 extends winrt.windows.foundation.IInspectable
 {
-    function GetOpenPopupsForXamlRoot(xamlRoot: ConstRef<winrt.windows.ui.xaml.XamlRoot>): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.xaml.controls.primitives.Popup> /* GenericTypeInstSig */;
+    function GetOpenPopupsForXamlRoot(xamlRoot: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.XamlRoot>): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.xaml.controls.primitives.Popup> /* GenericTypeInstSig */;
 }

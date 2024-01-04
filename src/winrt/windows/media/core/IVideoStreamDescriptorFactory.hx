@@ -8,5 +8,5 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::IVideoStreamDescriptorFactory")
 extern interface IVideoStreamDescriptorFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(encodingProperties: ConstRef<winrt.windows.media.mediaproperties.VideoEncodingProperties>): winrt.windows.media.core.VideoStreamDescriptor;
+    function Create(encodingProperties: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.mediaproperties.VideoEncodingProperties>): winrt.windows.media.core.VideoStreamDescriptor;
 }

@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml.controls;
 @:native("winrt::Microsoft::UI::Xaml::Controls::INavigationViewItemFactory")
 extern interface INavigationViewItemFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.controls.NavigationViewItem;
+    function CreateInstance(baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.controls.NavigationViewItem;
 }

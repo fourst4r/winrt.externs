@@ -9,5 +9,5 @@ package winrt.windows.graphics.printing3d;
 extern interface IPrinting3DColorMaterialGroup extends winrt.windows.foundation.IInspectable
 {
     overload function Colors(): winrt.windows.foundation.collections.IVector<winrt.windows.graphics.printing3d.Printing3DColorMaterial> /* GenericTypeInstSig */;
-    overload function MaterialGroupId(): UInt32;
+    overload function MaterialGroupId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

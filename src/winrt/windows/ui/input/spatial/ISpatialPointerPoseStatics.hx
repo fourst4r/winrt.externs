@@ -8,5 +8,5 @@ package winrt.windows.ui.input.spatial;
 @:native("winrt::Windows::UI::Input::Spatial::ISpatialPointerPoseStatics")
 extern interface ISpatialPointerPoseStatics extends winrt.windows.foundation.IInspectable
 {
-    function TryGetAtTimestamp(coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>, timestamp: ConstRef<winrt.windows.perception.PerceptionTimestamp>): winrt.windows.ui.input.spatial.SpatialPointerPose;
+    function TryGetAtTimestamp(coordinateSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>, timestamp: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.PerceptionTimestamp>): winrt.windows.ui.input.spatial.SpatialPointerPose;
 }

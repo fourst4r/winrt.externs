@@ -11,5 +11,5 @@ extern class CompositionColorBrush
     implements winrt.microsoft.ui.composition.ICompositionColorBrush
 {
     overload function Color(): winrt.windows.ui.Color;
-    overload function Color(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function Color(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
 }

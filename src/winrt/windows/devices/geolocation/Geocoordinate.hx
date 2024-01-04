@@ -13,13 +13,13 @@ extern class Geocoordinate
     implements winrt.windows.devices.geolocation.IGeocoordinateWithPositionSourceTimestamp
     implements winrt.windows.devices.geolocation.IGeocoordinateWithRemoteSource
 {
-    overload function Latitude(): Float64;
-    overload function Longitude(): Float64;
-    overload function Altitude(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
-    overload function Accuracy(): Float64;
-    overload function AltitudeAccuracy(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
-    overload function Heading(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
-    overload function Speed(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
+    overload function Latitude(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Longitude(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Altitude(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
+    overload function Accuracy(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function AltitudeAccuracy(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
+    overload function Heading(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
+    overload function Speed(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
     overload function Timestamp(): winrt.windows.foundation.DateTime;
     overload function PositionSource(): winrt.windows.devices.geolocation.PositionSource;
     overload function SatelliteData(): winrt.windows.devices.geolocation.GeocoordinateSatelliteData;

@@ -18,7 +18,7 @@ extern class WebUIDeviceActivatedEventArgs
     overload function Kind(): winrt.windows.applicationmodel.activation.ActivationKind;
     overload function PreviousExecutionState(): winrt.windows.applicationmodel.activation.ApplicationExecutionState;
     overload function SplashScreen(): winrt.windows.applicationmodel.activation.SplashScreen;
-    overload function CurrentlyShownApplicationViewId(): Int32;
+    overload function CurrentlyShownApplicationViewId(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function ActivatedOperation(): winrt.windows.ui.webui.ActivatedOperation;
     overload function User(): winrt.windows.system.User;
 }

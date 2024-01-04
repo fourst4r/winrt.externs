@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml;
 @:native("winrt::Windows::UI::Xaml::IFrameworkElementOverrides2")
 extern interface IFrameworkElementOverrides2 extends winrt.windows.foundation.IInspectable
 {
-    function GoToElementStateCore(stateName: ConstRef<winrt.HString>, useTransitions: Bool): Bool;
+    function GoToElementStateCore(stateName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, useTransitions: Bool): Bool;
 }

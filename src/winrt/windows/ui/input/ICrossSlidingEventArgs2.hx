@@ -8,5 +8,5 @@ package winrt.windows.ui.input;
 @:native("winrt::Windows::UI::Input::ICrossSlidingEventArgs2")
 extern interface ICrossSlidingEventArgs2 extends winrt.windows.foundation.IInspectable
 {
-    overload function ContactCount(): UInt32;
+    overload function ContactCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

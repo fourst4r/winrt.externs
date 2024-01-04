@@ -2,7 +2,7 @@ package winrt.windows.security.cryptography.core;
 
 @:include("winrt/Windows.Security.Cryptography.Core.h", true)
 @:native("winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType")
-extern enum abstract CryptographicPublicKeyBlobType(Int32)
+extern enum abstract CryptographicPublicKeyBlobType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType::X509SubjectPublicKeyInfo") final X509SubjectPublicKeyInfo;
     @:native("winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType::Pkcs1RsaPublicKey") final Pkcs1RsaPublicKey;

@@ -8,5 +8,5 @@ package winrt.windows.devices.gpio.provider;
 @:native("winrt::Windows::Devices::Gpio::Provider::IGpioPinProviderValueChangedEventArgsFactory")
 extern interface IGpioPinProviderValueChangedEventArgsFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(edge: ConstRef<winrt.windows.devices.gpio.provider.ProviderGpioPinEdge>): winrt.windows.devices.gpio.provider.GpioPinProviderValueChangedEventArgs;
+    function Create(edge: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.gpio.provider.ProviderGpioPinEdge>): winrt.windows.devices.gpio.provider.GpioPinProviderValueChangedEventArgs;
 }

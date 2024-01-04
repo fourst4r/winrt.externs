@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.contacts;
 @:native("winrt::Windows::ApplicationModel::Contacts::IContactStore3")
 extern interface IContactStore3 extends winrt.windows.foundation.IInspectable
 {
-    function GetChangeTracker(identity: ConstRef<winrt.HString>): winrt.windows.applicationmodel.contacts.ContactChangeTracker;
+    function GetChangeTracker(identity: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.contacts.ContactChangeTracker;
 }

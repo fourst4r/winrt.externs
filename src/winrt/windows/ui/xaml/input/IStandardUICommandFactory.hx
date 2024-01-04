@@ -8,6 +8,6 @@ package winrt.windows.ui.xaml.input;
 @:native("winrt::Windows::UI::Xaml::Input::IStandardUICommandFactory")
 extern interface IStandardUICommandFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.input.StandardUICommand;
-    function CreateInstanceWithKind(kind: ConstRef<winrt.windows.ui.xaml.input.StandardUICommandKind>, baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.input.StandardUICommand;
+    function CreateInstance(baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.input.StandardUICommand;
+    function CreateInstanceWithKind(kind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.input.StandardUICommandKind>, baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.input.StandardUICommand;
 }

@@ -15,26 +15,26 @@ extern class LauncherOptions
 {
     function new();
     overload function TargetApplicationPackageFamilyName(): winrt.HString;
-    overload function TargetApplicationPackageFamilyName(value: ConstRef<winrt.HString>): Void;
+    overload function TargetApplicationPackageFamilyName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function NeighboringFilesQuery(): winrt.windows.storage.search.StorageFileQueryResult;
-    overload function NeighboringFilesQuery(value: ConstRef<winrt.windows.storage.search.StorageFileQueryResult>): Void;
+    overload function NeighboringFilesQuery(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.search.StorageFileQueryResult>): Void;
     overload function TreatAsUntrusted(): Bool;
     overload function TreatAsUntrusted(value: Bool): Void;
     overload function DisplayApplicationPicker(): Bool;
     overload function DisplayApplicationPicker(value: Bool): Void;
     overload function UI(): winrt.windows.system.LauncherUIOptions;
     overload function PreferredApplicationPackageFamilyName(): winrt.HString;
-    overload function PreferredApplicationPackageFamilyName(value: ConstRef<winrt.HString>): Void;
+    overload function PreferredApplicationPackageFamilyName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function PreferredApplicationDisplayName(): winrt.HString;
-    overload function PreferredApplicationDisplayName(value: ConstRef<winrt.HString>): Void;
+    overload function PreferredApplicationDisplayName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function FallbackUri(): winrt.windows.foundation.Uri;
-    overload function FallbackUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function FallbackUri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function ContentType(): winrt.HString;
-    overload function ContentType(value: ConstRef<winrt.HString>): Void;
+    overload function ContentType(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function IgnoreAppUriHandlers(): Bool;
     overload function IgnoreAppUriHandlers(value: Bool): Void;
     overload function LimitPickerToCurrentAppAndAppUriHandlers(): Bool;
     overload function LimitPickerToCurrentAppAndAppUriHandlers(value: Bool): Void;
     overload function DesiredRemainingView(): winrt.windows.ui.viewmanagement.ViewSizePreference;
-    overload function DesiredRemainingView(value: ConstRef<winrt.windows.ui.viewmanagement.ViewSizePreference>): Void;
+    overload function DesiredRemainingView(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.viewmanagement.ViewSizePreference>): Void;
 }

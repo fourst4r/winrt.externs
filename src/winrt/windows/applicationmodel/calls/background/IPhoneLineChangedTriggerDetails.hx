@@ -10,5 +10,5 @@ extern interface IPhoneLineChangedTriggerDetails extends winrt.windows.foundatio
 {
     overload function LineId(): winrt.Guid;
     overload function ChangeType(): winrt.windows.applicationmodel.calls.background.PhoneLineChangeKind;
-    function HasLinePropertyChanged(lineProperty: ConstRef<winrt.windows.applicationmodel.calls.background.PhoneLineProperties>): Bool;
+    function HasLinePropertyChanged(lineProperty: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.calls.background.PhoneLineProperties>): Bool;
 }

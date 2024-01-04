@@ -9,7 +9,7 @@ package winrt.windows.services.maps;
 extern interface IMapRouteManeuver extends winrt.windows.foundation.IInspectable
 {
     overload function StartingPoint(): winrt.windows.devices.geolocation.Geopoint;
-    overload function LengthInMeters(): Float64;
+    overload function LengthInMeters(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function InstructionText(): winrt.HString;
     overload function Kind(): winrt.windows.services.maps.MapRouteManeuverKind;
     overload function ExitNumber(): winrt.HString;

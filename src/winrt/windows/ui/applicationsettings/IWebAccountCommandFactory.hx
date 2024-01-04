@@ -8,5 +8,5 @@ package winrt.windows.ui.applicationsettings;
 @:native("winrt::Windows::UI::ApplicationSettings::IWebAccountCommandFactory")
 extern interface IWebAccountCommandFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWebAccountCommand(webAccount: ConstRef<winrt.windows.security.credentials.WebAccount>, invoked: ConstRef<winrt.windows.ui.applicationsettings.WebAccountCommandInvokedHandler>, actions: ConstRef<winrt.windows.ui.applicationsettings.SupportedWebAccountActions>): winrt.windows.ui.applicationsettings.WebAccountCommand;
+    function CreateWebAccountCommand(webAccount: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.WebAccount>, invoked: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.applicationsettings.WebAccountCommandInvokedHandler>, actions: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.applicationsettings.SupportedWebAccountActions>): winrt.windows.ui.applicationsettings.WebAccountCommand;
 }

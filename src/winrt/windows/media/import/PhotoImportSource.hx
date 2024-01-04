@@ -19,15 +19,15 @@ extern class PhotoImportSource
     overload function ConnectionTransport(): winrt.windows.media.import.PhotoImportConnectionTransport;
     overload function Type(): winrt.windows.media.import.PhotoImportSourceType;
     overload function PowerSource(): winrt.windows.media.import.PhotoImportPowerSource;
-    overload function BatteryLevelPercent(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
+    overload function BatteryLevelPercent(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
     overload function DateTime(): winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* GenericTypeInstSig */;
     overload function StorageMedia(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.import.PhotoImportStorageMedium> /* GenericTypeInstSig */;
     overload function IsLocked(): winrt.windows.foundation.IReference<Bool> /* GenericTypeInstSig */;
     overload function IsMassStorage(): Bool;
     overload function Thumbnail(): winrt.windows.storage.streams.IRandomAccessStreamReference;
     function CreateImportSession(): winrt.windows.media.import.PhotoImportSession;
-    function FromIdAsync(sourceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.import.PhotoImportSource> /* GenericTypeInstSig */;
-    function FromFolderAsync(sourceRootFolder: ConstRef<winrt.windows.storage.IStorageFolder>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.import.PhotoImportSource> /* GenericTypeInstSig */;
-    static function FromIdAsync(sourceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.import.PhotoImportSource> /* GenericTypeInstSig */;
-    static function FromFolderAsync(sourceRootFolder: ConstRef<winrt.windows.storage.IStorageFolder>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.import.PhotoImportSource> /* GenericTypeInstSig */;
+    function FromIdAsync(sourceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.import.PhotoImportSource> /* GenericTypeInstSig */;
+    function FromFolderAsync(sourceRootFolder: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.IStorageFolder>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.import.PhotoImportSource> /* GenericTypeInstSig */;
+    static function FromIdAsync(sourceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.import.PhotoImportSource> /* GenericTypeInstSig */;
+    static function FromFolderAsync(sourceRootFolder: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.IStorageFolder>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.import.PhotoImportSource> /* GenericTypeInstSig */;
 }

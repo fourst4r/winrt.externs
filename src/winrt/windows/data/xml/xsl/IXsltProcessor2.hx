@@ -8,5 +8,5 @@ package winrt.windows.data.xml.xsl;
 @:native("winrt::Windows::Data::Xml::Xsl::IXsltProcessor2")
 extern interface IXsltProcessor2 extends winrt.windows.foundation.IInspectable
 {
-    function TransformToDocument(inputNode: ConstRef<winrt.windows.data.xml.dom.IXmlNode>): winrt.windows.data.xml.dom.XmlDocument;
+    function TransformToDocument(inputNode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.data.xml.dom.IXmlNode>): winrt.windows.data.xml.dom.XmlDocument;
 }

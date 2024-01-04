@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.media;
 extern interface IXamlLightProtected extends winrt.windows.foundation.IInspectable
 {
     overload function CompositionLight(): winrt.windows.ui.composition.CompositionLight;
-    overload function CompositionLight(value: ConstRef<winrt.windows.ui.composition.CompositionLight>): Void;
+    overload function CompositionLight(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionLight>): Void;
 }

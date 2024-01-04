@@ -10,6 +10,6 @@ extern interface IVideoMediaFrameFormat extends winrt.windows.foundation.IInspec
 {
     overload function MediaFrameFormat(): winrt.windows.media.capture.frames.MediaFrameFormat;
     overload function DepthFormat(): winrt.windows.media.capture.frames.DepthMediaFrameFormat;
-    overload function Width(): UInt32;
-    overload function Height(): UInt32;
+    overload function Width(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Height(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

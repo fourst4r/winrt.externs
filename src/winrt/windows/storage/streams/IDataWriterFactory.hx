@@ -8,5 +8,5 @@ package winrt.windows.storage.streams;
 @:native("winrt::Windows::Storage::Streams::IDataWriterFactory")
 extern interface IDataWriterFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateDataWriter(outputStream: ConstRef<winrt.windows.storage.streams.IOutputStream>): winrt.windows.storage.streams.DataWriter;
+    function CreateDataWriter(outputStream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IOutputStream>): winrt.windows.storage.streams.DataWriter;
 }

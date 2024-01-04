@@ -8,7 +8,7 @@ package winrt.windows.applicationmodel.store;
 @:native("winrt::Windows::ApplicationModel::Store::ICurrentAppStaticsWithFiltering")
 extern interface ICurrentAppStaticsWithFiltering extends winrt.windows.foundation.IInspectable
 {
-    function LoadListingInformationByProductIdsAsync(productIds: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.store.ListingInformation> /* GenericTypeInstSig */;
-    function LoadListingInformationByKeywordsAsync(keywords: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.store.ListingInformation> /* GenericTypeInstSig */;
-    function ReportProductFulfillment(productId: ConstRef<winrt.HString>): Void;
+    function LoadListingInformationByProductIdsAsync(productIds: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.store.ListingInformation> /* GenericTypeInstSig */;
+    function LoadListingInformationByKeywordsAsync(keywords: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.store.ListingInformation> /* GenericTypeInstSig */;
+    function ReportProductFulfillment(productId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

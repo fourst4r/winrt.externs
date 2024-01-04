@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.chat;
 
 @:include("winrt/Windows.ApplicationModel.Chat.h", true)
 @:native("winrt::Windows::ApplicationModel::Chat::ChatStoreChangedEventKind")
-extern enum abstract ChatStoreChangedEventKind(Int32)
+extern enum abstract ChatStoreChangedEventKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Chat::ChatStoreChangedEventKind::NotificationsMissed") final NotificationsMissed;
     @:native("winrt::Windows::ApplicationModel::Chat::ChatStoreChangedEventKind::StoreModified") final StoreModified;

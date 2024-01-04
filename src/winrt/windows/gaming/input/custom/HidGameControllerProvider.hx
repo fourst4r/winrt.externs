@@ -10,14 +10,14 @@ extern class HidGameControllerProvider
     implements winrt.windows.gaming.input.custom.IGameControllerProvider
     implements winrt.windows.gaming.input.custom.IHidGameControllerProvider
 {
-    overload function UsageId(): UInt16;
-    overload function UsagePage(): UInt16;
-    function GetFeatureReport(reportId: UInt8, reportBuffer: winrt.ArrayView<UInt8>): Void;
-    function SendFeatureReport(reportId: UInt8, reportBuffer: winrt.ArrayView<UInt8>): Void;
-    function SendOutputReport(reportId: UInt8, reportBuffer: winrt.ArrayView<UInt8>): Void;
+    overload function UsageId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    overload function UsagePage(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    function GetFeatureReport(reportId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, reportBuffer: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): Void;
+    function SendFeatureReport(reportId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, reportBuffer: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): Void;
+    function SendOutputReport(reportId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, reportBuffer: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): Void;
     overload function FirmwareVersionInfo(): winrt.windows.gaming.input.custom.GameControllerVersionInfo;
-    overload function HardwareProductId(): UInt16;
-    overload function HardwareVendorId(): UInt16;
+    overload function HardwareProductId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    overload function HardwareVendorId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
     overload function HardwareVersionInfo(): winrt.windows.gaming.input.custom.GameControllerVersionInfo;
     overload function IsConnected(): Bool;
 }

@@ -10,7 +10,7 @@ extern interface ICommandLineActivationOperation extends winrt.windows.foundatio
 {
     overload function Arguments(): winrt.HString;
     overload function CurrentDirectoryPath(): winrt.HString;
-    overload function ExitCode(value: Int32): Void;
-    overload function ExitCode(): Int32;
+    overload function ExitCode(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
+    overload function ExitCode(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

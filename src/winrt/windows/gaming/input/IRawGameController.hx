@@ -8,13 +8,13 @@ package winrt.windows.gaming.input;
 @:native("winrt::Windows::Gaming::Input::IRawGameController")
 extern interface IRawGameController extends winrt.windows.foundation.IInspectable
 {
-    overload function AxisCount(): Int32;
-    overload function ButtonCount(): Int32;
+    overload function AxisCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function ButtonCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function ForceFeedbackMotors(): winrt.windows.foundation.collections.IVectorView<winrt.windows.gaming.input.forcefeedback.ForceFeedbackMotor> /* GenericTypeInstSig */;
-    overload function HardwareProductId(): UInt16;
-    overload function HardwareVendorId(): UInt16;
-    overload function SwitchCount(): Int32;
-    function GetButtonLabel(buttonIndex: Int32): winrt.windows.gaming.input.GameControllerButtonLabel;
-    function GetCurrentReading(buttonArray: winrt.ArrayView<Bool>, switchArray: winrt.ArrayView<winrt.windows.gaming.input.GameControllerSwitchPosition>, axisArray: winrt.ArrayView<Float64>): UInt64;
-    function GetSwitchKind(switchIndex: Int32): winrt.windows.gaming.input.GameControllerSwitchKind;
+    overload function HardwareProductId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    overload function HardwareVendorId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    overload function SwitchCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function GetButtonLabel(buttonIndex: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.gaming.input.GameControllerButtonLabel;
+    function GetCurrentReading(buttonArray: winrt.ArrayView<Bool>, switchArray: winrt.ArrayView<winrt.windows.gaming.input.GameControllerSwitchPosition>, axisArray: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end Float64>): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
+    function GetSwitchKind(switchIndex: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.gaming.input.GameControllerSwitchKind;
 }

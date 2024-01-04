@@ -9,5 +9,5 @@ package winrt.windows.media.core;
 extern interface IMseStreamSource2 extends winrt.windows.foundation.IInspectable
 {
     overload function LiveSeekableRange(): winrt.windows.foundation.IReference<winrt.windows.media.core.MseTimeRange> /* GenericTypeInstSig */;
-    overload function LiveSeekableRange(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.media.core.MseTimeRange> /* temp_GenericTypeInstSig */>): Void;
+    overload function LiveSeekableRange(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.media.core.MseTimeRange> /* temp_GenericTypeInstSig */>): Void;
 }

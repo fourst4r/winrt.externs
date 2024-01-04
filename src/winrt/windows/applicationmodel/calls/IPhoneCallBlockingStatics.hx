@@ -12,5 +12,5 @@ extern interface IPhoneCallBlockingStatics extends winrt.windows.foundation.IIns
     overload function BlockUnknownNumbers(value: Bool): Void;
     overload function BlockPrivateNumbers(): Bool;
     overload function BlockPrivateNumbers(value: Bool): Void;
-    function SetCallBlockingListAsync(phoneNumberList: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function SetCallBlockingListAsync(phoneNumberList: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

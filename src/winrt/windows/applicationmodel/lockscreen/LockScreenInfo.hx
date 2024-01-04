@@ -9,16 +9,16 @@ package winrt.windows.applicationmodel.lockscreen;
 extern class LockScreenInfo
     implements winrt.windows.applicationmodel.lockscreen.ILockScreenInfo
 {
-    overload function LockScreenImageChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.lockscreen.LockScreenInfo, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function LockScreenImageChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function LockScreenImageChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.lockscreen.LockScreenInfo, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function LockScreenImageChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function LockScreenImage(): winrt.windows.storage.streams.IRandomAccessStream;
-    overload function BadgesChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.lockscreen.LockScreenInfo, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function BadgesChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function BadgesChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.lockscreen.LockScreenInfo, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function BadgesChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function Badges(): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.lockscreen.LockScreenBadge> /* GenericTypeInstSig */;
-    overload function DetailTextChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.lockscreen.LockScreenInfo, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function DetailTextChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function DetailTextChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.lockscreen.LockScreenInfo, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function DetailTextChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function DetailText(): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
-    overload function AlarmIconChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.lockscreen.LockScreenInfo, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function AlarmIconChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function AlarmIconChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.lockscreen.LockScreenInfo, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function AlarmIconChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function AlarmIcon(): winrt.windows.storage.streams.IRandomAccessStream;
 }

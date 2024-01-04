@@ -9,6 +9,6 @@ package winrt.windows.devices.wifi;
 extern interface IWiFiOnDemandHotspotNetwork extends winrt.windows.foundation.IInspectable
 {
     function GetProperties(): winrt.windows.devices.wifi.WiFiOnDemandHotspotNetworkProperties;
-    function UpdateProperties(newProperties: ConstRef<winrt.windows.devices.wifi.WiFiOnDemandHotspotNetworkProperties>): Void;
+    function UpdateProperties(newProperties: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.wifi.WiFiOnDemandHotspotNetworkProperties>): Void;
     overload function Id(): winrt.Guid;
 }

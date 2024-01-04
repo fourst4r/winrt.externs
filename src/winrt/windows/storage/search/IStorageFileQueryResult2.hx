@@ -8,5 +8,5 @@ package winrt.windows.storage.search;
 @:native("winrt::Windows::Storage::Search::IStorageFileQueryResult2")
 extern interface IStorageFileQueryResult2 extends winrt.windows.foundation.IInspectable
 {
-    function GetMatchingPropertiesWithRanges(file: ConstRef<winrt.windows.storage.StorageFile>): winrt.windows.foundation.collections.IMap<winrt.HString, winrt.windows.foundation.collections.IVectorView<winrt.windows.data.text.TextSegment> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+    function GetMatchingPropertiesWithRanges(file: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.StorageFile>): winrt.windows.foundation.collections.IMap<winrt.HString, winrt.windows.foundation.collections.IVectorView<winrt.windows.data.text.TextSegment> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
 }

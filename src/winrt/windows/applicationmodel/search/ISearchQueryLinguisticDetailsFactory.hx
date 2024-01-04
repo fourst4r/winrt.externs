@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.search;
 @:native("winrt::Windows::ApplicationModel::Search::ISearchQueryLinguisticDetailsFactory")
 extern interface ISearchQueryLinguisticDetailsFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(queryTextAlternatives: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, queryTextCompositionStart: UInt32, queryTextCompositionLength: UInt32): winrt.windows.applicationmodel.search.SearchQueryLinguisticDetails;
+    function CreateInstance(queryTextAlternatives: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, queryTextCompositionStart: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, queryTextCompositionLength: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.applicationmodel.search.SearchQueryLinguisticDetails;
 }

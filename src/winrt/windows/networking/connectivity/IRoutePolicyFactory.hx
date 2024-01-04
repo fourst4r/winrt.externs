@@ -8,5 +8,5 @@ package winrt.windows.networking.connectivity;
 @:native("winrt::Windows::Networking::Connectivity::IRoutePolicyFactory")
 extern interface IRoutePolicyFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateRoutePolicy(connectionProfile: ConstRef<winrt.windows.networking.connectivity.ConnectionProfile>, hostName: ConstRef<winrt.windows.networking.HostName>, type: ConstRef<winrt.windows.networking.DomainNameType>): winrt.windows.networking.connectivity.RoutePolicy;
+    function CreateRoutePolicy(connectionProfile: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.connectivity.ConnectionProfile>, hostName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.HostName>, type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.DomainNameType>): winrt.windows.networking.connectivity.RoutePolicy;
 }

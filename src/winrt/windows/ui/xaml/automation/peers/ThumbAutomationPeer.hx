@@ -10,5 +10,5 @@ extern class ThumbAutomationPeer
     extends winrt.windows.ui.xaml.automation.peers.FrameworkElementAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IThumbAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.primitives.Thumb>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.primitives.Thumb>);
 }

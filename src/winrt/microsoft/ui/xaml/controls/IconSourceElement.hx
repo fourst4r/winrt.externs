@@ -12,7 +12,7 @@ extern class IconSourceElement
 {
     function new();
     overload function IconSource(): winrt.microsoft.ui.xaml.controls.IconSource;
-    overload function IconSource(value: ConstRef<winrt.microsoft.ui.xaml.controls.IconSource>): Void;
+    overload function IconSource(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.IconSource>): Void;
     overload function IconSourceProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function IconSourceProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
 }

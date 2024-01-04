@@ -12,5 +12,5 @@ extern interface ISpatialInteractionSourceState extends winrt.windows.foundation
     overload function Properties(): winrt.windows.ui.input.spatial.SpatialInteractionSourceProperties;
     overload function IsPressed(): Bool;
     overload function Timestamp(): winrt.windows.perception.PerceptionTimestamp;
-    function TryGetPointerPose(coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.ui.input.spatial.SpatialPointerPose;
+    function TryGetPointerPose(coordinateSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.ui.input.spatial.SpatialPointerPose;
 }

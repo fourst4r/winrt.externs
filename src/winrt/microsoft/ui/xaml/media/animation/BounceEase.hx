@@ -11,10 +11,10 @@ extern class BounceEase
     implements winrt.microsoft.ui.xaml.media.animation.IBounceEase
 {
     function new();
-    overload function Bounces(): Int32;
-    overload function Bounces(value: Int32): Void;
-    overload function Bounciness(): Float64;
-    overload function Bounciness(value: Float64): Void;
+    overload function Bounces(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Bounces(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
+    overload function Bounciness(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Bounciness(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function BouncesProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function BouncinessProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function BouncesProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

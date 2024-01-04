@@ -8,5 +8,5 @@ package winrt.windows.graphics.printing;
 @:native("winrt::Windows::Graphics::Printing::IPrintTaskProgressingEventArgs")
 extern interface IPrintTaskProgressingEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function DocumentPageCount(): UInt32;
+    overload function DocumentPageCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

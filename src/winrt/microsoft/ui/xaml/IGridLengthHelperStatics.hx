@@ -9,10 +9,10 @@ package winrt.microsoft.ui.xaml;
 extern interface IGridLengthHelperStatics extends winrt.windows.foundation.IInspectable
 {
     overload function Auto(): winrt.microsoft.ui.xaml.GridLength;
-    function FromPixels(pixels: Float64): winrt.microsoft.ui.xaml.GridLength;
-    function FromValueAndType(value: Float64, type: ConstRef<winrt.microsoft.ui.xaml.GridUnitType>): winrt.microsoft.ui.xaml.GridLength;
-    function GetIsAbsolute(target: ConstRef<winrt.microsoft.ui.xaml.GridLength>): Bool;
-    function GetIsAuto(target: ConstRef<winrt.microsoft.ui.xaml.GridLength>): Bool;
-    function GetIsStar(target: ConstRef<winrt.microsoft.ui.xaml.GridLength>): Bool;
-    function Equals(target: ConstRef<winrt.microsoft.ui.xaml.GridLength>, value: ConstRef<winrt.microsoft.ui.xaml.GridLength>): Bool;
+    function FromPixels(pixels: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.microsoft.ui.xaml.GridLength;
+    function FromValueAndType(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.GridUnitType>): winrt.microsoft.ui.xaml.GridLength;
+    function GetIsAbsolute(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.GridLength>): Bool;
+    function GetIsAuto(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.GridLength>): Bool;
+    function GetIsStar(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.GridLength>): Bool;
+    function Equals(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.GridLength>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.GridLength>): Bool;
 }

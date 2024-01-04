@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IInkToolbar3 extends winrt.windows.foundation.IInspectable
 {
     overload function TargetInkPresenter(): winrt.windows.ui.input.inking.InkPresenter;
-    overload function TargetInkPresenter(value: ConstRef<winrt.windows.ui.input.inking.InkPresenter>): Void;
+    overload function TargetInkPresenter(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.inking.InkPresenter>): Void;
 }

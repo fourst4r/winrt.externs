@@ -8,6 +8,6 @@ package winrt.windows.applicationmodel;
 @:native("winrt::Windows::ApplicationModel::IPackage9")
 extern interface IPackage9 extends winrt.windows.foundation.IInspectable
 {
-    function FindRelatedPackages(options: ConstRef<winrt.windows.applicationmodel.FindRelatedPackagesOptions>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
+    function FindRelatedPackages(options: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.FindRelatedPackagesOptions>): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.Package> /* GenericTypeInstSig */;
     overload function SourceUriSchemeName(): winrt.HString;
 }

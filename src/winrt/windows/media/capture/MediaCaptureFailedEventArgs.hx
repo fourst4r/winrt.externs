@@ -10,5 +10,5 @@ extern class MediaCaptureFailedEventArgs
     implements winrt.windows.media.capture.IMediaCaptureFailedEventArgs
 {
     overload function Message(): winrt.HString;
-    overload function Code(): UInt32;
+    overload function Code(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

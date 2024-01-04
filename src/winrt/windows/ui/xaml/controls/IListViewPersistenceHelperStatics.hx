@@ -8,6 +8,6 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IListViewPersistenceHelperStatics")
 extern interface IListViewPersistenceHelperStatics extends winrt.windows.foundation.IInspectable
 {
-    function GetRelativeScrollPosition(listViewBase: ConstRef<winrt.windows.ui.xaml.controls.ListViewBase>, itemToKeyHandler: ConstRef<winrt.windows.ui.xaml.controls.ListViewItemToKeyHandler>): winrt.HString;
-    function SetRelativeScrollPositionAsync(listViewBase: ConstRef<winrt.windows.ui.xaml.controls.ListViewBase>, relativeScrollPosition: ConstRef<winrt.HString>, keyToItemHandler: ConstRef<winrt.windows.ui.xaml.controls.ListViewKeyToItemHandler>): winrt.windows.foundation.IAsyncAction;
+    function GetRelativeScrollPosition(listViewBase: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.ListViewBase>, itemToKeyHandler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.ListViewItemToKeyHandler>): winrt.HString;
+    function SetRelativeScrollPositionAsync(listViewBase: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.ListViewBase>, relativeScrollPosition: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, keyToItemHandler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.ListViewKeyToItemHandler>): winrt.windows.foundation.IAsyncAction;
 }

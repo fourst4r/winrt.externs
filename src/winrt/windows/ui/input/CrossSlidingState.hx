@@ -2,7 +2,7 @@ package winrt.windows.ui.input;
 
 @:include("winrt/Windows.UI.Input.h", true)
 @:native("winrt::Windows::UI::Input::CrossSlidingState")
-extern enum abstract CrossSlidingState(Int32)
+extern enum abstract CrossSlidingState(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Input::CrossSlidingState::Started") final Started;
     @:native("winrt::Windows::UI::Input::CrossSlidingState::Dragging") final Dragging;

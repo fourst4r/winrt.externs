@@ -8,6 +8,6 @@ package winrt.windows.devices.sensors;
 @:native("winrt::Windows::Devices::Sensors::IBarometerStatics2")
 extern interface IBarometerStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.sensors.Barometer> /* GenericTypeInstSig */;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.sensors.Barometer> /* GenericTypeInstSig */;
     function GetDeviceSelector(): winrt.HString;
 }

@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.automation.peers;
 @:native("winrt::Windows::UI::Xaml::Automation::Peers::IPivotAutomationPeerFactory")
 extern interface IPivotAutomationPeerFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstanceWithOwner(owner: ConstRef<winrt.windows.ui.xaml.controls.Pivot>): winrt.windows.ui.xaml.automation.peers.PivotAutomationPeer;
+    function CreateInstanceWithOwner(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.Pivot>): winrt.windows.ui.xaml.automation.peers.PivotAutomationPeer;
 }

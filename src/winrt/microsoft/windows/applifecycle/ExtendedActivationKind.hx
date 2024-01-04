@@ -2,7 +2,7 @@ package winrt.microsoft.windows.applifecycle;
 
 @:include("winrt/Microsoft.Windows.AppLifecycle.h", true)
 @:native("winrt::Microsoft::Windows::AppLifecycle::ExtendedActivationKind")
-extern enum abstract ExtendedActivationKind(Int32)
+extern enum abstract ExtendedActivationKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::Windows::AppLifecycle::ExtendedActivationKind::Launch") final Launch;
     @:native("winrt::Microsoft::Windows::AppLifecycle::ExtendedActivationKind::Search") final Search;

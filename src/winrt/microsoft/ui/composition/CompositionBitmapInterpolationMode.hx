@@ -2,7 +2,7 @@ package winrt.microsoft.ui.composition;
 
 @:include("winrt/Microsoft.UI.Composition.h", true)
 @:native("winrt::Microsoft::UI::Composition::CompositionBitmapInterpolationMode")
-extern enum abstract CompositionBitmapInterpolationMode(Int32)
+extern enum abstract CompositionBitmapInterpolationMode(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Composition::CompositionBitmapInterpolationMode::NearestNeighbor") final NearestNeighbor;
     @:native("winrt::Microsoft::UI::Composition::CompositionBitmapInterpolationMode::Linear") final Linear;

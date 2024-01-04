@@ -10,6 +10,6 @@ extern interface IChatMessageManagerStatic extends winrt.windows.foundation.IIns
 {
     function GetTransportsAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.chat.ChatMessageTransport> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
     function RequestStoreAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.chat.ChatMessageStore> /* GenericTypeInstSig */;
-    function ShowComposeSmsMessageAsync(message: ConstRef<winrt.windows.applicationmodel.chat.ChatMessage>): winrt.windows.foundation.IAsyncAction;
+    function ShowComposeSmsMessageAsync(message: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.chat.ChatMessage>): winrt.windows.foundation.IAsyncAction;
     function ShowSmsSettings(): Void;
 }

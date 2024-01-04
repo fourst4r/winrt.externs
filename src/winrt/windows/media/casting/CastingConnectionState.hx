@@ -2,7 +2,7 @@ package winrt.windows.media.casting;
 
 @:include("winrt/Windows.Media.Casting.h", true)
 @:native("winrt::Windows::Media::Casting::CastingConnectionState")
-extern enum abstract CastingConnectionState(Int32)
+extern enum abstract CastingConnectionState(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Casting::CastingConnectionState::Disconnected") final Disconnected;
     @:native("winrt::Windows::Media::Casting::CastingConnectionState::Connected") final Connected;

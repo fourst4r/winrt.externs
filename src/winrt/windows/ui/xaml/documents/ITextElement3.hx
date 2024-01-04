@@ -11,7 +11,7 @@ extern interface ITextElement3 extends winrt.windows.foundation.IInspectable
     overload function AllowFocusOnInteraction(): Bool;
     overload function AllowFocusOnInteraction(value: Bool): Void;
     overload function AccessKey(): winrt.HString;
-    overload function AccessKey(value: ConstRef<winrt.HString>): Void;
+    overload function AccessKey(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function ExitDisplayModeOnAccessKeyInvoked(): Bool;
     overload function ExitDisplayModeOnAccessKeyInvoked(value: Bool): Void;
 }

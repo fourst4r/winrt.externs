@@ -13,12 +13,12 @@ extern class DataTemplate
 {
     function new();
     function LoadContent(): winrt.microsoft.ui.xaml.DependencyObject;
-    function GetElement(args: ConstRef<winrt.microsoft.ui.xaml.ElementFactoryGetArgs>): winrt.microsoft.ui.xaml.UIElement;
-    function RecycleElement(args: ConstRef<winrt.microsoft.ui.xaml.ElementFactoryRecycleArgs>): Void;
+    function GetElement(args: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.ElementFactoryGetArgs>): winrt.microsoft.ui.xaml.UIElement;
+    function RecycleElement(args: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.ElementFactoryRecycleArgs>): Void;
     overload function ExtensionInstanceProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetExtensionInstance(element: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.microsoft.ui.xaml.IDataTemplateExtension;
-    function SetExtensionInstance(element: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>, value: ConstRef<winrt.microsoft.ui.xaml.IDataTemplateExtension>): Void;
+    function GetExtensionInstance(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.FrameworkElement>): winrt.microsoft.ui.xaml.IDataTemplateExtension;
+    function SetExtensionInstance(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.FrameworkElement>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.IDataTemplateExtension>): Void;
     static overload function ExtensionInstanceProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    static function GetExtensionInstance(element: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.microsoft.ui.xaml.IDataTemplateExtension;
-    static function SetExtensionInstance(element: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>, value: ConstRef<winrt.microsoft.ui.xaml.IDataTemplateExtension>): Void;
+    static function GetExtensionInstance(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.FrameworkElement>): winrt.microsoft.ui.xaml.IDataTemplateExtension;
+    static function SetExtensionInstance(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.FrameworkElement>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.IDataTemplateExtension>): Void;
 }

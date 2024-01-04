@@ -12,8 +12,8 @@ extern interface INetworkInformationStatics extends winrt.windows.foundation.IIn
     function GetInternetConnectionProfile(): winrt.windows.networking.connectivity.ConnectionProfile;
     function GetLanIdentifiers(): winrt.windows.foundation.collections.IVectorView<winrt.windows.networking.connectivity.LanIdentifier> /* GenericTypeInstSig */;
     function GetHostNames(): winrt.windows.foundation.collections.IVectorView<winrt.windows.networking.HostName> /* GenericTypeInstSig */;
-    function GetProxyConfigurationAsync(uri: ConstRef<winrt.windows.foundation.Uri>): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.connectivity.ProxyConfiguration> /* GenericTypeInstSig */;
-    function GetSortedEndpointPairs(destinationList: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.networking.EndpointPair> /* temp_GenericTypeInstSig */>, sortOptions: ConstRef<winrt.windows.networking.HostNameSortOptions>): winrt.windows.foundation.collections.IVectorView<winrt.windows.networking.EndpointPair> /* GenericTypeInstSig */;
-    overload function NetworkStatusChanged(networkStatusHandler: ConstRef<winrt.windows.networking.connectivity.NetworkStatusChangedEventHandler>): winrt.EventToken;
-    @:noExcept overload function NetworkStatusChanged(eventCookie: ConstRef<winrt.EventToken>): Void;
+    function GetProxyConfigurationAsync(uri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.connectivity.ProxyConfiguration> /* GenericTypeInstSig */;
+    function GetSortedEndpointPairs(destinationList: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.windows.networking.EndpointPair> /* temp_GenericTypeInstSig */>, sortOptions: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.HostNameSortOptions>): winrt.windows.foundation.collections.IVectorView<winrt.windows.networking.EndpointPair> /* GenericTypeInstSig */;
+    overload function NetworkStatusChanged(networkStatusHandler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.connectivity.NetworkStatusChangedEventHandler>): winrt.EventToken;
+    @:noExcept overload function NetworkStatusChanged(eventCookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

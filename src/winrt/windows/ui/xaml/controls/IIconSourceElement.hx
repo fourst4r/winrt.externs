@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IIconSourceElement extends winrt.windows.foundation.IInspectable
 {
     overload function IconSource(): winrt.windows.ui.xaml.controls.IconSource;
-    overload function IconSource(value: ConstRef<winrt.windows.ui.xaml.controls.IconSource>): Void;
+    overload function IconSource(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.IconSource>): Void;
 }

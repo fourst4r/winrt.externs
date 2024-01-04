@@ -8,5 +8,5 @@ package winrt.windows.web.syndication;
 @:native("winrt::Windows::Web::Syndication::ISyndicationClientFactory")
 extern interface ISyndicationClientFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateSyndicationClient(serverCredential: ConstRef<winrt.windows.security.credentials.PasswordCredential>): winrt.windows.web.syndication.SyndicationClient;
+    function CreateSyndicationClient(serverCredential: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.PasswordCredential>): winrt.windows.web.syndication.SyndicationClient;
 }

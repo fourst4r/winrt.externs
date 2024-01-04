@@ -9,5 +9,5 @@ package winrt.windows.media.playback;
 extern interface IMediaPlayerSource2 extends winrt.windows.foundation.IInspectable
 {
     overload function Source(): winrt.windows.media.playback.IMediaPlaybackSource;
-    overload function Source(value: ConstRef<winrt.windows.media.playback.IMediaPlaybackSource>): Void;
+    overload function Source(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.playback.IMediaPlaybackSource>): Void;
 }

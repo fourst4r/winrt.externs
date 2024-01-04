@@ -9,5 +9,5 @@ package winrt.windows.ui.composition;
 extern interface ICompositionTarget extends winrt.windows.foundation.IInspectable
 {
     overload function Root(): winrt.windows.ui.composition.Visual;
-    overload function Root(value: ConstRef<winrt.windows.ui.composition.Visual>): Void;
+    overload function Root(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Visual>): Void;
 }

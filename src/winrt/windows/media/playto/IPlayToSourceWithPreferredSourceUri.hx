@@ -9,5 +9,5 @@ package winrt.windows.media.playto;
 extern interface IPlayToSourceWithPreferredSourceUri extends winrt.windows.foundation.IInspectable
 {
     overload function PreferredSourceUri(): winrt.windows.foundation.Uri;
-    overload function PreferredSourceUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function PreferredSourceUri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
 }

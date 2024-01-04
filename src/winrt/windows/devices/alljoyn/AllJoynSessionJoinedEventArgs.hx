@@ -9,6 +9,6 @@ package winrt.windows.devices.alljoyn;
 extern class AllJoynSessionJoinedEventArgs
     implements winrt.windows.devices.alljoyn.IAllJoynSessionJoinedEventArgs
 {
-    /* explicit */ function new(session: ConstRef<winrt.windows.devices.alljoyn.AllJoynSession>);
+    /* explicit */ function new(session: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.alljoyn.AllJoynSession>);
     overload function Session(): winrt.windows.devices.alljoyn.AllJoynSession;
 }

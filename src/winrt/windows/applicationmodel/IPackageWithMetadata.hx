@@ -10,5 +10,5 @@ extern interface IPackageWithMetadata extends winrt.windows.foundation.IInspecta
 {
     overload function InstallDate(): winrt.windows.foundation.DateTime;
     function GetThumbnailToken(): winrt.HString;
-    function Launch(parameters: ConstRef<winrt.HString>): Void;
+    function Launch(parameters: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

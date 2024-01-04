@@ -10,5 +10,5 @@ extern class PosPrinterStatus
     implements winrt.windows.devices.pointofservice.IPosPrinterStatus
 {
     overload function StatusKind(): winrt.windows.devices.pointofservice.PosPrinterStatusKind;
-    overload function ExtendedStatus(): UInt32;
+    overload function ExtendedStatus(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

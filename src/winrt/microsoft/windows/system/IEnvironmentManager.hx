@@ -9,10 +9,10 @@ package winrt.microsoft.windows.system;
 extern interface IEnvironmentManager extends winrt.windows.foundation.IInspectable
 {
     function GetEnvironmentVariables(): winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.HString> /* GenericTypeInstSig */;
-    function GetEnvironmentVariable(name: ConstRef<winrt.HString>): winrt.HString;
-    function SetEnvironmentVariable(name: ConstRef<winrt.HString>, value: ConstRef<winrt.HString>): Void;
-    function AppendToPath(path: ConstRef<winrt.HString>): Void;
-    function RemoveFromPath(path: ConstRef<winrt.HString>): Void;
-    function AddExecutableFileExtension(pathExt: ConstRef<winrt.HString>): Void;
-    function RemoveExecutableFileExtension(pathExt: ConstRef<winrt.HString>): Void;
+    function GetEnvironmentVariable(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.HString;
+    function SetEnvironmentVariable(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function AppendToPath(path: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function RemoveFromPath(path: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function AddExecutableFileExtension(pathExt: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function RemoveExecutableFileExtension(pathExt: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

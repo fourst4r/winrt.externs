@@ -8,7 +8,7 @@ package winrt.windows.devices.humaninterfacedevice;
 @:native("winrt::Windows::Devices::HumanInterfaceDevice::IHidDeviceStatics")
 extern interface IHidDeviceStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function GetDeviceSelector(usagePage: UInt16, usageId: UInt16): winrt.HString;
-    overload function GetDeviceSelector(usagePage: UInt16, usageId: UInt16, vendorId: UInt16, productId: UInt16): winrt.HString;
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>, accessMode: ConstRef<winrt.windows.storage.FileAccessMode>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.humaninterfacedevice.HidDevice> /* GenericTypeInstSig */;
+    overload function GetDeviceSelector(usagePage: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, usageId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.HString;
+    overload function GetDeviceSelector(usagePage: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, usageId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, vendorId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, productId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.HString;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, accessMode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.FileAccessMode>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.humaninterfacedevice.HidDevice> /* GenericTypeInstSig */;
 }

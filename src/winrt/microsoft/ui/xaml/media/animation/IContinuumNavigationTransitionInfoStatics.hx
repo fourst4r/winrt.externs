@@ -10,12 +10,12 @@ extern interface IContinuumNavigationTransitionInfoStatics extends winrt.windows
 {
     overload function ExitElementProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function IsEntranceElementProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetIsEntranceElement(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Bool;
-    function SetIsEntranceElement(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>, value: Bool): Void;
+    function GetIsEntranceElement(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): Bool;
+    function SetIsEntranceElement(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>, value: Bool): Void;
     overload function IsExitElementProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetIsExitElement(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Bool;
-    function SetIsExitElement(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>, value: Bool): Void;
+    function GetIsExitElement(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): Bool;
+    function SetIsExitElement(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>, value: Bool): Void;
     overload function ExitElementContainerProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetExitElementContainer(element: ConstRef<winrt.microsoft.ui.xaml.controls.ListViewBase>): Bool;
-    function SetExitElementContainer(element: ConstRef<winrt.microsoft.ui.xaml.controls.ListViewBase>, value: Bool): Void;
+    function GetExitElementContainer(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.ListViewBase>): Bool;
+    function SetExitElementContainer(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.ListViewBase>, value: Bool): Void;
 }

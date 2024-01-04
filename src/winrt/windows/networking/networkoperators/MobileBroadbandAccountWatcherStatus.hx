@@ -2,7 +2,7 @@ package winrt.windows.networking.networkoperators;
 
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcherStatus")
-extern enum abstract MobileBroadbandAccountWatcherStatus(Int32)
+extern enum abstract MobileBroadbandAccountWatcherStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcherStatus::Created") final Created;
     @:native("winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcherStatus::Started") final Started;

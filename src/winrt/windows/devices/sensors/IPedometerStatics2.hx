@@ -8,5 +8,5 @@ package winrt.windows.devices.sensors;
 @:native("winrt::Windows::Devices::Sensors::IPedometerStatics2")
 extern interface IPedometerStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function GetReadingsFromTriggerDetails(triggerDetails: ConstRef<winrt.windows.devices.sensors.SensorDataThresholdTriggerDetails>): winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.sensors.PedometerReading> /* GenericTypeInstSig */;
+    function GetReadingsFromTriggerDetails(triggerDetails: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.sensors.SensorDataThresholdTriggerDetails>): winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.sensors.PedometerReading> /* GenericTypeInstSig */;
 }

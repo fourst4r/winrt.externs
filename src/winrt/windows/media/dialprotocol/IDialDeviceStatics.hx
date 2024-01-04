@@ -8,7 +8,7 @@ package winrt.windows.media.dialprotocol;
 @:native("winrt::Windows::Media::DialProtocol::IDialDeviceStatics")
 extern interface IDialDeviceStatics extends winrt.windows.foundation.IInspectable
 {
-    function GetDeviceSelector(appName: ConstRef<winrt.HString>): winrt.HString;
-    function FromIdAsync(value: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.dialprotocol.DialDevice> /* GenericTypeInstSig */;
-    function DeviceInfoSupportsDialAsync(device: ConstRef<winrt.windows.devices.enumeration.DeviceInformation>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function GetDeviceSelector(appName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.HString;
+    function FromIdAsync(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.dialprotocol.DialDevice> /* GenericTypeInstSig */;
+    function DeviceInfoSupportsDialAsync(device: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.enumeration.DeviceInformation>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

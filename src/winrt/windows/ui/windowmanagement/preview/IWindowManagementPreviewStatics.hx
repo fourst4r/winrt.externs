@@ -8,5 +8,5 @@ package winrt.windows.ui.windowmanagement.preview;
 @:native("winrt::Windows::UI::WindowManagement::Preview::IWindowManagementPreviewStatics")
 extern interface IWindowManagementPreviewStatics extends winrt.windows.foundation.IInspectable
 {
-    function SetPreferredMinSize(window: ConstRef<winrt.windows.ui.windowmanagement.AppWindow>, preferredFrameMinSize: ConstRef<winrt.windows.foundation.Size>): Void;
+    function SetPreferredMinSize(window: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.windowmanagement.AppWindow>, preferredFrameMinSize: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Size>): Void;
 }

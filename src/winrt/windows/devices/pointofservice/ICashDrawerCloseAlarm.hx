@@ -8,15 +8,15 @@ package winrt.windows.devices.pointofservice;
 @:native("winrt::Windows::Devices::PointOfService::ICashDrawerCloseAlarm")
 extern interface ICashDrawerCloseAlarm extends winrt.windows.foundation.IInspectable
 {
-    overload function AlarmTimeout(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function AlarmTimeout(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function AlarmTimeout(): winrt.windows.foundation.TimeSpan;
-    overload function BeepFrequency(value: UInt32): Void;
-    overload function BeepFrequency(): UInt32;
-    overload function BeepDuration(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function BeepFrequency(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function BeepFrequency(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function BeepDuration(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function BeepDuration(): winrt.windows.foundation.TimeSpan;
-    overload function BeepDelay(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function BeepDelay(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function BeepDelay(): winrt.windows.foundation.TimeSpan;
-    overload function AlarmTimeoutExpired(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.pointofservice.CashDrawerCloseAlarm, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function AlarmTimeoutExpired(token: ConstRef<winrt.EventToken>): Void;
+    overload function AlarmTimeoutExpired(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.pointofservice.CashDrawerCloseAlarm, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function AlarmTimeoutExpired(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     function StartAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

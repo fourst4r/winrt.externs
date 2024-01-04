@@ -2,7 +2,7 @@ package winrt.windows.management;
 
 @:include("winrt/Windows.Management.h", true)
 @:native("winrt::Windows::Management::MdmSessionState")
-extern enum abstract MdmSessionState(Int32)
+extern enum abstract MdmSessionState(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Management::MdmSessionState::NotStarted") final NotStarted;
     @:native("winrt::Windows::Management::MdmSessionState::Starting") final Starting;

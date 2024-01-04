@@ -9,7 +9,7 @@ package winrt.windows.devices.serialcommunication;
 extern interface ISerialDeviceStatics extends winrt.windows.foundation.IInspectable
 {
     overload function GetDeviceSelector(): winrt.HString;
-    overload function GetDeviceSelector(portName: ConstRef<winrt.HString>): winrt.HString;
-    function GetDeviceSelectorFromUsbVidPid(vendorId: UInt16, productId: UInt16): winrt.HString;
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.serialcommunication.SerialDevice> /* GenericTypeInstSig */;
+    overload function GetDeviceSelector(portName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.HString;
+    function GetDeviceSelectorFromUsbVidPid(vendorId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, productId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.HString;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.serialcommunication.SerialDevice> /* GenericTypeInstSig */;
 }

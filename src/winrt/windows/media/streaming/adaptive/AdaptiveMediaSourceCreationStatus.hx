@@ -2,7 +2,7 @@ package winrt.windows.media.streaming.adaptive;
 
 @:include("winrt/Windows.Media.Streaming.Adaptive.h", true)
 @:native("winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationStatus")
-extern enum abstract AdaptiveMediaSourceCreationStatus(Int32)
+extern enum abstract AdaptiveMediaSourceCreationStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationStatus::Success") final Success;
     @:native("winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationStatus::ManifestDownloadFailure") final ManifestDownloadFailure;

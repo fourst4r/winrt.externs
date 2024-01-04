@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.input;
 
 @:include("winrt/Microsoft.UI.Xaml.Input.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Input::StandardUICommandKind")
-extern enum abstract StandardUICommandKind(Int32)
+extern enum abstract StandardUICommandKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Input::StandardUICommandKind::None") final None;
     @:native("winrt::Microsoft::UI::Xaml::Input::StandardUICommandKind::Cut") final Cut;

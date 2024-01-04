@@ -9,5 +9,5 @@ package winrt.microsoft.web.webview2.core;
 extern interface ICoreWebView2Settings_Manual extends winrt.windows.foundation.IInspectable
 {
     overload function HostObjectDispatchAdapter(): winrt.microsoft.web.webview2.core.ICoreWebView2DispatchAdapter;
-    overload function HostObjectDispatchAdapter(value: ConstRef<winrt.microsoft.web.webview2.core.ICoreWebView2DispatchAdapter>): Void;
+    overload function HostObjectDispatchAdapter(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.ICoreWebView2DispatchAdapter>): Void;
 }

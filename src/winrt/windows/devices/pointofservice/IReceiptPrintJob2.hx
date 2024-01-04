@@ -9,7 +9,7 @@ package winrt.windows.devices.pointofservice;
 extern interface IReceiptPrintJob2 extends winrt.windows.foundation.IInspectable
 {
     function StampPaper(): Void;
-    function Print(data: ConstRef<winrt.HString>, printOptions: ConstRef<winrt.windows.devices.pointofservice.PosPrinterPrintOptions>): Void;
-    function FeedPaperByLine(lineCount: Int32): Void;
-    function FeedPaperByMapModeUnit(distance: Int32): Void;
+    function Print(data: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, printOptions: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.pointofservice.PosPrinterPrintOptions>): Void;
+    function FeedPaperByLine(lineCount: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
+    function FeedPaperByMapModeUnit(distance: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
 }

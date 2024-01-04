@@ -10,6 +10,6 @@ extern class ContentRestrictionsBrowsePolicy
     implements winrt.windows.media.contentrestrictions.IContentRestrictionsBrowsePolicy
 {
     overload function GeographicRegion(): winrt.HString;
-    overload function MaxBrowsableAgeRating(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
-    overload function PreferredAgeRating(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
+    overload function MaxBrowsableAgeRating(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
+    overload function PreferredAgeRating(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
 }

@@ -10,6 +10,6 @@ extern class CertificateChain
     implements winrt.windows.security.cryptography.certificates.ICertificateChain
 {
     overload function Validate(): winrt.windows.security.cryptography.certificates.ChainValidationResult;
-    overload function Validate(parameter: ConstRef<winrt.windows.security.cryptography.certificates.ChainValidationParameters>): winrt.windows.security.cryptography.certificates.ChainValidationResult;
+    overload function Validate(parameter: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.certificates.ChainValidationParameters>): winrt.windows.security.cryptography.certificates.ChainValidationResult;
     function GetCertificates(includeRoot: Bool): winrt.windows.foundation.collections.IVectorView<winrt.windows.security.cryptography.certificates.Certificate> /* GenericTypeInstSig */;
 }

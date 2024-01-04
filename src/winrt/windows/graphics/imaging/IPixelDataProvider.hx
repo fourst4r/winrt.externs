@@ -8,5 +8,5 @@ package winrt.windows.graphics.imaging;
 @:native("winrt::Windows::Graphics::Imaging::IPixelDataProvider")
 extern interface IPixelDataProvider extends winrt.windows.foundation.IInspectable
 {
-    function DetachPixelData(): winrt.ComArray<UInt8>;
+    function DetachPixelData(): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
 }

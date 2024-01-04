@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml;
 extern interface IDataTemplateKey extends winrt.windows.foundation.IInspectable
 {
     overload function DataType(): winrt.windows.foundation.IInspectable;
-    overload function DataType(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function DataType(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
 }

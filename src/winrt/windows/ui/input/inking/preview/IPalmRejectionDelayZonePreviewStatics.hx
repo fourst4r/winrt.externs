@@ -8,6 +8,6 @@ package winrt.windows.ui.input.inking.preview;
 @:native("winrt::Windows::UI::Input::Inking::Preview::IPalmRejectionDelayZonePreviewStatics")
 extern interface IPalmRejectionDelayZonePreviewStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function CreateForVisual(inputPanelVisual: ConstRef<winrt.windows.ui.composition.Visual>, inputPanelRect: ConstRef<winrt.windows.foundation.Rect>): winrt.windows.ui.input.inking.preview.PalmRejectionDelayZonePreview;
-    overload function CreateForVisual(inputPanelVisual: ConstRef<winrt.windows.ui.composition.Visual>, inputPanelRect: ConstRef<winrt.windows.foundation.Rect>, viewportVisual: ConstRef<winrt.windows.ui.composition.Visual>, viewportRect: ConstRef<winrt.windows.foundation.Rect>): winrt.windows.ui.input.inking.preview.PalmRejectionDelayZonePreview;
+    overload function CreateForVisual(inputPanelVisual: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Visual>, inputPanelRect: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Rect>): winrt.windows.ui.input.inking.preview.PalmRejectionDelayZonePreview;
+    overload function CreateForVisual(inputPanelVisual: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Visual>, inputPanelRect: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Rect>, viewportVisual: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Visual>, viewportRect: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Rect>): winrt.windows.ui.input.inking.preview.PalmRejectionDelayZonePreview;
 }

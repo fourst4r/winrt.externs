@@ -12,13 +12,13 @@ extern class AppBarTemplateSettings
     implements winrt.windows.ui.xaml.controls.primitives.IAppBarTemplateSettings2
 {
     overload function ClipRect(): winrt.windows.foundation.Rect;
-    overload function CompactVerticalDelta(): Float64;
+    overload function CompactVerticalDelta(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function CompactRootMargin(): winrt.windows.ui.xaml.Thickness;
-    overload function MinimalVerticalDelta(): Float64;
+    overload function MinimalVerticalDelta(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function MinimalRootMargin(): winrt.windows.ui.xaml.Thickness;
-    overload function HiddenVerticalDelta(): Float64;
+    overload function HiddenVerticalDelta(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function HiddenRootMargin(): winrt.windows.ui.xaml.Thickness;
-    overload function NegativeCompactVerticalDelta(): Float64;
-    overload function NegativeMinimalVerticalDelta(): Float64;
-    overload function NegativeHiddenVerticalDelta(): Float64;
+    overload function NegativeCompactVerticalDelta(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function NegativeMinimalVerticalDelta(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function NegativeHiddenVerticalDelta(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

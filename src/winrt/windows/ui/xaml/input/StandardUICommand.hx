@@ -13,9 +13,9 @@ extern class StandardUICommand
 {
     function new();
     @:native("winrt::Windows::UI::Xaml::Input::StandardUICommand")
-    /* explicit */ static overload function make(kind: ConstRef<winrt.windows.ui.xaml.input.StandardUICommandKind>): winrt.windows.ui.xaml.input.StandardUICommand;
+    /* explicit */ static overload function make(kind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.input.StandardUICommandKind>): winrt.windows.ui.xaml.input.StandardUICommand;
     overload function Kind(): winrt.windows.ui.xaml.input.StandardUICommandKind;
-    overload function Kind(value: ConstRef<winrt.windows.ui.xaml.input.StandardUICommandKind>): Void;
+    overload function Kind(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.input.StandardUICommandKind>): Void;
     overload function KindProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function KindProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

@@ -12,8 +12,8 @@ extern class SpatialInteractionControllerProperties
     overload function IsTouchpadTouched(): Bool;
     overload function IsTouchpadPressed(): Bool;
     overload function IsThumbstickPressed(): Bool;
-    overload function ThumbstickX(): Float64;
-    overload function ThumbstickY(): Float64;
-    overload function TouchpadX(): Float64;
-    overload function TouchpadY(): Float64;
+    overload function ThumbstickX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ThumbstickY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function TouchpadX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function TouchpadY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

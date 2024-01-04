@@ -11,14 +11,14 @@ extern class CortanaActionableInsights
 {
     overload function User(): winrt.windows.system.User;
     function IsAvailableAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
-    overload function ShowInsightsForImageAsync(imageStream: ConstRef<winrt.windows.storage.streams.IRandomAccessStreamReference>): winrt.windows.foundation.IAsyncAction;
-    overload function ShowInsightsForImageAsync(imageStream: ConstRef<winrt.windows.storage.streams.IRandomAccessStreamReference>, options: ConstRef<winrt.windows.services.cortana.CortanaActionableInsightsOptions>): winrt.windows.foundation.IAsyncAction;
-    overload function ShowInsightsForTextAsync(text: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncAction;
-    overload function ShowInsightsForTextAsync(text: ConstRef<winrt.HString>, options: ConstRef<winrt.windows.services.cortana.CortanaActionableInsightsOptions>): winrt.windows.foundation.IAsyncAction;
-    overload function ShowInsightsAsync(datapackage: ConstRef<winrt.windows.applicationmodel.datatransfer.DataPackage>): winrt.windows.foundation.IAsyncAction;
-    overload function ShowInsightsAsync(datapackage: ConstRef<winrt.windows.applicationmodel.datatransfer.DataPackage>, options: ConstRef<winrt.windows.services.cortana.CortanaActionableInsightsOptions>): winrt.windows.foundation.IAsyncAction;
+    overload function ShowInsightsForImageAsync(imageStream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStreamReference>): winrt.windows.foundation.IAsyncAction;
+    overload function ShowInsightsForImageAsync(imageStream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStreamReference>, options: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.services.cortana.CortanaActionableInsightsOptions>): winrt.windows.foundation.IAsyncAction;
+    overload function ShowInsightsForTextAsync(text: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncAction;
+    overload function ShowInsightsForTextAsync(text: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, options: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.services.cortana.CortanaActionableInsightsOptions>): winrt.windows.foundation.IAsyncAction;
+    overload function ShowInsightsAsync(datapackage: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.datatransfer.DataPackage>): winrt.windows.foundation.IAsyncAction;
+    overload function ShowInsightsAsync(datapackage: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.datatransfer.DataPackage>, options: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.services.cortana.CortanaActionableInsightsOptions>): winrt.windows.foundation.IAsyncAction;
     function GetDefault(): winrt.windows.services.cortana.CortanaActionableInsights;
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.services.cortana.CortanaActionableInsights;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.services.cortana.CortanaActionableInsights;
     static function GetDefault(): winrt.windows.services.cortana.CortanaActionableInsights;
-    static function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.services.cortana.CortanaActionableInsights;
+    static function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.services.cortana.CortanaActionableInsights;
 }

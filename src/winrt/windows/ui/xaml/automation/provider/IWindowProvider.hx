@@ -15,6 +15,6 @@ extern interface IWindowProvider extends winrt.windows.foundation.IInspectable
     overload function InteractionState(): winrt.windows.ui.xaml.automation.WindowInteractionState;
     overload function VisualState(): winrt.windows.ui.xaml.automation.WindowVisualState;
     function Close(): Void;
-    function SetVisualState(state: ConstRef<winrt.windows.ui.xaml.automation.WindowVisualState>): Void;
-    function WaitForInputIdle(milliseconds: Int32): Bool;
+    function SetVisualState(state: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.WindowVisualState>): Void;
+    function WaitForInputIdle(milliseconds: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Bool;
 }

@@ -8,5 +8,5 @@ package winrt.windows.web.syndication;
 @:native("winrt::Windows::Web::Syndication::ISyndicationFeedFactory")
 extern interface ISyndicationFeedFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateSyndicationFeed(title: ConstRef<winrt.HString>, subtitle: ConstRef<winrt.HString>, uri: ConstRef<winrt.windows.foundation.Uri>): winrt.windows.web.syndication.SyndicationFeed;
+    function CreateSyndicationFeed(title: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, subtitle: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, uri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): winrt.windows.web.syndication.SyndicationFeed;
 }

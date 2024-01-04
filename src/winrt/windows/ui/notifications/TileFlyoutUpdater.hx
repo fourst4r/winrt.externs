@@ -9,10 +9,10 @@ package winrt.windows.ui.notifications;
 extern class TileFlyoutUpdater
     implements winrt.windows.ui.notifications.ITileFlyoutUpdater
 {
-    function Update(notification: ConstRef<winrt.windows.ui.notifications.TileFlyoutNotification>): Void;
+    function Update(notification: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.notifications.TileFlyoutNotification>): Void;
     function Clear(): Void;
-    overload function StartPeriodicUpdate(tileFlyoutContent: ConstRef<winrt.windows.foundation.Uri>, requestedInterval: ConstRef<winrt.windows.ui.notifications.PeriodicUpdateRecurrence>): Void;
-    overload function StartPeriodicUpdate(tileFlyoutContent: ConstRef<winrt.windows.foundation.Uri>, startTime: ConstRef<winrt.windows.foundation.DateTime>, requestedInterval: ConstRef<winrt.windows.ui.notifications.PeriodicUpdateRecurrence>): Void;
+    overload function StartPeriodicUpdate(tileFlyoutContent: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>, requestedInterval: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.notifications.PeriodicUpdateRecurrence>): Void;
+    overload function StartPeriodicUpdate(tileFlyoutContent: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>, startTime: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>, requestedInterval: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.notifications.PeriodicUpdateRecurrence>): Void;
     function StopPeriodicUpdate(): Void;
     overload function Setting(): winrt.windows.ui.notifications.NotificationSetting;
 }

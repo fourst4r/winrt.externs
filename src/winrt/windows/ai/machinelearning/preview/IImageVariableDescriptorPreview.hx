@@ -9,6 +9,6 @@ package winrt.windows.ai.machinelearning.preview;
 extern interface IImageVariableDescriptorPreview extends winrt.windows.foundation.IInspectable
 {
     overload function BitmapPixelFormat(): winrt.windows.graphics.imaging.BitmapPixelFormat;
-    overload function Width(): UInt32;
-    overload function Height(): UInt32;
+    overload function Width(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Height(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

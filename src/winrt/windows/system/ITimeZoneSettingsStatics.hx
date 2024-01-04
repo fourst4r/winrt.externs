@@ -11,5 +11,5 @@ extern interface ITimeZoneSettingsStatics extends winrt.windows.foundation.IInsp
     overload function CurrentTimeZoneDisplayName(): winrt.HString;
     overload function SupportedTimeZoneDisplayNames(): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
     overload function CanChangeTimeZone(): Bool;
-    function ChangeTimeZoneByDisplayName(timeZoneDisplayName: ConstRef<winrt.HString>): Void;
+    function ChangeTimeZoneByDisplayName(timeZoneDisplayName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

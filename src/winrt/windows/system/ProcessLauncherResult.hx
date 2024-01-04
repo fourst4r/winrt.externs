@@ -9,5 +9,5 @@ package winrt.windows.system;
 extern class ProcessLauncherResult
     implements winrt.windows.system.IProcessLauncherResult
 {
-    overload function ExitCode(): UInt32;
+    overload function ExitCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

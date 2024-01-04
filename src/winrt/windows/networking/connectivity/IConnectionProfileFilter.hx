@@ -14,8 +14,8 @@ extern interface IConnectionProfileFilter extends winrt.windows.foundation.IInsp
     overload function IsWwanConnectionProfile(): Bool;
     overload function IsWlanConnectionProfile(value: Bool): Void;
     overload function IsWlanConnectionProfile(): Bool;
-    overload function NetworkCostType(value: ConstRef<winrt.windows.networking.connectivity.NetworkCostType>): Void;
+    overload function NetworkCostType(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.connectivity.NetworkCostType>): Void;
     overload function NetworkCostType(): winrt.windows.networking.connectivity.NetworkCostType;
-    overload function ServiceProviderGuid(value: ConstRef<winrt.windows.foundation.IReference<winrt.Guid> /* temp_GenericTypeInstSig */>): Void;
+    overload function ServiceProviderGuid(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.Guid> /* temp_GenericTypeInstSig */>): Void;
     overload function ServiceProviderGuid(): winrt.windows.foundation.IReference<winrt.Guid> /* GenericTypeInstSig */;
 }

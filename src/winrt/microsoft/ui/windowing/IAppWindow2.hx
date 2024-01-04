@@ -11,7 +11,7 @@ extern interface IAppWindow2 extends winrt.windows.foundation.IInspectable
     overload function ClientSize(): winrt.windows.graphics.SizeInt32;
     function MoveInZOrderAtBottom(): Void;
     function MoveInZOrderAtTop(): Void;
-    function MoveInZOrderBelow(windowId: ConstRef<winrt.microsoft.ui.WindowId>): Void;
-    function ResizeClient(size: ConstRef<winrt.windows.graphics.SizeInt32>): Void;
+    function MoveInZOrderBelow(windowId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.WindowId>): Void;
+    function ResizeClient(size: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.SizeInt32>): Void;
     function ShowOnceWithRequestedStartupState(): Void;
 }

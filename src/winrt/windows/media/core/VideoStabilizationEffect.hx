@@ -12,8 +12,8 @@ extern class VideoStabilizationEffect
 {
     overload function Enabled(value: Bool): Void;
     overload function Enabled(): Bool;
-    overload function EnabledChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.VideoStabilizationEffect, winrt.windows.media.core.VideoStabilizationEffectEnabledChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function EnabledChanged(cookie: ConstRef<winrt.EventToken>): Void;
-    function GetRecommendedStreamConfiguration(controller: ConstRef<winrt.windows.media.devices.VideoDeviceController>, desiredProperties: ConstRef<winrt.windows.media.mediaproperties.VideoEncodingProperties>): winrt.windows.media.capture.VideoStreamConfiguration;
-    function SetProperties(configuration: ConstRef<winrt.windows.foundation.collections.IPropertySet>): Void;
+    overload function EnabledChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.VideoStabilizationEffect, winrt.windows.media.core.VideoStabilizationEffectEnabledChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function EnabledChanged(cookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    function GetRecommendedStreamConfiguration(controller: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.VideoDeviceController>, desiredProperties: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.mediaproperties.VideoEncodingProperties>): winrt.windows.media.capture.VideoStreamConfiguration;
+    function SetProperties(configuration: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IPropertySet>): Void;
 }

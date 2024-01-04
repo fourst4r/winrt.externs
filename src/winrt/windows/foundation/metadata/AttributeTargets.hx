@@ -2,7 +2,7 @@ package winrt.windows.foundation.metadata;
 
 @:include("winrt/Windows.Foundation.Metadata.h", true)
 @:native("winrt::Windows::Foundation::Metadata::AttributeTargets")
-extern enum abstract AttributeTargets(UInt32)
+extern enum abstract AttributeTargets(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::Foundation::Metadata::AttributeTargets::All") final All;
     @:native("winrt::Windows::Foundation::Metadata::AttributeTargets::Delegate") final Delegate;

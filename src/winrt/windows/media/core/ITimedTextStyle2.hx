@@ -9,7 +9,7 @@ package winrt.windows.media.core;
 extern interface ITimedTextStyle2 extends winrt.windows.foundation.IInspectable
 {
     overload function FontStyle(): winrt.windows.media.core.TimedTextFontStyle;
-    overload function FontStyle(value: ConstRef<winrt.windows.media.core.TimedTextFontStyle>): Void;
+    overload function FontStyle(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.TimedTextFontStyle>): Void;
     overload function IsUnderlineEnabled(): Bool;
     overload function IsUnderlineEnabled(value: Bool): Void;
     overload function IsLineThroughEnabled(): Bool;

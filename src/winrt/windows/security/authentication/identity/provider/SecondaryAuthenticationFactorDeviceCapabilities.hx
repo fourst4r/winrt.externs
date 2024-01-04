@@ -2,7 +2,7 @@ package winrt.windows.security.authentication.identity.provider;
 
 @:include("winrt/Windows.Security.Authentication.Identity.Provider.h", true)
 @:native("winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDeviceCapabilities")
-extern enum abstract SecondaryAuthenticationFactorDeviceCapabilities(UInt32)
+extern enum abstract SecondaryAuthenticationFactorDeviceCapabilities(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDeviceCapabilities::None") final None;
     @:native("winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDeviceCapabilities::SecureStorage") final SecureStorage;

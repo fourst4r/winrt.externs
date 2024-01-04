@@ -2,7 +2,7 @@ package winrt.microsoft.windows.appnotifications.builder;
 
 @:include("winrt/Microsoft.Windows.AppNotifications.Builder.h", true)
 @:native("winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationSoundEvent")
-extern enum abstract AppNotificationSoundEvent(Int32)
+extern enum abstract AppNotificationSoundEvent(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationSoundEvent::Default") final Default;
     @:native("winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationSoundEvent::IM") final IM;

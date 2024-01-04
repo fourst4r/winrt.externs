@@ -8,5 +8,5 @@ package winrt.windows.web;
 @:native("winrt::Windows::Web::IUriToStreamResolver")
 extern interface IUriToStreamResolver extends winrt.windows.foundation.IInspectable
 {
-    function UriToStreamAsync(uri: ConstRef<winrt.windows.foundation.Uri>): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.streams.IInputStream> /* GenericTypeInstSig */;
+    function UriToStreamAsync(uri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.streams.IInputStream> /* GenericTypeInstSig */;
 }

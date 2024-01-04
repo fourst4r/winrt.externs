@@ -9,6 +9,6 @@ package winrt.microsoft.ui.xaml.media;
 extern interface IXamlLightOverrides extends winrt.windows.foundation.IInspectable
 {
     function GetId(): winrt.HString;
-    function OnConnected(newElement: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
-    function OnDisconnected(oldElement: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    function OnConnected(newElement: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): Void;
+    function OnDisconnected(oldElement: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): Void;
 }

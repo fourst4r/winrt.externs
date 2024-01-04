@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.media.animation;
 extern interface IConnectedAnimation3 extends winrt.windows.foundation.IInspectable
 {
     overload function Configuration(): winrt.windows.ui.xaml.media.animation.ConnectedAnimationConfiguration;
-    overload function Configuration(value: ConstRef<winrt.windows.ui.xaml.media.animation.ConnectedAnimationConfiguration>): Void;
+    overload function Configuration(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.animation.ConnectedAnimationConfiguration>): Void;
 }

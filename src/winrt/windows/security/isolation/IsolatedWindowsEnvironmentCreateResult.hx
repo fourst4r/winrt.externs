@@ -13,5 +13,5 @@ extern class IsolatedWindowsEnvironmentCreateResult
     overload function Status(): winrt.windows.security.isolation.IsolatedWindowsEnvironmentCreateStatus;
     overload function ExtendedError(): winrt.HResult;
     overload function Environment(): winrt.windows.security.isolation.IsolatedWindowsEnvironment;
-    function ChangeCreationPriority(priority: ConstRef<winrt.windows.security.isolation.IsolatedWindowsEnvironmentCreationPriority>): Void;
+    function ChangeCreationPriority(priority: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.isolation.IsolatedWindowsEnvironmentCreationPriority>): Void;
 }

@@ -8,7 +8,7 @@ package winrt.windows.media.playback;
 @:native("winrt::Windows::Media::Playback::IPlaybackMediaMarkerSequence")
 extern interface IPlaybackMediaMarkerSequence extends winrt.windows.foundation.IInspectable
 {
-    overload function Size(): UInt32;
-    function Insert(value: ConstRef<winrt.windows.media.playback.PlaybackMediaMarker>): Void;
+    overload function Size(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function Insert(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.playback.PlaybackMediaMarker>): Void;
     function Clear(): Void;
 }

@@ -9,5 +9,5 @@ package winrt.windows.ui.core;
 extern interface IAutomationProviderRequestedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function AutomationProvider(): winrt.windows.foundation.IInspectable;
-    overload function AutomationProvider(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function AutomationProvider(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
 }

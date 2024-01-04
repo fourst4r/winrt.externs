@@ -9,6 +9,6 @@ package winrt.windows.ui.notifications;
 extern interface IToastNotificationManagerStatics extends winrt.windows.foundation.IInspectable
 {
     overload function CreateToastNotifier(): winrt.windows.ui.notifications.ToastNotifier;
-    overload function CreateToastNotifier(applicationId: ConstRef<winrt.HString>): winrt.windows.ui.notifications.ToastNotifier;
-    function GetTemplateContent(type: ConstRef<winrt.windows.ui.notifications.ToastTemplateType>): winrt.windows.data.xml.dom.XmlDocument;
+    overload function CreateToastNotifier(applicationId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.notifications.ToastNotifier;
+    function GetTemplateContent(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.notifications.ToastTemplateType>): winrt.windows.data.xml.dom.XmlDocument;
 }

@@ -12,6 +12,6 @@ extern interface IGlobalSystemMediaTransportControlsSessionPlaybackInfo extends 
     overload function PlaybackStatus(): winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionPlaybackStatus;
     overload function PlaybackType(): winrt.windows.foundation.IReference<winrt.windows.media.MediaPlaybackType> /* GenericTypeInstSig */;
     overload function AutoRepeatMode(): winrt.windows.foundation.IReference<winrt.windows.media.MediaPlaybackAutoRepeatMode> /* GenericTypeInstSig */;
-    overload function PlaybackRate(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
+    overload function PlaybackRate(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
     overload function IsShuffleActive(): winrt.windows.foundation.IReference<Bool> /* GenericTypeInstSig */;
 }

@@ -9,5 +9,5 @@ package winrt.windows.security.authorization.appcapabilityaccess;
 extern interface IAppCapability2 extends winrt.windows.foundation.IInspectable
 {
     overload function DisplayMessage(): winrt.HString;
-    overload function DisplayMessage(value: ConstRef<winrt.HString>): Void;
+    overload function DisplayMessage(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

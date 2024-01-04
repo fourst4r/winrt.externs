@@ -8,8 +8,8 @@ package winrt.windows.ui.xaml.controls.maps;
 @:native("winrt::Windows::UI::Xaml::Controls::Maps::IMapTileUriRequestedEventArgs")
 extern interface IMapTileUriRequestedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function X(): Int32;
-    overload function Y(): Int32;
-    overload function ZoomLevel(): Int32;
+    overload function X(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Y(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function ZoomLevel(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function Request(): winrt.windows.ui.xaml.controls.maps.MapTileUriRequest;
 }

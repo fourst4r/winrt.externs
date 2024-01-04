@@ -8,9 +8,9 @@ package winrt.windows.services.store;
 @:native("winrt::Windows::Services::Store::IStoreSubscriptionInfo")
 extern interface IStoreSubscriptionInfo extends winrt.windows.foundation.IInspectable
 {
-    overload function BillingPeriod(): UInt32;
+    overload function BillingPeriod(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function BillingPeriodUnit(): winrt.windows.services.store.StoreDurationUnit;
     overload function HasTrialPeriod(): Bool;
-    overload function TrialPeriod(): UInt32;
+    overload function TrialPeriod(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function TrialPeriodUnit(): winrt.windows.services.store.StoreDurationUnit;
 }

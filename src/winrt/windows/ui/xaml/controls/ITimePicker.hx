@@ -9,15 +9,15 @@ package winrt.windows.ui.xaml.controls;
 extern interface ITimePicker extends winrt.windows.foundation.IInspectable
 {
     overload function Header(): winrt.windows.foundation.IInspectable;
-    overload function Header(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Header(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
     overload function HeaderTemplate(): winrt.windows.ui.xaml.DataTemplate;
-    overload function HeaderTemplate(value: ConstRef<winrt.windows.ui.xaml.DataTemplate>): Void;
+    overload function HeaderTemplate(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DataTemplate>): Void;
     overload function ClockIdentifier(): winrt.HString;
-    overload function ClockIdentifier(value: ConstRef<winrt.HString>): Void;
-    overload function MinuteIncrement(): Int32;
-    overload function MinuteIncrement(value: Int32): Void;
+    overload function ClockIdentifier(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function MinuteIncrement(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function MinuteIncrement(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function Time(): winrt.windows.foundation.TimeSpan;
-    overload function Time(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
-    overload function TimeChanged(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.windows.ui.xaml.controls.TimePickerValueChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function TimeChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function Time(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
+    overload function TimeChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.EventHandler<winrt.windows.ui.xaml.controls.TimePickerValueChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function TimeChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

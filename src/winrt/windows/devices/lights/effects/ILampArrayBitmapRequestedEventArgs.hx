@@ -9,5 +9,5 @@ package winrt.windows.devices.lights.effects;
 extern interface ILampArrayBitmapRequestedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function SinceStarted(): winrt.windows.foundation.TimeSpan;
-    function UpdateBitmap(bitmap: ConstRef<winrt.windows.graphics.imaging.SoftwareBitmap>): Void;
+    function UpdateBitmap(bitmap: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.imaging.SoftwareBitmap>): Void;
 }

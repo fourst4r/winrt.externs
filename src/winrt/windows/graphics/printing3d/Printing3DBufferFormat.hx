@@ -2,7 +2,7 @@ package winrt.windows.graphics.printing3d;
 
 @:include("winrt/Windows.Graphics.Printing3D.h", true)
 @:native("winrt::Windows::Graphics::Printing3D::Printing3DBufferFormat")
-extern enum abstract Printing3DBufferFormat(Int32)
+extern enum abstract Printing3DBufferFormat(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Graphics::Printing3D::Printing3DBufferFormat::Unknown") final Unknown;
     @:native("winrt::Windows::Graphics::Printing3D::Printing3DBufferFormat::R32G32B32A32Float") final R32G32B32A32Float;

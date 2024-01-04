@@ -10,5 +10,5 @@ extern class AllJoynBusAttachmentStateChangedEventArgs
     implements winrt.windows.devices.alljoyn.IAllJoynBusAttachmentStateChangedEventArgs
 {
     overload function State(): winrt.windows.devices.alljoyn.AllJoynBusAttachmentState;
-    overload function Status(): Int32;
+    overload function Status(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

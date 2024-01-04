@@ -10,16 +10,16 @@ extern class HotspotAuthenticationContext
     implements winrt.windows.networking.networkoperators.IHotspotAuthenticationContext
     implements winrt.windows.networking.networkoperators.IHotspotAuthenticationContext2
 {
-    overload function WirelessNetworkId(): winrt.ComArray<UInt8>;
+    overload function WirelessNetworkId(): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
     overload function NetworkAdapter(): winrt.windows.networking.connectivity.NetworkAdapter;
     overload function RedirectMessageUrl(): winrt.windows.foundation.Uri;
     overload function RedirectMessageXml(): winrt.windows.data.xml.dom.XmlDocument;
     overload function AuthenticationUrl(): winrt.windows.foundation.Uri;
-    function IssueCredentials(userName: ConstRef<winrt.HString>, password: ConstRef<winrt.HString>, extraParameters: ConstRef<winrt.HString>, markAsManualConnectOnFailure: Bool): Void;
+    function IssueCredentials(userName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, password: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, extraParameters: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, markAsManualConnectOnFailure: Bool): Void;
     function AbortAuthentication(markAsManual: Bool): Void;
     function SkipAuthentication(): Void;
-    function TriggerAttentionRequired(packageRelativeApplicationId: ConstRef<winrt.HString>, applicationParameters: ConstRef<winrt.HString>): Void;
-    function IssueCredentialsAsync(userName: ConstRef<winrt.HString>, password: ConstRef<winrt.HString>, extraParameters: ConstRef<winrt.HString>, markAsManualConnectOnFailure: Bool): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.HotspotCredentialsAuthenticationResult> /* GenericTypeInstSig */;
-    function TryGetAuthenticationContext(evenToken: ConstRef<winrt.HString>, context: Ref<winrt.windows.networking.networkoperators.HotspotAuthenticationContext>): Bool;
-    static function TryGetAuthenticationContext(evenToken: ConstRef<winrt.HString>, context: Ref<winrt.windows.networking.networkoperators.HotspotAuthenticationContext>): Bool;
+    function TriggerAttentionRequired(packageRelativeApplicationId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, applicationParameters: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function IssueCredentialsAsync(userName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, password: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, extraParameters: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, markAsManualConnectOnFailure: Bool): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.HotspotCredentialsAuthenticationResult> /* GenericTypeInstSig */;
+    function TryGetAuthenticationContext(evenToken: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, context: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.networking.networkoperators.HotspotAuthenticationContext>): Bool;
+    static function TryGetAuthenticationContext(evenToken: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, context: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.networking.networkoperators.HotspotAuthenticationContext>): Bool;
 }

@@ -9,9 +9,9 @@ package winrt.windows.ui.xaml.controls.primitives;
 extern class ItemsChangedEventArgs
     implements winrt.windows.ui.xaml.controls.primitives.IItemsChangedEventArgs
 {
-    overload function Action(): Int32;
+    overload function Action(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function Position(): winrt.windows.ui.xaml.controls.primitives.GeneratorPosition;
     overload function OldPosition(): winrt.windows.ui.xaml.controls.primitives.GeneratorPosition;
-    overload function ItemCount(): Int32;
-    overload function ItemUICount(): Int32;
+    overload function ItemCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function ItemUICount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

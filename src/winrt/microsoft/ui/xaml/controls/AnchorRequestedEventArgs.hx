@@ -10,6 +10,6 @@ extern class AnchorRequestedEventArgs
     implements winrt.microsoft.ui.xaml.controls.IAnchorRequestedEventArgs
 {
     overload function Anchor(): winrt.microsoft.ui.xaml.UIElement;
-    overload function Anchor(value: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    overload function Anchor(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): Void;
     overload function AnchorCandidates(): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.xaml.UIElement> /* GenericTypeInstSig */;
 }

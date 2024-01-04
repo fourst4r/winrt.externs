@@ -13,7 +13,7 @@ extern interface IBackgroundTransferOperation extends winrt.windows.foundation.I
     overload function Method(): winrt.HString;
     overload function Group(): winrt.HString;
     overload function CostPolicy(): winrt.windows.networking.backgroundtransfer.BackgroundTransferCostPolicy;
-    overload function CostPolicy(value: ConstRef<winrt.windows.networking.backgroundtransfer.BackgroundTransferCostPolicy>): Void;
-    function GetResultStreamAt(position: UInt64): winrt.windows.storage.streams.IInputStream;
+    overload function CostPolicy(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.backgroundtransfer.BackgroundTransferCostPolicy>): Void;
+    function GetResultStreamAt(position: #if reflaxe.cpp cxx.num. #else cpp. #end UInt64): winrt.windows.storage.streams.IInputStream;
     function GetResponseInformation(): winrt.windows.networking.backgroundtransfer.ResponseInformation;
 }

@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.media;
 extern interface IXamlCompositionBrushBaseProtected extends winrt.windows.foundation.IInspectable
 {
     overload function CompositionBrush(): winrt.windows.ui.composition.CompositionBrush;
-    overload function CompositionBrush(value: ConstRef<winrt.windows.ui.composition.CompositionBrush>): Void;
+    overload function CompositionBrush(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionBrush>): Void;
 }

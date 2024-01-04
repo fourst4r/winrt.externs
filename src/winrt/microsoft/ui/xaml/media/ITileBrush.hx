@@ -9,9 +9,9 @@ package winrt.microsoft.ui.xaml.media;
 extern interface ITileBrush extends winrt.windows.foundation.IInspectable
 {
     overload function AlignmentX(): winrt.microsoft.ui.xaml.media.AlignmentX;
-    overload function AlignmentX(value: ConstRef<winrt.microsoft.ui.xaml.media.AlignmentX>): Void;
+    overload function AlignmentX(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.AlignmentX>): Void;
     overload function AlignmentY(): winrt.microsoft.ui.xaml.media.AlignmentY;
-    overload function AlignmentY(value: ConstRef<winrt.microsoft.ui.xaml.media.AlignmentY>): Void;
+    overload function AlignmentY(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.AlignmentY>): Void;
     overload function Stretch(): winrt.microsoft.ui.xaml.media.Stretch;
-    overload function Stretch(value: ConstRef<winrt.microsoft.ui.xaml.media.Stretch>): Void;
+    overload function Stretch(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.Stretch>): Void;
 }

@@ -12,10 +12,10 @@ extern class GuidanceTelemetryCollector
     overload function Enabled(): Bool;
     overload function Enabled(value: Bool): Void;
     function ClearLocalData(): Void;
-    overload function SpeedTrigger(): Float64;
-    overload function SpeedTrigger(value: Float64): Void;
-    overload function UploadFrequency(): Int32;
-    overload function UploadFrequency(value: Int32): Void;
+    overload function SpeedTrigger(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function SpeedTrigger(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function UploadFrequency(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function UploadFrequency(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     function GetCurrent(): winrt.windows.services.maps.guidance.GuidanceTelemetryCollector;
     static function GetCurrent(): winrt.windows.services.maps.guidance.GuidanceTelemetryCollector;
 }

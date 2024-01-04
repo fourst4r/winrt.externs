@@ -2,7 +2,7 @@ package winrt.windows.media.audio;
 
 @:include("winrt/Windows.Media.Audio.h", true)
 @:native("winrt::Windows::Media::Audio::SetDefaultSpatialAudioFormatStatus")
-extern enum abstract SetDefaultSpatialAudioFormatStatus(Int32)
+extern enum abstract SetDefaultSpatialAudioFormatStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Audio::SetDefaultSpatialAudioFormatStatus::Succeeded") final Succeeded;
     @:native("winrt::Windows::Media::Audio::SetDefaultSpatialAudioFormatStatus::AccessDenied") final AccessDenied;

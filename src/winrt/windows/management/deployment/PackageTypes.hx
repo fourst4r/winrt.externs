@@ -2,7 +2,7 @@ package winrt.windows.management.deployment;
 
 @:include("winrt/Windows.Management.Deployment.h", true)
 @:native("winrt::Windows::Management::Deployment::PackageTypes")
-extern enum abstract PackageTypes(UInt32)
+extern enum abstract PackageTypes(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::Management::Deployment::PackageTypes::None") final None;
     @:native("winrt::Windows::Management::Deployment::PackageTypes::Main") final Main;

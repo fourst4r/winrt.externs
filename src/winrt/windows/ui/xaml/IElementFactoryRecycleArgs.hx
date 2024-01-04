@@ -9,7 +9,7 @@ package winrt.windows.ui.xaml;
 extern interface IElementFactoryRecycleArgs extends winrt.windows.foundation.IInspectable
 {
     overload function Element(): winrt.windows.ui.xaml.UIElement;
-    overload function Element(value: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
+    overload function Element(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
     overload function Parent(): winrt.windows.ui.xaml.UIElement;
-    overload function Parent(value: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
+    overload function Parent(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
 }

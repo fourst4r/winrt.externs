@@ -14,5 +14,5 @@ extern interface IResourceCandidate extends winrt.windows.foundation.IInspectabl
     overload function IsDefault(): Bool;
     overload function ValueAsString(): winrt.HString;
     function GetValueAsFileAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.StorageFile> /* GenericTypeInstSig */;
-    function GetQualifierValue(qualifierName: ConstRef<winrt.HString>): winrt.HString;
+    function GetQualifierValue(qualifierName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.HString;
 }

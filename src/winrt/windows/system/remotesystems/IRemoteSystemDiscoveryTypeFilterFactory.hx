@@ -8,5 +8,5 @@ package winrt.windows.system.remotesystems;
 @:native("winrt::Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilterFactory")
 extern interface IRemoteSystemDiscoveryTypeFilterFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(discoveryType: ConstRef<winrt.windows.system.remotesystems.RemoteSystemDiscoveryType>): winrt.windows.system.remotesystems.RemoteSystemDiscoveryTypeFilter;
+    function Create(discoveryType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.remotesystems.RemoteSystemDiscoveryType>): winrt.windows.system.remotesystems.RemoteSystemDiscoveryTypeFilter;
 }

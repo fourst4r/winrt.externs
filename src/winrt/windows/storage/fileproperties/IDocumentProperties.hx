@@ -10,8 +10,8 @@ extern interface IDocumentProperties extends winrt.windows.foundation.IInspectab
 {
     overload function Author(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function Title(): winrt.HString;
-    overload function Title(value: ConstRef<winrt.HString>): Void;
+    overload function Title(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Keywords(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function Comment(): winrt.HString;
-    overload function Comment(value: ConstRef<winrt.HString>): Void;
+    overload function Comment(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

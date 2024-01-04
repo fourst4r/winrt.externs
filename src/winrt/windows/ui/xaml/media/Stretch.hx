@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.media;
 
 @:include("winrt/Windows.UI.Xaml.Media.h", true)
 @:native("winrt::Windows::UI::Xaml::Media::Stretch")
-extern enum abstract Stretch(Int32)
+extern enum abstract Stretch(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Media::Stretch::None") final None;
     @:native("winrt::Windows::UI::Xaml::Media::Stretch::Fill") final Fill;

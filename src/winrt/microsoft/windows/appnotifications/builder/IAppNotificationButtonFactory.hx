@@ -8,5 +8,5 @@ package winrt.microsoft.windows.appnotifications.builder;
 @:native("winrt::Microsoft::Windows::AppNotifications::Builder::IAppNotificationButtonFactory")
 extern interface IAppNotificationButtonFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(content: ConstRef<winrt.HString>): winrt.microsoft.windows.appnotifications.builder.AppNotificationButton;
+    function CreateInstance(content: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.microsoft.windows.appnotifications.builder.AppNotificationButton;
 }

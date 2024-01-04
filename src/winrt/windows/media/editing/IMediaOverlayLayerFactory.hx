@@ -8,5 +8,5 @@ package winrt.windows.media.editing;
 @:native("winrt::Windows::Media::Editing::IMediaOverlayLayerFactory")
 extern interface IMediaOverlayLayerFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWithCompositorDefinition(compositorDefinition: ConstRef<winrt.windows.media.effects.IVideoCompositorDefinition>): winrt.windows.media.editing.MediaOverlayLayer;
+    function CreateWithCompositorDefinition(compositorDefinition: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.effects.IVideoCompositorDefinition>): winrt.windows.media.editing.MediaOverlayLayer;
 }

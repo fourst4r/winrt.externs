@@ -9,7 +9,7 @@ package winrt.windows.applicationmodel.appointments;
 extern interface IAppointmentInvitee extends winrt.windows.foundation.IInspectable
 {
     overload function Role(): winrt.windows.applicationmodel.appointments.AppointmentParticipantRole;
-    overload function Role(value: ConstRef<winrt.windows.applicationmodel.appointments.AppointmentParticipantRole>): Void;
+    overload function Role(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.appointments.AppointmentParticipantRole>): Void;
     overload function Response(): winrt.windows.applicationmodel.appointments.AppointmentParticipantResponse;
-    overload function Response(value: ConstRef<winrt.windows.applicationmodel.appointments.AppointmentParticipantResponse>): Void;
+    overload function Response(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.appointments.AppointmentParticipantResponse>): Void;
 }

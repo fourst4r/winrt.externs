@@ -8,5 +8,5 @@ package winrt.windows.perception;
 @:native("winrt::Windows::Perception::IPerceptionTimestampHelperStatics")
 extern interface IPerceptionTimestampHelperStatics extends winrt.windows.foundation.IInspectable
 {
-    function FromHistoricalTargetTime(targetTime: ConstRef<winrt.windows.foundation.DateTime>): winrt.windows.perception.PerceptionTimestamp;
+    function FromHistoricalTargetTime(targetTime: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>): winrt.windows.perception.PerceptionTimestamp;
 }

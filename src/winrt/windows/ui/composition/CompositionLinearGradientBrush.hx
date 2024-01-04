@@ -11,7 +11,7 @@ extern class CompositionLinearGradientBrush
     implements winrt.windows.ui.composition.ICompositionLinearGradientBrush
 {
     overload function EndPoint(): winrt.windows.foundation.numerics.Vector2;
-    overload function EndPoint(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function EndPoint(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
     overload function StartPoint(): winrt.windows.foundation.numerics.Vector2;
-    overload function StartPoint(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function StartPoint(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
 }

@@ -14,6 +14,6 @@ extern class DisplayRegion
     overload function WorkAreaOffset(): winrt.windows.foundation.Point;
     overload function WorkAreaSize(): winrt.windows.foundation.Size;
     overload function WindowingEnvironment(): winrt.windows.ui.windowmanagement.WindowingEnvironment;
-    overload function Changed(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.windowmanagement.DisplayRegion, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Changed(token: ConstRef<winrt.EventToken>): Void;
+    overload function Changed(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.windowmanagement.DisplayRegion, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Changed(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

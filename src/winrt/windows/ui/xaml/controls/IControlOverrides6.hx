@@ -8,7 +8,7 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IControlOverrides6")
 extern interface IControlOverrides6 extends winrt.windows.foundation.IInspectable
 {
-    function OnPreviewKeyDown(e: ConstRef<winrt.windows.ui.xaml.input.KeyRoutedEventArgs>): Void;
-    function OnPreviewKeyUp(e: ConstRef<winrt.windows.ui.xaml.input.KeyRoutedEventArgs>): Void;
-    function OnCharacterReceived(e: ConstRef<winrt.windows.ui.xaml.input.CharacterReceivedRoutedEventArgs>): Void;
+    function OnPreviewKeyDown(e: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.input.KeyRoutedEventArgs>): Void;
+    function OnPreviewKeyUp(e: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.input.KeyRoutedEventArgs>): Void;
+    function OnCharacterReceived(e: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.input.CharacterReceivedRoutedEventArgs>): Void;
 }

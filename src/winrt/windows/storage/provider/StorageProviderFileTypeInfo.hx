@@ -9,7 +9,7 @@ package winrt.windows.storage.provider;
 extern class StorageProviderFileTypeInfo
     implements winrt.windows.storage.provider.IStorageProviderFileTypeInfo
 {
-    function new(fileExtension: ConstRef<winrt.HString>, iconResource: ConstRef<winrt.HString>);
+    function new(fileExtension: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, iconResource: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     overload function FileExtension(): winrt.HString;
     overload function IconResource(): winrt.HString;
 }

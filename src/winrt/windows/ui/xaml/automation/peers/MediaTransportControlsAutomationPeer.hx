@@ -10,5 +10,5 @@ extern class MediaTransportControlsAutomationPeer
     extends winrt.windows.ui.xaml.automation.peers.FrameworkElementAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IMediaTransportControlsAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.MediaTransportControls>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.MediaTransportControls>);
 }

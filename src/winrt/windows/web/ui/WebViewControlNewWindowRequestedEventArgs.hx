@@ -15,6 +15,6 @@ extern class WebViewControlNewWindowRequestedEventArgs
     overload function Handled(): Bool;
     overload function Handled(value: Bool): Void;
     overload function NewWindow(): winrt.windows.web.ui.IWebViewControl;
-    overload function NewWindow(value: ConstRef<winrt.windows.web.ui.IWebViewControl>): Void;
+    overload function NewWindow(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.ui.IWebViewControl>): Void;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

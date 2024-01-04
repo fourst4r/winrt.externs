@@ -2,7 +2,7 @@ package winrt.windows.ui.text;
 
 @:include("winrt/Windows.UI.Text.h", true)
 @:native("winrt::Windows::UI::Text::FontStretch")
-extern enum abstract FontStretch(Int32)
+extern enum abstract FontStretch(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Text::FontStretch::Undefined") final Undefined;
     @:native("winrt::Windows::UI::Text::FontStretch::UltraCondensed") final UltraCondensed;

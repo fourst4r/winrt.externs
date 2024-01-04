@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml;
 @:native("winrt::Microsoft::UI::Xaml::ISetterFactory")
 extern interface ISetterFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(targetProperty: ConstRef<winrt.microsoft.ui.xaml.DependencyProperty>, value: ConstRef<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.Setter;
+    function CreateInstance(targetProperty: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyProperty>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.Setter;
 }

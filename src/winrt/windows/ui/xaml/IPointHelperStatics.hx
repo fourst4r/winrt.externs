@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml;
 @:native("winrt::Windows::UI::Xaml::IPointHelperStatics")
 extern interface IPointHelperStatics extends winrt.windows.foundation.IInspectable
 {
-    function FromCoordinates(x: Float32, y: Float32): winrt.windows.foundation.Point;
+    function FromCoordinates(x: #if reflaxe.cpp cxx.num. #else cpp. #end Float32, y: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): winrt.windows.foundation.Point;
 }

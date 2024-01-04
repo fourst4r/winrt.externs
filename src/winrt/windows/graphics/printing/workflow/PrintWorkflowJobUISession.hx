@@ -10,9 +10,9 @@ extern class PrintWorkflowJobUISession
     implements winrt.windows.graphics.printing.workflow.IPrintWorkflowJobUISession
 {
     overload function Status(): winrt.windows.graphics.printing.workflow.PrintWorkflowSessionStatus;
-    overload function PdlDataAvailable(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.graphics.printing.workflow.PrintWorkflowJobUISession, winrt.windows.graphics.printing.workflow.PrintWorkflowPdlDataAvailableEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function PdlDataAvailable(token: ConstRef<winrt.EventToken>): Void;
-    overload function JobNotification(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.graphics.printing.workflow.PrintWorkflowJobUISession, winrt.windows.graphics.printing.workflow.PrintWorkflowJobNotificationEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function JobNotification(token: ConstRef<winrt.EventToken>): Void;
+    overload function PdlDataAvailable(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.graphics.printing.workflow.PrintWorkflowJobUISession, winrt.windows.graphics.printing.workflow.PrintWorkflowPdlDataAvailableEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function PdlDataAvailable(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function JobNotification(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.graphics.printing.workflow.PrintWorkflowJobUISession, winrt.windows.graphics.printing.workflow.PrintWorkflowJobNotificationEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function JobNotification(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     function Start(): Void;
 }

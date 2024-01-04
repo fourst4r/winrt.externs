@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml.automation.peers;
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::IItemsControlAutomationPeer")
 extern interface IItemsControlAutomationPeer extends winrt.windows.foundation.IInspectable
 {
-    function CreateItemAutomationPeer(item: ConstRef<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.automation.peers.ItemAutomationPeer;
+    function CreateItemAutomationPeer(item: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.automation.peers.ItemAutomationPeer;
 }

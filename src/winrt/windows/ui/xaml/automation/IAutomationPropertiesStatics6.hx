@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml.automation;
 extern interface IAutomationPropertiesStatics6 extends winrt.windows.foundation.IInspectable
 {
     overload function CultureProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetCulture(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>): Int32;
-    function SetCulture(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>, value: Int32): Void;
+    function GetCulture(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function SetCulture(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>, value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
 }

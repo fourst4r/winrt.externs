@@ -10,6 +10,6 @@ extern class NetworkOperatorNotificationTrigger
     implements winrt.windows.applicationmodel.background.IBackgroundTrigger
     implements winrt.windows.applicationmodel.background.INetworkOperatorNotificationTrigger
 {
-    /* explicit */ function new(networkAccountId: ConstRef<winrt.HString>);
+    /* explicit */ function new(networkAccountId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     overload function NetworkAccountId(): winrt.HString;
 }

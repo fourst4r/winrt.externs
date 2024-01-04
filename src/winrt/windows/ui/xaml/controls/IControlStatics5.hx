@@ -10,6 +10,6 @@ extern interface IControlStatics5 extends winrt.windows.foundation.IInspectable
 {
     overload function DefaultStyleResourceUriProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function IsTemplateKeyTipTargetProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetIsTemplateKeyTipTarget(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>): Bool;
-    function SetIsTemplateKeyTipTarget(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>, value: Bool): Void;
+    function GetIsTemplateKeyTipTarget(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): Bool;
+    function SetIsTemplateKeyTipTarget(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>, value: Bool): Void;
 }

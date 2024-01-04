@@ -9,10 +9,10 @@ package winrt.windows.networking.sockets;
 extern interface IMessageWebSocketControl2 extends winrt.windows.foundation.IInspectable
 {
     overload function DesiredUnsolicitedPongInterval(): winrt.windows.foundation.TimeSpan;
-    overload function DesiredUnsolicitedPongInterval(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function DesiredUnsolicitedPongInterval(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function ActualUnsolicitedPongInterval(): winrt.windows.foundation.TimeSpan;
     overload function ReceiveMode(): winrt.windows.networking.sockets.MessageWebSocketReceiveMode;
-    overload function ReceiveMode(value: ConstRef<winrt.windows.networking.sockets.MessageWebSocketReceiveMode>): Void;
+    overload function ReceiveMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.sockets.MessageWebSocketReceiveMode>): Void;
     overload function ClientCertificate(): winrt.windows.security.cryptography.certificates.Certificate;
-    overload function ClientCertificate(value: ConstRef<winrt.windows.security.cryptography.certificates.Certificate>): Void;
+    overload function ClientCertificate(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.certificates.Certificate>): Void;
 }

@@ -10,14 +10,14 @@ extern class PrintPageInfo
     implements winrt.windows.graphics.printing.IPrintPageInfo
 {
     function new();
-    overload function MediaSize(value: ConstRef<winrt.windows.graphics.printing.PrintMediaSize>): Void;
+    overload function MediaSize(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing.PrintMediaSize>): Void;
     overload function MediaSize(): winrt.windows.graphics.printing.PrintMediaSize;
-    overload function PageSize(value: ConstRef<winrt.windows.foundation.Size>): Void;
+    overload function PageSize(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Size>): Void;
     overload function PageSize(): winrt.windows.foundation.Size;
-    overload function DpiX(value: UInt32): Void;
-    overload function DpiX(): UInt32;
-    overload function DpiY(value: UInt32): Void;
-    overload function DpiY(): UInt32;
-    overload function Orientation(value: ConstRef<winrt.windows.graphics.printing.PrintOrientation>): Void;
+    overload function DpiX(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function DpiX(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function DpiY(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function DpiY(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Orientation(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing.PrintOrientation>): Void;
     overload function Orientation(): winrt.windows.graphics.printing.PrintOrientation;
 }

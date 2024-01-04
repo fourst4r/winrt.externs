@@ -10,11 +10,11 @@ extern class MatrixHelper
     implements winrt.windows.ui.xaml.media.IMatrixHelper
 {
     overload function Identity(): winrt.windows.ui.xaml.media.Matrix;
-    function FromElements(m11: Float64, m12: Float64, m21: Float64, m22: Float64, offsetX: Float64, offsetY: Float64): winrt.windows.ui.xaml.media.Matrix;
-    function GetIsIdentity(target: ConstRef<winrt.windows.ui.xaml.media.Matrix>): Bool;
-    function Transform(target: ConstRef<winrt.windows.ui.xaml.media.Matrix>, point: ConstRef<winrt.windows.foundation.Point>): winrt.windows.foundation.Point;
+    function FromElements(m11: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, m12: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, m21: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, m22: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, offsetX: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, offsetY: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.windows.ui.xaml.media.Matrix;
+    function GetIsIdentity(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Matrix>): Bool;
+    function Transform(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Matrix>, point: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): winrt.windows.foundation.Point;
     static overload function Identity(): winrt.windows.ui.xaml.media.Matrix;
-    static function FromElements(m11: Float64, m12: Float64, m21: Float64, m22: Float64, offsetX: Float64, offsetY: Float64): winrt.windows.ui.xaml.media.Matrix;
-    static function GetIsIdentity(target: ConstRef<winrt.windows.ui.xaml.media.Matrix>): Bool;
-    static function Transform(target: ConstRef<winrt.windows.ui.xaml.media.Matrix>, point: ConstRef<winrt.windows.foundation.Point>): winrt.windows.foundation.Point;
+    static function FromElements(m11: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, m12: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, m21: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, m22: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, offsetX: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, offsetY: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.windows.ui.xaml.media.Matrix;
+    static function GetIsIdentity(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Matrix>): Bool;
+    static function Transform(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Matrix>, point: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): winrt.windows.foundation.Point;
 }

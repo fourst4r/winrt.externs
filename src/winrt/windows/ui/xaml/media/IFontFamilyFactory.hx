@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.media;
 @:native("winrt::Windows::UI::Xaml::Media::IFontFamilyFactory")
 extern interface IFontFamilyFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstanceWithName(familyName: ConstRef<winrt.HString>, baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.media.FontFamily;
+    function CreateInstanceWithName(familyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.media.FontFamily;
 }

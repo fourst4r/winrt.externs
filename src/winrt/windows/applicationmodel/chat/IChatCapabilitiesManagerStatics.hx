@@ -8,6 +8,6 @@ package winrt.windows.applicationmodel.chat;
 @:native("winrt::Windows::ApplicationModel::Chat::IChatCapabilitiesManagerStatics")
 extern interface IChatCapabilitiesManagerStatics extends winrt.windows.foundation.IInspectable
 {
-    function GetCachedCapabilitiesAsync(address: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.chat.ChatCapabilities> /* GenericTypeInstSig */;
-    function GetCapabilitiesFromNetworkAsync(address: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.chat.ChatCapabilities> /* GenericTypeInstSig */;
+    function GetCachedCapabilitiesAsync(address: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.chat.ChatCapabilities> /* GenericTypeInstSig */;
+    function GetCapabilitiesFromNetworkAsync(address: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.chat.ChatCapabilities> /* GenericTypeInstSig */;
 }

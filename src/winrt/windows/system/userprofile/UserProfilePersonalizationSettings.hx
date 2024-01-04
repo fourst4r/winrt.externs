@@ -9,8 +9,8 @@ package winrt.windows.system.userprofile;
 extern class UserProfilePersonalizationSettings
     implements winrt.windows.system.userprofile.IUserProfilePersonalizationSettings
 {
-    function TrySetLockScreenImageAsync(imageFile: ConstRef<winrt.windows.storage.StorageFile>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
-    function TrySetWallpaperImageAsync(imageFile: ConstRef<winrt.windows.storage.StorageFile>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function TrySetLockScreenImageAsync(imageFile: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.StorageFile>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function TrySetWallpaperImageAsync(imageFile: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.StorageFile>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     overload function Current(): winrt.windows.system.userprofile.UserProfilePersonalizationSettings;
     function IsSupported(): Bool;
     static overload function Current(): winrt.windows.system.userprofile.UserProfilePersonalizationSettings;

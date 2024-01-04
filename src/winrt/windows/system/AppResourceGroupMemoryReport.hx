@@ -9,8 +9,8 @@ package winrt.windows.system;
 extern class AppResourceGroupMemoryReport
     implements winrt.windows.system.IAppResourceGroupMemoryReport
 {
-    overload function CommitUsageLimit(): UInt64;
+    overload function CommitUsageLimit(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
     overload function CommitUsageLevel(): winrt.windows.system.AppMemoryUsageLevel;
-    overload function PrivateCommitUsage(): UInt64;
-    overload function TotalCommitUsage(): UInt64;
+    overload function PrivateCommitUsage(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
+    overload function TotalCommitUsage(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

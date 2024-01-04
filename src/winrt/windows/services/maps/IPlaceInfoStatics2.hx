@@ -8,6 +8,6 @@ package winrt.windows.services.maps;
 @:native("winrt::Windows::Services::Maps::IPlaceInfoStatics2")
 extern interface IPlaceInfoStatics2 extends winrt.windows.foundation.IInspectable
 {
-    overload function CreateFromAddress(displayAddress: ConstRef<winrt.HString>): winrt.windows.services.maps.PlaceInfo;
-    overload function CreateFromAddress(displayAddress: ConstRef<winrt.HString>, displayName: ConstRef<winrt.HString>): winrt.windows.services.maps.PlaceInfo;
+    overload function CreateFromAddress(displayAddress: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.services.maps.PlaceInfo;
+    overload function CreateFromAddress(displayAddress: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, displayName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.services.maps.PlaceInfo;
 }

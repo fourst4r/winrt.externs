@@ -8,5 +8,5 @@ package winrt.windows.devices.sensors;
 @:native("winrt::Windows::Devices::Sensors::IProximitySensorDataThresholdFactory")
 extern interface IProximitySensorDataThresholdFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(sensor: ConstRef<winrt.windows.devices.sensors.ProximitySensor>): winrt.windows.devices.sensors.ProximitySensorDataThreshold;
+    function Create(sensor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.sensors.ProximitySensor>): winrt.windows.devices.sensors.ProximitySensorDataThreshold;
 }

@@ -10,10 +10,10 @@ extern class ChoosingItemContainerEventArgs
     implements winrt.windows.ui.xaml.controls.IChoosingItemContainerEventArgs
 {
     function new();
-    overload function ItemIndex(): Int32;
+    overload function ItemIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function Item(): winrt.windows.foundation.IInspectable;
     overload function ItemContainer(): winrt.windows.ui.xaml.controls.primitives.SelectorItem;
-    overload function ItemContainer(value: ConstRef<winrt.windows.ui.xaml.controls.primitives.SelectorItem>): Void;
+    overload function ItemContainer(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.primitives.SelectorItem>): Void;
     overload function IsContainerPrepared(): Bool;
     overload function IsContainerPrepared(value: Bool): Void;
 }

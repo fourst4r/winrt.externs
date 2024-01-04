@@ -8,6 +8,6 @@ package winrt.windows.applicationmodel.email;
 @:native("winrt::Windows::ApplicationModel::Email::IEmailQueryOptionsFactory")
 extern interface IEmailQueryOptionsFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWithText(text: ConstRef<winrt.HString>): winrt.windows.applicationmodel.email.EmailQueryOptions;
-    function CreateWithTextAndFields(text: ConstRef<winrt.HString>, fields: ConstRef<winrt.windows.applicationmodel.email.EmailQuerySearchFields>): winrt.windows.applicationmodel.email.EmailQueryOptions;
+    function CreateWithText(text: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.email.EmailQueryOptions;
+    function CreateWithTextAndFields(text: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, fields: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.email.EmailQuerySearchFields>): winrt.windows.applicationmodel.email.EmailQueryOptions;
 }

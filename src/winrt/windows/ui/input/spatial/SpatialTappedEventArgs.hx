@@ -10,6 +10,6 @@ extern class SpatialTappedEventArgs
     implements winrt.windows.ui.input.spatial.ISpatialTappedEventArgs
 {
     overload function InteractionSourceKind(): winrt.windows.ui.input.spatial.SpatialInteractionSourceKind;
-    function TryGetPointerPose(coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.ui.input.spatial.SpatialPointerPose;
-    overload function TapCount(): UInt32;
+    function TryGetPointerPose(coordinateSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.ui.input.spatial.SpatialPointerPose;
+    overload function TapCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

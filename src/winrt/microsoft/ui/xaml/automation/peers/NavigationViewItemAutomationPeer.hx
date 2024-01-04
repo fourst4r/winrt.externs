@@ -11,7 +11,7 @@ extern class NavigationViewItemAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.INavigationViewItemAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IExpandCollapseProvider
 {
-    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.NavigationViewItem>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.NavigationViewItem>);
     overload function ExpandCollapseState(): winrt.microsoft.ui.xaml.automation.ExpandCollapseState;
     function Collapse(): Void;
     function Expand(): Void;

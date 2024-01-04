@@ -10,16 +10,16 @@ extern interface ISoftwareBitmap extends winrt.windows.foundation.IInspectable
 {
     overload function BitmapPixelFormat(): winrt.windows.graphics.imaging.BitmapPixelFormat;
     overload function BitmapAlphaMode(): winrt.windows.graphics.imaging.BitmapAlphaMode;
-    overload function PixelWidth(): Int32;
-    overload function PixelHeight(): Int32;
+    overload function PixelWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function PixelHeight(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function IsReadOnly(): Bool;
-    overload function DpiX(value: Float64): Void;
-    overload function DpiX(): Float64;
-    overload function DpiY(value: Float64): Void;
-    overload function DpiY(): Float64;
-    function LockBuffer(mode: ConstRef<winrt.windows.graphics.imaging.BitmapBufferAccessMode>): winrt.windows.graphics.imaging.BitmapBuffer;
-    function CopyTo(bitmap: ConstRef<winrt.windows.graphics.imaging.SoftwareBitmap>): Void;
-    function CopyFromBuffer(buffer: ConstRef<winrt.windows.storage.streams.IBuffer>): Void;
-    function CopyToBuffer(buffer: ConstRef<winrt.windows.storage.streams.IBuffer>): Void;
+    overload function DpiX(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function DpiX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function DpiY(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function DpiY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    function LockBuffer(mode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.imaging.BitmapBufferAccessMode>): winrt.windows.graphics.imaging.BitmapBuffer;
+    function CopyTo(bitmap: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.imaging.SoftwareBitmap>): Void;
+    function CopyFromBuffer(buffer: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): Void;
+    function CopyToBuffer(buffer: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): Void;
     function GetReadOnlyView(): winrt.windows.graphics.imaging.SoftwareBitmap;
 }

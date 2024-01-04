@@ -8,5 +8,5 @@ package winrt.windows.storage.pickers;
 @:native("winrt::Windows::Storage::Pickers::IFileOpenPickerWithOperationId")
 extern interface IFileOpenPickerWithOperationId extends winrt.windows.foundation.IInspectable
 {
-    function PickSingleFileAsync(pickerOperationId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.StorageFile> /* GenericTypeInstSig */;
+    function PickSingleFileAsync(pickerOperationId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.StorageFile> /* GenericTypeInstSig */;
 }

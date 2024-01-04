@@ -12,7 +12,7 @@ extern class InkToolbarCustomToolButton
 {
     function new();
     overload function ConfigurationContent(): winrt.windows.ui.xaml.UIElement;
-    overload function ConfigurationContent(value: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
+    overload function ConfigurationContent(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
     overload function ConfigurationContentProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function ConfigurationContentProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

@@ -9,9 +9,9 @@ package winrt.windows.applicationmodel.payments;
 extern interface IPaymentCurrencyAmount extends winrt.windows.foundation.IInspectable
 {
     overload function Currency(): winrt.HString;
-    overload function Currency(value: ConstRef<winrt.HString>): Void;
+    overload function Currency(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function CurrencySystem(): winrt.HString;
-    overload function CurrencySystem(value: ConstRef<winrt.HString>): Void;
+    overload function CurrencySystem(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Value(): winrt.HString;
-    overload function Value(value: ConstRef<winrt.HString>): Void;
+    overload function Value(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

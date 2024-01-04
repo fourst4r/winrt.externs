@@ -8,5 +8,5 @@ package winrt.windows.globalization;
 @:native("winrt::Windows::Globalization::ILanguageExtensionSubtags")
 extern interface ILanguageExtensionSubtags extends winrt.windows.foundation.IInspectable
 {
-    function GetExtensionSubtags(singleton: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
+    function GetExtensionSubtags(singleton: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
 }

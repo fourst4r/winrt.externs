@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml.media.imaging;
 extern class DownloadProgressEventArgs
     implements winrt.windows.ui.xaml.media.imaging.IDownloadProgressEventArgs
 {
-    overload function Progress(): Int32;
-    overload function Progress(value: Int32): Void;
+    overload function Progress(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Progress(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
 }

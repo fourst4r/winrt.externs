@@ -2,7 +2,7 @@ package winrt.windows.media.render;
 
 @:include("winrt/Windows.Media.Render.h", true)
 @:native("winrt::Windows::Media::Render::AudioRenderCategory")
-extern enum abstract AudioRenderCategory(Int32)
+extern enum abstract AudioRenderCategory(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Render::AudioRenderCategory::Other") final Other;
     @:native("winrt::Windows::Media::Render::AudioRenderCategory::ForegroundOnlyMedia") final ForegroundOnlyMedia;

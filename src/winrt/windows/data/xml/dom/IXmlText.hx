@@ -8,5 +8,5 @@ package winrt.windows.data.xml.dom;
 @:native("winrt::Windows::Data::Xml::Dom::IXmlText")
 extern interface IXmlText extends winrt.windows.foundation.IInspectable
 {
-    function SplitText(offset: UInt32): winrt.windows.data.xml.dom.IXmlText;
+    function SplitText(offset: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.data.xml.dom.IXmlText;
 }

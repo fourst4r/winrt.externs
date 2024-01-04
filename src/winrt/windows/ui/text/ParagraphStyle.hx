@@ -2,7 +2,7 @@ package winrt.windows.ui.text;
 
 @:include("winrt/Windows.UI.Text.h", true)
 @:native("winrt::Windows::UI::Text::ParagraphStyle")
-extern enum abstract ParagraphStyle(Int32)
+extern enum abstract ParagraphStyle(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Text::ParagraphStyle::Undefined") final Undefined;
     @:native("winrt::Windows::UI::Text::ParagraphStyle::None") final None;

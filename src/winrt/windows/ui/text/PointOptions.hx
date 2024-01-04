@@ -2,7 +2,7 @@ package winrt.windows.ui.text;
 
 @:include("winrt/Windows.UI.Text.h", true)
 @:native("winrt::Windows::UI::Text::PointOptions")
-extern enum abstract PointOptions(UInt32)
+extern enum abstract PointOptions(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::UI::Text::PointOptions::None") final None;
     @:native("winrt::Windows::UI::Text::PointOptions::IncludeInset") final IncludeInset;

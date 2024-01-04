@@ -2,7 +2,7 @@ package winrt.windows.security.cryptography.certificates;
 
 @:include("winrt/Windows.Security.Cryptography.Certificates.h", true)
 @:native("winrt::Windows::Security::Cryptography::Certificates::ChainValidationResult")
-extern enum abstract ChainValidationResult(Int32)
+extern enum abstract ChainValidationResult(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Security::Cryptography::Certificates::ChainValidationResult::Success") final Success;
     @:native("winrt::Windows::Security::Cryptography::Certificates::ChainValidationResult::Untrusted") final Untrusted;

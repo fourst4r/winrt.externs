@@ -8,5 +8,5 @@ package winrt.windows.ui.notifications;
 @:native("winrt::Windows::UI::Notifications::IToastCollectionFactory")
 extern interface IToastCollectionFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(collectionId: ConstRef<winrt.HString>, displayName: ConstRef<winrt.HString>, launchArgs: ConstRef<winrt.HString>, iconUri: ConstRef<winrt.windows.foundation.Uri>): winrt.windows.ui.notifications.ToastCollection;
+    function CreateInstance(collectionId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, displayName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, launchArgs: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, iconUri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): winrt.windows.ui.notifications.ToastCollection;
 }

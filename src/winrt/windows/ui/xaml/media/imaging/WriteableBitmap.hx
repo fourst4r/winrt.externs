@@ -10,7 +10,7 @@ extern class WriteableBitmap
     extends winrt.windows.ui.xaml.media.imaging.BitmapSource
     implements winrt.windows.ui.xaml.media.imaging.IWriteableBitmap
 {
-    function new(pixelWidth: Int32, pixelHeight: Int32);
+    function new(pixelWidth: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, pixelHeight: #if reflaxe.cpp cxx.num. #else cpp. #end Int32);
     overload function PixelBuffer(): winrt.windows.storage.streams.IBuffer;
     function Invalidate(): Void;
 }

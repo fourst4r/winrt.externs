@@ -10,5 +10,5 @@ extern class ScrollBarAutomationPeer
     extends winrt.windows.ui.xaml.automation.peers.RangeBaseAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IScrollBarAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.primitives.ScrollBar>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.primitives.ScrollBar>);
 }

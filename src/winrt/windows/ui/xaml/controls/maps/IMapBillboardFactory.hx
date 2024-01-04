@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls.maps;
 @:native("winrt::Windows::UI::Xaml::Controls::Maps::IMapBillboardFactory")
 extern interface IMapBillboardFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstanceFromCamera(camera: ConstRef<winrt.windows.ui.xaml.controls.maps.MapCamera>): winrt.windows.ui.xaml.controls.maps.MapBillboard;
+    function CreateInstanceFromCamera(camera: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.maps.MapCamera>): winrt.windows.ui.xaml.controls.maps.MapBillboard;
 }

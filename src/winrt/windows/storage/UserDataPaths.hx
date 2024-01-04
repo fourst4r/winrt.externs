@@ -28,8 +28,8 @@ extern class UserDataPaths
     overload function Screenshots(): winrt.HString;
     overload function Templates(): winrt.HString;
     overload function Videos(): winrt.HString;
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.storage.UserDataPaths;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.storage.UserDataPaths;
     function GetDefault(): winrt.windows.storage.UserDataPaths;
-    static function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.storage.UserDataPaths;
+    static function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.storage.UserDataPaths;
     static function GetDefault(): winrt.windows.storage.UserDataPaths;
 }

@@ -2,7 +2,7 @@ package winrt.windows.ui.input.inking.analysis;
 
 @:include("winrt/Windows.UI.Input.Inking.Analysis.h", true)
 @:native("winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisDrawingKind")
-extern enum abstract InkAnalysisDrawingKind(Int32)
+extern enum abstract InkAnalysisDrawingKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisDrawingKind::Drawing") final Drawing;
     @:native("winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisDrawingKind::Circle") final Circle;

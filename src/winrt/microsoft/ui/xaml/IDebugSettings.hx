@@ -16,6 +16,6 @@ extern interface IDebugSettings extends winrt.windows.foundation.IInspectable
     overload function IsTextPerformanceVisualizationEnabled(value: Bool): Void;
     overload function FailFastOnErrors(): Bool;
     overload function FailFastOnErrors(value: Bool): Void;
-    overload function BindingFailed(handler: ConstRef<winrt.microsoft.ui.xaml.BindingFailedEventHandler>): winrt.EventToken;
-    @:noExcept overload function BindingFailed(token: ConstRef<winrt.EventToken>): Void;
+    overload function BindingFailed(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.BindingFailedEventHandler>): winrt.EventToken;
+    @:noExcept overload function BindingFailed(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

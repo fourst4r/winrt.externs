@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.email;
 
 @:include("winrt/Windows.ApplicationModel.Email.h", true)
 @:native("winrt::Windows::ApplicationModel::Email::EmailMailboxOtherAppReadAccess")
-extern enum abstract EmailMailboxOtherAppReadAccess(Int32)
+extern enum abstract EmailMailboxOtherAppReadAccess(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Email::EmailMailboxOtherAppReadAccess::SystemOnly") final SystemOnly;
     @:native("winrt::Windows::ApplicationModel::Email::EmailMailboxOtherAppReadAccess::Full") final Full;

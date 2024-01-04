@@ -2,7 +2,7 @@ package winrt.windows.devices.sms;
 
 @:include("winrt/Windows.Devices.Sms.h", true)
 @:native("winrt::Windows::Devices::Sms::SmsMessageClass")
-extern enum abstract SmsMessageClass(Int32)
+extern enum abstract SmsMessageClass(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::Sms::SmsMessageClass::None") final None;
     @:native("winrt::Windows::Devices::Sms::SmsMessageClass::Class0") final Class0;

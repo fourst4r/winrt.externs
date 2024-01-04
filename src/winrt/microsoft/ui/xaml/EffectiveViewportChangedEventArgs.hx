@@ -11,6 +11,6 @@ extern class EffectiveViewportChangedEventArgs
 {
     overload function EffectiveViewport(): winrt.windows.foundation.Rect;
     overload function MaxViewport(): winrt.windows.foundation.Rect;
-    overload function BringIntoViewDistanceX(): Float64;
-    overload function BringIntoViewDistanceY(): Float64;
+    overload function BringIntoViewDistanceX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function BringIntoViewDistanceY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

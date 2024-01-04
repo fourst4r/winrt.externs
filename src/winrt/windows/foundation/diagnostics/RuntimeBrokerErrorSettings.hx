@@ -10,6 +10,6 @@ extern class RuntimeBrokerErrorSettings
     implements winrt.windows.foundation.diagnostics.IErrorReportingSettings
 {
     function new();
-    function SetErrorOptions(value: ConstRef<winrt.windows.foundation.diagnostics.ErrorOptions>): Void;
+    function SetErrorOptions(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.diagnostics.ErrorOptions>): Void;
     function GetErrorOptions(): winrt.windows.foundation.diagnostics.ErrorOptions;
 }

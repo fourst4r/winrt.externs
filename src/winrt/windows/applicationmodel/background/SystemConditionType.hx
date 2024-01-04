@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.background;
 
 @:include("winrt/Windows.ApplicationModel.Background.h", true)
 @:native("winrt::Windows::ApplicationModel::Background::SystemConditionType")
-extern enum abstract SystemConditionType(Int32)
+extern enum abstract SystemConditionType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Background::SystemConditionType::Invalid") final Invalid;
     @:native("winrt::Windows::ApplicationModel::Background::SystemConditionType::UserPresent") final UserPresent;

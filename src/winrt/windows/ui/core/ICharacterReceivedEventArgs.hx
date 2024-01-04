@@ -8,6 +8,6 @@ package winrt.windows.ui.core;
 @:native("winrt::Windows::UI::Core::ICharacterReceivedEventArgs")
 extern interface ICharacterReceivedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function KeyCode(): UInt32;
+    overload function KeyCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function KeyStatus(): winrt.windows.ui.core.CorePhysicalKeyStatus;
 }

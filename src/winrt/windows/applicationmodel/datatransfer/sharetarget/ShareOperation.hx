@@ -17,9 +17,9 @@ extern class ShareOperation
     function ReportStarted(): Void;
     function ReportDataRetrieved(): Void;
     function ReportSubmittedBackgroundTask(): Void;
-    overload function ReportCompleted(quicklink: ConstRef<winrt.windows.applicationmodel.datatransfer.sharetarget.QuickLink>): Void;
+    overload function ReportCompleted(quicklink: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.datatransfer.sharetarget.QuickLink>): Void;
     overload function ReportCompleted(): Void;
-    function ReportError(value: ConstRef<winrt.HString>): Void;
+    function ReportError(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     function DismissUI(): Void;
     overload function Contacts(): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.contacts.Contact> /* GenericTypeInstSig */;
 }

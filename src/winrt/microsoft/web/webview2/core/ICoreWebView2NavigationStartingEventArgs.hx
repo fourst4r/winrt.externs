@@ -14,5 +14,5 @@ extern interface ICoreWebView2NavigationStartingEventArgs extends winrt.windows.
     overload function RequestHeaders(): winrt.microsoft.web.webview2.core.CoreWebView2HttpRequestHeaders;
     overload function Cancel(): Bool;
     overload function Cancel(value: Bool): Void;
-    overload function NavigationId(): UInt64;
+    overload function NavigationId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

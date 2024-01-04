@@ -9,5 +9,5 @@ package winrt.windows.ui.composition;
 extern interface ICompositionProjectedShadowReceiver extends winrt.windows.foundation.IInspectable
 {
     overload function ReceivingVisual(): winrt.windows.ui.composition.Visual;
-    overload function ReceivingVisual(value: ConstRef<winrt.windows.ui.composition.Visual>): Void;
+    overload function ReceivingVisual(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Visual>): Void;
 }

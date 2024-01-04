@@ -8,5 +8,5 @@ package winrt.windows.devices.alljoyn;
 @:native("winrt::Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoinerEventArgsFactory")
 extern interface IAllJoynAcceptSessionJoinerEventArgsFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(uniqueName: ConstRef<winrt.HString>, sessionPort: UInt16, trafficType: ConstRef<winrt.windows.devices.alljoyn.AllJoynTrafficType>, proximity: UInt8, acceptSessionJoiner: ConstRef<winrt.windows.devices.alljoyn.IAllJoynAcceptSessionJoiner>): winrt.windows.devices.alljoyn.AllJoynAcceptSessionJoinerEventArgs;
+    function Create(uniqueName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, sessionPort: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, trafficType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.alljoyn.AllJoynTrafficType>, proximity: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, acceptSessionJoiner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.alljoyn.IAllJoynAcceptSessionJoiner>): winrt.windows.devices.alljoyn.AllJoynAcceptSessionJoinerEventArgs;
 }

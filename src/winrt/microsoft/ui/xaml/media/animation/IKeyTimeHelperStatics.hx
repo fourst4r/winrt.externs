@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml.media.animation;
 @:native("winrt::Microsoft::UI::Xaml::Media::Animation::IKeyTimeHelperStatics")
 extern interface IKeyTimeHelperStatics extends winrt.windows.foundation.IInspectable
 {
-    function FromTimeSpan(timeSpan: ConstRef<winrt.windows.foundation.TimeSpan>): winrt.microsoft.ui.xaml.media.animation.KeyTime;
+    function FromTimeSpan(timeSpan: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): winrt.microsoft.ui.xaml.media.animation.KeyTime;
 }

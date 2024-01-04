@@ -4,5 +4,5 @@ package winrt.windows.applicationmodel.appservice;
 @:native("winrt::Windows::ApplicationModel::AppService::AppServiceCatalog")
 extern class AppServiceCatalog
 {
-    static function FindAppServiceProvidersAsync(appServiceName: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.AppInfo> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+    static function FindAppServiceProvidersAsync(appServiceName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.AppInfo> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
 }

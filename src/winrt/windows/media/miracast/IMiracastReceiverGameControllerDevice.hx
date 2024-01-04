@@ -13,7 +13,7 @@ extern interface IMiracastReceiverGameControllerDevice extends winrt.windows.fou
     overload function IsRequestedByTransmitter(): Bool;
     overload function IsTransmittingInput(): Bool;
     overload function Mode(): winrt.windows.media.miracast.MiracastReceiverGameControllerDeviceUsageMode;
-    overload function Mode(value: ConstRef<winrt.windows.media.miracast.MiracastReceiverGameControllerDeviceUsageMode>): Void;
-    overload function Changed(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.miracast.MiracastReceiverGameControllerDevice, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Changed(token: ConstRef<winrt.EventToken>): Void;
+    overload function Mode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.miracast.MiracastReceiverGameControllerDeviceUsageMode>): Void;
+    overload function Changed(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.miracast.MiracastReceiverGameControllerDevice, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Changed(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

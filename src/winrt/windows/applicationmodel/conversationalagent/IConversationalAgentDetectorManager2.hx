@@ -8,6 +8,6 @@ package winrt.windows.applicationmodel.conversationalagent;
 @:native("winrt::Windows::ApplicationModel::ConversationalAgent::IConversationalAgentDetectorManager2")
 extern interface IConversationalAgentDetectorManager2 extends winrt.windows.foundation.IInspectable
 {
-    function GetActivationSignalDetectorFromId(detectorId: ConstRef<winrt.HString>): winrt.windows.applicationmodel.conversationalagent.ActivationSignalDetector;
-    function GetActivationSignalDetectorFromIdAsync(detectorId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.conversationalagent.ActivationSignalDetector> /* GenericTypeInstSig */;
+    function GetActivationSignalDetectorFromId(detectorId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.conversationalagent.ActivationSignalDetector;
+    function GetActivationSignalDetectorFromIdAsync(detectorId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.conversationalagent.ActivationSignalDetector> /* GenericTypeInstSig */;
 }

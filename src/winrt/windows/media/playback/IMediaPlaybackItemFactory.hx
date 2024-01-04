@@ -8,5 +8,5 @@ package winrt.windows.media.playback;
 @:native("winrt::Windows::Media::Playback::IMediaPlaybackItemFactory")
 extern interface IMediaPlaybackItemFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(source: ConstRef<winrt.windows.media.core.MediaSource>): winrt.windows.media.playback.MediaPlaybackItem;
+    function Create(source: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.MediaSource>): winrt.windows.media.playback.MediaPlaybackItem;
 }

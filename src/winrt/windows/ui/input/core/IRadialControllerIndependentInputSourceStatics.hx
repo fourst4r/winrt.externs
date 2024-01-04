@@ -8,5 +8,5 @@ package winrt.windows.ui.input.core;
 @:native("winrt::Windows::UI::Input::Core::IRadialControllerIndependentInputSourceStatics")
 extern interface IRadialControllerIndependentInputSourceStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateForView(view: ConstRef<winrt.windows.applicationmodel.core.CoreApplicationView>): winrt.windows.ui.input.core.RadialControllerIndependentInputSource;
+    function CreateForView(view: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.core.CoreApplicationView>): winrt.windows.ui.input.core.RadialControllerIndependentInputSource;
 }

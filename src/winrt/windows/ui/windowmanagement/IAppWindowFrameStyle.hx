@@ -9,5 +9,5 @@ package winrt.windows.ui.windowmanagement;
 extern interface IAppWindowFrameStyle extends winrt.windows.foundation.IInspectable
 {
     function GetFrameStyle(): winrt.windows.ui.windowmanagement.AppWindowFrameStyle;
-    function SetFrameStyle(frameStyle: ConstRef<winrt.windows.ui.windowmanagement.AppWindowFrameStyle>): Void;
+    function SetFrameStyle(frameStyle: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.windowmanagement.AppWindowFrameStyle>): Void;
 }

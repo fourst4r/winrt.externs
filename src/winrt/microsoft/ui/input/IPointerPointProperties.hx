@@ -21,12 +21,12 @@ extern interface IPointerPointProperties extends winrt.windows.foundation.IInspe
     overload function IsRightButtonPressed(): Bool;
     overload function IsXButton1Pressed(): Bool;
     overload function IsXButton2Pressed(): Bool;
-    overload function MouseWheelDelta(): Int32;
-    overload function Orientation(): Float32;
+    overload function MouseWheelDelta(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Orientation(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
     overload function PointerUpdateKind(): winrt.microsoft.ui.input.PointerUpdateKind;
-    overload function Pressure(): Float32;
+    overload function Pressure(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
     overload function TouchConfidence(): Bool;
-    overload function Twist(): Float32;
-    overload function XTilt(): Float32;
-    overload function YTilt(): Float32;
+    overload function Twist(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function XTilt(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function YTilt(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
 }

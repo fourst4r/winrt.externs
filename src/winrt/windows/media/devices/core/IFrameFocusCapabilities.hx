@@ -9,7 +9,7 @@ package winrt.windows.media.devices.core;
 extern interface IFrameFocusCapabilities extends winrt.windows.foundation.IInspectable
 {
     overload function Supported(): Bool;
-    overload function Min(): UInt32;
-    overload function Max(): UInt32;
-    overload function Step(): UInt32;
+    overload function Min(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Max(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Step(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

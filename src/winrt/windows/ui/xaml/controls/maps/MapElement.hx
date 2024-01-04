@@ -14,18 +14,18 @@ extern class MapElement
     implements winrt.windows.ui.xaml.controls.maps.IMapElement4
 {
     function new();
-    overload function ZIndex(): Int32;
-    overload function ZIndex(value: Int32): Void;
+    overload function ZIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function ZIndex(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function Visible(): Bool;
     overload function Visible(value: Bool): Void;
-    overload function MapTabIndex(): Int32;
-    overload function MapTabIndex(value: Int32): Void;
+    overload function MapTabIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function MapTabIndex(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function MapStyleSheetEntry(): winrt.HString;
-    overload function MapStyleSheetEntry(value: ConstRef<winrt.HString>): Void;
+    overload function MapStyleSheetEntry(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function MapStyleSheetEntryState(): winrt.HString;
-    overload function MapStyleSheetEntryState(value: ConstRef<winrt.HString>): Void;
+    overload function MapStyleSheetEntryState(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Tag(): winrt.windows.foundation.IInspectable;
-    overload function Tag(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Tag(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
     overload function IsEnabled(): Bool;
     overload function IsEnabled(value: Bool): Void;
     overload function IsEnabledProperty(): winrt.windows.ui.xaml.DependencyProperty;

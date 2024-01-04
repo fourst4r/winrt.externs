@@ -88,6 +88,6 @@ extern interface IUIElementStatics extends winrt.windows.foundation.IInspectable
     overload function XYFocusDownProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function IsTabStopProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function TabIndexProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function TryStartDirectManipulation(value: ConstRef<winrt.microsoft.ui.xaml.input.Pointer>): Bool;
-    function RegisterAsScrollPort(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    function TryStartDirectManipulation(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.Pointer>): Bool;
+    function RegisterAsScrollPort(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): Void;
 }

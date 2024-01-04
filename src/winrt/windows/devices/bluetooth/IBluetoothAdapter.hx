@@ -9,7 +9,7 @@ package winrt.windows.devices.bluetooth;
 extern interface IBluetoothAdapter extends winrt.windows.foundation.IInspectable
 {
     overload function DeviceId(): winrt.HString;
-    overload function BluetoothAddress(): UInt64;
+    overload function BluetoothAddress(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
     overload function IsClassicSupported(): Bool;
     overload function IsLowEnergySupported(): Bool;
     overload function IsPeripheralRoleSupported(): Bool;

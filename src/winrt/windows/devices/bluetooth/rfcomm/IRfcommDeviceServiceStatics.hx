@@ -8,6 +8,6 @@ package winrt.windows.devices.bluetooth.rfcomm;
 @:native("winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics")
 extern interface IRfcommDeviceServiceStatics extends winrt.windows.foundation.IInspectable
 {
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.bluetooth.rfcomm.RfcommDeviceService> /* GenericTypeInstSig */;
-    function GetDeviceSelector(serviceId: ConstRef<winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId>): winrt.HString;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.bluetooth.rfcomm.RfcommDeviceService> /* GenericTypeInstSig */;
+    function GetDeviceSelector(serviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId>): winrt.HString;
 }

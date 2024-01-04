@@ -12,8 +12,8 @@ extern class SceneMesh
 {
     overload function Bounds(): winrt.windows.ui.composition.scenes.SceneBoundingBox;
     overload function PrimitiveTopology(): winrt.windows.graphics.directx.DirectXPrimitiveTopology;
-    overload function PrimitiveTopology(value: ConstRef<winrt.windows.graphics.directx.DirectXPrimitiveTopology>): Void;
-    function FillMeshAttribute(semantic: ConstRef<winrt.windows.ui.composition.scenes.SceneAttributeSemantic>, format: ConstRef<winrt.windows.graphics.directx.DirectXPixelFormat>, memory: ConstRef<winrt.windows.foundation.MemoryBuffer>): Void;
-    function Create(compositor: ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneMesh;
-    static function Create(compositor: ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneMesh;
+    overload function PrimitiveTopology(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.directx.DirectXPrimitiveTopology>): Void;
+    function FillMeshAttribute(semantic: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.scenes.SceneAttributeSemantic>, format: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.directx.DirectXPixelFormat>, memory: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.MemoryBuffer>): Void;
+    function Create(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneMesh;
+    static function Create(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneMesh;
 }

@@ -10,8 +10,8 @@ extern interface IAdaptiveMediaSourceAdvancedSettings extends winrt.windows.foun
 {
     overload function AllSegmentsIndependent(): Bool;
     overload function AllSegmentsIndependent(value: Bool): Void;
-    overload function DesiredBitrateHeadroomRatio(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
-    overload function DesiredBitrateHeadroomRatio(value: ConstRef<winrt.windows.foundation.IReference<Float64> /* temp_GenericTypeInstSig */>): Void;
-    overload function BitrateDowngradeTriggerRatio(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
-    overload function BitrateDowngradeTriggerRatio(value: ConstRef<winrt.windows.foundation.IReference<Float64> /* temp_GenericTypeInstSig */>): Void;
+    overload function DesiredBitrateHeadroomRatio(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
+    overload function DesiredBitrateHeadroomRatio(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* temp_GenericTypeInstSig */>): Void;
+    overload function BitrateDowngradeTriggerRatio(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
+    overload function BitrateDowngradeTriggerRatio(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* temp_GenericTypeInstSig */>): Void;
 }

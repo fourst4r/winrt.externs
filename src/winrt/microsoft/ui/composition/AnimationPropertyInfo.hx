@@ -11,7 +11,7 @@ extern class AnimationPropertyInfo
     implements winrt.microsoft.ui.composition.IAnimationPropertyInfo
     implements winrt.microsoft.ui.composition.IAnimationPropertyInfo2
 {
-    overload function AccessMode(value: ConstRef<winrt.microsoft.ui.composition.AnimationPropertyAccessMode>): Void;
+    overload function AccessMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.AnimationPropertyAccessMode>): Void;
     function GetResolvedCompositionObject(): winrt.microsoft.ui.composition.CompositionObject;
     function GetResolvedCompositionObjectProperty(): winrt.HString;
     overload function AccessMode(): winrt.microsoft.ui.composition.AnimationPropertyAccessMode;

@@ -8,5 +8,5 @@ package winrt.windows.media;
 @:native("winrt::Windows::Media::IMediaExtension")
 extern interface IMediaExtension extends winrt.windows.foundation.IInspectable
 {
-    function SetProperties(configuration: ConstRef<winrt.windows.foundation.collections.IPropertySet>): Void;
+    function SetProperties(configuration: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IPropertySet>): Void;
 }

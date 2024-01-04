@@ -9,6 +9,6 @@ package winrt.windows.storage.provider;
 extern interface IStorageProviderStatusUISource extends winrt.windows.foundation.IInspectable
 {
     function GetStatusUI(): winrt.windows.storage.provider.StorageProviderStatusUI;
-    overload function StatusUIChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.storage.provider.IStorageProviderStatusUISource, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function StatusUIChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function StatusUIChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.storage.provider.IStorageProviderStatusUISource, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function StatusUIChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

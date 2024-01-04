@@ -9,5 +9,5 @@ package winrt.windows.system.userprofile;
 extern interface IDiagnosticsSettingsStatics extends winrt.windows.foundation.IInspectable
 {
     function GetDefault(): winrt.windows.system.userprofile.DiagnosticsSettings;
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.system.userprofile.DiagnosticsSettings;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.system.userprofile.DiagnosticsSettings;
 }

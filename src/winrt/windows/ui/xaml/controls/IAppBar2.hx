@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IAppBar2 extends winrt.windows.foundation.IInspectable
 {
     overload function ClosedDisplayMode(): winrt.windows.ui.xaml.controls.AppBarClosedDisplayMode;
-    overload function ClosedDisplayMode(value: ConstRef<winrt.windows.ui.xaml.controls.AppBarClosedDisplayMode>): Void;
+    overload function ClosedDisplayMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.AppBarClosedDisplayMode>): Void;
 }

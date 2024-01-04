@@ -11,5 +11,5 @@ extern class IsolatedWindowsEnvironmentTelemetryParameters
 {
     function new();
     overload function CorrelationId(): winrt.Guid;
-    overload function CorrelationId(value: ConstRef<winrt.Guid>): Void;
+    overload function CorrelationId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): Void;
 }

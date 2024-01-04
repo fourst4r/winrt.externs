@@ -2,7 +2,7 @@ package winrt.windows.networking.networkoperators;
 
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::NetworkOperatorEventMessageType")
-extern enum abstract NetworkOperatorEventMessageType(Int32)
+extern enum abstract NetworkOperatorEventMessageType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Networking::NetworkOperators::NetworkOperatorEventMessageType::Gsm") final Gsm;
     @:native("winrt::Windows::Networking::NetworkOperators::NetworkOperatorEventMessageType::Cdma") final Cdma;

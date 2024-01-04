@@ -8,6 +8,6 @@ package winrt.windows.devices.sensors.custom;
 @:native("winrt::Windows::Devices::Sensors::Custom::ICustomSensorStatics")
 extern interface ICustomSensorStatics extends winrt.windows.foundation.IInspectable
 {
-    function GetDeviceSelector(interfaceId: ConstRef<winrt.Guid>): winrt.HString;
-    function FromIdAsync(sensorId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.sensors.custom.CustomSensor> /* GenericTypeInstSig */;
+    function GetDeviceSelector(interfaceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): winrt.HString;
+    function FromIdAsync(sensorId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.sensors.custom.CustomSensor> /* GenericTypeInstSig */;
 }

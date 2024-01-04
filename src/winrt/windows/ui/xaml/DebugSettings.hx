@@ -18,8 +18,8 @@ extern class DebugSettings
     overload function IsBindingTracingEnabled(value: Bool): Void;
     overload function IsOverdrawHeatMapEnabled(): Bool;
     overload function IsOverdrawHeatMapEnabled(value: Bool): Void;
-    overload function BindingFailed(handler: ConstRef<winrt.windows.ui.xaml.BindingFailedEventHandler>): winrt.EventToken;
-    @:noExcept overload function BindingFailed(token: ConstRef<winrt.EventToken>): Void;
+    overload function BindingFailed(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.BindingFailedEventHandler>): winrt.EventToken;
+    @:noExcept overload function BindingFailed(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function EnableRedrawRegions(): Bool;
     overload function EnableRedrawRegions(value: Bool): Void;
     overload function IsTextPerformanceVisualizationEnabled(): Bool;

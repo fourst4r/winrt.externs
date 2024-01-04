@@ -11,13 +11,13 @@ extern class WebTokenRequest
     implements winrt.windows.security.authentication.web.core.IWebTokenRequest2
     implements winrt.windows.security.authentication.web.core.IWebTokenRequest3
 {
-    function new(provider: ConstRef<winrt.windows.security.credentials.WebAccountProvider>, scope: ConstRef<winrt.HString>, clientId: ConstRef<winrt.HString>);
+    function new(provider: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.WebAccountProvider>, scope: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, clientId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     @:native("winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest")
-    static overload function make(provider: ConstRef<winrt.windows.security.credentials.WebAccountProvider>, scope: ConstRef<winrt.HString>, clientId: ConstRef<winrt.HString>, promptType: ConstRef<winrt.windows.security.authentication.web.core.WebTokenRequestPromptType>): winrt.windows.security.authentication.web.core.WebTokenRequest;
+    static overload function make(provider: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.WebAccountProvider>, scope: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, clientId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, promptType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.authentication.web.core.WebTokenRequestPromptType>): winrt.windows.security.authentication.web.core.WebTokenRequest;
     @:native("winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest")
-    /* explicit */ static overload function make(provider: ConstRef<winrt.windows.security.credentials.WebAccountProvider>): winrt.windows.security.authentication.web.core.WebTokenRequest;
+    /* explicit */ static overload function make(provider: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.WebAccountProvider>): winrt.windows.security.authentication.web.core.WebTokenRequest;
     @:native("winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest")
-    static overload function make(provider: ConstRef<winrt.windows.security.credentials.WebAccountProvider>, scope: ConstRef<winrt.HString>): winrt.windows.security.authentication.web.core.WebTokenRequest;
+    static overload function make(provider: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.WebAccountProvider>, scope: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.security.authentication.web.core.WebTokenRequest;
     overload function WebAccountProvider(): winrt.windows.security.credentials.WebAccountProvider;
     overload function Scope(): winrt.HString;
     overload function ClientId(): winrt.HString;
@@ -25,5 +25,5 @@ extern class WebTokenRequest
     overload function Properties(): winrt.windows.foundation.collections.IMap<winrt.HString, winrt.HString> /* GenericTypeInstSig */;
     overload function AppProperties(): winrt.windows.foundation.collections.IMap<winrt.HString, winrt.HString> /* GenericTypeInstSig */;
     overload function CorrelationId(): winrt.HString;
-    overload function CorrelationId(value: ConstRef<winrt.HString>): Void;
+    overload function CorrelationId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

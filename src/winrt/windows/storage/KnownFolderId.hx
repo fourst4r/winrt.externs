@@ -2,7 +2,7 @@ package winrt.windows.storage;
 
 @:include("winrt/Windows.Storage.h", true)
 @:native("winrt::Windows::Storage::KnownFolderId")
-extern enum abstract KnownFolderId(Int32)
+extern enum abstract KnownFolderId(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Storage::KnownFolderId::AppCaptures") final AppCaptures;
     @:native("winrt::Windows::Storage::KnownFolderId::CameraRoll") final CameraRoll;

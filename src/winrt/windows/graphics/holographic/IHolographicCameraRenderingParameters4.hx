@@ -9,5 +9,5 @@ package winrt.windows.graphics.holographic;
 extern interface IHolographicCameraRenderingParameters4 extends winrt.windows.foundation.IInspectable
 {
     overload function DepthReprojectionMethod(): winrt.windows.graphics.holographic.HolographicDepthReprojectionMethod;
-    overload function DepthReprojectionMethod(value: ConstRef<winrt.windows.graphics.holographic.HolographicDepthReprojectionMethod>): Void;
+    overload function DepthReprojectionMethod(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.holographic.HolographicDepthReprojectionMethod>): Void;
 }

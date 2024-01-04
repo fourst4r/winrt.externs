@@ -11,7 +11,7 @@ extern class AdcChannel
     implements winrt.windows.devices.adc.IAdcChannel
 {
     overload function Controller(): winrt.windows.devices.adc.AdcController;
-    function ReadValue(): Int32;
-    function ReadRatio(): Float64;
+    function ReadValue(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function ReadRatio(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     function Close(): Void;
 }

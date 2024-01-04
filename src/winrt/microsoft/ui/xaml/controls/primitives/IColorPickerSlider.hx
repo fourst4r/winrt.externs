@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.controls.primitives;
 extern interface IColorPickerSlider extends winrt.windows.foundation.IInspectable
 {
     overload function ColorChannel(): winrt.microsoft.ui.xaml.controls.ColorPickerHsvChannel;
-    overload function ColorChannel(value: ConstRef<winrt.microsoft.ui.xaml.controls.ColorPickerHsvChannel>): Void;
+    overload function ColorChannel(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.ColorPickerHsvChannel>): Void;
 }

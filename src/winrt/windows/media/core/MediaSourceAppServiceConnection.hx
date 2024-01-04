@@ -9,8 +9,8 @@ package winrt.windows.media.core;
 extern class MediaSourceAppServiceConnection
     implements winrt.windows.media.core.IMediaSourceAppServiceConnection
 {
-    /* explicit */ function new(appServiceConnection: ConstRef<winrt.windows.applicationmodel.appservice.AppServiceConnection>);
-    overload function InitializeMediaStreamSourceRequested(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MediaSourceAppServiceConnection, winrt.windows.media.core.InitializeMediaStreamSourceRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function InitializeMediaStreamSourceRequested(token: ConstRef<winrt.EventToken>): Void;
+    /* explicit */ function new(appServiceConnection: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.appservice.AppServiceConnection>);
+    overload function InitializeMediaStreamSourceRequested(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MediaSourceAppServiceConnection, winrt.windows.media.core.InitializeMediaStreamSourceRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function InitializeMediaStreamSourceRequested(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     function Start(): Void;
 }

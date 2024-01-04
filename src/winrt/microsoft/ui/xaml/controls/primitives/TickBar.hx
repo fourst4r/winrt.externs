@@ -12,7 +12,7 @@ extern class TickBar
 {
     function new();
     overload function Fill(): winrt.microsoft.ui.xaml.media.Brush;
-    overload function Fill(value: ConstRef<winrt.microsoft.ui.xaml.media.Brush>): Void;
+    overload function Fill(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.Brush>): Void;
     overload function FillProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function FillProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
 }

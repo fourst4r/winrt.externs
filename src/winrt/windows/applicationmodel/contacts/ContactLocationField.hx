@@ -10,11 +10,11 @@ extern class ContactLocationField
     implements winrt.windows.applicationmodel.contacts.IContactField
     implements winrt.windows.applicationmodel.contacts.IContactLocationField
 {
-    /* explicit */ function new(unstructuredAddress: ConstRef<winrt.HString>);
+    /* explicit */ function new(unstructuredAddress: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactLocationField")
-    static overload function make(unstructuredAddress: ConstRef<winrt.HString>, category: ConstRef<winrt.windows.applicationmodel.contacts.ContactFieldCategory>): winrt.windows.applicationmodel.contacts.ContactLocationField;
+    static overload function make(unstructuredAddress: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, category: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.contacts.ContactFieldCategory>): winrt.windows.applicationmodel.contacts.ContactLocationField;
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactLocationField")
-    static overload function make(unstructuredAddress: ConstRef<winrt.HString>, category: ConstRef<winrt.windows.applicationmodel.contacts.ContactFieldCategory>, street: ConstRef<winrt.HString>, city: ConstRef<winrt.HString>, region: ConstRef<winrt.HString>, country: ConstRef<winrt.HString>, postalCode: ConstRef<winrt.HString>): winrt.windows.applicationmodel.contacts.ContactLocationField;
+    static overload function make(unstructuredAddress: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, category: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.contacts.ContactFieldCategory>, street: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, city: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, region: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, country: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, postalCode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.contacts.ContactLocationField;
     overload function UnstructuredAddress(): winrt.HString;
     overload function Street(): winrt.HString;
     overload function City(): winrt.HString;

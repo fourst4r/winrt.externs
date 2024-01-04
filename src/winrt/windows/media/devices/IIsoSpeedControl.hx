@@ -11,5 +11,5 @@ extern interface IIsoSpeedControl extends winrt.windows.foundation.IInspectable
     overload function Supported(): Bool;
     overload function SupportedPresets(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.devices.IsoSpeedPreset> /* GenericTypeInstSig */;
     overload function Preset(): winrt.windows.media.devices.IsoSpeedPreset;
-    function SetPresetAsync(preset: ConstRef<winrt.windows.media.devices.IsoSpeedPreset>): winrt.windows.foundation.IAsyncAction;
+    function SetPresetAsync(preset: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.IsoSpeedPreset>): winrt.windows.foundation.IAsyncAction;
 }

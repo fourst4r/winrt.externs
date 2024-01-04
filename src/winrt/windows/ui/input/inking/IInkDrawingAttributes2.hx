@@ -9,7 +9,7 @@ package winrt.windows.ui.input.inking;
 extern interface IInkDrawingAttributes2 extends winrt.windows.foundation.IInspectable
 {
     overload function PenTipTransform(): winrt.windows.foundation.numerics.Matrix3x2;
-    overload function PenTipTransform(value: ConstRef<winrt.windows.foundation.numerics.Matrix3x2>): Void;
+    overload function PenTipTransform(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Matrix3x2>): Void;
     overload function DrawAsHighlighter(): Bool;
     overload function DrawAsHighlighter(value: Bool): Void;
 }

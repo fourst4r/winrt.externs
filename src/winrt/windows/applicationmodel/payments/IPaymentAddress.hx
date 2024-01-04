@@ -9,26 +9,26 @@ package winrt.windows.applicationmodel.payments;
 extern interface IPaymentAddress extends winrt.windows.foundation.IInspectable
 {
     overload function Country(): winrt.HString;
-    overload function Country(value: ConstRef<winrt.HString>): Void;
+    overload function Country(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function AddressLines(): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
-    overload function AddressLines(value: ConstRef<winrt.windows.foundation.collections.IVectorView<winrt.HString> /* temp_GenericTypeInstSig */>): Void;
+    overload function AddressLines(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IVectorView<winrt.HString> /* temp_GenericTypeInstSig */>): Void;
     overload function Region(): winrt.HString;
-    overload function Region(value: ConstRef<winrt.HString>): Void;
+    overload function Region(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function City(): winrt.HString;
-    overload function City(value: ConstRef<winrt.HString>): Void;
+    overload function City(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function DependentLocality(): winrt.HString;
-    overload function DependentLocality(value: ConstRef<winrt.HString>): Void;
+    overload function DependentLocality(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function PostalCode(): winrt.HString;
-    overload function PostalCode(value: ConstRef<winrt.HString>): Void;
+    overload function PostalCode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function SortingCode(): winrt.HString;
-    overload function SortingCode(value: ConstRef<winrt.HString>): Void;
+    overload function SortingCode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function LanguageCode(): winrt.HString;
-    overload function LanguageCode(value: ConstRef<winrt.HString>): Void;
+    overload function LanguageCode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Organization(): winrt.HString;
-    overload function Organization(value: ConstRef<winrt.HString>): Void;
+    overload function Organization(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Recipient(): winrt.HString;
-    overload function Recipient(value: ConstRef<winrt.HString>): Void;
+    overload function Recipient(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function PhoneNumber(): winrt.HString;
-    overload function PhoneNumber(value: ConstRef<winrt.HString>): Void;
+    overload function PhoneNumber(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Properties(): winrt.windows.foundation.collections.ValueSet;
 }

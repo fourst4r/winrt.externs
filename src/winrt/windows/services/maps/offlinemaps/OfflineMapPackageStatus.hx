@@ -2,7 +2,7 @@ package winrt.windows.services.maps.offlinemaps;
 
 @:include("winrt/Windows.Services.Maps.OfflineMaps.h", true)
 @:native("winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStatus")
-extern enum abstract OfflineMapPackageStatus(Int32)
+extern enum abstract OfflineMapPackageStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStatus::NotDownloaded") final NotDownloaded;
     @:native("winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStatus::Downloading") final Downloading;

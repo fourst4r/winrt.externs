@@ -9,11 +9,11 @@ package winrt.windows.perception.spatial;
 extern class SpatialEntityStore
     implements winrt.windows.perception.spatial.ISpatialEntityStore
 {
-    function SaveAsync(entity: ConstRef<winrt.windows.perception.spatial.SpatialEntity>): winrt.windows.foundation.IAsyncAction;
-    function RemoveAsync(entity: ConstRef<winrt.windows.perception.spatial.SpatialEntity>): winrt.windows.foundation.IAsyncAction;
+    function SaveAsync(entity: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialEntity>): winrt.windows.foundation.IAsyncAction;
+    function RemoveAsync(entity: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialEntity>): winrt.windows.foundation.IAsyncAction;
     function CreateEntityWatcher(): winrt.windows.perception.spatial.SpatialEntityWatcher;
     overload function IsSupported(): Bool;
-    function TryGet(session: ConstRef<winrt.windows.system.remotesystems.RemoteSystemSession>): winrt.windows.perception.spatial.SpatialEntityStore;
+    function TryGet(session: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.remotesystems.RemoteSystemSession>): winrt.windows.perception.spatial.SpatialEntityStore;
     static overload function IsSupported(): Bool;
-    static function TryGet(session: ConstRef<winrt.windows.system.remotesystems.RemoteSystemSession>): winrt.windows.perception.spatial.SpatialEntityStore;
+    static function TryGet(session: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.remotesystems.RemoteSystemSession>): winrt.windows.perception.spatial.SpatialEntityStore;
 }

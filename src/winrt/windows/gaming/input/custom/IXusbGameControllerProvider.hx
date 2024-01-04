@@ -8,5 +8,5 @@ package winrt.windows.gaming.input.custom;
 @:native("winrt::Windows::Gaming::Input::Custom::IXusbGameControllerProvider")
 extern interface IXusbGameControllerProvider extends winrt.windows.foundation.IInspectable
 {
-    function SetVibration(lowFrequencyMotorSpeed: Float64, highFrequencyMotorSpeed: Float64): Void;
+    function SetVibration(lowFrequencyMotorSpeed: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, highFrequencyMotorSpeed: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

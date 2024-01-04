@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.conversationalagent;
 
 @:include("winrt/Windows.ApplicationModel.ConversationalAgent.h", true)
 @:native("winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationTrainingStatus")
-extern enum abstract DetectionConfigurationTrainingStatus(Int32)
+extern enum abstract DetectionConfigurationTrainingStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationTrainingStatus::Success") final Success;
     @:native("winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationTrainingStatus::FormatNotSupported") final FormatNotSupported;

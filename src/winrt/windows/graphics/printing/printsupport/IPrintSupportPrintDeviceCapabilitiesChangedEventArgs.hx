@@ -9,6 +9,6 @@ package winrt.windows.graphics.printing.printsupport;
 extern interface IPrintSupportPrintDeviceCapabilitiesChangedEventArgs extends winrt.windows.foundation.IInspectable
 {
     function GetCurrentPrintDeviceCapabilities(): winrt.windows.data.xml.dom.XmlDocument;
-    function UpdatePrintDeviceCapabilities(updatedPdc: ConstRef<winrt.windows.data.xml.dom.XmlDocument>): Void;
+    function UpdatePrintDeviceCapabilities(updatedPdc: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.data.xml.dom.XmlDocument>): Void;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

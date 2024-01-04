@@ -11,7 +11,7 @@ extern interface ISemanticZoomViewChangedEventArgs extends winrt.windows.foundat
     overload function IsSourceZoomedInView(): Bool;
     overload function IsSourceZoomedInView(value: Bool): Void;
     overload function SourceItem(): winrt.windows.ui.xaml.controls.SemanticZoomLocation;
-    overload function SourceItem(value: ConstRef<winrt.windows.ui.xaml.controls.SemanticZoomLocation>): Void;
+    overload function SourceItem(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.SemanticZoomLocation>): Void;
     overload function DestinationItem(): winrt.windows.ui.xaml.controls.SemanticZoomLocation;
-    overload function DestinationItem(value: ConstRef<winrt.windows.ui.xaml.controls.SemanticZoomLocation>): Void;
+    overload function DestinationItem(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.SemanticZoomLocation>): Void;
 }

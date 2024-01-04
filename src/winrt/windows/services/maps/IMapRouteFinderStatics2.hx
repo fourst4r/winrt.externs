@@ -8,5 +8,5 @@ package winrt.windows.services.maps;
 @:native("winrt::Windows::Services::Maps::IMapRouteFinderStatics2")
 extern interface IMapRouteFinderStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function GetDrivingRouteAsync(startPoint: ConstRef<winrt.windows.devices.geolocation.Geopoint>, endPoint: ConstRef<winrt.windows.devices.geolocation.Geopoint>, options: ConstRef<winrt.windows.services.maps.MapRouteDrivingOptions>): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.maps.MapRouteFinderResult> /* GenericTypeInstSig */;
+    function GetDrivingRouteAsync(startPoint: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.geolocation.Geopoint>, endPoint: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.geolocation.Geopoint>, options: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.services.maps.MapRouteDrivingOptions>): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.maps.MapRouteFinderResult> /* GenericTypeInstSig */;
 }

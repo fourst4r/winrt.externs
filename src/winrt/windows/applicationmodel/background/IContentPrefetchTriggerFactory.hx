@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.background;
 @:native("winrt::Windows::ApplicationModel::Background::IContentPrefetchTriggerFactory")
 extern interface IContentPrefetchTriggerFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(waitInterval: ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.applicationmodel.background.ContentPrefetchTrigger;
+    function Create(waitInterval: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): winrt.windows.applicationmodel.background.ContentPrefetchTrigger;
 }

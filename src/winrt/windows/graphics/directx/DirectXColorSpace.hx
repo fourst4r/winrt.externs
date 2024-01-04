@@ -2,7 +2,7 @@ package winrt.windows.graphics.directx;
 
 @:include("winrt/Windows.Graphics.DirectX.h", true)
 @:native("winrt::Windows::Graphics::DirectX::DirectXColorSpace")
-extern enum abstract DirectXColorSpace(Int32)
+extern enum abstract DirectXColorSpace(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Graphics::DirectX::DirectXColorSpace::RgbFullG22NoneP709") final RgbFullG22NoneP709;
     @:native("winrt::Windows::Graphics::DirectX::DirectXColorSpace::RgbFullG10NoneP709") final RgbFullG10NoneP709;

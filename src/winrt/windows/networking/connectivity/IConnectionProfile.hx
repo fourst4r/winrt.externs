@@ -14,7 +14,7 @@ extern interface IConnectionProfile extends winrt.windows.foundation.IInspectabl
     function GetConnectionCost(): winrt.windows.networking.connectivity.ConnectionCost;
     function GetDataPlanStatus(): winrt.windows.networking.connectivity.DataPlanStatus;
     overload function NetworkAdapter(): winrt.windows.networking.connectivity.NetworkAdapter;
-    overload function GetLocalUsage(StartTime: ConstRef<winrt.windows.foundation.DateTime>, EndTime: ConstRef<winrt.windows.foundation.DateTime>): winrt.windows.networking.connectivity.DataUsage;
-    overload function GetLocalUsage(StartTime: ConstRef<winrt.windows.foundation.DateTime>, EndTime: ConstRef<winrt.windows.foundation.DateTime>, States: ConstRef<winrt.windows.networking.connectivity.RoamingStates>): winrt.windows.networking.connectivity.DataUsage;
+    overload function GetLocalUsage(StartTime: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>, EndTime: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>): winrt.windows.networking.connectivity.DataUsage;
+    overload function GetLocalUsage(StartTime: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>, EndTime: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>, States: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.connectivity.RoamingStates>): winrt.windows.networking.connectivity.DataUsage;
     overload function NetworkSecuritySettings(): winrt.windows.networking.connectivity.NetworkSecuritySettings;
 }

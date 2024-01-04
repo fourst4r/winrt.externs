@@ -16,13 +16,13 @@ extern class LoopingSelectorAutomationPeer
     overload function CanSelectMultiple(): Bool;
     overload function IsSelectionRequired(): Bool;
     function GetSelection(): winrt.ComArray<winrt.microsoft.ui.xaml.automation.provider.IRawElementProviderSimple>;
-    function FindItemByProperty(startAfter: ConstRef<winrt.microsoft.ui.xaml.automation.provider.IRawElementProviderSimple>, automationProperty: ConstRef<winrt.microsoft.ui.xaml.automation.AutomationProperty>, value: ConstRef<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.automation.provider.IRawElementProviderSimple;
+    function FindItemByProperty(startAfter: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.automation.provider.IRawElementProviderSimple>, automationProperty: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.automation.AutomationProperty>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.automation.provider.IRawElementProviderSimple;
     overload function HorizontallyScrollable(): Bool;
-    overload function HorizontalScrollPercent(): Float64;
-    overload function HorizontalViewSize(): Float64;
+    overload function HorizontalScrollPercent(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function HorizontalViewSize(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function VerticallyScrollable(): Bool;
-    overload function VerticalScrollPercent(): Float64;
-    overload function VerticalViewSize(): Float64;
-    function Scroll(horizontalAmount: ConstRef<winrt.microsoft.ui.xaml.automation.ScrollAmount>, verticalAmount: ConstRef<winrt.microsoft.ui.xaml.automation.ScrollAmount>): Void;
-    function SetScrollPercent(horizontalPercent: Float64, verticalPercent: Float64): Void;
+    overload function VerticalScrollPercent(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function VerticalViewSize(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    function Scroll(horizontalAmount: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.automation.ScrollAmount>, verticalAmount: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.automation.ScrollAmount>): Void;
+    function SetScrollPercent(horizontalPercent: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, verticalPercent: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

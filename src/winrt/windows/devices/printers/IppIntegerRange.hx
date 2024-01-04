@@ -9,7 +9,7 @@ package winrt.windows.devices.printers;
 extern class IppIntegerRange
     implements winrt.windows.devices.printers.IIppIntegerRange
 {
-    function new(start: Int32, end: Int32);
-    overload function Start(): Int32;
-    overload function End(): Int32;
+    function new(start: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, end: #if reflaxe.cpp cxx.num. #else cpp. #end Int32);
+    overload function Start(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function End(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

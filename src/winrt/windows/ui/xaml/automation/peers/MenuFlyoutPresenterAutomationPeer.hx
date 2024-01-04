@@ -10,5 +10,5 @@ extern class MenuFlyoutPresenterAutomationPeer
     extends winrt.windows.ui.xaml.automation.peers.ItemsControlAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IMenuFlyoutPresenterAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.MenuFlyoutPresenter>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.MenuFlyoutPresenter>);
 }

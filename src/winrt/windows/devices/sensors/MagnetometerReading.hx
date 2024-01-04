@@ -11,9 +11,9 @@ extern class MagnetometerReading
     implements winrt.windows.devices.sensors.IMagnetometerReading2
 {
     overload function Timestamp(): winrt.windows.foundation.DateTime;
-    overload function MagneticFieldX(): Float32;
-    overload function MagneticFieldY(): Float32;
-    overload function MagneticFieldZ(): Float32;
+    overload function MagneticFieldX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function MagneticFieldY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function MagneticFieldZ(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
     overload function DirectionalAccuracy(): winrt.windows.devices.sensors.MagnetometerAccuracy;
     overload function PerformanceCount(): winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* GenericTypeInstSig */;
     overload function Properties(): winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;

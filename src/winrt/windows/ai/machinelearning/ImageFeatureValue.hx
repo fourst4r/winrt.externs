@@ -12,6 +12,6 @@ extern class ImageFeatureValue
 {
     overload function VideoFrame(): winrt.windows.media.VideoFrame;
     overload function Kind(): winrt.windows.ai.machinelearning.LearningModelFeatureKind;
-    function CreateFromVideoFrame(image: ConstRef<winrt.windows.media.VideoFrame>): winrt.windows.ai.machinelearning.ImageFeatureValue;
-    static function CreateFromVideoFrame(image: ConstRef<winrt.windows.media.VideoFrame>): winrt.windows.ai.machinelearning.ImageFeatureValue;
+    function CreateFromVideoFrame(image: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.VideoFrame>): winrt.windows.ai.machinelearning.ImageFeatureValue;
+    static function CreateFromVideoFrame(image: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.VideoFrame>): winrt.windows.ai.machinelearning.ImageFeatureValue;
 }

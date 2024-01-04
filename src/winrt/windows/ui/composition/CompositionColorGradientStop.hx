@@ -11,7 +11,7 @@ extern class CompositionColorGradientStop
     implements winrt.windows.ui.composition.ICompositionColorGradientStop
 {
     overload function Color(): winrt.windows.ui.Color;
-    overload function Color(value: ConstRef<winrt.windows.ui.Color>): Void;
-    overload function Offset(): Float32;
-    overload function Offset(value: Float32): Void;
+    overload function Color(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
+    overload function Offset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Offset(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
 }

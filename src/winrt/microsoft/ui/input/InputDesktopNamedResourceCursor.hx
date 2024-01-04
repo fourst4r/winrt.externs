@@ -12,8 +12,8 @@ extern class InputDesktopNamedResourceCursor
 {
     overload function ModuleName(): winrt.HString;
     overload function ResourceName(): winrt.HString;
-    function Create(resourceName: ConstRef<winrt.HString>): winrt.microsoft.ui.input.InputDesktopNamedResourceCursor;
-    function CreateFromModule(moduleName: ConstRef<winrt.HString>, resourceName: ConstRef<winrt.HString>): winrt.microsoft.ui.input.InputDesktopNamedResourceCursor;
-    static function Create(resourceName: ConstRef<winrt.HString>): winrt.microsoft.ui.input.InputDesktopNamedResourceCursor;
-    static function CreateFromModule(moduleName: ConstRef<winrt.HString>, resourceName: ConstRef<winrt.HString>): winrt.microsoft.ui.input.InputDesktopNamedResourceCursor;
+    function Create(resourceName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.microsoft.ui.input.InputDesktopNamedResourceCursor;
+    function CreateFromModule(moduleName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, resourceName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.microsoft.ui.input.InputDesktopNamedResourceCursor;
+    static function Create(resourceName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.microsoft.ui.input.InputDesktopNamedResourceCursor;
+    static function CreateFromModule(moduleName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, resourceName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.microsoft.ui.input.InputDesktopNamedResourceCursor;
 }

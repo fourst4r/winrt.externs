@@ -10,9 +10,9 @@ extern class AutoSuggestBoxHelper
     implements winrt.microsoft.ui.xaml.controls.primitives.IAutoSuggestBoxHelper
 {
     overload function KeepInteriorCornersSquareProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function SetKeepInteriorCornersSquare(autoSuggestBox: ConstRef<winrt.microsoft.ui.xaml.controls.AutoSuggestBox>, value: Bool): Void;
-    function GetKeepInteriorCornersSquare(autoSuggestBox: ConstRef<winrt.microsoft.ui.xaml.controls.AutoSuggestBox>): Bool;
+    function SetKeepInteriorCornersSquare(autoSuggestBox: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.AutoSuggestBox>, value: Bool): Void;
+    function GetKeepInteriorCornersSquare(autoSuggestBox: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.AutoSuggestBox>): Bool;
     static overload function KeepInteriorCornersSquareProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    static function SetKeepInteriorCornersSquare(autoSuggestBox: ConstRef<winrt.microsoft.ui.xaml.controls.AutoSuggestBox>, value: Bool): Void;
-    static function GetKeepInteriorCornersSquare(autoSuggestBox: ConstRef<winrt.microsoft.ui.xaml.controls.AutoSuggestBox>): Bool;
+    static function SetKeepInteriorCornersSquare(autoSuggestBox: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.AutoSuggestBox>, value: Bool): Void;
+    static function GetKeepInteriorCornersSquare(autoSuggestBox: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.AutoSuggestBox>): Bool;
 }

@@ -9,5 +9,5 @@ package winrt.windows.storage.provider;
 extern interface IStorageProviderSyncRootInfo2 extends winrt.windows.foundation.IInspectable
 {
     overload function ProviderId(): winrt.Guid;
-    overload function ProviderId(value: ConstRef<winrt.Guid>): Void;
+    overload function ProviderId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): Void;
 }

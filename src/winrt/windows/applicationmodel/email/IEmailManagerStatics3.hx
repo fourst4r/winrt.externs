@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.email;
 @:native("winrt::Windows::ApplicationModel::Email::IEmailManagerStatics3")
 extern interface IEmailManagerStatics3 extends winrt.windows.foundation.IInspectable
 {
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.applicationmodel.email.EmailManagerForUser;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.applicationmodel.email.EmailManagerForUser;
 }

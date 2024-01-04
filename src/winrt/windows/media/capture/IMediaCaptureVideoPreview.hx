@@ -9,7 +9,7 @@ package winrt.windows.media.capture;
 extern interface IMediaCaptureVideoPreview extends winrt.windows.foundation.IInspectable
 {
     function StartPreviewAsync(): winrt.windows.foundation.IAsyncAction;
-    overload function StartPreviewToCustomSinkAsync(encodingProfile: ConstRef<winrt.windows.media.mediaproperties.MediaEncodingProfile>, customMediaSink: ConstRef<winrt.windows.media.IMediaExtension>): winrt.windows.foundation.IAsyncAction;
-    overload function StartPreviewToCustomSinkAsync(encodingProfile: ConstRef<winrt.windows.media.mediaproperties.MediaEncodingProfile>, customSinkActivationId: ConstRef<winrt.HString>, customSinkSettings: ConstRef<winrt.windows.foundation.collections.IPropertySet>): winrt.windows.foundation.IAsyncAction;
+    overload function StartPreviewToCustomSinkAsync(encodingProfile: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.mediaproperties.MediaEncodingProfile>, customMediaSink: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.IMediaExtension>): winrt.windows.foundation.IAsyncAction;
+    overload function StartPreviewToCustomSinkAsync(encodingProfile: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.mediaproperties.MediaEncodingProfile>, customSinkActivationId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, customSinkSettings: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IPropertySet>): winrt.windows.foundation.IAsyncAction;
     function StopPreviewAsync(): winrt.windows.foundation.IAsyncAction;
 }

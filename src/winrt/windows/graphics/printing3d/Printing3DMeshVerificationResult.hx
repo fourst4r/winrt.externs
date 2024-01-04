@@ -10,6 +10,6 @@ extern class Printing3DMeshVerificationResult
     implements winrt.windows.graphics.printing3d.IPrinting3DMeshVerificationResult
 {
     overload function IsValid(): Bool;
-    overload function NonmanifoldTriangles(): winrt.windows.foundation.collections.IVectorView<UInt32> /* GenericTypeInstSig */;
-    overload function ReversedNormalTriangles(): winrt.windows.foundation.collections.IVectorView<UInt32> /* GenericTypeInstSig */;
+    overload function NonmanifoldTriangles(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
+    overload function ReversedNormalTriangles(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
 }

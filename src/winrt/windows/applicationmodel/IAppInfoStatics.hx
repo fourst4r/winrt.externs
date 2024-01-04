@@ -9,6 +9,6 @@ package winrt.windows.applicationmodel;
 extern interface IAppInfoStatics extends winrt.windows.foundation.IInspectable
 {
     overload function Current(): winrt.windows.applicationmodel.AppInfo;
-    function GetFromAppUserModelId(appUserModelId: ConstRef<winrt.HString>): winrt.windows.applicationmodel.AppInfo;
-    function GetFromAppUserModelIdForUser(user: ConstRef<winrt.windows.system.User>, appUserModelId: ConstRef<winrt.HString>): winrt.windows.applicationmodel.AppInfo;
+    function GetFromAppUserModelId(appUserModelId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.AppInfo;
+    function GetFromAppUserModelIdForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>, appUserModelId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.AppInfo;
 }

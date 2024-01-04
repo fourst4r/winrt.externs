@@ -8,5 +8,5 @@ package winrt.windows.devices.enumeration;
 @:native("winrt::Windows::Devices::Enumeration::IEnclosureLocation2")
 extern interface IEnclosureLocation2 extends winrt.windows.foundation.IInspectable
 {
-    overload function RotationAngleInDegreesClockwise(): UInt32;
+    overload function RotationAngleInDegreesClockwise(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

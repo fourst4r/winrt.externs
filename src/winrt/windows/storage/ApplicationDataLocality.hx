@@ -2,7 +2,7 @@ package winrt.windows.storage;
 
 @:include("winrt/Windows.Storage.h", true)
 @:native("winrt::Windows::Storage::ApplicationDataLocality")
-extern enum abstract ApplicationDataLocality(Int32)
+extern enum abstract ApplicationDataLocality(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Storage::ApplicationDataLocality::Local") final Local;
     @:native("winrt::Windows::Storage::ApplicationDataLocality::Roaming") final Roaming;

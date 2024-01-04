@@ -8,5 +8,5 @@ package winrt.windows.devices.bluetooth.genericattributeprofile;
 @:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattCharacteristicStatics")
 extern interface IGattCharacteristicStatics extends winrt.windows.foundation.IInspectable
 {
-    function ConvertShortIdToUuid(shortId: UInt16): winrt.Guid;
+    function ConvertShortIdToUuid(shortId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.Guid;
 }

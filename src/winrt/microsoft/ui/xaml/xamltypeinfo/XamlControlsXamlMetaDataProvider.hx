@@ -11,8 +11,8 @@ extern class XamlControlsXamlMetaDataProvider
     implements winrt.microsoft.ui.xaml.markup.IXamlMetadataProvider
 {
     function new();
-    overload function GetXamlType(type: ConstRef<winrt.windows.ui.xaml.interop.TypeName>): winrt.microsoft.ui.xaml.markup.IXamlType;
-    overload function GetXamlType(fullName: ConstRef<winrt.HString>): winrt.microsoft.ui.xaml.markup.IXamlType;
+    overload function GetXamlType(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.interop.TypeName>): winrt.microsoft.ui.xaml.markup.IXamlType;
+    overload function GetXamlType(fullName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.microsoft.ui.xaml.markup.IXamlType;
     function GetXmlnsDefinitions(): winrt.ComArray<winrt.microsoft.ui.xaml.markup.XmlnsDefinition>;
     function Initialize(): Void;
     static function Initialize(): Void;

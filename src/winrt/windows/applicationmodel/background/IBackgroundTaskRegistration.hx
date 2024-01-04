@@ -10,9 +10,9 @@ extern interface IBackgroundTaskRegistration extends winrt.windows.foundation.II
 {
     overload function TaskId(): winrt.Guid;
     overload function Name(): winrt.HString;
-    overload function Progress(handler: ConstRef<winrt.windows.applicationmodel.background.BackgroundTaskProgressEventHandler>): winrt.EventToken;
-    @:noExcept overload function Progress(cookie: ConstRef<winrt.EventToken>): Void;
-    overload function Completed(handler: ConstRef<winrt.windows.applicationmodel.background.BackgroundTaskCompletedEventHandler>): winrt.EventToken;
-    @:noExcept overload function Completed(cookie: ConstRef<winrt.EventToken>): Void;
+    overload function Progress(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.background.BackgroundTaskProgressEventHandler>): winrt.EventToken;
+    @:noExcept overload function Progress(cookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function Completed(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.background.BackgroundTaskCompletedEventHandler>): winrt.EventToken;
+    @:noExcept overload function Completed(cookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     function Unregister(cancelTask: Bool): Void;
 }

@@ -8,5 +8,5 @@ package winrt.windows.media.devices.core;
 @:native("winrt::Windows::Media::Devices::Core::ICameraIntrinsicsFactory")
 extern interface ICameraIntrinsicsFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(focalLength: ConstRef<winrt.windows.foundation.numerics.Vector2>, principalPoint: ConstRef<winrt.windows.foundation.numerics.Vector2>, radialDistortion: ConstRef<winrt.windows.foundation.numerics.Vector3>, tangentialDistortion: ConstRef<winrt.windows.foundation.numerics.Vector2>, imageWidth: UInt32, imageHeight: UInt32): winrt.windows.media.devices.core.CameraIntrinsics;
+    function Create(focalLength: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>, principalPoint: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>, radialDistortion: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector3>, tangentialDistortion: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>, imageWidth: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, imageHeight: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.media.devices.core.CameraIntrinsics;
 }

@@ -8,6 +8,6 @@ package winrt.microsoft.ui.composition;
 @:native("winrt::Microsoft::UI::Composition::ICompositionObjectStatics")
 extern interface ICompositionObjectStatics extends winrt.windows.foundation.IInspectable
 {
-    function StartAnimationWithIAnimationObject(target: ConstRef<winrt.microsoft.ui.composition.IAnimationObject>, propertyName: ConstRef<winrt.HString>, animation: ConstRef<winrt.microsoft.ui.composition.CompositionAnimation>): Void;
-    function StartAnimationGroupWithIAnimationObject(target: ConstRef<winrt.microsoft.ui.composition.IAnimationObject>, animation: ConstRef<winrt.microsoft.ui.composition.ICompositionAnimationBase>): Void;
+    function StartAnimationWithIAnimationObject(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.IAnimationObject>, propertyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, animation: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.CompositionAnimation>): Void;
+    function StartAnimationGroupWithIAnimationObject(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.IAnimationObject>, animation: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.ICompositionAnimationBase>): Void;
 }

@@ -9,6 +9,6 @@ package winrt.windows.globalization.numberformatting;
 extern interface ICurrencyFormatter2 extends winrt.windows.foundation.IInspectable
 {
     overload function Mode(): winrt.windows.globalization.numberformatting.CurrencyFormatterMode;
-    overload function Mode(value: ConstRef<winrt.windows.globalization.numberformatting.CurrencyFormatterMode>): Void;
-    function ApplyRoundingForCurrency(roundingAlgorithm: ConstRef<winrt.windows.globalization.numberformatting.RoundingAlgorithm>): Void;
+    overload function Mode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.globalization.numberformatting.CurrencyFormatterMode>): Void;
+    function ApplyRoundingForCurrency(roundingAlgorithm: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.globalization.numberformatting.RoundingAlgorithm>): Void;
 }

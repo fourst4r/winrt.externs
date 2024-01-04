@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.media.animation;
 extern interface INavigationTransitionInfoOverrides extends winrt.windows.foundation.IInspectable
 {
     function GetNavigationStateCore(): winrt.HString;
-    function SetNavigationStateCore(navigationState: ConstRef<winrt.HString>): Void;
+    function SetNavigationStateCore(navigationState: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

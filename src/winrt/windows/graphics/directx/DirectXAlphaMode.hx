@@ -2,7 +2,7 @@ package winrt.windows.graphics.directx;
 
 @:include("winrt/Windows.Graphics.DirectX.h", true)
 @:native("winrt::Windows::Graphics::DirectX::DirectXAlphaMode")
-extern enum abstract DirectXAlphaMode(Int32)
+extern enum abstract DirectXAlphaMode(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Graphics::DirectX::DirectXAlphaMode::Unspecified") final Unspecified;
     @:native("winrt::Windows::Graphics::DirectX::DirectXAlphaMode::Premultiplied") final Premultiplied;

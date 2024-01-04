@@ -10,8 +10,8 @@ extern class AddPackageDependencyOptions
     implements winrt.microsoft.windows.applicationmodel.dynamicdependency.IAddPackageDependencyOptions
 {
     function new();
-    overload function Rank(): Int32;
-    overload function Rank(value: Int32): Void;
+    overload function Rank(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Rank(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function PrependIfRankCollision(): Bool;
     overload function PrependIfRankCollision(value: Bool): Void;
 }

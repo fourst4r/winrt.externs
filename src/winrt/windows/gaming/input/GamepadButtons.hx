@@ -2,7 +2,7 @@ package winrt.windows.gaming.input;
 
 @:include("winrt/Windows.Gaming.Input.h", true)
 @:native("winrt::Windows::Gaming::Input::GamepadButtons")
-extern enum abstract GamepadButtons(UInt32)
+extern enum abstract GamepadButtons(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::Gaming::Input::GamepadButtons::None") final None;
     @:native("winrt::Windows::Gaming::Input::GamepadButtons::Menu") final Menu;

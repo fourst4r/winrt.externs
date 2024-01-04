@@ -10,7 +10,7 @@ extern interface IMediaPlaybackItem3 extends winrt.windows.foundation.IInspectab
 {
     overload function IsDisabledInPlaybackList(): Bool;
     overload function IsDisabledInPlaybackList(value: Bool): Void;
-    overload function TotalDownloadProgress(): Float64;
+    overload function TotalDownloadProgress(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function AutoLoadedDisplayProperties(): winrt.windows.media.playback.AutoLoadedDisplayPropertyKind;
-    overload function AutoLoadedDisplayProperties(value: ConstRef<winrt.windows.media.playback.AutoLoadedDisplayPropertyKind>): Void;
+    overload function AutoLoadedDisplayProperties(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.playback.AutoLoadedDisplayPropertyKind>): Void;
 }

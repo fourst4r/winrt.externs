@@ -8,5 +8,5 @@ package winrt.windows.graphics.imaging;
 @:native("winrt::Windows::Graphics::Imaging::IBitmapEncoderWithSoftwareBitmap")
 extern interface IBitmapEncoderWithSoftwareBitmap extends winrt.windows.foundation.IInspectable
 {
-    function SetSoftwareBitmap(bitmap: ConstRef<winrt.windows.graphics.imaging.SoftwareBitmap>): Void;
+    function SetSoftwareBitmap(bitmap: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.imaging.SoftwareBitmap>): Void;
 }

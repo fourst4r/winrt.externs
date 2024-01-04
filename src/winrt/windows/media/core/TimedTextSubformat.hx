@@ -10,10 +10,10 @@ extern class TimedTextSubformat
     implements winrt.windows.media.core.ITimedTextSubformat
 {
     function new();
-    overload function StartIndex(): Int32;
-    overload function StartIndex(value: Int32): Void;
-    overload function Length(): Int32;
-    overload function Length(value: Int32): Void;
+    overload function StartIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function StartIndex(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
+    overload function Length(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Length(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function SubformatStyle(): winrt.windows.media.core.TimedTextStyle;
-    overload function SubformatStyle(value: ConstRef<winrt.windows.media.core.TimedTextStyle>): Void;
+    overload function SubformatStyle(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.TimedTextStyle>): Void;
 }

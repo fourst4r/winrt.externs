@@ -10,6 +10,6 @@ extern class RemoteSystemConnectionInfo
     implements winrt.windows.system.remotesystems.IRemoteSystemConnectionInfo
 {
     overload function IsProximal(): Bool;
-    function TryCreateFromAppServiceConnection(connection: ConstRef<winrt.windows.applicationmodel.appservice.AppServiceConnection>): winrt.windows.system.remotesystems.RemoteSystemConnectionInfo;
-    static function TryCreateFromAppServiceConnection(connection: ConstRef<winrt.windows.applicationmodel.appservice.AppServiceConnection>): winrt.windows.system.remotesystems.RemoteSystemConnectionInfo;
+    function TryCreateFromAppServiceConnection(connection: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.appservice.AppServiceConnection>): winrt.windows.system.remotesystems.RemoteSystemConnectionInfo;
+    static function TryCreateFromAppServiceConnection(connection: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.appservice.AppServiceConnection>): winrt.windows.system.remotesystems.RemoteSystemConnectionInfo;
 }

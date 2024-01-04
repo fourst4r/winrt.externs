@@ -9,7 +9,7 @@ package winrt.windows.ui.notifications;
 extern interface IToastNotification4 extends winrt.windows.foundation.IInspectable
 {
     overload function Data(): winrt.windows.ui.notifications.NotificationData;
-    overload function Data(value: ConstRef<winrt.windows.ui.notifications.NotificationData>): Void;
+    overload function Data(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.notifications.NotificationData>): Void;
     overload function Priority(): winrt.windows.ui.notifications.ToastNotificationPriority;
-    overload function Priority(value: ConstRef<winrt.windows.ui.notifications.ToastNotificationPriority>): Void;
+    overload function Priority(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.notifications.ToastNotificationPriority>): Void;
 }

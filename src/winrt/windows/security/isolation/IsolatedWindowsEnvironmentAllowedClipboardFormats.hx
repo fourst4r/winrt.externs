@@ -2,7 +2,7 @@ package winrt.windows.security.isolation;
 
 @:include("winrt/Windows.Security.Isolation.h", true)
 @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats")
-extern enum abstract IsolatedWindowsEnvironmentAllowedClipboardFormats(UInt32)
+extern enum abstract IsolatedWindowsEnvironmentAllowedClipboardFormats(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats::None") final None;
     @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats::Text") final Text;

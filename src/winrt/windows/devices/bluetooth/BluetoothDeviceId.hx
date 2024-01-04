@@ -12,6 +12,6 @@ extern class BluetoothDeviceId
     overload function Id(): winrt.HString;
     overload function IsClassicDevice(): Bool;
     overload function IsLowEnergyDevice(): Bool;
-    function FromId(deviceId: ConstRef<winrt.HString>): winrt.windows.devices.bluetooth.BluetoothDeviceId;
-    static function FromId(deviceId: ConstRef<winrt.HString>): winrt.windows.devices.bluetooth.BluetoothDeviceId;
+    function FromId(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.devices.bluetooth.BluetoothDeviceId;
+    static function FromId(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.devices.bluetooth.BluetoothDeviceId;
 }

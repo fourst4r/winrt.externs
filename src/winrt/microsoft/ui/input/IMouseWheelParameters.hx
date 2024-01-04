@@ -9,11 +9,11 @@ package winrt.microsoft.ui.input;
 extern interface IMouseWheelParameters extends winrt.windows.foundation.IInspectable
 {
     overload function CharTranslation(): winrt.windows.foundation.Point;
-    overload function CharTranslation(value: ConstRef<winrt.windows.foundation.Point>): Void;
-    overload function DeltaScale(): Float32;
-    overload function DeltaScale(value: Float32): Void;
-    overload function DeltaRotationAngle(): Float32;
-    overload function DeltaRotationAngle(value: Float32): Void;
+    overload function CharTranslation(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
+    overload function DeltaScale(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function DeltaScale(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function DeltaRotationAngle(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function DeltaRotationAngle(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
     overload function PageTranslation(): winrt.windows.foundation.Point;
-    overload function PageTranslation(value: ConstRef<winrt.windows.foundation.Point>): Void;
+    overload function PageTranslation(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
 }

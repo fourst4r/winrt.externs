@@ -9,5 +9,5 @@ package winrt.windows.ui.composition;
 extern interface ISpriteVisual2 extends winrt.windows.foundation.IInspectable
 {
     overload function Shadow(): winrt.windows.ui.composition.CompositionShadow;
-    overload function Shadow(value: ConstRef<winrt.windows.ui.composition.CompositionShadow>): Void;
+    overload function Shadow(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionShadow>): Void;
 }

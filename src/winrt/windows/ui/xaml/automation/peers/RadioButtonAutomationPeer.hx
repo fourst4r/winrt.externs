@@ -11,7 +11,7 @@ extern class RadioButtonAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IRadioButtonAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.ISelectionItemProvider
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.RadioButton>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.RadioButton>);
     overload function IsSelected(): Bool;
     overload function SelectionContainer(): winrt.windows.ui.xaml.automation.provider.IRawElementProviderSimple;
     function AddToSelection(): Void;

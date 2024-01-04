@@ -8,6 +8,6 @@ package winrt.windows.devices.sensors;
 @:native("winrt::Windows::Devices::Sensors::IInclinometerStatics4")
 extern interface IInclinometerStatics4 extends winrt.windows.foundation.IInspectable
 {
-    function GetDeviceSelector(readingType: ConstRef<winrt.windows.devices.sensors.SensorReadingType>): winrt.HString;
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.sensors.Inclinometer> /* GenericTypeInstSig */;
+    function GetDeviceSelector(readingType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.sensors.SensorReadingType>): winrt.HString;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.sensors.Inclinometer> /* GenericTypeInstSig */;
 }

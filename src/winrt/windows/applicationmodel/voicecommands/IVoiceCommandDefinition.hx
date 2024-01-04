@@ -10,5 +10,5 @@ extern interface IVoiceCommandDefinition extends winrt.windows.foundation.IInspe
 {
     overload function Language(): winrt.HString;
     overload function Name(): winrt.HString;
-    function SetPhraseListAsync(phraseListName: ConstRef<winrt.HString>, phraseList: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncAction;
+    function SetPhraseListAsync(phraseListName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, phraseList: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncAction;
 }

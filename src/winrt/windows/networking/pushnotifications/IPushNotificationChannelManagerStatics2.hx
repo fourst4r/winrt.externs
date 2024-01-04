@@ -8,5 +8,5 @@ package winrt.windows.networking.pushnotifications;
 @:native("winrt::Windows::Networking::PushNotifications::IPushNotificationChannelManagerStatics2")
 extern interface IPushNotificationChannelManagerStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.networking.pushnotifications.PushNotificationChannelManagerForUser;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.networking.pushnotifications.PushNotificationChannelManagerForUser;
 }

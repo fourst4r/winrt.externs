@@ -8,5 +8,5 @@ package winrt.windows.devices.alljoyn;
 @:native("winrt::Windows::Devices::AllJoyn::IAllJoynMessageInfoFactory")
 extern interface IAllJoynMessageInfoFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(senderUniqueName: ConstRef<winrt.HString>): winrt.windows.devices.alljoyn.AllJoynMessageInfo;
+    function Create(senderUniqueName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.devices.alljoyn.AllJoynMessageInfo;
 }

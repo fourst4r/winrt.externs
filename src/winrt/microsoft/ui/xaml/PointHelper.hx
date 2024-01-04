@@ -9,6 +9,6 @@ package winrt.microsoft.ui.xaml;
 extern class PointHelper
     implements winrt.microsoft.ui.xaml.IPointHelper
 {
-    function FromCoordinates(x: Float32, y: Float32): winrt.windows.foundation.Point;
-    static function FromCoordinates(x: Float32, y: Float32): winrt.windows.foundation.Point;
+    function FromCoordinates(x: #if reflaxe.cpp cxx.num. #else cpp. #end Float32, y: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): winrt.windows.foundation.Point;
+    static function FromCoordinates(x: #if reflaxe.cpp cxx.num. #else cpp. #end Float32, y: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): winrt.windows.foundation.Point;
 }

@@ -2,7 +2,7 @@ package winrt.windows.storage.search;
 
 @:include("winrt/Windows.Storage.Search.h", true)
 @:native("winrt::Windows::Storage::Search::IndexerOption")
-extern enum abstract IndexerOption(Int32)
+extern enum abstract IndexerOption(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Storage::Search::IndexerOption::UseIndexerWhenAvailable") final UseIndexerWhenAvailable;
     @:native("winrt::Windows::Storage::Search::IndexerOption::OnlyUseIndexer") final OnlyUseIndexer;

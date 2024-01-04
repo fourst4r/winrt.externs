@@ -10,12 +10,12 @@ extern class FocusSessionManager
     implements winrt.windows.ui.shell.IFocusSessionManager
 {
     overload function IsFocusActive(): Bool;
-    function GetSession(id: ConstRef<winrt.HString>): winrt.windows.ui.shell.FocusSession;
+    function GetSession(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.shell.FocusSession;
     overload function TryStartFocusSession(): winrt.windows.ui.shell.FocusSession;
-    overload function TryStartFocusSession(endTime: ConstRef<winrt.windows.foundation.DateTime>): winrt.windows.ui.shell.FocusSession;
+    overload function TryStartFocusSession(endTime: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>): winrt.windows.ui.shell.FocusSession;
     function DeactivateFocus(): Void;
-    overload function IsFocusActiveChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.shell.FocusSessionManager, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function IsFocusActiveChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function IsFocusActiveChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.shell.FocusSessionManager, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function IsFocusActiveChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     function GetDefault(): winrt.windows.ui.shell.FocusSessionManager;
     overload function IsSupported(): Bool;
     static function GetDefault(): winrt.windows.ui.shell.FocusSessionManager;

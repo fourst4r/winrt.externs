@@ -10,10 +10,10 @@ extern class Printing3DFaceReductionOptions
     implements winrt.windows.graphics.printing3d.IPrinting3DFaceReductionOptions
 {
     function new();
-    overload function MaxReductionArea(): Float64;
-    overload function MaxReductionArea(value: Float64): Void;
-    overload function TargetTriangleCount(): UInt32;
-    overload function TargetTriangleCount(value: UInt32): Void;
-    overload function MaxEdgeLength(): Float64;
-    overload function MaxEdgeLength(value: Float64): Void;
+    overload function MaxReductionArea(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function MaxReductionArea(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function TargetTriangleCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function TargetTriangleCount(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function MaxEdgeLength(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function MaxEdgeLength(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

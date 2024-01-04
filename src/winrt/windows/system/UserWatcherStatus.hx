@@ -2,7 +2,7 @@ package winrt.windows.system;
 
 @:include("winrt/Windows.System.h", true)
 @:native("winrt::Windows::System::UserWatcherStatus")
-extern enum abstract UserWatcherStatus(Int32)
+extern enum abstract UserWatcherStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::System::UserWatcherStatus::Created") final Created;
     @:native("winrt::Windows::System::UserWatcherStatus::Started") final Started;

@@ -10,5 +10,5 @@ extern interface IPackageVolume2 extends winrt.windows.foundation.IInspectable
 {
     overload function IsFullTrustPackageSupported(): Bool;
     overload function IsAppxInstallSupported(): Bool;
-    function GetAvailableSpaceAsync(): winrt.windows.foundation.IAsyncOperation<UInt64> /* GenericTypeInstSig */;
+    function GetAvailableSpaceAsync(): winrt.windows.foundation.IAsyncOperation<#if reflaxe.cpp cxx.num. #else cpp. #end UInt64> /* GenericTypeInstSig */;
 }

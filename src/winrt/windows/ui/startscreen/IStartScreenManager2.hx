@@ -8,6 +8,6 @@ package winrt.windows.ui.startscreen;
 @:native("winrt::Windows::UI::StartScreen::IStartScreenManager2")
 extern interface IStartScreenManager2 extends winrt.windows.foundation.IInspectable
 {
-    function ContainsSecondaryTileAsync(tileId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
-    function TryRemoveSecondaryTileAsync(tileId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function ContainsSecondaryTileAsync(tileId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function TryRemoveSecondaryTileAsync(tileId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

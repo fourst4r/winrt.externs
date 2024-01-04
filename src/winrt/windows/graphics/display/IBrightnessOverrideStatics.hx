@@ -10,5 +10,5 @@ extern interface IBrightnessOverrideStatics extends winrt.windows.foundation.IIn
 {
     function GetDefaultForSystem(): winrt.windows.graphics.display.BrightnessOverride;
     function GetForCurrentView(): winrt.windows.graphics.display.BrightnessOverride;
-    function SaveForSystemAsync(value: ConstRef<winrt.windows.graphics.display.BrightnessOverride>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function SaveForSystemAsync(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.display.BrightnessOverride>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

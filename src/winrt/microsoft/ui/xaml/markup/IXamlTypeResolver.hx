@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml.markup;
 @:native("winrt::Microsoft::UI::Xaml::Markup::IXamlTypeResolver")
 extern interface IXamlTypeResolver extends winrt.windows.foundation.IInspectable
 {
-    function Resolve(qualifiedTypeName: ConstRef<winrt.HString>): winrt.windows.ui.xaml.interop.TypeName;
+    function Resolve(qualifiedTypeName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.xaml.interop.TypeName;
 }

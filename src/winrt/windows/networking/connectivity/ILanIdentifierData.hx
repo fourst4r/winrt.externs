@@ -8,6 +8,6 @@ package winrt.windows.networking.connectivity;
 @:native("winrt::Windows::Networking::Connectivity::ILanIdentifierData")
 extern interface ILanIdentifierData extends winrt.windows.foundation.IInspectable
 {
-    overload function Type(): UInt32;
-    overload function Value(): winrt.windows.foundation.collections.IVectorView<UInt8> /* GenericTypeInstSig */;
+    overload function Type(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Value(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8> /* GenericTypeInstSig */;
 }

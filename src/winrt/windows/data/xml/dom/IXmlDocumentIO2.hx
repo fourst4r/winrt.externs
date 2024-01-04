@@ -8,6 +8,6 @@ package winrt.windows.data.xml.dom;
 @:native("winrt::Windows::Data::Xml::Dom::IXmlDocumentIO2")
 extern interface IXmlDocumentIO2 extends winrt.windows.foundation.IInspectable
 {
-    overload function LoadXmlFromBuffer(buffer: ConstRef<winrt.windows.storage.streams.IBuffer>): Void;
-    overload function LoadXmlFromBuffer(buffer: ConstRef<winrt.windows.storage.streams.IBuffer>, loadSettings: ConstRef<winrt.windows.data.xml.dom.XmlLoadSettings>): Void;
+    overload function LoadXmlFromBuffer(buffer: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): Void;
+    overload function LoadXmlFromBuffer(buffer: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>, loadSettings: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.data.xml.dom.XmlLoadSettings>): Void;
 }

@@ -9,6 +9,6 @@ package winrt.microsoft.web.webview2.core;
 extern class CoreWebView2ProcessInfo
     implements winrt.microsoft.web.webview2.core.ICoreWebView2ProcessInfo
 {
-    overload function ProcessId(): Int32;
+    overload function ProcessId(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function Kind(): winrt.microsoft.web.webview2.core.CoreWebView2ProcessKind;
 }

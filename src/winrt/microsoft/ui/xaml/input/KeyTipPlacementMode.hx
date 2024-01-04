@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.input;
 
 @:include("winrt/Microsoft.UI.Xaml.Input.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Input::KeyTipPlacementMode")
-extern enum abstract KeyTipPlacementMode(Int32)
+extern enum abstract KeyTipPlacementMode(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Input::KeyTipPlacementMode::Auto") final Auto;
     @:native("winrt::Microsoft::UI::Xaml::Input::KeyTipPlacementMode::Bottom") final Bottom;

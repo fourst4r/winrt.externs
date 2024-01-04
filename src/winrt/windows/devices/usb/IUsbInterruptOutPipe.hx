@@ -10,7 +10,7 @@ extern interface IUsbInterruptOutPipe extends winrt.windows.foundation.IInspecta
 {
     overload function EndpointDescriptor(): winrt.windows.devices.usb.UsbInterruptOutEndpointDescriptor;
     function ClearStallAsync(): winrt.windows.foundation.IAsyncAction;
-    overload function WriteOptions(value: ConstRef<winrt.windows.devices.usb.UsbWriteOptions>): Void;
+    overload function WriteOptions(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.usb.UsbWriteOptions>): Void;
     overload function WriteOptions(): winrt.windows.devices.usb.UsbWriteOptions;
     overload function OutputStream(): winrt.windows.storage.streams.IOutputStream;
 }

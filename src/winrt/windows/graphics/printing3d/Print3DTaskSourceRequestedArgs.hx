@@ -9,5 +9,5 @@ package winrt.windows.graphics.printing3d;
 extern class Print3DTaskSourceRequestedArgs
     implements winrt.windows.graphics.printing3d.IPrint3DTaskSourceRequestedArgs
 {
-    function SetSource(source: ConstRef<winrt.windows.graphics.printing3d.Printing3D3MFPackage>): Void;
+    function SetSource(source: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing3d.Printing3D3MFPackage>): Void;
 }

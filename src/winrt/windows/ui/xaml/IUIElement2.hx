@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml;
 extern interface IUIElement2 extends winrt.windows.foundation.IInspectable
 {
     overload function CompositeMode(): winrt.windows.ui.xaml.media.ElementCompositeMode;
-    overload function CompositeMode(value: ConstRef<winrt.windows.ui.xaml.media.ElementCompositeMode>): Void;
+    overload function CompositeMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.ElementCompositeMode>): Void;
     function CancelDirectManipulations(): Bool;
 }

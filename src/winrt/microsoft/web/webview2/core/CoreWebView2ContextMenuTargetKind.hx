@@ -2,7 +2,7 @@ package winrt.microsoft.web.webview2.core;
 
 @:include("winrt/Microsoft.Web.WebView2.Core.h", true)
 @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTargetKind")
-extern enum abstract CoreWebView2ContextMenuTargetKind(Int32)
+extern enum abstract CoreWebView2ContextMenuTargetKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTargetKind::Page") final Page;
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2ContextMenuTargetKind::Image") final Image;

@@ -8,5 +8,5 @@ package winrt.windows.media.playto;
 @:native("winrt::Windows::Media::PlayTo::IVolumeChangeRequestedEventArgs")
 extern interface IVolumeChangeRequestedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function Volume(): Float64;
+    overload function Volume(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

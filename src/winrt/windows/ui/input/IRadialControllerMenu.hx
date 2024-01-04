@@ -12,6 +12,6 @@ extern interface IRadialControllerMenu extends winrt.windows.foundation.IInspect
     overload function IsEnabled(): Bool;
     overload function IsEnabled(value: Bool): Void;
     function GetSelectedMenuItem(): winrt.windows.ui.input.RadialControllerMenuItem;
-    function SelectMenuItem(menuItem: ConstRef<winrt.windows.ui.input.RadialControllerMenuItem>): Void;
+    function SelectMenuItem(menuItem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.RadialControllerMenuItem>): Void;
     function TrySelectPreviouslySelectedMenuItem(): Bool;
 }

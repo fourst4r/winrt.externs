@@ -8,5 +8,5 @@ package winrt.windows.devices.alljoyn;
 @:native("winrt::Windows::Devices::AllJoyn::IAllJoynSessionLostEventArgsFactory")
 extern interface IAllJoynSessionLostEventArgsFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(reason: ConstRef<winrt.windows.devices.alljoyn.AllJoynSessionLostReason>): winrt.windows.devices.alljoyn.AllJoynSessionLostEventArgs;
+    function Create(reason: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.alljoyn.AllJoynSessionLostReason>): winrt.windows.devices.alljoyn.AllJoynSessionLostEventArgs;
 }

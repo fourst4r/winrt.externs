@@ -9,7 +9,7 @@ package winrt.windows.gaming.xboxlive.storage;
 extern interface IGameSaveContainerInfo extends winrt.windows.foundation.IInspectable
 {
     overload function Name(): winrt.HString;
-    overload function TotalSize(): UInt64;
+    overload function TotalSize(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
     overload function DisplayName(): winrt.HString;
     overload function LastModifiedTime(): winrt.windows.foundation.DateTime;
     overload function NeedsSync(): Bool;

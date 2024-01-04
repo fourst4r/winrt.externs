@@ -9,7 +9,7 @@ package winrt.windows.ui.notifications;
 extern interface IToastNotificationManagerForUser extends winrt.windows.foundation.IInspectable
 {
     overload function CreateToastNotifier(): winrt.windows.ui.notifications.ToastNotifier;
-    overload function CreateToastNotifier(applicationId: ConstRef<winrt.HString>): winrt.windows.ui.notifications.ToastNotifier;
+    overload function CreateToastNotifier(applicationId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.notifications.ToastNotifier;
     overload function History(): winrt.windows.ui.notifications.ToastNotificationHistory;
     overload function User(): winrt.windows.system.User;
 }

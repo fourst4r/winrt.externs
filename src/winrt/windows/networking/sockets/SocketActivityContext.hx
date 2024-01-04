@@ -9,6 +9,6 @@ package winrt.windows.networking.sockets;
 extern class SocketActivityContext
     implements winrt.windows.networking.sockets.ISocketActivityContext
 {
-    /* explicit */ function new(data: ConstRef<winrt.windows.storage.streams.IBuffer>);
+    /* explicit */ function new(data: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>);
     overload function Data(): winrt.windows.storage.streams.IBuffer;
 }

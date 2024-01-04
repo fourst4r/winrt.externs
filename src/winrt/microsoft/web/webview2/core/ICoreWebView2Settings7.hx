@@ -9,5 +9,5 @@ package winrt.microsoft.web.webview2.core;
 extern interface ICoreWebView2Settings7 extends winrt.windows.foundation.IInspectable
 {
     overload function HiddenPdfToolbarItems(): winrt.microsoft.web.webview2.core.CoreWebView2PdfToolbarItems;
-    overload function HiddenPdfToolbarItems(value: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2PdfToolbarItems>): Void;
+    overload function HiddenPdfToolbarItems(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.CoreWebView2PdfToolbarItems>): Void;
 }

@@ -2,7 +2,7 @@ package winrt.microsoft.web.webview2.core;
 
 @:include("winrt/Microsoft.Web.WebView2.Core.h", true)
 @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedReason")
-extern enum abstract CoreWebView2ProcessFailedReason(Int32)
+extern enum abstract CoreWebView2ProcessFailedReason(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedReason::Unexpected") final Unexpected;
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedReason::Unresponsive") final Unresponsive;

@@ -2,7 +2,7 @@ package winrt.windows.ui.notifications;
 
 @:include("winrt/Windows.UI.Notifications.h", true)
 @:native("winrt::Windows::UI::Notifications::ToastTemplateType")
-extern enum abstract ToastTemplateType(Int32)
+extern enum abstract ToastTemplateType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Notifications::ToastTemplateType::ToastImageAndText01") final ToastImageAndText01;
     @:native("winrt::Windows::UI::Notifications::ToastTemplateType::ToastImageAndText02") final ToastImageAndText02;

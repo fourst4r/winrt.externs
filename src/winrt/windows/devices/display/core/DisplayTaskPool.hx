@@ -11,6 +11,6 @@ extern class DisplayTaskPool
     implements winrt.windows.devices.display.core.IDisplayTaskPool2
 {
     function CreateTask(): winrt.windows.devices.display.core.DisplayTask;
-    function ExecuteTask(task: ConstRef<winrt.windows.devices.display.core.DisplayTask>): Void;
-    function TryExecuteTask(task: ConstRef<winrt.windows.devices.display.core.DisplayTask>): winrt.windows.devices.display.core.DisplayTaskResult;
+    function ExecuteTask(task: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.display.core.DisplayTask>): Void;
+    function TryExecuteTask(task: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.display.core.DisplayTask>): winrt.windows.devices.display.core.DisplayTaskResult;
 }

@@ -22,9 +22,9 @@ extern interface IXamlType extends winrt.windows.foundation.IInspectable
     overload function BoxedType(): winrt.microsoft.ui.xaml.markup.IXamlType;
     overload function UnderlyingType(): winrt.windows.ui.xaml.interop.TypeName;
     function ActivateInstance(): winrt.windows.foundation.IInspectable;
-    function CreateFromString(value: ConstRef<winrt.HString>): winrt.windows.foundation.IInspectable;
-    function GetMember(name: ConstRef<winrt.HString>): winrt.microsoft.ui.xaml.markup.IXamlMember;
-    function AddToVector(instance: ConstRef<winrt.windows.foundation.IInspectable>, value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
-    function AddToMap(instance: ConstRef<winrt.windows.foundation.IInspectable>, key: ConstRef<winrt.windows.foundation.IInspectable>, value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    function CreateFromString(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IInspectable;
+    function GetMember(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.microsoft.ui.xaml.markup.IXamlMember;
+    function AddToVector(instance: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
+    function AddToMap(instance: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, key: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
     function RunInitializer(): Void;
 }

@@ -11,7 +11,7 @@ extern class TensorFeatureDescriptor
     implements winrt.windows.ai.machinelearning.ILearningModelFeatureDescriptor
 {
     overload function TensorKind(): winrt.windows.ai.machinelearning.TensorKind;
-    overload function Shape(): winrt.windows.foundation.collections.IVectorView<Int64> /* GenericTypeInstSig */;
+    overload function Shape(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end Int64> /* GenericTypeInstSig */;
     overload function Name(): winrt.HString;
     overload function Description(): winrt.HString;
     overload function Kind(): winrt.windows.ai.machinelearning.LearningModelFeatureKind;

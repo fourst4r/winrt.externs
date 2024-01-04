@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml;
 extern interface IDataTemplateStatics2 extends winrt.windows.foundation.IInspectable
 {
     overload function ExtensionInstanceProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetExtensionInstance(element: ConstRef<winrt.windows.ui.xaml.FrameworkElement>): winrt.windows.ui.xaml.IDataTemplateExtension;
-    function SetExtensionInstance(element: ConstRef<winrt.windows.ui.xaml.FrameworkElement>, value: ConstRef<winrt.windows.ui.xaml.IDataTemplateExtension>): Void;
+    function GetExtensionInstance(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.FrameworkElement>): winrt.windows.ui.xaml.IDataTemplateExtension;
+    function SetExtensionInstance(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.FrameworkElement>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.IDataTemplateExtension>): Void;
 }

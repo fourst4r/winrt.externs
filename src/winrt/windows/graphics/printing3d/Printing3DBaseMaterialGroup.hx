@@ -9,7 +9,7 @@ package winrt.windows.graphics.printing3d;
 extern class Printing3DBaseMaterialGroup
     implements winrt.windows.graphics.printing3d.IPrinting3DBaseMaterialGroup
 {
-    /* explicit */ function new(MaterialGroupId: UInt32);
+    /* explicit */ function new(MaterialGroupId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32);
     overload function Bases(): winrt.windows.foundation.collections.IVector<winrt.windows.graphics.printing3d.Printing3DBaseMaterial> /* GenericTypeInstSig */;
-    overload function MaterialGroupId(): UInt32;
+    overload function MaterialGroupId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

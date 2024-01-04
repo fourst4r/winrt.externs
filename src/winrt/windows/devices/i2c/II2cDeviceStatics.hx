@@ -9,6 +9,6 @@ package winrt.windows.devices.i2c;
 extern interface II2cDeviceStatics extends winrt.windows.foundation.IInspectable
 {
     overload function GetDeviceSelector(): winrt.HString;
-    overload function GetDeviceSelector(friendlyName: ConstRef<winrt.HString>): winrt.HString;
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>, settings: ConstRef<winrt.windows.devices.i2c.I2cConnectionSettings>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.i2c.I2cDevice> /* GenericTypeInstSig */;
+    overload function GetDeviceSelector(friendlyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.HString;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, settings: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.i2c.I2cConnectionSettings>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.i2c.I2cDevice> /* GenericTypeInstSig */;
 }

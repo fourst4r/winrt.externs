@@ -13,15 +13,15 @@ extern class PrintQualityOptionDetails
 {
     overload function OptionId(): winrt.HString;
     overload function OptionType(): winrt.windows.graphics.printing.optiondetails.PrintOptionType;
-    overload function ErrorText(value: ConstRef<winrt.HString>): Void;
+    overload function ErrorText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function ErrorText(): winrt.HString;
-    overload function State(value: ConstRef<winrt.windows.graphics.printing.optiondetails.PrintOptionStates>): Void;
+    overload function State(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing.optiondetails.PrintOptionStates>): Void;
     overload function State(): winrt.windows.graphics.printing.optiondetails.PrintOptionStates;
     overload function Value(): winrt.windows.foundation.IInspectable;
-    function TrySetValue(value: ConstRef<winrt.windows.foundation.IInspectable>): Bool;
+    function TrySetValue(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Bool;
     overload function Items(): winrt.windows.foundation.collections.IVectorView<winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;
-    overload function WarningText(value: ConstRef<winrt.HString>): Void;
+    overload function WarningText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function WarningText(): winrt.HString;
-    overload function Description(value: ConstRef<winrt.HString>): Void;
+    overload function Description(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Description(): winrt.HString;
 }

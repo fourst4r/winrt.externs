@@ -9,6 +9,6 @@ package winrt.windows.web.ui;
 extern interface IWebViewControlNewWindowRequestedEventArgs2 extends winrt.windows.foundation.IInspectable
 {
     overload function NewWindow(): winrt.windows.web.ui.IWebViewControl;
-    overload function NewWindow(value: ConstRef<winrt.windows.web.ui.IWebViewControl>): Void;
+    overload function NewWindow(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.ui.IWebViewControl>): Void;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

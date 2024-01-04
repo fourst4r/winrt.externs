@@ -8,5 +8,5 @@ package winrt.windows.ui.input.inking;
 @:native("winrt::Windows::UI::Input::Inking::IPenAndInkSettings2")
 extern interface IPenAndInkSettings2 extends winrt.windows.foundation.IInspectable
 {
-    function SetPenHandedness(value: ConstRef<winrt.windows.ui.input.inking.PenHandedness>): Void;
+    function SetPenHandedness(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.inking.PenHandedness>): Void;
 }

@@ -12,23 +12,23 @@ extern class InfoBarPanel
 {
     function new();
     overload function HorizontalOrientationPadding(): winrt.microsoft.ui.xaml.Thickness;
-    overload function HorizontalOrientationPadding(value: ConstRef<winrt.microsoft.ui.xaml.Thickness>): Void;
+    overload function HorizontalOrientationPadding(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.Thickness>): Void;
     overload function VerticalOrientationPadding(): winrt.microsoft.ui.xaml.Thickness;
-    overload function VerticalOrientationPadding(value: ConstRef<winrt.microsoft.ui.xaml.Thickness>): Void;
+    overload function VerticalOrientationPadding(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.Thickness>): Void;
     overload function HorizontalOrientationPaddingProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function VerticalOrientationPaddingProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function SetHorizontalOrientationMargin(object: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>, value: ConstRef<winrt.microsoft.ui.xaml.Thickness>): Void;
-    function GetHorizontalOrientationMargin(object: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.Thickness;
+    function SetHorizontalOrientationMargin(object: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyObject>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.Thickness>): Void;
+    function GetHorizontalOrientationMargin(object: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.Thickness;
     overload function HorizontalOrientationMarginProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function SetVerticalOrientationMargin(object: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>, value: ConstRef<winrt.microsoft.ui.xaml.Thickness>): Void;
-    function GetVerticalOrientationMargin(object: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.Thickness;
+    function SetVerticalOrientationMargin(object: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyObject>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.Thickness>): Void;
+    function GetVerticalOrientationMargin(object: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.Thickness;
     overload function VerticalOrientationMarginProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function HorizontalOrientationPaddingProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function VerticalOrientationPaddingProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    static function SetHorizontalOrientationMargin(object: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>, value: ConstRef<winrt.microsoft.ui.xaml.Thickness>): Void;
-    static function GetHorizontalOrientationMargin(object: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.Thickness;
+    static function SetHorizontalOrientationMargin(object: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyObject>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.Thickness>): Void;
+    static function GetHorizontalOrientationMargin(object: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.Thickness;
     static overload function HorizontalOrientationMarginProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    static function SetVerticalOrientationMargin(object: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>, value: ConstRef<winrt.microsoft.ui.xaml.Thickness>): Void;
-    static function GetVerticalOrientationMargin(object: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.Thickness;
+    static function SetVerticalOrientationMargin(object: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyObject>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.Thickness>): Void;
+    static function GetVerticalOrientationMargin(object: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.Thickness;
     static overload function VerticalOrientationMarginProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
 }

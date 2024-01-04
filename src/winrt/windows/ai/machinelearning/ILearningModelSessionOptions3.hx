@@ -8,5 +8,5 @@ package winrt.windows.ai.machinelearning;
 @:native("winrt::Windows::AI::MachineLearning::ILearningModelSessionOptions3")
 extern interface ILearningModelSessionOptions3 extends winrt.windows.foundation.IInspectable
 {
-    function OverrideNamedDimension(name: ConstRef<winrt.HString>, dimension: UInt32): Void;
+    function OverrideNamedDimension(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, dimension: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
 }

@@ -8,5 +8,5 @@ package winrt.windows.media.capture.frames;
 @:native("winrt::Windows::Media::Capture::Frames::IMediaFrameSourceInfo3")
 extern interface IMediaFrameSourceInfo3 extends winrt.windows.foundation.IInspectable
 {
-    function GetRelativePanel(displayRegion: ConstRef<winrt.windows.ui.windowmanagement.DisplayRegion>): winrt.windows.devices.enumeration.Panel;
+    function GetRelativePanel(displayRegion: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.windowmanagement.DisplayRegion>): winrt.windows.devices.enumeration.Panel;
 }

@@ -9,8 +9,8 @@ package winrt.windows.ui.core.preview;
 extern class SystemNavigationManagerPreview
     implements winrt.windows.ui.core.preview.ISystemNavigationManagerPreview
 {
-    overload function CloseRequested(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.windows.ui.core.preview.SystemNavigationCloseRequestedPreviewEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function CloseRequested(token: ConstRef<winrt.EventToken>): Void;
+    overload function CloseRequested(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.EventHandler<winrt.windows.ui.core.preview.SystemNavigationCloseRequestedPreviewEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function CloseRequested(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     function GetForCurrentView(): winrt.windows.ui.core.preview.SystemNavigationManagerPreview;
     static function GetForCurrentView(): winrt.windows.ui.core.preview.SystemNavigationManagerPreview;
 }

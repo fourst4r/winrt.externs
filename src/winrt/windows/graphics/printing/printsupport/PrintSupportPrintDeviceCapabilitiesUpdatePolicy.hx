@@ -9,8 +9,8 @@ package winrt.windows.graphics.printing.printsupport;
 extern class PrintSupportPrintDeviceCapabilitiesUpdatePolicy
     implements winrt.windows.graphics.printing.printsupport.IPrintSupportPrintDeviceCapabilitiesUpdatePolicy
 {
-    function CreatePeriodicRefresh(updatePeriod: ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.graphics.printing.printsupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy;
-    function CreatePrintJobRefresh(numberOfJobs: UInt32): winrt.windows.graphics.printing.printsupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy;
-    static function CreatePeriodicRefresh(updatePeriod: ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.graphics.printing.printsupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy;
-    static function CreatePrintJobRefresh(numberOfJobs: UInt32): winrt.windows.graphics.printing.printsupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy;
+    function CreatePeriodicRefresh(updatePeriod: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): winrt.windows.graphics.printing.printsupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy;
+    function CreatePrintJobRefresh(numberOfJobs: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.graphics.printing.printsupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy;
+    static function CreatePeriodicRefresh(updatePeriod: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): winrt.windows.graphics.printing.printsupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy;
+    static function CreatePrintJobRefresh(numberOfJobs: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.graphics.printing.printsupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy;
 }

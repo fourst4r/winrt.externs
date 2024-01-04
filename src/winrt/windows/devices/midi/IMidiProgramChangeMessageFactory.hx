@@ -8,5 +8,5 @@ package winrt.windows.devices.midi;
 @:native("winrt::Windows::Devices::Midi::IMidiProgramChangeMessageFactory")
 extern interface IMidiProgramChangeMessageFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateMidiProgramChangeMessage(channel: UInt8, program: UInt8): winrt.windows.devices.midi.MidiProgramChangeMessage;
+    function CreateMidiProgramChangeMessage(channel: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, program: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8): winrt.windows.devices.midi.MidiProgramChangeMessage;
 }

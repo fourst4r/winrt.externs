@@ -10,7 +10,7 @@ extern interface ILockScreenBadge extends winrt.windows.foundation.IInspectable
 {
     overload function Logo(): winrt.windows.storage.streams.IRandomAccessStream;
     overload function Glyph(): winrt.windows.storage.streams.IRandomAccessStream;
-    overload function Number(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
+    overload function Number(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
     overload function AutomationName(): winrt.HString;
     function LaunchApp(): Void;
 }

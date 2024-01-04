@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml.controls;
 @:native("winrt::Microsoft::UI::Xaml::Controls::IGroupStyleSelectorOverrides")
 extern interface IGroupStyleSelectorOverrides extends winrt.windows.foundation.IInspectable
 {
-    function SelectGroupStyleCore(group: ConstRef<winrt.windows.foundation.IInspectable>, level: UInt32): winrt.microsoft.ui.xaml.controls.GroupStyle;
+    function SelectGroupStyleCore(group: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, level: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.microsoft.ui.xaml.controls.GroupStyle;
 }

@@ -27,11 +27,11 @@ extern interface IWorkflowPrintTicket extends winrt.windows.foundation.IInspecta
     overload function PageOutputColorFeature(): winrt.windows.graphics.printing.printticket.PrintTicketFeature;
     overload function PageOutputQualityFeature(): winrt.windows.graphics.printing.printticket.PrintTicketFeature;
     overload function PageResolutionFeature(): winrt.windows.graphics.printing.printticket.PrintTicketFeature;
-    function GetFeature(name: ConstRef<winrt.HString>, xmlNamespace: ConstRef<winrt.HString>): winrt.windows.graphics.printing.printticket.PrintTicketFeature;
+    function GetFeature(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, xmlNamespace: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.graphics.printing.printticket.PrintTicketFeature;
     function NotifyXmlChangedAsync(): winrt.windows.foundation.IAsyncAction;
     function ValidateAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.graphics.printing.printticket.WorkflowPrintTicketValidationResult> /* GenericTypeInstSig */;
-    function GetParameterInitializer(name: ConstRef<winrt.HString>, xmlNamespace: ConstRef<winrt.HString>): winrt.windows.graphics.printing.printticket.PrintTicketParameterInitializer;
-    function SetParameterInitializerAsInteger(name: ConstRef<winrt.HString>, xmlNamespace: ConstRef<winrt.HString>, integerValue: Int32): winrt.windows.graphics.printing.printticket.PrintTicketParameterInitializer;
-    function SetParameterInitializerAsString(name: ConstRef<winrt.HString>, xmlNamespace: ConstRef<winrt.HString>, stringValue: ConstRef<winrt.HString>): winrt.windows.graphics.printing.printticket.PrintTicketParameterInitializer;
-    function MergeAndValidateTicket(deltaShemaTicket: ConstRef<winrt.windows.graphics.printing.printticket.WorkflowPrintTicket>): winrt.windows.graphics.printing.printticket.WorkflowPrintTicket;
+    function GetParameterInitializer(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, xmlNamespace: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.graphics.printing.printticket.PrintTicketParameterInitializer;
+    function SetParameterInitializerAsInteger(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, xmlNamespace: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, integerValue: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.graphics.printing.printticket.PrintTicketParameterInitializer;
+    function SetParameterInitializerAsString(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, xmlNamespace: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, stringValue: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.graphics.printing.printticket.PrintTicketParameterInitializer;
+    function MergeAndValidateTicket(deltaShemaTicket: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing.printticket.WorkflowPrintTicket>): winrt.windows.graphics.printing.printticket.WorkflowPrintTicket;
 }

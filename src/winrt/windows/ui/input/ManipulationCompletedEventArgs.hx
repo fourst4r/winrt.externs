@@ -14,6 +14,6 @@ extern class ManipulationCompletedEventArgs
     overload function Position(): winrt.windows.foundation.Point;
     overload function Cumulative(): winrt.windows.ui.input.ManipulationDelta;
     overload function Velocities(): winrt.windows.ui.input.ManipulationVelocities;
-    overload function ContactCount(): UInt32;
-    overload function CurrentContactCount(): UInt32;
+    overload function ContactCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function CurrentContactCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

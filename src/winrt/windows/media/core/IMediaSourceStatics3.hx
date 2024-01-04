@@ -8,5 +8,5 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::IMediaSourceStatics3")
 extern interface IMediaSourceStatics3 extends winrt.windows.foundation.IInspectable
 {
-    function CreateFromMediaFrameSource(frameSource: ConstRef<winrt.windows.media.capture.frames.MediaFrameSource>): winrt.windows.media.core.MediaSource;
+    function CreateFromMediaFrameSource(frameSource: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.capture.frames.MediaFrameSource>): winrt.windows.media.core.MediaSource;
 }

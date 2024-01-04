@@ -2,7 +2,7 @@ package winrt.windows.system.update;
 
 @:include("winrt/Windows.System.Update.h", true)
 @:native("winrt::Windows::System::Update::SystemUpdateAttentionRequiredReason")
-extern enum abstract SystemUpdateAttentionRequiredReason(Int32)
+extern enum abstract SystemUpdateAttentionRequiredReason(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::System::Update::SystemUpdateAttentionRequiredReason::None") final None;
     @:native("winrt::Windows::System::Update::SystemUpdateAttentionRequiredReason::NetworkRequired") final NetworkRequired;

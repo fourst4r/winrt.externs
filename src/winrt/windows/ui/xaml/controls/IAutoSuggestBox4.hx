@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IAutoSuggestBox4 extends winrt.windows.foundation.IInspectable
 {
     overload function Description(): winrt.windows.foundation.IInspectable;
-    overload function Description(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Description(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
 }

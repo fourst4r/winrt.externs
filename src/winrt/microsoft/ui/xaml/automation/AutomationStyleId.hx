@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.automation;
 
 @:include("winrt/Microsoft.UI.Xaml.Automation.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::AutomationStyleId")
-extern enum abstract AutomationStyleId(Int32)
+extern enum abstract AutomationStyleId(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Automation::AutomationStyleId::Heading1") final Heading1;
     @:native("winrt::Microsoft::UI::Xaml::Automation::AutomationStyleId::Heading2") final Heading2;

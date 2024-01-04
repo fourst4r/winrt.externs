@@ -8,5 +8,5 @@ package winrt.windows.devices.wifi;
 @:native("winrt::Windows::Devices::WiFi::IWiFiOnDemandHotspotNetworkStatics")
 extern interface IWiFiOnDemandHotspotNetworkStatics extends winrt.windows.foundation.IInspectable
 {
-    function GetOrCreateById(networkId: ConstRef<winrt.Guid>): winrt.windows.devices.wifi.WiFiOnDemandHotspotNetwork;
+    function GetOrCreateById(networkId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): winrt.windows.devices.wifi.WiFiOnDemandHotspotNetwork;
 }

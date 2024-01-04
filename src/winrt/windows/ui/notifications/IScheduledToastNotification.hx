@@ -11,7 +11,7 @@ extern interface IScheduledToastNotification extends winrt.windows.foundation.II
     overload function Content(): winrt.windows.data.xml.dom.XmlDocument;
     overload function DeliveryTime(): winrt.windows.foundation.DateTime;
     overload function SnoozeInterval(): winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* GenericTypeInstSig */;
-    overload function MaximumSnoozeCount(): UInt32;
-    overload function Id(value: ConstRef<winrt.HString>): Void;
+    overload function MaximumSnoozeCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Id(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Id(): winrt.HString;
 }

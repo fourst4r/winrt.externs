@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.media;
 extern interface ILineSegment extends winrt.windows.foundation.IInspectable
 {
     overload function Point(): winrt.windows.foundation.Point;
-    overload function Point(value: ConstRef<winrt.windows.foundation.Point>): Void;
+    overload function Point(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
 }

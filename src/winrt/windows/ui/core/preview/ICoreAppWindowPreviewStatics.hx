@@ -8,5 +8,5 @@ package winrt.windows.ui.core.preview;
 @:native("winrt::Windows::UI::Core::Preview::ICoreAppWindowPreviewStatics")
 extern interface ICoreAppWindowPreviewStatics extends winrt.windows.foundation.IInspectable
 {
-    function GetIdFromWindow(window: ConstRef<winrt.windows.ui.windowmanagement.AppWindow>): Int32;
+    function GetIdFromWindow(window: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.windowmanagement.AppWindow>): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

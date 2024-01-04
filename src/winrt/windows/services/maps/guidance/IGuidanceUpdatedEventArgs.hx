@@ -10,11 +10,11 @@ extern interface IGuidanceUpdatedEventArgs extends winrt.windows.foundation.IIns
 {
     overload function Mode(): winrt.windows.services.maps.guidance.GuidanceMode;
     overload function NextManeuver(): winrt.windows.services.maps.guidance.GuidanceManeuver;
-    overload function NextManeuverDistance(): Int32;
+    overload function NextManeuverDistance(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function AfterNextManeuver(): winrt.windows.services.maps.guidance.GuidanceManeuver;
-    overload function AfterNextManeuverDistance(): Int32;
-    overload function DistanceToDestination(): Int32;
-    overload function ElapsedDistance(): Int32;
+    overload function AfterNextManeuverDistance(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function DistanceToDestination(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function ElapsedDistance(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function ElapsedTime(): winrt.windows.foundation.TimeSpan;
     overload function TimeToDestination(): winrt.windows.foundation.TimeSpan;
     overload function RoadName(): winrt.HString;

@@ -9,6 +9,6 @@ package winrt.windows.ui.core.preview;
 extern class CoreAppWindowPreview
     implements winrt.windows.ui.core.preview.ICoreAppWindowPreview
 {
-    function GetIdFromWindow(window: ConstRef<winrt.windows.ui.windowmanagement.AppWindow>): Int32;
-    static function GetIdFromWindow(window: ConstRef<winrt.windows.ui.windowmanagement.AppWindow>): Int32;
+    function GetIdFromWindow(window: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.windowmanagement.AppWindow>): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static function GetIdFromWindow(window: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.windowmanagement.AppWindow>): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

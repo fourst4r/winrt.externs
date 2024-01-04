@@ -8,5 +8,5 @@ package winrt.windows.devices.sensors;
 @:native("winrt::Windows::Devices::Sensors::IPedometerDataThresholdFactory")
 extern interface IPedometerDataThresholdFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(sensor: ConstRef<winrt.windows.devices.sensors.Pedometer>, stepGoal: Int32): winrt.windows.devices.sensors.PedometerDataThreshold;
+    function Create(sensor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.sensors.Pedometer>, stepGoal: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.devices.sensors.PedometerDataThreshold;
 }

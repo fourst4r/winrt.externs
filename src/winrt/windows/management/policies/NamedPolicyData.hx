@@ -17,9 +17,9 @@ extern class NamedPolicyData
     overload function User(): winrt.windows.system.User;
     function GetBoolean(): Bool;
     function GetBinary(): winrt.windows.storage.streams.IBuffer;
-    function GetInt32(): Int32;
-    function GetInt64(): Int64;
+    function GetInt32(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function GetInt64(): #if reflaxe.cpp cxx.num. #else cpp. #end Int64;
     function GetString(): winrt.HString;
-    overload function Changed(changedHandler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.management.policies.NamedPolicyData, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Changed(cookie: ConstRef<winrt.EventToken>): Void;
+    overload function Changed(changedHandler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.management.policies.NamedPolicyData, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Changed(cookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

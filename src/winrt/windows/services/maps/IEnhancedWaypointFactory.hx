@@ -8,5 +8,5 @@ package winrt.windows.services.maps;
 @:native("winrt::Windows::Services::Maps::IEnhancedWaypointFactory")
 extern interface IEnhancedWaypointFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(point: ConstRef<winrt.windows.devices.geolocation.Geopoint>, kind: ConstRef<winrt.windows.services.maps.WaypointKind>): winrt.windows.services.maps.EnhancedWaypoint;
+    function Create(point: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.geolocation.Geopoint>, kind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.services.maps.WaypointKind>): winrt.windows.services.maps.EnhancedWaypoint;
 }

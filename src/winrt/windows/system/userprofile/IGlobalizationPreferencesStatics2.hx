@@ -8,6 +8,6 @@ package winrt.windows.system.userprofile;
 @:native("winrt::Windows::System::UserProfile::IGlobalizationPreferencesStatics2")
 extern interface IGlobalizationPreferencesStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function TrySetHomeGeographicRegion(region: ConstRef<winrt.HString>): Bool;
-    function TrySetLanguages(languageTags: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): Bool;
+    function TrySetHomeGeographicRegion(region: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
+    function TrySetLanguages(languageTags: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): Bool;
 }

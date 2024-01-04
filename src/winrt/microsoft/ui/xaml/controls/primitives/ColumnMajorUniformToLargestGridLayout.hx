@@ -11,12 +11,12 @@ extern class ColumnMajorUniformToLargestGridLayout
     implements winrt.microsoft.ui.xaml.controls.primitives.IColumnMajorUniformToLargestGridLayout
 {
     function new();
-    overload function MaxColumns(): Int32;
-    overload function MaxColumns(value: Int32): Void;
-    overload function ColumnSpacing(): Float64;
-    overload function ColumnSpacing(value: Float64): Void;
-    overload function RowSpacing(): Float64;
-    overload function RowSpacing(value: Float64): Void;
+    overload function MaxColumns(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function MaxColumns(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
+    overload function ColumnSpacing(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ColumnSpacing(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function RowSpacing(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function RowSpacing(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function MaxColumnsProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function ColumnSpacingProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function RowSpacingProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

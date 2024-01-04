@@ -10,5 +10,5 @@ extern interface IUserDataAccount3 extends winrt.windows.foundation.IInspectable
 {
     overload function ExplictReadAccessPackageFamilyNames(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function DisplayName(): winrt.HString;
-    overload function DisplayName(value: ConstRef<winrt.HString>): Void;
+    overload function DisplayName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

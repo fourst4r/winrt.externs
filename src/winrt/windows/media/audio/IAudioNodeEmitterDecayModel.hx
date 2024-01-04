@@ -9,7 +9,7 @@ package winrt.windows.media.audio;
 extern interface IAudioNodeEmitterDecayModel extends winrt.windows.foundation.IInspectable
 {
     overload function Kind(): winrt.windows.media.audio.AudioNodeEmitterDecayKind;
-    overload function MinGain(): Float64;
-    overload function MaxGain(): Float64;
+    overload function MinGain(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function MaxGain(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function NaturalProperties(): winrt.windows.media.audio.AudioNodeEmitterNaturalDecayModelProperties;
 }

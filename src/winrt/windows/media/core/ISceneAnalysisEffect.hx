@@ -9,8 +9,8 @@ package winrt.windows.media.core;
 extern interface ISceneAnalysisEffect extends winrt.windows.foundation.IInspectable
 {
     overload function HighDynamicRangeAnalyzer(): winrt.windows.media.core.HighDynamicRangeControl;
-    overload function DesiredAnalysisInterval(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function DesiredAnalysisInterval(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function DesiredAnalysisInterval(): winrt.windows.foundation.TimeSpan;
-    overload function SceneAnalyzed(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.SceneAnalysisEffect, winrt.windows.media.core.SceneAnalyzedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function SceneAnalyzed(cookie: ConstRef<winrt.EventToken>): Void;
+    overload function SceneAnalyzed(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.SceneAnalysisEffect, winrt.windows.media.core.SceneAnalyzedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function SceneAnalyzed(cookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

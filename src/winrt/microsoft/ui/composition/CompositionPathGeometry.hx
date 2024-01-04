@@ -10,6 +10,6 @@ extern class CompositionPathGeometry
     extends winrt.microsoft.ui.composition.CompositionGeometry
     implements winrt.microsoft.ui.composition.ICompositionPathGeometry
 {
-    overload function Path(value: ConstRef<winrt.microsoft.ui.composition.CompositionPath>): Void;
+    overload function Path(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.CompositionPath>): Void;
     overload function Path(): winrt.microsoft.ui.composition.CompositionPath;
 }

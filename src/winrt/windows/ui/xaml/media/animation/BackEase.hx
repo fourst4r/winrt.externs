@@ -11,8 +11,8 @@ extern class BackEase
     implements winrt.windows.ui.xaml.media.animation.IBackEase
 {
     function new();
-    overload function Amplitude(): Float64;
-    overload function Amplitude(value: Float64): Void;
+    overload function Amplitude(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Amplitude(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function AmplitudeProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function AmplitudeProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

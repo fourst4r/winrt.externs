@@ -9,5 +9,5 @@ package winrt.windows.devices.sensors;
 extern interface IAltimeterReading extends winrt.windows.foundation.IInspectable
 {
     overload function Timestamp(): winrt.windows.foundation.DateTime;
-    overload function AltitudeChangeInMeters(): Float64;
+    overload function AltitudeChangeInMeters(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

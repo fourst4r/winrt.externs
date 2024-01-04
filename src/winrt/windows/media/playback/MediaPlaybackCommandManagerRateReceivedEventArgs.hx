@@ -11,6 +11,6 @@ extern class MediaPlaybackCommandManagerRateReceivedEventArgs
 {
     overload function Handled(): Bool;
     overload function Handled(value: Bool): Void;
-    overload function PlaybackRate(): Float64;
+    overload function PlaybackRate(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

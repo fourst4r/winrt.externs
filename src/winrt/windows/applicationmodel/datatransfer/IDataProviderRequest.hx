@@ -11,5 +11,5 @@ extern interface IDataProviderRequest extends winrt.windows.foundation.IInspecta
     overload function FormatId(): winrt.HString;
     overload function Deadline(): winrt.windows.foundation.DateTime;
     function GetDeferral(): winrt.windows.applicationmodel.datatransfer.DataProviderDeferral;
-    function SetData(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    function SetData(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
 }

@@ -11,6 +11,6 @@ extern class InkToolbarCustomPen
     implements winrt.windows.ui.xaml.controls.IInkToolbarCustomPen
     implements winrt.windows.ui.xaml.controls.IInkToolbarCustomPenOverrides
 {
-    function CreateInkDrawingAttributes(brush: ConstRef<winrt.windows.ui.xaml.media.Brush>, strokeWidth: Float64): winrt.windows.ui.input.inking.InkDrawingAttributes;
-    function CreateInkDrawingAttributesCore(brush: ConstRef<winrt.windows.ui.xaml.media.Brush>, strokeWidth: Float64): winrt.windows.ui.input.inking.InkDrawingAttributes;
+    function CreateInkDrawingAttributes(brush: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Brush>, strokeWidth: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.windows.ui.input.inking.InkDrawingAttributes;
+    function CreateInkDrawingAttributesCore(brush: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Brush>, strokeWidth: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.windows.ui.input.inking.InkDrawingAttributes;
 }

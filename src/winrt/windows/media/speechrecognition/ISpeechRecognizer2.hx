@@ -11,6 +11,6 @@ extern interface ISpeechRecognizer2 extends winrt.windows.foundation.IInspectabl
     overload function ContinuousRecognitionSession(): winrt.windows.media.speechrecognition.SpeechContinuousRecognitionSession;
     overload function State(): winrt.windows.media.speechrecognition.SpeechRecognizerState;
     function StopRecognitionAsync(): winrt.windows.foundation.IAsyncAction;
-    overload function HypothesisGenerated(value: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.speechrecognition.SpeechRecognizer, winrt.windows.media.speechrecognition.SpeechRecognitionHypothesisGeneratedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function HypothesisGenerated(value: ConstRef<winrt.EventToken>): Void;
+    overload function HypothesisGenerated(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.speechrecognition.SpeechRecognizer, winrt.windows.media.speechrecognition.SpeechRecognitionHypothesisGeneratedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function HypothesisGenerated(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.markup;
 @:native("winrt::Windows::UI::Xaml::Markup::IXamlMarkupHelperStatics")
 extern interface IXamlMarkupHelperStatics extends winrt.windows.foundation.IInspectable
 {
-    function UnloadObject(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>): Void;
+    function UnloadObject(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): Void;
 }

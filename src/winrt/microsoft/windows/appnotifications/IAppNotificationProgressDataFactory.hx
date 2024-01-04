@@ -8,5 +8,5 @@ package winrt.microsoft.windows.appnotifications;
 @:native("winrt::Microsoft::Windows::AppNotifications::IAppNotificationProgressDataFactory")
 extern interface IAppNotificationProgressDataFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(sequenceNumber: UInt32): winrt.microsoft.windows.appnotifications.AppNotificationProgressData;
+    function CreateInstance(sequenceNumber: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.microsoft.windows.appnotifications.AppNotificationProgressData;
 }

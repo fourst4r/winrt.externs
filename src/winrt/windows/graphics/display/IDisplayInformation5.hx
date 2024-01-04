@@ -9,6 +9,6 @@ package winrt.windows.graphics.display;
 extern interface IDisplayInformation5 extends winrt.windows.foundation.IInspectable
 {
     function GetAdvancedColorInfo(): winrt.windows.graphics.display.AdvancedColorInfo;
-    overload function AdvancedColorInfoChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.graphics.display.DisplayInformation, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function AdvancedColorInfoChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function AdvancedColorInfoChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.graphics.display.DisplayInformation, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function AdvancedColorInfoChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

@@ -11,15 +11,15 @@ extern class ButtonBase
     implements winrt.microsoft.ui.xaml.controls.primitives.IButtonBase
 {
     overload function ClickMode(): winrt.microsoft.ui.xaml.controls.ClickMode;
-    overload function ClickMode(value: ConstRef<winrt.microsoft.ui.xaml.controls.ClickMode>): Void;
+    overload function ClickMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.ClickMode>): Void;
     overload function IsPointerOver(): Bool;
     overload function IsPressed(): Bool;
     overload function Command(): winrt.microsoft.ui.xaml.input.ICommand;
-    overload function Command(value: ConstRef<winrt.microsoft.ui.xaml.input.ICommand>): Void;
+    overload function Command(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.ICommand>): Void;
     overload function CommandParameter(): winrt.windows.foundation.IInspectable;
-    overload function CommandParameter(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
-    overload function Click(handler: ConstRef<winrt.microsoft.ui.xaml.RoutedEventHandler>): winrt.EventToken;
-    @:noExcept overload function Click(token: ConstRef<winrt.EventToken>): Void;
+    overload function CommandParameter(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
+    overload function Click(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.RoutedEventHandler>): winrt.EventToken;
+    @:noExcept overload function Click(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function ClickModeProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function IsPointerOverProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function IsPressedProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

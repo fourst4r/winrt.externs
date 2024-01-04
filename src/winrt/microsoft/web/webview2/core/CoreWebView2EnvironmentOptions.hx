@@ -22,11 +22,11 @@ extern class CoreWebView2EnvironmentOptions
     overload function EnableTrackingPrevention(): Bool;
     overload function EnableTrackingPrevention(value: Bool): Void;
     overload function AdditionalBrowserArguments(): winrt.HString;
-    overload function AdditionalBrowserArguments(value: ConstRef<winrt.HString>): Void;
+    overload function AdditionalBrowserArguments(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Language(): winrt.HString;
-    overload function Language(value: ConstRef<winrt.HString>): Void;
+    overload function Language(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function TargetCompatibleBrowserVersion(): winrt.HString;
-    overload function TargetCompatibleBrowserVersion(value: ConstRef<winrt.HString>): Void;
+    overload function TargetCompatibleBrowserVersion(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function AllowSingleSignOnUsingOSPrimaryAccount(): Bool;
     overload function AllowSingleSignOnUsingOSPrimaryAccount(value: Bool): Void;
 }

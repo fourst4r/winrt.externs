@@ -8,25 +8,25 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IFrame")
 extern interface IFrame extends winrt.windows.foundation.IInspectable
 {
-    overload function CacheSize(): Int32;
-    overload function CacheSize(value: Int32): Void;
+    overload function CacheSize(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function CacheSize(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function CanGoBack(): Bool;
     overload function CanGoForward(): Bool;
     overload function CurrentSourcePageType(): winrt.windows.ui.xaml.interop.TypeName;
     overload function SourcePageType(): winrt.windows.ui.xaml.interop.TypeName;
-    overload function SourcePageType(value: ConstRef<winrt.windows.ui.xaml.interop.TypeName>): Void;
-    overload function BackStackDepth(): Int32;
-    overload function Navigated(handler: ConstRef<winrt.windows.ui.xaml.navigation.NavigatedEventHandler>): winrt.EventToken;
-    @:noExcept overload function Navigated(token: ConstRef<winrt.EventToken>): Void;
-    overload function Navigating(handler: ConstRef<winrt.windows.ui.xaml.navigation.NavigatingCancelEventHandler>): winrt.EventToken;
-    @:noExcept overload function Navigating(token: ConstRef<winrt.EventToken>): Void;
-    overload function NavigationFailed(handler: ConstRef<winrt.windows.ui.xaml.navigation.NavigationFailedEventHandler>): winrt.EventToken;
-    @:noExcept overload function NavigationFailed(token: ConstRef<winrt.EventToken>): Void;
-    overload function NavigationStopped(handler: ConstRef<winrt.windows.ui.xaml.navigation.NavigationStoppedEventHandler>): winrt.EventToken;
-    @:noExcept overload function NavigationStopped(token: ConstRef<winrt.EventToken>): Void;
+    overload function SourcePageType(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.interop.TypeName>): Void;
+    overload function BackStackDepth(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Navigated(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.navigation.NavigatedEventHandler>): winrt.EventToken;
+    @:noExcept overload function Navigated(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function Navigating(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.navigation.NavigatingCancelEventHandler>): winrt.EventToken;
+    @:noExcept overload function Navigating(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function NavigationFailed(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.navigation.NavigationFailedEventHandler>): winrt.EventToken;
+    @:noExcept overload function NavigationFailed(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function NavigationStopped(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.navigation.NavigationStoppedEventHandler>): winrt.EventToken;
+    @:noExcept overload function NavigationStopped(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     function GoBack(): Void;
     function GoForward(): Void;
-    function Navigate(sourcePageType: ConstRef<winrt.windows.ui.xaml.interop.TypeName>, parameter: ConstRef<winrt.windows.foundation.IInspectable>): Bool;
+    function Navigate(sourcePageType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.interop.TypeName>, parameter: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Bool;
     function GetNavigationState(): winrt.HString;
-    function SetNavigationState(navigationState: ConstRef<winrt.HString>): Void;
+    function SetNavigationState(navigationState: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

@@ -12,8 +12,8 @@ extern interface IReplaceAppointmentOperation extends winrt.windows.foundation.I
     overload function AppointmentInformation(): winrt.windows.applicationmodel.appointments.Appointment;
     overload function InstanceStartDate(): winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* GenericTypeInstSig */;
     overload function SourcePackageFamilyName(): winrt.HString;
-    function ReportCompleted(itemId: ConstRef<winrt.HString>): Void;
+    function ReportCompleted(itemId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     function ReportCanceled(): Void;
-    function ReportError(value: ConstRef<winrt.HString>): Void;
+    function ReportError(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     function DismissUI(): Void;
 }

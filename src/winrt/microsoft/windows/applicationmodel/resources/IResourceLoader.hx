@@ -8,6 +8,6 @@ package winrt.microsoft.windows.applicationmodel.resources;
 @:native("winrt::Microsoft::Windows::ApplicationModel::Resources::IResourceLoader")
 extern interface IResourceLoader extends winrt.windows.foundation.IInspectable
 {
-    function GetString(resourceId: ConstRef<winrt.HString>): winrt.HString;
-    function GetStringForUri(resourceUri: ConstRef<winrt.windows.foundation.Uri>): winrt.HString;
+    function GetString(resourceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.HString;
+    function GetStringForUri(resourceUri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): winrt.HString;
 }

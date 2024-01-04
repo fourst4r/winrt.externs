@@ -9,6 +9,6 @@ package winrt.windows.management.core;
 extern class ApplicationDataManager
     implements winrt.windows.management.core.IApplicationDataManager
 {
-    function CreateForPackageFamily(packageFamilyName: ConstRef<winrt.HString>): winrt.windows.storage.ApplicationData;
-    static function CreateForPackageFamily(packageFamilyName: ConstRef<winrt.HString>): winrt.windows.storage.ApplicationData;
+    function CreateForPackageFamily(packageFamilyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.storage.ApplicationData;
+    static function CreateForPackageFamily(packageFamilyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.storage.ApplicationData;
 }

@@ -8,6 +8,6 @@ package winrt.microsoft.ui.xaml.controls;
 @:native("winrt::Microsoft::UI::Xaml::Controls::IKeyIndexMapping")
 extern interface IKeyIndexMapping extends winrt.windows.foundation.IInspectable
 {
-    function KeyFromIndex(index: Int32): winrt.HString;
-    function IndexFromKey(key: ConstRef<winrt.HString>): Int32;
+    function KeyFromIndex(index: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.HString;
+    function IndexFromKey(key: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

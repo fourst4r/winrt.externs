@@ -10,8 +10,8 @@ extern class GuidanceMapMatchedCoordinate
     implements winrt.windows.services.maps.guidance.IGuidanceMapMatchedCoordinate
 {
     overload function Location(): winrt.windows.devices.geolocation.Geopoint;
-    overload function CurrentHeading(): Float64;
-    overload function CurrentSpeed(): Float64;
+    overload function CurrentHeading(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function CurrentSpeed(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function IsOnStreet(): Bool;
     overload function Road(): winrt.windows.services.maps.guidance.GuidanceRoadSegment;
 }

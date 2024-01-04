@@ -11,6 +11,6 @@ extern interface INumeralSystemTranslator extends winrt.windows.foundation.IInsp
     overload function Languages(): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
     overload function ResolvedLanguage(): winrt.HString;
     overload function NumeralSystem(): winrt.HString;
-    overload function NumeralSystem(value: ConstRef<winrt.HString>): Void;
-    function TranslateNumerals(value: ConstRef<winrt.HString>): winrt.HString;
+    overload function NumeralSystem(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function TranslateNumerals(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.HString;
 }

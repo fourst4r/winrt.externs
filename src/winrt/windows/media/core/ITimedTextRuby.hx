@@ -9,11 +9,11 @@ package winrt.windows.media.core;
 extern interface ITimedTextRuby extends winrt.windows.foundation.IInspectable
 {
     overload function Text(): winrt.HString;
-    overload function Text(value: ConstRef<winrt.HString>): Void;
+    overload function Text(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Position(): winrt.windows.media.core.TimedTextRubyPosition;
-    overload function Position(value: ConstRef<winrt.windows.media.core.TimedTextRubyPosition>): Void;
+    overload function Position(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.TimedTextRubyPosition>): Void;
     overload function Align(): winrt.windows.media.core.TimedTextRubyAlign;
-    overload function Align(value: ConstRef<winrt.windows.media.core.TimedTextRubyAlign>): Void;
+    overload function Align(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.TimedTextRubyAlign>): Void;
     overload function Reserve(): winrt.windows.media.core.TimedTextRubyReserve;
-    overload function Reserve(value: ConstRef<winrt.windows.media.core.TimedTextRubyReserve>): Void;
+    overload function Reserve(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.TimedTextRubyReserve>): Void;
 }

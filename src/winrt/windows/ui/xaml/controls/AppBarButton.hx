@@ -17,19 +17,19 @@ extern class AppBarButton
 {
     function new();
     overload function Label(): winrt.HString;
-    overload function Label(value: ConstRef<winrt.HString>): Void;
+    overload function Label(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Icon(): winrt.windows.ui.xaml.controls.IconElement;
-    overload function Icon(value: ConstRef<winrt.windows.ui.xaml.controls.IconElement>): Void;
+    overload function Icon(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.IconElement>): Void;
     overload function LabelPosition(): winrt.windows.ui.xaml.controls.CommandBarLabelPosition;
-    overload function LabelPosition(value: ConstRef<winrt.windows.ui.xaml.controls.CommandBarLabelPosition>): Void;
+    overload function LabelPosition(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.CommandBarLabelPosition>): Void;
     overload function KeyboardAcceleratorTextOverride(): winrt.HString;
-    overload function KeyboardAcceleratorTextOverride(value: ConstRef<winrt.HString>): Void;
+    overload function KeyboardAcceleratorTextOverride(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function TemplateSettings(): winrt.windows.ui.xaml.controls.primitives.AppBarButtonTemplateSettings;
     overload function IsCompact(): Bool;
     overload function IsCompact(value: Bool): Void;
     overload function IsInOverflow(): Bool;
-    overload function DynamicOverflowOrder(): Int32;
-    overload function DynamicOverflowOrder(value: Int32): Void;
+    overload function DynamicOverflowOrder(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function DynamicOverflowOrder(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function KeyboardAcceleratorTextOverrideProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function LabelPositionProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function IsInOverflowProperty(): winrt.windows.ui.xaml.DependencyProperty;

@@ -11,14 +11,14 @@ extern class AppUriHandlerRegistrationManager
     implements winrt.windows.system.IAppUriHandlerRegistrationManager2
 {
     overload function User(): winrt.windows.system.User;
-    function TryGetRegistration(name: ConstRef<winrt.HString>): winrt.windows.system.AppUriHandlerRegistration;
+    function TryGetRegistration(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.system.AppUriHandlerRegistration;
     overload function PackageFamilyName(): winrt.HString;
-    function GetForPackage(packageFamilyName: ConstRef<winrt.HString>): winrt.windows.system.AppUriHandlerRegistrationManager;
-    function GetForPackageForUser(packageFamilyName: ConstRef<winrt.HString>, user: ConstRef<winrt.windows.system.User>): winrt.windows.system.AppUriHandlerRegistrationManager;
+    function GetForPackage(packageFamilyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.system.AppUriHandlerRegistrationManager;
+    function GetForPackageForUser(packageFamilyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.system.AppUriHandlerRegistrationManager;
     function GetDefault(): winrt.windows.system.AppUriHandlerRegistrationManager;
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.system.AppUriHandlerRegistrationManager;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.system.AppUriHandlerRegistrationManager;
     static function GetDefault(): winrt.windows.system.AppUriHandlerRegistrationManager;
-    static function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.system.AppUriHandlerRegistrationManager;
-    static function GetForPackage(packageFamilyName: ConstRef<winrt.HString>): winrt.windows.system.AppUriHandlerRegistrationManager;
-    static function GetForPackageForUser(packageFamilyName: ConstRef<winrt.HString>, user: ConstRef<winrt.windows.system.User>): winrt.windows.system.AppUriHandlerRegistrationManager;
+    static function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.system.AppUriHandlerRegistrationManager;
+    static function GetForPackage(packageFamilyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.system.AppUriHandlerRegistrationManager;
+    static function GetForPackageForUser(packageFamilyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.system.AppUriHandlerRegistrationManager;
 }

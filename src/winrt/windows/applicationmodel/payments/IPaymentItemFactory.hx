@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.payments;
 @:native("winrt::Windows::ApplicationModel::Payments::IPaymentItemFactory")
 extern interface IPaymentItemFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(label: ConstRef<winrt.HString>, amount: ConstRef<winrt.windows.applicationmodel.payments.PaymentCurrencyAmount>): winrt.windows.applicationmodel.payments.PaymentItem;
+    function Create(label: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, amount: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.payments.PaymentCurrencyAmount>): winrt.windows.applicationmodel.payments.PaymentItem;
 }

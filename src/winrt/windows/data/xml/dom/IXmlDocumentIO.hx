@@ -8,7 +8,7 @@ package winrt.windows.data.xml.dom;
 @:native("winrt::Windows::Data::Xml::Dom::IXmlDocumentIO")
 extern interface IXmlDocumentIO extends winrt.windows.foundation.IInspectable
 {
-    overload function LoadXml(xml: ConstRef<winrt.HString>): Void;
-    overload function LoadXml(xml: ConstRef<winrt.HString>, loadSettings: ConstRef<winrt.windows.data.xml.dom.XmlLoadSettings>): Void;
-    function SaveToFileAsync(file: ConstRef<winrt.windows.storage.IStorageFile>): winrt.windows.foundation.IAsyncAction;
+    overload function LoadXml(xml: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function LoadXml(xml: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, loadSettings: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.data.xml.dom.XmlLoadSettings>): Void;
+    function SaveToFileAsync(file: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.IStorageFile>): winrt.windows.foundation.IAsyncAction;
 }

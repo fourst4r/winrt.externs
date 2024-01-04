@@ -11,5 +11,5 @@ extern interface IOpticalImageStabilizationControl extends winrt.windows.foundat
     overload function Supported(): Bool;
     overload function SupportedModes(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.devices.OpticalImageStabilizationMode> /* GenericTypeInstSig */;
     overload function Mode(): winrt.windows.media.devices.OpticalImageStabilizationMode;
-    overload function Mode(value: ConstRef<winrt.windows.media.devices.OpticalImageStabilizationMode>): Void;
+    overload function Mode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.OpticalImageStabilizationMode>): Void;
 }

@@ -12,9 +12,9 @@ extern class Polygon
 {
     function new();
     overload function FillRule(): winrt.windows.ui.xaml.media.FillRule;
-    overload function FillRule(value: ConstRef<winrt.windows.ui.xaml.media.FillRule>): Void;
+    overload function FillRule(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.FillRule>): Void;
     overload function Points(): winrt.windows.ui.xaml.media.PointCollection;
-    overload function Points(value: ConstRef<winrt.windows.ui.xaml.media.PointCollection>): Void;
+    overload function Points(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.PointCollection>): Void;
     overload function FillRuleProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function PointsProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function FillRuleProperty(): winrt.windows.ui.xaml.DependencyProperty;

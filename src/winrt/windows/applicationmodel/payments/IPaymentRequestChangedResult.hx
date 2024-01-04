@@ -11,7 +11,7 @@ extern interface IPaymentRequestChangedResult extends winrt.windows.foundation.I
     overload function ChangeAcceptedByMerchant(): Bool;
     overload function ChangeAcceptedByMerchant(value: Bool): Void;
     overload function Message(): winrt.HString;
-    overload function Message(value: ConstRef<winrt.HString>): Void;
+    overload function Message(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function UpdatedPaymentDetails(): winrt.windows.applicationmodel.payments.PaymentDetails;
-    overload function UpdatedPaymentDetails(value: ConstRef<winrt.windows.applicationmodel.payments.PaymentDetails>): Void;
+    overload function UpdatedPaymentDetails(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.payments.PaymentDetails>): Void;
 }

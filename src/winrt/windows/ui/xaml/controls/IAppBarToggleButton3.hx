@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IAppBarToggleButton3 extends winrt.windows.foundation.IInspectable
 {
     overload function LabelPosition(): winrt.windows.ui.xaml.controls.CommandBarLabelPosition;
-    overload function LabelPosition(value: ConstRef<winrt.windows.ui.xaml.controls.CommandBarLabelPosition>): Void;
+    overload function LabelPosition(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.CommandBarLabelPosition>): Void;
 }

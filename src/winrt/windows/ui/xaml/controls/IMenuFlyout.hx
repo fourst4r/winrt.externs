@@ -10,5 +10,5 @@ extern interface IMenuFlyout extends winrt.windows.foundation.IInspectable
 {
     overload function Items(): winrt.windows.foundation.collections.IVector<winrt.windows.ui.xaml.controls.MenuFlyoutItemBase> /* GenericTypeInstSig */;
     overload function MenuFlyoutPresenterStyle(): winrt.windows.ui.xaml.Style;
-    overload function MenuFlyoutPresenterStyle(value: ConstRef<winrt.windows.ui.xaml.Style>): Void;
+    overload function MenuFlyoutPresenterStyle(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.Style>): Void;
 }

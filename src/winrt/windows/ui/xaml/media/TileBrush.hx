@@ -11,11 +11,11 @@ extern class TileBrush
     implements winrt.windows.ui.xaml.media.ITileBrush
 {
     overload function AlignmentX(): winrt.windows.ui.xaml.media.AlignmentX;
-    overload function AlignmentX(value: ConstRef<winrt.windows.ui.xaml.media.AlignmentX>): Void;
+    overload function AlignmentX(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.AlignmentX>): Void;
     overload function AlignmentY(): winrt.windows.ui.xaml.media.AlignmentY;
-    overload function AlignmentY(value: ConstRef<winrt.windows.ui.xaml.media.AlignmentY>): Void;
+    overload function AlignmentY(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.AlignmentY>): Void;
     overload function Stretch(): winrt.windows.ui.xaml.media.Stretch;
-    overload function Stretch(value: ConstRef<winrt.windows.ui.xaml.media.Stretch>): Void;
+    overload function Stretch(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Stretch>): Void;
     overload function AlignmentXProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function AlignmentYProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function StretchProperty(): winrt.windows.ui.xaml.DependencyProperty;

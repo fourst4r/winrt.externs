@@ -8,6 +8,6 @@ package winrt.windows.services.maps.guidance;
 @:native("winrt::Windows::Services::Maps::Guidance::IGuidanceRouteStatics")
 extern interface IGuidanceRouteStatics extends winrt.windows.foundation.IInspectable
 {
-    function CanCreateFromMapRoute(mapRoute: ConstRef<winrt.windows.services.maps.MapRoute>): Bool;
-    function TryCreateFromMapRoute(mapRoute: ConstRef<winrt.windows.services.maps.MapRoute>): winrt.windows.services.maps.guidance.GuidanceRoute;
+    function CanCreateFromMapRoute(mapRoute: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.services.maps.MapRoute>): Bool;
+    function TryCreateFromMapRoute(mapRoute: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.services.maps.MapRoute>): winrt.windows.services.maps.guidance.GuidanceRoute;
 }

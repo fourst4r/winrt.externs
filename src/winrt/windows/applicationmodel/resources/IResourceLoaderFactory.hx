@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.resources;
 @:native("winrt::Windows::ApplicationModel::Resources::IResourceLoaderFactory")
 extern interface IResourceLoaderFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateResourceLoaderByName(name: ConstRef<winrt.HString>): winrt.windows.applicationmodel.resources.ResourceLoader;
+    function CreateResourceLoaderByName(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.resources.ResourceLoader;
 }

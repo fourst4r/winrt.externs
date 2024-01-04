@@ -9,7 +9,7 @@ package winrt.microsoft.ui.xaml.controls;
 extern interface IDatePickerFlyoutItem extends winrt.windows.foundation.IInspectable
 {
     overload function PrimaryText(): winrt.HString;
-    overload function PrimaryText(value: ConstRef<winrt.HString>): Void;
+    overload function PrimaryText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function SecondaryText(): winrt.HString;
-    overload function SecondaryText(value: ConstRef<winrt.HString>): Void;
+    overload function SecondaryText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

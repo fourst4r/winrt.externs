@@ -8,5 +8,5 @@ package winrt.microsoft.windows.applicationmodel.dynamicdependency;
 @:native("winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::IPackageDependencyContextFactory")
 extern interface IPackageDependencyContextFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(contextId: ConstRef<winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContextId>): winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContext;
+    function CreateInstance(contextId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContextId>): winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContext;
 }

@@ -12,7 +12,7 @@ extern class SplineColorKeyFrame
 {
     function new();
     overload function KeySpline(): winrt.windows.ui.xaml.media.animation.KeySpline;
-    overload function KeySpline(value: ConstRef<winrt.windows.ui.xaml.media.animation.KeySpline>): Void;
+    overload function KeySpline(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.animation.KeySpline>): Void;
     overload function KeySplineProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function KeySplineProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

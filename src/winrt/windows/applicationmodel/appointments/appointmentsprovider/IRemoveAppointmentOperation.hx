@@ -13,6 +13,6 @@ extern interface IRemoveAppointmentOperation extends winrt.windows.foundation.II
     overload function SourcePackageFamilyName(): winrt.HString;
     function ReportCompleted(): Void;
     function ReportCanceled(): Void;
-    function ReportError(value: ConstRef<winrt.HString>): Void;
+    function ReportError(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     function DismissUI(): Void;
 }

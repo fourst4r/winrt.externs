@@ -2,7 +2,7 @@ package winrt.windows.storage.fileproperties;
 
 @:include("winrt/Windows.Storage.FileProperties.h", true)
 @:native("winrt::Windows::Storage::FileProperties::ThumbnailMode")
-extern enum abstract ThumbnailMode(Int32)
+extern enum abstract ThumbnailMode(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Storage::FileProperties::ThumbnailMode::PicturesView") final PicturesView;
     @:native("winrt::Windows::Storage::FileProperties::ThumbnailMode::VideosView") final VideosView;

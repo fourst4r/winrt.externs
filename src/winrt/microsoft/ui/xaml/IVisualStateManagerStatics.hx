@@ -8,9 +8,9 @@ package winrt.microsoft.ui.xaml;
 @:native("winrt::Microsoft::UI::Xaml::IVisualStateManagerStatics")
 extern interface IVisualStateManagerStatics extends winrt.windows.foundation.IInspectable
 {
-    function GetVisualStateGroups(obj: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.xaml.VisualStateGroup> /* GenericTypeInstSig */;
+    function GetVisualStateGroups(obj: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.FrameworkElement>): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.xaml.VisualStateGroup> /* GenericTypeInstSig */;
     overload function CustomVisualStateManagerProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetCustomVisualStateManager(obj: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.microsoft.ui.xaml.VisualStateManager;
-    function SetCustomVisualStateManager(obj: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>, value: ConstRef<winrt.microsoft.ui.xaml.VisualStateManager>): Void;
-    function GoToState(control: ConstRef<winrt.microsoft.ui.xaml.controls.Control>, stateName: ConstRef<winrt.HString>, useTransitions: Bool): Bool;
+    function GetCustomVisualStateManager(obj: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.FrameworkElement>): winrt.microsoft.ui.xaml.VisualStateManager;
+    function SetCustomVisualStateManager(obj: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.FrameworkElement>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.VisualStateManager>): Void;
+    function GoToState(control: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.Control>, stateName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, useTransitions: Bool): Bool;
 }

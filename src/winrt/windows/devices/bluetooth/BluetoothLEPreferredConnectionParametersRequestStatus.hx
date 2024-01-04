@@ -2,7 +2,7 @@ package winrt.windows.devices.bluetooth;
 
 @:include("winrt/Windows.Devices.Bluetooth.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequestStatus")
-extern enum abstract BluetoothLEPreferredConnectionParametersRequestStatus(Int32)
+extern enum abstract BluetoothLEPreferredConnectionParametersRequestStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequestStatus::Unspecified") final Unspecified;
     @:native("winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequestStatus::Success") final Success;

@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.controls.primitives;
 
 @:include("winrt/Microsoft.UI.Xaml.Controls.Primitives.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::PopupPlacementMode")
-extern enum abstract PopupPlacementMode(Int32)
+extern enum abstract PopupPlacementMode(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::PopupPlacementMode::Auto") final Auto;
     @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::PopupPlacementMode::Top") final Top;

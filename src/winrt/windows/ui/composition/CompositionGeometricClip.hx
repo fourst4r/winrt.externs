@@ -11,7 +11,7 @@ extern class CompositionGeometricClip
     implements winrt.windows.ui.composition.ICompositionGeometricClip
 {
     overload function Geometry(): winrt.windows.ui.composition.CompositionGeometry;
-    overload function Geometry(value: ConstRef<winrt.windows.ui.composition.CompositionGeometry>): Void;
+    overload function Geometry(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionGeometry>): Void;
     overload function ViewBox(): winrt.windows.ui.composition.CompositionViewBox;
-    overload function ViewBox(value: ConstRef<winrt.windows.ui.composition.CompositionViewBox>): Void;
+    overload function ViewBox(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionViewBox>): Void;
 }

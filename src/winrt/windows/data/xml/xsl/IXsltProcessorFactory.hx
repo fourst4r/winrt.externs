@@ -8,5 +8,5 @@ package winrt.windows.data.xml.xsl;
 @:native("winrt::Windows::Data::Xml::Xsl::IXsltProcessorFactory")
 extern interface IXsltProcessorFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(document: ConstRef<winrt.windows.data.xml.dom.XmlDocument>): winrt.windows.data.xml.xsl.XsltProcessor;
+    function CreateInstance(document: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.data.xml.dom.XmlDocument>): winrt.windows.data.xml.xsl.XsltProcessor;
 }

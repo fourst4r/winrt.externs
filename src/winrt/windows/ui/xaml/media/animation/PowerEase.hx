@@ -11,8 +11,8 @@ extern class PowerEase
     implements winrt.windows.ui.xaml.media.animation.IPowerEase
 {
     function new();
-    overload function Power(): Float64;
-    overload function Power(value: Float64): Void;
+    overload function Power(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Power(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function PowerProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function PowerProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

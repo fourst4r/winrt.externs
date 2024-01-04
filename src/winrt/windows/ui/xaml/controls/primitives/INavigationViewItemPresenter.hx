@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls.primitives;
 extern interface INavigationViewItemPresenter extends winrt.windows.foundation.IInspectable
 {
     overload function Icon(): winrt.windows.ui.xaml.controls.IconElement;
-    overload function Icon(value: ConstRef<winrt.windows.ui.xaml.controls.IconElement>): Void;
+    overload function Icon(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.IconElement>): Void;
 }

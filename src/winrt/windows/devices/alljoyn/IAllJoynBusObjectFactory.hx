@@ -8,6 +8,6 @@ package winrt.windows.devices.alljoyn;
 @:native("winrt::Windows::Devices::AllJoyn::IAllJoynBusObjectFactory")
 extern interface IAllJoynBusObjectFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(objectPath: ConstRef<winrt.HString>): winrt.windows.devices.alljoyn.AllJoynBusObject;
-    function CreateWithBusAttachment(objectPath: ConstRef<winrt.HString>, busAttachment: ConstRef<winrt.windows.devices.alljoyn.AllJoynBusAttachment>): winrt.windows.devices.alljoyn.AllJoynBusObject;
+    function Create(objectPath: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.devices.alljoyn.AllJoynBusObject;
+    function CreateWithBusAttachment(objectPath: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, busAttachment: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.alljoyn.AllJoynBusAttachment>): winrt.windows.devices.alljoyn.AllJoynBusObject;
 }

@@ -9,7 +9,7 @@ package winrt.microsoft.ui.xaml.controls;
 extern interface IInfoBadgeTemplateSettings extends winrt.windows.foundation.IInspectable
 {
     overload function InfoBadgeCornerRadius(): winrt.microsoft.ui.xaml.CornerRadius;
-    overload function InfoBadgeCornerRadius(value: ConstRef<winrt.microsoft.ui.xaml.CornerRadius>): Void;
+    overload function InfoBadgeCornerRadius(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.CornerRadius>): Void;
     overload function IconElement(): winrt.microsoft.ui.xaml.controls.IconElement;
-    overload function IconElement(value: ConstRef<winrt.microsoft.ui.xaml.controls.IconElement>): Void;
+    overload function IconElement(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.IconElement>): Void;
 }

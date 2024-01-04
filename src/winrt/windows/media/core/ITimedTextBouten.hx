@@ -9,9 +9,9 @@ package winrt.windows.media.core;
 extern interface ITimedTextBouten extends winrt.windows.foundation.IInspectable
 {
     overload function Type(): winrt.windows.media.core.TimedTextBoutenType;
-    overload function Type(value: ConstRef<winrt.windows.media.core.TimedTextBoutenType>): Void;
+    overload function Type(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.TimedTextBoutenType>): Void;
     overload function Color(): winrt.windows.ui.Color;
-    overload function Color(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function Color(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
     overload function Position(): winrt.windows.media.core.TimedTextBoutenPosition;
-    overload function Position(value: ConstRef<winrt.windows.media.core.TimedTextBoutenPosition>): Void;
+    overload function Position(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.TimedTextBoutenPosition>): Void;
 }

@@ -8,5 +8,5 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::ITimedMetadataStreamDescriptorFactory")
 extern interface ITimedMetadataStreamDescriptorFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(encodingProperties: ConstRef<winrt.windows.media.mediaproperties.TimedMetadataEncodingProperties>): winrt.windows.media.core.TimedMetadataStreamDescriptor;
+    function Create(encodingProperties: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.mediaproperties.TimedMetadataEncodingProperties>): winrt.windows.media.core.TimedMetadataStreamDescriptor;
 }

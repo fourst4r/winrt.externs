@@ -8,5 +8,5 @@ package winrt.windows.ai.machinelearning;
 @:native("winrt::Windows::AI::MachineLearning::ITensorDouble")
 extern interface ITensorDouble extends winrt.windows.foundation.IInspectable
 {
-    function GetAsVectorView(): winrt.windows.foundation.collections.IVectorView<Float64> /* GenericTypeInstSig */;
+    function GetAsVectorView(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
 }

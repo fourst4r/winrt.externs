@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.background;
 extern class StorageLibraryChangeTrackerTrigger
     implements winrt.windows.applicationmodel.background.IBackgroundTrigger
 {
-    /* explicit */ function new(tracker: ConstRef<winrt.windows.storage.StorageLibraryChangeTracker>);
+    /* explicit */ function new(tracker: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.StorageLibraryChangeTracker>);
 }

@@ -8,6 +8,6 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IAppBarOverrides")
 extern interface IAppBarOverrides extends winrt.windows.foundation.IInspectable
 {
-    function OnClosed(e: ConstRef<winrt.windows.foundation.IInspectable>): Void;
-    function OnOpened(e: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    function OnClosed(e: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
+    function OnOpened(e: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
 }

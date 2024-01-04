@@ -10,8 +10,8 @@ extern interface IAudioDeviceModule extends winrt.windows.foundation.IInspectabl
 {
     overload function ClassId(): winrt.HString;
     overload function DisplayName(): winrt.HString;
-    overload function InstanceId(): UInt32;
-    overload function MajorVersion(): UInt32;
-    overload function MinorVersion(): UInt32;
-    function SendCommandAsync(Command: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.devices.ModuleCommandResult> /* GenericTypeInstSig */;
+    overload function InstanceId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function MajorVersion(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function MinorVersion(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function SendCommandAsync(Command: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.devices.ModuleCommandResult> /* GenericTypeInstSig */;
 }

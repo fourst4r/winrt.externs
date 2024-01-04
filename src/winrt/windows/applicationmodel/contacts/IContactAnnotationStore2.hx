@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.contacts;
 @:native("winrt::Windows::ApplicationModel::Contacts::IContactAnnotationStore2")
 extern interface IContactAnnotationStore2 extends winrt.windows.foundation.IInspectable
 {
-    function FindAnnotationsForContactListAsync(contactListId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.contacts.ContactAnnotation> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+    function FindAnnotationsForContactListAsync(contactListId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.contacts.ContactAnnotation> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
 }

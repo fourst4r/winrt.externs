@@ -12,8 +12,8 @@ extern class PlayToSource
 {
     overload function Connection(): winrt.windows.media.playto.PlayToConnection;
     overload function Next(): winrt.windows.media.playto.PlayToSource;
-    overload function Next(value: ConstRef<winrt.windows.media.playto.PlayToSource>): Void;
+    overload function Next(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.playto.PlayToSource>): Void;
     function PlayNext(): Void;
     overload function PreferredSourceUri(): winrt.windows.foundation.Uri;
-    overload function PreferredSourceUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function PreferredSourceUri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
 }

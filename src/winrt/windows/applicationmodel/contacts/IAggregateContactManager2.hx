@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.contacts;
 @:native("winrt::Windows::ApplicationModel::Contacts::IAggregateContactManager2")
 extern interface IAggregateContactManager2 extends winrt.windows.foundation.IInspectable
 {
-    function SetRemoteIdentificationInformationAsync(contactListId: ConstRef<winrt.HString>, remoteSourceId: ConstRef<winrt.HString>, accountId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncAction;
+    function SetRemoteIdentificationInformationAsync(contactListId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, remoteSourceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, accountId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncAction;
 }

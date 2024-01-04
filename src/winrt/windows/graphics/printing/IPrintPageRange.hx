@@ -8,6 +8,6 @@ package winrt.windows.graphics.printing;
 @:native("winrt::Windows::Graphics::Printing::IPrintPageRange")
 extern interface IPrintPageRange extends winrt.windows.foundation.IInspectable
 {
-    overload function FirstPageNumber(): Int32;
-    overload function LastPageNumber(): Int32;
+    overload function FirstPageNumber(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function LastPageNumber(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

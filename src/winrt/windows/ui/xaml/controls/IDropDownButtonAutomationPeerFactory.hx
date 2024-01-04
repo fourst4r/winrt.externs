@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IDropDownButtonAutomationPeerFactory")
 extern interface IDropDownButtonAutomationPeerFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(owner: ConstRef<winrt.windows.ui.xaml.controls.DropDownButton>, baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.controls.DropDownButtonAutomationPeer;
+    function CreateInstance(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.DropDownButton>, baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.controls.DropDownButtonAutomationPeer;
 }

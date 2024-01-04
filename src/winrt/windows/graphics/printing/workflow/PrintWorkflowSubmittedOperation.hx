@@ -9,7 +9,7 @@ package winrt.windows.graphics.printing.workflow;
 extern class PrintWorkflowSubmittedOperation
     implements winrt.windows.graphics.printing.workflow.IPrintWorkflowSubmittedOperation
 {
-    function Complete(status: ConstRef<winrt.windows.graphics.printing.workflow.PrintWorkflowSubmittedStatus>): Void;
+    function Complete(status: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing.workflow.PrintWorkflowSubmittedStatus>): Void;
     overload function Configuration(): winrt.windows.graphics.printing.workflow.PrintWorkflowConfiguration;
     overload function XpsContent(): winrt.windows.graphics.printing.workflow.PrintWorkflowSourceContent;
 }

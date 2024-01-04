@@ -9,15 +9,15 @@ package winrt.windows.web.syndication;
 extern interface ISyndicationClient extends winrt.windows.foundation.IInspectable
 {
     overload function ServerCredential(): winrt.windows.security.credentials.PasswordCredential;
-    overload function ServerCredential(value: ConstRef<winrt.windows.security.credentials.PasswordCredential>): Void;
+    overload function ServerCredential(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.PasswordCredential>): Void;
     overload function ProxyCredential(): winrt.windows.security.credentials.PasswordCredential;
-    overload function ProxyCredential(value: ConstRef<winrt.windows.security.credentials.PasswordCredential>): Void;
-    overload function MaxResponseBufferSize(): UInt32;
-    overload function MaxResponseBufferSize(value: UInt32): Void;
-    overload function Timeout(): UInt32;
-    overload function Timeout(value: UInt32): Void;
+    overload function ProxyCredential(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.PasswordCredential>): Void;
+    overload function MaxResponseBufferSize(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function MaxResponseBufferSize(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function Timeout(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Timeout(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
     overload function BypassCacheOnRetrieve(): Bool;
     overload function BypassCacheOnRetrieve(value: Bool): Void;
-    function SetRequestHeader(name: ConstRef<winrt.HString>, value: ConstRef<winrt.HString>): Void;
-    function RetrieveFeedAsync(uri: ConstRef<winrt.windows.foundation.Uri>): winrt.windows.foundation.IAsyncOperationWithProgress<winrt.windows.web.syndication.SyndicationFeed, winrt.windows.web.syndication.RetrievalProgress> /* GenericTypeInstSig */;
+    function SetRequestHeader(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function RetrieveFeedAsync(uri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): winrt.windows.foundation.IAsyncOperationWithProgress<winrt.windows.web.syndication.SyndicationFeed, winrt.windows.web.syndication.RetrievalProgress> /* GenericTypeInstSig */;
 }

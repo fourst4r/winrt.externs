@@ -9,5 +9,5 @@ package winrt.microsoft.ui.composition;
 extern interface IDropShadow2 extends winrt.windows.foundation.IInspectable
 {
     overload function SourcePolicy(): winrt.microsoft.ui.composition.CompositionDropShadowSourcePolicy;
-    overload function SourcePolicy(value: ConstRef<winrt.microsoft.ui.composition.CompositionDropShadowSourcePolicy>): Void;
+    overload function SourcePolicy(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.CompositionDropShadowSourcePolicy>): Void;
 }

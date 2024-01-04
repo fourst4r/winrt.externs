@@ -8,6 +8,6 @@ package winrt.windows.networking.networkoperators;
 @:native("winrt::Windows::Networking::NetworkOperators::INetworkOperatorTetheringManagerStatics2")
 extern interface INetworkOperatorTetheringManagerStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function GetTetheringCapabilityFromConnectionProfile(profile: ConstRef<winrt.windows.networking.connectivity.ConnectionProfile>): winrt.windows.networking.networkoperators.TetheringCapability;
-    function CreateFromConnectionProfile(profile: ConstRef<winrt.windows.networking.connectivity.ConnectionProfile>): winrt.windows.networking.networkoperators.NetworkOperatorTetheringManager;
+    function GetTetheringCapabilityFromConnectionProfile(profile: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.connectivity.ConnectionProfile>): winrt.windows.networking.networkoperators.TetheringCapability;
+    function CreateFromConnectionProfile(profile: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.connectivity.ConnectionProfile>): winrt.windows.networking.networkoperators.NetworkOperatorTetheringManager;
 }

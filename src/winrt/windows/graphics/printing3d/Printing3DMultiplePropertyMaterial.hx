@@ -10,5 +10,5 @@ extern class Printing3DMultiplePropertyMaterial
     implements winrt.windows.graphics.printing3d.IPrinting3DMultiplePropertyMaterial
 {
     function new();
-    overload function MaterialIndices(): winrt.windows.foundation.collections.IVector<UInt32> /* GenericTypeInstSig */;
+    overload function MaterialIndices(): winrt.windows.foundation.collections.IVector<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
 }

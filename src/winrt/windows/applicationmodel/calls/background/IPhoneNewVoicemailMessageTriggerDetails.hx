@@ -9,6 +9,6 @@ package winrt.windows.applicationmodel.calls.background;
 extern interface IPhoneNewVoicemailMessageTriggerDetails extends winrt.windows.foundation.IInspectable
 {
     overload function LineId(): winrt.Guid;
-    overload function VoicemailCount(): Int32;
+    overload function VoicemailCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function OperatorMessage(): winrt.HString;
 }

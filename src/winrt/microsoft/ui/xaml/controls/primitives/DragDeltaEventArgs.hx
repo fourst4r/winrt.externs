@@ -10,7 +10,7 @@ extern class DragDeltaEventArgs
     extends winrt.microsoft.ui.xaml.RoutedEventArgs
     implements winrt.microsoft.ui.xaml.controls.primitives.IDragDeltaEventArgs
 {
-    function new(horizontalChange: Float64, verticalChange: Float64);
-    overload function HorizontalChange(): Float64;
-    overload function VerticalChange(): Float64;
+    function new(horizontalChange: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, verticalChange: #if reflaxe.cpp cxx.num. #else cpp. #end Float64);
+    overload function HorizontalChange(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function VerticalChange(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

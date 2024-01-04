@@ -10,7 +10,7 @@ extern class DragStartedEventArgs
     extends winrt.windows.ui.xaml.RoutedEventArgs
     implements winrt.windows.ui.xaml.controls.primitives.IDragStartedEventArgs
 {
-    function new(horizontalOffset: Float64, verticalOffset: Float64);
-    overload function HorizontalOffset(): Float64;
-    overload function VerticalOffset(): Float64;
+    function new(horizontalOffset: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, verticalOffset: #if reflaxe.cpp cxx.num. #else cpp. #end Float64);
+    overload function HorizontalOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function VerticalOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

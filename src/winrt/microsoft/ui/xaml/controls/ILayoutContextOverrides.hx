@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.controls;
 extern interface ILayoutContextOverrides extends winrt.windows.foundation.IInspectable
 {
     overload function LayoutStateCore(): winrt.windows.foundation.IInspectable;
-    overload function LayoutStateCore(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function LayoutStateCore(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
 }

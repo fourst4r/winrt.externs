@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.background;
 extern interface IBackgroundTaskProgressEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function InstanceId(): winrt.Guid;
-    overload function Progress(): UInt32;
+    overload function Progress(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

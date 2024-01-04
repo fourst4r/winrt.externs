@@ -10,7 +10,7 @@ extern interface IIOControlCode extends winrt.windows.foundation.IInspectable
 {
     overload function AccessMode(): winrt.windows.devices.custom.IOControlAccessMode;
     overload function BufferingMethod(): winrt.windows.devices.custom.IOControlBufferingMethod;
-    overload function Function(): UInt16;
-    overload function DeviceType(): UInt16;
-    overload function ControlCode(): UInt32;
+    overload function Function(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    overload function DeviceType(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    overload function ControlCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

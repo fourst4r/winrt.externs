@@ -8,5 +8,5 @@ package winrt.windows.ui.uiautomation.core;
 @:native("winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation2")
 extern interface ICoreAutomationRemoteOperation2 extends winrt.windows.foundation.IInspectable
 {
-    function ImportConnectionBoundObject(operandId: ConstRef<winrt.windows.ui.uiautomation.core.AutomationRemoteOperationOperandId>, connectionBoundObject: ConstRef<winrt.windows.ui.uiautomation.AutomationConnectionBoundObject>): Void;
+    function ImportConnectionBoundObject(operandId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.uiautomation.core.AutomationRemoteOperationOperandId>, connectionBoundObject: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.uiautomation.AutomationConnectionBoundObject>): Void;
 }

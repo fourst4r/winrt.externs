@@ -8,5 +8,5 @@ package winrt.windows.storage.provider;
 @:native("winrt::Windows::Storage::Provider::ICachedFileUpdaterStatics")
 extern interface ICachedFileUpdaterStatics extends winrt.windows.foundation.IInspectable
 {
-    function SetUpdateInformation(file: ConstRef<winrt.windows.storage.IStorageFile>, contentId: ConstRef<winrt.HString>, readMode: ConstRef<winrt.windows.storage.provider.ReadActivationMode>, writeMode: ConstRef<winrt.windows.storage.provider.WriteActivationMode>, options: ConstRef<winrt.windows.storage.provider.CachedFileOptions>): Void;
+    function SetUpdateInformation(file: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.IStorageFile>, contentId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, readMode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.provider.ReadActivationMode>, writeMode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.provider.WriteActivationMode>, options: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.provider.CachedFileOptions>): Void;
 }

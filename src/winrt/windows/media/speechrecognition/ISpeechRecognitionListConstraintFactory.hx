@@ -8,6 +8,6 @@ package winrt.windows.media.speechrecognition;
 @:native("winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionListConstraintFactory")
 extern interface ISpeechRecognitionListConstraintFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(commands: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.media.speechrecognition.SpeechRecognitionListConstraint;
-    function CreateWithTag(commands: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, tag: ConstRef<winrt.HString>): winrt.windows.media.speechrecognition.SpeechRecognitionListConstraint;
+    function Create(commands: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.media.speechrecognition.SpeechRecognitionListConstraint;
+    function CreateWithTag(commands: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, tag: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.media.speechrecognition.SpeechRecognitionListConstraint;
 }

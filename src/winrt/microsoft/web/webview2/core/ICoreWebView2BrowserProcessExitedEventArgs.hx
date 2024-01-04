@@ -9,5 +9,5 @@ package winrt.microsoft.web.webview2.core;
 extern interface ICoreWebView2BrowserProcessExitedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function BrowserProcessExitKind(): winrt.microsoft.web.webview2.core.CoreWebView2BrowserProcessExitKind;
-    overload function BrowserProcessId(): UInt32;
+    overload function BrowserProcessId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

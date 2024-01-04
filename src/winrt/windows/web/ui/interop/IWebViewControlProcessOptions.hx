@@ -8,8 +8,8 @@ package winrt.windows.web.ui.interop;
 @:native("winrt::Windows::Web::UI::Interop::IWebViewControlProcessOptions")
 extern interface IWebViewControlProcessOptions extends winrt.windows.foundation.IInspectable
 {
-    overload function EnterpriseId(value: ConstRef<winrt.HString>): Void;
+    overload function EnterpriseId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function EnterpriseId(): winrt.HString;
-    overload function PrivateNetworkClientServerCapability(value: ConstRef<winrt.windows.web.ui.interop.WebViewControlProcessCapabilityState>): Void;
+    overload function PrivateNetworkClientServerCapability(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.ui.interop.WebViewControlProcessCapabilityState>): Void;
     overload function PrivateNetworkClientServerCapability(): winrt.windows.web.ui.interop.WebViewControlProcessCapabilityState;
 }

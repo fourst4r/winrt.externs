@@ -10,5 +10,5 @@ extern class IPInformation
     implements winrt.windows.networking.connectivity.IIPInformation
 {
     overload function NetworkAdapter(): winrt.windows.networking.connectivity.NetworkAdapter;
-    overload function PrefixLength(): winrt.windows.foundation.IReference<UInt8> /* GenericTypeInstSig */;
+    overload function PrefixLength(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8> /* GenericTypeInstSig */;
 }

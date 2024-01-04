@@ -8,5 +8,5 @@ package winrt.windows.graphics.printing3d;
 @:native("winrt::Windows::Graphics::Printing3D::IPrinting3DBaseMaterialGroupFactory")
 extern interface IPrinting3DBaseMaterialGroupFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(MaterialGroupId: UInt32): winrt.windows.graphics.printing3d.Printing3DBaseMaterialGroup;
+    function Create(MaterialGroupId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.graphics.printing3d.Printing3DBaseMaterialGroup;
 }

@@ -12,6 +12,6 @@ extern class PerceptionPropertyChangeRequest
     overload function Name(): winrt.HString;
     overload function Value(): winrt.windows.foundation.IInspectable;
     overload function Status(): winrt.windows.devices.perception.PerceptionFrameSourcePropertyChangeStatus;
-    overload function Status(value: ConstRef<winrt.windows.devices.perception.PerceptionFrameSourcePropertyChangeStatus>): Void;
+    overload function Status(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.perception.PerceptionFrameSourcePropertyChangeStatus>): Void;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

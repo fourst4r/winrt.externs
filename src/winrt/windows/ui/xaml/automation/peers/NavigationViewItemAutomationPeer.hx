@@ -10,5 +10,5 @@ extern class NavigationViewItemAutomationPeer
     extends winrt.windows.ui.xaml.automation.peers.ListViewItemAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.INavigationViewItemAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.NavigationViewItem>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.NavigationViewItem>);
 }

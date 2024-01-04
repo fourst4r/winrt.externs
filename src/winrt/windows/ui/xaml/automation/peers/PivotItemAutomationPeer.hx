@@ -10,5 +10,5 @@ extern class PivotItemAutomationPeer
     extends winrt.windows.ui.xaml.automation.peers.FrameworkElementAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IPivotItemAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.PivotItem>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.PivotItem>);
 }

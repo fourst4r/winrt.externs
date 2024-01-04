@@ -8,6 +8,6 @@ package winrt.windows.ui.composition;
 @:native("winrt::Windows::UI::Composition::ICompositionPropertySet2")
 extern interface ICompositionPropertySet2 extends winrt.windows.foundation.IInspectable
 {
-    function InsertBoolean(propertyName: ConstRef<winrt.HString>, value: Bool): Void;
-    function TryGetBoolean(propertyName: ConstRef<winrt.HString>, value: Ref<Bool>): winrt.windows.ui.composition.CompositionGetValueStatus;
+    function InsertBoolean(propertyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, value: Bool): Void;
+    function TryGetBoolean(propertyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, value: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <Bool>): winrt.windows.ui.composition.CompositionGetValueStatus;
 }

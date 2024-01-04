@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.documents;
 extern interface IInlineUIContainer extends winrt.windows.foundation.IInspectable
 {
     overload function Child(): winrt.windows.ui.xaml.UIElement;
-    overload function Child(value: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
+    overload function Child(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
 }

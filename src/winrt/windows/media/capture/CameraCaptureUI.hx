@@ -12,5 +12,5 @@ extern class CameraCaptureUI
     function new();
     overload function PhotoSettings(): winrt.windows.media.capture.CameraCaptureUIPhotoCaptureSettings;
     overload function VideoSettings(): winrt.windows.media.capture.CameraCaptureUIVideoCaptureSettings;
-    function CaptureFileAsync(mode: ConstRef<winrt.windows.media.capture.CameraCaptureUIMode>): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.StorageFile> /* GenericTypeInstSig */;
+    function CaptureFileAsync(mode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.capture.CameraCaptureUIMode>): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.StorageFile> /* GenericTypeInstSig */;
 }

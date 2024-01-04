@@ -9,6 +9,6 @@ package winrt.windows.networking.networkoperators;
 extern class MobileBroadbandDeviceServiceCommandResult
     implements winrt.windows.networking.networkoperators.IMobileBroadbandDeviceServiceCommandResult
 {
-    overload function StatusCode(): UInt32;
+    overload function StatusCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function ResponseData(): winrt.windows.storage.streams.IBuffer;
 }

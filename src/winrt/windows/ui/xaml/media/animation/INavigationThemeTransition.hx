@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.media.animation;
 extern interface INavigationThemeTransition extends winrt.windows.foundation.IInspectable
 {
     overload function DefaultNavigationTransitionInfo(): winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo;
-    overload function DefaultNavigationTransitionInfo(value: ConstRef<winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo>): Void;
+    overload function DefaultNavigationTransitionInfo(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo>): Void;
 }

@@ -8,5 +8,5 @@ package winrt.windows.devices.bluetooth;
 @:native("winrt::Windows::Devices::Bluetooth::IBluetoothDeviceIdStatics")
 extern interface IBluetoothDeviceIdStatics extends winrt.windows.foundation.IInspectable
 {
-    function FromId(deviceId: ConstRef<winrt.HString>): winrt.windows.devices.bluetooth.BluetoothDeviceId;
+    function FromId(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.devices.bluetooth.BluetoothDeviceId;
 }

@@ -2,7 +2,7 @@ package winrt.windows.system;
 
 @:include("winrt/Windows.System.h", true)
 @:native("winrt::Windows::System::ProcessorArchitecture")
-extern enum abstract ProcessorArchitecture(Int32)
+extern enum abstract ProcessorArchitecture(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::System::ProcessorArchitecture::X86") final X86;
     @:native("winrt::Windows::System::ProcessorArchitecture::Arm") final Arm;

@@ -12,5 +12,5 @@ extern interface ITargetedContentContainer extends winrt.windows.foundation.IIns
     overload function Timestamp(): winrt.windows.foundation.DateTime;
     overload function Availability(): winrt.windows.services.targetedcontent.TargetedContentAvailability;
     overload function Content(): winrt.windows.services.targetedcontent.TargetedContentCollection;
-    function SelectSingleObject(path: ConstRef<winrt.HString>): winrt.windows.services.targetedcontent.TargetedContentObject;
+    function SelectSingleObject(path: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.services.targetedcontent.TargetedContentObject;
 }

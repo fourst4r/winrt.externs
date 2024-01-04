@@ -8,6 +8,6 @@ package winrt.windows.ui.input.inking;
 @:native("winrt::Windows::UI::Input::Inking::IInkDrawingAttributesPencilProperties")
 extern interface IInkDrawingAttributesPencilProperties extends winrt.windows.foundation.IInspectable
 {
-    overload function Opacity(): Float64;
-    overload function Opacity(value: Float64): Void;
+    overload function Opacity(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Opacity(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

@@ -10,6 +10,6 @@ extern interface IESimManagerStatics extends winrt.windows.foundation.IInspectab
 {
     overload function ServiceInfo(): winrt.windows.networking.networkoperators.ESimServiceInfo;
     function TryCreateESimWatcher(): winrt.windows.networking.networkoperators.ESimWatcher;
-    overload function ServiceInfoChanged(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function ServiceInfoChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function ServiceInfoChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function ServiceInfoChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

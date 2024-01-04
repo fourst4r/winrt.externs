@@ -9,9 +9,9 @@ package winrt.windows.security.cryptography.core;
 extern interface IAsymmetricKeyAlgorithmProvider extends winrt.windows.foundation.IInspectable
 {
     overload function AlgorithmName(): winrt.HString;
-    function CreateKeyPair(keySize: UInt32): winrt.windows.security.cryptography.core.CryptographicKey;
-    overload function ImportKeyPair(keyBlob: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.security.cryptography.core.CryptographicKey;
-    overload function ImportKeyPair(keyBlob: ConstRef<winrt.windows.storage.streams.IBuffer>, BlobType: ConstRef<winrt.windows.security.cryptography.core.CryptographicPrivateKeyBlobType>): winrt.windows.security.cryptography.core.CryptographicKey;
-    overload function ImportPublicKey(keyBlob: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.security.cryptography.core.CryptographicKey;
-    overload function ImportPublicKey(keyBlob: ConstRef<winrt.windows.storage.streams.IBuffer>, BlobType: ConstRef<winrt.windows.security.cryptography.core.CryptographicPublicKeyBlobType>): winrt.windows.security.cryptography.core.CryptographicKey;
+    function CreateKeyPair(keySize: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.security.cryptography.core.CryptographicKey;
+    overload function ImportKeyPair(keyBlob: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.security.cryptography.core.CryptographicKey;
+    overload function ImportKeyPair(keyBlob: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>, BlobType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.core.CryptographicPrivateKeyBlobType>): winrt.windows.security.cryptography.core.CryptographicKey;
+    overload function ImportPublicKey(keyBlob: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.security.cryptography.core.CryptographicKey;
+    overload function ImportPublicKey(keyBlob: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>, BlobType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.core.CryptographicPublicKeyBlobType>): winrt.windows.security.cryptography.core.CryptographicKey;
 }

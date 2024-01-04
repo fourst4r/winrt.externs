@@ -10,7 +10,7 @@ extern class CalendarViewTemplateSettings
     extends winrt.windows.ui.xaml.DependencyObject
     implements winrt.windows.ui.xaml.controls.primitives.ICalendarViewTemplateSettings
 {
-    overload function MinViewWidth(): Float64;
+    overload function MinViewWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function HeaderText(): winrt.HString;
     overload function WeekDay1(): winrt.HString;
     overload function WeekDay2(): winrt.HString;
@@ -23,6 +23,6 @@ extern class CalendarViewTemplateSettings
     overload function HasMoreContentBefore(): Bool;
     overload function HasMoreViews(): Bool;
     overload function ClipRect(): winrt.windows.foundation.Rect;
-    overload function CenterX(): Float64;
-    overload function CenterY(): Float64;
+    overload function CenterX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function CenterY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

@@ -14,9 +14,9 @@ extern class MenuFlyoutSubItem
     function new();
     overload function Items(): winrt.windows.foundation.collections.IVector<winrt.windows.ui.xaml.controls.MenuFlyoutItemBase> /* GenericTypeInstSig */;
     overload function Text(): winrt.HString;
-    overload function Text(value: ConstRef<winrt.HString>): Void;
+    overload function Text(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Icon(): winrt.windows.ui.xaml.controls.IconElement;
-    overload function Icon(value: ConstRef<winrt.windows.ui.xaml.controls.IconElement>): Void;
+    overload function Icon(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.IconElement>): Void;
     overload function IconProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function TextProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function TextProperty(): winrt.windows.ui.xaml.DependencyProperty;

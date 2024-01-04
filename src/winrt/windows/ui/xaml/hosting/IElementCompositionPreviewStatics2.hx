@@ -8,8 +8,8 @@ package winrt.windows.ui.xaml.hosting;
 @:native("winrt::Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics2")
 extern interface IElementCompositionPreviewStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function SetImplicitShowAnimation(element: ConstRef<winrt.windows.ui.xaml.UIElement>, animation: ConstRef<winrt.windows.ui.composition.ICompositionAnimationBase>): Void;
-    function SetImplicitHideAnimation(element: ConstRef<winrt.windows.ui.xaml.UIElement>, animation: ConstRef<winrt.windows.ui.composition.ICompositionAnimationBase>): Void;
-    function SetIsTranslationEnabled(element: ConstRef<winrt.windows.ui.xaml.UIElement>, value: Bool): Void;
-    function GetPointerPositionPropertySet(targetElement: ConstRef<winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.composition.CompositionPropertySet;
+    function SetImplicitShowAnimation(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>, animation: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.ICompositionAnimationBase>): Void;
+    function SetImplicitHideAnimation(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>, animation: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.ICompositionAnimationBase>): Void;
+    function SetIsTranslationEnabled(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>, value: Bool): Void;
+    function GetPointerPositionPropertySet(targetElement: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.composition.CompositionPropertySet;
 }

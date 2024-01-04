@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IMenuFlyout2")
 extern interface IMenuFlyout2 extends winrt.windows.foundation.IInspectable
 {
-    function ShowAt(targetElement: ConstRef<winrt.windows.ui.xaml.UIElement>, point: ConstRef<winrt.windows.foundation.Point>): Void;
+    function ShowAt(targetElement: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>, point: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
 }

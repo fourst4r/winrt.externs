@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.media;
 @:native("winrt::Windows::UI::Xaml::Media::ISolidColorBrushFactory")
 extern interface ISolidColorBrushFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstanceWithColor(color: ConstRef<winrt.windows.ui.Color>): winrt.windows.ui.xaml.media.SolidColorBrush;
+    function CreateInstanceWithColor(color: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): winrt.windows.ui.xaml.media.SolidColorBrush;
 }

@@ -11,7 +11,7 @@ extern class CoreTextTextRequest
 {
     overload function Range(): winrt.windows.ui.text.core.CoreTextRange;
     overload function Text(): winrt.HString;
-    overload function Text(value: ConstRef<winrt.HString>): Void;
+    overload function Text(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function IsCanceled(): Bool;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

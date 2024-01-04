@@ -14,8 +14,8 @@ extern class LowLagMediaRecording
     function StartAsync(): winrt.windows.foundation.IAsyncAction;
     function StopAsync(): winrt.windows.foundation.IAsyncAction;
     function FinishAsync(): winrt.windows.foundation.IAsyncAction;
-    function PauseAsync(behavior: ConstRef<winrt.windows.media.devices.MediaCapturePauseBehavior>): winrt.windows.foundation.IAsyncAction;
+    function PauseAsync(behavior: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.MediaCapturePauseBehavior>): winrt.windows.foundation.IAsyncAction;
     function ResumeAsync(): winrt.windows.foundation.IAsyncAction;
-    function PauseWithResultAsync(behavior: ConstRef<winrt.windows.media.devices.MediaCapturePauseBehavior>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.capture.MediaCapturePauseResult> /* GenericTypeInstSig */;
+    function PauseWithResultAsync(behavior: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.MediaCapturePauseBehavior>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.capture.MediaCapturePauseResult> /* GenericTypeInstSig */;
     function StopWithResultAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.capture.MediaCaptureStopResult> /* GenericTypeInstSig */;
 }

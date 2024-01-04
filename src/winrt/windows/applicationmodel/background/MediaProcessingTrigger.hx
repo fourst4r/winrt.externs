@@ -12,5 +12,5 @@ extern class MediaProcessingTrigger
 {
     function new();
     overload function RequestAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.background.MediaProcessingTriggerResult> /* GenericTypeInstSig */;
-    overload function RequestAsync(arguments: ConstRef<winrt.windows.foundation.collections.ValueSet>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.background.MediaProcessingTriggerResult> /* GenericTypeInstSig */;
+    overload function RequestAsync(arguments: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.ValueSet>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.background.MediaProcessingTriggerResult> /* GenericTypeInstSig */;
 }

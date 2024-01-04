@@ -13,7 +13,7 @@ extern class Button
 {
     function new();
     overload function Flyout(): winrt.windows.ui.xaml.controls.primitives.FlyoutBase;
-    overload function Flyout(value: ConstRef<winrt.windows.ui.xaml.controls.primitives.FlyoutBase>): Void;
+    overload function Flyout(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.primitives.FlyoutBase>): Void;
     overload function FlyoutProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function FlyoutProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

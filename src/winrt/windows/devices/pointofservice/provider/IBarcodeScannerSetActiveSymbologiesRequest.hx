@@ -8,7 +8,7 @@ package winrt.windows.devices.pointofservice.provider;
 @:native("winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerSetActiveSymbologiesRequest")
 extern interface IBarcodeScannerSetActiveSymbologiesRequest extends winrt.windows.foundation.IInspectable
 {
-    overload function Symbologies(): winrt.windows.foundation.collections.IVectorView<UInt32> /* GenericTypeInstSig */;
+    overload function Symbologies(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
     function ReportCompletedAsync(): winrt.windows.foundation.IAsyncAction;
     function ReportFailedAsync(): winrt.windows.foundation.IAsyncAction;
 }

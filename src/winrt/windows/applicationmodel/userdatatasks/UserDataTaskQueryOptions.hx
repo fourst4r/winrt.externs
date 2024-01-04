@@ -11,7 +11,7 @@ extern class UserDataTaskQueryOptions
 {
     function new();
     overload function SortProperty(): winrt.windows.applicationmodel.userdatatasks.UserDataTaskQuerySortProperty;
-    overload function SortProperty(value: ConstRef<winrt.windows.applicationmodel.userdatatasks.UserDataTaskQuerySortProperty>): Void;
+    overload function SortProperty(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.userdatatasks.UserDataTaskQuerySortProperty>): Void;
     overload function Kind(): winrt.windows.applicationmodel.userdatatasks.UserDataTaskQueryKind;
-    overload function Kind(value: ConstRef<winrt.windows.applicationmodel.userdatatasks.UserDataTaskQueryKind>): Void;
+    overload function Kind(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.userdatatasks.UserDataTaskQueryKind>): Void;
 }

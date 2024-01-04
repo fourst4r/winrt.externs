@@ -9,7 +9,7 @@ package winrt.microsoft.ui.xaml.automation;
 extern interface IAutomationAnnotation extends winrt.windows.foundation.IInspectable
 {
     overload function Type(): winrt.microsoft.ui.xaml.automation.AnnotationType;
-    overload function Type(value: ConstRef<winrt.microsoft.ui.xaml.automation.AnnotationType>): Void;
+    overload function Type(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.automation.AnnotationType>): Void;
     overload function Element(): winrt.microsoft.ui.xaml.UIElement;
-    overload function Element(value: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    overload function Element(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): Void;
 }

@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IControl5 extends winrt.windows.foundation.IInspectable
 {
     overload function DefaultStyleResourceUri(): winrt.windows.foundation.Uri;
-    overload function DefaultStyleResourceUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function DefaultStyleResourceUri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
 }

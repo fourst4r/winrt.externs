@@ -8,5 +8,5 @@ package winrt.windows.security.cryptography.certificates;
 @:native("winrt::Windows::Security::Cryptography::Certificates::IUserCertificateEnrollmentManager2")
 extern interface IUserCertificateEnrollmentManager2 extends winrt.windows.foundation.IInspectable
 {
-    function ImportPfxDataAsync(pfxData: ConstRef<winrt.HString>, password: ConstRef<winrt.HString>, pfxImportParameters: ConstRef<winrt.windows.security.cryptography.certificates.PfxImportParameters>): winrt.windows.foundation.IAsyncAction;
+    function ImportPfxDataAsync(pfxData: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, password: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, pfxImportParameters: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.certificates.PfxImportParameters>): winrt.windows.foundation.IAsyncAction;
 }

@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IPathIconSource extends winrt.windows.foundation.IInspectable
 {
     overload function Data(): winrt.windows.ui.xaml.media.Geometry;
-    overload function Data(value: ConstRef<winrt.windows.ui.xaml.media.Geometry>): Void;
+    overload function Data(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Geometry>): Void;
 }

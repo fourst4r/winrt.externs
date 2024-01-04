@@ -10,5 +10,5 @@ extern class CoreWebView2BrowserProcessExitedEventArgs
     implements winrt.microsoft.web.webview2.core.ICoreWebView2BrowserProcessExitedEventArgs
 {
     overload function BrowserProcessExitKind(): winrt.microsoft.web.webview2.core.CoreWebView2BrowserProcessExitKind;
-    overload function BrowserProcessId(): UInt32;
+    overload function BrowserProcessId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

@@ -11,7 +11,7 @@ extern class SemanticZoomLocation
 {
     function new();
     overload function Item(): winrt.windows.foundation.IInspectable;
-    overload function Item(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Item(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
     overload function Bounds(): winrt.windows.foundation.Rect;
-    overload function Bounds(value: ConstRef<winrt.windows.foundation.Rect>): Void;
+    overload function Bounds(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Rect>): Void;
 }

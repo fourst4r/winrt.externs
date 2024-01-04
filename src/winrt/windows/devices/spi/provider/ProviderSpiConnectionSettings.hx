@@ -9,15 +9,15 @@ package winrt.windows.devices.spi.provider;
 extern class ProviderSpiConnectionSettings
     implements winrt.windows.devices.spi.provider.IProviderSpiConnectionSettings
 {
-    /* explicit */ function new(chipSelectLine: Int32);
-    overload function ChipSelectLine(): Int32;
-    overload function ChipSelectLine(value: Int32): Void;
+    /* explicit */ function new(chipSelectLine: #if reflaxe.cpp cxx.num. #else cpp. #end Int32);
+    overload function ChipSelectLine(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function ChipSelectLine(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function Mode(): winrt.windows.devices.spi.provider.ProviderSpiMode;
-    overload function Mode(value: ConstRef<winrt.windows.devices.spi.provider.ProviderSpiMode>): Void;
-    overload function DataBitLength(): Int32;
-    overload function DataBitLength(value: Int32): Void;
-    overload function ClockFrequency(): Int32;
-    overload function ClockFrequency(value: Int32): Void;
+    overload function Mode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.spi.provider.ProviderSpiMode>): Void;
+    overload function DataBitLength(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function DataBitLength(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
+    overload function ClockFrequency(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function ClockFrequency(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function SharingMode(): winrt.windows.devices.spi.provider.ProviderSpiSharingMode;
-    overload function SharingMode(value: ConstRef<winrt.windows.devices.spi.provider.ProviderSpiSharingMode>): Void;
+    overload function SharingMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.spi.provider.ProviderSpiSharingMode>): Void;
 }

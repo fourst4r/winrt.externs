@@ -8,6 +8,6 @@ package winrt.windows.devices.pointofservice.provider;
 @:native("winrt::Windows::Devices::PointOfService::Provider::IBarcodeScannerGetSymbologyAttributesRequest2")
 extern interface IBarcodeScannerGetSymbologyAttributesRequest2 extends winrt.windows.foundation.IInspectable
 {
-    overload function ReportFailedAsync(reason: Int32): winrt.windows.foundation.IAsyncAction;
-    overload function ReportFailedAsync(reason: Int32, failedReasonDescription: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncAction;
+    overload function ReportFailedAsync(reason: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.foundation.IAsyncAction;
+    overload function ReportFailedAsync(reason: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, failedReasonDescription: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncAction;
 }

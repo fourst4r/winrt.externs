@@ -2,7 +2,7 @@ package winrt.microsoft.ui.text;
 
 @:include("winrt/Microsoft.UI.Text.h", true)
 @:native("winrt::Microsoft::UI::Text::LinkType")
-extern enum abstract LinkType(Int32)
+extern enum abstract LinkType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Text::LinkType::Undefined") final Undefined;
     @:native("winrt::Microsoft::UI::Text::LinkType::NotALink") final NotALink;

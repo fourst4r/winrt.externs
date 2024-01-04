@@ -9,7 +9,7 @@ package winrt.microsoft.ui.composition.interactions;
 extern interface IInteractionTrackerVector2InertiaNaturalMotion extends winrt.windows.foundation.IInspectable
 {
     overload function Condition(): winrt.microsoft.ui.composition.ExpressionAnimation;
-    overload function Condition(value: ConstRef<winrt.microsoft.ui.composition.ExpressionAnimation>): Void;
+    overload function Condition(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.ExpressionAnimation>): Void;
     overload function NaturalMotion(): winrt.microsoft.ui.composition.Vector2NaturalMotionAnimation;
-    overload function NaturalMotion(value: ConstRef<winrt.microsoft.ui.composition.Vector2NaturalMotionAnimation>): Void;
+    overload function NaturalMotion(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.Vector2NaturalMotionAnimation>): Void;
 }

@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.media;
 extern interface IPolyQuadraticBezierSegment extends winrt.windows.foundation.IInspectable
 {
     overload function Points(): winrt.microsoft.ui.xaml.media.PointCollection;
-    overload function Points(value: ConstRef<winrt.microsoft.ui.xaml.media.PointCollection>): Void;
+    overload function Points(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.PointCollection>): Void;
 }

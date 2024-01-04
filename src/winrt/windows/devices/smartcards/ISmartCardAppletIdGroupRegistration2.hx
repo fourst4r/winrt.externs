@@ -9,5 +9,5 @@ package winrt.windows.devices.smartcards;
 extern interface ISmartCardAppletIdGroupRegistration2 extends winrt.windows.foundation.IInspectable
 {
     overload function SmartCardReaderId(): winrt.HString;
-    function SetPropertiesAsync(props: ConstRef<winrt.windows.foundation.collections.ValueSet>): winrt.windows.foundation.IAsyncAction;
+    function SetPropertiesAsync(props: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.ValueSet>): winrt.windows.foundation.IAsyncAction;
 }

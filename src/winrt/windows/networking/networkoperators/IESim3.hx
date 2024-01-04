@@ -8,5 +8,5 @@ package winrt.windows.networking.networkoperators;
 @:native("winrt::Windows::Networking::NetworkOperators::IESim3")
 extern interface IESim3 extends winrt.windows.foundation.IInspectable
 {
-    overload function SlotIndex(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
+    overload function SlotIndex(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
 }

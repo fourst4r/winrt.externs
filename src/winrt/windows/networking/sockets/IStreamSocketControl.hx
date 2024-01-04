@@ -12,10 +12,10 @@ extern interface IStreamSocketControl extends winrt.windows.foundation.IInspecta
     overload function NoDelay(value: Bool): Void;
     overload function KeepAlive(): Bool;
     overload function KeepAlive(value: Bool): Void;
-    overload function OutboundBufferSizeInBytes(): UInt32;
-    overload function OutboundBufferSizeInBytes(value: UInt32): Void;
+    overload function OutboundBufferSizeInBytes(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function OutboundBufferSizeInBytes(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
     overload function QualityOfService(): winrt.windows.networking.sockets.SocketQualityOfService;
-    overload function QualityOfService(value: ConstRef<winrt.windows.networking.sockets.SocketQualityOfService>): Void;
-    overload function OutboundUnicastHopLimit(): UInt8;
-    overload function OutboundUnicastHopLimit(value: UInt8): Void;
+    overload function QualityOfService(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.sockets.SocketQualityOfService>): Void;
+    overload function OutboundUnicastHopLimit(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function OutboundUnicastHopLimit(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8): Void;
 }

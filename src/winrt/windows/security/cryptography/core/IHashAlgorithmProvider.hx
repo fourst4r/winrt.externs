@@ -9,7 +9,7 @@ package winrt.windows.security.cryptography.core;
 extern interface IHashAlgorithmProvider extends winrt.windows.foundation.IInspectable
 {
     overload function AlgorithmName(): winrt.HString;
-    overload function HashLength(): UInt32;
-    function HashData(data: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.storage.streams.IBuffer;
+    overload function HashLength(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function HashData(data: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.storage.streams.IBuffer;
     function CreateHash(): winrt.windows.security.cryptography.core.CryptographicHash;
 }

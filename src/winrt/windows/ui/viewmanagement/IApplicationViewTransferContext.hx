@@ -8,6 +8,6 @@ package winrt.windows.ui.viewmanagement;
 @:native("winrt::Windows::UI::ViewManagement::IApplicationViewTransferContext")
 extern interface IApplicationViewTransferContext extends winrt.windows.foundation.IInspectable
 {
-    overload function ViewId(): Int32;
-    overload function ViewId(value: Int32): Void;
+    overload function ViewId(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function ViewId(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
 }

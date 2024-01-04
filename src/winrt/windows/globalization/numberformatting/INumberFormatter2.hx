@@ -8,7 +8,7 @@ package winrt.windows.globalization.numberformatting;
 @:native("winrt::Windows::Globalization::NumberFormatting::INumberFormatter2")
 extern interface INumberFormatter2 extends winrt.windows.foundation.IInspectable
 {
-    function FormatInt(value: Int64): winrt.HString;
-    function FormatUInt(value: UInt64): winrt.HString;
-    function FormatDouble(value: Float64): winrt.HString;
+    function FormatInt(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int64): winrt.HString;
+    function FormatUInt(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt64): winrt.HString;
+    function FormatDouble(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.HString;
 }

@@ -9,9 +9,9 @@ package winrt.microsoft.ui.xaml.media.animation;
 extern interface IRepeatBehaviorHelperStatics extends winrt.windows.foundation.IInspectable
 {
     overload function Forever(): winrt.microsoft.ui.xaml.media.animation.RepeatBehavior;
-    function FromCount(count: Float64): winrt.microsoft.ui.xaml.media.animation.RepeatBehavior;
-    function FromDuration(duration: ConstRef<winrt.windows.foundation.TimeSpan>): winrt.microsoft.ui.xaml.media.animation.RepeatBehavior;
-    function GetHasCount(target: ConstRef<winrt.microsoft.ui.xaml.media.animation.RepeatBehavior>): Bool;
-    function GetHasDuration(target: ConstRef<winrt.microsoft.ui.xaml.media.animation.RepeatBehavior>): Bool;
-    function Equals(target: ConstRef<winrt.microsoft.ui.xaml.media.animation.RepeatBehavior>, value: ConstRef<winrt.microsoft.ui.xaml.media.animation.RepeatBehavior>): Bool;
+    function FromCount(count: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.microsoft.ui.xaml.media.animation.RepeatBehavior;
+    function FromDuration(duration: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): winrt.microsoft.ui.xaml.media.animation.RepeatBehavior;
+    function GetHasCount(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.animation.RepeatBehavior>): Bool;
+    function GetHasDuration(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.animation.RepeatBehavior>): Bool;
+    function Equals(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.animation.RepeatBehavior>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.animation.RepeatBehavior>): Bool;
 }

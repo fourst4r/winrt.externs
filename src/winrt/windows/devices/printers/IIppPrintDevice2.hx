@@ -8,8 +8,8 @@ package winrt.windows.devices.printers;
 @:native("winrt::Windows::Devices::Printers::IIppPrintDevice2")
 extern interface IIppPrintDevice2 extends winrt.windows.foundation.IInspectable
 {
-    function GetMaxSupportedPdfSize(): UInt64;
+    function GetMaxSupportedPdfSize(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
     function GetMaxSupportedPdfVersion(): winrt.HString;
-    function IsPdlPassthroughSupported(pdlContentType: ConstRef<winrt.HString>): Bool;
+    function IsPdlPassthroughSupported(pdlContentType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
     function GetPdlPassthroughProvider(): winrt.windows.devices.printers.PdlPassthroughProvider;
 }

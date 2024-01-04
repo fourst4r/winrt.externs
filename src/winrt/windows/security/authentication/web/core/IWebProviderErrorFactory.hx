@@ -8,5 +8,5 @@ package winrt.windows.security.authentication.web.core;
 @:native("winrt::Windows::Security::Authentication::Web::Core::IWebProviderErrorFactory")
 extern interface IWebProviderErrorFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(errorCode: UInt32, errorMessage: ConstRef<winrt.HString>): winrt.windows.security.authentication.web.core.WebProviderError;
+    function Create(errorCode: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, errorMessage: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.security.authentication.web.core.WebProviderError;
 }

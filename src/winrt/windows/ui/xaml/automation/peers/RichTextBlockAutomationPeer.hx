@@ -10,5 +10,5 @@ extern class RichTextBlockAutomationPeer
     extends winrt.windows.ui.xaml.automation.peers.FrameworkElementAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IRichTextBlockAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.RichTextBlock>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.RichTextBlock>);
 }

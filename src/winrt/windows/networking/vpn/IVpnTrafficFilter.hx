@@ -9,14 +9,14 @@ package winrt.windows.networking.vpn;
 extern interface IVpnTrafficFilter extends winrt.windows.foundation.IInspectable
 {
     overload function AppId(): winrt.windows.networking.vpn.VpnAppId;
-    overload function AppId(value: ConstRef<winrt.windows.networking.vpn.VpnAppId>): Void;
+    overload function AppId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.vpn.VpnAppId>): Void;
     overload function AppClaims(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function Protocol(): winrt.windows.networking.vpn.VpnIPProtocol;
-    overload function Protocol(value: ConstRef<winrt.windows.networking.vpn.VpnIPProtocol>): Void;
+    overload function Protocol(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.vpn.VpnIPProtocol>): Void;
     overload function LocalPortRanges(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function RemotePortRanges(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function LocalAddressRanges(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function RemoteAddressRanges(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function RoutingPolicyType(): winrt.windows.networking.vpn.VpnRoutingPolicyType;
-    overload function RoutingPolicyType(value: ConstRef<winrt.windows.networking.vpn.VpnRoutingPolicyType>): Void;
+    overload function RoutingPolicyType(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.vpn.VpnRoutingPolicyType>): Void;
 }

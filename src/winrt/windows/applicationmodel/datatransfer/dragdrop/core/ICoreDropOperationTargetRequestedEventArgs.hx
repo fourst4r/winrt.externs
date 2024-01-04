@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.datatransfer.dragdrop.core;
 @:native("winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTargetRequestedEventArgs")
 extern interface ICoreDropOperationTargetRequestedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    function SetTarget(target: ConstRef<winrt.windows.applicationmodel.datatransfer.dragdrop.core.ICoreDropOperationTarget>): Void;
+    function SetTarget(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.datatransfer.dragdrop.core.ICoreDropOperationTarget>): Void;
 }

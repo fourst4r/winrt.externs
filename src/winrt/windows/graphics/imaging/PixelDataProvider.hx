@@ -9,5 +9,5 @@ package winrt.windows.graphics.imaging;
 extern class PixelDataProvider
     implements winrt.windows.graphics.imaging.IPixelDataProvider
 {
-    function DetachPixelData(): winrt.ComArray<UInt8>;
+    function DetachPixelData(): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
 }

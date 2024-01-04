@@ -13,11 +13,11 @@ extern class InkAnalysisInkDrawing
     overload function DrawingKind(): winrt.windows.ui.input.inking.analysis.InkAnalysisDrawingKind;
     overload function Center(): winrt.windows.foundation.Point;
     overload function Points(): winrt.windows.foundation.collections.IVectorView<winrt.windows.foundation.Point> /* GenericTypeInstSig */;
-    overload function Id(): UInt32;
+    overload function Id(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function Kind(): winrt.windows.ui.input.inking.analysis.InkAnalysisNodeKind;
     overload function BoundingRect(): winrt.windows.foundation.Rect;
     overload function RotatedBoundingRect(): winrt.windows.foundation.collections.IVectorView<winrt.windows.foundation.Point> /* GenericTypeInstSig */;
     overload function Children(): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.input.inking.analysis.IInkAnalysisNode> /* GenericTypeInstSig */;
     overload function Parent(): winrt.windows.ui.input.inking.analysis.IInkAnalysisNode;
-    function GetStrokeIds(): winrt.windows.foundation.collections.IVectorView<UInt32> /* GenericTypeInstSig */;
+    function GetStrokeIds(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
 }

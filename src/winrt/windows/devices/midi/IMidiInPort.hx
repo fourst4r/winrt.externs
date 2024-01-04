@@ -8,7 +8,7 @@ package winrt.windows.devices.midi;
 @:native("winrt::Windows::Devices::Midi::IMidiInPort")
 extern interface IMidiInPort extends winrt.windows.foundation.IInspectable
 {
-    overload function MessageReceived(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.midi.MidiInPort, winrt.windows.devices.midi.MidiMessageReceivedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function MessageReceived(token: ConstRef<winrt.EventToken>): Void;
+    overload function MessageReceived(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.midi.MidiInPort, winrt.windows.devices.midi.MidiMessageReceivedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function MessageReceived(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function DeviceId(): winrt.HString;
 }

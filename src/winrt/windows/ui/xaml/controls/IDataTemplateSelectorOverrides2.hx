@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IDataTemplateSelectorOverrides2")
 extern interface IDataTemplateSelectorOverrides2 extends winrt.windows.foundation.IInspectable
 {
-    function SelectTemplateCore(item: ConstRef<winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.DataTemplate;
+    function SelectTemplateCore(item: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.DataTemplate;
 }

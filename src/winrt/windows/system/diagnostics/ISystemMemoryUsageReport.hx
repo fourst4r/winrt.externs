@@ -8,7 +8,7 @@ package winrt.windows.system.diagnostics;
 @:native("winrt::Windows::System::Diagnostics::ISystemMemoryUsageReport")
 extern interface ISystemMemoryUsageReport extends winrt.windows.foundation.IInspectable
 {
-    overload function TotalPhysicalSizeInBytes(): UInt64;
-    overload function AvailableSizeInBytes(): UInt64;
-    overload function CommittedSizeInBytes(): UInt64;
+    overload function TotalPhysicalSizeInBytes(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
+    overload function AvailableSizeInBytes(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
+    overload function CommittedSizeInBytes(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

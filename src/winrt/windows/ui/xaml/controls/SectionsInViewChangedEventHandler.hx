@@ -2,4 +2,4 @@ package winrt.windows.ui.xaml.controls;
 
 
 @:extern 
-typedef SectionsInViewChangedEventHandler = Fn<(sender: ConstRef<winrt.windows.foundation.IInspectable>, e: ConstRef<winrt.windows.ui.xaml.controls.SectionsInViewChangedEventArgs>)->Void>;
+typedef SectionsInViewChangedEventHandler = Fn<(sender: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, e: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.SectionsInViewChangedEventArgs>)->Void>;

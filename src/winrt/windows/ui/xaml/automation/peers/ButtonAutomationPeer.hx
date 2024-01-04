@@ -11,6 +11,6 @@ extern class ButtonAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IButtonAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.IInvokeProvider
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.Button>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.Button>);
     function Invoke(): Void;
 }

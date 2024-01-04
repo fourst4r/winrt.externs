@@ -12,9 +12,9 @@ extern class DatePickerFlyout
 {
     function new();
     overload function CalendarIdentifier(): winrt.HString;
-    overload function CalendarIdentifier(value: ConstRef<winrt.HString>): Void;
+    overload function CalendarIdentifier(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Date(): winrt.windows.foundation.DateTime;
-    overload function Date(value: ConstRef<winrt.windows.foundation.DateTime>): Void;
+    overload function Date(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>): Void;
     overload function DayVisible(): Bool;
     overload function DayVisible(value: Bool): Void;
     overload function MonthVisible(): Bool;
@@ -22,18 +22,18 @@ extern class DatePickerFlyout
     overload function YearVisible(): Bool;
     overload function YearVisible(value: Bool): Void;
     overload function MinYear(): winrt.windows.foundation.DateTime;
-    overload function MinYear(value: ConstRef<winrt.windows.foundation.DateTime>): Void;
+    overload function MinYear(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>): Void;
     overload function MaxYear(): winrt.windows.foundation.DateTime;
-    overload function MaxYear(value: ConstRef<winrt.windows.foundation.DateTime>): Void;
+    overload function MaxYear(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>): Void;
     overload function DayFormat(): winrt.HString;
-    overload function DayFormat(value: ConstRef<winrt.HString>): Void;
+    overload function DayFormat(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function MonthFormat(): winrt.HString;
-    overload function MonthFormat(value: ConstRef<winrt.HString>): Void;
+    overload function MonthFormat(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function YearFormat(): winrt.HString;
-    overload function YearFormat(value: ConstRef<winrt.HString>): Void;
-    overload function DatePicked(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.microsoft.ui.xaml.controls.DatePickerFlyout, winrt.microsoft.ui.xaml.controls.DatePickedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function DatePicked(token: ConstRef<winrt.EventToken>): Void;
-    function ShowAtAsync(target: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+    overload function YearFormat(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function DatePicked(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.microsoft.ui.xaml.controls.DatePickerFlyout, winrt.microsoft.ui.xaml.controls.DatePickedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function DatePicked(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    function ShowAtAsync(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.FrameworkElement>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
     overload function CalendarIdentifierProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function DateProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function DayVisibleProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

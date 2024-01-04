@@ -8,5 +8,5 @@ package winrt.windows.devices.perception.provider;
 @:native("winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager")
 extern interface IPerceptionFrameProviderManager extends winrt.windows.foundation.IInspectable
 {
-    function GetFrameProvider(frameProviderInfo: ConstRef<winrt.windows.devices.perception.provider.PerceptionFrameProviderInfo>): winrt.windows.devices.perception.provider.IPerceptionFrameProvider;
+    function GetFrameProvider(frameProviderInfo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.perception.provider.PerceptionFrameProviderInfo>): winrt.windows.devices.perception.provider.IPerceptionFrameProvider;
 }

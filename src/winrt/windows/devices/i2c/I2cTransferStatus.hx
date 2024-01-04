@@ -2,7 +2,7 @@ package winrt.windows.devices.i2c;
 
 @:include("winrt/Windows.Devices.I2c.h", true)
 @:native("winrt::Windows::Devices::I2c::I2cTransferStatus")
-extern enum abstract I2cTransferStatus(Int32)
+extern enum abstract I2cTransferStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::I2c::I2cTransferStatus::FullTransfer") final FullTransfer;
     @:native("winrt::Windows::Devices::I2c::I2cTransferStatus::PartialTransfer") final PartialTransfer;

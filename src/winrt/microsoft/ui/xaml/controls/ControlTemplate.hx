@@ -12,5 +12,5 @@ extern class ControlTemplate
 {
     function new();
     overload function TargetType(): winrt.windows.ui.xaml.interop.TypeName;
-    overload function TargetType(value: ConstRef<winrt.windows.ui.xaml.interop.TypeName>): Void;
+    overload function TargetType(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.interop.TypeName>): Void;
 }

@@ -9,5 +9,5 @@ package winrt.windows.web.syndication;
 extern interface ISyndicationContent extends winrt.windows.foundation.IInspectable
 {
     overload function SourceUri(): winrt.windows.foundation.Uri;
-    overload function SourceUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function SourceUri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
 }

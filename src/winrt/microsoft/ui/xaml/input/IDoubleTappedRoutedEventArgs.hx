@@ -11,5 +11,5 @@ extern interface IDoubleTappedRoutedEventArgs extends winrt.windows.foundation.I
     overload function PointerDeviceType(): winrt.microsoft.ui.input.PointerDeviceType;
     overload function Handled(): Bool;
     overload function Handled(value: Bool): Void;
-    function GetPosition(relativeTo: ConstRef<winrt.microsoft.ui.xaml.UIElement>): winrt.windows.foundation.Point;
+    function GetPosition(relativeTo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): winrt.windows.foundation.Point;
 }

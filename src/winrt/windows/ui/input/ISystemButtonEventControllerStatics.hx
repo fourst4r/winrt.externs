@@ -8,5 +8,5 @@ package winrt.windows.ui.input;
 @:native("winrt::Windows::UI::Input::ISystemButtonEventControllerStatics")
 extern interface ISystemButtonEventControllerStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateForDispatcherQueue(queue: ConstRef<winrt.windows.system.DispatcherQueue>): winrt.windows.ui.input.SystemButtonEventController;
+    function CreateForDispatcherQueue(queue: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.DispatcherQueue>): winrt.windows.ui.input.SystemButtonEventController;
 }

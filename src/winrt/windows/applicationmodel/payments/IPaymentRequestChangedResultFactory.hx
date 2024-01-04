@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.payments;
 extern interface IPaymentRequestChangedResultFactory extends winrt.windows.foundation.IInspectable
 {
     function Create(changeAcceptedByMerchant: Bool): winrt.windows.applicationmodel.payments.PaymentRequestChangedResult;
-    function CreateWithPaymentDetails(changeAcceptedByMerchant: Bool, updatedPaymentDetails: ConstRef<winrt.windows.applicationmodel.payments.PaymentDetails>): winrt.windows.applicationmodel.payments.PaymentRequestChangedResult;
+    function CreateWithPaymentDetails(changeAcceptedByMerchant: Bool, updatedPaymentDetails: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.payments.PaymentDetails>): winrt.windows.applicationmodel.payments.PaymentRequestChangedResult;
 }

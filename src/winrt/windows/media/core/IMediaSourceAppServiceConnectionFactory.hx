@@ -8,5 +8,5 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::IMediaSourceAppServiceConnectionFactory")
 extern interface IMediaSourceAppServiceConnectionFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(appServiceConnection: ConstRef<winrt.windows.applicationmodel.appservice.AppServiceConnection>): winrt.windows.media.core.MediaSourceAppServiceConnection;
+    function Create(appServiceConnection: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.appservice.AppServiceConnection>): winrt.windows.media.core.MediaSourceAppServiceConnection;
 }

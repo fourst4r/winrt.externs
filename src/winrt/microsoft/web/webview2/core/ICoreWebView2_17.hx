@@ -8,5 +8,5 @@ package winrt.microsoft.web.webview2.core;
 @:native("winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_17")
 extern interface ICoreWebView2_17 extends winrt.windows.foundation.IInspectable
 {
-    function PostSharedBufferToScript(sharedBuffer: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2SharedBuffer>, access: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2SharedBufferAccess>, additionalDataAsJson: ConstRef<winrt.HString>): Void;
+    function PostSharedBufferToScript(sharedBuffer: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.CoreWebView2SharedBuffer>, access: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.CoreWebView2SharedBufferAccess>, additionalDataAsJson: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

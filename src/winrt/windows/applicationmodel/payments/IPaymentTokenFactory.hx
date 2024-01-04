@@ -8,6 +8,6 @@ package winrt.windows.applicationmodel.payments;
 @:native("winrt::Windows::ApplicationModel::Payments::IPaymentTokenFactory")
 extern interface IPaymentTokenFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(paymentMethodId: ConstRef<winrt.HString>): winrt.windows.applicationmodel.payments.PaymentToken;
-    function CreateWithJsonDetails(paymentMethodId: ConstRef<winrt.HString>, jsonDetails: ConstRef<winrt.HString>): winrt.windows.applicationmodel.payments.PaymentToken;
+    function Create(paymentMethodId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.payments.PaymentToken;
+    function CreateWithJsonDetails(paymentMethodId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, jsonDetails: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.payments.PaymentToken;
 }

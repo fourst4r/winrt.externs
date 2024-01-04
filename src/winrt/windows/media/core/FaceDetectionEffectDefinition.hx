@@ -13,7 +13,7 @@ extern class FaceDetectionEffectDefinition
     function new();
     overload function ActivatableClassId(): winrt.HString;
     overload function Properties(): winrt.windows.foundation.collections.IPropertySet;
-    overload function DetectionMode(value: ConstRef<winrt.windows.media.core.FaceDetectionMode>): Void;
+    overload function DetectionMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.FaceDetectionMode>): Void;
     overload function DetectionMode(): winrt.windows.media.core.FaceDetectionMode;
     overload function SynchronousDetectionEnabled(value: Bool): Void;
     overload function SynchronousDetectionEnabled(): Bool;

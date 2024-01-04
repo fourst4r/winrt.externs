@@ -10,5 +10,5 @@ extern interface ICoreWebView2NavigationCompletedEventArgs extends winrt.windows
 {
     overload function IsSuccess(): Bool;
     overload function WebErrorStatus(): winrt.microsoft.web.webview2.core.CoreWebView2WebErrorStatus;
-    overload function NavigationId(): UInt64;
+    overload function NavigationId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

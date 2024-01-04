@@ -10,5 +10,5 @@ extern class GridViewItemTemplateSettings
     extends winrt.windows.ui.xaml.DependencyObject
     implements winrt.windows.ui.xaml.controls.primitives.IGridViewItemTemplateSettings
 {
-    overload function DragItemsCount(): Int32;
+    overload function DragItemsCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

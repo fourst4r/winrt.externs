@@ -2,7 +2,7 @@ package winrt.windows.system.remotesystems;
 
 @:include("winrt/Windows.System.RemoteSystems.h", true)
 @:native("winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcherStatus")
-extern enum abstract RemoteSystemSessionWatcherStatus(Int32)
+extern enum abstract RemoteSystemSessionWatcherStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcherStatus::Created") final Created;
     @:native("winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcherStatus::Started") final Started;

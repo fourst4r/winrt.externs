@@ -2,7 +2,7 @@ package winrt.windows.media.streaming.adaptive;
 
 @:include("winrt/Windows.Media.Streaming.Adaptive.h", true)
 @:native("winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedReason")
-extern enum abstract AdaptiveMediaSourceDownloadBitrateChangedReason(Int32)
+extern enum abstract AdaptiveMediaSourceDownloadBitrateChangedReason(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedReason::SufficientInboundBitsPerSecond") final SufficientInboundBitsPerSecond;
     @:native("winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedReason::InsufficientInboundBitsPerSecond") final InsufficientInboundBitsPerSecond;

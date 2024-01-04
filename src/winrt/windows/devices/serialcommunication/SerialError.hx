@@ -2,7 +2,7 @@ package winrt.windows.devices.serialcommunication;
 
 @:include("winrt/Windows.Devices.SerialCommunication.h", true)
 @:native("winrt::Windows::Devices::SerialCommunication::SerialError")
-extern enum abstract SerialError(Int32)
+extern enum abstract SerialError(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::SerialCommunication::SerialError::Frame") final Frame;
     @:native("winrt::Windows::Devices::SerialCommunication::SerialError::BufferOverrun") final BufferOverrun;

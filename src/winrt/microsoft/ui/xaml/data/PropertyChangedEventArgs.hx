@@ -9,6 +9,6 @@ package winrt.microsoft.ui.xaml.data;
 extern class PropertyChangedEventArgs
     implements winrt.microsoft.ui.xaml.data.IPropertyChangedEventArgs
 {
-    /* explicit */ function new(name: ConstRef<winrt.HString>);
+    /* explicit */ function new(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     overload function PropertyName(): winrt.HString;
 }

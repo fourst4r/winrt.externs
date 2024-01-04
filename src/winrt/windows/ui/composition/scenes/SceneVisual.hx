@@ -11,7 +11,7 @@ extern class SceneVisual
     implements winrt.windows.ui.composition.scenes.ISceneVisual
 {
     overload function Root(): winrt.windows.ui.composition.scenes.SceneNode;
-    overload function Root(value: ConstRef<winrt.windows.ui.composition.scenes.SceneNode>): Void;
-    function Create(compositor: ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneVisual;
-    static function Create(compositor: ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneVisual;
+    overload function Root(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.scenes.SceneNode>): Void;
+    function Create(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneVisual;
+    static function Create(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneVisual;
 }

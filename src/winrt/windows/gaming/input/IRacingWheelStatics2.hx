@@ -8,5 +8,5 @@ package winrt.windows.gaming.input;
 @:native("winrt::Windows::Gaming::Input::IRacingWheelStatics2")
 extern interface IRacingWheelStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function FromGameController(gameController: ConstRef<winrt.windows.gaming.input.IGameController>): winrt.windows.gaming.input.RacingWheel;
+    function FromGameController(gameController: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.gaming.input.IGameController>): winrt.windows.gaming.input.RacingWheel;
 }

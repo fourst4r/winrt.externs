@@ -11,14 +11,14 @@ extern class CompositionProjectedShadowCasterCollection
     implements winrt.microsoft.ui.composition.ICompositionProjectedShadowCasterCollection
     implements winrt.windows.foundation.collections.IIterable<winrt.microsoft.ui.composition.CompositionProjectedShadowCaster> /* GenericTypeInstSig */
 {
-    overload function Count(): Int32;
-    function InsertAtTop(newCaster: ConstRef<winrt.microsoft.ui.composition.CompositionProjectedShadowCaster>): Void;
-    function InsertBelow(newCaster: ConstRef<winrt.microsoft.ui.composition.CompositionProjectedShadowCaster>, reference: ConstRef<winrt.microsoft.ui.composition.CompositionProjectedShadowCaster>): Void;
-    function Remove(caster: ConstRef<winrt.microsoft.ui.composition.CompositionProjectedShadowCaster>): Void;
+    overload function Count(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function InsertAtTop(newCaster: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.CompositionProjectedShadowCaster>): Void;
+    function InsertBelow(newCaster: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.CompositionProjectedShadowCaster>, reference: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.CompositionProjectedShadowCaster>): Void;
+    function Remove(caster: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.CompositionProjectedShadowCaster>): Void;
     function First(): winrt.windows.foundation.collections.IIterator<winrt.microsoft.ui.composition.CompositionProjectedShadowCaster> /* GenericTypeInstSig */;
-    function InsertAtBottom(newCaster: ConstRef<winrt.microsoft.ui.composition.CompositionProjectedShadowCaster>): Void;
-    function InsertAbove(newCaster: ConstRef<winrt.microsoft.ui.composition.CompositionProjectedShadowCaster>, reference: ConstRef<winrt.microsoft.ui.composition.CompositionProjectedShadowCaster>): Void;
+    function InsertAtBottom(newCaster: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.CompositionProjectedShadowCaster>): Void;
+    function InsertAbove(newCaster: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.CompositionProjectedShadowCaster>, reference: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.CompositionProjectedShadowCaster>): Void;
     function RemoveAll(): Void;
-    overload function MaxRespectedCasters(): Int32;
-    static overload function MaxRespectedCasters(): Int32;
+    overload function MaxRespectedCasters(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function MaxRespectedCasters(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

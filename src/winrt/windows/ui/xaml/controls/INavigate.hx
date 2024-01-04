@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::INavigate")
 extern interface INavigate extends winrt.windows.foundation.IInspectable
 {
-    function Navigate(sourcePageType: ConstRef<winrt.windows.ui.xaml.interop.TypeName>): Bool;
+    function Navigate(sourcePageType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.interop.TypeName>): Bool;
 }

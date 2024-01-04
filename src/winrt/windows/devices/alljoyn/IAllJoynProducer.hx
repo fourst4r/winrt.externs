@@ -8,5 +8,5 @@ package winrt.windows.devices.alljoyn;
 @:native("winrt::Windows::Devices::AllJoyn::IAllJoynProducer")
 extern interface IAllJoynProducer extends winrt.windows.foundation.IInspectable
 {
-    function SetBusObject(busObject: ConstRef<winrt.windows.devices.alljoyn.AllJoynBusObject>): Void;
+    function SetBusObject(busObject: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.alljoyn.AllJoynBusObject>): Void;
 }

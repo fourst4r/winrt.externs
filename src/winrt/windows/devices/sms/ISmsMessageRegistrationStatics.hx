@@ -9,5 +9,5 @@ package winrt.windows.devices.sms;
 extern interface ISmsMessageRegistrationStatics extends winrt.windows.foundation.IInspectable
 {
     overload function AllRegistrations(): winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.sms.SmsMessageRegistration> /* GenericTypeInstSig */;
-    function Register(id: ConstRef<winrt.HString>, filterRules: ConstRef<winrt.windows.devices.sms.SmsFilterRules>): winrt.windows.devices.sms.SmsMessageRegistration;
+    function Register(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, filterRules: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.sms.SmsFilterRules>): winrt.windows.devices.sms.SmsMessageRegistration;
 }

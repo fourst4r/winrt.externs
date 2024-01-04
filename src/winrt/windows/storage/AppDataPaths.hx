@@ -18,8 +18,8 @@ extern class AppDataPaths
     overload function LocalAppData(): winrt.HString;
     overload function ProgramData(): winrt.HString;
     overload function RoamingAppData(): winrt.HString;
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.storage.AppDataPaths;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.storage.AppDataPaths;
     function GetDefault(): winrt.windows.storage.AppDataPaths;
-    static function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.storage.AppDataPaths;
+    static function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.storage.AppDataPaths;
     static function GetDefault(): winrt.windows.storage.AppDataPaths;
 }

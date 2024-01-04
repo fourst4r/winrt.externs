@@ -9,5 +9,5 @@ package winrt.microsoft.ui.input;
 extern interface IInputDesktopResourceCursor extends winrt.windows.foundation.IInspectable
 {
     overload function ModuleName(): winrt.HString;
-    overload function ResourceId(): UInt32;
+    overload function ResourceId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

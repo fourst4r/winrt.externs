@@ -8,8 +8,8 @@ package winrt.windows.ui.composition;
 @:native("winrt::Windows::UI::Composition::ISpringVector3NaturalMotionAnimation")
 extern interface ISpringVector3NaturalMotionAnimation extends winrt.windows.foundation.IInspectable
 {
-    overload function DampingRatio(): Float32;
-    overload function DampingRatio(value: Float32): Void;
+    overload function DampingRatio(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function DampingRatio(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
     overload function Period(): winrt.windows.foundation.TimeSpan;
-    overload function Period(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function Period(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
 }

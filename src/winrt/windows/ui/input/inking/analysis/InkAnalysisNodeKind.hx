@@ -2,7 +2,7 @@ package winrt.windows.ui.input.inking.analysis;
 
 @:include("winrt/Windows.UI.Input.Inking.Analysis.h", true)
 @:native("winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind")
-extern enum abstract InkAnalysisNodeKind(Int32)
+extern enum abstract InkAnalysisNodeKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind::UnclassifiedInk") final UnclassifiedInk;
     @:native("winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind::Root") final Root;

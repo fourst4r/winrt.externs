@@ -8,10 +8,10 @@ package winrt.windows.devices.usb;
 @:native("winrt::Windows::Devices::Usb::IUsbDeviceClass")
 extern interface IUsbDeviceClass extends winrt.windows.foundation.IInspectable
 {
-    overload function ClassCode(): UInt8;
-    overload function ClassCode(value: UInt8): Void;
-    overload function SubclassCode(): winrt.windows.foundation.IReference<UInt8> /* GenericTypeInstSig */;
-    overload function SubclassCode(value: ConstRef<winrt.windows.foundation.IReference<UInt8> /* temp_GenericTypeInstSig */>): Void;
-    overload function ProtocolCode(): winrt.windows.foundation.IReference<UInt8> /* GenericTypeInstSig */;
-    overload function ProtocolCode(value: ConstRef<winrt.windows.foundation.IReference<UInt8> /* temp_GenericTypeInstSig */>): Void;
+    overload function ClassCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function ClassCode(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8): Void;
+    overload function SubclassCode(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8> /* GenericTypeInstSig */;
+    overload function SubclassCode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8> /* temp_GenericTypeInstSig */>): Void;
+    overload function ProtocolCode(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8> /* GenericTypeInstSig */;
+    overload function ProtocolCode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8> /* temp_GenericTypeInstSig */>): Void;
 }

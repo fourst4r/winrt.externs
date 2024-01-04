@@ -8,6 +8,6 @@ package winrt.windows.applicationmodel.useractivities.core;
 @:native("winrt::Windows::ApplicationModel::UserActivities::Core::ICoreUserActivityManagerStatics")
 extern interface ICoreUserActivityManagerStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateUserActivitySessionInBackground(activity: ConstRef<winrt.windows.applicationmodel.useractivities.UserActivity>): winrt.windows.applicationmodel.useractivities.UserActivitySession;
-    function DeleteUserActivitySessionsInTimeRangeAsync(channel: ConstRef<winrt.windows.applicationmodel.useractivities.UserActivityChannel>, startTime: ConstRef<winrt.windows.foundation.DateTime>, endTime: ConstRef<winrt.windows.foundation.DateTime>): winrt.windows.foundation.IAsyncAction;
+    function CreateUserActivitySessionInBackground(activity: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.useractivities.UserActivity>): winrt.windows.applicationmodel.useractivities.UserActivitySession;
+    function DeleteUserActivitySessionsInTimeRangeAsync(channel: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.useractivities.UserActivityChannel>, startTime: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>, endTime: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>): winrt.windows.foundation.IAsyncAction;
 }

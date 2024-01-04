@@ -8,5 +8,5 @@ package winrt.windows.services.store;
 @:native("winrt::Windows::Services::Store::IStorePurchasePropertiesFactory")
 extern interface IStorePurchasePropertiesFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(name: ConstRef<winrt.HString>): winrt.windows.services.store.StorePurchaseProperties;
+    function Create(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.services.store.StorePurchaseProperties;
 }

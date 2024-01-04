@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml;
 extern interface IDataTemplateExtension extends winrt.windows.foundation.IInspectable
 {
     function ResetTemplate(): Void;
-    function ProcessBinding(phase: UInt32): Bool;
-    function ProcessBindings(arg: ConstRef<winrt.windows.ui.xaml.controls.ContainerContentChangingEventArgs>): Int32;
+    function ProcessBinding(phase: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Bool;
+    function ProcessBindings(arg: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.ContainerContentChangingEventArgs>): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

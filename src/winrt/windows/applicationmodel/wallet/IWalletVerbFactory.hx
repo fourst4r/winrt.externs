@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.wallet;
 @:native("winrt::Windows::ApplicationModel::Wallet::IWalletVerbFactory")
 extern interface IWalletVerbFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWalletVerb(name: ConstRef<winrt.HString>): winrt.windows.applicationmodel.wallet.WalletVerb;
+    function CreateWalletVerb(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.wallet.WalletVerb;
 }

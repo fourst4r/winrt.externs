@@ -10,5 +10,5 @@ extern class TeachingTipAutomationPeer
     extends winrt.microsoft.ui.xaml.automation.peers.FrameworkElementAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.ITeachingTipAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.TeachingTip>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.TeachingTip>);
 }

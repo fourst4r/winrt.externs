@@ -25,11 +25,11 @@ extern interface IEmailIrmInfo extends winrt.windows.foundation.IInspectable
     overload function CanReplyAll(): Bool;
     overload function CanReplyAll(value: Bool): Void;
     overload function ExpirationDate(): winrt.windows.foundation.DateTime;
-    overload function ExpirationDate(value: ConstRef<winrt.windows.foundation.DateTime>): Void;
+    overload function ExpirationDate(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>): Void;
     overload function IsIrmOriginator(): Bool;
     overload function IsIrmOriginator(value: Bool): Void;
     overload function IsProgramaticAccessAllowed(): Bool;
     overload function IsProgramaticAccessAllowed(value: Bool): Void;
     overload function Template(): winrt.windows.applicationmodel.email.EmailIrmTemplate;
-    overload function Template(value: ConstRef<winrt.windows.applicationmodel.email.EmailIrmTemplate>): Void;
+    overload function Template(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.email.EmailIrmTemplate>): Void;
 }

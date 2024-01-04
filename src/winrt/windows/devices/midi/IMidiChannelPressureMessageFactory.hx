@@ -8,5 +8,5 @@ package winrt.windows.devices.midi;
 @:native("winrt::Windows::Devices::Midi::IMidiChannelPressureMessageFactory")
 extern interface IMidiChannelPressureMessageFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateMidiChannelPressureMessage(channel: UInt8, pressure: UInt8): winrt.windows.devices.midi.MidiChannelPressureMessage;
+    function CreateMidiChannelPressureMessage(channel: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, pressure: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8): winrt.windows.devices.midi.MidiChannelPressureMessage;
 }

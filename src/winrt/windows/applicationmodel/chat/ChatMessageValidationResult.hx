@@ -9,8 +9,8 @@ package winrt.windows.applicationmodel.chat;
 extern class ChatMessageValidationResult
     implements winrt.windows.applicationmodel.chat.IChatMessageValidationResult
 {
-    overload function MaxPartCount(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
-    overload function PartCount(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
-    overload function RemainingCharacterCountInPart(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
+    overload function MaxPartCount(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
+    overload function PartCount(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
+    overload function RemainingCharacterCountInPart(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
     overload function Status(): winrt.windows.applicationmodel.chat.ChatMessageValidationStatus;
 }

@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.core;
 @:native("winrt::Windows::ApplicationModel::Core::ICoreImmersiveApplication3")
 extern interface ICoreImmersiveApplication3 extends winrt.windows.foundation.IInspectable
 {
-    function CreateNewView(viewSource: ConstRef<winrt.windows.applicationmodel.core.IFrameworkViewSource>): winrt.windows.applicationmodel.core.CoreApplicationView;
+    function CreateNewView(viewSource: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.core.IFrameworkViewSource>): winrt.windows.applicationmodel.core.CoreApplicationView;
 }

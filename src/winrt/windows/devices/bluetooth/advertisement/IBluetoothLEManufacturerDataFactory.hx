@@ -8,5 +8,5 @@ package winrt.windows.devices.bluetooth.advertisement;
 @:native("winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEManufacturerDataFactory")
 extern interface IBluetoothLEManufacturerDataFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(companyId: UInt16, data: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.devices.bluetooth.advertisement.BluetoothLEManufacturerData;
+    function Create(companyId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, data: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.devices.bluetooth.advertisement.BluetoothLEManufacturerData;
 }

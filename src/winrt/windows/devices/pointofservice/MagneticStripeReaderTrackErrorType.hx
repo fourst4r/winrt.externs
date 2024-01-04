@@ -2,7 +2,7 @@ package winrt.windows.devices.pointofservice;
 
 @:include("winrt/Windows.Devices.PointOfService.h", true)
 @:native("winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackErrorType")
-extern enum abstract MagneticStripeReaderTrackErrorType(Int32)
+extern enum abstract MagneticStripeReaderTrackErrorType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackErrorType::None") final None;
     @:native("winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackErrorType::StartSentinelError") final StartSentinelError;

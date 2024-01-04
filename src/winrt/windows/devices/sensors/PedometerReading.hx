@@ -10,7 +10,7 @@ extern class PedometerReading
     implements winrt.windows.devices.sensors.IPedometerReading
 {
     overload function StepKind(): winrt.windows.devices.sensors.PedometerStepKind;
-    overload function CumulativeSteps(): Int32;
+    overload function CumulativeSteps(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function Timestamp(): winrt.windows.foundation.DateTime;
     overload function CumulativeStepsDuration(): winrt.windows.foundation.TimeSpan;
 }

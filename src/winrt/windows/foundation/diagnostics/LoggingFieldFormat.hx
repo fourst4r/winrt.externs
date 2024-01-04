@@ -2,7 +2,7 @@ package winrt.windows.foundation.diagnostics;
 
 @:include("winrt/Windows.Foundation.Diagnostics.h", true)
 @:native("winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat")
-extern enum abstract LoggingFieldFormat(Int32)
+extern enum abstract LoggingFieldFormat(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat::Default") final Default;
     @:native("winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat::Hidden") final Hidden;

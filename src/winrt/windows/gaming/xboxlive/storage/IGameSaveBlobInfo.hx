@@ -9,5 +9,5 @@ package winrt.windows.gaming.xboxlive.storage;
 extern interface IGameSaveBlobInfo extends winrt.windows.foundation.IInspectable
 {
     overload function Name(): winrt.HString;
-    overload function Size(): UInt32;
+    overload function Size(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

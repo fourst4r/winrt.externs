@@ -9,6 +9,6 @@ package winrt.windows.networking.networkoperators;
 extern class ProvisionedProfile
     implements winrt.windows.networking.networkoperators.IProvisionedProfile
 {
-    function UpdateCost(value: ConstRef<winrt.windows.networking.connectivity.NetworkCostType>): Void;
-    function UpdateUsage(value: ConstRef<winrt.windows.networking.networkoperators.ProfileUsage>): Void;
+    function UpdateCost(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.connectivity.NetworkCostType>): Void;
+    function UpdateUsage(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.networkoperators.ProfileUsage>): Void;
 }

@@ -11,8 +11,8 @@ extern class EasingFunctionBase
     implements winrt.microsoft.ui.xaml.media.animation.IEasingFunctionBase
 {
     overload function EasingMode(): winrt.microsoft.ui.xaml.media.animation.EasingMode;
-    overload function EasingMode(value: ConstRef<winrt.microsoft.ui.xaml.media.animation.EasingMode>): Void;
-    function Ease(normalizedTime: Float64): Float64;
+    overload function EasingMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.animation.EasingMode>): Void;
+    function Ease(normalizedTime: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function EasingModeProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function EasingModeProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
 }

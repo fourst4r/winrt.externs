@@ -10,9 +10,9 @@ extern class TextReverseConversionGenerator
     implements winrt.windows.data.text.ITextReverseConversionGenerator
     implements winrt.windows.data.text.ITextReverseConversionGenerator2
 {
-    /* explicit */ function new(languageTag: ConstRef<winrt.HString>);
+    /* explicit */ function new(languageTag: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     overload function ResolvedLanguage(): winrt.HString;
     overload function LanguageAvailableButNotInstalled(): Bool;
-    function ConvertBackAsync(input: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.HString> /* GenericTypeInstSig */;
-    function GetPhonemesAsync(input: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.data.text.TextPhoneme> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+    function ConvertBackAsync(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.HString> /* GenericTypeInstSig */;
+    function GetPhonemesAsync(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.data.text.TextPhoneme> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
 }

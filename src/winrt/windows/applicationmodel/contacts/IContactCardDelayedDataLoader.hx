@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.contacts;
 @:native("winrt::Windows::ApplicationModel::Contacts::IContactCardDelayedDataLoader")
 extern interface IContactCardDelayedDataLoader extends winrt.windows.foundation.IInspectable
 {
-    function SetData(contact: ConstRef<winrt.windows.applicationmodel.contacts.Contact>): Void;
+    function SetData(contact: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.contacts.Contact>): Void;
 }

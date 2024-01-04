@@ -8,5 +8,5 @@ package winrt.windows.devices.midi;
 @:native("winrt::Windows::Devices::Midi::IMidiSongPositionPointerMessage")
 extern interface IMidiSongPositionPointerMessage extends winrt.windows.foundation.IInspectable
 {
-    overload function Beats(): UInt16;
+    overload function Beats(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
 }

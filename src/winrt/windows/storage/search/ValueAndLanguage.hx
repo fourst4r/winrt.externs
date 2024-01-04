@@ -11,7 +11,7 @@ extern class ValueAndLanguage
 {
     function new();
     overload function Language(): winrt.HString;
-    overload function Language(value: ConstRef<winrt.HString>): Void;
+    overload function Language(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Value(): winrt.windows.foundation.IInspectable;
-    overload function Value(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Value(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
 }

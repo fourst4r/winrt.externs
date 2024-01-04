@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.email;
 @:native("winrt::Windows::ApplicationModel::Email::IEmailIrmInfoFactory")
 extern interface IEmailIrmInfoFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(expiration: ConstRef<winrt.windows.foundation.DateTime>, irmTemplate: ConstRef<winrt.windows.applicationmodel.email.EmailIrmTemplate>): winrt.windows.applicationmodel.email.EmailIrmInfo;
+    function Create(expiration: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>, irmTemplate: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.email.EmailIrmTemplate>): winrt.windows.applicationmodel.email.EmailIrmInfo;
 }

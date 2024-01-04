@@ -8,5 +8,5 @@ package winrt.windows.web.http.headers;
 @:native("winrt::Windows::Web::Http::Headers::IHttpContentDispositionHeaderValueFactory")
 extern interface IHttpContentDispositionHeaderValueFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(dispositionType: ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpContentDispositionHeaderValue;
+    function Create(dispositionType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.http.headers.HttpContentDispositionHeaderValue;
 }

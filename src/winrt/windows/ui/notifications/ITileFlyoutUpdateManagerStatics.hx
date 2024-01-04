@@ -9,7 +9,7 @@ package winrt.windows.ui.notifications;
 extern interface ITileFlyoutUpdateManagerStatics extends winrt.windows.foundation.IInspectable
 {
     overload function CreateTileFlyoutUpdaterForApplication(): winrt.windows.ui.notifications.TileFlyoutUpdater;
-    overload function CreateTileFlyoutUpdaterForApplication(applicationId: ConstRef<winrt.HString>): winrt.windows.ui.notifications.TileFlyoutUpdater;
-    function CreateTileFlyoutUpdaterForSecondaryTile(tileId: ConstRef<winrt.HString>): winrt.windows.ui.notifications.TileFlyoutUpdater;
-    function GetTemplateContent(type: ConstRef<winrt.windows.ui.notifications.TileFlyoutTemplateType>): winrt.windows.data.xml.dom.XmlDocument;
+    overload function CreateTileFlyoutUpdaterForApplication(applicationId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.notifications.TileFlyoutUpdater;
+    function CreateTileFlyoutUpdaterForSecondaryTile(tileId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.notifications.TileFlyoutUpdater;
+    function GetTemplateContent(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.notifications.TileFlyoutTemplateType>): winrt.windows.data.xml.dom.XmlDocument;
 }

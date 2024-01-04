@@ -15,9 +15,9 @@ extern interface IApplicationView extends winrt.windows.foundation.IInspectable
     overload function IsOnLockScreen(): Bool;
     overload function IsScreenCaptureEnabled(): Bool;
     overload function IsScreenCaptureEnabled(value: Bool): Void;
-    overload function Title(value: ConstRef<winrt.HString>): Void;
+    overload function Title(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Title(): winrt.HString;
-    overload function Id(): Int32;
-    overload function Consolidated(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.viewmanagement.ApplicationView, winrt.windows.ui.viewmanagement.ApplicationViewConsolidatedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Consolidated(token: ConstRef<winrt.EventToken>): Void;
+    overload function Id(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Consolidated(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.viewmanagement.ApplicationView, winrt.windows.ui.viewmanagement.ApplicationViewConsolidatedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Consolidated(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

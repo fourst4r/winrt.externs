@@ -9,5 +9,5 @@ package winrt.microsoft.web.webview2.core;
 extern interface ICoreWebView2Settings2 extends winrt.windows.foundation.IInspectable
 {
     overload function UserAgent(): winrt.HString;
-    overload function UserAgent(value: ConstRef<winrt.HString>): Void;
+    overload function UserAgent(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

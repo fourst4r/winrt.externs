@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls.primitives;
 @:native("winrt::Windows::UI::Xaml::Controls::Primitives::IComboBoxTemplateSettings2")
 extern interface IComboBoxTemplateSettings2 extends winrt.windows.foundation.IInspectable
 {
-    overload function DropDownContentMinWidth(): Float64;
+    overload function DropDownContentMinWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

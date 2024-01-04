@@ -10,8 +10,8 @@ extern class CoreWebView2NavigationCompletedEventArgs
     implements winrt.microsoft.web.webview2.core.ICoreWebView2NavigationCompletedEventArgs2
     implements winrt.microsoft.web.webview2.core.ICoreWebView2NavigationCompletedEventArgs
 {
-    overload function HttpStatusCode(): Int32;
+    overload function HttpStatusCode(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function IsSuccess(): Bool;
     overload function WebErrorStatus(): winrt.microsoft.web.webview2.core.CoreWebView2WebErrorStatus;
-    overload function NavigationId(): UInt64;
+    overload function NavigationId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

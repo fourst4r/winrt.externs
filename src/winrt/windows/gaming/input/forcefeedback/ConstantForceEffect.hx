@@ -11,11 +11,11 @@ extern class ConstantForceEffect
     implements winrt.windows.gaming.input.forcefeedback.IConstantForceEffect
 {
     function new();
-    overload function Gain(): Float64;
-    overload function Gain(value: Float64): Void;
+    overload function Gain(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Gain(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function State(): winrt.windows.gaming.input.forcefeedback.ForceFeedbackEffectState;
     function Start(): Void;
     function Stop(): Void;
-    function SetParameters(vector: ConstRef<winrt.windows.foundation.numerics.Vector3>, duration: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
-    function SetParametersWithEnvelope(vector: ConstRef<winrt.windows.foundation.numerics.Vector3>, attackGain: Float32, sustainGain: Float32, releaseGain: Float32, startDelay: ConstRef<winrt.windows.foundation.TimeSpan>, attackDuration: ConstRef<winrt.windows.foundation.TimeSpan>, sustainDuration: ConstRef<winrt.windows.foundation.TimeSpan>, releaseDuration: ConstRef<winrt.windows.foundation.TimeSpan>, repeatCount: UInt32): Void;
+    function SetParameters(vector: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector3>, duration: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
+    function SetParametersWithEnvelope(vector: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector3>, attackGain: #if reflaxe.cpp cxx.num. #else cpp. #end Float32, sustainGain: #if reflaxe.cpp cxx.num. #else cpp. #end Float32, releaseGain: #if reflaxe.cpp cxx.num. #else cpp. #end Float32, startDelay: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>, attackDuration: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>, sustainDuration: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>, releaseDuration: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>, repeatCount: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
 }

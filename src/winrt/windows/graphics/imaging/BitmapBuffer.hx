@@ -11,8 +11,8 @@ extern class BitmapBuffer
     implements winrt.windows.foundation.IMemoryBuffer
     implements winrt.windows.graphics.imaging.IBitmapBuffer
 {
-    function GetPlaneCount(): Int32;
-    function GetPlaneDescription(index: Int32): winrt.windows.graphics.imaging.BitmapPlaneDescription;
+    function GetPlaneCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function GetPlaneDescription(index: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.graphics.imaging.BitmapPlaneDescription;
     function CreateReference(): winrt.windows.foundation.IMemoryBufferReference;
     function Close(): Void;
 }

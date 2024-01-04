@@ -8,5 +8,5 @@ package winrt.windows.ai.machinelearning.preview;
 @:native("winrt::Windows::AI::MachineLearning::Preview::ILearningModelBindingPreviewFactory")
 extern interface ILearningModelBindingPreviewFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateFromModel(model: ConstRef<winrt.windows.ai.machinelearning.preview.LearningModelPreview>): winrt.windows.ai.machinelearning.preview.LearningModelBindingPreview;
+    function CreateFromModel(model: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ai.machinelearning.preview.LearningModelPreview>): winrt.windows.ai.machinelearning.preview.LearningModelBindingPreview;
 }

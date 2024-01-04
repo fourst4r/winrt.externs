@@ -14,9 +14,9 @@ extern class PickerFlyoutBase
     function OnConfirmed(): Void;
     function ShouldShowConfirmationButtons(): Bool;
     overload function TitleProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetTitle(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>): winrt.HString;
-    function SetTitle(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>, value: ConstRef<winrt.HString>): Void;
+    function GetTitle(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): winrt.HString;
+    function SetTitle(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     static overload function TitleProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    static function GetTitle(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>): winrt.HString;
-    static function SetTitle(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>, value: ConstRef<winrt.HString>): Void;
+    static function GetTitle(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): winrt.HString;
+    static function SetTitle(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

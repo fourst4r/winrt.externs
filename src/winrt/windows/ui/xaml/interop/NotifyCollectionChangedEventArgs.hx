@@ -9,10 +9,10 @@ package winrt.windows.ui.xaml.interop;
 extern class NotifyCollectionChangedEventArgs
     implements winrt.windows.ui.xaml.interop.INotifyCollectionChangedEventArgs
 {
-    function new(action: ConstRef<winrt.windows.ui.xaml.interop.NotifyCollectionChangedAction>, newItems: ConstRef<winrt.windows.ui.xaml.interop.IBindableVector>, oldItems: ConstRef<winrt.windows.ui.xaml.interop.IBindableVector>, newIndex: Int32, oldIndex: Int32);
+    function new(action: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.interop.NotifyCollectionChangedAction>, newItems: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.interop.IBindableVector>, oldItems: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.interop.IBindableVector>, newIndex: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, oldIndex: #if reflaxe.cpp cxx.num. #else cpp. #end Int32);
     overload function Action(): winrt.windows.ui.xaml.interop.NotifyCollectionChangedAction;
     overload function NewItems(): winrt.windows.ui.xaml.interop.IBindableVector;
     overload function OldItems(): winrt.windows.ui.xaml.interop.IBindableVector;
-    overload function NewStartingIndex(): Int32;
-    overload function OldStartingIndex(): Int32;
+    overload function NewStartingIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function OldStartingIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

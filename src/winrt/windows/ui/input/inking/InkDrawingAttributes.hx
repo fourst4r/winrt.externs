@@ -15,17 +15,17 @@ extern class InkDrawingAttributes
 {
     function new();
     overload function Color(): winrt.windows.ui.Color;
-    overload function Color(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function Color(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
     overload function PenTip(): winrt.windows.ui.input.inking.PenTipShape;
-    overload function PenTip(value: ConstRef<winrt.windows.ui.input.inking.PenTipShape>): Void;
+    overload function PenTip(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.inking.PenTipShape>): Void;
     overload function Size(): winrt.windows.foundation.Size;
-    overload function Size(value: ConstRef<winrt.windows.foundation.Size>): Void;
+    overload function Size(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Size>): Void;
     overload function IgnorePressure(): Bool;
     overload function IgnorePressure(value: Bool): Void;
     overload function FitToCurve(): Bool;
     overload function FitToCurve(value: Bool): Void;
     overload function PenTipTransform(): winrt.windows.foundation.numerics.Matrix3x2;
-    overload function PenTipTransform(value: ConstRef<winrt.windows.foundation.numerics.Matrix3x2>): Void;
+    overload function PenTipTransform(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Matrix3x2>): Void;
     overload function DrawAsHighlighter(): Bool;
     overload function DrawAsHighlighter(value: Bool): Void;
     overload function Kind(): winrt.windows.ui.input.inking.InkDrawingAttributesKind;

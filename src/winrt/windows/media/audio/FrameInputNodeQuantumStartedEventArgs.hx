@@ -9,5 +9,5 @@ package winrt.windows.media.audio;
 extern class FrameInputNodeQuantumStartedEventArgs
     implements winrt.windows.media.audio.IFrameInputNodeQuantumStartedEventArgs
 {
-    overload function RequiredSamples(): Int32;
+    overload function RequiredSamples(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

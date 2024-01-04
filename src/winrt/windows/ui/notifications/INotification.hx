@@ -9,7 +9,7 @@ package winrt.windows.ui.notifications;
 extern interface INotification extends winrt.windows.foundation.IInspectable
 {
     overload function ExpirationTime(): winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* GenericTypeInstSig */;
-    overload function ExpirationTime(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* temp_GenericTypeInstSig */>): Void;
+    overload function ExpirationTime(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* temp_GenericTypeInstSig */>): Void;
     overload function Visual(): winrt.windows.ui.notifications.NotificationVisual;
-    overload function Visual(value: ConstRef<winrt.windows.ui.notifications.NotificationVisual>): Void;
+    overload function Visual(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.notifications.NotificationVisual>): Void;
 }

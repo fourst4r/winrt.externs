@@ -8,6 +8,6 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::ITextCompositionStartedEventArgs")
 extern interface ITextCompositionStartedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function StartIndex(): Int32;
-    overload function Length(): Int32;
+    overload function StartIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Length(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

@@ -8,5 +8,5 @@ package winrt.windows.graphics.printing3d;
 @:native("winrt::Windows::Graphics::Printing3D::IPrinting3DTexture2CoordMaterialGroupFactory")
 extern interface IPrinting3DTexture2CoordMaterialGroupFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(MaterialGroupId: UInt32): winrt.windows.graphics.printing3d.Printing3DTexture2CoordMaterialGroup;
+    function Create(MaterialGroupId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.graphics.printing3d.Printing3DTexture2CoordMaterialGroup;
 }

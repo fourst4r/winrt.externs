@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml.controls;
 @:native("winrt::Microsoft::UI::Xaml::Controls::ISymbolIconFactory")
 extern interface ISymbolIconFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstanceWithSymbol(symbol: ConstRef<winrt.microsoft.ui.xaml.controls.Symbol>): winrt.microsoft.ui.xaml.controls.SymbolIcon;
+    function CreateInstanceWithSymbol(symbol: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.Symbol>): winrt.microsoft.ui.xaml.controls.SymbolIcon;
 }

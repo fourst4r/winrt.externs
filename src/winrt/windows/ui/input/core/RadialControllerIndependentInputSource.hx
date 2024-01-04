@@ -13,6 +13,6 @@ extern class RadialControllerIndependentInputSource
     overload function Controller(): winrt.windows.ui.input.RadialController;
     overload function Dispatcher(): winrt.windows.ui.core.CoreDispatcher;
     overload function DispatcherQueue(): winrt.windows.system.DispatcherQueue;
-    function CreateForView(view: ConstRef<winrt.windows.applicationmodel.core.CoreApplicationView>): winrt.windows.ui.input.core.RadialControllerIndependentInputSource;
-    static function CreateForView(view: ConstRef<winrt.windows.applicationmodel.core.CoreApplicationView>): winrt.windows.ui.input.core.RadialControllerIndependentInputSource;
+    function CreateForView(view: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.core.CoreApplicationView>): winrt.windows.ui.input.core.RadialControllerIndependentInputSource;
+    static function CreateForView(view: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.core.CoreApplicationView>): winrt.windows.ui.input.core.RadialControllerIndependentInputSource;
 }

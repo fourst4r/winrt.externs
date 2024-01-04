@@ -8,8 +8,8 @@ package winrt.windows.ui.xaml.hosting;
 @:native("winrt::Windows::UI::Xaml::Hosting::IElementCompositionPreviewStatics")
 extern interface IElementCompositionPreviewStatics extends winrt.windows.foundation.IInspectable
 {
-    function GetElementVisual(element: ConstRef<winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.composition.Visual;
-    function GetElementChildVisual(element: ConstRef<winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.composition.Visual;
-    function SetElementChildVisual(element: ConstRef<winrt.windows.ui.xaml.UIElement>, visual: ConstRef<winrt.windows.ui.composition.Visual>): Void;
-    function GetScrollViewerManipulationPropertySet(scrollViewer: ConstRef<winrt.windows.ui.xaml.controls.ScrollViewer>): winrt.windows.ui.composition.CompositionPropertySet;
+    function GetElementVisual(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.composition.Visual;
+    function GetElementChildVisual(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.composition.Visual;
+    function SetElementChildVisual(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>, visual: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Visual>): Void;
+    function GetScrollViewerManipulationPropertySet(scrollViewer: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.ScrollViewer>): winrt.windows.ui.composition.CompositionPropertySet;
 }

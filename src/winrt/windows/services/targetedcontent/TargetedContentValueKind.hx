@@ -2,7 +2,7 @@ package winrt.windows.services.targetedcontent;
 
 @:include("winrt/Windows.Services.TargetedContent.h", true)
 @:native("winrt::Windows::Services::TargetedContent::TargetedContentValueKind")
-extern enum abstract TargetedContentValueKind(Int32)
+extern enum abstract TargetedContentValueKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Services::TargetedContent::TargetedContentValueKind::String") final String;
     @:native("winrt::Windows::Services::TargetedContent::TargetedContentValueKind::Uri") final Uri;

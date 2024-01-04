@@ -18,6 +18,6 @@ extern interface IItemsControlStatics extends winrt.windows.foundation.IInspecta
     overload function ItemContainerTransitionsProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function GroupStyleSelectorProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function IsGroupingProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetItemsOwner(element: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.controls.ItemsControl;
-    function ItemsControlFromItemContainer(container: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.controls.ItemsControl;
+    function GetItemsOwner(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.controls.ItemsControl;
+    function ItemsControlFromItemContainer(container: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.controls.ItemsControl;
 }

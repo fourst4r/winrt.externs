@@ -8,6 +8,6 @@ package winrt.windows.applicationmodel.contacts;
 @:native("winrt::Windows::ApplicationModel::Contacts::IContactQueryOptionsFactory")
 extern interface IContactQueryOptionsFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWithText(text: ConstRef<winrt.HString>): winrt.windows.applicationmodel.contacts.ContactQueryOptions;
-    function CreateWithTextAndFields(text: ConstRef<winrt.HString>, fields: ConstRef<winrt.windows.applicationmodel.contacts.ContactQuerySearchFields>): winrt.windows.applicationmodel.contacts.ContactQueryOptions;
+    function CreateWithText(text: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.contacts.ContactQueryOptions;
+    function CreateWithTextAndFields(text: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, fields: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.contacts.ContactQuerySearchFields>): winrt.windows.applicationmodel.contacts.ContactQueryOptions;
 }

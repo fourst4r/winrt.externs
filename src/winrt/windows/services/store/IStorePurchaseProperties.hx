@@ -9,7 +9,7 @@ package winrt.windows.services.store;
 extern interface IStorePurchaseProperties extends winrt.windows.foundation.IInspectable
 {
     overload function Name(): winrt.HString;
-    overload function Name(value: ConstRef<winrt.HString>): Void;
+    overload function Name(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function ExtendedJsonData(): winrt.HString;
-    overload function ExtendedJsonData(value: ConstRef<winrt.HString>): Void;
+    overload function ExtendedJsonData(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

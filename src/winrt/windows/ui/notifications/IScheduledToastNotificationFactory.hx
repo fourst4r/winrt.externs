@@ -8,6 +8,6 @@ package winrt.windows.ui.notifications;
 @:native("winrt::Windows::UI::Notifications::IScheduledToastNotificationFactory")
 extern interface IScheduledToastNotificationFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateScheduledToastNotification(content: ConstRef<winrt.windows.data.xml.dom.XmlDocument>, deliveryTime: ConstRef<winrt.windows.foundation.DateTime>): winrt.windows.ui.notifications.ScheduledToastNotification;
-    function CreateScheduledToastNotificationRecurring(content: ConstRef<winrt.windows.data.xml.dom.XmlDocument>, deliveryTime: ConstRef<winrt.windows.foundation.DateTime>, snoozeInterval: ConstRef<winrt.windows.foundation.TimeSpan>, maximumSnoozeCount: UInt32): winrt.windows.ui.notifications.ScheduledToastNotification;
+    function CreateScheduledToastNotification(content: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.data.xml.dom.XmlDocument>, deliveryTime: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>): winrt.windows.ui.notifications.ScheduledToastNotification;
+    function CreateScheduledToastNotificationRecurring(content: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.data.xml.dom.XmlDocument>, deliveryTime: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>, snoozeInterval: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>, maximumSnoozeCount: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.ui.notifications.ScheduledToastNotification;
 }

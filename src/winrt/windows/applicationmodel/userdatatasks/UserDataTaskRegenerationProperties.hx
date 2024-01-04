@@ -11,11 +11,11 @@ extern class UserDataTaskRegenerationProperties
 {
     function new();
     overload function Unit(): winrt.windows.applicationmodel.userdatatasks.UserDataTaskRegenerationUnit;
-    overload function Unit(value: ConstRef<winrt.windows.applicationmodel.userdatatasks.UserDataTaskRegenerationUnit>): Void;
-    overload function Occurrences(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
-    overload function Occurrences(value: ConstRef<winrt.windows.foundation.IReference<Int32> /* temp_GenericTypeInstSig */>): Void;
+    overload function Unit(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.userdatatasks.UserDataTaskRegenerationUnit>): Void;
+    overload function Occurrences(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
+    overload function Occurrences(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* temp_GenericTypeInstSig */>): Void;
     overload function Until(): winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* GenericTypeInstSig */;
-    overload function Until(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* temp_GenericTypeInstSig */>): Void;
-    overload function Interval(): Int32;
-    overload function Interval(value: Int32): Void;
+    overload function Until(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* temp_GenericTypeInstSig */>): Void;
+    overload function Interval(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Interval(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
 }

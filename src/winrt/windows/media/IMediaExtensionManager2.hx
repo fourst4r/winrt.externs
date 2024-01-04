@@ -8,5 +8,5 @@ package winrt.windows.media;
 @:native("winrt::Windows::Media::IMediaExtensionManager2")
 extern interface IMediaExtensionManager2 extends winrt.windows.foundation.IInspectable
 {
-    function RegisterMediaExtensionForAppService(extension: ConstRef<winrt.windows.media.IMediaExtension>, connection: ConstRef<winrt.windows.applicationmodel.appservice.AppServiceConnection>): Void;
+    function RegisterMediaExtensionForAppService(extension: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.IMediaExtension>, connection: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.appservice.AppServiceConnection>): Void;
 }

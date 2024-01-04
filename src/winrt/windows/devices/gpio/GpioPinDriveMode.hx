@@ -2,7 +2,7 @@ package winrt.windows.devices.gpio;
 
 @:include("winrt/Windows.Devices.Gpio.h", true)
 @:native("winrt::Windows::Devices::Gpio::GpioPinDriveMode")
-extern enum abstract GpioPinDriveMode(Int32)
+extern enum abstract GpioPinDriveMode(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::Gpio::GpioPinDriveMode::Input") final Input;
     @:native("winrt::Windows::Devices::Gpio::GpioPinDriveMode::Output") final Output;

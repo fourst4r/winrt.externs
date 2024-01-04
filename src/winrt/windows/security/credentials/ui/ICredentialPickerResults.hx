@@ -8,7 +8,7 @@ package winrt.windows.security.credentials.ui;
 @:native("winrt::Windows::Security::Credentials::UI::ICredentialPickerResults")
 extern interface ICredentialPickerResults extends winrt.windows.foundation.IInspectable
 {
-    overload function ErrorCode(): UInt32;
+    overload function ErrorCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function CredentialSaveOption(): winrt.windows.security.credentials.ui.CredentialSaveOption;
     overload function CredentialSaved(): Bool;
     overload function Credential(): winrt.windows.storage.streams.IBuffer;

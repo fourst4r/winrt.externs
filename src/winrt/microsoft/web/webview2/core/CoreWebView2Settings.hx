@@ -17,7 +17,7 @@ extern class CoreWebView2Settings
     implements winrt.microsoft.web.webview2.core.ICoreWebView2Settings
 {
     overload function UserAgent(): winrt.HString;
-    overload function UserAgent(value: ConstRef<winrt.HString>): Void;
+    overload function UserAgent(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function AreBrowserAcceleratorKeysEnabled(): Bool;
     overload function AreBrowserAcceleratorKeysEnabled(value: Bool): Void;
     overload function IsPasswordAutosaveEnabled(): Bool;
@@ -29,9 +29,9 @@ extern class CoreWebView2Settings
     overload function IsSwipeNavigationEnabled(): Bool;
     overload function IsSwipeNavigationEnabled(value: Bool): Void;
     overload function HiddenPdfToolbarItems(): winrt.microsoft.web.webview2.core.CoreWebView2PdfToolbarItems;
-    overload function HiddenPdfToolbarItems(value: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2PdfToolbarItems>): Void;
+    overload function HiddenPdfToolbarItems(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.CoreWebView2PdfToolbarItems>): Void;
     overload function HostObjectDispatchAdapter(): winrt.microsoft.web.webview2.core.ICoreWebView2DispatchAdapter;
-    overload function HostObjectDispatchAdapter(value: ConstRef<winrt.microsoft.web.webview2.core.ICoreWebView2DispatchAdapter>): Void;
+    overload function HostObjectDispatchAdapter(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.ICoreWebView2DispatchAdapter>): Void;
     overload function IsScriptEnabled(): Bool;
     overload function IsScriptEnabled(value: Bool): Void;
     overload function IsWebMessageEnabled(): Bool;

@@ -10,6 +10,6 @@ extern interface IMdmSessionManagerStatics extends winrt.windows.foundation.IIns
 {
     overload function SessionIds(): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
     function TryCreateSession(): winrt.windows.management.MdmSession;
-    function DeleteSessionById(sessionId: ConstRef<winrt.HString>): Void;
-    function GetSessionById(sessionId: ConstRef<winrt.HString>): winrt.windows.management.MdmSession;
+    function DeleteSessionById(sessionId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function GetSessionById(sessionId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.management.MdmSession;
 }

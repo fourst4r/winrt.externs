@@ -9,7 +9,7 @@ package winrt.microsoft.ui.composition.interactions;
 extern interface IInteractionTrackerInertiaRestingValue extends winrt.windows.foundation.IInspectable
 {
     overload function Condition(): winrt.microsoft.ui.composition.ExpressionAnimation;
-    overload function Condition(value: ConstRef<winrt.microsoft.ui.composition.ExpressionAnimation>): Void;
+    overload function Condition(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.ExpressionAnimation>): Void;
     overload function RestingValue(): winrt.microsoft.ui.composition.ExpressionAnimation;
-    overload function RestingValue(value: ConstRef<winrt.microsoft.ui.composition.ExpressionAnimation>): Void;
+    overload function RestingValue(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.ExpressionAnimation>): Void;
 }

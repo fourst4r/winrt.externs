@@ -12,9 +12,9 @@ extern class AppUriHandlerHost
 {
     function new();
     @:native("winrt::Windows::System::AppUriHandlerHost")
-    /* explicit */ static overload function make(name: ConstRef<winrt.HString>): winrt.windows.system.AppUriHandlerHost;
+    /* explicit */ static overload function make(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.system.AppUriHandlerHost;
     overload function Name(): winrt.HString;
-    overload function Name(value: ConstRef<winrt.HString>): Void;
+    overload function Name(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function IsEnabled(): Bool;
     overload function IsEnabled(value: Bool): Void;
 }

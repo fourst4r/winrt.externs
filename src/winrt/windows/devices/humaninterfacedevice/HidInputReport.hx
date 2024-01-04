@@ -9,12 +9,12 @@ package winrt.windows.devices.humaninterfacedevice;
 extern class HidInputReport
     implements winrt.windows.devices.humaninterfacedevice.IHidInputReport
 {
-    overload function Id(): UInt16;
+    overload function Id(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
     overload function Data(): winrt.windows.storage.streams.IBuffer;
     overload function ActivatedBooleanControls(): winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.humaninterfacedevice.HidBooleanControl> /* GenericTypeInstSig */;
     overload function TransitionedBooleanControls(): winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.humaninterfacedevice.HidBooleanControl> /* GenericTypeInstSig */;
-    function GetBooleanControl(usagePage: UInt16, usageId: UInt16): winrt.windows.devices.humaninterfacedevice.HidBooleanControl;
-    function GetBooleanControlByDescription(controlDescription: ConstRef<winrt.windows.devices.humaninterfacedevice.HidBooleanControlDescription>): winrt.windows.devices.humaninterfacedevice.HidBooleanControl;
-    function GetNumericControl(usagePage: UInt16, usageId: UInt16): winrt.windows.devices.humaninterfacedevice.HidNumericControl;
-    function GetNumericControlByDescription(controlDescription: ConstRef<winrt.windows.devices.humaninterfacedevice.HidNumericControlDescription>): winrt.windows.devices.humaninterfacedevice.HidNumericControl;
+    function GetBooleanControl(usagePage: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, usageId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.windows.devices.humaninterfacedevice.HidBooleanControl;
+    function GetBooleanControlByDescription(controlDescription: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.humaninterfacedevice.HidBooleanControlDescription>): winrt.windows.devices.humaninterfacedevice.HidBooleanControl;
+    function GetNumericControl(usagePage: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, usageId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.windows.devices.humaninterfacedevice.HidNumericControl;
+    function GetNumericControlByDescription(controlDescription: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.humaninterfacedevice.HidNumericControlDescription>): winrt.windows.devices.humaninterfacedevice.HidNumericControl;
 }

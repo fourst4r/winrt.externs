@@ -9,7 +9,7 @@ package winrt.windows.media.protection.playready;
 extern interface IPlayReadyDomainLeaveServiceRequest extends winrt.windows.foundation.IInspectable
 {
     overload function DomainAccountId(): winrt.Guid;
-    overload function DomainAccountId(value: ConstRef<winrt.Guid>): Void;
+    overload function DomainAccountId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): Void;
     overload function DomainServiceId(): winrt.Guid;
-    overload function DomainServiceId(value: ConstRef<winrt.Guid>): Void;
+    overload function DomainServiceId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): Void;
 }

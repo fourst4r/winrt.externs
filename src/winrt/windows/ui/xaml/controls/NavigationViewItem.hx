@@ -13,8 +13,8 @@ extern class NavigationViewItem
 {
     function new();
     overload function Icon(): winrt.windows.ui.xaml.controls.IconElement;
-    overload function Icon(value: ConstRef<winrt.windows.ui.xaml.controls.IconElement>): Void;
-    overload function CompactPaneLength(): Float64;
+    overload function Icon(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.IconElement>): Void;
+    overload function CompactPaneLength(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function SelectsOnInvoked(): Bool;
     overload function SelectsOnInvoked(value: Bool): Void;
     overload function SelectsOnInvokedProperty(): winrt.windows.ui.xaml.DependencyProperty;

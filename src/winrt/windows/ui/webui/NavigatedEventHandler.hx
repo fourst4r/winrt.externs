@@ -2,4 +2,4 @@ package winrt.windows.ui.webui;
 
 
 @:extern 
-typedef NavigatedEventHandler = Fn<(sender: ConstRef<winrt.windows.foundation.IInspectable>, e: ConstRef<winrt.windows.ui.webui.IWebUINavigatedEventArgs>)->Void>;
+typedef NavigatedEventHandler = Fn<(sender: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, e: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.webui.IWebUINavigatedEventArgs>)->Void>;

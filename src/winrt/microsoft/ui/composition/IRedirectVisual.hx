@@ -9,5 +9,5 @@ package winrt.microsoft.ui.composition;
 extern interface IRedirectVisual extends winrt.windows.foundation.IInspectable
 {
     overload function Source(): winrt.microsoft.ui.composition.Visual;
-    overload function Source(value: ConstRef<winrt.microsoft.ui.composition.Visual>): Void;
+    overload function Source(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.Visual>): Void;
 }

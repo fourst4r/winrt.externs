@@ -12,8 +12,8 @@ extern class VisualUnorderedCollection
     implements winrt.windows.foundation.collections.IIterable<winrt.microsoft.ui.composition.Visual> /* GenericTypeInstSig */
 {
     function RemoveAll(): Void;
-    function Add(newVisual: ConstRef<winrt.microsoft.ui.composition.Visual>): Void;
-    function Remove(visual: ConstRef<winrt.microsoft.ui.composition.Visual>): Void;
-    overload function Count(): Int32;
+    function Add(newVisual: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.Visual>): Void;
+    function Remove(visual: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.Visual>): Void;
+    overload function Count(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     function First(): winrt.windows.foundation.collections.IIterator<winrt.microsoft.ui.composition.Visual> /* GenericTypeInstSig */;
 }

@@ -9,5 +9,5 @@ package winrt.windows.storage;
 extern interface IStorageItem2 extends winrt.windows.foundation.IInspectable
 {
     function GetParentAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.StorageFolder> /* GenericTypeInstSig */;
-    function IsEqual(item: ConstRef<winrt.windows.storage.IStorageItem>): Bool;
+    function IsEqual(item: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.IStorageItem>): Bool;
 }

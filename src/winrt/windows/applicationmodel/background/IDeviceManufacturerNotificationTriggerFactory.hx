@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.background;
 @:native("winrt::Windows::ApplicationModel::Background::IDeviceManufacturerNotificationTriggerFactory")
 extern interface IDeviceManufacturerNotificationTriggerFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(triggerQualifier: ConstRef<winrt.HString>, oneShot: Bool): winrt.windows.applicationmodel.background.DeviceManufacturerNotificationTrigger;
+    function Create(triggerQualifier: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, oneShot: Bool): winrt.windows.applicationmodel.background.DeviceManufacturerNotificationTrigger;
 }

@@ -11,5 +11,5 @@ extern interface ICalendarViewDayItem extends winrt.windows.foundation.IInspecta
     overload function IsBlackout(): Bool;
     overload function IsBlackout(value: Bool): Void;
     overload function Date(): winrt.windows.foundation.DateTime;
-    function SetDensityColors(colors: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.ui.Color> /* temp_GenericTypeInstSig */>): Void;
+    function SetDensityColors(colors: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.windows.ui.Color> /* temp_GenericTypeInstSig */>): Void;
 }

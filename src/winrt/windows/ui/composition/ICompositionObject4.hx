@@ -8,5 +8,5 @@ package winrt.windows.ui.composition;
 @:native("winrt::Windows::UI::Composition::ICompositionObject4")
 extern interface ICompositionObject4 extends winrt.windows.foundation.IInspectable
 {
-    function TryGetAnimationController(propertyName: ConstRef<winrt.HString>): winrt.windows.ui.composition.AnimationController;
+    function TryGetAnimationController(propertyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.composition.AnimationController;
 }

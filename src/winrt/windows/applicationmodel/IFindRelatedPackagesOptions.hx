@@ -9,7 +9,7 @@ package winrt.windows.applicationmodel;
 extern interface IFindRelatedPackagesOptions extends winrt.windows.foundation.IInspectable
 {
     overload function Relationship(): winrt.windows.applicationmodel.PackageRelationship;
-    overload function Relationship(value: ConstRef<winrt.windows.applicationmodel.PackageRelationship>): Void;
+    overload function Relationship(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.PackageRelationship>): Void;
     overload function IncludeFrameworks(): Bool;
     overload function IncludeFrameworks(value: Bool): Void;
     overload function IncludeHostRuntimes(): Bool;

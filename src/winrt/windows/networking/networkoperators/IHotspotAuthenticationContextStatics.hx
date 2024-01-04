@@ -8,5 +8,5 @@ package winrt.windows.networking.networkoperators;
 @:native("winrt::Windows::Networking::NetworkOperators::IHotspotAuthenticationContextStatics")
 extern interface IHotspotAuthenticationContextStatics extends winrt.windows.foundation.IInspectable
 {
-    function TryGetAuthenticationContext(evenToken: ConstRef<winrt.HString>, context: Ref<winrt.windows.networking.networkoperators.HotspotAuthenticationContext>): Bool;
+    function TryGetAuthenticationContext(evenToken: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, context: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.networking.networkoperators.HotspotAuthenticationContext>): Bool;
 }

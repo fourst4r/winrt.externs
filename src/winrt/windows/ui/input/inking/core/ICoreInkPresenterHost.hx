@@ -10,5 +10,5 @@ extern interface ICoreInkPresenterHost extends winrt.windows.foundation.IInspect
 {
     overload function InkPresenter(): winrt.windows.ui.input.inking.InkPresenter;
     overload function RootVisual(): winrt.windows.ui.composition.ContainerVisual;
-    overload function RootVisual(value: ConstRef<winrt.windows.ui.composition.ContainerVisual>): Void;
+    overload function RootVisual(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.ContainerVisual>): Void;
 }

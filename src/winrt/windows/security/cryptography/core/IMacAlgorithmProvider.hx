@@ -9,6 +9,6 @@ package winrt.windows.security.cryptography.core;
 extern interface IMacAlgorithmProvider extends winrt.windows.foundation.IInspectable
 {
     overload function AlgorithmName(): winrt.HString;
-    overload function MacLength(): UInt32;
-    function CreateKey(keyMaterial: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.security.cryptography.core.CryptographicKey;
+    overload function MacLength(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function CreateKey(keyMaterial: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.security.cryptography.core.CryptographicKey;
 }

@@ -12,5 +12,5 @@ extern interface IIterator<T> extends winrt.windows.foundation.IInspectable
     overload function Current(): T;
     overload function HasCurrent(): Bool;
     function MoveNext(): Bool;
-    function GetMany(items: winrt.ArrayView<T>): UInt32;
+    function GetMany(items: winrt.ArrayView<T>): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

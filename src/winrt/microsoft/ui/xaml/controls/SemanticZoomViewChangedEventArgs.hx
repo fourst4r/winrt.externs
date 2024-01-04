@@ -13,7 +13,7 @@ extern class SemanticZoomViewChangedEventArgs
     overload function IsSourceZoomedInView(): Bool;
     overload function IsSourceZoomedInView(value: Bool): Void;
     overload function SourceItem(): winrt.microsoft.ui.xaml.controls.SemanticZoomLocation;
-    overload function SourceItem(value: ConstRef<winrt.microsoft.ui.xaml.controls.SemanticZoomLocation>): Void;
+    overload function SourceItem(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.SemanticZoomLocation>): Void;
     overload function DestinationItem(): winrt.microsoft.ui.xaml.controls.SemanticZoomLocation;
-    overload function DestinationItem(value: ConstRef<winrt.microsoft.ui.xaml.controls.SemanticZoomLocation>): Void;
+    overload function DestinationItem(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.SemanticZoomLocation>): Void;
 }

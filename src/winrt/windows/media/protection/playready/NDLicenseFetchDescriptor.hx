@@ -9,9 +9,9 @@ package winrt.windows.media.protection.playready;
 extern class NDLicenseFetchDescriptor
     implements winrt.windows.media.protection.playready.INDLicenseFetchDescriptor
 {
-    function new(contentIDType: ConstRef<winrt.windows.media.protection.playready.NDContentIDType>, contentIDBytes: winrt.ArrayView<UInt8>, licenseFetchChallengeCustomData: ConstRef<winrt.windows.media.protection.playready.INDCustomData>);
+    function new(contentIDType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.protection.playready.NDContentIDType>, contentIDBytes: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>, licenseFetchChallengeCustomData: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.protection.playready.INDCustomData>);
     overload function ContentIDType(): winrt.windows.media.protection.playready.NDContentIDType;
-    overload function ContentID(): winrt.ComArray<UInt8>;
+    overload function ContentID(): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
     overload function LicenseFetchChallengeCustomData(): winrt.windows.media.protection.playready.INDCustomData;
-    overload function LicenseFetchChallengeCustomData(licenseFetchChallengeCustomData: ConstRef<winrt.windows.media.protection.playready.INDCustomData>): Void;
+    overload function LicenseFetchChallengeCustomData(licenseFetchChallengeCustomData: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.protection.playready.INDCustomData>): Void;
 }

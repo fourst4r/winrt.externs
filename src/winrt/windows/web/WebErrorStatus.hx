@@ -2,7 +2,7 @@ package winrt.windows.web;
 
 @:include("winrt/Windows.Web.h", true)
 @:native("winrt::Windows::Web::WebErrorStatus")
-extern enum abstract WebErrorStatus(Int32)
+extern enum abstract WebErrorStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Web::WebErrorStatus::Unknown") final Unknown;
     @:native("winrt::Windows::Web::WebErrorStatus::CertificateCommonNameIsIncorrect") final CertificateCommonNameIsIncorrect;

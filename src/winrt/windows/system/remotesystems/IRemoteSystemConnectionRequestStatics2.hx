@@ -8,6 +8,6 @@ package winrt.windows.system.remotesystems;
 @:native("winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2")
 extern interface IRemoteSystemConnectionRequestStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function CreateFromConnectionToken(connectionToken: ConstRef<winrt.HString>): winrt.windows.system.remotesystems.RemoteSystemConnectionRequest;
-    function CreateFromConnectionTokenForUser(user: ConstRef<winrt.windows.system.User>, connectionToken: ConstRef<winrt.HString>): winrt.windows.system.remotesystems.RemoteSystemConnectionRequest;
+    function CreateFromConnectionToken(connectionToken: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.system.remotesystems.RemoteSystemConnectionRequest;
+    function CreateFromConnectionTokenForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>, connectionToken: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.system.remotesystems.RemoteSystemConnectionRequest;
 }

@@ -9,13 +9,13 @@ package winrt.windows.media.contentrestrictions;
 extern interface IRatedContentDescription extends winrt.windows.foundation.IInspectable
 {
     overload function Id(): winrt.HString;
-    overload function Id(value: ConstRef<winrt.HString>): Void;
+    overload function Id(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Title(): winrt.HString;
-    overload function Title(value: ConstRef<winrt.HString>): Void;
+    overload function Title(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Image(): winrt.windows.storage.streams.IRandomAccessStreamReference;
-    overload function Image(value: ConstRef<winrt.windows.storage.streams.IRandomAccessStreamReference>): Void;
+    overload function Image(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStreamReference>): Void;
     overload function Category(): winrt.windows.media.contentrestrictions.RatedContentCategory;
-    overload function Category(value: ConstRef<winrt.windows.media.contentrestrictions.RatedContentCategory>): Void;
+    overload function Category(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.contentrestrictions.RatedContentCategory>): Void;
     overload function Ratings(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
-    overload function Ratings(value: ConstRef<winrt.windows.foundation.collections.IVector<winrt.HString> /* temp_GenericTypeInstSig */>): Void;
+    overload function Ratings(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IVector<winrt.HString> /* temp_GenericTypeInstSig */>): Void;
 }

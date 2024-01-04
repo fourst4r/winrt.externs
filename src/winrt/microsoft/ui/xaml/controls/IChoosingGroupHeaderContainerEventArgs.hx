@@ -9,7 +9,7 @@ package winrt.microsoft.ui.xaml.controls;
 extern interface IChoosingGroupHeaderContainerEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function GroupHeaderContainer(): winrt.microsoft.ui.xaml.controls.ListViewBaseHeaderItem;
-    overload function GroupHeaderContainer(value: ConstRef<winrt.microsoft.ui.xaml.controls.ListViewBaseHeaderItem>): Void;
-    overload function GroupIndex(): Int32;
+    overload function GroupHeaderContainer(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.ListViewBaseHeaderItem>): Void;
+    overload function GroupIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function Group(): winrt.windows.foundation.IInspectable;
 }

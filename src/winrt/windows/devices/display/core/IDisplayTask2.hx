@@ -8,5 +8,5 @@ package winrt.windows.devices.display.core;
 @:native("winrt::Windows::Devices::Display::Core::IDisplayTask2")
 extern interface IDisplayTask2 extends winrt.windows.foundation.IInspectable
 {
-    function SetSignal(signalKind: ConstRef<winrt.windows.devices.display.core.DisplayTaskSignalKind>, fence: ConstRef<winrt.windows.devices.display.core.DisplayFence>): Void;
+    function SetSignal(signalKind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.display.core.DisplayTaskSignalKind>, fence: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.display.core.DisplayFence>): Void;
 }

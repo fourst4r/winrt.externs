@@ -15,8 +15,8 @@ extern interface ISimpleHapticsController extends winrt.windows.foundation.IInsp
     overload function IsPlayDurationSupported(): Bool;
     overload function IsReplayPauseIntervalSupported(): Bool;
     function StopFeedback(): Void;
-    overload function SendHapticFeedback(feedback: ConstRef<winrt.windows.devices.haptics.SimpleHapticsControllerFeedback>): Void;
-    overload function SendHapticFeedback(feedback: ConstRef<winrt.windows.devices.haptics.SimpleHapticsControllerFeedback>, intensity: Float64): Void;
-    function SendHapticFeedbackForDuration(feedback: ConstRef<winrt.windows.devices.haptics.SimpleHapticsControllerFeedback>, intensity: Float64, playDuration: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
-    function SendHapticFeedbackForPlayCount(feedback: ConstRef<winrt.windows.devices.haptics.SimpleHapticsControllerFeedback>, intensity: Float64, playCount: Int32, replayPauseInterval: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function SendHapticFeedback(feedback: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.haptics.SimpleHapticsControllerFeedback>): Void;
+    overload function SendHapticFeedback(feedback: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.haptics.SimpleHapticsControllerFeedback>, intensity: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    function SendHapticFeedbackForDuration(feedback: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.haptics.SimpleHapticsControllerFeedback>, intensity: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, playDuration: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
+    function SendHapticFeedbackForPlayCount(feedback: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.haptics.SimpleHapticsControllerFeedback>, intensity: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, playCount: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, replayPauseInterval: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
 }

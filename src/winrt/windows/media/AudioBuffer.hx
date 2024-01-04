@@ -11,9 +11,9 @@ extern class AudioBuffer
     implements winrt.windows.foundation.IMemoryBuffer
     implements winrt.windows.media.IAudioBuffer
 {
-    overload function Capacity(): UInt32;
-    overload function Length(): UInt32;
-    overload function Length(value: UInt32): Void;
+    overload function Capacity(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Length(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Length(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
     function CreateReference(): winrt.windows.foundation.IMemoryBufferReference;
     function Close(): Void;
 }

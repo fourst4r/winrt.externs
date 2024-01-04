@@ -8,7 +8,7 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::INavigationViewTemplateSettings")
 extern interface INavigationViewTemplateSettings extends winrt.windows.foundation.IInspectable
 {
-    overload function TopPadding(): Float64;
+    overload function TopPadding(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function OverflowButtonVisibility(): winrt.windows.ui.xaml.Visibility;
     overload function PaneToggleButtonVisibility(): winrt.windows.ui.xaml.Visibility;
     overload function BackButtonVisibility(): winrt.windows.ui.xaml.Visibility;

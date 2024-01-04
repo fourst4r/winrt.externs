@@ -8,8 +8,8 @@ package winrt.windows.ui.composition.interactions;
 @:native("winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSourceCollection")
 extern interface ICompositionInteractionSourceCollection extends winrt.windows.foundation.IInspectable
 {
-    overload function Count(): Int32;
-    function Add(value: ConstRef<winrt.windows.ui.composition.interactions.ICompositionInteractionSource>): Void;
-    function Remove(value: ConstRef<winrt.windows.ui.composition.interactions.ICompositionInteractionSource>): Void;
+    overload function Count(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function Add(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.interactions.ICompositionInteractionSource>): Void;
+    function Remove(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.interactions.ICompositionInteractionSource>): Void;
     function RemoveAll(): Void;
 }

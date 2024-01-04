@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern class HandwritingViewCandidatesChangedEventArgs
     implements winrt.windows.ui.xaml.controls.IHandwritingViewCandidatesChangedEventArgs
 {
-    overload function CandidatesSessionId(): UInt32;
+    overload function CandidatesSessionId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

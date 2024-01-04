@@ -15,10 +15,10 @@ extern class CommonNavigationTransitionInfo
     overload function IsStaggeringEnabled(value: Bool): Void;
     overload function IsStaggeringEnabledProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function IsStaggerElementProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetIsStaggerElement(element: ConstRef<winrt.windows.ui.xaml.UIElement>): Bool;
-    function SetIsStaggerElement(element: ConstRef<winrt.windows.ui.xaml.UIElement>, value: Bool): Void;
+    function GetIsStaggerElement(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Bool;
+    function SetIsStaggerElement(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>, value: Bool): Void;
     static overload function IsStaggeringEnabledProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function IsStaggerElementProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    static function GetIsStaggerElement(element: ConstRef<winrt.windows.ui.xaml.UIElement>): Bool;
-    static function SetIsStaggerElement(element: ConstRef<winrt.windows.ui.xaml.UIElement>, value: Bool): Void;
+    static function GetIsStaggerElement(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Bool;
+    static function SetIsStaggerElement(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>, value: Bool): Void;
 }

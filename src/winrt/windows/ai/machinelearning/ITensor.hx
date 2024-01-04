@@ -9,5 +9,5 @@ package winrt.windows.ai.machinelearning;
 extern interface ITensor extends winrt.windows.foundation.IInspectable
 {
     overload function TensorKind(): winrt.windows.ai.machinelearning.TensorKind;
-    overload function Shape(): winrt.windows.foundation.collections.IVectorView<Int64> /* GenericTypeInstSig */;
+    overload function Shape(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end Int64> /* GenericTypeInstSig */;
 }

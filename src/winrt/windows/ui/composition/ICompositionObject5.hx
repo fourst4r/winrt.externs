@@ -8,5 +8,5 @@ package winrt.windows.ui.composition;
 @:native("winrt::Windows::UI::Composition::ICompositionObject5")
 extern interface ICompositionObject5 extends winrt.windows.foundation.IInspectable
 {
-    function StartAnimation(propertyName: ConstRef<winrt.HString>, animation: ConstRef<winrt.windows.ui.composition.CompositionAnimation>, animationController: ConstRef<winrt.windows.ui.composition.AnimationController>): Void;
+    function StartAnimation(propertyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, animation: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionAnimation>, animationController: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.AnimationController>): Void;
 }

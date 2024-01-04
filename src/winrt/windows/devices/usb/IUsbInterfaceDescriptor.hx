@@ -8,9 +8,9 @@ package winrt.windows.devices.usb;
 @:native("winrt::Windows::Devices::Usb::IUsbInterfaceDescriptor")
 extern interface IUsbInterfaceDescriptor extends winrt.windows.foundation.IInspectable
 {
-    overload function ClassCode(): UInt8;
-    overload function SubclassCode(): UInt8;
-    overload function ProtocolCode(): UInt8;
-    overload function AlternateSettingNumber(): UInt8;
-    overload function InterfaceNumber(): UInt8;
+    overload function ClassCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function SubclassCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function ProtocolCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function AlternateSettingNumber(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function InterfaceNumber(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
 }

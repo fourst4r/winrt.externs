@@ -6,5 +6,5 @@ extern class AnalyticsInfo
 {
     static overload function VersionInfo(): winrt.windows.system.profile.AnalyticsVersionInfo;
     static overload function DeviceForm(): winrt.HString;
-    static function GetSystemPropertiesAsync(attributeNames: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.HString> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+    static function GetSystemPropertiesAsync(attributeNames: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.HString> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
 }

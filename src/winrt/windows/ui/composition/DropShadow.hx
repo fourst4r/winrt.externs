@@ -11,16 +11,16 @@ extern class DropShadow
     implements winrt.windows.ui.composition.IDropShadow
     implements winrt.windows.ui.composition.IDropShadow2
 {
-    overload function BlurRadius(): Float32;
-    overload function BlurRadius(value: Float32): Void;
+    overload function BlurRadius(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function BlurRadius(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
     overload function Color(): winrt.windows.ui.Color;
-    overload function Color(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function Color(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
     overload function Mask(): winrt.windows.ui.composition.CompositionBrush;
-    overload function Mask(value: ConstRef<winrt.windows.ui.composition.CompositionBrush>): Void;
+    overload function Mask(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionBrush>): Void;
     overload function Offset(): winrt.windows.foundation.numerics.Vector3;
-    overload function Offset(value: ConstRef<winrt.windows.foundation.numerics.Vector3>): Void;
-    overload function Opacity(): Float32;
-    overload function Opacity(value: Float32): Void;
+    overload function Offset(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector3>): Void;
+    overload function Opacity(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Opacity(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
     overload function SourcePolicy(): winrt.windows.ui.composition.CompositionDropShadowSourcePolicy;
-    overload function SourcePolicy(value: ConstRef<winrt.windows.ui.composition.CompositionDropShadowSourcePolicy>): Void;
+    overload function SourcePolicy(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionDropShadowSourcePolicy>): Void;
 }

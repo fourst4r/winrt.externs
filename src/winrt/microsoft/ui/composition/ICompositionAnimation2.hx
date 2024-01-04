@@ -8,7 +8,7 @@ package winrt.microsoft.ui.composition;
 @:native("winrt::Microsoft::UI::Composition::ICompositionAnimation2")
 extern interface ICompositionAnimation2 extends winrt.windows.foundation.IInspectable
 {
-    function SetBooleanParameter(key: ConstRef<winrt.HString>, value: Bool): Void;
+    function SetBooleanParameter(key: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, value: Bool): Void;
     overload function Target(): winrt.HString;
-    overload function Target(value: ConstRef<winrt.HString>): Void;
+    overload function Target(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

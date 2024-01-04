@@ -12,9 +12,9 @@ extern class GeometryGroup
 {
     function new();
     overload function FillRule(): winrt.microsoft.ui.xaml.media.FillRule;
-    overload function FillRule(value: ConstRef<winrt.microsoft.ui.xaml.media.FillRule>): Void;
+    overload function FillRule(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.FillRule>): Void;
     overload function Children(): winrt.microsoft.ui.xaml.media.GeometryCollection;
-    overload function Children(value: ConstRef<winrt.microsoft.ui.xaml.media.GeometryCollection>): Void;
+    overload function Children(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.GeometryCollection>): Void;
     overload function FillRuleProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function ChildrenProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function FillRuleProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

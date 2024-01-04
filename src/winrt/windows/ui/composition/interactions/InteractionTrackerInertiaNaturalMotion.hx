@@ -11,9 +11,9 @@ extern class InteractionTrackerInertiaNaturalMotion
     implements winrt.windows.ui.composition.interactions.IInteractionTrackerInertiaNaturalMotion
 {
     overload function Condition(): winrt.windows.ui.composition.ExpressionAnimation;
-    overload function Condition(value: ConstRef<winrt.windows.ui.composition.ExpressionAnimation>): Void;
+    overload function Condition(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.ExpressionAnimation>): Void;
     overload function NaturalMotion(): winrt.windows.ui.composition.ScalarNaturalMotionAnimation;
-    overload function NaturalMotion(value: ConstRef<winrt.windows.ui.composition.ScalarNaturalMotionAnimation>): Void;
-    function Create(compositor: ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.interactions.InteractionTrackerInertiaNaturalMotion;
-    static function Create(compositor: ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.interactions.InteractionTrackerInertiaNaturalMotion;
+    overload function NaturalMotion(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.ScalarNaturalMotionAnimation>): Void;
+    function Create(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.interactions.InteractionTrackerInertiaNaturalMotion;
+    static function Create(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.interactions.InteractionTrackerInertiaNaturalMotion;
 }

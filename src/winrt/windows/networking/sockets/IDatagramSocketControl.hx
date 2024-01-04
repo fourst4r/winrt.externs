@@ -9,7 +9,7 @@ package winrt.windows.networking.sockets;
 extern interface IDatagramSocketControl extends winrt.windows.foundation.IInspectable
 {
     overload function QualityOfService(): winrt.windows.networking.sockets.SocketQualityOfService;
-    overload function QualityOfService(value: ConstRef<winrt.windows.networking.sockets.SocketQualityOfService>): Void;
-    overload function OutboundUnicastHopLimit(): UInt8;
-    overload function OutboundUnicastHopLimit(value: UInt8): Void;
+    overload function QualityOfService(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.sockets.SocketQualityOfService>): Void;
+    overload function OutboundUnicastHopLimit(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function OutboundUnicastHopLimit(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8): Void;
 }

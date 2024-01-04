@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.wallet;
 
 @:include("winrt/Windows.ApplicationModel.Wallet.h", true)
 @:native("winrt::Windows::ApplicationModel::Wallet::WalletSummaryViewPosition")
-extern enum abstract WalletSummaryViewPosition(Int32)
+extern enum abstract WalletSummaryViewPosition(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Wallet::WalletSummaryViewPosition::Hidden") final Hidden;
     @:native("winrt::Windows::ApplicationModel::Wallet::WalletSummaryViewPosition::Field1") final Field1;

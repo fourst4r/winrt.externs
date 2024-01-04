@@ -9,6 +9,6 @@ package winrt.microsoft.ui.xaml.controls.primitives;
 extern interface IAutoSuggestBoxHelperStatics extends winrt.windows.foundation.IInspectable
 {
     overload function KeepInteriorCornersSquareProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function SetKeepInteriorCornersSquare(autoSuggestBox: ConstRef<winrt.microsoft.ui.xaml.controls.AutoSuggestBox>, value: Bool): Void;
-    function GetKeepInteriorCornersSquare(autoSuggestBox: ConstRef<winrt.microsoft.ui.xaml.controls.AutoSuggestBox>): Bool;
+    function SetKeepInteriorCornersSquare(autoSuggestBox: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.AutoSuggestBox>, value: Bool): Void;
+    function GetKeepInteriorCornersSquare(autoSuggestBox: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.AutoSuggestBox>): Bool;
 }

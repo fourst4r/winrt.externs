@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.input;
 extern interface ILosingFocusEventArgs2 extends winrt.windows.foundation.IInspectable
 {
     function TryCancel(): Bool;
-    function TrySetNewFocusedElement(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>): Bool;
+    function TrySetNewFocusedElement(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): Bool;
 }

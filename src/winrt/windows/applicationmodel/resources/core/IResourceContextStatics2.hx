@@ -9,8 +9,8 @@ package winrt.windows.applicationmodel.resources.core;
 extern interface IResourceContextStatics2 extends winrt.windows.foundation.IInspectable
 {
     function GetForCurrentView(): winrt.windows.applicationmodel.resources.core.ResourceContext;
-    function SetGlobalQualifierValue(key: ConstRef<winrt.HString>, value: ConstRef<winrt.HString>): Void;
+    function SetGlobalQualifierValue(key: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function ResetGlobalQualifierValues(): Void;
-    overload function ResetGlobalQualifierValues(qualifierNames: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): Void;
+    overload function ResetGlobalQualifierValues(qualifierNames: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): Void;
     function GetForViewIndependentUse(): winrt.windows.applicationmodel.resources.core.ResourceContext;
 }

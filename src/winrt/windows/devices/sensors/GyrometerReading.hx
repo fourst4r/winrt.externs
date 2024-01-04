@@ -11,9 +11,9 @@ extern class GyrometerReading
     implements winrt.windows.devices.sensors.IGyrometerReading2
 {
     overload function Timestamp(): winrt.windows.foundation.DateTime;
-    overload function AngularVelocityX(): Float64;
-    overload function AngularVelocityY(): Float64;
-    overload function AngularVelocityZ(): Float64;
+    overload function AngularVelocityX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function AngularVelocityY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function AngularVelocityZ(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function PerformanceCount(): winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* GenericTypeInstSig */;
     overload function Properties(): winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;
 }

@@ -8,5 +8,5 @@ package winrt.microsoft.ui.input;
 @:native("winrt::Microsoft::UI::Input::IInputSystemCursorStatics")
 extern interface IInputSystemCursorStatics extends winrt.windows.foundation.IInspectable
 {
-    function Create(type: ConstRef<winrt.microsoft.ui.input.InputSystemCursorShape>): winrt.microsoft.ui.input.InputSystemCursor;
+    function Create(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.input.InputSystemCursorShape>): winrt.microsoft.ui.input.InputSystemCursor;
 }

@@ -8,5 +8,5 @@ package winrt.windows.security.cryptography.certificates;
 @:native("winrt::Windows::Security::Cryptography::Certificates::ICmsAttachedSignatureFactory")
 extern interface ICmsAttachedSignatureFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateCmsAttachedSignature(inputBlob: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.security.cryptography.certificates.CmsAttachedSignature;
+    function CreateCmsAttachedSignature(inputBlob: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.security.cryptography.certificates.CmsAttachedSignature;
 }

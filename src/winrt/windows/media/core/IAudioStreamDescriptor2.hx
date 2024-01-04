@@ -8,8 +8,8 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::IAudioStreamDescriptor2")
 extern interface IAudioStreamDescriptor2 extends winrt.windows.foundation.IInspectable
 {
-    overload function LeadingEncoderPadding(value: ConstRef<winrt.windows.foundation.IReference<UInt32> /* temp_GenericTypeInstSig */>): Void;
-    overload function LeadingEncoderPadding(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
-    overload function TrailingEncoderPadding(value: ConstRef<winrt.windows.foundation.IReference<UInt32> /* temp_GenericTypeInstSig */>): Void;
-    overload function TrailingEncoderPadding(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
+    overload function LeadingEncoderPadding(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* temp_GenericTypeInstSig */>): Void;
+    overload function LeadingEncoderPadding(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
+    overload function TrailingEncoderPadding(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* temp_GenericTypeInstSig */>): Void;
+    overload function TrailingEncoderPadding(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
 }

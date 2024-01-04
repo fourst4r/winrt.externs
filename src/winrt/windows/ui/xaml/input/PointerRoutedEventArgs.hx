@@ -15,7 +15,7 @@ extern class PointerRoutedEventArgs
     overload function KeyModifiers(): winrt.windows.system.VirtualKeyModifiers;
     overload function Handled(): Bool;
     overload function Handled(value: Bool): Void;
-    function GetCurrentPoint(relativeTo: ConstRef<winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.input.PointerPoint;
-    function GetIntermediatePoints(relativeTo: ConstRef<winrt.windows.ui.xaml.UIElement>): winrt.windows.foundation.collections.IVector<winrt.windows.ui.input.PointerPoint> /* GenericTypeInstSig */;
+    function GetCurrentPoint(relativeTo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.input.PointerPoint;
+    function GetIntermediatePoints(relativeTo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): winrt.windows.foundation.collections.IVector<winrt.windows.ui.input.PointerPoint> /* GenericTypeInstSig */;
     overload function IsGenerated(): Bool;
 }

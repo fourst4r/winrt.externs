@@ -2,7 +2,7 @@ package winrt.windows.networking.networkoperators;
 
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::TetheringCapability")
-extern enum abstract TetheringCapability(Int32)
+extern enum abstract TetheringCapability(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Networking::NetworkOperators::TetheringCapability::Enabled") final Enabled;
     @:native("winrt::Windows::Networking::NetworkOperators::TetheringCapability::DisabledByGroupPolicy") final DisabledByGroupPolicy;

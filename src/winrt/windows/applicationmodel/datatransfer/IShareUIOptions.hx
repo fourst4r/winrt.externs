@@ -9,7 +9,7 @@ package winrt.windows.applicationmodel.datatransfer;
 extern interface IShareUIOptions extends winrt.windows.foundation.IInspectable
 {
     overload function Theme(): winrt.windows.applicationmodel.datatransfer.ShareUITheme;
-    overload function Theme(value: ConstRef<winrt.windows.applicationmodel.datatransfer.ShareUITheme>): Void;
+    overload function Theme(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.datatransfer.ShareUITheme>): Void;
     overload function SelectionRect(): winrt.windows.foundation.IReference<winrt.windows.foundation.Rect> /* GenericTypeInstSig */;
-    overload function SelectionRect(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.foundation.Rect> /* temp_GenericTypeInstSig */>): Void;
+    overload function SelectionRect(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.foundation.Rect> /* temp_GenericTypeInstSig */>): Void;
 }

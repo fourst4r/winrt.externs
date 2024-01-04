@@ -14,10 +14,10 @@ extern class MobileBroadbandModem
 {
     overload function CurrentAccount(): winrt.windows.networking.networkoperators.MobileBroadbandAccount;
     overload function DeviceInformation(): winrt.windows.networking.networkoperators.MobileBroadbandDeviceInformation;
-    overload function MaxDeviceServiceCommandSizeInBytes(): UInt32;
-    overload function MaxDeviceServiceDataSizeInBytes(): UInt32;
+    overload function MaxDeviceServiceCommandSizeInBytes(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function MaxDeviceServiceDataSizeInBytes(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function DeviceServices(): winrt.windows.foundation.collections.IVectorView<winrt.windows.networking.networkoperators.MobileBroadbandDeviceServiceInformation> /* GenericTypeInstSig */;
-    function GetDeviceService(deviceServiceId: ConstRef<winrt.Guid>): winrt.windows.networking.networkoperators.MobileBroadbandDeviceService;
+    function GetDeviceService(deviceServiceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): winrt.windows.networking.networkoperators.MobileBroadbandDeviceService;
     overload function IsResetSupported(): Bool;
     function ResetAsync(): winrt.windows.foundation.IAsyncAction;
     function GetCurrentConfigurationAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.MobileBroadbandModemConfiguration> /* GenericTypeInstSig */;
@@ -26,16 +26,16 @@ extern class MobileBroadbandModem
     overload function SetIsPassthroughEnabledAsync(value: Bool): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.MobileBroadbandModemStatus> /* GenericTypeInstSig */;
     function TryGetPcoAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.MobileBroadbandPco> /* GenericTypeInstSig */;
     overload function IsInEmergencyCallMode(): Bool;
-    overload function IsInEmergencyCallModeChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.networking.networkoperators.MobileBroadbandModem, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function IsInEmergencyCallModeChanged(token: ConstRef<winrt.EventToken>): Void;
-    overload function SetIsPassthroughEnabledAsync(value: Bool, slotindex: Int32): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.MobileBroadbandModemStatus> /* GenericTypeInstSig */;
-    overload function GetIsPassthroughEnabledAsync(slotindex: Int32): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
-    function SetIsPassthroughEnabled(value: Bool, slotindex: Int32): winrt.windows.networking.networkoperators.MobileBroadbandModemStatus;
-    function GetIsPassthroughEnabled(slotindex: Int32): Bool;
+    overload function IsInEmergencyCallModeChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.networking.networkoperators.MobileBroadbandModem, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function IsInEmergencyCallModeChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function SetIsPassthroughEnabledAsync(value: Bool, slotindex: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.MobileBroadbandModemStatus> /* GenericTypeInstSig */;
+    overload function GetIsPassthroughEnabledAsync(slotindex: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function SetIsPassthroughEnabled(value: Bool, slotindex: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.networking.networkoperators.MobileBroadbandModemStatus;
+    function GetIsPassthroughEnabled(slotindex: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Bool;
     function GetDeviceSelector(): winrt.HString;
-    function FromId(deviceId: ConstRef<winrt.HString>): winrt.windows.networking.networkoperators.MobileBroadbandModem;
+    function FromId(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.networking.networkoperators.MobileBroadbandModem;
     function GetDefault(): winrt.windows.networking.networkoperators.MobileBroadbandModem;
     static function GetDeviceSelector(): winrt.HString;
-    static function FromId(deviceId: ConstRef<winrt.HString>): winrt.windows.networking.networkoperators.MobileBroadbandModem;
+    static function FromId(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.networking.networkoperators.MobileBroadbandModem;
     static function GetDefault(): winrt.windows.networking.networkoperators.MobileBroadbandModem;
 }

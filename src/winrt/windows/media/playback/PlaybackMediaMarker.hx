@@ -9,9 +9,9 @@ package winrt.windows.media.playback;
 extern class PlaybackMediaMarker
     implements winrt.windows.media.playback.IPlaybackMediaMarker
 {
-    /* explicit */ function new(value: ConstRef<winrt.windows.foundation.TimeSpan>);
+    /* explicit */ function new(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>);
     @:native("winrt::Windows::Media::Playback::PlaybackMediaMarker")
-    static overload function make(value: ConstRef<winrt.windows.foundation.TimeSpan>, mediaMarketType: ConstRef<winrt.HString>, text: ConstRef<winrt.HString>): winrt.windows.media.playback.PlaybackMediaMarker;
+    static overload function make(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>, mediaMarketType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, text: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.media.playback.PlaybackMediaMarker;
     overload function Time(): winrt.windows.foundation.TimeSpan;
     overload function MediaMarkerType(): winrt.HString;
     overload function Text(): winrt.HString;

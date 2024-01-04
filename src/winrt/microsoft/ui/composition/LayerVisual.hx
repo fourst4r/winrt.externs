@@ -13,6 +13,6 @@ extern class LayerVisual
 {
     overload function Effect(): winrt.microsoft.ui.composition.CompositionEffectBrush;
     overload function Shadow(): winrt.microsoft.ui.composition.CompositionShadow;
-    overload function Effect(value: ConstRef<winrt.microsoft.ui.composition.CompositionEffectBrush>): Void;
-    overload function Shadow(value: ConstRef<winrt.microsoft.ui.composition.CompositionShadow>): Void;
+    overload function Effect(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.CompositionEffectBrush>): Void;
+    overload function Shadow(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.CompositionShadow>): Void;
 }

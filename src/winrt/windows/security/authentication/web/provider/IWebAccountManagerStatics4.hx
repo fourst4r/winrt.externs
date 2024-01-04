@@ -9,5 +9,5 @@ package winrt.windows.security.authentication.web.provider;
 extern interface IWebAccountManagerStatics4 extends winrt.windows.foundation.IInspectable
 {
     function InvalidateAppCacheForAllAccountsAsync(): winrt.windows.foundation.IAsyncAction;
-    function InvalidateAppCacheForAccountAsync(webAccount: ConstRef<winrt.windows.security.credentials.WebAccount>): winrt.windows.foundation.IAsyncAction;
+    function InvalidateAppCacheForAccountAsync(webAccount: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.WebAccount>): winrt.windows.foundation.IAsyncAction;
 }

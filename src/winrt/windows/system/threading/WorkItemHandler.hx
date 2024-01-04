@@ -2,4 +2,4 @@ package winrt.windows.system.threading;
 
 
 @:extern 
-typedef WorkItemHandler = Fn<(operation: ConstRef<winrt.windows.foundation.IAsyncAction>)->Void>;
+typedef WorkItemHandler = Fn<(operation: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IAsyncAction>)->Void>;

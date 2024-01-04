@@ -8,6 +8,6 @@ package winrt.windows.networking.networkoperators;
 @:native("winrt::Windows::Networking::NetworkOperators::IUssdSessionStatics")
 extern interface IUssdSessionStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateFromNetworkAccountId(networkAccountId: ConstRef<winrt.HString>): winrt.windows.networking.networkoperators.UssdSession;
-    function CreateFromNetworkInterfaceId(networkInterfaceId: ConstRef<winrt.HString>): winrt.windows.networking.networkoperators.UssdSession;
+    function CreateFromNetworkAccountId(networkAccountId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.networking.networkoperators.UssdSession;
+    function CreateFromNetworkInterfaceId(networkInterfaceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.networking.networkoperators.UssdSession;
 }

@@ -8,6 +8,6 @@ package winrt.windows.devices.wifidirect;
 @:native("winrt::Windows::Devices::WiFiDirect::IWiFiDirectConnectionParameters")
 extern interface IWiFiDirectConnectionParameters extends winrt.windows.foundation.IInspectable
 {
-    overload function GroupOwnerIntent(): Int16;
-    overload function GroupOwnerIntent(value: Int16): Void;
+    overload function GroupOwnerIntent(): #if reflaxe.cpp cxx.num. #else cpp. #end Int16;
+    overload function GroupOwnerIntent(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int16): Void;
 }

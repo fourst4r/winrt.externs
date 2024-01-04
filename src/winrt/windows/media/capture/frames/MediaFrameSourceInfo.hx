@@ -21,6 +21,6 @@ extern class MediaFrameSourceInfo
     overload function CoordinateSystem(): winrt.windows.perception.spatial.SpatialCoordinateSystem;
     overload function ProfileId(): winrt.HString;
     overload function VideoProfileMediaDescription(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.capture.MediaCaptureVideoProfileMediaDescription> /* GenericTypeInstSig */;
-    function GetRelativePanel(displayRegion: ConstRef<winrt.windows.ui.windowmanagement.DisplayRegion>): winrt.windows.devices.enumeration.Panel;
+    function GetRelativePanel(displayRegion: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.windowmanagement.DisplayRegion>): winrt.windows.devices.enumeration.Panel;
     overload function IsShareable(): Bool;
 }

@@ -10,6 +10,6 @@ extern class CompositionEffectSourceParameter
     implements winrt.microsoft.ui.composition.ICompositionEffectSourceParameter
     implements winrt.windows.graphics.effects.IGraphicsEffectSource
 {
-    /* explicit */ function new(name: ConstRef<winrt.HString>);
+    /* explicit */ function new(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     overload function Name(): winrt.HString;
 }

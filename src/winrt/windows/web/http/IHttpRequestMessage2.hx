@@ -9,5 +9,5 @@ package winrt.windows.web.http;
 extern interface IHttpRequestMessage2 extends winrt.windows.foundation.IInspectable
 {
     overload function PrivacyAnnotation(): winrt.HString;
-    overload function PrivacyAnnotation(value: ConstRef<winrt.HString>): Void;
+    overload function PrivacyAnnotation(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

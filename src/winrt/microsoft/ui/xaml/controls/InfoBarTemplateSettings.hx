@@ -12,7 +12,7 @@ extern class InfoBarTemplateSettings
 {
     function new();
     overload function IconElement(): winrt.microsoft.ui.xaml.controls.IconElement;
-    overload function IconElement(value: ConstRef<winrt.microsoft.ui.xaml.controls.IconElement>): Void;
+    overload function IconElement(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.IconElement>): Void;
     overload function IconElementProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function IconElementProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
 }

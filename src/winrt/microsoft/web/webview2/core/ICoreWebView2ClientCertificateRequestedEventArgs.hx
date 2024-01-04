@@ -9,12 +9,12 @@ package winrt.microsoft.web.webview2.core;
 extern interface ICoreWebView2ClientCertificateRequestedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function Host(): winrt.HString;
-    overload function Port(): Int32;
+    overload function Port(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function IsProxy(): Bool;
     overload function AllowedCertificateAuthorities(): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
     overload function MutuallyTrustedCertificates(): winrt.windows.foundation.collections.IVectorView<winrt.microsoft.web.webview2.core.CoreWebView2ClientCertificate> /* GenericTypeInstSig */;
     overload function SelectedCertificate(): winrt.microsoft.web.webview2.core.CoreWebView2ClientCertificate;
-    overload function SelectedCertificate(value: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2ClientCertificate>): Void;
+    overload function SelectedCertificate(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.CoreWebView2ClientCertificate>): Void;
     overload function Cancel(): Bool;
     overload function Cancel(value: Bool): Void;
     overload function Handled(): Bool;

@@ -10,6 +10,6 @@ extern class RemoteSystemDiscoveryTypeFilter
     implements winrt.windows.system.remotesystems.IRemoteSystemDiscoveryTypeFilter
     implements winrt.windows.system.remotesystems.IRemoteSystemFilter
 {
-    /* explicit */ function new(discoveryType: ConstRef<winrt.windows.system.remotesystems.RemoteSystemDiscoveryType>);
+    /* explicit */ function new(discoveryType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.remotesystems.RemoteSystemDiscoveryType>);
     overload function RemoteSystemDiscoveryType(): winrt.windows.system.remotesystems.RemoteSystemDiscoveryType;
 }

@@ -9,6 +9,6 @@ package winrt.windows.ui.input.inking;
 extern interface IInkStroke2 extends winrt.windows.foundation.IInspectable
 {
     overload function PointTransform(): winrt.windows.foundation.numerics.Matrix3x2;
-    overload function PointTransform(value: ConstRef<winrt.windows.foundation.numerics.Matrix3x2>): Void;
+    overload function PointTransform(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Matrix3x2>): Void;
     function GetInkPoints(): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.input.inking.InkPoint> /* GenericTypeInstSig */;
 }

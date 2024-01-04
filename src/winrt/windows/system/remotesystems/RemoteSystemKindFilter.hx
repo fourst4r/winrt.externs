@@ -10,6 +10,6 @@ extern class RemoteSystemKindFilter
     implements winrt.windows.system.remotesystems.IRemoteSystemKindFilter
     implements winrt.windows.system.remotesystems.IRemoteSystemFilter
 {
-    /* explicit */ function new(remoteSystemKinds: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>);
+    /* explicit */ function new(remoteSystemKinds: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>);
     overload function RemoteSystemKinds(): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
 }

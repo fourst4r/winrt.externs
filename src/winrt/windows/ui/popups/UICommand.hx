@@ -11,15 +11,15 @@ extern class UICommand
 {
     function new();
     @:native("winrt::Windows::UI::Popups::UICommand")
-    /* explicit */ static overload function make(label: ConstRef<winrt.HString>): winrt.windows.ui.popups.UICommand;
+    /* explicit */ static overload function make(label: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.popups.UICommand;
     @:native("winrt::Windows::UI::Popups::UICommand")
-    static overload function make(label: ConstRef<winrt.HString>, action: ConstRef<winrt.windows.ui.popups.UICommandInvokedHandler>): winrt.windows.ui.popups.UICommand;
+    static overload function make(label: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, action: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.popups.UICommandInvokedHandler>): winrt.windows.ui.popups.UICommand;
     @:native("winrt::Windows::UI::Popups::UICommand")
-    static overload function make(label: ConstRef<winrt.HString>, action: ConstRef<winrt.windows.ui.popups.UICommandInvokedHandler>, commandId: ConstRef<winrt.windows.foundation.IInspectable>): winrt.windows.ui.popups.UICommand;
+    static overload function make(label: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, action: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.popups.UICommandInvokedHandler>, commandId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.ui.popups.UICommand;
     overload function Label(): winrt.HString;
-    overload function Label(value: ConstRef<winrt.HString>): Void;
+    overload function Label(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Invoked(): winrt.windows.ui.popups.UICommandInvokedHandler;
-    overload function Invoked(value: ConstRef<winrt.windows.ui.popups.UICommandInvokedHandler>): Void;
+    overload function Invoked(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.popups.UICommandInvokedHandler>): Void;
     overload function Id(): winrt.windows.foundation.IInspectable;
-    overload function Id(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Id(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
 }

@@ -9,7 +9,7 @@ package winrt.windows.storage.provider;
 extern interface IStorageProviderMoreInfoUI extends winrt.windows.foundation.IInspectable
 {
     overload function Message(): winrt.HString;
-    overload function Message(value: ConstRef<winrt.HString>): Void;
+    overload function Message(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Command(): winrt.windows.storage.provider.IStorageProviderUICommand;
-    overload function Command(value: ConstRef<winrt.windows.storage.provider.IStorageProviderUICommand>): Void;
+    overload function Command(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.provider.IStorageProviderUICommand>): Void;
 }

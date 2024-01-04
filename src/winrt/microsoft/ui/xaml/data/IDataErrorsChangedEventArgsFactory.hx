@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml.data;
 @:native("winrt::Microsoft::UI::Xaml::Data::IDataErrorsChangedEventArgsFactory")
 extern interface IDataErrorsChangedEventArgsFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(name: ConstRef<winrt.HString>): winrt.microsoft.ui.xaml.data.DataErrorsChangedEventArgs;
+    function CreateInstance(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.microsoft.ui.xaml.data.DataErrorsChangedEventArgs;
 }

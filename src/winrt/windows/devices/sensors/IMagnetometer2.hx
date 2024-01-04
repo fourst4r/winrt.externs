@@ -8,6 +8,6 @@ package winrt.windows.devices.sensors;
 @:native("winrt::Windows::Devices::Sensors::IMagnetometer2")
 extern interface IMagnetometer2 extends winrt.windows.foundation.IInspectable
 {
-    overload function ReadingTransform(value: ConstRef<winrt.windows.graphics.display.DisplayOrientations>): Void;
+    overload function ReadingTransform(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.display.DisplayOrientations>): Void;
     overload function ReadingTransform(): winrt.windows.graphics.display.DisplayOrientations;
 }

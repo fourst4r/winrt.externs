@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml;
 @:native("winrt::Windows::UI::Xaml::IBrushTransitionFactory")
 extern interface IBrushTransitionFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.BrushTransition;
+    function CreateInstance(baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.BrushTransition;
 }

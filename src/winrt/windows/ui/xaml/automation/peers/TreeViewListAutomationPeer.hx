@@ -10,5 +10,5 @@ extern class TreeViewListAutomationPeer
     extends winrt.windows.ui.xaml.automation.peers.SelectorAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.ITreeViewListAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.TreeViewList>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.TreeViewList>);
 }

@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml.automation;
 extern interface IAutomationPropertiesStatics7 extends winrt.windows.foundation.IInspectable
 {
     overload function HeadingLevelProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetHeadingLevel(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>): winrt.windows.ui.xaml.automation.peers.AutomationHeadingLevel;
-    function SetHeadingLevel(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>, value: ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationHeadingLevel>): Void;
+    function GetHeadingLevel(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): winrt.windows.ui.xaml.automation.peers.AutomationHeadingLevel;
+    function SetHeadingLevel(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.peers.AutomationHeadingLevel>): Void;
 }

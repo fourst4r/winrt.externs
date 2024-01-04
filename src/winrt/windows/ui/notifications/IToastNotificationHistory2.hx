@@ -9,5 +9,5 @@ package winrt.windows.ui.notifications;
 extern interface IToastNotificationHistory2 extends winrt.windows.foundation.IInspectable
 {
     overload function GetHistory(): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.notifications.ToastNotification> /* GenericTypeInstSig */;
-    overload function GetHistory(applicationId: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.notifications.ToastNotification> /* GenericTypeInstSig */;
+    overload function GetHistory(applicationId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.notifications.ToastNotification> /* GenericTypeInstSig */;
 }

@@ -10,5 +10,5 @@ extern class ProtectionCapabilities
     implements winrt.windows.media.protection.IProtectionCapabilities
 {
     function new();
-    function IsTypeSupported(type: ConstRef<winrt.HString>, keySystem: ConstRef<winrt.HString>): winrt.windows.media.protection.ProtectionCapabilityResult;
+    function IsTypeSupported(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, keySystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.media.protection.ProtectionCapabilityResult;
 }

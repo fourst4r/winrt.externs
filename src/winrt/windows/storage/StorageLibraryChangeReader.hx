@@ -12,5 +12,5 @@ extern class StorageLibraryChangeReader
 {
     function ReadBatchAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.storage.StorageLibraryChange> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
     function AcceptChangesAsync(): winrt.windows.foundation.IAsyncAction;
-    function GetLastChangeId(): UInt64;
+    function GetLastChangeId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

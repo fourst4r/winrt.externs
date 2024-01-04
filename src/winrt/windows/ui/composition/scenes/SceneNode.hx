@@ -14,7 +14,7 @@ extern class SceneNode
     overload function Components(): winrt.windows.ui.composition.scenes.SceneComponentCollection;
     overload function Parent(): winrt.windows.ui.composition.scenes.SceneNode;
     overload function Transform(): winrt.windows.ui.composition.scenes.SceneModelTransform;
-    function FindFirstComponentOfType(value: ConstRef<winrt.windows.ui.composition.scenes.SceneComponentType>): winrt.windows.ui.composition.scenes.SceneComponent;
-    function Create(compositor: ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneNode;
-    static function Create(compositor: ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneNode;
+    function FindFirstComponentOfType(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.scenes.SceneComponentType>): winrt.windows.ui.composition.scenes.SceneComponent;
+    function Create(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneNode;
+    static function Create(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneNode;
 }

@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.conversationalagent;
 
 @:include("winrt/Windows.ApplicationModel.ConversationalAgent.h", true)
 @:native("winrt::Windows::ApplicationModel::ConversationalAgent::SignalDetectorResourceKind")
-extern enum abstract SignalDetectorResourceKind(Int32)
+extern enum abstract SignalDetectorResourceKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::ConversationalAgent::SignalDetectorResourceKind::ParallelModelSupport") final ParallelModelSupport;
     @:native("winrt::Windows::ApplicationModel::ConversationalAgent::SignalDetectorResourceKind::ParallelModelSupportForAgent") final ParallelModelSupportForAgent;

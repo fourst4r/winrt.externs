@@ -11,14 +11,14 @@ extern class ScaleTransform
     implements winrt.windows.ui.xaml.media.IScaleTransform
 {
     function new();
-    overload function CenterX(): Float64;
-    overload function CenterX(value: Float64): Void;
-    overload function CenterY(): Float64;
-    overload function CenterY(value: Float64): Void;
-    overload function ScaleX(): Float64;
-    overload function ScaleX(value: Float64): Void;
-    overload function ScaleY(): Float64;
-    overload function ScaleY(value: Float64): Void;
+    overload function CenterX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function CenterX(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function CenterY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function CenterY(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function ScaleX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ScaleX(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function ScaleY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ScaleY(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function CenterXProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function CenterYProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function ScaleXProperty(): winrt.windows.ui.xaml.DependencyProperty;

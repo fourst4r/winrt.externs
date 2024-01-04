@@ -8,14 +8,14 @@ package winrt.windows.ui.composition;
 @:native("winrt::Windows::UI::Composition::IStepEasingFunction")
 extern interface IStepEasingFunction extends winrt.windows.foundation.IInspectable
 {
-    overload function FinalStep(): Int32;
-    overload function FinalStep(value: Int32): Void;
-    overload function InitialStep(): Int32;
-    overload function InitialStep(value: Int32): Void;
+    overload function FinalStep(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function FinalStep(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
+    overload function InitialStep(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function InitialStep(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function IsFinalStepSingleFrame(): Bool;
     overload function IsFinalStepSingleFrame(value: Bool): Void;
     overload function IsInitialStepSingleFrame(): Bool;
     overload function IsInitialStepSingleFrame(value: Bool): Void;
-    overload function StepCount(): Int32;
-    overload function StepCount(value: Int32): Void;
+    overload function StepCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function StepCount(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
 }

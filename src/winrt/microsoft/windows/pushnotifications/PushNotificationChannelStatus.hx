@@ -2,7 +2,7 @@ package winrt.microsoft.windows.pushnotifications;
 
 @:include("winrt/Microsoft.Windows.PushNotifications.h", true)
 @:native("winrt::Microsoft::Windows::PushNotifications::PushNotificationChannelStatus")
-extern enum abstract PushNotificationChannelStatus(Int32)
+extern enum abstract PushNotificationChannelStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::Windows::PushNotifications::PushNotificationChannelStatus::InProgress") final InProgress;
     @:native("winrt::Microsoft::Windows::PushNotifications::PushNotificationChannelStatus::InProgressRetry") final InProgressRetry;

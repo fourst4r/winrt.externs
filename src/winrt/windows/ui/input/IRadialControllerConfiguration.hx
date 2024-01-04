@@ -8,7 +8,7 @@ package winrt.windows.ui.input;
 @:native("winrt::Windows::UI::Input::IRadialControllerConfiguration")
 extern interface IRadialControllerConfiguration extends winrt.windows.foundation.IInspectable
 {
-    function SetDefaultMenuItems(buttons: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.ui.input.RadialControllerSystemMenuItemKind> /* temp_GenericTypeInstSig */>): Void;
+    function SetDefaultMenuItems(buttons: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.windows.ui.input.RadialControllerSystemMenuItemKind> /* temp_GenericTypeInstSig */>): Void;
     function ResetToDefaultMenuItems(): Void;
-    function TrySelectDefaultMenuItem(type: ConstRef<winrt.windows.ui.input.RadialControllerSystemMenuItemKind>): Bool;
+    function TrySelectDefaultMenuItem(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.RadialControllerSystemMenuItemKind>): Bool;
 }

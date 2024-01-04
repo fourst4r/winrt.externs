@@ -11,7 +11,7 @@ extern class CoreWebView2WebResourceRequestedEventArgs
 {
     overload function Request(): winrt.microsoft.web.webview2.core.CoreWebView2WebResourceRequest;
     overload function Response(): winrt.microsoft.web.webview2.core.CoreWebView2WebResourceResponse;
-    overload function Response(value: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2WebResourceResponse>): Void;
+    overload function Response(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.CoreWebView2WebResourceResponse>): Void;
     overload function ResourceContext(): winrt.microsoft.web.webview2.core.CoreWebView2WebResourceContext;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

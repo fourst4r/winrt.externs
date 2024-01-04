@@ -9,9 +9,9 @@ package winrt.windows.ui.xaml.media;
 extern interface IRevealBrush extends winrt.windows.foundation.IInspectable
 {
     overload function Color(): winrt.windows.ui.Color;
-    overload function Color(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function Color(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
     overload function TargetTheme(): winrt.windows.ui.xaml.ApplicationTheme;
-    overload function TargetTheme(value: ConstRef<winrt.windows.ui.xaml.ApplicationTheme>): Void;
+    overload function TargetTheme(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.ApplicationTheme>): Void;
     overload function AlwaysUseFallback(): Bool;
     overload function AlwaysUseFallback(value: Bool): Void;
 }

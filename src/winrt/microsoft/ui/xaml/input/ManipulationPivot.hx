@@ -11,9 +11,9 @@ extern class ManipulationPivot
 {
     function new();
     @:native("winrt::Microsoft::UI::Xaml::Input::ManipulationPivot")
-    static overload function make(center: ConstRef<winrt.windows.foundation.Point>, radius: Float64): winrt.microsoft.ui.xaml.input.ManipulationPivot;
+    static overload function make(center: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>, radius: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.microsoft.ui.xaml.input.ManipulationPivot;
     overload function Center(): winrt.windows.foundation.Point;
-    overload function Center(value: ConstRef<winrt.windows.foundation.Point>): Void;
-    overload function Radius(): Float64;
-    overload function Radius(value: Float64): Void;
+    overload function Center(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
+    overload function Radius(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Radius(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

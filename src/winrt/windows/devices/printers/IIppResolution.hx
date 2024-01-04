@@ -8,7 +8,7 @@ package winrt.windows.devices.printers;
 @:native("winrt::Windows::Devices::Printers::IIppResolution")
 extern interface IIppResolution extends winrt.windows.foundation.IInspectable
 {
-    overload function Width(): Int32;
-    overload function Height(): Int32;
+    overload function Width(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Height(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function Unit(): winrt.windows.devices.printers.IppResolutionUnit;
 }

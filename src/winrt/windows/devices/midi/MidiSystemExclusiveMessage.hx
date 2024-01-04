@@ -9,7 +9,7 @@ package winrt.windows.devices.midi;
 extern class MidiSystemExclusiveMessage
     implements winrt.windows.devices.midi.IMidiMessage
 {
-    /* explicit */ function new(rawData: ConstRef<winrt.windows.storage.streams.IBuffer>);
+    /* explicit */ function new(rawData: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>);
     overload function Timestamp(): winrt.windows.foundation.TimeSpan;
     overload function RawData(): winrt.windows.storage.streams.IBuffer;
     overload function Type(): winrt.windows.devices.midi.MidiMessageType;

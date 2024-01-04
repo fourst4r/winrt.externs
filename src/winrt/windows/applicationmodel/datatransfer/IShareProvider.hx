@@ -12,5 +12,5 @@ extern interface IShareProvider extends winrt.windows.foundation.IInspectable
     overload function DisplayIcon(): winrt.windows.storage.streams.RandomAccessStreamReference;
     overload function BackgroundColor(): winrt.windows.ui.Color;
     overload function Tag(): winrt.windows.foundation.IInspectable;
-    overload function Tag(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Tag(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
 }

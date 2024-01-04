@@ -9,6 +9,6 @@ package winrt.windows.graphics.printing3d;
 extern interface IPrinting3DCompositeMaterialGroup extends winrt.windows.foundation.IInspectable
 {
     overload function Composites(): winrt.windows.foundation.collections.IVector<winrt.windows.graphics.printing3d.Printing3DCompositeMaterial> /* GenericTypeInstSig */;
-    overload function MaterialGroupId(): UInt32;
-    overload function MaterialIndices(): winrt.windows.foundation.collections.IVector<UInt32> /* GenericTypeInstSig */;
+    overload function MaterialGroupId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function MaterialIndices(): winrt.windows.foundation.collections.IVector<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
 }

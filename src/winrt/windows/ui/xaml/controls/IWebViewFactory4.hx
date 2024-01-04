@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IWebViewFactory4")
 extern interface IWebViewFactory4 extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstanceWithExecutionMode(executionMode: ConstRef<winrt.windows.ui.xaml.controls.WebViewExecutionMode>): winrt.windows.ui.xaml.controls.WebView;
+    function CreateInstanceWithExecutionMode(executionMode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.WebViewExecutionMode>): winrt.windows.ui.xaml.controls.WebView;
 }

@@ -8,6 +8,6 @@ package winrt.microsoft.ui.xaml.media.imaging;
 @:native("winrt::Microsoft::UI::Xaml::Media::Imaging::IDownloadProgressEventArgs")
 extern interface IDownloadProgressEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function Progress(): Int32;
-    overload function Progress(value: Int32): Void;
+    overload function Progress(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Progress(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
 }

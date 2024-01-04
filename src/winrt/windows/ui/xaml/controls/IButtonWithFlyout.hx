@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IButtonWithFlyout extends winrt.windows.foundation.IInspectable
 {
     overload function Flyout(): winrt.windows.ui.xaml.controls.primitives.FlyoutBase;
-    overload function Flyout(value: ConstRef<winrt.windows.ui.xaml.controls.primitives.FlyoutBase>): Void;
+    overload function Flyout(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.primitives.FlyoutBase>): Void;
 }

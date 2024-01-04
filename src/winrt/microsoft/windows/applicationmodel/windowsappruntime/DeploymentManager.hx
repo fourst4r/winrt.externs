@@ -6,5 +6,5 @@ extern class DeploymentManager
 {
     static function GetStatus(): winrt.microsoft.windows.applicationmodel.windowsappruntime.DeploymentResult;
     static function Initialize(): winrt.microsoft.windows.applicationmodel.windowsappruntime.DeploymentResult;
-    static function Initialize(deploymentInitializeOptions: ConstRef<winrt.microsoft.windows.applicationmodel.windowsappruntime.DeploymentInitializeOptions>): winrt.microsoft.windows.applicationmodel.windowsappruntime.DeploymentResult;
+    static function Initialize(deploymentInitializeOptions: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.windows.applicationmodel.windowsappruntime.DeploymentInitializeOptions>): winrt.microsoft.windows.applicationmodel.windowsappruntime.DeploymentResult;
 }

@@ -8,7 +8,7 @@ package winrt.windows.devices.midi;
 @:native("winrt::Windows::Devices::Midi::IMidiNoteOnMessage")
 extern interface IMidiNoteOnMessage extends winrt.windows.foundation.IInspectable
 {
-    overload function Channel(): UInt8;
-    overload function Note(): UInt8;
-    overload function Velocity(): UInt8;
+    overload function Channel(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function Note(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function Velocity(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
 }

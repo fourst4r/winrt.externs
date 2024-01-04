@@ -9,6 +9,6 @@ package winrt.windows.system.diagnostics;
 extern interface IDiagnosticInvokerStatics extends winrt.windows.foundation.IInspectable
 {
     function GetDefault(): winrt.windows.system.diagnostics.DiagnosticInvoker;
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.system.diagnostics.DiagnosticInvoker;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.system.diagnostics.DiagnosticInvoker;
     overload function IsSupported(): Bool;
 }

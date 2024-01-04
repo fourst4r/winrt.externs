@@ -8,5 +8,5 @@ package winrt.windows.data.text;
 @:native("winrt::Windows::Data::Text::IWordsSegmenterFactory")
 extern interface IWordsSegmenterFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWithLanguage(language: ConstRef<winrt.HString>): winrt.windows.data.text.WordsSegmenter;
+    function CreateWithLanguage(language: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.data.text.WordsSegmenter;
 }

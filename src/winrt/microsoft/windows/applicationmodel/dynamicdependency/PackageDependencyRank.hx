@@ -4,5 +4,5 @@ package winrt.microsoft.windows.applicationmodel.dynamicdependency;
 @:native("winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyRank")
 extern class PackageDependencyRank
 {
-    static overload function Default(): Int32;
+    static overload function Default(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

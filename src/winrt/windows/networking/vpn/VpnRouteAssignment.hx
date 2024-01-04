@@ -10,12 +10,12 @@ extern class VpnRouteAssignment
     implements winrt.windows.networking.vpn.IVpnRouteAssignment
 {
     function new();
-    overload function Ipv4InclusionRoutes(value: ConstRef<winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnRoute> /* temp_GenericTypeInstSig */>): Void;
-    overload function Ipv6InclusionRoutes(value: ConstRef<winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnRoute> /* temp_GenericTypeInstSig */>): Void;
+    overload function Ipv4InclusionRoutes(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnRoute> /* temp_GenericTypeInstSig */>): Void;
+    overload function Ipv6InclusionRoutes(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnRoute> /* temp_GenericTypeInstSig */>): Void;
     overload function Ipv4InclusionRoutes(): winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnRoute> /* GenericTypeInstSig */;
     overload function Ipv6InclusionRoutes(): winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnRoute> /* GenericTypeInstSig */;
-    overload function Ipv4ExclusionRoutes(value: ConstRef<winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnRoute> /* temp_GenericTypeInstSig */>): Void;
-    overload function Ipv6ExclusionRoutes(value: ConstRef<winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnRoute> /* temp_GenericTypeInstSig */>): Void;
+    overload function Ipv4ExclusionRoutes(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnRoute> /* temp_GenericTypeInstSig */>): Void;
+    overload function Ipv6ExclusionRoutes(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnRoute> /* temp_GenericTypeInstSig */>): Void;
     overload function Ipv4ExclusionRoutes(): winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnRoute> /* GenericTypeInstSig */;
     overload function Ipv6ExclusionRoutes(): winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnRoute> /* GenericTypeInstSig */;
     overload function ExcludeLocalSubnets(value: Bool): Void;

@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.media.imaging;
 @:native("winrt::Windows::UI::Xaml::Media::Imaging::IWriteableBitmapFactory")
 extern interface IWriteableBitmapFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstanceWithDimensions(pixelWidth: Int32, pixelHeight: Int32): winrt.windows.ui.xaml.media.imaging.WriteableBitmap;
+    function CreateInstanceWithDimensions(pixelWidth: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, pixelHeight: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.ui.xaml.media.imaging.WriteableBitmap;
 }

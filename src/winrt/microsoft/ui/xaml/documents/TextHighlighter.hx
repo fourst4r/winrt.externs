@@ -12,9 +12,9 @@ extern class TextHighlighter
     function new();
     overload function Ranges(): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.xaml.documents.TextRange> /* GenericTypeInstSig */;
     overload function Foreground(): winrt.microsoft.ui.xaml.media.Brush;
-    overload function Foreground(value: ConstRef<winrt.microsoft.ui.xaml.media.Brush>): Void;
+    overload function Foreground(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.Brush>): Void;
     overload function Background(): winrt.microsoft.ui.xaml.media.Brush;
-    overload function Background(value: ConstRef<winrt.microsoft.ui.xaml.media.Brush>): Void;
+    overload function Background(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.Brush>): Void;
     overload function ForegroundProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function BackgroundProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function ForegroundProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

@@ -10,7 +10,7 @@ extern class PrintWorkflowConfiguration
     implements winrt.windows.graphics.printing.workflow.IPrintWorkflowConfiguration2
     implements winrt.windows.graphics.printing.workflow.IPrintWorkflowConfiguration
 {
-    function AbortPrintFlow(reason: ConstRef<winrt.windows.graphics.printing.workflow.PrintWorkflowJobAbortReason>): Void;
+    function AbortPrintFlow(reason: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing.workflow.PrintWorkflowJobAbortReason>): Void;
     overload function SourceAppDisplayName(): winrt.HString;
     overload function JobTitle(): winrt.HString;
     overload function SessionId(): winrt.HString;

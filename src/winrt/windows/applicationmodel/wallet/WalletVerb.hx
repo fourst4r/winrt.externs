@@ -9,7 +9,7 @@ package winrt.windows.applicationmodel.wallet;
 extern class WalletVerb
     implements winrt.windows.applicationmodel.wallet.IWalletVerb
 {
-    /* explicit */ function new(name: ConstRef<winrt.HString>);
+    /* explicit */ function new(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     overload function Name(): winrt.HString;
-    overload function Name(value: ConstRef<winrt.HString>): Void;
+    overload function Name(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

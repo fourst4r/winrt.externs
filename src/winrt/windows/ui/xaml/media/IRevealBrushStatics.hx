@@ -12,6 +12,6 @@ extern interface IRevealBrushStatics extends winrt.windows.foundation.IInspectab
     overload function TargetThemeProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function AlwaysUseFallbackProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function StateProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function SetState(element: ConstRef<winrt.windows.ui.xaml.UIElement>, value: ConstRef<winrt.windows.ui.xaml.media.RevealBrushState>): Void;
-    function GetState(element: ConstRef<winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.xaml.media.RevealBrushState;
+    function SetState(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.RevealBrushState>): Void;
+    function GetState(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.xaml.media.RevealBrushState;
 }

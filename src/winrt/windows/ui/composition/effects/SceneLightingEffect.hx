@@ -13,18 +13,18 @@ extern class SceneLightingEffect
     implements winrt.windows.graphics.effects.IGraphicsEffect
 {
     function new();
-    overload function AmbientAmount(): Float32;
-    overload function AmbientAmount(value: Float32): Void;
-    overload function DiffuseAmount(): Float32;
-    overload function DiffuseAmount(value: Float32): Void;
+    overload function AmbientAmount(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function AmbientAmount(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function DiffuseAmount(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function DiffuseAmount(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
     overload function NormalMapSource(): winrt.windows.graphics.effects.IGraphicsEffectSource;
-    overload function NormalMapSource(value: ConstRef<winrt.windows.graphics.effects.IGraphicsEffectSource>): Void;
-    overload function SpecularAmount(): Float32;
-    overload function SpecularAmount(value: Float32): Void;
-    overload function SpecularShine(): Float32;
-    overload function SpecularShine(value: Float32): Void;
+    overload function NormalMapSource(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.effects.IGraphicsEffectSource>): Void;
+    overload function SpecularAmount(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function SpecularAmount(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function SpecularShine(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function SpecularShine(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
     overload function ReflectanceModel(): winrt.windows.ui.composition.effects.SceneLightingEffectReflectanceModel;
-    overload function ReflectanceModel(value: ConstRef<winrt.windows.ui.composition.effects.SceneLightingEffectReflectanceModel>): Void;
+    overload function ReflectanceModel(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.effects.SceneLightingEffectReflectanceModel>): Void;
     overload function Name(): winrt.HString;
-    overload function Name(name: ConstRef<winrt.HString>): Void;
+    overload function Name(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

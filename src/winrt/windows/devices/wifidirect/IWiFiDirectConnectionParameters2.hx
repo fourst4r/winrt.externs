@@ -10,5 +10,5 @@ extern interface IWiFiDirectConnectionParameters2 extends winrt.windows.foundati
 {
     overload function PreferenceOrderedConfigurationMethods(): winrt.windows.foundation.collections.IVector<winrt.windows.devices.wifidirect.WiFiDirectConfigurationMethod> /* GenericTypeInstSig */;
     overload function PreferredPairingProcedure(): winrt.windows.devices.wifidirect.WiFiDirectPairingProcedure;
-    overload function PreferredPairingProcedure(value: ConstRef<winrt.windows.devices.wifidirect.WiFiDirectPairingProcedure>): Void;
+    overload function PreferredPairingProcedure(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.wifidirect.WiFiDirectPairingProcedure>): Void;
 }

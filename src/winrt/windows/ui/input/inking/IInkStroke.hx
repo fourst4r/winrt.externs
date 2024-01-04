@@ -9,7 +9,7 @@ package winrt.windows.ui.input.inking;
 extern interface IInkStroke extends winrt.windows.foundation.IInspectable
 {
     overload function DrawingAttributes(): winrt.windows.ui.input.inking.InkDrawingAttributes;
-    overload function DrawingAttributes(value: ConstRef<winrt.windows.ui.input.inking.InkDrawingAttributes>): Void;
+    overload function DrawingAttributes(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.inking.InkDrawingAttributes>): Void;
     overload function BoundingRect(): winrt.windows.foundation.Rect;
     overload function Selected(): Bool;
     overload function Selected(value: Bool): Void;

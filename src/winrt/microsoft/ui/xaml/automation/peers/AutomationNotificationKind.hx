@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.automation.peers;
 
 @:include("winrt/Microsoft.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationNotificationKind")
-extern enum abstract AutomationNotificationKind(Int32)
+extern enum abstract AutomationNotificationKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationNotificationKind::ItemAdded") final ItemAdded;
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationNotificationKind::ItemRemoved") final ItemRemoved;

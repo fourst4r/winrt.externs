@@ -10,24 +10,24 @@ extern class CommandBarFlyoutCommandBarTemplateSettings
     extends winrt.windows.ui.xaml.DependencyObject
     implements winrt.windows.ui.xaml.controls.primitives.ICommandBarFlyoutCommandBarTemplateSettings
 {
-    overload function OpenAnimationStartPosition(): Float64;
-    overload function OpenAnimationEndPosition(): Float64;
-    overload function CloseAnimationEndPosition(): Float64;
-    overload function CurrentWidth(): Float64;
-    overload function ExpandedWidth(): Float64;
-    overload function WidthExpansionDelta(): Float64;
-    overload function WidthExpansionAnimationStartPosition(): Float64;
-    overload function WidthExpansionAnimationEndPosition(): Float64;
-    overload function WidthExpansionMoreButtonAnimationStartPosition(): Float64;
-    overload function WidthExpansionMoreButtonAnimationEndPosition(): Float64;
-    overload function ExpandUpOverflowVerticalPosition(): Float64;
-    overload function ExpandDownOverflowVerticalPosition(): Float64;
-    overload function ExpandUpAnimationStartPosition(): Float64;
-    overload function ExpandUpAnimationEndPosition(): Float64;
-    overload function ExpandUpAnimationHoldPosition(): Float64;
-    overload function ExpandDownAnimationStartPosition(): Float64;
-    overload function ExpandDownAnimationEndPosition(): Float64;
-    overload function ExpandDownAnimationHoldPosition(): Float64;
+    overload function OpenAnimationStartPosition(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function OpenAnimationEndPosition(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function CloseAnimationEndPosition(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function CurrentWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ExpandedWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function WidthExpansionDelta(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function WidthExpansionAnimationStartPosition(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function WidthExpansionAnimationEndPosition(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function WidthExpansionMoreButtonAnimationStartPosition(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function WidthExpansionMoreButtonAnimationEndPosition(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ExpandUpOverflowVerticalPosition(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ExpandDownOverflowVerticalPosition(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ExpandUpAnimationStartPosition(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ExpandUpAnimationEndPosition(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ExpandUpAnimationHoldPosition(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ExpandDownAnimationStartPosition(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ExpandDownAnimationEndPosition(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ExpandDownAnimationHoldPosition(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function ContentClipRect(): winrt.windows.foundation.Rect;
     overload function OverflowContentClipRect(): winrt.windows.foundation.Rect;
 }

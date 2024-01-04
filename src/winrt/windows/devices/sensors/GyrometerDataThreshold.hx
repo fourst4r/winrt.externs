@@ -9,10 +9,10 @@ package winrt.windows.devices.sensors;
 extern class GyrometerDataThreshold
     implements winrt.windows.devices.sensors.IGyrometerDataThreshold
 {
-    overload function XAxisInDegreesPerSecond(): Float64;
-    overload function XAxisInDegreesPerSecond(value: Float64): Void;
-    overload function YAxisInDegreesPerSecond(): Float64;
-    overload function YAxisInDegreesPerSecond(value: Float64): Void;
-    overload function ZAxisInDegreesPerSecond(): Float64;
-    overload function ZAxisInDegreesPerSecond(value: Float64): Void;
+    overload function XAxisInDegreesPerSecond(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function XAxisInDegreesPerSecond(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function YAxisInDegreesPerSecond(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function YAxisInDegreesPerSecond(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function ZAxisInDegreesPerSecond(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ZAxisInDegreesPerSecond(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

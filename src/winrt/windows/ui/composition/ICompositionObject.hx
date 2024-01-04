@@ -11,6 +11,6 @@ extern interface ICompositionObject extends winrt.windows.foundation.IInspectabl
     overload function Compositor(): winrt.windows.ui.composition.Compositor;
     overload function Dispatcher(): winrt.windows.ui.core.CoreDispatcher;
     overload function Properties(): winrt.windows.ui.composition.CompositionPropertySet;
-    function StartAnimation(propertyName: ConstRef<winrt.HString>, animation: ConstRef<winrt.windows.ui.composition.CompositionAnimation>): Void;
-    function StopAnimation(propertyName: ConstRef<winrt.HString>): Void;
+    function StartAnimation(propertyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, animation: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionAnimation>): Void;
+    function StopAnimation(propertyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

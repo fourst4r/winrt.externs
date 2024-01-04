@@ -11,5 +11,5 @@ extern class BackEasingFunction
     implements winrt.windows.ui.composition.IBackEasingFunction
 {
     overload function Mode(): winrt.windows.ui.composition.CompositionEasingFunctionMode;
-    overload function Amplitude(): Float32;
+    overload function Amplitude(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
 }

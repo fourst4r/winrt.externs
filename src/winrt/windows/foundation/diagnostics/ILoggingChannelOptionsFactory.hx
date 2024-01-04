@@ -8,5 +8,5 @@ package winrt.windows.foundation.diagnostics;
 @:native("winrt::Windows::Foundation::Diagnostics::ILoggingChannelOptionsFactory")
 extern interface ILoggingChannelOptionsFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(group: ConstRef<winrt.Guid>): winrt.windows.foundation.diagnostics.LoggingChannelOptions;
+    function Create(group: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): winrt.windows.foundation.diagnostics.LoggingChannelOptions;
 }

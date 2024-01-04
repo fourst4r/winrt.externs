@@ -8,8 +8,8 @@ package winrt.windows.ui.xaml.media.imaging;
 @:native("winrt::Windows::UI::Xaml::Media::Imaging::IBitmapSource")
 extern interface IBitmapSource extends winrt.windows.foundation.IInspectable
 {
-    overload function PixelWidth(): Int32;
-    overload function PixelHeight(): Int32;
-    function SetSource(streamSource: ConstRef<winrt.windows.storage.streams.IRandomAccessStream>): Void;
-    function SetSourceAsync(streamSource: ConstRef<winrt.windows.storage.streams.IRandomAccessStream>): winrt.windows.foundation.IAsyncAction;
+    overload function PixelWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function PixelHeight(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function SetSource(streamSource: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStream>): Void;
+    function SetSourceAsync(streamSource: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStream>): winrt.windows.foundation.IAsyncAction;
 }

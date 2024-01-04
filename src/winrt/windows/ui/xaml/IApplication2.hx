@@ -9,11 +9,11 @@ package winrt.windows.ui.xaml;
 extern interface IApplication2 extends winrt.windows.foundation.IInspectable
 {
     overload function FocusVisualKind(): winrt.windows.ui.xaml.FocusVisualKind;
-    overload function FocusVisualKind(value: ConstRef<winrt.windows.ui.xaml.FocusVisualKind>): Void;
+    overload function FocusVisualKind(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.FocusVisualKind>): Void;
     overload function RequiresPointerMode(): winrt.windows.ui.xaml.ApplicationRequiresPointerMode;
-    overload function RequiresPointerMode(value: ConstRef<winrt.windows.ui.xaml.ApplicationRequiresPointerMode>): Void;
-    overload function LeavingBackground(handler: ConstRef<winrt.windows.ui.xaml.LeavingBackgroundEventHandler>): winrt.EventToken;
-    @:noExcept overload function LeavingBackground(token: ConstRef<winrt.EventToken>): Void;
-    overload function EnteredBackground(handler: ConstRef<winrt.windows.ui.xaml.EnteredBackgroundEventHandler>): winrt.EventToken;
-    @:noExcept overload function EnteredBackground(token: ConstRef<winrt.EventToken>): Void;
+    overload function RequiresPointerMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.ApplicationRequiresPointerMode>): Void;
+    overload function LeavingBackground(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.LeavingBackgroundEventHandler>): winrt.EventToken;
+    @:noExcept overload function LeavingBackground(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function EnteredBackground(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.EnteredBackgroundEventHandler>): winrt.EventToken;
+    @:noExcept overload function EnteredBackground(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

@@ -8,5 +8,5 @@ package winrt.windows.storage.compression;
 @:native("winrt::Windows::Storage::Compression::IDecompressorFactory")
 extern interface IDecompressorFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateDecompressor(underlyingStream: ConstRef<winrt.windows.storage.streams.IInputStream>): winrt.windows.storage.compression.Decompressor;
+    function CreateDecompressor(underlyingStream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IInputStream>): winrt.windows.storage.compression.Decompressor;
 }

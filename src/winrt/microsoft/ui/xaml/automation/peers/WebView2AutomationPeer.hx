@@ -10,5 +10,5 @@ extern class WebView2AutomationPeer
     extends winrt.microsoft.ui.xaml.automation.peers.FrameworkElementAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IWebView2AutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.WebView2>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.WebView2>);
 }

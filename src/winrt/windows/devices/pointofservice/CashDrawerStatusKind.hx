@@ -2,7 +2,7 @@ package winrt.windows.devices.pointofservice;
 
 @:include("winrt/Windows.Devices.PointOfService.h", true)
 @:native("winrt::Windows::Devices::PointOfService::CashDrawerStatusKind")
-extern enum abstract CashDrawerStatusKind(Int32)
+extern enum abstract CashDrawerStatusKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::PointOfService::CashDrawerStatusKind::Online") final Online;
     @:native("winrt::Windows::Devices::PointOfService::CashDrawerStatusKind::Off") final Off;

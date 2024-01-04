@@ -9,16 +9,16 @@ package winrt.windows.security.isolation;
 extern interface IIsolatedWindowsEnvironmentOptions extends winrt.windows.foundation.IInspectable
 {
     overload function EnvironmentOwnerId(): winrt.HString;
-    overload function EnvironmentOwnerId(value: ConstRef<winrt.HString>): Void;
+    overload function EnvironmentOwnerId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function AllowedClipboardFormats(): winrt.windows.security.isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats;
-    overload function AllowedClipboardFormats(value: ConstRef<winrt.windows.security.isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats>): Void;
+    overload function AllowedClipboardFormats(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats>): Void;
     overload function ClipboardCopyPasteDirections(): winrt.windows.security.isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections;
-    overload function ClipboardCopyPasteDirections(value: ConstRef<winrt.windows.security.isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections>): Void;
+    overload function ClipboardCopyPasteDirections(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections>): Void;
     overload function AvailablePrinters(): winrt.windows.security.isolation.IsolatedWindowsEnvironmentAvailablePrinters;
-    overload function AvailablePrinters(value: ConstRef<winrt.windows.security.isolation.IsolatedWindowsEnvironmentAvailablePrinters>): Void;
+    overload function AvailablePrinters(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.isolation.IsolatedWindowsEnvironmentAvailablePrinters>): Void;
     overload function SharedHostFolderPath(): winrt.HString;
     overload function SharedFolderNameInEnvironment(): winrt.HString;
-    function ShareHostFolderForUntrustedItems(SharedHostFolderPath: ConstRef<winrt.HString>, ShareFolderNameInEnvironment: ConstRef<winrt.HString>): Void;
+    function ShareHostFolderForUntrustedItems(SharedHostFolderPath: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, ShareFolderNameInEnvironment: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function PersistUserProfile(): Bool;
     overload function PersistUserProfile(value: Bool): Void;
     overload function AllowGraphicsHardwareAcceleration(): Bool;

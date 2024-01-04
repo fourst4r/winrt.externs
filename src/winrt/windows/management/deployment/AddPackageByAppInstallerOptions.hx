@@ -2,7 +2,7 @@ package winrt.windows.management.deployment;
 
 @:include("winrt/Windows.Management.Deployment.h", true)
 @:native("winrt::Windows::Management::Deployment::AddPackageByAppInstallerOptions")
-extern enum abstract AddPackageByAppInstallerOptions(UInt32)
+extern enum abstract AddPackageByAppInstallerOptions(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::Management::Deployment::AddPackageByAppInstallerOptions::None") final None;
     @:native("winrt::Windows::Management::Deployment::AddPackageByAppInstallerOptions::InstallAllResources") final InstallAllResources;

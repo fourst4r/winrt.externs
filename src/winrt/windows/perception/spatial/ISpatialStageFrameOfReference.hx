@@ -11,6 +11,6 @@ extern interface ISpatialStageFrameOfReference extends winrt.windows.foundation.
     overload function CoordinateSystem(): winrt.windows.perception.spatial.SpatialCoordinateSystem;
     overload function MovementRange(): winrt.windows.perception.spatial.SpatialMovementRange;
     overload function LookDirectionRange(): winrt.windows.perception.spatial.SpatialLookDirectionRange;
-    function GetCoordinateSystemAtCurrentLocation(locator: ConstRef<winrt.windows.perception.spatial.SpatialLocator>): winrt.windows.perception.spatial.SpatialCoordinateSystem;
-    function TryGetMovementBounds(coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.ComArray<winrt.windows.foundation.numerics.Vector3>;
+    function GetCoordinateSystemAtCurrentLocation(locator: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialLocator>): winrt.windows.perception.spatial.SpatialCoordinateSystem;
+    function TryGetMovementBounds(coordinateSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.ComArray<winrt.windows.foundation.numerics.Vector3>;
 }

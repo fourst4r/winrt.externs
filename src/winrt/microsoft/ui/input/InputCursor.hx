@@ -11,6 +11,6 @@ extern class InputCursor
     implements winrt.windows.foundation.IClosable
 {
     function Close(): Void;
-    function CreateFromCoreCursor(cursor: ConstRef<winrt.windows.ui.core.CoreCursor>): winrt.microsoft.ui.input.InputCursor;
-    static function CreateFromCoreCursor(cursor: ConstRef<winrt.windows.ui.core.CoreCursor>): winrt.microsoft.ui.input.InputCursor;
+    function CreateFromCoreCursor(cursor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.CoreCursor>): winrt.microsoft.ui.input.InputCursor;
+    static function CreateFromCoreCursor(cursor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.CoreCursor>): winrt.microsoft.ui.input.InputCursor;
 }

@@ -11,7 +11,7 @@ extern class PackageInstallingEventArgs
 {
     overload function ActivityId(): winrt.Guid;
     overload function Package(): winrt.windows.applicationmodel.Package;
-    overload function Progress(): Float64;
+    overload function Progress(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function IsComplete(): Bool;
     overload function ErrorCode(): winrt.HResult;
 }

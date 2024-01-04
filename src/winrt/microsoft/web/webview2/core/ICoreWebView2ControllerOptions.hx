@@ -9,7 +9,7 @@ package winrt.microsoft.web.webview2.core;
 extern interface ICoreWebView2ControllerOptions extends winrt.windows.foundation.IInspectable
 {
     overload function ProfileName(): winrt.HString;
-    overload function ProfileName(value: ConstRef<winrt.HString>): Void;
+    overload function ProfileName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function IsInPrivateModeEnabled(): Bool;
     overload function IsInPrivateModeEnabled(value: Bool): Void;
 }

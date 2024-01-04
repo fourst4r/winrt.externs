@@ -9,9 +9,9 @@ package winrt.windows.applicationmodel.calls.provider;
 extern interface IPhoneCallOrigin extends winrt.windows.foundation.IInspectable
 {
     overload function Category(): winrt.HString;
-    overload function Category(value: ConstRef<winrt.HString>): Void;
+    overload function Category(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function CategoryDescription(): winrt.HString;
-    overload function CategoryDescription(value: ConstRef<winrt.HString>): Void;
+    overload function CategoryDescription(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Location(): winrt.HString;
-    overload function Location(value: ConstRef<winrt.HString>): Void;
+    overload function Location(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

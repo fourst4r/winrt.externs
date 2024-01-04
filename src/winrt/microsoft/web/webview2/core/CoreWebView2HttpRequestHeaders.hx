@@ -10,10 +10,10 @@ extern class CoreWebView2HttpRequestHeaders
     implements winrt.microsoft.web.webview2.core.ICoreWebView2HttpRequestHeaders
     implements winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.HString> /* GenericTypeInstSig */> /* GenericTypeInstSig */
 {
-    function GetHeader(name: ConstRef<winrt.HString>): winrt.HString;
-    function GetHeaders(name: ConstRef<winrt.HString>): winrt.microsoft.web.webview2.core.CoreWebView2HttpHeadersCollectionIterator;
-    function Contains(name: ConstRef<winrt.HString>): Bool;
-    function SetHeader(name: ConstRef<winrt.HString>, value: ConstRef<winrt.HString>): Void;
-    function RemoveHeader(name: ConstRef<winrt.HString>): Void;
+    function GetHeader(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.HString;
+    function GetHeaders(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.microsoft.web.webview2.core.CoreWebView2HttpHeadersCollectionIterator;
+    function Contains(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
+    function SetHeader(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function RemoveHeader(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     function First(): winrt.windows.foundation.collections.IIterator<winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.HString> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
 }

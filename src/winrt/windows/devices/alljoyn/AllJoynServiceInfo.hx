@@ -9,10 +9,10 @@ package winrt.windows.devices.alljoyn;
 extern class AllJoynServiceInfo
     implements winrt.windows.devices.alljoyn.IAllJoynServiceInfo
 {
-    function new(uniqueName: ConstRef<winrt.HString>, objectPath: ConstRef<winrt.HString>, sessionPort: UInt16);
+    function new(uniqueName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, objectPath: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, sessionPort: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16);
     overload function UniqueName(): winrt.HString;
     overload function ObjectPath(): winrt.HString;
-    overload function SessionPort(): UInt16;
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.alljoyn.AllJoynServiceInfo> /* GenericTypeInstSig */;
-    static function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.alljoyn.AllJoynServiceInfo> /* GenericTypeInstSig */;
+    overload function SessionPort(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.alljoyn.AllJoynServiceInfo> /* GenericTypeInstSig */;
+    static function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.alljoyn.AllJoynServiceInfo> /* GenericTypeInstSig */;
 }

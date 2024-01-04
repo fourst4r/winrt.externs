@@ -10,7 +10,7 @@ extern interface ITextHighlighter extends winrt.windows.foundation.IInspectable
 {
     overload function Ranges(): winrt.windows.foundation.collections.IVector<winrt.windows.ui.xaml.documents.TextRange> /* GenericTypeInstSig */;
     overload function Foreground(): winrt.windows.ui.xaml.media.Brush;
-    overload function Foreground(value: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
+    overload function Foreground(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Brush>): Void;
     overload function Background(): winrt.windows.ui.xaml.media.Brush;
-    overload function Background(value: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
+    overload function Background(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Brush>): Void;
 }

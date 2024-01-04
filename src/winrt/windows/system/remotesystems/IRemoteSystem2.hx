@@ -9,5 +9,5 @@ package winrt.windows.system.remotesystems;
 extern interface IRemoteSystem2 extends winrt.windows.foundation.IInspectable
 {
     overload function IsAvailableBySpatialProximity(): Bool;
-    function GetCapabilitySupportedAsync(capabilityName: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function GetCapabilitySupportedAsync(capabilityName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

@@ -12,13 +12,13 @@ extern class AutomationAnnotation
 {
     function new();
     @:native("winrt::Windows::UI::Xaml::Automation::AutomationAnnotation")
-    /* explicit */ static overload function make(type: ConstRef<winrt.windows.ui.xaml.automation.AnnotationType>): winrt.windows.ui.xaml.automation.AutomationAnnotation;
+    /* explicit */ static overload function make(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.AnnotationType>): winrt.windows.ui.xaml.automation.AutomationAnnotation;
     @:native("winrt::Windows::UI::Xaml::Automation::AutomationAnnotation")
-    static overload function make(type: ConstRef<winrt.windows.ui.xaml.automation.AnnotationType>, element: ConstRef<winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.xaml.automation.AutomationAnnotation;
+    static overload function make(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.AnnotationType>, element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.xaml.automation.AutomationAnnotation;
     overload function Type(): winrt.windows.ui.xaml.automation.AnnotationType;
-    overload function Type(value: ConstRef<winrt.windows.ui.xaml.automation.AnnotationType>): Void;
+    overload function Type(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.AnnotationType>): Void;
     overload function Element(): winrt.windows.ui.xaml.UIElement;
-    overload function Element(value: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
+    overload function Element(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
     overload function TypeProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function ElementProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function TypeProperty(): winrt.windows.ui.xaml.DependencyProperty;

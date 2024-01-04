@@ -8,5 +8,5 @@ package winrt.windows.devices.midi;
 @:native("winrt::Windows::Devices::Midi::IMidiSongPositionPointerMessageFactory")
 extern interface IMidiSongPositionPointerMessageFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateMidiSongPositionPointerMessage(beats: UInt16): winrt.windows.devices.midi.MidiSongPositionPointerMessage;
+    function CreateMidiSongPositionPointerMessage(beats: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.windows.devices.midi.MidiSongPositionPointerMessage;
 }

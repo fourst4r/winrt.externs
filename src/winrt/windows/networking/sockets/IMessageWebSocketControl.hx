@@ -8,8 +8,8 @@ package winrt.windows.networking.sockets;
 @:native("winrt::Windows::Networking::Sockets::IMessageWebSocketControl")
 extern interface IMessageWebSocketControl extends winrt.windows.foundation.IInspectable
 {
-    overload function MaxMessageSize(): UInt32;
-    overload function MaxMessageSize(value: UInt32): Void;
+    overload function MaxMessageSize(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function MaxMessageSize(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
     overload function MessageType(): winrt.windows.networking.sockets.SocketMessageType;
-    overload function MessageType(value: ConstRef<winrt.windows.networking.sockets.SocketMessageType>): Void;
+    overload function MessageType(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.sockets.SocketMessageType>): Void;
 }

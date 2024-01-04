@@ -9,5 +9,5 @@ package winrt.microsoft.web.webview2.core;
 extern interface ICoreWebView2ControllerOptions2 extends winrt.windows.foundation.IInspectable
 {
     overload function ScriptLocale(): winrt.HString;
-    overload function ScriptLocale(value: ConstRef<winrt.HString>): Void;
+    overload function ScriptLocale(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

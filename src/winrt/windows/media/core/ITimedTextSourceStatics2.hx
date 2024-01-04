@@ -8,8 +8,8 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::ITimedTextSourceStatics2")
 extern interface ITimedTextSourceStatics2 extends winrt.windows.foundation.IInspectable
 {
-    overload function CreateFromStreamWithIndex(stream: ConstRef<winrt.windows.storage.streams.IRandomAccessStream>, indexStream: ConstRef<winrt.windows.storage.streams.IRandomAccessStream>): winrt.windows.media.core.TimedTextSource;
-    overload function CreateFromUriWithIndex(uri: ConstRef<winrt.windows.foundation.Uri>, indexUri: ConstRef<winrt.windows.foundation.Uri>): winrt.windows.media.core.TimedTextSource;
-    overload function CreateFromStreamWithIndex(stream: ConstRef<winrt.windows.storage.streams.IRandomAccessStream>, indexStream: ConstRef<winrt.windows.storage.streams.IRandomAccessStream>, defaultLanguage: ConstRef<winrt.HString>): winrt.windows.media.core.TimedTextSource;
-    overload function CreateFromUriWithIndex(uri: ConstRef<winrt.windows.foundation.Uri>, indexUri: ConstRef<winrt.windows.foundation.Uri>, defaultLanguage: ConstRef<winrt.HString>): winrt.windows.media.core.TimedTextSource;
+    overload function CreateFromStreamWithIndex(stream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStream>, indexStream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStream>): winrt.windows.media.core.TimedTextSource;
+    overload function CreateFromUriWithIndex(uri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>, indexUri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): winrt.windows.media.core.TimedTextSource;
+    overload function CreateFromStreamWithIndex(stream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStream>, indexStream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStream>, defaultLanguage: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.media.core.TimedTextSource;
+    overload function CreateFromUriWithIndex(uri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>, indexUri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>, defaultLanguage: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.media.core.TimedTextSource;
 }

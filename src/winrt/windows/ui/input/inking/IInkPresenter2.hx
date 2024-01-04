@@ -9,5 +9,5 @@ package winrt.windows.ui.input.inking;
 extern interface IInkPresenter2 extends winrt.windows.foundation.IInspectable
 {
     overload function HighContrastAdjustment(): winrt.windows.ui.input.inking.InkHighContrastAdjustment;
-    overload function HighContrastAdjustment(value: ConstRef<winrt.windows.ui.input.inking.InkHighContrastAdjustment>): Void;
+    overload function HighContrastAdjustment(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.inking.InkHighContrastAdjustment>): Void;
 }

@@ -13,9 +13,9 @@ extern class SpatialPointerPose
 {
     overload function Timestamp(): winrt.windows.perception.PerceptionTimestamp;
     overload function Head(): winrt.windows.perception.people.HeadPose;
-    function TryGetInteractionSourcePose(source: ConstRef<winrt.windows.ui.input.spatial.SpatialInteractionSource>): winrt.windows.ui.input.spatial.SpatialPointerInteractionSourcePose;
+    function TryGetInteractionSourcePose(source: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.spatial.SpatialInteractionSource>): winrt.windows.ui.input.spatial.SpatialPointerInteractionSourcePose;
     overload function Eyes(): winrt.windows.perception.people.EyesPose;
     overload function IsHeadCapturedBySystem(): Bool;
-    function TryGetAtTimestamp(coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>, timestamp: ConstRef<winrt.windows.perception.PerceptionTimestamp>): winrt.windows.ui.input.spatial.SpatialPointerPose;
-    static function TryGetAtTimestamp(coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>, timestamp: ConstRef<winrt.windows.perception.PerceptionTimestamp>): winrt.windows.ui.input.spatial.SpatialPointerPose;
+    function TryGetAtTimestamp(coordinateSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>, timestamp: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.PerceptionTimestamp>): winrt.windows.ui.input.spatial.SpatialPointerPose;
+    static function TryGetAtTimestamp(coordinateSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>, timestamp: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.PerceptionTimestamp>): winrt.windows.ui.input.spatial.SpatialPointerPose;
 }

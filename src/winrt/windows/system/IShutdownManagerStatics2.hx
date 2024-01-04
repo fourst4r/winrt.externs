@@ -8,7 +8,7 @@ package winrt.windows.system;
 @:native("winrt::Windows::System::IShutdownManagerStatics2")
 extern interface IShutdownManagerStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function IsPowerStateSupported(powerState: ConstRef<winrt.windows.system.PowerState>): Bool;
-    overload function EnterPowerState(powerState: ConstRef<winrt.windows.system.PowerState>): Void;
-    overload function EnterPowerState(powerState: ConstRef<winrt.windows.system.PowerState>, wakeUpAfter: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    function IsPowerStateSupported(powerState: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.PowerState>): Bool;
+    overload function EnterPowerState(powerState: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.PowerState>): Void;
+    overload function EnterPowerState(powerState: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.PowerState>, wakeUpAfter: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
 }

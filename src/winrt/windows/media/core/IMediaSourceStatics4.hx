@@ -8,5 +8,5 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::IMediaSourceStatics4")
 extern interface IMediaSourceStatics4 extends winrt.windows.foundation.IInspectable
 {
-    function CreateFromDownloadOperation(downloadOperation: ConstRef<winrt.windows.networking.backgroundtransfer.DownloadOperation>): winrt.windows.media.core.MediaSource;
+    function CreateFromDownloadOperation(downloadOperation: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.backgroundtransfer.DownloadOperation>): winrt.windows.media.core.MediaSource;
 }

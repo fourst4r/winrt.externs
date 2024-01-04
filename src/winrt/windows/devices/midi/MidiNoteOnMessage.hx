@@ -10,10 +10,10 @@ extern class MidiNoteOnMessage
     implements winrt.windows.devices.midi.IMidiMessage
     implements winrt.windows.devices.midi.IMidiNoteOnMessage
 {
-    function new(channel: UInt8, note: UInt8, velocity: UInt8);
-    overload function Channel(): UInt8;
-    overload function Note(): UInt8;
-    overload function Velocity(): UInt8;
+    function new(channel: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, note: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, velocity: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8);
+    overload function Channel(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function Note(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function Velocity(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
     overload function Timestamp(): winrt.windows.foundation.TimeSpan;
     overload function RawData(): winrt.windows.storage.streams.IBuffer;
     overload function Type(): winrt.windows.devices.midi.MidiMessageType;

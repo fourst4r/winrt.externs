@@ -8,5 +8,5 @@ package winrt.windows.ui.startscreen;
 @:native("winrt::Windows::UI::StartScreen::ISecondaryTileFactory2")
 extern interface ISecondaryTileFactory2 extends winrt.windows.foundation.IInspectable
 {
-    function CreateMinimalTile(tileId: ConstRef<winrt.HString>, displayName: ConstRef<winrt.HString>, arguments: ConstRef<winrt.HString>, square150x150Logo: ConstRef<winrt.windows.foundation.Uri>, desiredSize: ConstRef<winrt.windows.ui.startscreen.TileSize>): winrt.windows.ui.startscreen.SecondaryTile;
+    function CreateMinimalTile(tileId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, displayName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, arguments: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, square150x150Logo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>, desiredSize: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.startscreen.TileSize>): winrt.windows.ui.startscreen.SecondaryTile;
 }

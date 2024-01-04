@@ -8,6 +8,6 @@ package winrt.microsoft.ui.composition;
 @:native("winrt::Microsoft::UI::Composition::ICompositorStatics")
 extern interface ICompositorStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function MaxGlobalPlaybackRate(): Float32;
-    overload function MinGlobalPlaybackRate(): Float32;
+    overload function MaxGlobalPlaybackRate(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function MinGlobalPlaybackRate(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
 }

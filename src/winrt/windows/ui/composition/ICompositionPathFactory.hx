@@ -8,5 +8,5 @@ package winrt.windows.ui.composition;
 @:native("winrt::Windows::UI::Composition::ICompositionPathFactory")
 extern interface ICompositionPathFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(source: ConstRef<winrt.windows.graphics.IGeometrySource2D>): winrt.windows.ui.composition.CompositionPath;
+    function Create(source: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.IGeometrySource2D>): winrt.windows.ui.composition.CompositionPath;
 }

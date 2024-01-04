@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.controls;
 extern interface IIconElement extends winrt.windows.foundation.IInspectable
 {
     overload function Foreground(): winrt.microsoft.ui.xaml.media.Brush;
-    overload function Foreground(value: ConstRef<winrt.microsoft.ui.xaml.media.Brush>): Void;
+    overload function Foreground(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.Brush>): Void;
 }

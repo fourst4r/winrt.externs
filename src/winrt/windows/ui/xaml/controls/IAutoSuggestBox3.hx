@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IAutoSuggestBox3 extends winrt.windows.foundation.IInspectable
 {
     overload function LightDismissOverlayMode(): winrt.windows.ui.xaml.controls.LightDismissOverlayMode;
-    overload function LightDismissOverlayMode(value: ConstRef<winrt.windows.ui.xaml.controls.LightDismissOverlayMode>): Void;
+    overload function LightDismissOverlayMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.LightDismissOverlayMode>): Void;
 }

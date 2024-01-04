@@ -4,8 +4,8 @@ package winrt.windows.networking.networkoperators;
 @:native("winrt::Windows::Networking::NetworkOperators::KnownSimFilePaths")
 extern class KnownSimFilePaths
 {
-    static overload function EFOns(): winrt.windows.foundation.collections.IVectorView<UInt32> /* GenericTypeInstSig */;
-    static overload function EFSpn(): winrt.windows.foundation.collections.IVectorView<UInt32> /* GenericTypeInstSig */;
-    static overload function Gid1(): winrt.windows.foundation.collections.IVectorView<UInt32> /* GenericTypeInstSig */;
-    static overload function Gid2(): winrt.windows.foundation.collections.IVectorView<UInt32> /* GenericTypeInstSig */;
+    static overload function EFOns(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
+    static overload function EFSpn(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
+    static overload function Gid1(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
+    static overload function Gid2(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
 }

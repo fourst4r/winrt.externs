@@ -8,5 +8,5 @@ package winrt.windows.graphics.printing.optiondetails;
 @:native("winrt::Windows::Graphics::Printing::OptionDetails::IPrintTaskOptionDetails2")
 extern interface IPrintTaskOptionDetails2 extends winrt.windows.foundation.IInspectable
 {
-    function CreateToggleOption(optionId: ConstRef<winrt.HString>, displayName: ConstRef<winrt.HString>): winrt.windows.graphics.printing.optiondetails.PrintCustomToggleOptionDetails;
+    function CreateToggleOption(optionId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, displayName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.graphics.printing.optiondetails.PrintCustomToggleOptionDetails;
 }

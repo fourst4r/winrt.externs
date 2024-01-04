@@ -8,14 +8,14 @@ package winrt.windows.devices.pwm.provider;
 @:native("winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider")
 extern interface IPwmControllerProvider extends winrt.windows.foundation.IInspectable
 {
-    overload function PinCount(): Int32;
-    overload function ActualFrequency(): Float64;
-    function SetDesiredFrequency(frequency: Float64): Float64;
-    overload function MaxFrequency(): Float64;
-    overload function MinFrequency(): Float64;
-    function AcquirePin(pin: Int32): Void;
-    function ReleasePin(pin: Int32): Void;
-    function EnablePin(pin: Int32): Void;
-    function DisablePin(pin: Int32): Void;
-    function SetPulseParameters(pin: Int32, dutyCycle: Float64, invertPolarity: Bool): Void;
+    overload function PinCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function ActualFrequency(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    function SetDesiredFrequency(frequency: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function MaxFrequency(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function MinFrequency(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    function AcquirePin(pin: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
+    function ReleasePin(pin: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
+    function EnablePin(pin: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
+    function DisablePin(pin: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
+    function SetPulseParameters(pin: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, dutyCycle: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, invertPolarity: Bool): Void;
 }

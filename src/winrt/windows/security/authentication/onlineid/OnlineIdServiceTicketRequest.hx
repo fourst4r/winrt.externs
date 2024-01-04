@@ -9,9 +9,9 @@ package winrt.windows.security.authentication.onlineid;
 extern class OnlineIdServiceTicketRequest
     implements winrt.windows.security.authentication.onlineid.IOnlineIdServiceTicketRequest
 {
-    function new(service: ConstRef<winrt.HString>, policy: ConstRef<winrt.HString>);
+    function new(service: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, policy: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     @:native("winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest")
-    /* explicit */ static overload function make(service: ConstRef<winrt.HString>): winrt.windows.security.authentication.onlineid.OnlineIdServiceTicketRequest;
+    /* explicit */ static overload function make(service: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.security.authentication.onlineid.OnlineIdServiceTicketRequest;
     overload function Service(): winrt.HString;
     overload function Policy(): winrt.HString;
 }

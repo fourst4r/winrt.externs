@@ -9,8 +9,8 @@ package winrt.windows.media.playback;
 extern interface IMediaPlayerSource extends winrt.windows.foundation.IInspectable
 {
     overload function ProtectionManager(): winrt.windows.media.protection.MediaProtectionManager;
-    overload function ProtectionManager(value: ConstRef<winrt.windows.media.protection.MediaProtectionManager>): Void;
-    function SetFileSource(file: ConstRef<winrt.windows.storage.IStorageFile>): Void;
-    function SetStreamSource(stream: ConstRef<winrt.windows.storage.streams.IRandomAccessStream>): Void;
-    function SetMediaSource(source: ConstRef<winrt.windows.media.core.IMediaSource>): Void;
+    overload function ProtectionManager(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.protection.MediaProtectionManager>): Void;
+    function SetFileSource(file: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.IStorageFile>): Void;
+    function SetStreamSource(stream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStream>): Void;
+    function SetMediaSource(source: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.IMediaSource>): Void;
 }

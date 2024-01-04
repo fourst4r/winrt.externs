@@ -10,5 +10,5 @@ extern class GridViewItemAutomationPeer
     extends winrt.microsoft.ui.xaml.automation.peers.FrameworkElementAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IGridViewItemAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.GridViewItem>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.GridViewItem>);
 }

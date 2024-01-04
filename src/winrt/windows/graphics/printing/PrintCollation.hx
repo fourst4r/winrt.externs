@@ -2,7 +2,7 @@ package winrt.windows.graphics.printing;
 
 @:include("winrt/Windows.Graphics.Printing.h", true)
 @:native("winrt::Windows::Graphics::Printing::PrintCollation")
-extern enum abstract PrintCollation(Int32)
+extern enum abstract PrintCollation(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Graphics::Printing::PrintCollation::Default") final Default;
     @:native("winrt::Windows::Graphics::Printing::PrintCollation::NotAvailable") final NotAvailable;

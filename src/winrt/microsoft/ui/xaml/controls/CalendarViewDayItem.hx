@@ -14,7 +14,7 @@ extern class CalendarViewDayItem
     overload function IsBlackout(): Bool;
     overload function IsBlackout(value: Bool): Void;
     overload function Date(): winrt.windows.foundation.DateTime;
-    function SetDensityColors(colors: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.ui.Color> /* temp_GenericTypeInstSig */>): Void;
+    function SetDensityColors(colors: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.windows.ui.Color> /* temp_GenericTypeInstSig */>): Void;
     overload function IsBlackoutProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function DateProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function IsBlackoutProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

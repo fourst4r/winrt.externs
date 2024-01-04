@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.controls.maps;
 
 @:include("winrt/Windows.UI.Xaml.Controls.Maps.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapInteractionMode")
-extern enum abstract MapInteractionMode(Int32)
+extern enum abstract MapInteractionMode(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapInteractionMode::Auto") final Auto;
     @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapInteractionMode::Disabled") final Disabled;

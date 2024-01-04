@@ -9,5 +9,5 @@ package winrt.windows.graphics.printing.workflow;
 extern interface IPrintWorkflowPdlTargetStream extends winrt.windows.foundation.IInspectable
 {
     function GetOutputStream(): winrt.windows.storage.streams.IOutputStream;
-    function CompleteStreamSubmission(status: ConstRef<winrt.windows.graphics.printing.workflow.PrintWorkflowSubmittedStatus>): Void;
+    function CompleteStreamSubmission(status: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing.workflow.PrintWorkflowSubmittedStatus>): Void;
 }

@@ -8,5 +8,5 @@ package winrt.windows.storage.streams;
 @:native("winrt::Windows::Storage::Streams::IBufferFactory")
 extern interface IBufferFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(capacity: UInt32): winrt.windows.storage.streams.Buffer;
+    function Create(capacity: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.storage.streams.Buffer;
 }

@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.media;
 
 @:include("winrt/Windows.UI.Xaml.Media.h", true)
 @:native("winrt::Windows::UI::Xaml::Media::MediaElementState")
-extern enum abstract MediaElementState(Int32)
+extern enum abstract MediaElementState(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Media::MediaElementState::Closed") final Closed;
     @:native("winrt::Windows::UI::Xaml::Media::MediaElementState::Opening") final Opening;

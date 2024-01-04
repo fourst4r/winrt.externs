@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel;
 extern interface IStartupTaskStatics extends winrt.windows.foundation.IInspectable
 {
     function GetForCurrentPackageAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.StartupTask> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
-    function GetAsync(taskId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.StartupTask> /* GenericTypeInstSig */;
+    function GetAsync(taskId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.StartupTask> /* GenericTypeInstSig */;
 }

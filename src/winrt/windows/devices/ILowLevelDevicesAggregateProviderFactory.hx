@@ -8,5 +8,5 @@ package winrt.windows.devices;
 @:native("winrt::Windows::Devices::ILowLevelDevicesAggregateProviderFactory")
 extern interface ILowLevelDevicesAggregateProviderFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(adc: ConstRef<winrt.windows.devices.adc.provider.IAdcControllerProvider>, pwm: ConstRef<winrt.windows.devices.pwm.provider.IPwmControllerProvider>, gpio: ConstRef<winrt.windows.devices.gpio.provider.IGpioControllerProvider>, i2c: ConstRef<winrt.windows.devices.i2c.provider.II2cControllerProvider>, spi: ConstRef<winrt.windows.devices.spi.provider.ISpiControllerProvider>): winrt.windows.devices.LowLevelDevicesAggregateProvider;
+    function Create(adc: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.adc.provider.IAdcControllerProvider>, pwm: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.pwm.provider.IPwmControllerProvider>, gpio: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.gpio.provider.IGpioControllerProvider>, i2c: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.i2c.provider.II2cControllerProvider>, spi: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.spi.provider.ISpiControllerProvider>): winrt.windows.devices.LowLevelDevicesAggregateProvider;
 }

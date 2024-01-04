@@ -16,6 +16,6 @@ extern interface IPlayReadyContentHeader extends winrt.windows.foundation.IInspe
     overload function EncryptionType(): winrt.windows.media.protection.playready.PlayReadyEncryptionAlgorithm;
     overload function CustomAttributes(): winrt.HString;
     overload function DecryptorSetup(): winrt.windows.media.protection.playready.PlayReadyDecryptorSetup;
-    function GetSerializedHeader(): winrt.ComArray<UInt8>;
+    function GetSerializedHeader(): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
     overload function HeaderWithEmbeddedUpdates(): winrt.windows.media.protection.playready.PlayReadyContentHeader;
 }

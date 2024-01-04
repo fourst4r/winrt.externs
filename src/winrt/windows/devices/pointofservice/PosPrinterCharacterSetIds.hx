@@ -4,7 +4,7 @@ package winrt.windows.devices.pointofservice;
 @:native("winrt::Windows::Devices::PointOfService::PosPrinterCharacterSetIds")
 extern class PosPrinterCharacterSetIds
 {
-    static overload function Utf16LE(): UInt32;
-    static overload function Ascii(): UInt32;
-    static overload function Ansi(): UInt32;
+    static overload function Utf16LE(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    static overload function Ascii(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    static overload function Ansi(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

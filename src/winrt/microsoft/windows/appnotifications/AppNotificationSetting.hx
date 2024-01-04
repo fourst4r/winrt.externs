@@ -2,7 +2,7 @@ package winrt.microsoft.windows.appnotifications;
 
 @:include("winrt/Microsoft.Windows.AppNotifications.h", true)
 @:native("winrt::Microsoft::Windows::AppNotifications::AppNotificationSetting")
-extern enum abstract AppNotificationSetting(Int32)
+extern enum abstract AppNotificationSetting(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::Windows::AppNotifications::AppNotificationSetting::Enabled") final Enabled;
     @:native("winrt::Microsoft::Windows::AppNotifications::AppNotificationSetting::DisabledForApplication") final DisabledForApplication;

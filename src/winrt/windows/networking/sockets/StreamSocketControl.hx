@@ -16,17 +16,17 @@ extern class StreamSocketControl
     overload function NoDelay(value: Bool): Void;
     overload function KeepAlive(): Bool;
     overload function KeepAlive(value: Bool): Void;
-    overload function OutboundBufferSizeInBytes(): UInt32;
-    overload function OutboundBufferSizeInBytes(value: UInt32): Void;
+    overload function OutboundBufferSizeInBytes(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function OutboundBufferSizeInBytes(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
     overload function QualityOfService(): winrt.windows.networking.sockets.SocketQualityOfService;
-    overload function QualityOfService(value: ConstRef<winrt.windows.networking.sockets.SocketQualityOfService>): Void;
-    overload function OutboundUnicastHopLimit(): UInt8;
-    overload function OutboundUnicastHopLimit(value: UInt8): Void;
+    overload function QualityOfService(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.sockets.SocketQualityOfService>): Void;
+    overload function OutboundUnicastHopLimit(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function OutboundUnicastHopLimit(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8): Void;
     overload function IgnorableServerCertificateErrors(): winrt.windows.foundation.collections.IVector<winrt.windows.security.cryptography.certificates.ChainValidationResult> /* GenericTypeInstSig */;
     overload function SerializeConnectionAttempts(): Bool;
     overload function SerializeConnectionAttempts(value: Bool): Void;
     overload function ClientCertificate(): winrt.windows.security.cryptography.certificates.Certificate;
-    overload function ClientCertificate(value: ConstRef<winrt.windows.security.cryptography.certificates.Certificate>): Void;
+    overload function ClientCertificate(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.certificates.Certificate>): Void;
     overload function MinProtectionLevel(): winrt.windows.networking.sockets.SocketProtectionLevel;
-    overload function MinProtectionLevel(value: ConstRef<winrt.windows.networking.sockets.SocketProtectionLevel>): Void;
+    overload function MinProtectionLevel(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.sockets.SocketProtectionLevel>): Void;
 }

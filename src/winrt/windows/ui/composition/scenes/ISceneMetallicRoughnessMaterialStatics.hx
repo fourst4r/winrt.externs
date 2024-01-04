@@ -8,5 +8,5 @@ package winrt.windows.ui.composition.scenes;
 @:native("winrt::Windows::UI::Composition::Scenes::ISceneMetallicRoughnessMaterialStatics")
 extern interface ISceneMetallicRoughnessMaterialStatics extends winrt.windows.foundation.IInspectable
 {
-    function Create(compositor: ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneMetallicRoughnessMaterial;
+    function Create(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.scenes.SceneMetallicRoughnessMaterial;
 }

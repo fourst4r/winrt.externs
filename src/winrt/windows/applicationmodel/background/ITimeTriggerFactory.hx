@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.background;
 @:native("winrt::Windows::ApplicationModel::Background::ITimeTriggerFactory")
 extern interface ITimeTriggerFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(freshnessTime: UInt32, oneShot: Bool): winrt.windows.applicationmodel.background.TimeTrigger;
+    function Create(freshnessTime: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, oneShot: Bool): winrt.windows.applicationmodel.background.TimeTrigger;
 }

@@ -8,5 +8,5 @@ package winrt.windows.system;
 @:native("winrt::Windows::System::IMemoryManagerStatics3")
 extern interface IMemoryManagerStatics3 extends winrt.windows.foundation.IInspectable
 {
-    function TrySetAppMemoryUsageLimit(value: UInt64): Bool;
+    function TrySetAppMemoryUsageLimit(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt64): Bool;
 }

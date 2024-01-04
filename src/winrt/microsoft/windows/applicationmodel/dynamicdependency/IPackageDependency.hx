@@ -11,5 +11,5 @@ extern interface IPackageDependency extends winrt.windows.foundation.IInspectabl
     overload function Id(): winrt.HString;
     function Delete(): Void;
     overload function Add(): winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContext;
-    overload function Add(options: ConstRef<winrt.microsoft.windows.applicationmodel.dynamicdependency.AddPackageDependencyOptions>): winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContext;
+    overload function Add(options: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.windows.applicationmodel.dynamicdependency.AddPackageDependencyOptions>): winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContext;
 }

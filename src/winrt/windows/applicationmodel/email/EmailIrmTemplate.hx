@@ -11,11 +11,11 @@ extern class EmailIrmTemplate
 {
     function new();
     @:native("winrt::Windows::ApplicationModel::Email::EmailIrmTemplate")
-    static overload function make(id: ConstRef<winrt.HString>, name: ConstRef<winrt.HString>, description: ConstRef<winrt.HString>): winrt.windows.applicationmodel.email.EmailIrmTemplate;
+    static overload function make(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, description: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.email.EmailIrmTemplate;
     overload function Id(): winrt.HString;
-    overload function Id(value: ConstRef<winrt.HString>): Void;
+    overload function Id(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Description(): winrt.HString;
-    overload function Description(value: ConstRef<winrt.HString>): Void;
+    overload function Description(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Name(): winrt.HString;
-    overload function Name(value: ConstRef<winrt.HString>): Void;
+    overload function Name(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

@@ -2,7 +2,7 @@ package winrt.windows.media.speechrecognition;
 
 @:include("winrt/Windows.Media.SpeechRecognition.h", true)
 @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognizerState")
-extern enum abstract SpeechRecognizerState(Int32)
+extern enum abstract SpeechRecognizerState(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognizerState::Idle") final Idle;
     @:native("winrt::Windows::Media::SpeechRecognition::SpeechRecognizerState::Capturing") final Capturing;

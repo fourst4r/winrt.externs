@@ -25,6 +25,6 @@ extern class LineDisplayCapabilities
     overload function IsHorizontalMarqueeSupported(): Bool;
     overload function IsVerticalMarqueeSupported(): Bool;
     overload function IsInterCharacterWaitSupported(): Bool;
-    overload function SupportedDescriptors(): UInt32;
-    overload function SupportedWindows(): UInt32;
+    overload function SupportedDescriptors(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function SupportedWindows(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

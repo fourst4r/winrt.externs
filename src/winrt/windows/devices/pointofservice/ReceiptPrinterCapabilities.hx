@@ -42,5 +42,5 @@ extern class ReceiptPrinterCapabilities
     overload function IsDoubleHighDoubleWidePrintSupported(): Bool;
     overload function IsPaperEmptySensorSupported(): Bool;
     overload function IsPaperNearEndSensorSupported(): Bool;
-    overload function SupportedCharactersPerLine(): winrt.windows.foundation.collections.IVectorView<UInt32> /* GenericTypeInstSig */;
+    overload function SupportedCharactersPerLine(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
 }

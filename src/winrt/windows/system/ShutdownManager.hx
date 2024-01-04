@@ -4,9 +4,9 @@ package winrt.windows.system;
 @:native("winrt::Windows::System::ShutdownManager")
 extern class ShutdownManager
 {
-    static function BeginShutdown(shutdownKind: ConstRef<winrt.windows.system.ShutdownKind>, timeout: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    static function BeginShutdown(shutdownKind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.ShutdownKind>, timeout: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     static function CancelShutdown(): Void;
-    static function IsPowerStateSupported(powerState: ConstRef<winrt.windows.system.PowerState>): Bool;
-    static overload function EnterPowerState(powerState: ConstRef<winrt.windows.system.PowerState>): Void;
-    static overload function EnterPowerState(powerState: ConstRef<winrt.windows.system.PowerState>, wakeUpAfter: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    static function IsPowerStateSupported(powerState: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.PowerState>): Bool;
+    static overload function EnterPowerState(powerState: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.PowerState>): Void;
+    static overload function EnterPowerState(powerState: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.PowerState>, wakeUpAfter: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
 }

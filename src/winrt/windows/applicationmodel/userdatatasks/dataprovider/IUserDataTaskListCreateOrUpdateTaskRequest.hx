@@ -10,6 +10,6 @@ extern interface IUserDataTaskListCreateOrUpdateTaskRequest extends winrt.window
 {
     overload function TaskListId(): winrt.HString;
     overload function Task(): winrt.windows.applicationmodel.userdatatasks.UserDataTask;
-    function ReportCompletedAsync(createdOrUpdatedUserDataTask: ConstRef<winrt.windows.applicationmodel.userdatatasks.UserDataTask>): winrt.windows.foundation.IAsyncAction;
+    function ReportCompletedAsync(createdOrUpdatedUserDataTask: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.userdatatasks.UserDataTask>): winrt.windows.foundation.IAsyncAction;
     function ReportFailedAsync(): winrt.windows.foundation.IAsyncAction;
 }

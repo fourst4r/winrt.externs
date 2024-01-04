@@ -9,6 +9,6 @@ package winrt.windows.graphics.printing;
 extern interface IPrintTaskSourceRequestedArgs extends winrt.windows.foundation.IInspectable
 {
     overload function Deadline(): winrt.windows.foundation.DateTime;
-    function SetSource(source: ConstRef<winrt.windows.graphics.printing.IPrintDocumentSource>): Void;
+    function SetSource(source: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing.IPrintDocumentSource>): Void;
     function GetDeferral(): winrt.windows.graphics.printing.PrintTaskSourceRequestedDeferral;
 }

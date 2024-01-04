@@ -14,13 +14,13 @@ extern interface IEmailConversation extends winrt.windows.foundation.IInspectabl
     overload function HasAttachment(): Bool;
     overload function Importance(): winrt.windows.applicationmodel.email.EmailImportance;
     overload function LastEmailResponseKind(): winrt.windows.applicationmodel.email.EmailMessageResponseKind;
-    overload function MessageCount(): UInt32;
+    overload function MessageCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function MostRecentMessageId(): winrt.HString;
     overload function MostRecentMessageTime(): winrt.windows.foundation.DateTime;
     overload function Preview(): winrt.HString;
     overload function LatestSender(): winrt.windows.applicationmodel.email.EmailRecipient;
     overload function Subject(): winrt.HString;
-    overload function UnreadMessageCount(): UInt32;
+    overload function UnreadMessageCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function FindMessagesAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.email.EmailMessage> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
-    overload function FindMessagesAsync(count: UInt32): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.email.EmailMessage> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+    overload function FindMessagesAsync(count: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.email.EmailMessage> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
 }

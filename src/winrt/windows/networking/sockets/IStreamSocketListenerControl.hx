@@ -9,5 +9,5 @@ package winrt.windows.networking.sockets;
 extern interface IStreamSocketListenerControl extends winrt.windows.foundation.IInspectable
 {
     overload function QualityOfService(): winrt.windows.networking.sockets.SocketQualityOfService;
-    overload function QualityOfService(value: ConstRef<winrt.windows.networking.sockets.SocketQualityOfService>): Void;
+    overload function QualityOfService(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.sockets.SocketQualityOfService>): Void;
 }

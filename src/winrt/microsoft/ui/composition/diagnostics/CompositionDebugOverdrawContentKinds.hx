@@ -2,7 +2,7 @@ package winrt.microsoft.ui.composition.diagnostics;
 
 @:include("winrt/Microsoft.UI.Composition.Diagnostics.h", true)
 @:native("winrt::Microsoft::UI::Composition::Diagnostics::CompositionDebugOverdrawContentKinds")
-extern enum abstract CompositionDebugOverdrawContentKinds(UInt32)
+extern enum abstract CompositionDebugOverdrawContentKinds(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Microsoft::UI::Composition::Diagnostics::CompositionDebugOverdrawContentKinds::None") final None;
     @:native("winrt::Microsoft::UI::Composition::Diagnostics::CompositionDebugOverdrawContentKinds::OffscreenRendered") final OffscreenRendered;

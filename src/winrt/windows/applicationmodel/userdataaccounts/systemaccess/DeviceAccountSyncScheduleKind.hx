@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.userdataaccounts.systemaccess;
 
 @:include("winrt/Windows.ApplicationModel.UserDataAccounts.SystemAccess.h", true)
 @:native("winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind")
-extern enum abstract DeviceAccountSyncScheduleKind(Int32)
+extern enum abstract DeviceAccountSyncScheduleKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind::Manual") final Manual;
     @:native("winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind::Every15Minutes") final Every15Minutes;

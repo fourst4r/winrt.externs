@@ -8,5 +8,5 @@ package winrt.windows.media.protection.playready;
 @:native("winrt::Windows::Media::Protection::PlayReady::INDSendResult")
 extern interface INDSendResult extends winrt.windows.foundation.IInspectable
 {
-    overload function Response(): winrt.ComArray<UInt8>;
+    overload function Response(): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
 }

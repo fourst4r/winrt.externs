@@ -9,6 +9,6 @@ package winrt.windows.media.capture.frames;
 extern interface IMediaFrameSourceGroupStatics extends winrt.windows.foundation.IInspectable
 {
     function FindAllAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.media.capture.frames.MediaFrameSourceGroup> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
-    function FromIdAsync(id: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.capture.frames.MediaFrameSourceGroup> /* GenericTypeInstSig */;
+    function FromIdAsync(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.capture.frames.MediaFrameSourceGroup> /* GenericTypeInstSig */;
     function GetDeviceSelector(): winrt.HString;
 }

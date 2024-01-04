@@ -10,5 +10,5 @@ extern interface ITextReverseConversionGenerator extends winrt.windows.foundatio
 {
     overload function ResolvedLanguage(): winrt.HString;
     overload function LanguageAvailableButNotInstalled(): Bool;
-    function ConvertBackAsync(input: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.HString> /* GenericTypeInstSig */;
+    function ConvertBackAsync(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.HString> /* GenericTypeInstSig */;
 }

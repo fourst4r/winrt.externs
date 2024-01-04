@@ -8,9 +8,9 @@ package winrt.windows.devices.usb;
 @:native("winrt::Windows::Devices::Usb::IUsbDeviceStatics")
 extern interface IUsbDeviceStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function GetDeviceSelector(vendorId: UInt32, productId: UInt32, winUsbInterfaceClass: ConstRef<winrt.Guid>): winrt.HString;
-    overload function GetDeviceSelector(winUsbInterfaceClass: ConstRef<winrt.Guid>): winrt.HString;
-    overload function GetDeviceSelector(vendorId: UInt32, productId: UInt32): winrt.HString;
-    function GetDeviceClassSelector(usbClass: ConstRef<winrt.windows.devices.usb.UsbDeviceClass>): winrt.HString;
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.usb.UsbDevice> /* GenericTypeInstSig */;
+    overload function GetDeviceSelector(vendorId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, productId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, winUsbInterfaceClass: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): winrt.HString;
+    overload function GetDeviceSelector(winUsbInterfaceClass: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): winrt.HString;
+    overload function GetDeviceSelector(vendorId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, productId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.HString;
+    function GetDeviceClassSelector(usbClass: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.usb.UsbDeviceClass>): winrt.HString;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.usb.UsbDevice> /* GenericTypeInstSig */;
 }

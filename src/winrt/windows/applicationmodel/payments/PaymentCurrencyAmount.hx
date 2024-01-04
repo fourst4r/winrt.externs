@@ -9,13 +9,13 @@ package winrt.windows.applicationmodel.payments;
 extern class PaymentCurrencyAmount
     implements winrt.windows.applicationmodel.payments.IPaymentCurrencyAmount
 {
-    function new(value: ConstRef<winrt.HString>, currency: ConstRef<winrt.HString>);
+    function new(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, currency: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     @:native("winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount")
-    static overload function make(value: ConstRef<winrt.HString>, currency: ConstRef<winrt.HString>, currencySystem: ConstRef<winrt.HString>): winrt.windows.applicationmodel.payments.PaymentCurrencyAmount;
+    static overload function make(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, currency: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, currencySystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.payments.PaymentCurrencyAmount;
     overload function Currency(): winrt.HString;
-    overload function Currency(value: ConstRef<winrt.HString>): Void;
+    overload function Currency(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function CurrencySystem(): winrt.HString;
-    overload function CurrencySystem(value: ConstRef<winrt.HString>): Void;
+    overload function CurrencySystem(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Value(): winrt.HString;
-    overload function Value(value: ConstRef<winrt.HString>): Void;
+    overload function Value(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

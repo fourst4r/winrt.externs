@@ -9,6 +9,6 @@ package winrt.windows.foundation.collections;
 
 extern interface IObservableMap<K, V> extends winrt.windows.foundation.IInspectable
 {
-    overload function MapChanged(vhnd: ConstRef<winrt.windows.foundation.collections.MapChangedEventHandler<K, V> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function MapChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function MapChanged(vhnd: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.MapChangedEventHandler<K, V> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function MapChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

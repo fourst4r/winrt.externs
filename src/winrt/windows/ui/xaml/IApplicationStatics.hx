@@ -9,7 +9,7 @@ package winrt.windows.ui.xaml;
 extern interface IApplicationStatics extends winrt.windows.foundation.IInspectable
 {
     overload function Current(): winrt.windows.ui.xaml.Application;
-    function Start(callback: ConstRef<winrt.windows.ui.xaml.ApplicationInitializationCallback>): Void;
-    overload function LoadComponent(component: ConstRef<winrt.windows.foundation.IInspectable>, resourceLocator: ConstRef<winrt.windows.foundation.Uri>): Void;
-    overload function LoadComponent(component: ConstRef<winrt.windows.foundation.IInspectable>, resourceLocator: ConstRef<winrt.windows.foundation.Uri>, componentResourceLocation: ConstRef<winrt.windows.ui.xaml.controls.primitives.ComponentResourceLocation>): Void;
+    function Start(callback: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.ApplicationInitializationCallback>): Void;
+    overload function LoadComponent(component: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, resourceLocator: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
+    overload function LoadComponent(component: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, resourceLocator: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>, componentResourceLocation: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.primitives.ComponentResourceLocation>): Void;
 }

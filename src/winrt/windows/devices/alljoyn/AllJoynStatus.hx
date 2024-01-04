@@ -4,22 +4,22 @@ package winrt.windows.devices.alljoyn;
 @:native("winrt::Windows::Devices::AllJoyn::AllJoynStatus")
 extern class AllJoynStatus
 {
-    static overload function Ok(): Int32;
-    static overload function Fail(): Int32;
-    static overload function OperationTimedOut(): Int32;
-    static overload function OtherEndClosed(): Int32;
-    static overload function ConnectionRefused(): Int32;
-    static overload function AuthenticationFailed(): Int32;
-    static overload function AuthenticationRejectedByUser(): Int32;
-    static overload function SslConnectFailed(): Int32;
-    static overload function SslIdentityVerificationFailed(): Int32;
-    static overload function InsufficientSecurity(): Int32;
-    static overload function InvalidArgument1(): Int32;
-    static overload function InvalidArgument2(): Int32;
-    static overload function InvalidArgument3(): Int32;
-    static overload function InvalidArgument4(): Int32;
-    static overload function InvalidArgument5(): Int32;
-    static overload function InvalidArgument6(): Int32;
-    static overload function InvalidArgument7(): Int32;
-    static overload function InvalidArgument8(): Int32;
+    static overload function Ok(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function Fail(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function OperationTimedOut(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function OtherEndClosed(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function ConnectionRefused(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function AuthenticationFailed(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function AuthenticationRejectedByUser(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function SslConnectFailed(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function SslIdentityVerificationFailed(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function InsufficientSecurity(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function InvalidArgument1(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function InvalidArgument2(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function InvalidArgument3(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function InvalidArgument4(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function InvalidArgument5(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function InvalidArgument6(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function InvalidArgument7(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function InvalidArgument8(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

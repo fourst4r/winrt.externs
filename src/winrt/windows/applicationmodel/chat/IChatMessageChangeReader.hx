@@ -9,6 +9,6 @@ package winrt.windows.applicationmodel.chat;
 extern interface IChatMessageChangeReader extends winrt.windows.foundation.IInspectable
 {
     function AcceptChanges(): Void;
-    function AcceptChangesThrough(lastChangeToAcknowledge: ConstRef<winrt.windows.applicationmodel.chat.ChatMessageChange>): Void;
+    function AcceptChangesThrough(lastChangeToAcknowledge: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.chat.ChatMessageChange>): Void;
     function ReadBatchAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.chat.ChatMessageChange> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
 }

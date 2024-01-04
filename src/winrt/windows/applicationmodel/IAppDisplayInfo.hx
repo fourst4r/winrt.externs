@@ -10,5 +10,5 @@ extern interface IAppDisplayInfo extends winrt.windows.foundation.IInspectable
 {
     overload function DisplayName(): winrt.HString;
     overload function Description(): winrt.HString;
-    function GetLogo(size: ConstRef<winrt.windows.foundation.Size>): winrt.windows.storage.streams.RandomAccessStreamReference;
+    function GetLogo(size: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Size>): winrt.windows.storage.streams.RandomAccessStreamReference;
 }

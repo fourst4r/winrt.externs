@@ -9,6 +9,6 @@ package winrt.windows.applicationmodel.core;
 extern interface ICoreImmersiveApplication extends winrt.windows.foundation.IInspectable
 {
     overload function Views(): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.core.CoreApplicationView> /* GenericTypeInstSig */;
-    function CreateNewView(runtimeType: ConstRef<winrt.HString>, entryPoint: ConstRef<winrt.HString>): winrt.windows.applicationmodel.core.CoreApplicationView;
+    function CreateNewView(runtimeType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, entryPoint: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.core.CoreApplicationView;
     overload function MainView(): winrt.windows.applicationmodel.core.CoreApplicationView;
 }

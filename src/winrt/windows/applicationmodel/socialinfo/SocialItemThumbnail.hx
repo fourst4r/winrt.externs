@@ -11,10 +11,10 @@ extern class SocialItemThumbnail
 {
     function new();
     overload function TargetUri(): winrt.windows.foundation.Uri;
-    overload function TargetUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function TargetUri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function ImageUri(): winrt.windows.foundation.Uri;
-    overload function ImageUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function ImageUri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function BitmapSize(): winrt.windows.graphics.imaging.BitmapSize;
-    overload function BitmapSize(value: ConstRef<winrt.windows.graphics.imaging.BitmapSize>): Void;
-    function SetImageAsync(image: ConstRef<winrt.windows.storage.streams.IInputStream>): winrt.windows.foundation.IAsyncAction;
+    overload function BitmapSize(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.imaging.BitmapSize>): Void;
+    function SetImageAsync(image: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IInputStream>): winrt.windows.foundation.IAsyncAction;
 }

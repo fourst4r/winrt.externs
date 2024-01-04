@@ -2,7 +2,7 @@ package winrt.windows.gaming.ui;
 
 @:include("winrt/Windows.Gaming.UI.h", true)
 @:native("winrt::Windows::Gaming::UI::GameChatOverlayPosition")
-extern enum abstract GameChatOverlayPosition(Int32)
+extern enum abstract GameChatOverlayPosition(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Gaming::UI::GameChatOverlayPosition::BottomCenter") final BottomCenter;
     @:native("winrt::Windows::Gaming::UI::GameChatOverlayPosition::BottomLeft") final BottomLeft;

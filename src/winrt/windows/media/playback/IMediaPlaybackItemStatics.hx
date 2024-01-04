@@ -8,5 +8,5 @@ package winrt.windows.media.playback;
 @:native("winrt::Windows::Media::Playback::IMediaPlaybackItemStatics")
 extern interface IMediaPlaybackItemStatics extends winrt.windows.foundation.IInspectable
 {
-    function FindFromMediaSource(source: ConstRef<winrt.windows.media.core.MediaSource>): winrt.windows.media.playback.MediaPlaybackItem;
+    function FindFromMediaSource(source: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.MediaSource>): winrt.windows.media.playback.MediaPlaybackItem;
 }

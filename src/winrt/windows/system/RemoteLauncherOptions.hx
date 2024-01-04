@@ -11,6 +11,6 @@ extern class RemoteLauncherOptions
 {
     function new();
     overload function FallbackUri(): winrt.windows.foundation.Uri;
-    overload function FallbackUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function FallbackUri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function PreferredAppIds(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
 }

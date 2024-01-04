@@ -2,7 +2,7 @@ package winrt.windows.media.devices;
 
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::OpticalImageStabilizationMode")
-extern enum abstract OpticalImageStabilizationMode(Int32)
+extern enum abstract OpticalImageStabilizationMode(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Devices::OpticalImageStabilizationMode::Off") final Off;
     @:native("winrt::Windows::Media::Devices::OpticalImageStabilizationMode::On") final On;

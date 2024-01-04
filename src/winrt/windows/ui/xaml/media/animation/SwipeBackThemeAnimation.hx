@@ -12,11 +12,11 @@ extern class SwipeBackThemeAnimation
 {
     function new();
     overload function TargetName(): winrt.HString;
-    overload function TargetName(value: ConstRef<winrt.HString>): Void;
-    overload function FromHorizontalOffset(): Float64;
-    overload function FromHorizontalOffset(value: Float64): Void;
-    overload function FromVerticalOffset(): Float64;
-    overload function FromVerticalOffset(value: Float64): Void;
+    overload function TargetName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function FromHorizontalOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function FromHorizontalOffset(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function FromVerticalOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function FromVerticalOffset(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function TargetNameProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function FromHorizontalOffsetProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function FromVerticalOffsetProperty(): winrt.windows.ui.xaml.DependencyProperty;

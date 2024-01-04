@@ -12,5 +12,5 @@ extern interface IPlayReadySecureStopServiceRequest extends winrt.windows.founda
     overload function StartTime(): winrt.windows.foundation.DateTime;
     overload function UpdateTime(): winrt.windows.foundation.DateTime;
     overload function Stopped(): Bool;
-    overload function PublisherCertificate(): winrt.ComArray<UInt8>;
+    overload function PublisherCertificate(): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
 }

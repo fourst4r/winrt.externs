@@ -11,7 +11,7 @@ extern class TreeViewItemDataAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.ITreeViewItemDataAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IExpandCollapseProvider
 {
-    function new(item: ConstRef<winrt.windows.foundation.IInspectable>, parent: ConstRef<winrt.microsoft.ui.xaml.automation.peers.TreeViewListAutomationPeer>);
+    function new(item: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, parent: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.automation.peers.TreeViewListAutomationPeer>);
     overload function ExpandCollapseState(): winrt.microsoft.ui.xaml.automation.ExpandCollapseState;
     function Collapse(): Void;
     function Expand(): Void;

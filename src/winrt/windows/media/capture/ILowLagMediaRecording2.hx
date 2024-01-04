@@ -8,6 +8,6 @@ package winrt.windows.media.capture;
 @:native("winrt::Windows::Media::Capture::ILowLagMediaRecording2")
 extern interface ILowLagMediaRecording2 extends winrt.windows.foundation.IInspectable
 {
-    function PauseAsync(behavior: ConstRef<winrt.windows.media.devices.MediaCapturePauseBehavior>): winrt.windows.foundation.IAsyncAction;
+    function PauseAsync(behavior: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.MediaCapturePauseBehavior>): winrt.windows.foundation.IAsyncAction;
     function ResumeAsync(): winrt.windows.foundation.IAsyncAction;
 }

@@ -9,6 +9,6 @@ package winrt.microsoft.ui.xaml.media.animation;
 extern interface IEntranceNavigationTransitionInfoStatics extends winrt.windows.foundation.IInspectable
 {
     overload function IsTargetElementProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetIsTargetElement(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Bool;
-    function SetIsTargetElement(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>, value: Bool): Void;
+    function GetIsTargetElement(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): Bool;
+    function SetIsTargetElement(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>, value: Bool): Void;
 }

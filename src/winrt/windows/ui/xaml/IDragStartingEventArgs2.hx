@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml;
 extern interface IDragStartingEventArgs2 extends winrt.windows.foundation.IInspectable
 {
     overload function AllowedOperations(): winrt.windows.applicationmodel.datatransfer.DataPackageOperation;
-    overload function AllowedOperations(value: ConstRef<winrt.windows.applicationmodel.datatransfer.DataPackageOperation>): Void;
+    overload function AllowedOperations(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.datatransfer.DataPackageOperation>): Void;
 }

@@ -8,5 +8,5 @@ package winrt.windows.devices.gpio;
 @:native("winrt::Windows::Devices::Gpio::IGpioChangeCounterFactory")
 extern interface IGpioChangeCounterFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(pin: ConstRef<winrt.windows.devices.gpio.GpioPin>): winrt.windows.devices.gpio.GpioChangeCounter;
+    function Create(pin: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.gpio.GpioPin>): winrt.windows.devices.gpio.GpioChangeCounter;
 }

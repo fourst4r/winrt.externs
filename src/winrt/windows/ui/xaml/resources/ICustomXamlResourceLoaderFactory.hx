@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.resources;
 @:native("winrt::Windows::UI::Xaml::Resources::ICustomXamlResourceLoaderFactory")
 extern interface ICustomXamlResourceLoaderFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.resources.CustomXamlResourceLoader;
+    function CreateInstance(baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.resources.CustomXamlResourceLoader;
 }

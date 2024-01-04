@@ -8,6 +8,6 @@ package winrt.windows.system;
 @:native("winrt::Windows::System::IProcessMemoryReport")
 extern interface IProcessMemoryReport extends winrt.windows.foundation.IInspectable
 {
-    overload function PrivateWorkingSetUsage(): UInt64;
-    overload function TotalWorkingSetUsage(): UInt64;
+    overload function PrivateWorkingSetUsage(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
+    overload function TotalWorkingSetUsage(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

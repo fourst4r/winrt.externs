@@ -8,5 +8,5 @@ package winrt.windows.ai.machinelearning;
 @:native("winrt::Windows::AI::MachineLearning::ILearningModelDeviceStatics")
 extern interface ILearningModelDeviceStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateFromDirect3D11Device(device: ConstRef<winrt.windows.graphics.directx.direct3d11.IDirect3DDevice>): winrt.windows.ai.machinelearning.LearningModelDevice;
+    function CreateFromDirect3D11Device(device: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.directx.direct3d11.IDirect3DDevice>): winrt.windows.ai.machinelearning.LearningModelDevice;
 }

@@ -9,6 +9,6 @@ package winrt.windows.ui.notifications;
 extern interface INotificationData extends winrt.windows.foundation.IInspectable
 {
     overload function Values(): winrt.windows.foundation.collections.IMap<winrt.HString, winrt.HString> /* GenericTypeInstSig */;
-    overload function SequenceNumber(): UInt32;
-    overload function SequenceNumber(value: UInt32): Void;
+    overload function SequenceNumber(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function SequenceNumber(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
 }

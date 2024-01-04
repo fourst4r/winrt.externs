@@ -8,5 +8,5 @@ package winrt.windows.devices.smartcards;
 @:native("winrt::Windows::Devices::SmartCards::ISmartCardAppletIdGroupStatics")
 extern interface ISmartCardAppletIdGroupStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function MaxAppletIds(): UInt16;
+    overload function MaxAppletIds(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
 }

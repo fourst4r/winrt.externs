@@ -8,5 +8,5 @@ package winrt.windows.media.audio;
 @:native("winrt::Windows::Media::Audio::IAudioGraphStatics")
 extern interface IAudioGraphStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateAsync(settings: ConstRef<winrt.windows.media.audio.AudioGraphSettings>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.audio.CreateAudioGraphResult> /* GenericTypeInstSig */;
+    function CreateAsync(settings: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.audio.AudioGraphSettings>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.audio.CreateAudioGraphResult> /* GenericTypeInstSig */;
 }

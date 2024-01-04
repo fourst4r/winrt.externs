@@ -12,7 +12,7 @@ extern class ToggleSplitButtonAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.IExpandCollapseProvider
     implements winrt.windows.ui.xaml.automation.provider.IToggleProvider
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.ToggleSplitButton>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.ToggleSplitButton>);
     overload function ExpandCollapseState(): winrt.windows.ui.xaml.automation.ExpandCollapseState;
     function Collapse(): Void;
     function Expand(): Void;

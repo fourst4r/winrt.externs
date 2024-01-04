@@ -11,6 +11,6 @@ extern interface IMediaTrack extends winrt.windows.foundation.IInspectable
     overload function Id(): winrt.HString;
     overload function Language(): winrt.HString;
     overload function TrackKind(): winrt.windows.media.core.MediaTrackKind;
-    overload function Label(value: ConstRef<winrt.HString>): Void;
+    overload function Label(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Label(): winrt.HString;
 }

@@ -8,6 +8,6 @@ package winrt.windows.security.cryptography.certificates;
 @:native("winrt::Windows::Security::Cryptography::Certificates::ICertificateStore")
 extern interface ICertificateStore extends winrt.windows.foundation.IInspectable
 {
-    function Add(certificate: ConstRef<winrt.windows.security.cryptography.certificates.Certificate>): Void;
-    function Delete(certificate: ConstRef<winrt.windows.security.cryptography.certificates.Certificate>): Void;
+    function Add(certificate: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.certificates.Certificate>): Void;
+    function Delete(certificate: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.certificates.Certificate>): Void;
 }

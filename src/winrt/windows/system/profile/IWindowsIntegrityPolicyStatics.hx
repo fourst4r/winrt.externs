@@ -12,6 +12,6 @@ extern interface IWindowsIntegrityPolicyStatics extends winrt.windows.foundation
     overload function IsEnabledForTrial(): Bool;
     overload function CanDisable(): Bool;
     overload function IsDisableSupported(): Bool;
-    overload function PolicyChanged(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function PolicyChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function PolicyChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function PolicyChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

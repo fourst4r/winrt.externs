@@ -10,7 +10,7 @@ extern class MobileBroadbandSlotInfo
     implements winrt.windows.networking.networkoperators.IMobileBroadbandSlotInfo
     implements winrt.windows.networking.networkoperators.IMobileBroadbandSlotInfo2
 {
-    overload function Index(): Int32;
+    overload function Index(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function State(): winrt.windows.networking.networkoperators.MobileBroadbandSlotState;
     overload function IccId(): winrt.HString;
 }

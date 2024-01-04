@@ -14,5 +14,5 @@ extern interface IMediaPlaybackItem2 extends winrt.windows.foundation.IInspectab
     overload function CanSkip(): Bool;
     overload function CanSkip(value: Bool): Void;
     function GetDisplayProperties(): winrt.windows.media.playback.MediaItemDisplayProperties;
-    function ApplyDisplayProperties(value: ConstRef<winrt.windows.media.playback.MediaItemDisplayProperties>): Void;
+    function ApplyDisplayProperties(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.playback.MediaItemDisplayProperties>): Void;
 }

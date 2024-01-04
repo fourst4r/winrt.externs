@@ -8,14 +8,14 @@ package winrt.microsoft.windows.appnotifications;
 @:native("winrt::Microsoft::Windows::AppNotifications::IAppNotificationProgressData")
 extern interface IAppNotificationProgressData extends winrt.windows.foundation.IInspectable
 {
-    overload function SequenceNumber(): UInt32;
-    overload function SequenceNumber(value: UInt32): Void;
+    overload function SequenceNumber(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function SequenceNumber(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
     overload function Title(): winrt.HString;
-    overload function Title(value: ConstRef<winrt.HString>): Void;
-    overload function Value(): Float64;
-    overload function Value(value: Float64): Void;
+    overload function Title(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function Value(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Value(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function ValueStringOverride(): winrt.HString;
-    overload function ValueStringOverride(value: ConstRef<winrt.HString>): Void;
+    overload function ValueStringOverride(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Status(): winrt.HString;
-    overload function Status(value: ConstRef<winrt.HString>): Void;
+    overload function Status(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

@@ -10,6 +10,6 @@ extern interface IHyperlink5 extends winrt.windows.foundation.IInspectable
 {
     overload function IsTabStop(): Bool;
     overload function IsTabStop(value: Bool): Void;
-    overload function TabIndex(): Int32;
-    overload function TabIndex(value: Int32): Void;
+    overload function TabIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function TabIndex(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
 }

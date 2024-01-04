@@ -9,8 +9,8 @@ package winrt.windows.media.mediaproperties;
 extern class MediaRatio
     implements winrt.windows.media.mediaproperties.IMediaRatio
 {
-    overload function Numerator(value: UInt32): Void;
-    overload function Numerator(): UInt32;
-    overload function Denominator(value: UInt32): Void;
-    overload function Denominator(): UInt32;
+    overload function Numerator(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function Numerator(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Denominator(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function Denominator(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

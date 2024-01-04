@@ -8,6 +8,6 @@ package winrt.windows.ui.uiautomation.core;
 @:native("winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider")
 extern interface ICoreAutomationRemoteOperationExtensionProvider extends winrt.windows.foundation.IInspectable
 {
-    function CallExtension(extensionId: ConstRef<winrt.Guid>, context: ConstRef<winrt.windows.ui.uiautomation.core.CoreAutomationRemoteOperationContext>, operandIds: winrt.ArrayView<winrt.windows.ui.uiautomation.core.AutomationRemoteOperationOperandId>): Void;
-    function IsExtensionSupported(extensionId: ConstRef<winrt.Guid>): Bool;
+    function CallExtension(extensionId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>, context: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.uiautomation.core.CoreAutomationRemoteOperationContext>, operandIds: winrt.ArrayView<winrt.windows.ui.uiautomation.core.AutomationRemoteOperationOperandId>): Void;
+    function IsExtensionSupported(extensionId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): Bool;
 }

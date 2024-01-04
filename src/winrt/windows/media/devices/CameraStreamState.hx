@@ -2,7 +2,7 @@ package winrt.windows.media.devices;
 
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::CameraStreamState")
-extern enum abstract CameraStreamState(Int32)
+extern enum abstract CameraStreamState(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Devices::CameraStreamState::NotStreaming") final NotStreaming;
     @:native("winrt::Windows::Media::Devices::CameraStreamState::Streaming") final Streaming;

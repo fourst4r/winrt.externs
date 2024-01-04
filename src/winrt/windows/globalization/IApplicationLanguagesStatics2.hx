@@ -8,5 +8,5 @@ package winrt.windows.globalization;
 @:native("winrt::Windows::Globalization::IApplicationLanguagesStatics2")
 extern interface IApplicationLanguagesStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function GetLanguagesForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
+    function GetLanguagesForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
 }

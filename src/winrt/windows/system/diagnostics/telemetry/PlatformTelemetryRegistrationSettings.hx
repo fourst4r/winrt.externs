@@ -10,8 +10,8 @@ extern class PlatformTelemetryRegistrationSettings
     implements winrt.windows.system.diagnostics.telemetry.IPlatformTelemetryRegistrationSettings
 {
     function new();
-    overload function StorageSize(): UInt32;
-    overload function StorageSize(value: UInt32): Void;
-    overload function UploadQuotaSize(): UInt32;
-    overload function UploadQuotaSize(value: UInt32): Void;
+    overload function StorageSize(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function StorageSize(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function UploadQuotaSize(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function UploadQuotaSize(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
 }

@@ -13,6 +13,6 @@ extern class EmailRecipientResolutionResult
     function new();
     overload function Status(): winrt.windows.applicationmodel.email.EmailRecipientResolutionStatus;
     overload function PublicKeys(): winrt.windows.foundation.collections.IVectorView<winrt.windows.security.cryptography.certificates.Certificate> /* GenericTypeInstSig */;
-    overload function Status(value: ConstRef<winrt.windows.applicationmodel.email.EmailRecipientResolutionStatus>): Void;
-    function SetPublicKeys(value: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.security.cryptography.certificates.Certificate> /* temp_GenericTypeInstSig */>): Void;
+    overload function Status(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.email.EmailRecipientResolutionStatus>): Void;
+    function SetPublicKeys(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.windows.security.cryptography.certificates.Certificate> /* temp_GenericTypeInstSig */>): Void;
 }

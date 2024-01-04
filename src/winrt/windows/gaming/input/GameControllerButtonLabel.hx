@@ -2,7 +2,7 @@ package winrt.windows.gaming.input;
 
 @:include("winrt/Windows.Gaming.Input.h", true)
 @:native("winrt::Windows::Gaming::Input::GameControllerButtonLabel")
-extern enum abstract GameControllerButtonLabel(Int32)
+extern enum abstract GameControllerButtonLabel(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Gaming::Input::GameControllerButtonLabel::None") final None;
     @:native("winrt::Windows::Gaming::Input::GameControllerButtonLabel::XboxBack") final XboxBack;

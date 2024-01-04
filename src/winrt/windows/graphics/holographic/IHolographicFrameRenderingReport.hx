@@ -9,7 +9,7 @@ package winrt.windows.graphics.holographic;
 extern interface IHolographicFrameRenderingReport extends winrt.windows.foundation.IInspectable
 {
     overload function FrameId(): winrt.windows.graphics.holographic.HolographicFrameId;
-    overload function MissedLatchCount(): UInt32;
+    overload function MissedLatchCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function SystemRelativeFrameReadyTime(): winrt.windows.foundation.TimeSpan;
     overload function SystemRelativeActualGpuFinishTime(): winrt.windows.foundation.TimeSpan;
     overload function SystemRelativeTargetLatchTime(): winrt.windows.foundation.TimeSpan;

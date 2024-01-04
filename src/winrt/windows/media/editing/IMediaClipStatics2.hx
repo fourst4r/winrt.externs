@@ -8,5 +8,5 @@ package winrt.windows.media.editing;
 @:native("winrt::Windows::Media::Editing::IMediaClipStatics2")
 extern interface IMediaClipStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function CreateFromSurface(surface: ConstRef<winrt.windows.graphics.directx.direct3d11.IDirect3DSurface>, originalDuration: ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.media.editing.MediaClip;
+    function CreateFromSurface(surface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.directx.direct3d11.IDirect3DSurface>, originalDuration: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): winrt.windows.media.editing.MediaClip;
 }

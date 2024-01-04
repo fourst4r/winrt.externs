@@ -8,5 +8,5 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::IAudioStreamDescriptorFactory")
 extern interface IAudioStreamDescriptorFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(encodingProperties: ConstRef<winrt.windows.media.mediaproperties.AudioEncodingProperties>): winrt.windows.media.core.AudioStreamDescriptor;
+    function Create(encodingProperties: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.mediaproperties.AudioEncodingProperties>): winrt.windows.media.core.AudioStreamDescriptor;
 }

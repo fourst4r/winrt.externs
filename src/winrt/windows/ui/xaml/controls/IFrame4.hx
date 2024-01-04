@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IFrame4")
 extern interface IFrame4 extends winrt.windows.foundation.IInspectable
 {
-    function SetNavigationState(navigationState: ConstRef<winrt.HString>, suppressNavigate: Bool): Void;
+    function SetNavigationState(navigationState: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, suppressNavigate: Bool): Void;
 }

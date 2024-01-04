@@ -2,7 +2,7 @@ package winrt.windows.graphics.printing;
 
 @:include("winrt/Windows.Graphics.Printing.h", true)
 @:native("winrt::Windows::Graphics::Printing::PrintBinding")
-extern enum abstract PrintBinding(Int32)
+extern enum abstract PrintBinding(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Graphics::Printing::PrintBinding::Default") final Default;
     @:native("winrt::Windows::Graphics::Printing::PrintBinding::NotAvailable") final NotAvailable;

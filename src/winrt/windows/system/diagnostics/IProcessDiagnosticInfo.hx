@@ -8,7 +8,7 @@ package winrt.windows.system.diagnostics;
 @:native("winrt::Windows::System::Diagnostics::IProcessDiagnosticInfo")
 extern interface IProcessDiagnosticInfo extends winrt.windows.foundation.IInspectable
 {
-    overload function ProcessId(): UInt32;
+    overload function ProcessId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function ExecutableFileName(): winrt.HString;
     overload function Parent(): winrt.windows.system.diagnostics.ProcessDiagnosticInfo;
     overload function ProcessStartTime(): winrt.windows.foundation.DateTime;

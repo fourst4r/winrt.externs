@@ -13,7 +13,7 @@ extern class CompositionInteractionSourceCollection
 {
     function RemoveAll(): Void;
     function First(): winrt.windows.foundation.collections.IIterator<winrt.microsoft.ui.composition.interactions.ICompositionInteractionSource> /* GenericTypeInstSig */;
-    function Add(value: ConstRef<winrt.microsoft.ui.composition.interactions.ICompositionInteractionSource>): Void;
-    function Remove(value: ConstRef<winrt.microsoft.ui.composition.interactions.ICompositionInteractionSource>): Void;
-    overload function Count(): Int32;
+    function Add(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.interactions.ICompositionInteractionSource>): Void;
+    function Remove(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.interactions.ICompositionInteractionSource>): Void;
+    overload function Count(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

@@ -12,8 +12,8 @@ extern class VpnCustomPromptOptionSelector
 {
     function new();
     overload function Options(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
-    overload function SelectedIndex(): UInt32;
-    overload function DisplayName(value: ConstRef<winrt.HString>): Void;
+    overload function SelectedIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function DisplayName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function DisplayName(): winrt.HString;
     overload function Compulsory(value: Bool): Void;
     overload function Compulsory(): Bool;

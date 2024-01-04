@@ -8,5 +8,5 @@ package winrt.windows.devices.pointofservice;
 @:native("winrt::Windows::Devices::PointOfService::ICashDrawerStatics2")
 extern interface ICashDrawerStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function GetDeviceSelector(connectionTypes: ConstRef<winrt.windows.devices.pointofservice.PosConnectionTypes>): winrt.HString;
+    function GetDeviceSelector(connectionTypes: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.pointofservice.PosConnectionTypes>): winrt.HString;
 }

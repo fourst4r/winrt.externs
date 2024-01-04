@@ -2,4 +2,4 @@ package winrt.windows.ui.xaml;
 
 
 @:extern 
-typedef RoutedEventHandler = Fn<(sender: ConstRef<winrt.windows.foundation.IInspectable>, e: ConstRef<winrt.windows.ui.xaml.RoutedEventArgs>)->Void>;
+typedef RoutedEventHandler = Fn<(sender: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, e: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.RoutedEventArgs>)->Void>;

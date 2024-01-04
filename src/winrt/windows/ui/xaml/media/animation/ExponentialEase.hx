@@ -11,8 +11,8 @@ extern class ExponentialEase
     implements winrt.windows.ui.xaml.media.animation.IExponentialEase
 {
     function new();
-    overload function Exponent(): Float64;
-    overload function Exponent(value: Float64): Void;
+    overload function Exponent(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Exponent(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function ExponentProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function ExponentProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

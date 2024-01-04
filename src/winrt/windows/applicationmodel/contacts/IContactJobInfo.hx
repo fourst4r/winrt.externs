@@ -9,19 +9,19 @@ package winrt.windows.applicationmodel.contacts;
 extern interface IContactJobInfo extends winrt.windows.foundation.IInspectable
 {
     overload function CompanyName(): winrt.HString;
-    overload function CompanyName(value: ConstRef<winrt.HString>): Void;
+    overload function CompanyName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function CompanyYomiName(): winrt.HString;
-    overload function CompanyYomiName(value: ConstRef<winrt.HString>): Void;
+    overload function CompanyYomiName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Department(): winrt.HString;
-    overload function Department(value: ConstRef<winrt.HString>): Void;
+    overload function Department(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Title(): winrt.HString;
-    overload function Title(value: ConstRef<winrt.HString>): Void;
+    overload function Title(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Manager(): winrt.HString;
-    overload function Manager(value: ConstRef<winrt.HString>): Void;
+    overload function Manager(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Office(): winrt.HString;
-    overload function Office(value: ConstRef<winrt.HString>): Void;
+    overload function Office(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function CompanyAddress(): winrt.HString;
-    overload function CompanyAddress(value: ConstRef<winrt.HString>): Void;
+    overload function CompanyAddress(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Description(): winrt.HString;
-    overload function Description(value: ConstRef<winrt.HString>): Void;
+    overload function Description(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

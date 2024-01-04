@@ -2,7 +2,7 @@ package winrt.windows.devices.lights;
 
 @:include("winrt/Windows.Devices.Lights.h", true)
 @:native("winrt::Windows::Devices::Lights::LampArrayKind")
-extern enum abstract LampArrayKind(Int32)
+extern enum abstract LampArrayKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::Lights::LampArrayKind::Undefined") final Undefined;
     @:native("winrt::Windows::Devices::Lights::LampArrayKind::Keyboard") final Keyboard;

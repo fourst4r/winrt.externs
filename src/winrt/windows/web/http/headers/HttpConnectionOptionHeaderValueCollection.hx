@@ -12,19 +12,19 @@ extern class HttpConnectionOptionHeaderValueCollection
     implements winrt.windows.foundation.collections.IVector<winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue> /* GenericTypeInstSig */
     implements winrt.windows.foundation.IStringable
 {
-    function ParseAdd(input: ConstRef<winrt.HString>): Void;
-    function TryParseAdd(input: ConstRef<winrt.HString>): Bool;
-    function GetAt(index: UInt32): winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue;
-    overload function Size(): UInt32;
+    function ParseAdd(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function TryParseAdd(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
+    function GetAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue;
+    overload function Size(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     function GetView(): winrt.windows.foundation.collections.IVectorView<winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue> /* GenericTypeInstSig */;
-    function IndexOf(value: ConstRef<winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue>, index: Ref<UInt32>): Bool;
-    function SetAt(index: UInt32, value: ConstRef<winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue>): Void;
-    function InsertAt(index: UInt32, value: ConstRef<winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue>): Void;
-    function RemoveAt(index: UInt32): Void;
-    function Append(value: ConstRef<winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue>): Void;
+    function IndexOf(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue>, index: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <#if reflaxe.cpp cxx.num. #else cpp. #end UInt32>): Bool;
+    function SetAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue>): Void;
+    function InsertAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue>): Void;
+    function RemoveAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    function Append(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue>): Void;
     function RemoveAtEnd(): Void;
     function Clear(): Void;
-    function GetMany(startIndex: UInt32, items: winrt.ArrayView<winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue>): UInt32;
+    function GetMany(startIndex: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, items: winrt.ArrayView<winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue>): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     function ReplaceAll(items: winrt.ArrayView<winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue>): Void;
     function First(): winrt.windows.foundation.collections.IIterator<winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue> /* GenericTypeInstSig */;
     function ToString(): winrt.HString;

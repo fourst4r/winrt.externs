@@ -8,6 +8,6 @@ package winrt.windows.gaming.input.custom;
 @:native("winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink")
 extern interface IGipGameControllerInputSink extends winrt.windows.foundation.IInspectable
 {
-    function OnKeyReceived(timestamp: UInt64, keyCode: UInt8, isPressed: Bool): Void;
-    function OnMessageReceived(timestamp: UInt64, messageClass: ConstRef<winrt.windows.gaming.input.custom.GipMessageClass>, messageId: UInt8, sequenceId: UInt8, messageBuffer: winrt.ArrayView<UInt8>): Void;
+    function OnKeyReceived(timestamp: #if reflaxe.cpp cxx.num. #else cpp. #end UInt64, keyCode: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, isPressed: Bool): Void;
+    function OnMessageReceived(timestamp: #if reflaxe.cpp cxx.num. #else cpp. #end UInt64, messageClass: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.gaming.input.custom.GipMessageClass>, messageId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, sequenceId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, messageBuffer: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): Void;
 }

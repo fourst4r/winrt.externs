@@ -8,6 +8,6 @@ package winrt.windows.devices.smartcards;
 @:native("winrt::Windows::Devices::SmartCards::ISmartCardEmulatorApduReceivedEventArgs2")
 extern interface ISmartCardEmulatorApduReceivedEventArgs2 extends winrt.windows.foundation.IInspectable
 {
-    overload function State(): UInt32;
-    function TryRespondAsync(responseApdu: ConstRef<winrt.windows.storage.streams.IBuffer>, nextState: ConstRef<winrt.windows.foundation.IReference<UInt32> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    overload function State(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function TryRespondAsync(responseApdu: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>, nextState: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

@@ -8,7 +8,7 @@ package winrt.windows.devices.midi;
 @:native("winrt::Windows::Devices::Midi::IMidiControlChangeMessage")
 extern interface IMidiControlChangeMessage extends winrt.windows.foundation.IInspectable
 {
-    overload function Channel(): UInt8;
-    overload function Controller(): UInt8;
-    overload function ControlValue(): UInt8;
+    overload function Channel(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function Controller(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function ControlValue(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
 }

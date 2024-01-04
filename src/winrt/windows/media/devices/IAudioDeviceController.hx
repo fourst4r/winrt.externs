@@ -10,6 +10,6 @@ extern interface IAudioDeviceController extends winrt.windows.foundation.IInspec
 {
     overload function Muted(value: Bool): Void;
     overload function Muted(): Bool;
-    overload function VolumePercent(value: Float32): Void;
-    overload function VolumePercent(): Float32;
+    overload function VolumePercent(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function VolumePercent(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
 }

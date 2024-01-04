@@ -9,5 +9,5 @@ package winrt.windows.networking.networkoperators;
 extern interface IMobileBroadbandAccountStatics extends winrt.windows.foundation.IInspectable
 {
     overload function AvailableNetworkAccountIds(): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
-    function CreateFromNetworkAccountId(networkAccountId: ConstRef<winrt.HString>): winrt.windows.networking.networkoperators.MobileBroadbandAccount;
+    function CreateFromNetworkAccountId(networkAccountId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.networking.networkoperators.MobileBroadbandAccount;
 }

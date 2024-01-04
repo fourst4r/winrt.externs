@@ -9,6 +9,6 @@ package winrt.windows.networking.vpn;
 extern class VpnInterfaceId
     implements winrt.windows.networking.vpn.IVpnInterfaceId
 {
-    /* explicit */ function new(address: winrt.ArrayView<UInt8>);
-    function GetAddressInfo(id: Ref<winrt.ComArray<UInt8>>): Void;
+    /* explicit */ function new(address: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>);
+    function GetAddressInfo(id: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>>): Void;
 }

@@ -21,8 +21,8 @@ extern interface IUriRuntimeClass extends winrt.windows.foundation.IInspectable
     overload function RawUri(): winrt.HString;
     overload function SchemeName(): winrt.HString;
     overload function UserName(): winrt.HString;
-    overload function Port(): Int32;
+    overload function Port(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function Suspicious(): Bool;
-    function Equals(pUri: ConstRef<winrt.windows.foundation.Uri>): Bool;
-    function CombineUri(relativeUri: ConstRef<winrt.HString>): winrt.windows.foundation.Uri;
+    function Equals(pUri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Bool;
+    function CombineUri(relativeUri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.Uri;
 }

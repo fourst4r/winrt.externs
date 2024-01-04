@@ -2,7 +2,7 @@ package winrt.windows.security.credentials.ui;
 
 @:include("winrt/Windows.Security.Credentials.UI.h", true)
 @:native("winrt::Windows::Security::Credentials::UI::AuthenticationProtocol")
-extern enum abstract AuthenticationProtocol(Int32)
+extern enum abstract AuthenticationProtocol(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Security::Credentials::UI::AuthenticationProtocol::Basic") final Basic;
     @:native("winrt::Windows::Security::Credentials::UI::AuthenticationProtocol::Digest") final Digest;

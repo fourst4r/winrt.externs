@@ -10,10 +10,10 @@ extern class SplitViewTemplateSettings
     extends winrt.windows.ui.xaml.DependencyObject
     implements winrt.windows.ui.xaml.controls.primitives.ISplitViewTemplateSettings
 {
-    overload function OpenPaneLength(): Float64;
-    overload function NegativeOpenPaneLength(): Float64;
-    overload function OpenPaneLengthMinusCompactLength(): Float64;
-    overload function NegativeOpenPaneLengthMinusCompactLength(): Float64;
+    overload function OpenPaneLength(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function NegativeOpenPaneLength(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function OpenPaneLengthMinusCompactLength(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function NegativeOpenPaneLengthMinusCompactLength(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function OpenPaneGridLength(): winrt.windows.ui.xaml.GridLength;
     overload function CompactPaneGridLength(): winrt.windows.ui.xaml.GridLength;
 }

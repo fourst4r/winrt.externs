@@ -9,8 +9,8 @@ package winrt.windows.devices.pointofservice;
 extern class BarcodeScannerReport
     implements winrt.windows.devices.pointofservice.IBarcodeScannerReport
 {
-    function new(scanDataType: UInt32, scanData: ConstRef<winrt.windows.storage.streams.IBuffer>, scanDataLabel: ConstRef<winrt.windows.storage.streams.IBuffer>);
-    overload function ScanDataType(): UInt32;
+    function new(scanDataType: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, scanData: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>, scanDataLabel: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>);
+    overload function ScanDataType(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function ScanData(): winrt.windows.storage.streams.IBuffer;
     overload function ScanDataLabel(): winrt.windows.storage.streams.IBuffer;
 }

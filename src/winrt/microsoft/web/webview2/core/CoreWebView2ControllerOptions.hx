@@ -11,9 +11,9 @@ extern class CoreWebView2ControllerOptions
     implements winrt.microsoft.web.webview2.core.ICoreWebView2ControllerOptions
 {
     overload function ScriptLocale(): winrt.HString;
-    overload function ScriptLocale(value: ConstRef<winrt.HString>): Void;
+    overload function ScriptLocale(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function ProfileName(): winrt.HString;
-    overload function ProfileName(value: ConstRef<winrt.HString>): Void;
+    overload function ProfileName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function IsInPrivateModeEnabled(): Bool;
     overload function IsInPrivateModeEnabled(value: Bool): Void;
 }

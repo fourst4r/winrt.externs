@@ -2,7 +2,7 @@ package winrt.windows.gaming.input.forcefeedback;
 
 @:include("winrt/Windows.Gaming.Input.ForceFeedback.h", true)
 @:native("winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackLoadEffectResult")
-extern enum abstract ForceFeedbackLoadEffectResult(Int32)
+extern enum abstract ForceFeedbackLoadEffectResult(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackLoadEffectResult::Succeeded") final Succeeded;
     @:native("winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackLoadEffectResult::EffectStorageFull") final EffectStorageFull;

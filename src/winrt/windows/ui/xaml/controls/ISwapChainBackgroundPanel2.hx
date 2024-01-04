@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::ISwapChainBackgroundPanel2")
 extern interface ISwapChainBackgroundPanel2 extends winrt.windows.foundation.IInspectable
 {
-    function CreateCoreIndependentInputSource(deviceTypes: ConstRef<winrt.windows.ui.core.CoreInputDeviceTypes>): winrt.windows.ui.core.CoreIndependentInputSource;
+    function CreateCoreIndependentInputSource(deviceTypes: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.CoreInputDeviceTypes>): winrt.windows.ui.core.CoreIndependentInputSource;
 }

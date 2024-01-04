@@ -8,6 +8,6 @@ package winrt.windows.system.diagnostics;
 @:native("winrt::Windows::System::Diagnostics::ISystemDiagnosticInfoStatics2")
 extern interface ISystemDiagnosticInfoStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function IsArchitectureSupported(type: ConstRef<winrt.windows.system.ProcessorArchitecture>): Bool;
+    function IsArchitectureSupported(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.ProcessorArchitecture>): Bool;
     overload function PreferredArchitecture(): winrt.windows.system.ProcessorArchitecture;
 }

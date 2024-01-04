@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.media;
 extern interface IRectangleGeometry extends winrt.windows.foundation.IInspectable
 {
     overload function Rect(): winrt.windows.foundation.Rect;
-    overload function Rect(value: ConstRef<winrt.windows.foundation.Rect>): Void;
+    overload function Rect(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Rect>): Void;
 }

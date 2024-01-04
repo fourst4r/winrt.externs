@@ -10,7 +10,7 @@ extern interface IVibrationDeviceStatics extends winrt.windows.foundation.IInspe
 {
     function RequestAccessAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.haptics.VibrationAccessStatus> /* GenericTypeInstSig */;
     function GetDeviceSelector(): winrt.HString;
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.haptics.VibrationDevice> /* GenericTypeInstSig */;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.haptics.VibrationDevice> /* GenericTypeInstSig */;
     function GetDefaultAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.haptics.VibrationDevice> /* GenericTypeInstSig */;
     function FindAllAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.haptics.VibrationDevice> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
 }

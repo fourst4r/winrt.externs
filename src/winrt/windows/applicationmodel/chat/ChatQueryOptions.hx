@@ -11,5 +11,5 @@ extern class ChatQueryOptions
 {
     function new();
     overload function SearchString(): winrt.HString;
-    overload function SearchString(value: ConstRef<winrt.HString>): Void;
+    overload function SearchString(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

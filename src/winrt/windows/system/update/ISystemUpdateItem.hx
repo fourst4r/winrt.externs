@@ -12,8 +12,8 @@ extern interface ISystemUpdateItem extends winrt.windows.foundation.IInspectable
     overload function Title(): winrt.HString;
     overload function Description(): winrt.HString;
     overload function Id(): winrt.HString;
-    overload function Revision(): UInt32;
-    overload function DownloadProgress(): Float64;
-    overload function InstallProgress(): Float64;
+    overload function Revision(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function DownloadProgress(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function InstallProgress(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function ExtendedError(): winrt.HResult;
 }

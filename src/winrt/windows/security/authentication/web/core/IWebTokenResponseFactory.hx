@@ -8,7 +8,7 @@ package winrt.windows.security.authentication.web.core;
 @:native("winrt::Windows::Security::Authentication::Web::Core::IWebTokenResponseFactory")
 extern interface IWebTokenResponseFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWithToken(token: ConstRef<winrt.HString>): winrt.windows.security.authentication.web.core.WebTokenResponse;
-    function CreateWithTokenAndAccount(token: ConstRef<winrt.HString>, webAccount: ConstRef<winrt.windows.security.credentials.WebAccount>): winrt.windows.security.authentication.web.core.WebTokenResponse;
-    function CreateWithTokenAccountAndError(token: ConstRef<winrt.HString>, webAccount: ConstRef<winrt.windows.security.credentials.WebAccount>, error: ConstRef<winrt.windows.security.authentication.web.core.WebProviderError>): winrt.windows.security.authentication.web.core.WebTokenResponse;
+    function CreateWithToken(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.security.authentication.web.core.WebTokenResponse;
+    function CreateWithTokenAndAccount(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, webAccount: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.WebAccount>): winrt.windows.security.authentication.web.core.WebTokenResponse;
+    function CreateWithTokenAccountAndError(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, webAccount: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.WebAccount>, error: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.authentication.web.core.WebProviderError>): winrt.windows.security.authentication.web.core.WebTokenResponse;
 }

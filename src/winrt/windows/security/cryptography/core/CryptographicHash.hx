@@ -9,6 +9,6 @@ package winrt.windows.security.cryptography.core;
 extern class CryptographicHash
     implements winrt.windows.security.cryptography.core.IHashComputation
 {
-    function Append(data: ConstRef<winrt.windows.storage.streams.IBuffer>): Void;
+    function Append(data: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): Void;
     function GetValueAndReset(): winrt.windows.storage.streams.IBuffer;
 }

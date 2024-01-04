@@ -9,7 +9,7 @@ package winrt.microsoft.ui.xaml.controls;
 extern class ScrollViewerView
     implements winrt.microsoft.ui.xaml.controls.IScrollViewerView
 {
-    overload function HorizontalOffset(): Float64;
-    overload function VerticalOffset(): Float64;
-    overload function ZoomFactor(): Float32;
+    overload function HorizontalOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function VerticalOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ZoomFactor(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
 }

@@ -11,8 +11,8 @@ extern class AudioNodeEmitterShape
 {
     overload function Kind(): winrt.windows.media.audio.AudioNodeEmitterShapeKind;
     overload function ConeProperties(): winrt.windows.media.audio.AudioNodeEmitterConeProperties;
-    function CreateCone(innerAngle: Float64, outerAngle: Float64, outerAngleGain: Float64): winrt.windows.media.audio.AudioNodeEmitterShape;
+    function CreateCone(innerAngle: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, outerAngle: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, outerAngleGain: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.windows.media.audio.AudioNodeEmitterShape;
     function CreateOmnidirectional(): winrt.windows.media.audio.AudioNodeEmitterShape;
-    static function CreateCone(innerAngle: Float64, outerAngle: Float64, outerAngleGain: Float64): winrt.windows.media.audio.AudioNodeEmitterShape;
+    static function CreateCone(innerAngle: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, outerAngle: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, outerAngleGain: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.windows.media.audio.AudioNodeEmitterShape;
     static function CreateOmnidirectional(): winrt.windows.media.audio.AudioNodeEmitterShape;
 }

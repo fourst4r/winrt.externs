@@ -10,5 +10,5 @@ extern class MenuFlyoutPresenterTemplateSettings
     extends winrt.microsoft.ui.xaml.DependencyObject
     implements winrt.microsoft.ui.xaml.controls.primitives.IMenuFlyoutPresenterTemplateSettings
 {
-    overload function FlyoutContentMinWidth(): Float64;
+    overload function FlyoutContentMinWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

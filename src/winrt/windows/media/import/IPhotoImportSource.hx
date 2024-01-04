@@ -18,7 +18,7 @@ extern interface IPhotoImportSource extends winrt.windows.foundation.IInspectabl
     overload function ConnectionTransport(): winrt.windows.media.import.PhotoImportConnectionTransport;
     overload function Type(): winrt.windows.media.import.PhotoImportSourceType;
     overload function PowerSource(): winrt.windows.media.import.PhotoImportPowerSource;
-    overload function BatteryLevelPercent(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
+    overload function BatteryLevelPercent(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
     overload function DateTime(): winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* GenericTypeInstSig */;
     overload function StorageMedia(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.import.PhotoImportStorageMedium> /* GenericTypeInstSig */;
     overload function IsLocked(): winrt.windows.foundation.IReference<Bool> /* GenericTypeInstSig */;

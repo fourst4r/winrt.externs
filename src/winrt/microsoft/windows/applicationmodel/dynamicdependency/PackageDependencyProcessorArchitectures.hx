@@ -2,7 +2,7 @@ package winrt.microsoft.windows.applicationmodel.dynamicdependency;
 
 @:include("winrt/Microsoft.Windows.ApplicationModel.DynamicDependency.h", true)
 @:native("winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyProcessorArchitectures")
-extern enum abstract PackageDependencyProcessorArchitectures(UInt32)
+extern enum abstract PackageDependencyProcessorArchitectures(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyProcessorArchitectures::None") final None;
     @:native("winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyProcessorArchitectures::Neutral") final Neutral;

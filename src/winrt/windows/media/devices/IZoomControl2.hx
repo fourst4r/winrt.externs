@@ -10,5 +10,5 @@ extern interface IZoomControl2 extends winrt.windows.foundation.IInspectable
 {
     overload function SupportedModes(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.devices.ZoomTransitionMode> /* GenericTypeInstSig */;
     overload function Mode(): winrt.windows.media.devices.ZoomTransitionMode;
-    function Configure(settings: ConstRef<winrt.windows.media.devices.ZoomSettings>): Void;
+    function Configure(settings: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.ZoomSettings>): Void;
 }

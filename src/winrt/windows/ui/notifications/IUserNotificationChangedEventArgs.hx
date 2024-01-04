@@ -9,5 +9,5 @@ package winrt.windows.ui.notifications;
 extern interface IUserNotificationChangedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function ChangeKind(): winrt.windows.ui.notifications.UserNotificationChangedKind;
-    overload function UserNotificationId(): UInt32;
+    overload function UserNotificationId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

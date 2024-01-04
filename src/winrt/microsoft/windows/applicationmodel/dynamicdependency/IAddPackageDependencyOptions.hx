@@ -8,8 +8,8 @@ package winrt.microsoft.windows.applicationmodel.dynamicdependency;
 @:native("winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::IAddPackageDependencyOptions")
 extern interface IAddPackageDependencyOptions extends winrt.windows.foundation.IInspectable
 {
-    overload function Rank(): Int32;
-    overload function Rank(value: Int32): Void;
+    overload function Rank(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Rank(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function PrependIfRankCollision(): Bool;
     overload function PrependIfRankCollision(value: Bool): Void;
 }

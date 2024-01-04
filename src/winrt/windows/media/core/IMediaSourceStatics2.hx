@@ -8,5 +8,5 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::IMediaSourceStatics2")
 extern interface IMediaSourceStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function CreateFromMediaBinder(binder: ConstRef<winrt.windows.media.core.MediaBinder>): winrt.windows.media.core.MediaSource;
+    function CreateFromMediaBinder(binder: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.MediaBinder>): winrt.windows.media.core.MediaSource;
 }

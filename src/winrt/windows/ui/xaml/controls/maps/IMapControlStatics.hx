@@ -27,9 +27,9 @@ extern interface IMapControlStatics extends winrt.windows.foundation.IInspectabl
     overload function RoutesProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function TileSourcesProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function LocationProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetLocation(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>): winrt.windows.devices.geolocation.Geopoint;
-    function SetLocation(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>, value: ConstRef<winrt.windows.devices.geolocation.Geopoint>): Void;
+    function GetLocation(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): winrt.windows.devices.geolocation.Geopoint;
+    function SetLocation(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.geolocation.Geopoint>): Void;
     overload function NormalizedAnchorPointProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetNormalizedAnchorPoint(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>): winrt.windows.foundation.Point;
-    function SetNormalizedAnchorPoint(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>, value: ConstRef<winrt.windows.foundation.Point>): Void;
+    function GetNormalizedAnchorPoint(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): winrt.windows.foundation.Point;
+    function SetNormalizedAnchorPoint(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
 }

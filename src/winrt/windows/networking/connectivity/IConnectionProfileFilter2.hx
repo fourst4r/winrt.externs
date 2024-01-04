@@ -8,11 +8,11 @@ package winrt.windows.networking.connectivity;
 @:native("winrt::Windows::Networking::Connectivity::IConnectionProfileFilter2")
 extern interface IConnectionProfileFilter2 extends winrt.windows.foundation.IInspectable
 {
-    overload function IsRoaming(value: ConstRef<winrt.windows.foundation.IReference<Bool> /* temp_GenericTypeInstSig */>): Void;
+    overload function IsRoaming(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<Bool> /* temp_GenericTypeInstSig */>): Void;
     overload function IsRoaming(): winrt.windows.foundation.IReference<Bool> /* GenericTypeInstSig */;
-    overload function IsOverDataLimit(value: ConstRef<winrt.windows.foundation.IReference<Bool> /* temp_GenericTypeInstSig */>): Void;
+    overload function IsOverDataLimit(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<Bool> /* temp_GenericTypeInstSig */>): Void;
     overload function IsOverDataLimit(): winrt.windows.foundation.IReference<Bool> /* GenericTypeInstSig */;
-    overload function IsBackgroundDataUsageRestricted(value: ConstRef<winrt.windows.foundation.IReference<Bool> /* temp_GenericTypeInstSig */>): Void;
+    overload function IsBackgroundDataUsageRestricted(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<Bool> /* temp_GenericTypeInstSig */>): Void;
     overload function IsBackgroundDataUsageRestricted(): winrt.windows.foundation.IReference<Bool> /* GenericTypeInstSig */;
     overload function RawData(): winrt.windows.storage.streams.IBuffer;
 }

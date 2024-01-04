@@ -2,7 +2,7 @@ package winrt.windows.networking.networkoperators;
 
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotState")
-extern enum abstract MobileBroadbandSlotState(Int32)
+extern enum abstract MobileBroadbandSlotState(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotState::Unmanaged") final Unmanaged;
     @:native("winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotState::Unknown") final Unknown;

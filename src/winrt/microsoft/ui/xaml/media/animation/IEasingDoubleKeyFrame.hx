@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.media.animation;
 extern interface IEasingDoubleKeyFrame extends winrt.windows.foundation.IInspectable
 {
     overload function EasingFunction(): winrt.microsoft.ui.xaml.media.animation.EasingFunctionBase;
-    overload function EasingFunction(value: ConstRef<winrt.microsoft.ui.xaml.media.animation.EasingFunctionBase>): Void;
+    overload function EasingFunction(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.animation.EasingFunctionBase>): Void;
 }

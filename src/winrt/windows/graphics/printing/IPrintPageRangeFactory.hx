@@ -8,6 +8,6 @@ package winrt.windows.graphics.printing;
 @:native("winrt::Windows::Graphics::Printing::IPrintPageRangeFactory")
 extern interface IPrintPageRangeFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(firstPage: Int32, lastPage: Int32): winrt.windows.graphics.printing.PrintPageRange;
-    function CreateWithSinglePage(page: Int32): winrt.windows.graphics.printing.PrintPageRange;
+    function Create(firstPage: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, lastPage: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.graphics.printing.PrintPageRange;
+    function CreateWithSinglePage(page: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.graphics.printing.PrintPageRange;
 }

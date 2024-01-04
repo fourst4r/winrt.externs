@@ -8,6 +8,6 @@ package winrt.windows.ui.input;
 @:native("winrt::Windows::UI::Input::IManipulationCompletedEventArgs2")
 extern interface IManipulationCompletedEventArgs2 extends winrt.windows.foundation.IInspectable
 {
-    overload function ContactCount(): UInt32;
-    overload function CurrentContactCount(): UInt32;
+    overload function ContactCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function CurrentContactCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

@@ -10,8 +10,8 @@ extern class CompositionCommitBatch
     extends winrt.microsoft.ui.composition.CompositionObject
     implements winrt.microsoft.ui.composition.ICompositionCommitBatch
 {
-    overload function Completed(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.foundation.IInspectable, winrt.microsoft.ui.composition.CompositionBatchCompletedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    overload function Completed(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.foundation.IInspectable, winrt.microsoft.ui.composition.CompositionBatchCompletedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
     overload function IsActive(): Bool;
     overload function IsEnded(): Bool;
-    @:noExcept overload function Completed(token: ConstRef<winrt.EventToken>): Void;
+    @:noExcept overload function Completed(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

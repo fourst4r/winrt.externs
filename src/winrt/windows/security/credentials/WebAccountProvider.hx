@@ -12,7 +12,7 @@ extern class WebAccountProvider
     implements winrt.windows.security.credentials.IWebAccountProvider3
     implements winrt.windows.security.credentials.IWebAccountProvider4
 {
-    function new(id: ConstRef<winrt.HString>, displayName: ConstRef<winrt.HString>, iconUri: ConstRef<winrt.windows.foundation.Uri>);
+    function new(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, displayName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, iconUri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>);
     overload function Id(): winrt.HString;
     overload function DisplayName(): winrt.HString;
     overload function IconUri(): winrt.windows.foundation.Uri;

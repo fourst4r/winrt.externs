@@ -9,6 +9,6 @@ package winrt.windows.applicationmodel.userdataaccounts;
 extern class UserDataAccountManagerForUser
     implements winrt.windows.applicationmodel.userdataaccounts.IUserDataAccountManagerForUser
 {
-    function RequestStoreAsync(storeAccessType: ConstRef<winrt.windows.applicationmodel.userdataaccounts.UserDataAccountStoreAccessType>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.userdataaccounts.UserDataAccountStore> /* GenericTypeInstSig */;
+    function RequestStoreAsync(storeAccessType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.userdataaccounts.UserDataAccountStoreAccessType>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.userdataaccounts.UserDataAccountStore> /* GenericTypeInstSig */;
     overload function User(): winrt.windows.system.User;
 }

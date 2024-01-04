@@ -8,7 +8,7 @@ package winrt.windows.media.protection.playready;
 @:native("winrt::Windows::Media::Protection::PlayReady::IPlayReadySoapMessage")
 extern interface IPlayReadySoapMessage extends winrt.windows.foundation.IInspectable
 {
-    function GetMessageBody(): winrt.ComArray<UInt8>;
+    function GetMessageBody(): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
     overload function MessageHeaders(): winrt.windows.foundation.collections.IPropertySet;
     overload function Uri(): winrt.windows.foundation.Uri;
 }

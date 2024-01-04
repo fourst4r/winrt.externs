@@ -10,10 +10,10 @@ extern class CompositionGeometry
     extends winrt.microsoft.ui.composition.CompositionObject
     implements winrt.microsoft.ui.composition.ICompositionGeometry
 {
-    overload function TrimEnd(value: Float32): Void;
-    overload function TrimOffset(value: Float32): Void;
-    overload function TrimEnd(): Float32;
-    overload function TrimStart(value: Float32): Void;
-    overload function TrimOffset(): Float32;
-    overload function TrimStart(): Float32;
+    overload function TrimEnd(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function TrimOffset(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function TrimEnd(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function TrimStart(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function TrimOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function TrimStart(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
 }

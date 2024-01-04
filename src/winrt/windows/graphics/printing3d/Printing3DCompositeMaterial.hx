@@ -10,5 +10,5 @@ extern class Printing3DCompositeMaterial
     implements winrt.windows.graphics.printing3d.IPrinting3DCompositeMaterial
 {
     function new();
-    overload function Values(): winrt.windows.foundation.collections.IVector<Float64> /* GenericTypeInstSig */;
+    overload function Values(): winrt.windows.foundation.collections.IVector<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
 }

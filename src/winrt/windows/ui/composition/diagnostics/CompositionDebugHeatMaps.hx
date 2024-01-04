@@ -9,8 +9,8 @@ package winrt.windows.ui.composition.diagnostics;
 extern class CompositionDebugHeatMaps
     implements winrt.windows.ui.composition.diagnostics.ICompositionDebugHeatMaps
 {
-    function Hide(subtree: ConstRef<winrt.windows.ui.composition.Visual>): Void;
-    function ShowMemoryUsage(subtree: ConstRef<winrt.windows.ui.composition.Visual>): Void;
-    function ShowOverdraw(subtree: ConstRef<winrt.windows.ui.composition.Visual>, contentKinds: ConstRef<winrt.windows.ui.composition.diagnostics.CompositionDebugOverdrawContentKinds>): Void;
-    function ShowRedraw(subtree: ConstRef<winrt.windows.ui.composition.Visual>): Void;
+    function Hide(subtree: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Visual>): Void;
+    function ShowMemoryUsage(subtree: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Visual>): Void;
+    function ShowOverdraw(subtree: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Visual>, contentKinds: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.diagnostics.CompositionDebugOverdrawContentKinds>): Void;
+    function ShowRedraw(subtree: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Visual>): Void;
 }

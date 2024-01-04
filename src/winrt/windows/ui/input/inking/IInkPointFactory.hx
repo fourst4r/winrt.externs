@@ -8,5 +8,5 @@ package winrt.windows.ui.input.inking;
 @:native("winrt::Windows::UI::Input::Inking::IInkPointFactory")
 extern interface IInkPointFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInkPoint(position: ConstRef<winrt.windows.foundation.Point>, pressure: Float32): winrt.windows.ui.input.inking.InkPoint;
+    function CreateInkPoint(position: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>, pressure: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): winrt.windows.ui.input.inking.InkPoint;
 }

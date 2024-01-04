@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.controls;
 
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::SnapPointsType")
-extern enum abstract SnapPointsType(Int32)
+extern enum abstract SnapPointsType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Controls::SnapPointsType::None") final None;
     @:native("winrt::Windows::UI::Xaml::Controls::SnapPointsType::Optional") final Optional;

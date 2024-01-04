@@ -13,12 +13,12 @@ extern class VibrationDevice
     overload function SimpleHapticsController(): winrt.windows.devices.haptics.SimpleHapticsController;
     function RequestAccessAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.haptics.VibrationAccessStatus> /* GenericTypeInstSig */;
     function GetDeviceSelector(): winrt.HString;
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.haptics.VibrationDevice> /* GenericTypeInstSig */;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.haptics.VibrationDevice> /* GenericTypeInstSig */;
     function GetDefaultAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.haptics.VibrationDevice> /* GenericTypeInstSig */;
     function FindAllAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.haptics.VibrationDevice> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
     static function RequestAccessAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.haptics.VibrationAccessStatus> /* GenericTypeInstSig */;
     static function GetDeviceSelector(): winrt.HString;
-    static function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.haptics.VibrationDevice> /* GenericTypeInstSig */;
+    static function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.haptics.VibrationDevice> /* GenericTypeInstSig */;
     static function GetDefaultAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.haptics.VibrationDevice> /* GenericTypeInstSig */;
     static function FindAllAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.haptics.VibrationDevice> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
 }

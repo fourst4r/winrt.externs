@@ -12,7 +12,7 @@ extern class LayoutContext
     implements winrt.microsoft.ui.xaml.controls.ILayoutContextOverrides
 {
     overload function LayoutState(): winrt.windows.foundation.IInspectable;
-    overload function LayoutState(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function LayoutState(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
     overload function LayoutStateCore(): winrt.windows.foundation.IInspectable;
-    overload function LayoutStateCore(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function LayoutStateCore(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
 }

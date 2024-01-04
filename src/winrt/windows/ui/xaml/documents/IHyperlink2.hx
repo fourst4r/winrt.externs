@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.documents;
 extern interface IHyperlink2 extends winrt.windows.foundation.IInspectable
 {
     overload function UnderlineStyle(): winrt.windows.ui.xaml.documents.UnderlineStyle;
-    overload function UnderlineStyle(value: ConstRef<winrt.windows.ui.xaml.documents.UnderlineStyle>): Void;
+    overload function UnderlineStyle(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.documents.UnderlineStyle>): Void;
 }

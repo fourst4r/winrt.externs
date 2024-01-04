@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.background;
 @:native("winrt::Windows::ApplicationModel::Background::ICustomSystemEventTriggerFactory")
 extern interface ICustomSystemEventTriggerFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(triggerId: ConstRef<winrt.HString>, recurrence: ConstRef<winrt.windows.applicationmodel.background.CustomSystemEventTriggerRecurrence>): winrt.windows.applicationmodel.background.CustomSystemEventTrigger;
+    function Create(triggerId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, recurrence: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.background.CustomSystemEventTriggerRecurrence>): winrt.windows.applicationmodel.background.CustomSystemEventTrigger;
 }

@@ -8,5 +8,5 @@ package winrt.windows.storage.streams;
 @:native("winrt::Windows::Storage::Streams::IDataReaderStatics")
 extern interface IDataReaderStatics extends winrt.windows.foundation.IInspectable
 {
-    function FromBuffer(buffer: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.storage.streams.DataReader;
+    function FromBuffer(buffer: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.storage.streams.DataReader;
 }

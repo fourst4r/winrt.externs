@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml;
 @:native("winrt::Windows::UI::Xaml::IFrameworkElementStatics5")
 extern interface IFrameworkElementStatics5 extends winrt.windows.foundation.IInspectable
 {
-    function DeferTree(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>): Void;
+    function DeferTree(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): Void;
 }

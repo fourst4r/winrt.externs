@@ -8,6 +8,6 @@ package winrt.windows.applicationmodel.store.preview;
 @:native("winrt::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics2")
 extern interface IStoreConfigurationStatics2 extends winrt.windows.foundation.IInspectable
 {
-    overload function PurchasePromptingPolicy(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
-    overload function PurchasePromptingPolicy(value: ConstRef<winrt.windows.foundation.IReference<UInt32> /* temp_GenericTypeInstSig */>): Void;
+    overload function PurchasePromptingPolicy(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
+    overload function PurchasePromptingPolicy(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* temp_GenericTypeInstSig */>): Void;
 }

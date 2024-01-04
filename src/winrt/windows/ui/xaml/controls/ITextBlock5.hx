@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface ITextBlock5 extends winrt.windows.foundation.IInspectable
 {
     overload function TextDecorations(): winrt.windows.ui.text.TextDecorations;
-    overload function TextDecorations(value: ConstRef<winrt.windows.ui.text.TextDecorations>): Void;
+    overload function TextDecorations(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.text.TextDecorations>): Void;
 }

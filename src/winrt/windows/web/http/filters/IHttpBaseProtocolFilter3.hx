@@ -9,5 +9,5 @@ package winrt.windows.web.http.filters;
 extern interface IHttpBaseProtocolFilter3 extends winrt.windows.foundation.IInspectable
 {
     overload function CookieUsageBehavior(): winrt.windows.web.http.filters.HttpCookieUsageBehavior;
-    overload function CookieUsageBehavior(value: ConstRef<winrt.windows.web.http.filters.HttpCookieUsageBehavior>): Void;
+    overload function CookieUsageBehavior(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.filters.HttpCookieUsageBehavior>): Void;
 }

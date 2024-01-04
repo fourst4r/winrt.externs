@@ -12,7 +12,7 @@ extern class PolyBezierSegment
 {
     function new();
     overload function Points(): winrt.windows.ui.xaml.media.PointCollection;
-    overload function Points(value: ConstRef<winrt.windows.ui.xaml.media.PointCollection>): Void;
+    overload function Points(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.PointCollection>): Void;
     overload function PointsProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function PointsProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

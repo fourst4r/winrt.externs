@@ -11,6 +11,6 @@ extern class UsbInterruptInPipe
 {
     overload function EndpointDescriptor(): winrt.windows.devices.usb.UsbInterruptInEndpointDescriptor;
     function ClearStallAsync(): winrt.windows.foundation.IAsyncAction;
-    overload function DataReceived(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.usb.UsbInterruptInPipe, winrt.windows.devices.usb.UsbInterruptInEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function DataReceived(token: ConstRef<winrt.EventToken>): Void;
+    overload function DataReceived(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.usb.UsbInterruptInPipe, winrt.windows.devices.usb.UsbInterruptInEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function DataReceived(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

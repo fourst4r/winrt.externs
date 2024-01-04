@@ -9,5 +9,5 @@ package winrt.microsoft.web.webview2.core;
 extern interface ICoreWebView2Controller2 extends winrt.windows.foundation.IInspectable
 {
     overload function DefaultBackgroundColor(): winrt.windows.ui.Color;
-    overload function DefaultBackgroundColor(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function DefaultBackgroundColor(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
 }

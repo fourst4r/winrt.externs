@@ -9,7 +9,7 @@ package winrt.windows.devices.printers;
 extern class IppTextWithLanguage
     implements winrt.windows.devices.printers.IIppTextWithLanguage
 {
-    function new(language: ConstRef<winrt.HString>, text: ConstRef<winrt.HString>);
+    function new(language: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, text: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     overload function Language(): winrt.HString;
     overload function Value(): winrt.HString;
 }

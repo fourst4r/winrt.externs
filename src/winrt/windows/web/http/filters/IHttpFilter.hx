@@ -8,5 +8,5 @@ package winrt.windows.web.http.filters;
 @:native("winrt::Windows::Web::Http::Filters::IHttpFilter")
 extern interface IHttpFilter extends winrt.windows.foundation.IInspectable
 {
-    function SendRequestAsync(request: ConstRef<winrt.windows.web.http.HttpRequestMessage>): winrt.windows.foundation.IAsyncOperationWithProgress<winrt.windows.web.http.HttpResponseMessage, winrt.windows.web.http.HttpProgress> /* GenericTypeInstSig */;
+    function SendRequestAsync(request: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.HttpRequestMessage>): winrt.windows.foundation.IAsyncOperationWithProgress<winrt.windows.web.http.HttpResponseMessage, winrt.windows.web.http.HttpProgress> /* GenericTypeInstSig */;
 }

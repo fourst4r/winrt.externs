@@ -9,5 +9,5 @@ package winrt.windows.devices.sensors;
 extern interface IBarometerReading extends winrt.windows.foundation.IInspectable
 {
     overload function Timestamp(): winrt.windows.foundation.DateTime;
-    overload function StationPressureInHectopascals(): Float64;
+    overload function StationPressureInHectopascals(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

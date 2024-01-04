@@ -8,5 +8,5 @@ package winrt.windows.storage.provider;
 @:native("winrt::Windows::Storage::Provider::IStorageProviderFileTypeInfoFactory")
 extern interface IStorageProviderFileTypeInfoFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(fileExtension: ConstRef<winrt.HString>, iconResource: ConstRef<winrt.HString>): winrt.windows.storage.provider.StorageProviderFileTypeInfo;
+    function CreateInstance(fileExtension: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, iconResource: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.storage.provider.StorageProviderFileTypeInfo;
 }

@@ -8,5 +8,5 @@ package winrt.microsoft.ui.composition.diagnostics;
 @:native("winrt::Microsoft::UI::Composition::Diagnostics::ICompositionDebugSettingsStatics")
 extern interface ICompositionDebugSettingsStatics extends winrt.windows.foundation.IInspectable
 {
-    function TryGetSettings(compositor: ConstRef<winrt.microsoft.ui.composition.Compositor>): winrt.microsoft.ui.composition.diagnostics.CompositionDebugSettings;
+    function TryGetSettings(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.Compositor>): winrt.microsoft.ui.composition.diagnostics.CompositionDebugSettings;
 }

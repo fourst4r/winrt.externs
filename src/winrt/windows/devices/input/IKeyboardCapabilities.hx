@@ -8,5 +8,5 @@ package winrt.windows.devices.input;
 @:native("winrt::Windows::Devices::Input::IKeyboardCapabilities")
 extern interface IKeyboardCapabilities extends winrt.windows.foundation.IInspectable
 {
-    overload function KeyboardPresent(): Int32;
+    overload function KeyboardPresent(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

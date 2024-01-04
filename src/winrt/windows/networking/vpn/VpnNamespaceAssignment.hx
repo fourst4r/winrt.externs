@@ -10,8 +10,8 @@ extern class VpnNamespaceAssignment
     implements winrt.windows.networking.vpn.IVpnNamespaceAssignment
 {
     function new();
-    overload function NamespaceList(value: ConstRef<winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnNamespaceInfo> /* temp_GenericTypeInstSig */>): Void;
+    overload function NamespaceList(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnNamespaceInfo> /* temp_GenericTypeInstSig */>): Void;
     overload function NamespaceList(): winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnNamespaceInfo> /* GenericTypeInstSig */;
-    overload function ProxyAutoConfigUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function ProxyAutoConfigUri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function ProxyAutoConfigUri(): winrt.windows.foundation.Uri;
 }

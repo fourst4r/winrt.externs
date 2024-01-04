@@ -8,8 +8,8 @@ package winrt.windows.media.audio;
 @:native("winrt::Windows::Media::Audio::ILimiterEffectDefinition")
 extern interface ILimiterEffectDefinition extends winrt.windows.foundation.IInspectable
 {
-    overload function Release(value: UInt32): Void;
-    overload function Release(): UInt32;
-    overload function Loudness(value: UInt32): Void;
-    overload function Loudness(): UInt32;
+    overload function Release(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function Release(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Loudness(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function Loudness(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

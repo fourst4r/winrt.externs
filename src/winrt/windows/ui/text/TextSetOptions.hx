@@ -2,7 +2,7 @@ package winrt.windows.ui.text;
 
 @:include("winrt/Windows.UI.Text.h", true)
 @:native("winrt::Windows::UI::Text::TextSetOptions")
-extern enum abstract TextSetOptions(UInt32)
+extern enum abstract TextSetOptions(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::UI::Text::TextSetOptions::None") final None;
     @:native("winrt::Windows::UI::Text::TextSetOptions::UnicodeBidi") final UnicodeBidi;

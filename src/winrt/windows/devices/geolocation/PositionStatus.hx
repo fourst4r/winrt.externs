@@ -2,7 +2,7 @@ package winrt.windows.devices.geolocation;
 
 @:include("winrt/Windows.Devices.Geolocation.h", true)
 @:native("winrt::Windows::Devices::Geolocation::PositionStatus")
-extern enum abstract PositionStatus(Int32)
+extern enum abstract PositionStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::Geolocation::PositionStatus::Ready") final Ready;
     @:native("winrt::Windows::Devices::Geolocation::PositionStatus::Initializing") final Initializing;

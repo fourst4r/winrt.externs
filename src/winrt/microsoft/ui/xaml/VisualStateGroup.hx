@@ -15,8 +15,8 @@ extern class VisualStateGroup
     overload function Transitions(): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.xaml.VisualTransition> /* GenericTypeInstSig */;
     overload function States(): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.xaml.VisualState> /* GenericTypeInstSig */;
     overload function CurrentState(): winrt.microsoft.ui.xaml.VisualState;
-    overload function CurrentStateChanged(handler: ConstRef<winrt.microsoft.ui.xaml.VisualStateChangedEventHandler>): winrt.EventToken;
-    @:noExcept overload function CurrentStateChanged(token: ConstRef<winrt.EventToken>): Void;
-    overload function CurrentStateChanging(handler: ConstRef<winrt.microsoft.ui.xaml.VisualStateChangedEventHandler>): winrt.EventToken;
-    @:noExcept overload function CurrentStateChanging(token: ConstRef<winrt.EventToken>): Void;
+    overload function CurrentStateChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.VisualStateChangedEventHandler>): winrt.EventToken;
+    @:noExcept overload function CurrentStateChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function CurrentStateChanging(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.VisualStateChangedEventHandler>): winrt.EventToken;
+    @:noExcept overload function CurrentStateChanging(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

@@ -10,5 +10,5 @@ extern class NDStorageFileHelper
     implements winrt.windows.media.protection.playready.INDStorageFileHelper
 {
     function new();
-    function GetFileURLs(file: ConstRef<winrt.windows.storage.IStorageFile>): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
+    function GetFileURLs(file: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.IStorageFile>): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
 }

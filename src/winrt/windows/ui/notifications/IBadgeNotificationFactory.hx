@@ -8,5 +8,5 @@ package winrt.windows.ui.notifications;
 @:native("winrt::Windows::UI::Notifications::IBadgeNotificationFactory")
 extern interface IBadgeNotificationFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateBadgeNotification(content: ConstRef<winrt.windows.data.xml.dom.XmlDocument>): winrt.windows.ui.notifications.BadgeNotification;
+    function CreateBadgeNotification(content: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.data.xml.dom.XmlDocument>): winrt.windows.ui.notifications.BadgeNotification;
 }

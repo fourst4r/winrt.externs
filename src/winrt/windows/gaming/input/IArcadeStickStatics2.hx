@@ -8,5 +8,5 @@ package winrt.windows.gaming.input;
 @:native("winrt::Windows::Gaming::Input::IArcadeStickStatics2")
 extern interface IArcadeStickStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function FromGameController(gameController: ConstRef<winrt.windows.gaming.input.IGameController>): winrt.windows.gaming.input.ArcadeStick;
+    function FromGameController(gameController: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.gaming.input.IGameController>): winrt.windows.gaming.input.ArcadeStick;
 }

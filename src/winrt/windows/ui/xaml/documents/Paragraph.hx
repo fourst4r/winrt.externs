@@ -12,8 +12,8 @@ extern class Paragraph
 {
     function new();
     overload function Inlines(): winrt.windows.ui.xaml.documents.InlineCollection;
-    overload function TextIndent(): Float64;
-    overload function TextIndent(value: Float64): Void;
+    overload function TextIndent(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function TextIndent(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function TextIndentProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function TextIndentProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

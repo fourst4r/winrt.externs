@@ -9,5 +9,5 @@ package winrt.windows.devices.bluetooth.background;
 extern interface IRfcommOutboundConnectionInformation extends winrt.windows.foundation.IInspectable
 {
     overload function RemoteServiceId(): winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId;
-    overload function RemoteServiceId(value: ConstRef<winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId>): Void;
+    overload function RemoteServiceId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId>): Void;
 }

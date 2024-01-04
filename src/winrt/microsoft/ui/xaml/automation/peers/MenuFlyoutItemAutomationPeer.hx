@@ -11,6 +11,6 @@ extern class MenuFlyoutItemAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IMenuFlyoutItemAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IInvokeProvider
 {
-    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.MenuFlyoutItem>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.MenuFlyoutItem>);
     function Invoke(): Void;
 }

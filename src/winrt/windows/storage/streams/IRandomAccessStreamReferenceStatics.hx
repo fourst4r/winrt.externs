@@ -8,7 +8,7 @@ package winrt.windows.storage.streams;
 @:native("winrt::Windows::Storage::Streams::IRandomAccessStreamReferenceStatics")
 extern interface IRandomAccessStreamReferenceStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateFromFile(file: ConstRef<winrt.windows.storage.IStorageFile>): winrt.windows.storage.streams.RandomAccessStreamReference;
-    function CreateFromUri(uri: ConstRef<winrt.windows.foundation.Uri>): winrt.windows.storage.streams.RandomAccessStreamReference;
-    function CreateFromStream(stream: ConstRef<winrt.windows.storage.streams.IRandomAccessStream>): winrt.windows.storage.streams.RandomAccessStreamReference;
+    function CreateFromFile(file: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.IStorageFile>): winrt.windows.storage.streams.RandomAccessStreamReference;
+    function CreateFromUri(uri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): winrt.windows.storage.streams.RandomAccessStreamReference;
+    function CreateFromStream(stream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStream>): winrt.windows.storage.streams.RandomAccessStreamReference;
 }

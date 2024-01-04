@@ -9,5 +9,5 @@ package winrt.windows.graphics.printing;
 extern class PrintTaskProgressingEventArgs
     implements winrt.windows.graphics.printing.IPrintTaskProgressingEventArgs
 {
-    overload function DocumentPageCount(): UInt32;
+    overload function DocumentPageCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

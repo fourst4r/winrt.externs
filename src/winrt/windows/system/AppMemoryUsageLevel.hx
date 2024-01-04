@@ -2,7 +2,7 @@ package winrt.windows.system;
 
 @:include("winrt/Windows.System.h", true)
 @:native("winrt::Windows::System::AppMemoryUsageLevel")
-extern enum abstract AppMemoryUsageLevel(Int32)
+extern enum abstract AppMemoryUsageLevel(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::System::AppMemoryUsageLevel::Low") final Low;
     @:native("winrt::Windows::System::AppMemoryUsageLevel::Medium") final Medium;

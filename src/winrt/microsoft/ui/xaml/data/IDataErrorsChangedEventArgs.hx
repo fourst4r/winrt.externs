@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.data;
 extern interface IDataErrorsChangedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function PropertyName(): winrt.HString;
-    overload function PropertyName(value: ConstRef<winrt.HString>): Void;
+    overload function PropertyName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

@@ -8,5 +8,5 @@ package winrt.windows.media.protection.playready;
 @:native("winrt::Windows::Media::Protection::PlayReady::IPlayReadyITADataGenerator")
 extern interface IPlayReadyITADataGenerator extends winrt.windows.foundation.IInspectable
 {
-    function GenerateData(guidCPSystemId: ConstRef<winrt.Guid>, countOfStreams: UInt32, configuration: ConstRef<winrt.windows.foundation.collections.IPropertySet>, format: ConstRef<winrt.windows.media.protection.playready.PlayReadyITADataFormat>): winrt.ComArray<UInt8>;
+    function GenerateData(guidCPSystemId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>, countOfStreams: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, configuration: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IPropertySet>, format: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.protection.playready.PlayReadyITADataFormat>): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
 }

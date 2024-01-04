@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IFrame3")
 extern interface IFrame3 extends winrt.windows.foundation.IInspectable
 {
-    function GoBack(transitionInfoOverride: ConstRef<winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo>): Void;
+    function GoBack(transitionInfoOverride: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo>): Void;
 }

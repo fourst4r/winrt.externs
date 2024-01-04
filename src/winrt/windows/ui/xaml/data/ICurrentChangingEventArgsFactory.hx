@@ -8,6 +8,6 @@ package winrt.windows.ui.xaml.data;
 @:native("winrt::Windows::UI::Xaml::Data::ICurrentChangingEventArgsFactory")
 extern interface ICurrentChangingEventArgsFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.data.CurrentChangingEventArgs;
-    function CreateWithCancelableParameter(isCancelable: Bool, baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.data.CurrentChangingEventArgs;
+    function CreateInstance(baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.data.CurrentChangingEventArgs;
+    function CreateWithCancelableParameter(isCancelable: Bool, baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.data.CurrentChangingEventArgs;
 }

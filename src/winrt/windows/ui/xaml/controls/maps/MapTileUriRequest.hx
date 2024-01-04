@@ -11,6 +11,6 @@ extern class MapTileUriRequest
 {
     function new();
     overload function Uri(): winrt.windows.foundation.Uri;
-    overload function Uri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function Uri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     function GetDeferral(): winrt.windows.ui.xaml.controls.maps.MapTileUriRequestDeferral;
 }

@@ -12,16 +12,16 @@ extern class PrintDocument
 {
     function new();
     overload function DocumentSource(): winrt.windows.graphics.printing.IPrintDocumentSource;
-    overload function Paginate(handler: ConstRef<winrt.microsoft.ui.xaml.printing.PaginateEventHandler>): winrt.EventToken;
-    @:noExcept overload function Paginate(token: ConstRef<winrt.EventToken>): Void;
-    overload function GetPreviewPage(handler: ConstRef<winrt.microsoft.ui.xaml.printing.GetPreviewPageEventHandler>): winrt.EventToken;
-    @:noExcept overload function GetPreviewPage(token: ConstRef<winrt.EventToken>): Void;
-    overload function AddPages(handler: ConstRef<winrt.microsoft.ui.xaml.printing.AddPagesEventHandler>): winrt.EventToken;
-    @:noExcept overload function AddPages(token: ConstRef<winrt.EventToken>): Void;
-    function AddPage(pageVisual: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    overload function Paginate(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.printing.PaginateEventHandler>): winrt.EventToken;
+    @:noExcept overload function Paginate(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function GetPreviewPage(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.printing.GetPreviewPageEventHandler>): winrt.EventToken;
+    @:noExcept overload function GetPreviewPage(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function AddPages(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.printing.AddPagesEventHandler>): winrt.EventToken;
+    @:noExcept overload function AddPages(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    function AddPage(pageVisual: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): Void;
     function AddPagesComplete(): Void;
-    function SetPreviewPageCount(count: Int32, type: ConstRef<winrt.microsoft.ui.xaml.printing.PreviewPageCountType>): Void;
-    function SetPreviewPage(pageNumber: Int32, pageVisual: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    function SetPreviewPageCount(count: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.printing.PreviewPageCountType>): Void;
+    function SetPreviewPage(pageNumber: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, pageVisual: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): Void;
     function InvalidatePreview(): Void;
     overload function DocumentSourceProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function DocumentSourceProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

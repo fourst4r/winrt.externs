@@ -8,7 +8,7 @@ package winrt.microsoft.ui.xaml.input;
 @:native("winrt::Microsoft::UI::Xaml::Input::IPointer")
 extern interface IPointer extends winrt.windows.foundation.IInspectable
 {
-    overload function PointerId(): UInt32;
+    overload function PointerId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function PointerDeviceType(): winrt.microsoft.ui.input.PointerDeviceType;
     overload function IsInContact(): Bool;
     overload function IsInRange(): Bool;

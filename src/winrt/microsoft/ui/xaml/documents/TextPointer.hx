@@ -12,7 +12,7 @@ extern class TextPointer
     overload function Parent(): winrt.microsoft.ui.xaml.DependencyObject;
     overload function VisualParent(): winrt.microsoft.ui.xaml.FrameworkElement;
     overload function LogicalDirection(): winrt.microsoft.ui.xaml.documents.LogicalDirection;
-    overload function Offset(): Int32;
-    function GetCharacterRect(direction: ConstRef<winrt.microsoft.ui.xaml.documents.LogicalDirection>): winrt.windows.foundation.Rect;
-    function GetPositionAtOffset(offset: Int32, direction: ConstRef<winrt.microsoft.ui.xaml.documents.LogicalDirection>): winrt.microsoft.ui.xaml.documents.TextPointer;
+    overload function Offset(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function GetCharacterRect(direction: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.documents.LogicalDirection>): winrt.windows.foundation.Rect;
+    function GetPositionAtOffset(offset: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, direction: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.documents.LogicalDirection>): winrt.microsoft.ui.xaml.documents.TextPointer;
 }

@@ -9,5 +9,5 @@ package winrt.windows.storage.provider;
 extern interface IFileUpdateRequest2 extends winrt.windows.foundation.IInspectable
 {
     overload function UserInputNeededMessage(): winrt.HString;
-    overload function UserInputNeededMessage(value: ConstRef<winrt.HString>): Void;
+    overload function UserInputNeededMessage(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

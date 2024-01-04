@@ -8,6 +8,6 @@ package winrt.microsoft.ui.xaml.media.animation;
 @:native("winrt::Microsoft::UI::Xaml::Media::Animation::IExponentialEase")
 extern interface IExponentialEase extends winrt.windows.foundation.IInspectable
 {
-    overload function Exponent(): Float64;
-    overload function Exponent(value: Float64): Void;
+    overload function Exponent(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Exponent(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml.controls;
 extern interface IRichTextBlock6 extends winrt.windows.foundation.IInspectable
 {
     overload function SelectionFlyout(): winrt.windows.ui.xaml.controls.primitives.FlyoutBase;
-    overload function SelectionFlyout(value: ConstRef<winrt.windows.ui.xaml.controls.primitives.FlyoutBase>): Void;
+    overload function SelectionFlyout(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.primitives.FlyoutBase>): Void;
     function CopySelectionToClipboard(): Void;
 }

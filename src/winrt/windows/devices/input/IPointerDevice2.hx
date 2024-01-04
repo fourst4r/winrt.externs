@@ -8,5 +8,5 @@ package winrt.windows.devices.input;
 @:native("winrt::Windows::Devices::Input::IPointerDevice2")
 extern interface IPointerDevice2 extends winrt.windows.foundation.IInspectable
 {
-    overload function MaxPointersWithZDistance(): UInt32;
+    overload function MaxPointersWithZDistance(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

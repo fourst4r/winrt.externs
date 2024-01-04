@@ -9,9 +9,9 @@ package winrt.windows.ui.xaml.controls;
 extern interface IDatePickerFlyout2 extends winrt.windows.foundation.IInspectable
 {
     overload function DayFormat(): winrt.HString;
-    overload function DayFormat(value: ConstRef<winrt.HString>): Void;
+    overload function DayFormat(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function MonthFormat(): winrt.HString;
-    overload function MonthFormat(value: ConstRef<winrt.HString>): Void;
+    overload function MonthFormat(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function YearFormat(): winrt.HString;
-    overload function YearFormat(value: ConstRef<winrt.HString>): Void;
+    overload function YearFormat(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

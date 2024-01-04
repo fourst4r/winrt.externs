@@ -8,5 +8,5 @@ package winrt.windows.devices.lights.effects;
 @:native("winrt::Windows::Devices::Lights::Effects::ILampArraySolidEffectFactory")
 extern interface ILampArraySolidEffectFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(lampArray: ConstRef<winrt.windows.devices.lights.LampArray>, lampIndexes: winrt.ArrayView<Int32>): winrt.windows.devices.lights.effects.LampArraySolidEffect;
+    function CreateInstance(lampArray: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.lights.LampArray>, lampIndexes: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end Int32>): winrt.windows.devices.lights.effects.LampArraySolidEffect;
 }

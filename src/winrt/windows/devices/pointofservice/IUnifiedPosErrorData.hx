@@ -11,5 +11,5 @@ extern interface IUnifiedPosErrorData extends winrt.windows.foundation.IInspecta
     overload function Message(): winrt.HString;
     overload function Severity(): winrt.windows.devices.pointofservice.UnifiedPosErrorSeverity;
     overload function Reason(): winrt.windows.devices.pointofservice.UnifiedPosErrorReason;
-    overload function ExtendedReason(): UInt32;
+    overload function ExtendedReason(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

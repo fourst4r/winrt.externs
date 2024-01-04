@@ -8,16 +8,16 @@ package winrt.windows.system;
 @:native("winrt::Windows::System::IAppResourceGroupInfoWatcher")
 extern interface IAppResourceGroupInfoWatcher extends winrt.windows.foundation.IInspectable
 {
-    overload function Added(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.system.AppResourceGroupInfoWatcher, winrt.windows.system.AppResourceGroupInfoWatcherEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Added(token: ConstRef<winrt.EventToken>): Void;
-    overload function Removed(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.system.AppResourceGroupInfoWatcher, winrt.windows.system.AppResourceGroupInfoWatcherEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Removed(token: ConstRef<winrt.EventToken>): Void;
-    overload function EnumerationCompleted(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.system.AppResourceGroupInfoWatcher, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function EnumerationCompleted(token: ConstRef<winrt.EventToken>): Void;
-    overload function Stopped(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.system.AppResourceGroupInfoWatcher, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Stopped(token: ConstRef<winrt.EventToken>): Void;
-    overload function ExecutionStateChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.system.AppResourceGroupInfoWatcher, winrt.windows.system.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function ExecutionStateChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function Added(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.system.AppResourceGroupInfoWatcher, winrt.windows.system.AppResourceGroupInfoWatcherEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Added(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function Removed(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.system.AppResourceGroupInfoWatcher, winrt.windows.system.AppResourceGroupInfoWatcherEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Removed(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function EnumerationCompleted(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.system.AppResourceGroupInfoWatcher, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function EnumerationCompleted(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function Stopped(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.system.AppResourceGroupInfoWatcher, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Stopped(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function ExecutionStateChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.system.AppResourceGroupInfoWatcher, winrt.windows.system.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function ExecutionStateChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function Status(): winrt.windows.system.AppResourceGroupInfoWatcherStatus;
     function Start(): Void;
     function Stop(): Void;

@@ -9,13 +9,13 @@ package winrt.microsoft.web.webview2.core;
 extern interface ICoreWebView2CompositionController extends winrt.windows.foundation.IInspectable
 {
     overload function RootVisualTarget(): winrt.windows.foundation.IInspectable;
-    overload function RootVisualTarget(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
-    overload function CursorChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.microsoft.web.webview2.core.CoreWebView2CompositionController, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function CursorChanged(token: ConstRef<winrt.EventToken>): Void;
-    function SendMouseInput(eventKind: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2MouseEventKind>, virtualKeys: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2MouseEventVirtualKeys>, mouseData: UInt32, point: ConstRef<winrt.windows.foundation.Point>): Void;
-    function SendPointerInput(eventKind: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2PointerEventKind>, pointerInfo: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2PointerInfo>): Void;
+    overload function RootVisualTarget(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
+    overload function CursorChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.microsoft.web.webview2.core.CoreWebView2CompositionController, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function CursorChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    function SendMouseInput(eventKind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.CoreWebView2MouseEventKind>, virtualKeys: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.CoreWebView2MouseEventVirtualKeys>, mouseData: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, point: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
+    function SendPointerInput(eventKind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.CoreWebView2PointerEventKind>, pointerInfo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.CoreWebView2PointerInfo>): Void;
     overload function Cursor(): winrt.windows.ui.core.CoreCursor;
-    function DragEnter(dragInfo: ConstRef<winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragInfo>, dragUIOverride: ConstRef<winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragUIOverride>): winrt.windows.applicationmodel.datatransfer.DataPackageOperation;
-    function DragOver(dragInfo: ConstRef<winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragInfo>, dragUIOverride: ConstRef<winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragUIOverride>): winrt.windows.applicationmodel.datatransfer.DataPackageOperation;
-    function Drop(dragInfo: ConstRef<winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragInfo>): winrt.windows.applicationmodel.datatransfer.DataPackageOperation;
+    function DragEnter(dragInfo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragInfo>, dragUIOverride: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragUIOverride>): winrt.windows.applicationmodel.datatransfer.DataPackageOperation;
+    function DragOver(dragInfo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragInfo>, dragUIOverride: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragUIOverride>): winrt.windows.applicationmodel.datatransfer.DataPackageOperation;
+    function Drop(dragInfo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragInfo>): winrt.windows.applicationmodel.datatransfer.DataPackageOperation;
 }

@@ -8,5 +8,5 @@ package winrt.windows.devices.alljoyn;
 @:native("winrt::Windows::Devices::AllJoyn::IAllJoynBusObjectStoppedEventArgsFactory")
 extern interface IAllJoynBusObjectStoppedEventArgsFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(status: Int32): winrt.windows.devices.alljoyn.AllJoynBusObjectStoppedEventArgs;
+    function Create(status: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.devices.alljoyn.AllJoynBusObjectStoppedEventArgs;
 }

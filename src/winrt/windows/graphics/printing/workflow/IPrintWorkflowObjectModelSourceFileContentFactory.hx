@@ -8,5 +8,5 @@ package winrt.windows.graphics.printing.workflow;
 @:native("winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowObjectModelSourceFileContentFactory")
 extern interface IPrintWorkflowObjectModelSourceFileContentFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(xpsStream: ConstRef<winrt.windows.storage.streams.IInputStream>): winrt.windows.graphics.printing.workflow.PrintWorkflowObjectModelSourceFileContent;
+    function CreateInstance(xpsStream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IInputStream>): winrt.windows.graphics.printing.workflow.PrintWorkflowObjectModelSourceFileContent;
 }

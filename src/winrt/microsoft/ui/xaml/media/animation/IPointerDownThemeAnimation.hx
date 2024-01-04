@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.media.animation;
 extern interface IPointerDownThemeAnimation extends winrt.windows.foundation.IInspectable
 {
     overload function TargetName(): winrt.HString;
-    overload function TargetName(value: ConstRef<winrt.HString>): Void;
+    overload function TargetName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

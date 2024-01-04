@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml.controls;
 extern interface IScrollAnchorProvider extends winrt.windows.foundation.IInspectable
 {
     overload function CurrentAnchor(): winrt.windows.ui.xaml.UIElement;
-    function RegisterAnchorCandidate(element: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
-    function UnregisterAnchorCandidate(element: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
+    function RegisterAnchorCandidate(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
+    function UnregisterAnchorCandidate(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
 }

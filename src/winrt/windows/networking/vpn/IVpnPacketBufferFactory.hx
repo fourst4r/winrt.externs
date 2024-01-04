@@ -8,5 +8,5 @@ package winrt.windows.networking.vpn;
 @:native("winrt::Windows::Networking::Vpn::IVpnPacketBufferFactory")
 extern interface IVpnPacketBufferFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateVpnPacketBuffer(parentBuffer: ConstRef<winrt.windows.networking.vpn.VpnPacketBuffer>, offset: UInt32, length: UInt32): winrt.windows.networking.vpn.VpnPacketBuffer;
+    function CreateVpnPacketBuffer(parentBuffer: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.vpn.VpnPacketBuffer>, offset: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, length: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.networking.vpn.VpnPacketBuffer;
 }

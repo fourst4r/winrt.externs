@@ -9,10 +9,10 @@ package winrt.windows.devices.bluetooth;
 extern class BluetoothLEPreferredConnectionParameters
     implements winrt.windows.devices.bluetooth.IBluetoothLEPreferredConnectionParameters
 {
-    overload function LinkTimeout(): UInt16;
-    overload function ConnectionLatency(): UInt16;
-    overload function MinConnectionInterval(): UInt16;
-    overload function MaxConnectionInterval(): UInt16;
+    overload function LinkTimeout(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    overload function ConnectionLatency(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    overload function MinConnectionInterval(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    overload function MaxConnectionInterval(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
     overload function Balanced(): winrt.windows.devices.bluetooth.BluetoothLEPreferredConnectionParameters;
     overload function ThroughputOptimized(): winrt.windows.devices.bluetooth.BluetoothLEPreferredConnectionParameters;
     overload function PowerOptimized(): winrt.windows.devices.bluetooth.BluetoothLEPreferredConnectionParameters;

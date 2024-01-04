@@ -14,6 +14,6 @@ extern class DeviceConnectionChangeTrigger
     overload function CanMaintainConnection(): Bool;
     overload function MaintainConnection(): Bool;
     overload function MaintainConnection(value: Bool): Void;
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.background.DeviceConnectionChangeTrigger> /* GenericTypeInstSig */;
-    static function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.background.DeviceConnectionChangeTrigger> /* GenericTypeInstSig */;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.background.DeviceConnectionChangeTrigger> /* GenericTypeInstSig */;
+    static function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.background.DeviceConnectionChangeTrigger> /* GenericTypeInstSig */;
 }

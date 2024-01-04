@@ -9,6 +9,6 @@ package winrt.windows.applicationmodel.payments;
 extern class PaymentCanMakePaymentResult
     implements winrt.windows.applicationmodel.payments.IPaymentCanMakePaymentResult
 {
-    /* explicit */ function new(value: ConstRef<winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResultStatus>);
+    /* explicit */ function new(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResultStatus>);
     overload function Status(): winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResultStatus;
 }

@@ -8,29 +8,29 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::IMseSourceBuffer")
 extern interface IMseSourceBuffer extends winrt.windows.foundation.IInspectable
 {
-    overload function UpdateStarting(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MseSourceBuffer, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function UpdateStarting(token: ConstRef<winrt.EventToken>): Void;
-    overload function Updated(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MseSourceBuffer, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Updated(token: ConstRef<winrt.EventToken>): Void;
-    overload function UpdateEnded(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MseSourceBuffer, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function UpdateEnded(token: ConstRef<winrt.EventToken>): Void;
-    overload function ErrorOccurred(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MseSourceBuffer, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function ErrorOccurred(token: ConstRef<winrt.EventToken>): Void;
-    overload function Aborted(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MseSourceBuffer, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Aborted(token: ConstRef<winrt.EventToken>): Void;
+    overload function UpdateStarting(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MseSourceBuffer, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function UpdateStarting(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function Updated(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MseSourceBuffer, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Updated(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function UpdateEnded(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MseSourceBuffer, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function UpdateEnded(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function ErrorOccurred(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MseSourceBuffer, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function ErrorOccurred(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function Aborted(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MseSourceBuffer, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Aborted(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function Mode(): winrt.windows.media.core.MseAppendMode;
-    overload function Mode(value: ConstRef<winrt.windows.media.core.MseAppendMode>): Void;
+    overload function Mode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.MseAppendMode>): Void;
     overload function IsUpdating(): Bool;
     overload function Buffered(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.core.MseTimeRange> /* GenericTypeInstSig */;
     overload function TimestampOffset(): winrt.windows.foundation.TimeSpan;
-    overload function TimestampOffset(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function TimestampOffset(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function AppendWindowStart(): winrt.windows.foundation.TimeSpan;
-    overload function AppendWindowStart(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function AppendWindowStart(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function AppendWindowEnd(): winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* GenericTypeInstSig */;
-    overload function AppendWindowEnd(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* temp_GenericTypeInstSig */>): Void;
-    function AppendBuffer(buffer: ConstRef<winrt.windows.storage.streams.IBuffer>): Void;
-    overload function AppendStream(stream: ConstRef<winrt.windows.storage.streams.IInputStream>): Void;
-    overload function AppendStream(stream: ConstRef<winrt.windows.storage.streams.IInputStream>, maxSize: UInt64): Void;
+    overload function AppendWindowEnd(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* temp_GenericTypeInstSig */>): Void;
+    function AppendBuffer(buffer: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): Void;
+    overload function AppendStream(stream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IInputStream>): Void;
+    overload function AppendStream(stream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IInputStream>, maxSize: #if reflaxe.cpp cxx.num. #else cpp. #end UInt64): Void;
     function Abort(): Void;
-    function Remove(start: ConstRef<winrt.windows.foundation.TimeSpan>, end: ConstRef<winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* temp_GenericTypeInstSig */>): Void;
+    function Remove(start: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>, end: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* temp_GenericTypeInstSig */>): Void;
 }

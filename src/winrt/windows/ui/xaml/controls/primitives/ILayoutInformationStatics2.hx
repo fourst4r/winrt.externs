@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls.primitives;
 @:native("winrt::Windows::UI::Xaml::Controls::Primitives::ILayoutInformationStatics2")
 extern interface ILayoutInformationStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function GetAvailableSize(element: ConstRef<winrt.windows.ui.xaml.UIElement>): winrt.windows.foundation.Size;
+    function GetAvailableSize(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): winrt.windows.foundation.Size;
 }

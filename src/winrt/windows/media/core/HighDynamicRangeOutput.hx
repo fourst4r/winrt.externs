@@ -9,6 +9,6 @@ package winrt.windows.media.core;
 extern class HighDynamicRangeOutput
     implements winrt.windows.media.core.IHighDynamicRangeOutput
 {
-    overload function Certainty(): Float64;
+    overload function Certainty(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function FrameControllers(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.devices.core.FrameController> /* GenericTypeInstSig */;
 }

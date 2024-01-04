@@ -8,7 +8,7 @@ package winrt.windows.networking.vpn;
 @:native("winrt::Windows::Networking::Vpn::IVpnCustomEditBox")
 extern interface IVpnCustomEditBox extends winrt.windows.foundation.IInspectable
 {
-    overload function DefaultText(value: ConstRef<winrt.HString>): Void;
+    overload function DefaultText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function DefaultText(): winrt.HString;
     overload function NoEcho(value: Bool): Void;
     overload function NoEcho(): Bool;

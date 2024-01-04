@@ -9,7 +9,7 @@ package winrt.windows.storage.provider;
 extern interface IStorageProviderGetPathForContentUriResult extends winrt.windows.foundation.IInspectable
 {
     overload function Status(): winrt.windows.storage.provider.StorageProviderUriSourceStatus;
-    overload function Status(value: ConstRef<winrt.windows.storage.provider.StorageProviderUriSourceStatus>): Void;
+    overload function Status(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.provider.StorageProviderUriSourceStatus>): Void;
     overload function Path(): winrt.HString;
-    overload function Path(value: ConstRef<winrt.HString>): Void;
+    overload function Path(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

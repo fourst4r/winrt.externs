@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.background;
 
 @:include("winrt/Windows.ApplicationModel.Background.h", true)
 @:native("winrt::Windows::ApplicationModel::Background::BackgroundTaskThrottleCounter")
-extern enum abstract BackgroundTaskThrottleCounter(Int32)
+extern enum abstract BackgroundTaskThrottleCounter(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Background::BackgroundTaskThrottleCounter::All") final All;
     @:native("winrt::Windows::ApplicationModel::Background::BackgroundTaskThrottleCounter::Cpu") final Cpu;

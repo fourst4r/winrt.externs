@@ -8,5 +8,5 @@ package winrt.windows.globalization.collation;
 @:native("winrt::Windows::Globalization::Collation::ICharacterGroupingsFactory")
 extern interface ICharacterGroupingsFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(language: ConstRef<winrt.HString>): winrt.windows.globalization.collation.CharacterGroupings;
+    function Create(language: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.globalization.collation.CharacterGroupings;
 }

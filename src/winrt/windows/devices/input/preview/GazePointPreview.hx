@@ -12,6 +12,6 @@ extern class GazePointPreview
     overload function SourceDevice(): winrt.windows.devices.input.preview.GazeDevicePreview;
     overload function EyeGazePosition(): winrt.windows.foundation.IReference<winrt.windows.foundation.Point> /* GenericTypeInstSig */;
     overload function HeadGazePosition(): winrt.windows.foundation.IReference<winrt.windows.foundation.Point> /* GenericTypeInstSig */;
-    overload function Timestamp(): UInt64;
+    overload function Timestamp(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
     overload function HidInputReport(): winrt.windows.devices.humaninterfacedevice.HidInputReport;
 }

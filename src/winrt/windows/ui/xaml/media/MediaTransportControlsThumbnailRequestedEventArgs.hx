@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml.media;
 extern class MediaTransportControlsThumbnailRequestedEventArgs
     implements winrt.windows.ui.xaml.media.IMediaTransportControlsThumbnailRequestedEventArgs
 {
-    function SetThumbnailImage(source: ConstRef<winrt.windows.storage.streams.IInputStream>): Void;
+    function SetThumbnailImage(source: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IInputStream>): Void;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

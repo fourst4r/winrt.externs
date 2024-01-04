@@ -8,6 +8,6 @@ package winrt.windows.applicationmodel.contacts;
 @:native("winrt::Windows::ApplicationModel::Contacts::IContactPickerStatics")
 extern interface IContactPickerStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.applicationmodel.contacts.ContactPicker;
+    function CreateForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.applicationmodel.contacts.ContactPicker;
     function IsSupportedAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

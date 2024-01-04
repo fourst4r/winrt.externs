@@ -12,7 +12,7 @@ extern class SpriteVisual
     implements winrt.microsoft.ui.composition.ISpriteVisual2
 {
     overload function Brush(): winrt.microsoft.ui.composition.CompositionBrush;
-    overload function Shadow(value: ConstRef<winrt.microsoft.ui.composition.CompositionShadow>): Void;
-    overload function Brush(value: ConstRef<winrt.microsoft.ui.composition.CompositionBrush>): Void;
+    overload function Shadow(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.CompositionShadow>): Void;
+    overload function Brush(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.CompositionBrush>): Void;
     overload function Shadow(): winrt.microsoft.ui.composition.CompositionShadow;
 }

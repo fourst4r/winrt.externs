@@ -8,6 +8,6 @@ package winrt.windows.globalization.numberformatting;
 @:native("winrt::Windows::Globalization::NumberFormatting::ICurrencyFormatterFactory")
 extern interface ICurrencyFormatterFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateCurrencyFormatterCode(currencyCode: ConstRef<winrt.HString>): winrt.windows.globalization.numberformatting.CurrencyFormatter;
-    function CreateCurrencyFormatterCodeContext(currencyCode: ConstRef<winrt.HString>, languages: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, geographicRegion: ConstRef<winrt.HString>): winrt.windows.globalization.numberformatting.CurrencyFormatter;
+    function CreateCurrencyFormatterCode(currencyCode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.globalization.numberformatting.CurrencyFormatter;
+    function CreateCurrencyFormatterCodeContext(currencyCode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, languages: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, geographicRegion: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.globalization.numberformatting.CurrencyFormatter;
 }

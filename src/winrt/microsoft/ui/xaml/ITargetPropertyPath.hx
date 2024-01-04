@@ -9,7 +9,7 @@ package winrt.microsoft.ui.xaml;
 extern interface ITargetPropertyPath extends winrt.windows.foundation.IInspectable
 {
     overload function Path(): winrt.microsoft.ui.xaml.PropertyPath;
-    overload function Path(value: ConstRef<winrt.microsoft.ui.xaml.PropertyPath>): Void;
+    overload function Path(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.PropertyPath>): Void;
     overload function Target(): winrt.windows.foundation.IInspectable;
-    overload function Target(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Target(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
 }

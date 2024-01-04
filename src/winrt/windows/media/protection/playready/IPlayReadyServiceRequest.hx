@@ -9,12 +9,12 @@ package winrt.windows.media.protection.playready;
 extern interface IPlayReadyServiceRequest extends winrt.windows.foundation.IInspectable
 {
     overload function Uri(): winrt.windows.foundation.Uri;
-    overload function Uri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function Uri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function ResponseCustomData(): winrt.HString;
     overload function ChallengeCustomData(): winrt.HString;
-    overload function ChallengeCustomData(value: ConstRef<winrt.HString>): Void;
+    overload function ChallengeCustomData(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     function BeginServiceRequest(): winrt.windows.foundation.IAsyncAction;
     function NextServiceRequest(): winrt.windows.media.protection.playready.IPlayReadyServiceRequest;
     function GenerateManualEnablingChallenge(): winrt.windows.media.protection.playready.PlayReadySoapMessage;
-    function ProcessManualEnablingResponse(responseBytes: winrt.ArrayView<UInt8>): winrt.HResult;
+    function ProcessManualEnablingResponse(responseBytes: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): winrt.HResult;
 }

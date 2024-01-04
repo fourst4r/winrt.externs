@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel;
 @:native("winrt::Windows::ApplicationModel::IPackageCatalogStatics2")
 extern interface IPackageCatalogStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function OpenForPackage(package: ConstRef<winrt.windows.applicationmodel.Package>): winrt.windows.applicationmodel.PackageCatalog;
+    function OpenForPackage(package: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.Package>): winrt.windows.applicationmodel.PackageCatalog;
 }

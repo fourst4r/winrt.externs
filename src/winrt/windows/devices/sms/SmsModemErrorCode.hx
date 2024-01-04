@@ -2,7 +2,7 @@ package winrt.windows.devices.sms;
 
 @:include("winrt/Windows.Devices.Sms.h", true)
 @:native("winrt::Windows::Devices::Sms::SmsModemErrorCode")
-extern enum abstract SmsModemErrorCode(Int32)
+extern enum abstract SmsModemErrorCode(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::Sms::SmsModemErrorCode::Other") final Other;
     @:native("winrt::Windows::Devices::Sms::SmsModemErrorCode::MessagingNetworkError") final MessagingNetworkError;

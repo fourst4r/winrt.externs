@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.controls;
 extern interface ISwipeItems extends winrt.windows.foundation.IInspectable
 {
     overload function Mode(): winrt.microsoft.ui.xaml.controls.SwipeMode;
-    overload function Mode(value: ConstRef<winrt.microsoft.ui.xaml.controls.SwipeMode>): Void;
+    overload function Mode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.SwipeMode>): Void;
 }

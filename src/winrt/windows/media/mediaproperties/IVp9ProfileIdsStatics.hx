@@ -8,7 +8,7 @@ package winrt.windows.media.mediaproperties;
 @:native("winrt::Windows::Media::MediaProperties::IVp9ProfileIdsStatics")
 extern interface IVp9ProfileIdsStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function Profile0ChromaSubsampling420BitDepth8(): Int32;
-    overload function Profile2ChromaSubsampling420BitDepth10(): Int32;
-    overload function Profile2ChromaSubsampling420BitDepth12(): Int32;
+    overload function Profile0ChromaSubsampling420BitDepth8(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Profile2ChromaSubsampling420BitDepth10(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Profile2ChromaSubsampling420BitDepth12(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

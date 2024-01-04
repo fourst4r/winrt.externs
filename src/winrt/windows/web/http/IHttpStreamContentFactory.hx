@@ -8,5 +8,5 @@ package winrt.windows.web.http;
 @:native("winrt::Windows::Web::Http::IHttpStreamContentFactory")
 extern interface IHttpStreamContentFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateFromInputStream(content: ConstRef<winrt.windows.storage.streams.IInputStream>): winrt.windows.web.http.HttpStreamContent;
+    function CreateFromInputStream(content: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IInputStream>): winrt.windows.web.http.HttpStreamContent;
 }

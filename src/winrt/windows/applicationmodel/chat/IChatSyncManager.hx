@@ -9,9 +9,9 @@ package winrt.windows.applicationmodel.chat;
 extern interface IChatSyncManager extends winrt.windows.foundation.IInspectable
 {
     overload function Configuration(): winrt.windows.applicationmodel.chat.ChatSyncConfiguration;
-    function AssociateAccountAsync(webAccount: ConstRef<winrt.windows.security.credentials.WebAccount>): winrt.windows.foundation.IAsyncAction;
+    function AssociateAccountAsync(webAccount: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.WebAccount>): winrt.windows.foundation.IAsyncAction;
     function UnassociateAccountAsync(): winrt.windows.foundation.IAsyncAction;
-    function IsAccountAssociated(webAccount: ConstRef<winrt.windows.security.credentials.WebAccount>): Bool;
+    function IsAccountAssociated(webAccount: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.WebAccount>): Bool;
     function StartSync(): Void;
-    function SetConfigurationAsync(configuration: ConstRef<winrt.windows.applicationmodel.chat.ChatSyncConfiguration>): winrt.windows.foundation.IAsyncAction;
+    function SetConfigurationAsync(configuration: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.chat.ChatSyncConfiguration>): winrt.windows.foundation.IAsyncAction;
 }

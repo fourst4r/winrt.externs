@@ -14,7 +14,7 @@ extern class VpnCustomPromptBooleanInput
     overload function InitialValue(value: Bool): Void;
     overload function InitialValue(): Bool;
     overload function Value(): Bool;
-    overload function DisplayName(value: ConstRef<winrt.HString>): Void;
+    overload function DisplayName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function DisplayName(): winrt.HString;
     overload function Compulsory(value: Bool): Void;
     overload function Compulsory(): Bool;

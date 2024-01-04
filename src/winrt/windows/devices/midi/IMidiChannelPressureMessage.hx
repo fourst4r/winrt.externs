@@ -8,6 +8,6 @@ package winrt.windows.devices.midi;
 @:native("winrt::Windows::Devices::Midi::IMidiChannelPressureMessage")
 extern interface IMidiChannelPressureMessage extends winrt.windows.foundation.IInspectable
 {
-    overload function Channel(): UInt8;
-    overload function Pressure(): UInt8;
+    overload function Channel(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function Pressure(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
 }

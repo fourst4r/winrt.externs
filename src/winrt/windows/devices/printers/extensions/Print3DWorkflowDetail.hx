@@ -2,7 +2,7 @@ package winrt.windows.devices.printers.extensions;
 
 @:include("winrt/Windows.Devices.Printers.Extensions.h", true)
 @:native("winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowDetail")
-extern enum abstract Print3DWorkflowDetail(Int32)
+extern enum abstract Print3DWorkflowDetail(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowDetail::Unknown") final Unknown;
     @:native("winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowDetail::ModelExceedsPrintBed") final ModelExceedsPrintBed;

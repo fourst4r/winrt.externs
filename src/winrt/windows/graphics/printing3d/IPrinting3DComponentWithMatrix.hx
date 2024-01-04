@@ -9,7 +9,7 @@ package winrt.windows.graphics.printing3d;
 extern interface IPrinting3DComponentWithMatrix extends winrt.windows.foundation.IInspectable
 {
     overload function Component(): winrt.windows.graphics.printing3d.Printing3DComponent;
-    overload function Component(value: ConstRef<winrt.windows.graphics.printing3d.Printing3DComponent>): Void;
+    overload function Component(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing3d.Printing3DComponent>): Void;
     overload function Matrix(): winrt.windows.foundation.numerics.Matrix4x4;
-    overload function Matrix(value: ConstRef<winrt.windows.foundation.numerics.Matrix4x4>): Void;
+    overload function Matrix(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Matrix4x4>): Void;
 }

@@ -12,9 +12,9 @@ extern class PathFigure
 {
     function new();
     overload function Segments(): winrt.windows.ui.xaml.media.PathSegmentCollection;
-    overload function Segments(value: ConstRef<winrt.windows.ui.xaml.media.PathSegmentCollection>): Void;
+    overload function Segments(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.PathSegmentCollection>): Void;
     overload function StartPoint(): winrt.windows.foundation.Point;
-    overload function StartPoint(value: ConstRef<winrt.windows.foundation.Point>): Void;
+    overload function StartPoint(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
     overload function IsClosed(): Bool;
     overload function IsClosed(value: Bool): Void;
     overload function IsFilled(): Bool;

@@ -9,10 +9,10 @@ package winrt.microsoft.ui.xaml.controls.primitives;
 extern class LayoutInformation
     implements winrt.microsoft.ui.xaml.controls.primitives.ILayoutInformation
 {
-    function GetLayoutExceptionElement(dispatcher: ConstRef<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.UIElement;
-    function GetLayoutSlot(element: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.windows.foundation.Rect;
-    function GetAvailableSize(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>): winrt.windows.foundation.Size;
-    static function GetLayoutExceptionElement(dispatcher: ConstRef<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.UIElement;
-    static function GetLayoutSlot(element: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.windows.foundation.Rect;
-    static function GetAvailableSize(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>): winrt.windows.foundation.Size;
+    function GetLayoutExceptionElement(dispatcher: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.UIElement;
+    function GetLayoutSlot(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.FrameworkElement>): winrt.windows.foundation.Rect;
+    function GetAvailableSize(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): winrt.windows.foundation.Size;
+    static function GetLayoutExceptionElement(dispatcher: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.UIElement;
+    static function GetLayoutSlot(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.FrameworkElement>): winrt.windows.foundation.Rect;
+    static function GetAvailableSize(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): winrt.windows.foundation.Size;
 }

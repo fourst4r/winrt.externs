@@ -9,8 +9,8 @@ package winrt.windows.security.cryptography.certificates;
 extern interface ICertificateStoresStatics extends winrt.windows.foundation.IInspectable
 {
     overload function FindAllAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.security.cryptography.certificates.Certificate> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
-    overload function FindAllAsync(query: ConstRef<winrt.windows.security.cryptography.certificates.CertificateQuery>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.security.cryptography.certificates.Certificate> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+    overload function FindAllAsync(query: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.certificates.CertificateQuery>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.security.cryptography.certificates.Certificate> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
     overload function TrustedRootCertificationAuthorities(): winrt.windows.security.cryptography.certificates.CertificateStore;
     overload function IntermediateCertificationAuthorities(): winrt.windows.security.cryptography.certificates.CertificateStore;
-    function GetStoreByName(storeName: ConstRef<winrt.HString>): winrt.windows.security.cryptography.certificates.CertificateStore;
+    function GetStoreByName(storeName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.security.cryptography.certificates.CertificateStore;
 }

@@ -11,6 +11,6 @@ extern interface INotifyCollectionChangedEventArgs extends winrt.windows.foundat
     overload function Action(): winrt.windows.ui.xaml.interop.NotifyCollectionChangedAction;
     overload function NewItems(): winrt.windows.ui.xaml.interop.IBindableVector;
     overload function OldItems(): winrt.windows.ui.xaml.interop.IBindableVector;
-    overload function NewStartingIndex(): Int32;
-    overload function OldStartingIndex(): Int32;
+    overload function NewStartingIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function OldStartingIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

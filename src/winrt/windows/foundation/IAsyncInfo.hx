@@ -8,7 +8,7 @@ package winrt.windows.foundation;
 @:native("winrt::Windows::Foundation::IAsyncInfo")
 extern interface IAsyncInfo extends winrt.windows.foundation.IInspectable
 {
-    overload function Id(): UInt32;
+    overload function Id(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function Status(): winrt.windows.foundation.AsyncStatus;
     overload function ErrorCode(): winrt.HResult;
     function Cancel(): Void;

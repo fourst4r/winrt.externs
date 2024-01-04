@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.background;
 extern class UserNotificationChangedTrigger
     implements winrt.windows.applicationmodel.background.IBackgroundTrigger
 {
-    /* explicit */ function new(notificationKinds: ConstRef<winrt.windows.ui.notifications.NotificationKinds>);
+    /* explicit */ function new(notificationKinds: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.notifications.NotificationKinds>);
 }

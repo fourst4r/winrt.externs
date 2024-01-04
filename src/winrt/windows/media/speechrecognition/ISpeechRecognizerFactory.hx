@@ -8,5 +8,5 @@ package winrt.windows.media.speechrecognition;
 @:native("winrt::Windows::Media::SpeechRecognition::ISpeechRecognizerFactory")
 extern interface ISpeechRecognizerFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(language: ConstRef<winrt.windows.globalization.Language>): winrt.windows.media.speechrecognition.SpeechRecognizer;
+    function Create(language: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.globalization.Language>): winrt.windows.media.speechrecognition.SpeechRecognizer;
 }

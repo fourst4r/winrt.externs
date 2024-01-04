@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.automation.peers;
 
 @:include("winrt/Microsoft.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationLandmarkType")
-extern enum abstract AutomationLandmarkType(Int32)
+extern enum abstract AutomationLandmarkType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationLandmarkType::None") final None;
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationLandmarkType::Custom") final Custom;

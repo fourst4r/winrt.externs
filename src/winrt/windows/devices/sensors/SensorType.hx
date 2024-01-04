@@ -2,7 +2,7 @@ package winrt.windows.devices.sensors;
 
 @:include("winrt/Windows.Devices.Sensors.h", true)
 @:native("winrt::Windows::Devices::Sensors::SensorType")
-extern enum abstract SensorType(Int32)
+extern enum abstract SensorType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::Sensors::SensorType::Accelerometer") final Accelerometer;
     @:native("winrt::Windows::Devices::Sensors::SensorType::ActivitySensor") final ActivitySensor;

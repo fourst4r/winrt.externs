@@ -16,5 +16,5 @@ extern class WebAccountProviderSignOutAccountOperation
     overload function ClientId(): winrt.HString;
     overload function Kind(): winrt.windows.security.authentication.web.provider.WebAccountProviderOperationKind;
     function ReportCompleted(): Void;
-    function ReportError(value: ConstRef<winrt.windows.security.authentication.web.core.WebProviderError>): Void;
+    function ReportError(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.authentication.web.core.WebProviderError>): Void;
 }

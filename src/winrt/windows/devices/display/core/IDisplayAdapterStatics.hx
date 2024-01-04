@@ -8,5 +8,5 @@ package winrt.windows.devices.display.core;
 @:native("winrt::Windows::Devices::Display::Core::IDisplayAdapterStatics")
 extern interface IDisplayAdapterStatics extends winrt.windows.foundation.IInspectable
 {
-    function FromId(id: ConstRef<winrt.windows.graphics.DisplayAdapterId>): winrt.windows.devices.display.core.DisplayAdapter;
+    function FromId(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.DisplayAdapterId>): winrt.windows.devices.display.core.DisplayAdapter;
 }

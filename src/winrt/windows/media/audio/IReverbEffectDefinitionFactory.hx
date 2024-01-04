@@ -8,5 +8,5 @@ package winrt.windows.media.audio;
 @:native("winrt::Windows::Media::Audio::IReverbEffectDefinitionFactory")
 extern interface IReverbEffectDefinitionFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(audioGraph: ConstRef<winrt.windows.media.audio.AudioGraph>): winrt.windows.media.audio.ReverbEffectDefinition;
+    function Create(audioGraph: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.audio.AudioGraph>): winrt.windows.media.audio.ReverbEffectDefinition;
 }

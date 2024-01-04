@@ -10,5 +10,5 @@ extern interface IAppointmentStoreChangeReader extends winrt.windows.foundation.
 {
     function ReadBatchAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.appointments.AppointmentStoreChange> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
     function AcceptChanges(): Void;
-    function AcceptChangesThrough(lastChangeToAccept: ConstRef<winrt.windows.applicationmodel.appointments.AppointmentStoreChange>): Void;
+    function AcceptChangesThrough(lastChangeToAccept: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.appointments.AppointmentStoreChange>): Void;
 }

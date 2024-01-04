@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.calls;
 @:native("winrt::Windows::ApplicationModel::Calls::IPhoneLineStatics")
 extern interface IPhoneLineStatics extends winrt.windows.foundation.IInspectable
 {
-    function FromIdAsync(lineId: ConstRef<winrt.Guid>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.calls.PhoneLine> /* GenericTypeInstSig */;
+    function FromIdAsync(lineId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.calls.PhoneLine> /* GenericTypeInstSig */;
 }

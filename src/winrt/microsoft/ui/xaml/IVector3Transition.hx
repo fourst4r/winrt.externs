@@ -9,7 +9,7 @@ package winrt.microsoft.ui.xaml;
 extern interface IVector3Transition extends winrt.windows.foundation.IInspectable
 {
     overload function Duration(): winrt.windows.foundation.TimeSpan;
-    overload function Duration(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function Duration(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function Components(): winrt.microsoft.ui.xaml.Vector3TransitionComponents;
-    overload function Components(value: ConstRef<winrt.microsoft.ui.xaml.Vector3TransitionComponents>): Void;
+    overload function Components(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.Vector3TransitionComponents>): Void;
 }

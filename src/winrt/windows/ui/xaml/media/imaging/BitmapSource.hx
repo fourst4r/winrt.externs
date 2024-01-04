@@ -10,10 +10,10 @@ extern class BitmapSource
     extends winrt.windows.ui.xaml.media.ImageSource
     implements winrt.windows.ui.xaml.media.imaging.IBitmapSource
 {
-    overload function PixelWidth(): Int32;
-    overload function PixelHeight(): Int32;
-    function SetSource(streamSource: ConstRef<winrt.windows.storage.streams.IRandomAccessStream>): Void;
-    function SetSourceAsync(streamSource: ConstRef<winrt.windows.storage.streams.IRandomAccessStream>): winrt.windows.foundation.IAsyncAction;
+    overload function PixelWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function PixelHeight(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function SetSource(streamSource: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStream>): Void;
+    function SetSourceAsync(streamSource: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStream>): winrt.windows.foundation.IAsyncAction;
     overload function PixelWidthProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function PixelHeightProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function PixelWidthProperty(): winrt.windows.ui.xaml.DependencyProperty;

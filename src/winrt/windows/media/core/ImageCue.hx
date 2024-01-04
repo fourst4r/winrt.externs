@@ -12,15 +12,15 @@ extern class ImageCue
 {
     function new();
     overload function Position(): winrt.windows.media.core.TimedTextPoint;
-    overload function Position(value: ConstRef<winrt.windows.media.core.TimedTextPoint>): Void;
+    overload function Position(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.TimedTextPoint>): Void;
     overload function Extent(): winrt.windows.media.core.TimedTextSize;
-    overload function Extent(value: ConstRef<winrt.windows.media.core.TimedTextSize>): Void;
-    overload function SoftwareBitmap(value: ConstRef<winrt.windows.graphics.imaging.SoftwareBitmap>): Void;
+    overload function Extent(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.TimedTextSize>): Void;
+    overload function SoftwareBitmap(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.imaging.SoftwareBitmap>): Void;
     overload function SoftwareBitmap(): winrt.windows.graphics.imaging.SoftwareBitmap;
-    overload function StartTime(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function StartTime(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function StartTime(): winrt.windows.foundation.TimeSpan;
-    overload function Duration(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function Duration(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function Duration(): winrt.windows.foundation.TimeSpan;
-    overload function Id(value: ConstRef<winrt.HString>): Void;
+    overload function Id(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Id(): winrt.HString;
 }

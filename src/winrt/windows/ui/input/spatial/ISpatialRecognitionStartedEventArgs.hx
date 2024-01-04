@@ -9,6 +9,6 @@ package winrt.windows.ui.input.spatial;
 extern interface ISpatialRecognitionStartedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function InteractionSourceKind(): winrt.windows.ui.input.spatial.SpatialInteractionSourceKind;
-    function TryGetPointerPose(coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.ui.input.spatial.SpatialPointerPose;
-    function IsGesturePossible(gesture: ConstRef<winrt.windows.ui.input.spatial.SpatialGestureSettings>): Bool;
+    function TryGetPointerPose(coordinateSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.ui.input.spatial.SpatialPointerPose;
+    function IsGesturePossible(gesture: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.spatial.SpatialGestureSettings>): Bool;
 }

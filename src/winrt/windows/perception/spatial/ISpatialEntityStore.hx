@@ -8,7 +8,7 @@ package winrt.windows.perception.spatial;
 @:native("winrt::Windows::Perception::Spatial::ISpatialEntityStore")
 extern interface ISpatialEntityStore extends winrt.windows.foundation.IInspectable
 {
-    function SaveAsync(entity: ConstRef<winrt.windows.perception.spatial.SpatialEntity>): winrt.windows.foundation.IAsyncAction;
-    function RemoveAsync(entity: ConstRef<winrt.windows.perception.spatial.SpatialEntity>): winrt.windows.foundation.IAsyncAction;
+    function SaveAsync(entity: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialEntity>): winrt.windows.foundation.IAsyncAction;
+    function RemoveAsync(entity: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialEntity>): winrt.windows.foundation.IAsyncAction;
     function CreateEntityWatcher(): winrt.windows.perception.spatial.SpatialEntityWatcher;
 }

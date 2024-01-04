@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.media;
 extern interface ITimelineMarkerRoutedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function Marker(): winrt.windows.ui.xaml.media.TimelineMarker;
-    overload function Marker(value: ConstRef<winrt.windows.ui.xaml.media.TimelineMarker>): Void;
+    overload function Marker(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.TimelineMarker>): Void;
 }

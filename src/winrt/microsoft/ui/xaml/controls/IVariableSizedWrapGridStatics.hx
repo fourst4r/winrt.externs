@@ -15,9 +15,9 @@ extern interface IVariableSizedWrapGridStatics extends winrt.windows.foundation.
     overload function VerticalChildrenAlignmentProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function MaximumRowsOrColumnsProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function RowSpanProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetRowSpan(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Int32;
-    function SetRowSpan(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>, value: Int32): Void;
+    function GetRowSpan(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function SetRowSpan(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>, value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function ColumnSpanProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetColumnSpan(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Int32;
-    function SetColumnSpan(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>, value: Int32): Void;
+    function GetColumnSpan(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function SetColumnSpan(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>, value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
 }

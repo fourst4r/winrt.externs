@@ -10,8 +10,8 @@ extern class CompositionRectangleGeometry
     extends winrt.microsoft.ui.composition.CompositionGeometry
     implements winrt.microsoft.ui.composition.ICompositionRectangleGeometry
 {
-    overload function Size(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function Size(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
     overload function Size(): winrt.windows.foundation.numerics.Vector2;
     overload function Offset(): winrt.windows.foundation.numerics.Vector2;
-    overload function Offset(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function Offset(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
 }

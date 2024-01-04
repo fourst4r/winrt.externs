@@ -9,5 +9,5 @@ package winrt.windows.security.dataprotection;
 extern interface IUserDataProtectionManagerStatics extends winrt.windows.foundation.IInspectable
 {
     function TryGetDefault(): winrt.windows.security.dataprotection.UserDataProtectionManager;
-    function TryGetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.security.dataprotection.UserDataProtectionManager;
+    function TryGetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.security.dataprotection.UserDataProtectionManager;
 }

@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.chat;
 extern interface IChatMessage4 extends winrt.windows.foundation.IInspectable
 {
     overload function SyncId(): winrt.HString;
-    overload function SyncId(value: ConstRef<winrt.HString>): Void;
+    overload function SyncId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

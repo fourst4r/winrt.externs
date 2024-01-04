@@ -11,7 +11,7 @@ extern class ElementFactoryRecycleArgs
 {
     function new();
     overload function Element(): winrt.microsoft.ui.xaml.UIElement;
-    overload function Element(value: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    overload function Element(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): Void;
     overload function Parent(): winrt.microsoft.ui.xaml.UIElement;
-    overload function Parent(value: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    overload function Parent(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): Void;
 }

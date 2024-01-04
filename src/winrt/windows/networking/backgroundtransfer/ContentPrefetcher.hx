@@ -5,7 +5,7 @@ package winrt.windows.networking.backgroundtransfer;
 extern class ContentPrefetcher
 {
     static overload function ContentUris(): winrt.windows.foundation.collections.IVector<winrt.windows.foundation.Uri> /* GenericTypeInstSig */;
-    static overload function IndirectContentUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    static overload function IndirectContentUri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     static overload function IndirectContentUri(): winrt.windows.foundation.Uri;
     static overload function LastSuccessfulPrefetchTime(): winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* GenericTypeInstSig */;
 }

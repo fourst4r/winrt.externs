@@ -10,6 +10,6 @@ extern class SmartCardTrigger
     implements winrt.windows.applicationmodel.background.IBackgroundTrigger
     implements winrt.windows.applicationmodel.background.ISmartCardTrigger
 {
-    /* explicit */ function new(triggerType: ConstRef<winrt.windows.devices.smartcards.SmartCardTriggerType>);
+    /* explicit */ function new(triggerType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.smartcards.SmartCardTriggerType>);
     overload function TriggerType(): winrt.windows.devices.smartcards.SmartCardTriggerType;
 }

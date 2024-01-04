@@ -11,5 +11,5 @@ extern class TappedEventArgs
 {
     overload function Position(): winrt.windows.foundation.Point;
     overload function PointerDeviceType(): winrt.microsoft.ui.input.PointerDeviceType;
-    overload function TapCount(): UInt32;
+    overload function TapCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

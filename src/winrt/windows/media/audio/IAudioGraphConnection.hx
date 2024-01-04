@@ -9,6 +9,6 @@ package winrt.windows.media.audio;
 extern interface IAudioGraphConnection extends winrt.windows.foundation.IInspectable
 {
     overload function Destination(): winrt.windows.media.audio.IAudioNode;
-    overload function Gain(value: Float64): Void;
-    overload function Gain(): Float64;
+    overload function Gain(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function Gain(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

@@ -24,14 +24,14 @@ extern class GlobalSystemMediaTransportControlsSession
     function TryChangeChannelUpAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     function TryChangeChannelDownAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     function TryTogglePlayPauseAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
-    function TryChangeAutoRepeatModeAsync(requestedAutoRepeatMode: ConstRef<winrt.windows.media.MediaPlaybackAutoRepeatMode>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
-    function TryChangePlaybackRateAsync(requestedPlaybackRate: Float64): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function TryChangeAutoRepeatModeAsync(requestedAutoRepeatMode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.MediaPlaybackAutoRepeatMode>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function TryChangePlaybackRateAsync(requestedPlaybackRate: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     function TryChangeShuffleActiveAsync(requestedShuffleState: Bool): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
-    function TryChangePlaybackPositionAsync(requestedPlaybackPosition: Int64): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
-    overload function TimelinePropertiesChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.control.GlobalSystemMediaTransportControlsSession, winrt.windows.media.control.TimelinePropertiesChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function TimelinePropertiesChanged(token: ConstRef<winrt.EventToken>): Void;
-    overload function PlaybackInfoChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.control.GlobalSystemMediaTransportControlsSession, winrt.windows.media.control.PlaybackInfoChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function PlaybackInfoChanged(token: ConstRef<winrt.EventToken>): Void;
-    overload function MediaPropertiesChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.control.GlobalSystemMediaTransportControlsSession, winrt.windows.media.control.MediaPropertiesChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function MediaPropertiesChanged(token: ConstRef<winrt.EventToken>): Void;
+    function TryChangePlaybackPositionAsync(requestedPlaybackPosition: #if reflaxe.cpp cxx.num. #else cpp. #end Int64): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    overload function TimelinePropertiesChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.control.GlobalSystemMediaTransportControlsSession, winrt.windows.media.control.TimelinePropertiesChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function TimelinePropertiesChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function PlaybackInfoChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.control.GlobalSystemMediaTransportControlsSession, winrt.windows.media.control.PlaybackInfoChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function PlaybackInfoChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function MediaPropertiesChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.control.GlobalSystemMediaTransportControlsSession, winrt.windows.media.control.MediaPropertiesChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function MediaPropertiesChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

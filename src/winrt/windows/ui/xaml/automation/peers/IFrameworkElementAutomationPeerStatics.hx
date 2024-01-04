@@ -8,6 +8,6 @@ package winrt.windows.ui.xaml.automation.peers;
 @:native("winrt::Windows::UI::Xaml::Automation::Peers::IFrameworkElementAutomationPeerStatics")
 extern interface IFrameworkElementAutomationPeerStatics extends winrt.windows.foundation.IInspectable
 {
-    function FromElement(element: ConstRef<winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
-    function CreatePeerForElement(element: ConstRef<winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
+    function FromElement(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
+    function CreatePeerForElement(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
 }

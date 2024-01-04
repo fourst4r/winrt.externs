@@ -8,5 +8,5 @@ package winrt.windows.system.remotesystems;
 @:native("winrt::Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilterFactory")
 extern interface IRemoteSystemStatusTypeFilterFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(remoteSystemStatusType: ConstRef<winrt.windows.system.remotesystems.RemoteSystemStatusType>): winrt.windows.system.remotesystems.RemoteSystemStatusTypeFilter;
+    function Create(remoteSystemStatusType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.remotesystems.RemoteSystemStatusType>): winrt.windows.system.remotesystems.RemoteSystemStatusTypeFilter;
 }

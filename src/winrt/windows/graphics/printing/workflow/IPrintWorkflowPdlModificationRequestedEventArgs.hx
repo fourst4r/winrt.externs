@@ -12,9 +12,9 @@ extern interface IPrintWorkflowPdlModificationRequestedEventArgs extends winrt.w
     overload function PrinterJob(): winrt.windows.graphics.printing.workflow.PrintWorkflowPrinterJob;
     overload function SourceContent(): winrt.windows.graphics.printing.workflow.PrintWorkflowPdlSourceContent;
     overload function UILauncher(): winrt.windows.graphics.printing.workflow.PrintWorkflowUILauncher;
-    function CreateJobOnPrinter(targetContentType: ConstRef<winrt.HString>): winrt.windows.graphics.printing.workflow.PrintWorkflowPdlTargetStream;
-    function CreateJobOnPrinterWithAttributes(jobAttributes: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.windows.devices.printers.IppAttributeValue> /* GenericTypeInstSig */> /* temp_GenericTypeInstSig */>, targetContentType: ConstRef<winrt.HString>): winrt.windows.graphics.printing.workflow.PrintWorkflowPdlTargetStream;
-    function CreateJobOnPrinterWithAttributesBuffer(jobAttributesBuffer: ConstRef<winrt.windows.storage.streams.IBuffer>, targetContentType: ConstRef<winrt.HString>): winrt.windows.graphics.printing.workflow.PrintWorkflowPdlTargetStream;
-    function GetPdlConverter(conversionType: ConstRef<winrt.windows.graphics.printing.workflow.PrintWorkflowPdlConversionType>): winrt.windows.graphics.printing.workflow.PrintWorkflowPdlConverter;
+    function CreateJobOnPrinter(targetContentType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.graphics.printing.workflow.PrintWorkflowPdlTargetStream;
+    function CreateJobOnPrinterWithAttributes(jobAttributes: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.windows.devices.printers.IppAttributeValue> /* GenericTypeInstSig */> /* temp_GenericTypeInstSig */>, targetContentType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.graphics.printing.workflow.PrintWorkflowPdlTargetStream;
+    function CreateJobOnPrinterWithAttributesBuffer(jobAttributesBuffer: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>, targetContentType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.graphics.printing.workflow.PrintWorkflowPdlTargetStream;
+    function GetPdlConverter(conversionType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing.workflow.PrintWorkflowPdlConversionType>): winrt.windows.graphics.printing.workflow.PrintWorkflowPdlConverter;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

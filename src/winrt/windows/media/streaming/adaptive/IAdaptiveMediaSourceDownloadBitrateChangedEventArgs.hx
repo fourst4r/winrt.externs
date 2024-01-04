@@ -8,6 +8,6 @@ package winrt.windows.media.streaming.adaptive;
 @:native("winrt::Windows::Media::Streaming::Adaptive::IAdaptiveMediaSourceDownloadBitrateChangedEventArgs")
 extern interface IAdaptiveMediaSourceDownloadBitrateChangedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function OldValue(): UInt32;
-    overload function NewValue(): UInt32;
+    overload function OldValue(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function NewValue(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

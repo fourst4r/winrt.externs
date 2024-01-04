@@ -12,5 +12,5 @@ extern class SwapChainBackgroundPanel
     implements winrt.windows.ui.xaml.controls.ISwapChainBackgroundPanel2
 {
     function new();
-    function CreateCoreIndependentInputSource(deviceTypes: ConstRef<winrt.windows.ui.core.CoreInputDeviceTypes>): winrt.windows.ui.core.CoreIndependentInputSource;
+    function CreateCoreIndependentInputSource(deviceTypes: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.CoreInputDeviceTypes>): winrt.windows.ui.core.CoreIndependentInputSource;
 }

@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.useractivities;
 @:native("winrt::Windows::ApplicationModel::UserActivities::IUserActivityAttributionFactory")
 extern interface IUserActivityAttributionFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWithUri(iconUri: ConstRef<winrt.windows.foundation.Uri>): winrt.windows.applicationmodel.useractivities.UserActivityAttribution;
+    function CreateWithUri(iconUri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): winrt.windows.applicationmodel.useractivities.UserActivityAttribution;
 }

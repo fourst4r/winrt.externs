@@ -11,12 +11,12 @@ extern class ToastNotificationHistory
     implements winrt.windows.ui.notifications.IToastNotificationHistory
 {
     overload function GetHistory(): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.notifications.ToastNotification> /* GenericTypeInstSig */;
-    overload function GetHistory(applicationId: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.notifications.ToastNotification> /* GenericTypeInstSig */;
-    overload function RemoveGroup(group: ConstRef<winrt.HString>): Void;
-    overload function RemoveGroup(group: ConstRef<winrt.HString>, applicationId: ConstRef<winrt.HString>): Void;
-    overload function Remove(tag: ConstRef<winrt.HString>, group: ConstRef<winrt.HString>, applicationId: ConstRef<winrt.HString>): Void;
-    overload function Remove(tag: ConstRef<winrt.HString>, group: ConstRef<winrt.HString>): Void;
-    overload function Remove(tag: ConstRef<winrt.HString>): Void;
+    overload function GetHistory(applicationId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.notifications.ToastNotification> /* GenericTypeInstSig */;
+    overload function RemoveGroup(group: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function RemoveGroup(group: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, applicationId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function Remove(tag: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, group: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, applicationId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function Remove(tag: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, group: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function Remove(tag: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Clear(): Void;
-    overload function Clear(applicationId: ConstRef<winrt.HString>): Void;
+    overload function Clear(applicationId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

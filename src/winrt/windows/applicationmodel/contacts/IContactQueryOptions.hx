@@ -13,8 +13,8 @@ extern interface IContactQueryOptions extends winrt.windows.foundation.IInspecta
     overload function IncludeContactsFromHiddenLists(): Bool;
     overload function IncludeContactsFromHiddenLists(value: Bool): Void;
     overload function DesiredFields(): winrt.windows.applicationmodel.contacts.ContactQueryDesiredFields;
-    overload function DesiredFields(value: ConstRef<winrt.windows.applicationmodel.contacts.ContactQueryDesiredFields>): Void;
+    overload function DesiredFields(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.contacts.ContactQueryDesiredFields>): Void;
     overload function DesiredOperations(): winrt.windows.applicationmodel.contacts.ContactAnnotationOperations;
-    overload function DesiredOperations(value: ConstRef<winrt.windows.applicationmodel.contacts.ContactAnnotationOperations>): Void;
+    overload function DesiredOperations(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.contacts.ContactAnnotationOperations>): Void;
     overload function AnnotationListIds(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
 }

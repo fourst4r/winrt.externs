@@ -10,5 +10,5 @@ extern class ListBoxAutomationPeer
     extends winrt.windows.ui.xaml.automation.peers.SelectorAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IListBoxAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.ListBox>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.ListBox>);
 }

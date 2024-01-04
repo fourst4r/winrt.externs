@@ -9,8 +9,8 @@ package winrt.windows.applicationmodel.email;
 extern class EmailItemCounts
     implements winrt.windows.applicationmodel.email.IEmailItemCounts
 {
-    overload function Flagged(): UInt32;
-    overload function Important(): UInt32;
-    overload function Total(): UInt32;
-    overload function Unread(): UInt32;
+    overload function Flagged(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Important(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Total(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Unread(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

@@ -8,5 +8,5 @@ package winrt.windows.devices.enumeration;
 @:native("winrt::Windows::Devices::Enumeration::IDeviceInformationPairingStatics")
 extern interface IDeviceInformationPairingStatics extends winrt.windows.foundation.IInspectable
 {
-    function TryRegisterForAllInboundPairingRequests(pairingKindsSupported: ConstRef<winrt.windows.devices.enumeration.DevicePairingKinds>): Bool;
+    function TryRegisterForAllInboundPairingRequests(pairingKindsSupported: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.enumeration.DevicePairingKinds>): Bool;
 }

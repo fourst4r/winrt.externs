@@ -8,6 +8,6 @@ package winrt.windows.web.syndication;
 @:native("winrt::Windows::Web::Syndication::ISyndicationContentFactory")
 extern interface ISyndicationContentFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateSyndicationContent(text: ConstRef<winrt.HString>, type: ConstRef<winrt.windows.web.syndication.SyndicationTextType>): winrt.windows.web.syndication.SyndicationContent;
-    function CreateSyndicationContentWithSourceUri(sourceUri: ConstRef<winrt.windows.foundation.Uri>): winrt.windows.web.syndication.SyndicationContent;
+    function CreateSyndicationContent(text: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.syndication.SyndicationTextType>): winrt.windows.web.syndication.SyndicationContent;
+    function CreateSyndicationContentWithSourceUri(sourceUri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): winrt.windows.web.syndication.SyndicationContent;
 }

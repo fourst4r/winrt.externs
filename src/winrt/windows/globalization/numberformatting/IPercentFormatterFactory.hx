@@ -8,5 +8,5 @@ package winrt.windows.globalization.numberformatting;
 @:native("winrt::Windows::Globalization::NumberFormatting::IPercentFormatterFactory")
 extern interface IPercentFormatterFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreatePercentFormatter(languages: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, geographicRegion: ConstRef<winrt.HString>): winrt.windows.globalization.numberformatting.PercentFormatter;
+    function CreatePercentFormatter(languages: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, geographicRegion: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.globalization.numberformatting.PercentFormatter;
 }

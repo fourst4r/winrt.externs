@@ -11,7 +11,7 @@ extern class CompositionProjectedShadowCaster
     implements winrt.windows.ui.composition.ICompositionProjectedShadowCaster
 {
     overload function Brush(): winrt.windows.ui.composition.CompositionBrush;
-    overload function Brush(value: ConstRef<winrt.windows.ui.composition.CompositionBrush>): Void;
+    overload function Brush(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionBrush>): Void;
     overload function CastingVisual(): winrt.windows.ui.composition.Visual;
-    overload function CastingVisual(value: ConstRef<winrt.windows.ui.composition.Visual>): Void;
+    overload function CastingVisual(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Visual>): Void;
 }

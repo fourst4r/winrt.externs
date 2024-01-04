@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml.controls;
 extern interface ICommandBar2 extends winrt.windows.foundation.IInspectable
 {
     overload function CommandBarOverflowPresenterStyle(): winrt.windows.ui.xaml.Style;
-    overload function CommandBarOverflowPresenterStyle(value: ConstRef<winrt.windows.ui.xaml.Style>): Void;
+    overload function CommandBarOverflowPresenterStyle(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.Style>): Void;
     overload function CommandBarTemplateSettings(): winrt.windows.ui.xaml.controls.primitives.CommandBarTemplateSettings;
 }

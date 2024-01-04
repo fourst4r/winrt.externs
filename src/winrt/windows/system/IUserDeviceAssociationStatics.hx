@@ -8,7 +8,7 @@ package winrt.windows.system;
 @:native("winrt::Windows::System::IUserDeviceAssociationStatics")
 extern interface IUserDeviceAssociationStatics extends winrt.windows.foundation.IInspectable
 {
-    function FindUserFromDeviceId(deviceId: ConstRef<winrt.HString>): winrt.windows.system.User;
-    overload function UserDeviceAssociationChanged(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.windows.system.UserDeviceAssociationChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function UserDeviceAssociationChanged(token: ConstRef<winrt.EventToken>): Void;
+    function FindUserFromDeviceId(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.system.User;
+    overload function UserDeviceAssociationChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.EventHandler<winrt.windows.system.UserDeviceAssociationChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function UserDeviceAssociationChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

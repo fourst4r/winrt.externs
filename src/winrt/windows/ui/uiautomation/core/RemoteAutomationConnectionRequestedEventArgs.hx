@@ -10,5 +10,5 @@ extern class RemoteAutomationConnectionRequestedEventArgs
     implements winrt.windows.ui.uiautomation.core.IRemoteAutomationConnectionRequestedEventArgs
 {
     overload function LocalPipeName(): winrt.HString;
-    overload function RemoteProcessId(): UInt32;
+    overload function RemoteProcessId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

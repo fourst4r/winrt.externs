@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.calls;
 
 @:include("winrt/Windows.ApplicationModel.Calls.h", true)
 @:native("winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherStatus")
-extern enum abstract PhoneLineWatcherStatus(Int32)
+extern enum abstract PhoneLineWatcherStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherStatus::Created") final Created;
     @:native("winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherStatus::Started") final Started;

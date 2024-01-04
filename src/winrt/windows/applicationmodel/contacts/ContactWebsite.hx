@@ -12,9 +12,9 @@ extern class ContactWebsite
 {
     function new();
     overload function Uri(): winrt.windows.foundation.Uri;
-    overload function Uri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function Uri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function Description(): winrt.HString;
-    overload function Description(value: ConstRef<winrt.HString>): Void;
+    overload function Description(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function RawValue(): winrt.HString;
-    overload function RawValue(value: ConstRef<winrt.HString>): Void;
+    overload function RawValue(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

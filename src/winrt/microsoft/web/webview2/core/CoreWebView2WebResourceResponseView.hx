@@ -10,7 +10,7 @@ extern class CoreWebView2WebResourceResponseView
     implements winrt.microsoft.web.webview2.core.ICoreWebView2WebResourceResponseView
 {
     overload function Headers(): winrt.microsoft.web.webview2.core.CoreWebView2HttpResponseHeaders;
-    overload function StatusCode(): Int32;
+    overload function StatusCode(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function ReasonPhrase(): winrt.HString;
     function GetContentAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.streams.IRandomAccessStream> /* GenericTypeInstSig */;
 }

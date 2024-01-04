@@ -8,7 +8,7 @@ package winrt.windows.graphics.holographic;
 @:native("winrt::Windows::Graphics::Holographic::IHolographicCameraPose2")
 extern interface IHolographicCameraPose2 extends winrt.windows.foundation.IInspectable
 {
-    function OverrideViewTransform(coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>, coordinateSystemToViewTransform: ConstRef<winrt.windows.graphics.holographic.HolographicStereoTransform>): Void;
-    function OverrideProjectionTransform(projectionTransform: ConstRef<winrt.windows.graphics.holographic.HolographicStereoTransform>): Void;
-    function OverrideViewport(leftViewport: ConstRef<winrt.windows.foundation.Rect>, rightViewport: ConstRef<winrt.windows.foundation.Rect>): Void;
+    function OverrideViewTransform(coordinateSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>, coordinateSystemToViewTransform: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.holographic.HolographicStereoTransform>): Void;
+    function OverrideProjectionTransform(projectionTransform: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.holographic.HolographicStereoTransform>): Void;
+    function OverrideViewport(leftViewport: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Rect>, rightViewport: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Rect>): Void;
 }

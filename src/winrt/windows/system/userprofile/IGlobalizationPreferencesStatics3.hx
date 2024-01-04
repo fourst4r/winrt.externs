@@ -8,5 +8,5 @@ package winrt.windows.system.userprofile;
 @:native("winrt::Windows::System::UserProfile::IGlobalizationPreferencesStatics3")
 extern interface IGlobalizationPreferencesStatics3 extends winrt.windows.foundation.IInspectable
 {
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.system.userprofile.GlobalizationPreferencesForUser;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.system.userprofile.GlobalizationPreferencesForUser;
 }

@@ -11,6 +11,6 @@ extern class ElasticEasingFunction
     implements winrt.windows.ui.composition.IElasticEasingFunction
 {
     overload function Mode(): winrt.windows.ui.composition.CompositionEasingFunctionMode;
-    overload function Oscillations(): Int32;
-    overload function Springiness(): Float32;
+    overload function Oscillations(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Springiness(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
 }

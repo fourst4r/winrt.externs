@@ -8,6 +8,6 @@ package winrt.windows.ui.composition;
 @:native("winrt::Windows::UI::Composition::ICompositionEffectBrush")
 extern interface ICompositionEffectBrush extends winrt.windows.foundation.IInspectable
 {
-    function GetSourceParameter(name: ConstRef<winrt.HString>): winrt.windows.ui.composition.CompositionBrush;
-    function SetSourceParameter(name: ConstRef<winrt.HString>, source: ConstRef<winrt.windows.ui.composition.CompositionBrush>): Void;
+    function GetSourceParameter(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.composition.CompositionBrush;
+    function SetSourceParameter(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, source: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionBrush>): Void;
 }

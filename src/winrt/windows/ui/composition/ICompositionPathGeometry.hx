@@ -9,5 +9,5 @@ package winrt.windows.ui.composition;
 extern interface ICompositionPathGeometry extends winrt.windows.foundation.IInspectable
 {
     overload function Path(): winrt.windows.ui.composition.CompositionPath;
-    overload function Path(value: ConstRef<winrt.windows.ui.composition.CompositionPath>): Void;
+    overload function Path(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionPath>): Void;
 }

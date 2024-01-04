@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.useractivities;
 @:native("winrt::Windows::ApplicationModel::UserActivities::IUserActivityChannelStatics3")
 extern interface IUserActivityChannelStatics3 extends winrt.windows.foundation.IInspectable
 {
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.applicationmodel.useractivities.UserActivityChannel;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.applicationmodel.useractivities.UserActivityChannel;
 }

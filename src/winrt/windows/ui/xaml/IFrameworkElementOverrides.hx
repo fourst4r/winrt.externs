@@ -8,7 +8,7 @@ package winrt.windows.ui.xaml;
 @:native("winrt::Windows::UI::Xaml::IFrameworkElementOverrides")
 extern interface IFrameworkElementOverrides extends winrt.windows.foundation.IInspectable
 {
-    function MeasureOverride(availableSize: ConstRef<winrt.windows.foundation.Size>): winrt.windows.foundation.Size;
-    function ArrangeOverride(finalSize: ConstRef<winrt.windows.foundation.Size>): winrt.windows.foundation.Size;
+    function MeasureOverride(availableSize: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Size>): winrt.windows.foundation.Size;
+    function ArrangeOverride(finalSize: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Size>): winrt.windows.foundation.Size;
     function OnApplyTemplate(): Void;
 }

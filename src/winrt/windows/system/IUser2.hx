@@ -8,5 +8,5 @@ package winrt.windows.system;
 @:native("winrt::Windows::System::IUser2")
 extern interface IUser2 extends winrt.windows.foundation.IInspectable
 {
-    function CheckUserAgeConsentGroupAsync(consentGroup: ConstRef<winrt.windows.system.UserAgeConsentGroup>): winrt.windows.foundation.IAsyncOperation<winrt.windows.system.UserAgeConsentResult> /* GenericTypeInstSig */;
+    function CheckUserAgeConsentGroupAsync(consentGroup: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.UserAgeConsentGroup>): winrt.windows.foundation.IAsyncOperation<winrt.windows.system.UserAgeConsentResult> /* GenericTypeInstSig */;
 }

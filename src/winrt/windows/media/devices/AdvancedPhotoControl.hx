@@ -12,5 +12,5 @@ extern class AdvancedPhotoControl
     overload function Supported(): Bool;
     overload function SupportedModes(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.devices.AdvancedPhotoMode> /* GenericTypeInstSig */;
     overload function Mode(): winrt.windows.media.devices.AdvancedPhotoMode;
-    function Configure(settings: ConstRef<winrt.windows.media.devices.AdvancedPhotoCaptureSettings>): Void;
+    function Configure(settings: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.AdvancedPhotoCaptureSettings>): Void;
 }

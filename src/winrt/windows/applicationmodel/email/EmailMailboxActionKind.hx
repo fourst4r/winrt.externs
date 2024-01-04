@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.email;
 
 @:include("winrt/Windows.ApplicationModel.Email.h", true)
 @:native("winrt::Windows::ApplicationModel::Email::EmailMailboxActionKind")
-extern enum abstract EmailMailboxActionKind(Int32)
+extern enum abstract EmailMailboxActionKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Email::EmailMailboxActionKind::MarkMessageAsSeen") final MarkMessageAsSeen;
     @:native("winrt::Windows::ApplicationModel::Email::EmailMailboxActionKind::MarkMessageRead") final MarkMessageRead;

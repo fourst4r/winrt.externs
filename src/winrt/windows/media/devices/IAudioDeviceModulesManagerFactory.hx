@@ -8,5 +8,5 @@ package winrt.windows.media.devices;
 @:native("winrt::Windows::Media::Devices::IAudioDeviceModulesManagerFactory")
 extern interface IAudioDeviceModulesManagerFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(deviceId: ConstRef<winrt.HString>): winrt.windows.media.devices.AudioDeviceModulesManager;
+    function Create(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.media.devices.AudioDeviceModulesManager;
 }

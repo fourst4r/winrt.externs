@@ -8,8 +8,8 @@ package winrt.windows.media.mediaproperties;
 @:native("winrt::Windows::Media::MediaProperties::IMediaRatio")
 extern interface IMediaRatio extends winrt.windows.foundation.IInspectable
 {
-    overload function Numerator(value: UInt32): Void;
-    overload function Numerator(): UInt32;
-    overload function Denominator(value: UInt32): Void;
-    overload function Denominator(): UInt32;
+    overload function Numerator(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function Numerator(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Denominator(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function Denominator(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

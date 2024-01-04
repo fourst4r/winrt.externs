@@ -19,8 +19,8 @@ extern class FlashControl
     overload function Auto(value: Bool): Void;
     overload function RedEyeReduction(): Bool;
     overload function RedEyeReduction(value: Bool): Void;
-    overload function PowerPercent(): Float32;
-    overload function PowerPercent(value: Float32): Void;
+    overload function PowerPercent(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function PowerPercent(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
     overload function AssistantLightSupported(): Bool;
     overload function AssistantLightEnabled(): Bool;
     overload function AssistantLightEnabled(value: Bool): Void;

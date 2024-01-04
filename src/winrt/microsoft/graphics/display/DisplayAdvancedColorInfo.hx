@@ -14,10 +14,10 @@ extern class DisplayAdvancedColorInfo
     overload function GreenPrimary(): winrt.windows.foundation.Point;
     overload function BluePrimary(): winrt.windows.foundation.Point;
     overload function WhitePoint(): winrt.windows.foundation.Point;
-    overload function MaxLuminanceInNits(): Float64;
-    overload function MinLuminanceInNits(): Float64;
-    overload function MaxAverageFullFrameLuminanceInNits(): Float64;
-    overload function SdrWhiteLevelInNits(): Float64;
-    function IsHdrMetadataFormatCurrentlySupported(format: ConstRef<winrt.microsoft.graphics.display.DisplayHdrMetadataFormat>): Bool;
-    function IsAdvancedColorKindAvailable(kind: ConstRef<winrt.microsoft.graphics.display.DisplayAdvancedColorKind>): Bool;
+    overload function MaxLuminanceInNits(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function MinLuminanceInNits(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function MaxAverageFullFrameLuminanceInNits(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function SdrWhiteLevelInNits(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    function IsHdrMetadataFormatCurrentlySupported(format: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.graphics.display.DisplayHdrMetadataFormat>): Bool;
+    function IsAdvancedColorKindAvailable(kind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.graphics.display.DisplayAdvancedColorKind>): Bool;
 }

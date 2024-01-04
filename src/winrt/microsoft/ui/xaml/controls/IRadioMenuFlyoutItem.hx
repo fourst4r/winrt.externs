@@ -11,5 +11,5 @@ extern interface IRadioMenuFlyoutItem extends winrt.windows.foundation.IInspecta
     overload function IsChecked(): Bool;
     overload function IsChecked(value: Bool): Void;
     overload function GroupName(): winrt.HString;
-    overload function GroupName(value: ConstRef<winrt.HString>): Void;
+    overload function GroupName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

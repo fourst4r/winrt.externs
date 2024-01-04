@@ -8,5 +8,5 @@ package winrt.windows.devices.bluetooth.rfcomm;
 @:native("winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2")
 extern interface IRfcommServiceProvider2 extends winrt.windows.foundation.IInspectable
 {
-    function StartAdvertising(listener: ConstRef<winrt.windows.networking.sockets.StreamSocketListener>, radioDiscoverable: Bool): Void;
+    function StartAdvertising(listener: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.sockets.StreamSocketListener>, radioDiscoverable: Bool): Void;
 }

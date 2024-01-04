@@ -12,5 +12,5 @@ extern class SmartCardPinResetRequest
     overload function Challenge(): winrt.windows.storage.streams.IBuffer;
     overload function Deadline(): winrt.windows.foundation.DateTime;
     function GetDeferral(): winrt.windows.devices.smartcards.SmartCardPinResetDeferral;
-    function SetResponse(response: ConstRef<winrt.windows.storage.streams.IBuffer>): Void;
+    function SetResponse(response: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): Void;
 }

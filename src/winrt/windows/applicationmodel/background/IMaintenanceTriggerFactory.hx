@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.background;
 @:native("winrt::Windows::ApplicationModel::Background::IMaintenanceTriggerFactory")
 extern interface IMaintenanceTriggerFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(freshnessTime: UInt32, oneShot: Bool): winrt.windows.applicationmodel.background.MaintenanceTrigger;
+    function Create(freshnessTime: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, oneShot: Bool): winrt.windows.applicationmodel.background.MaintenanceTrigger;
 }

@@ -8,6 +8,6 @@ extern class KnownContactField
     static overload function PhoneNumber(): winrt.HString;
     static overload function Location(): winrt.HString;
     static overload function InstantMessage(): winrt.HString;
-    static function ConvertNameToType(name: ConstRef<winrt.HString>): winrt.windows.applicationmodel.contacts.ContactFieldType;
-    static function ConvertTypeToName(type: ConstRef<winrt.windows.applicationmodel.contacts.ContactFieldType>): winrt.HString;
+    static function ConvertNameToType(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.contacts.ContactFieldType;
+    static function ConvertTypeToName(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.contacts.ContactFieldType>): winrt.HString;
 }

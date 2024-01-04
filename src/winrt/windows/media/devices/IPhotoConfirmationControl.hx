@@ -12,5 +12,5 @@ extern interface IPhotoConfirmationControl extends winrt.windows.foundation.IIns
     overload function Enabled(): Bool;
     overload function Enabled(value: Bool): Void;
     overload function PixelFormat(): winrt.windows.media.mediaproperties.MediaPixelFormat;
-    overload function PixelFormat(format: ConstRef<winrt.windows.media.mediaproperties.MediaPixelFormat>): Void;
+    overload function PixelFormat(format: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.mediaproperties.MediaPixelFormat>): Void;
 }

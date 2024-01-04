@@ -21,6 +21,6 @@ extern interface IPivotStatics extends winrt.windows.foundation.IInspectable
     overload function HeaderFocusVisualPlacementProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function IsHeaderItemsCarouselEnabledProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function SlideInAnimationGroupProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetSlideInAnimationGroup(element: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>): winrt.microsoft.ui.xaml.controls.PivotSlideInAnimationGroup;
-    function SetSlideInAnimationGroup(element: ConstRef<winrt.microsoft.ui.xaml.FrameworkElement>, value: ConstRef<winrt.microsoft.ui.xaml.controls.PivotSlideInAnimationGroup>): Void;
+    function GetSlideInAnimationGroup(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.FrameworkElement>): winrt.microsoft.ui.xaml.controls.PivotSlideInAnimationGroup;
+    function SetSlideInAnimationGroup(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.FrameworkElement>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.PivotSlideInAnimationGroup>): Void;
 }

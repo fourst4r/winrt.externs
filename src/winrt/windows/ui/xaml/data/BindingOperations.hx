@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml.data;
 extern class BindingOperations
     implements winrt.windows.ui.xaml.data.IBindingOperations
 {
-    function SetBinding(target: ConstRef<winrt.windows.ui.xaml.DependencyObject>, dp: ConstRef<winrt.windows.ui.xaml.DependencyProperty>, binding: ConstRef<winrt.windows.ui.xaml.data.BindingBase>): Void;
-    static function SetBinding(target: ConstRef<winrt.windows.ui.xaml.DependencyObject>, dp: ConstRef<winrt.windows.ui.xaml.DependencyProperty>, binding: ConstRef<winrt.windows.ui.xaml.data.BindingBase>): Void;
+    function SetBinding(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>, dp: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyProperty>, binding: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.data.BindingBase>): Void;
+    static function SetBinding(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>, dp: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyProperty>, binding: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.data.BindingBase>): Void;
 }

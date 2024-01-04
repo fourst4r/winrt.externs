@@ -9,15 +9,15 @@ package winrt.windows.ui.xaml.controls;
 extern interface IFontIconSource extends winrt.windows.foundation.IInspectable
 {
     overload function Glyph(): winrt.HString;
-    overload function Glyph(value: ConstRef<winrt.HString>): Void;
-    overload function FontSize(): Float64;
-    overload function FontSize(value: Float64): Void;
+    overload function Glyph(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function FontSize(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function FontSize(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function FontFamily(): winrt.windows.ui.xaml.media.FontFamily;
-    overload function FontFamily(value: ConstRef<winrt.windows.ui.xaml.media.FontFamily>): Void;
+    overload function FontFamily(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.FontFamily>): Void;
     overload function FontWeight(): winrt.windows.ui.text.FontWeight;
-    overload function FontWeight(value: ConstRef<winrt.windows.ui.text.FontWeight>): Void;
+    overload function FontWeight(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.text.FontWeight>): Void;
     overload function FontStyle(): winrt.windows.ui.text.FontStyle;
-    overload function FontStyle(value: ConstRef<winrt.windows.ui.text.FontStyle>): Void;
+    overload function FontStyle(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.text.FontStyle>): Void;
     overload function IsTextScaleFactorEnabled(): Bool;
     overload function IsTextScaleFactorEnabled(value: Bool): Void;
     overload function MirroredWhenRightToLeft(): Bool;

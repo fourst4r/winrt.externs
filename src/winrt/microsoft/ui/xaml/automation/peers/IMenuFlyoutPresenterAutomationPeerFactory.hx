@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml.automation.peers;
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::IMenuFlyoutPresenterAutomationPeerFactory")
 extern interface IMenuFlyoutPresenterAutomationPeerFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstanceWithOwner(owner: ConstRef<winrt.microsoft.ui.xaml.controls.MenuFlyoutPresenter>, baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.automation.peers.MenuFlyoutPresenterAutomationPeer;
+    function CreateInstanceWithOwner(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.MenuFlyoutPresenter>, baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.automation.peers.MenuFlyoutPresenterAutomationPeer;
 }

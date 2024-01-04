@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.media;
 extern interface IXamlCompositionBrushBase extends winrt.windows.foundation.IInspectable
 {
     overload function FallbackColor(): winrt.windows.ui.Color;
-    overload function FallbackColor(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function FallbackColor(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
 }

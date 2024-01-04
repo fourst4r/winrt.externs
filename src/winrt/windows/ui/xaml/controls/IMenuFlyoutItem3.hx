@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml.controls;
 extern interface IMenuFlyoutItem3 extends winrt.windows.foundation.IInspectable
 {
     overload function KeyboardAcceleratorTextOverride(): winrt.HString;
-    overload function KeyboardAcceleratorTextOverride(value: ConstRef<winrt.HString>): Void;
+    overload function KeyboardAcceleratorTextOverride(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function TemplateSettings(): winrt.windows.ui.xaml.controls.primitives.MenuFlyoutItemTemplateSettings;
 }

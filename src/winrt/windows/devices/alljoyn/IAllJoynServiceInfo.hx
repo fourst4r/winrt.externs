@@ -10,5 +10,5 @@ extern interface IAllJoynServiceInfo extends winrt.windows.foundation.IInspectab
 {
     overload function UniqueName(): winrt.HString;
     overload function ObjectPath(): winrt.HString;
-    overload function SessionPort(): UInt16;
+    overload function SessionPort(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
 }

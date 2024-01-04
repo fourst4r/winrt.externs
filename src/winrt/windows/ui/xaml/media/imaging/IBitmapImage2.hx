@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.media.imaging;
 extern interface IBitmapImage2 extends winrt.windows.foundation.IInspectable
 {
     overload function DecodePixelType(): winrt.windows.ui.xaml.media.imaging.DecodePixelType;
-    overload function DecodePixelType(value: ConstRef<winrt.windows.ui.xaml.media.imaging.DecodePixelType>): Void;
+    overload function DecodePixelType(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.imaging.DecodePixelType>): Void;
 }

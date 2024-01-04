@@ -9,12 +9,12 @@ package winrt.windows.ui.xaml.controls;
 extern interface ICanvasStatics extends winrt.windows.foundation.IInspectable
 {
     overload function LeftProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetLeft(element: ConstRef<winrt.windows.ui.xaml.UIElement>): Float64;
-    function SetLeft(element: ConstRef<winrt.windows.ui.xaml.UIElement>, length: Float64): Void;
+    function GetLeft(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    function SetLeft(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>, length: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function TopProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetTop(element: ConstRef<winrt.windows.ui.xaml.UIElement>): Float64;
-    function SetTop(element: ConstRef<winrt.windows.ui.xaml.UIElement>, length: Float64): Void;
+    function GetTop(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    function SetTop(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>, length: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function ZIndexProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetZIndex(element: ConstRef<winrt.windows.ui.xaml.UIElement>): Int32;
-    function SetZIndex(element: ConstRef<winrt.windows.ui.xaml.UIElement>, value: Int32): Void;
+    function GetZIndex(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function SetZIndex(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>, value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
 }

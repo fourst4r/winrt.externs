@@ -8,6 +8,6 @@ package winrt.windows.media.mediaproperties;
 @:native("winrt::Windows::Media::MediaProperties::IAudioEncodingPropertiesWithFormatUserData")
 extern interface IAudioEncodingPropertiesWithFormatUserData extends winrt.windows.foundation.IInspectable
 {
-    function SetFormatUserData(value: winrt.ArrayView<UInt8>): Void;
-    function GetFormatUserData(value: Ref<winrt.ComArray<UInt8>>): Void;
+    function SetFormatUserData(value: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): Void;
+    function GetFormatUserData(value: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>>): Void;
 }

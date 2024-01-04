@@ -10,17 +10,17 @@ extern class RowDefinitionCollection
     implements winrt.windows.foundation.collections.IIterable<winrt.windows.ui.xaml.controls.RowDefinition> /* GenericTypeInstSig */
     implements winrt.windows.foundation.collections.IVector<winrt.windows.ui.xaml.controls.RowDefinition> /* GenericTypeInstSig */
 {
-    function GetAt(index: UInt32): winrt.windows.ui.xaml.controls.RowDefinition;
-    overload function Size(): UInt32;
+    function GetAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.ui.xaml.controls.RowDefinition;
+    overload function Size(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     function GetView(): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.xaml.controls.RowDefinition> /* GenericTypeInstSig */;
-    function IndexOf(value: ConstRef<winrt.windows.ui.xaml.controls.RowDefinition>, index: Ref<UInt32>): Bool;
-    function SetAt(index: UInt32, value: ConstRef<winrt.windows.ui.xaml.controls.RowDefinition>): Void;
-    function InsertAt(index: UInt32, value: ConstRef<winrt.windows.ui.xaml.controls.RowDefinition>): Void;
-    function RemoveAt(index: UInt32): Void;
-    function Append(value: ConstRef<winrt.windows.ui.xaml.controls.RowDefinition>): Void;
+    function IndexOf(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.RowDefinition>, index: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <#if reflaxe.cpp cxx.num. #else cpp. #end UInt32>): Bool;
+    function SetAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.RowDefinition>): Void;
+    function InsertAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.RowDefinition>): Void;
+    function RemoveAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    function Append(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.RowDefinition>): Void;
     function RemoveAtEnd(): Void;
     function Clear(): Void;
-    function GetMany(startIndex: UInt32, items: winrt.ArrayView<winrt.windows.ui.xaml.controls.RowDefinition>): UInt32;
+    function GetMany(startIndex: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, items: winrt.ArrayView<winrt.windows.ui.xaml.controls.RowDefinition>): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     function ReplaceAll(items: winrt.ArrayView<winrt.windows.ui.xaml.controls.RowDefinition>): Void;
     function First(): winrt.windows.foundation.collections.IIterator<winrt.windows.ui.xaml.controls.RowDefinition> /* GenericTypeInstSig */;
 }

@@ -2,7 +2,7 @@ package winrt.windows.networking.backgroundtransfer;
 
 @:include("winrt/Windows.Networking.BackgroundTransfer.h", true)
 @:native("winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus")
-extern enum abstract BackgroundTransferStatus(Int32)
+extern enum abstract BackgroundTransferStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus::Idle") final Idle;
     @:native("winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferStatus::Running") final Running;

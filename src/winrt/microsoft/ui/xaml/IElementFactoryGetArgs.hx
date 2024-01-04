@@ -9,7 +9,7 @@ package winrt.microsoft.ui.xaml;
 extern interface IElementFactoryGetArgs extends winrt.windows.foundation.IInspectable
 {
     overload function Data(): winrt.windows.foundation.IInspectable;
-    overload function Data(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Data(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
     overload function Parent(): winrt.microsoft.ui.xaml.UIElement;
-    overload function Parent(value: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    overload function Parent(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): Void;
 }

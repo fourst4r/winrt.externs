@@ -12,6 +12,6 @@ extern class ErrorDetails
     overload function Description(): winrt.HString;
     overload function LongDescription(): winrt.HString;
     overload function HelpUri(): winrt.windows.foundation.Uri;
-    function CreateFromHResultAsync(errorCode: Int32): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.diagnostics.ErrorDetails> /* GenericTypeInstSig */;
-    static function CreateFromHResultAsync(errorCode: Int32): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.diagnostics.ErrorDetails> /* GenericTypeInstSig */;
+    function CreateFromHResultAsync(errorCode: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.diagnostics.ErrorDetails> /* GenericTypeInstSig */;
+    static function CreateFromHResultAsync(errorCode: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.diagnostics.ErrorDetails> /* GenericTypeInstSig */;
 }

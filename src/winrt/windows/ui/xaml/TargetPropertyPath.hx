@@ -11,9 +11,9 @@ extern class TargetPropertyPath
 {
     function new();
     @:native("winrt::Windows::UI::Xaml::TargetPropertyPath")
-    /* explicit */ static overload function make(targetProperty: ConstRef<winrt.windows.ui.xaml.DependencyProperty>): winrt.windows.ui.xaml.TargetPropertyPath;
+    /* explicit */ static overload function make(targetProperty: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyProperty>): winrt.windows.ui.xaml.TargetPropertyPath;
     overload function Path(): winrt.windows.ui.xaml.PropertyPath;
-    overload function Path(value: ConstRef<winrt.windows.ui.xaml.PropertyPath>): Void;
+    overload function Path(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.PropertyPath>): Void;
     overload function Target(): winrt.windows.foundation.IInspectable;
-    overload function Target(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Target(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
 }

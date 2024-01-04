@@ -9,9 +9,9 @@ package winrt.windows.applicationmodel.contacts;
 extern interface IContactEmail extends winrt.windows.foundation.IInspectable
 {
     overload function Address(): winrt.HString;
-    overload function Address(value: ConstRef<winrt.HString>): Void;
+    overload function Address(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Kind(): winrt.windows.applicationmodel.contacts.ContactEmailKind;
-    overload function Kind(value: ConstRef<winrt.windows.applicationmodel.contacts.ContactEmailKind>): Void;
+    overload function Kind(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.contacts.ContactEmailKind>): Void;
     overload function Description(): winrt.HString;
-    overload function Description(value: ConstRef<winrt.HString>): Void;
+    overload function Description(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

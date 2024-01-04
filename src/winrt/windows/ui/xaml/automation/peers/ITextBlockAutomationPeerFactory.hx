@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.automation.peers;
 @:native("winrt::Windows::UI::Xaml::Automation::Peers::ITextBlockAutomationPeerFactory")
 extern interface ITextBlockAutomationPeerFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstanceWithOwner(owner: ConstRef<winrt.windows.ui.xaml.controls.TextBlock>, baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.automation.peers.TextBlockAutomationPeer;
+    function CreateInstanceWithOwner(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.TextBlock>, baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.automation.peers.TextBlockAutomationPeer;
 }

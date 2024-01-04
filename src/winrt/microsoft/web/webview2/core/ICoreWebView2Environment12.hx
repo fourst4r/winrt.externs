@@ -8,5 +8,5 @@ package winrt.microsoft.web.webview2.core;
 @:native("winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment12")
 extern interface ICoreWebView2Environment12 extends winrt.windows.foundation.IInspectable
 {
-    function CreateSharedBuffer(Size: UInt64): winrt.microsoft.web.webview2.core.CoreWebView2SharedBuffer;
+    function CreateSharedBuffer(Size: #if reflaxe.cpp cxx.num. #else cpp. #end UInt64): winrt.microsoft.web.webview2.core.CoreWebView2SharedBuffer;
 }

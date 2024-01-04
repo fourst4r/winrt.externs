@@ -8,5 +8,5 @@ package winrt.windows.security.cryptography.dataprotection;
 @:native("winrt::Windows::Security::Cryptography::DataProtection::IDataProtectionProviderFactory")
 extern interface IDataProtectionProviderFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateOverloadExplicit(protectionDescriptor: ConstRef<winrt.HString>): winrt.windows.security.cryptography.dataprotection.DataProtectionProvider;
+    function CreateOverloadExplicit(protectionDescriptor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.security.cryptography.dataprotection.DataProtectionProvider;
 }

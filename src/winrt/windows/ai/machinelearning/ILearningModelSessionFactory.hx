@@ -8,6 +8,6 @@ package winrt.windows.ai.machinelearning;
 @:native("winrt::Windows::AI::MachineLearning::ILearningModelSessionFactory")
 extern interface ILearningModelSessionFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateFromModel(model: ConstRef<winrt.windows.ai.machinelearning.LearningModel>): winrt.windows.ai.machinelearning.LearningModelSession;
-    function CreateFromModelOnDevice(model: ConstRef<winrt.windows.ai.machinelearning.LearningModel>, deviceToRunOn: ConstRef<winrt.windows.ai.machinelearning.LearningModelDevice>): winrt.windows.ai.machinelearning.LearningModelSession;
+    function CreateFromModel(model: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ai.machinelearning.LearningModel>): winrt.windows.ai.machinelearning.LearningModelSession;
+    function CreateFromModelOnDevice(model: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ai.machinelearning.LearningModel>, deviceToRunOn: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ai.machinelearning.LearningModelDevice>): winrt.windows.ai.machinelearning.LearningModelSession;
 }

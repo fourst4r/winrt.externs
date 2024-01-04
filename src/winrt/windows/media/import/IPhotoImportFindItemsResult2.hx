@@ -8,5 +8,5 @@ package winrt.windows.media.import;
 @:native("winrt::Windows::Media::Import::IPhotoImportFindItemsResult2")
 extern interface IPhotoImportFindItemsResult2 extends winrt.windows.foundation.IInspectable
 {
-    function AddItemsInDateRangeToSelection(rangeStart: ConstRef<winrt.windows.foundation.DateTime>, rangeLength: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    function AddItemsInDateRangeToSelection(rangeStart: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>, rangeLength: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
 }

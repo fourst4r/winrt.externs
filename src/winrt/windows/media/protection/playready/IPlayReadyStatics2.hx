@@ -8,5 +8,5 @@ package winrt.windows.media.protection.playready;
 @:native("winrt::Windows::Media::Protection::PlayReady::IPlayReadyStatics2")
 extern interface IPlayReadyStatics2 extends winrt.windows.foundation.IInspectable
 {
-    overload function PlayReadyCertificateSecurityLevel(): UInt32;
+    overload function PlayReadyCertificateSecurityLevel(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

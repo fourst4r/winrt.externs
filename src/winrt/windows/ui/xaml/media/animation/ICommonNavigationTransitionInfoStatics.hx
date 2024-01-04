@@ -10,6 +10,6 @@ extern interface ICommonNavigationTransitionInfoStatics extends winrt.windows.fo
 {
     overload function IsStaggeringEnabledProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function IsStaggerElementProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetIsStaggerElement(element: ConstRef<winrt.windows.ui.xaml.UIElement>): Bool;
-    function SetIsStaggerElement(element: ConstRef<winrt.windows.ui.xaml.UIElement>, value: Bool): Void;
+    function GetIsStaggerElement(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Bool;
+    function SetIsStaggerElement(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>, value: Bool): Void;
 }

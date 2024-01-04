@@ -11,7 +11,7 @@ extern interface IScrollPatternIdentifiersStatics extends winrt.windows.foundati
     overload function HorizontallyScrollableProperty(): winrt.windows.ui.xaml.automation.AutomationProperty;
     overload function HorizontalScrollPercentProperty(): winrt.windows.ui.xaml.automation.AutomationProperty;
     overload function HorizontalViewSizeProperty(): winrt.windows.ui.xaml.automation.AutomationProperty;
-    overload function NoScroll(): Float64;
+    overload function NoScroll(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function VerticallyScrollableProperty(): winrt.windows.ui.xaml.automation.AutomationProperty;
     overload function VerticalScrollPercentProperty(): winrt.windows.ui.xaml.automation.AutomationProperty;
     overload function VerticalViewSizeProperty(): winrt.windows.ui.xaml.automation.AutomationProperty;

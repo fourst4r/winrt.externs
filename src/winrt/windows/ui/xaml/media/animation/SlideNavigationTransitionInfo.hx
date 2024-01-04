@@ -13,7 +13,7 @@ extern class SlideNavigationTransitionInfo
 {
     function new();
     overload function Effect(): winrt.windows.ui.xaml.media.animation.SlideNavigationTransitionEffect;
-    overload function Effect(value: ConstRef<winrt.windows.ui.xaml.media.animation.SlideNavigationTransitionEffect>): Void;
+    overload function Effect(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.animation.SlideNavigationTransitionEffect>): Void;
     overload function EffectProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function EffectProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

@@ -10,5 +10,5 @@ extern class BarcodeScannerStatusUpdatedEventArgs
     implements winrt.windows.devices.pointofservice.IBarcodeScannerStatusUpdatedEventArgs
 {
     overload function Status(): winrt.windows.devices.pointofservice.BarcodeScannerStatus;
-    overload function ExtendedStatus(): UInt32;
+    overload function ExtendedStatus(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

@@ -9,7 +9,7 @@ package winrt.microsoft.windows.applicationmodel.windowsappruntime;
 extern class DeploymentResult
     implements winrt.microsoft.windows.applicationmodel.windowsappruntime.IDeploymentResult
 {
-    function new(status: ConstRef<winrt.microsoft.windows.applicationmodel.windowsappruntime.DeploymentStatus>, extendedError: ConstRef<winrt.HResult>);
+    function new(status: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.windows.applicationmodel.windowsappruntime.DeploymentStatus>, extendedError: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HResult>);
     overload function Status(): winrt.microsoft.windows.applicationmodel.windowsappruntime.DeploymentStatus;
     overload function ExtendedError(): winrt.HResult;
 }

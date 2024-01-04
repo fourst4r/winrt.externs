@@ -9,7 +9,7 @@ package winrt.windows.ui.viewmanagement;
 extern interface IViewModePreferences extends winrt.windows.foundation.IInspectable
 {
     overload function ViewSizePreference(): winrt.windows.ui.viewmanagement.ViewSizePreference;
-    overload function ViewSizePreference(value: ConstRef<winrt.windows.ui.viewmanagement.ViewSizePreference>): Void;
+    overload function ViewSizePreference(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.viewmanagement.ViewSizePreference>): Void;
     overload function CustomSize(): winrt.windows.foundation.Size;
-    overload function CustomSize(value: ConstRef<winrt.windows.foundation.Size>): Void;
+    overload function CustomSize(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Size>): Void;
 }

@@ -2,7 +2,7 @@ package winrt.windows.data.json;
 
 @:include("winrt/Windows.Data.Json.h", true)
 @:native("winrt::Windows::Data::Json::JsonErrorStatus")
-extern enum abstract JsonErrorStatus(Int32)
+extern enum abstract JsonErrorStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Data::Json::JsonErrorStatus::Unknown") final Unknown;
     @:native("winrt::Windows::Data::Json::JsonErrorStatus::InvalidJsonString") final InvalidJsonString;

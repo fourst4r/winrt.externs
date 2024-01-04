@@ -9,8 +9,8 @@ package winrt.windows.devices.sensors;
 extern class SensorQuaternion
     implements winrt.windows.devices.sensors.ISensorQuaternion
 {
-    overload function W(): Float32;
-    overload function X(): Float32;
-    overload function Y(): Float32;
-    overload function Z(): Float32;
+    overload function W(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function X(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Y(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Z(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
 }

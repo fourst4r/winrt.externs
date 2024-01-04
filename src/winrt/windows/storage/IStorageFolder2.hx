@@ -8,5 +8,5 @@ package winrt.windows.storage;
 @:native("winrt::Windows::Storage::IStorageFolder2")
 extern interface IStorageFolder2 extends winrt.windows.foundation.IInspectable
 {
-    function TryGetItemAsync(name: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.IStorageItem> /* GenericTypeInstSig */;
+    function TryGetItemAsync(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.IStorageItem> /* GenericTypeInstSig */;
 }

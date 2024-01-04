@@ -11,6 +11,6 @@ extern interface ICommandBarElement extends winrt.windows.foundation.IInspectabl
     overload function IsCompact(): Bool;
     overload function IsCompact(value: Bool): Void;
     overload function IsInOverflow(): Bool;
-    overload function DynamicOverflowOrder(): Int32;
-    overload function DynamicOverflowOrder(value: Int32): Void;
+    overload function DynamicOverflowOrder(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function DynamicOverflowOrder(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
 }

@@ -2,7 +2,7 @@ package winrt.microsoft.windows.appnotifications.builder;
 
 @:include("winrt/Microsoft.Windows.AppNotifications.Builder.h", true)
 @:native("winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButtonStyle")
-extern enum abstract AppNotificationButtonStyle(Int32)
+extern enum abstract AppNotificationButtonStyle(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButtonStyle::Default") final Default;
     @:native("winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButtonStyle::Success") final Success;

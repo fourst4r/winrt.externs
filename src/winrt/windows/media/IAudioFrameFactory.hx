@@ -8,5 +8,5 @@ package winrt.windows.media;
 @:native("winrt::Windows::Media::IAudioFrameFactory")
 extern interface IAudioFrameFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(capacity: UInt32): winrt.windows.media.AudioFrame;
+    function Create(capacity: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.media.AudioFrame;
 }

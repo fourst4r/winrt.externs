@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IToolTip2 extends winrt.windows.foundation.IInspectable
 {
     overload function PlacementRect(): winrt.windows.foundation.IReference<winrt.windows.foundation.Rect> /* GenericTypeInstSig */;
-    overload function PlacementRect(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.foundation.Rect> /* temp_GenericTypeInstSig */>): Void;
+    overload function PlacementRect(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.foundation.Rect> /* temp_GenericTypeInstSig */>): Void;
 }

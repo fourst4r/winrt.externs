@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.background;
 extern interface IGeovisitTrigger extends winrt.windows.foundation.IInspectable
 {
     overload function MonitoringScope(): winrt.windows.devices.geolocation.VisitMonitoringScope;
-    overload function MonitoringScope(value: ConstRef<winrt.windows.devices.geolocation.VisitMonitoringScope>): Void;
+    overload function MonitoringScope(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.geolocation.VisitMonitoringScope>): Void;
 }

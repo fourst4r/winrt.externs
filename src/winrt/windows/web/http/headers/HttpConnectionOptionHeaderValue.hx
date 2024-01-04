@@ -10,11 +10,11 @@ extern class HttpConnectionOptionHeaderValue
     implements winrt.windows.web.http.headers.IHttpConnectionOptionHeaderValue
     implements winrt.windows.foundation.IStringable
 {
-    /* explicit */ function new(token: ConstRef<winrt.HString>);
+    /* explicit */ function new(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     overload function Token(): winrt.HString;
     function ToString(): winrt.HString;
-    function Parse(input: ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue;
-    function TryParse(input: ConstRef<winrt.HString>, connectionOptionHeaderValue: Ref<winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue>): Bool;
-    static function Parse(input: ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue;
-    static function TryParse(input: ConstRef<winrt.HString>, connectionOptionHeaderValue: Ref<winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue>): Bool;
+    function Parse(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue;
+    function TryParse(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, connectionOptionHeaderValue: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue>): Bool;
+    static function Parse(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue;
+    static function TryParse(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, connectionOptionHeaderValue: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.web.http.headers.HttpConnectionOptionHeaderValue>): Bool;
 }

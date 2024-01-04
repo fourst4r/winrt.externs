@@ -9,7 +9,7 @@ package winrt.windows.graphics.printing3d;
 extern class Printing3DColorMaterialGroup
     implements winrt.windows.graphics.printing3d.IPrinting3DColorMaterialGroup
 {
-    /* explicit */ function new(MaterialGroupId: UInt32);
+    /* explicit */ function new(MaterialGroupId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32);
     overload function Colors(): winrt.windows.foundation.collections.IVector<winrt.windows.graphics.printing3d.Printing3DColorMaterial> /* GenericTypeInstSig */;
-    overload function MaterialGroupId(): UInt32;
+    overload function MaterialGroupId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

@@ -9,7 +9,7 @@ package winrt.windows.devices.pointofservice;
 extern interface IMagneticStripeReaderCapabilities extends winrt.windows.foundation.IInspectable
 {
     overload function CardAuthentication(): winrt.HString;
-    overload function SupportedEncryptionAlgorithms(): UInt32;
+    overload function SupportedEncryptionAlgorithms(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function AuthenticationLevel(): winrt.windows.devices.pointofservice.MagneticStripeReaderAuthenticationLevel;
     overload function IsIsoSupported(): Bool;
     overload function IsJisOneSupported(): Bool;

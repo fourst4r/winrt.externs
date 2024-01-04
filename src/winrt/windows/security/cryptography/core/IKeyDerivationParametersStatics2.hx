@@ -8,5 +8,5 @@ package winrt.windows.security.cryptography.core;
 @:native("winrt::Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics2")
 extern interface IKeyDerivationParametersStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function BuildForCapi1Kdf(capi1KdfTargetAlgorithm: ConstRef<winrt.windows.security.cryptography.core.Capi1KdfTargetAlgorithm>): winrt.windows.security.cryptography.core.KeyDerivationParameters;
+    function BuildForCapi1Kdf(capi1KdfTargetAlgorithm: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.core.Capi1KdfTargetAlgorithm>): winrt.windows.security.cryptography.core.KeyDerivationParameters;
 }

@@ -11,9 +11,9 @@ extern class MapTileUriRequestedEventArgs
     implements winrt.windows.ui.xaml.controls.maps.IMapTileUriRequestedEventArgs2
 {
     function new();
-    overload function X(): Int32;
-    overload function Y(): Int32;
-    overload function ZoomLevel(): Int32;
+    overload function X(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Y(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function ZoomLevel(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function Request(): winrt.windows.ui.xaml.controls.maps.MapTileUriRequest;
-    overload function FrameIndex(): Int32;
+    overload function FrameIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

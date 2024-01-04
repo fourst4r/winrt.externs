@@ -13,8 +13,8 @@ extern class ToggleSplitButton
     function new();
     overload function IsChecked(): Bool;
     overload function IsChecked(value: Bool): Void;
-    overload function IsCheckedChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.microsoft.ui.xaml.controls.ToggleSplitButton, winrt.microsoft.ui.xaml.controls.ToggleSplitButtonIsCheckedChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function IsCheckedChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function IsCheckedChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.microsoft.ui.xaml.controls.ToggleSplitButton, winrt.microsoft.ui.xaml.controls.ToggleSplitButtonIsCheckedChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function IsCheckedChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function IsCheckedProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function IsCheckedProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
 }

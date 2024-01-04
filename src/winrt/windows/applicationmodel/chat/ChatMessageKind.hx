@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.chat;
 
 @:include("winrt/Windows.ApplicationModel.Chat.h", true)
 @:native("winrt::Windows::ApplicationModel::Chat::ChatMessageKind")
-extern enum abstract ChatMessageKind(Int32)
+extern enum abstract ChatMessageKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Chat::ChatMessageKind::Standard") final Standard;
     @:native("winrt::Windows::ApplicationModel::Chat::ChatMessageKind::FileTransferRequest") final FileTransferRequest;

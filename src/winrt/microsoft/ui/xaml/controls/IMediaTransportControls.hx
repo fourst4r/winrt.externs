@@ -51,15 +51,15 @@ extern interface IMediaTransportControls extends winrt.windows.foundation.IInspe
     overload function IsPreviousTrackButtonVisible(): Bool;
     overload function IsPreviousTrackButtonVisible(value: Bool): Void;
     overload function FastPlayFallbackBehaviour(): winrt.microsoft.ui.xaml.media.FastPlayFallbackBehaviour;
-    overload function FastPlayFallbackBehaviour(value: ConstRef<winrt.microsoft.ui.xaml.media.FastPlayFallbackBehaviour>): Void;
+    overload function FastPlayFallbackBehaviour(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.FastPlayFallbackBehaviour>): Void;
     overload function ShowAndHideAutomatically(): Bool;
     overload function ShowAndHideAutomatically(value: Bool): Void;
     overload function IsRepeatEnabled(): Bool;
     overload function IsRepeatEnabled(value: Bool): Void;
     overload function IsRepeatButtonVisible(): Bool;
     overload function IsRepeatButtonVisible(value: Bool): Void;
-    overload function ThumbnailRequested(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.microsoft.ui.xaml.controls.MediaTransportControls, winrt.microsoft.ui.xaml.media.MediaTransportControlsThumbnailRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function ThumbnailRequested(token: ConstRef<winrt.EventToken>): Void;
+    overload function ThumbnailRequested(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.microsoft.ui.xaml.controls.MediaTransportControls, winrt.microsoft.ui.xaml.media.MediaTransportControlsThumbnailRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function ThumbnailRequested(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     function Show(): Void;
     function Hide(): Void;
 }

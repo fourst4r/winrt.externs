@@ -10,9 +10,9 @@ extern interface IWidgetUpdateRequestOptions extends winrt.windows.foundation.II
 {
     overload function WidgetId(): winrt.HString;
     overload function Template(): winrt.HString;
-    overload function Template(value: ConstRef<winrt.HString>): Void;
+    overload function Template(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Data(): winrt.HString;
-    overload function Data(value: ConstRef<winrt.HString>): Void;
+    overload function Data(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function CustomState(): winrt.HString;
-    overload function CustomState(value: ConstRef<winrt.HString>): Void;
+    overload function CustomState(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

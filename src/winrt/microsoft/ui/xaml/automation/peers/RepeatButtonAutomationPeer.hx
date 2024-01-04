@@ -11,6 +11,6 @@ extern class RepeatButtonAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IRepeatButtonAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IInvokeProvider
 {
-    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.primitives.RepeatButton>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.primitives.RepeatButton>);
     function Invoke(): Void;
 }

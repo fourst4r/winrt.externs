@@ -11,11 +11,11 @@ extern class UsbControlRequestType
 {
     function new();
     overload function Direction(): winrt.windows.devices.usb.UsbTransferDirection;
-    overload function Direction(value: ConstRef<winrt.windows.devices.usb.UsbTransferDirection>): Void;
+    overload function Direction(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.usb.UsbTransferDirection>): Void;
     overload function ControlTransferType(): winrt.windows.devices.usb.UsbControlTransferType;
-    overload function ControlTransferType(value: ConstRef<winrt.windows.devices.usb.UsbControlTransferType>): Void;
+    overload function ControlTransferType(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.usb.UsbControlTransferType>): Void;
     overload function Recipient(): winrt.windows.devices.usb.UsbControlRecipient;
-    overload function Recipient(value: ConstRef<winrt.windows.devices.usb.UsbControlRecipient>): Void;
-    overload function AsByte(): UInt8;
-    overload function AsByte(value: UInt8): Void;
+    overload function Recipient(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.usb.UsbControlRecipient>): Void;
+    overload function AsByte(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function AsByte(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8): Void;
 }

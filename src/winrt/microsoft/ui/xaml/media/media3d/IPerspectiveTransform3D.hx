@@ -8,10 +8,10 @@ package winrt.microsoft.ui.xaml.media.media3d;
 @:native("winrt::Microsoft::UI::Xaml::Media::Media3D::IPerspectiveTransform3D")
 extern interface IPerspectiveTransform3D extends winrt.windows.foundation.IInspectable
 {
-    overload function Depth(): Float64;
-    overload function Depth(value: Float64): Void;
-    overload function OffsetX(): Float64;
-    overload function OffsetX(value: Float64): Void;
-    overload function OffsetY(): Float64;
-    overload function OffsetY(value: Float64): Void;
+    overload function Depth(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Depth(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function OffsetX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function OffsetX(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function OffsetY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function OffsetY(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

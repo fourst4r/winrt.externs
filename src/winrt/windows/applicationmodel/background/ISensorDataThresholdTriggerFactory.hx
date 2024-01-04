@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.background;
 @:native("winrt::Windows::ApplicationModel::Background::ISensorDataThresholdTriggerFactory")
 extern interface ISensorDataThresholdTriggerFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(threshold: ConstRef<winrt.windows.devices.sensors.ISensorDataThreshold>): winrt.windows.applicationmodel.background.SensorDataThresholdTrigger;
+    function Create(threshold: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.sensors.ISensorDataThreshold>): winrt.windows.applicationmodel.background.SensorDataThresholdTrigger;
 }

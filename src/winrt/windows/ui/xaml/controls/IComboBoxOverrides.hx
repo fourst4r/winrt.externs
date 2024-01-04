@@ -8,6 +8,6 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IComboBoxOverrides")
 extern interface IComboBoxOverrides extends winrt.windows.foundation.IInspectable
 {
-    function OnDropDownClosed(e: ConstRef<winrt.windows.foundation.IInspectable>): Void;
-    function OnDropDownOpened(e: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    function OnDropDownClosed(e: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
+    function OnDropDownOpened(e: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
 }

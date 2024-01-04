@@ -2,7 +2,7 @@ package winrt.windows.services.maps;
 
 @:include("winrt/Windows.Services.Maps.h", true)
 @:native("winrt::Windows::Services::Maps::MapRouteFinderStatus")
-extern enum abstract MapRouteFinderStatus(Int32)
+extern enum abstract MapRouteFinderStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Services::Maps::MapRouteFinderStatus::Success") final Success;
     @:native("winrt::Windows::Services::Maps::MapRouteFinderStatus::UnknownError") final UnknownError;

@@ -9,7 +9,7 @@ package winrt.windows.devices.printers;
 extern interface IIppPrintDeviceStatics extends winrt.windows.foundation.IInspectable
 {
     function GetDeviceSelector(): winrt.HString;
-    function FromId(deviceId: ConstRef<winrt.HString>): winrt.windows.devices.printers.IppPrintDevice;
-    function FromPrinterName(printerName: ConstRef<winrt.HString>): winrt.windows.devices.printers.IppPrintDevice;
-    function IsIppPrinter(printerName: ConstRef<winrt.HString>): Bool;
+    function FromId(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.devices.printers.IppPrintDevice;
+    function FromPrinterName(printerName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.devices.printers.IppPrintDevice;
+    function IsIppPrinter(printerName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
 }

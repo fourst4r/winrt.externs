@@ -9,5 +9,5 @@ package winrt.windows.devices.geolocation;
 extern interface IGeocircle extends winrt.windows.foundation.IInspectable
 {
     overload function Center(): winrt.windows.devices.geolocation.BasicGeoposition;
-    overload function Radius(): Float64;
+    overload function Radius(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

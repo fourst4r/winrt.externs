@@ -9,6 +9,6 @@ package winrt.windows.ui.viewmanagement.core;
 extern interface ICoreInputView3 extends winrt.windows.foundation.IInspectable
 {
     overload function TryShow(): Bool;
-    overload function TryShow(type: ConstRef<winrt.windows.ui.viewmanagement.core.CoreInputViewKind>): Bool;
+    overload function TryShow(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.viewmanagement.core.CoreInputViewKind>): Bool;
     function TryHide(): Bool;
 }

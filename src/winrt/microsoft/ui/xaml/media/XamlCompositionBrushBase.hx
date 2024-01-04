@@ -13,9 +13,9 @@ extern class XamlCompositionBrushBase
     implements winrt.microsoft.ui.xaml.media.IXamlCompositionBrushBaseOverrides
 {
     overload function FallbackColor(): winrt.windows.ui.Color;
-    overload function FallbackColor(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function FallbackColor(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
     overload function CompositionBrush(): winrt.microsoft.ui.composition.CompositionBrush;
-    overload function CompositionBrush(value: ConstRef<winrt.microsoft.ui.composition.CompositionBrush>): Void;
+    overload function CompositionBrush(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.CompositionBrush>): Void;
     function OnConnected(): Void;
     function OnDisconnected(): Void;
     overload function FallbackColorProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

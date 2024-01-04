@@ -10,10 +10,10 @@ extern interface ICustomProperty extends winrt.windows.foundation.IInspectable
 {
     overload function Type(): winrt.windows.ui.xaml.interop.TypeName;
     overload function Name(): winrt.HString;
-    function GetValue(target: ConstRef<winrt.windows.foundation.IInspectable>): winrt.windows.foundation.IInspectable;
-    function SetValue(target: ConstRef<winrt.windows.foundation.IInspectable>, value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
-    function GetIndexedValue(target: ConstRef<winrt.windows.foundation.IInspectable>, index: ConstRef<winrt.windows.foundation.IInspectable>): winrt.windows.foundation.IInspectable;
-    function SetIndexedValue(target: ConstRef<winrt.windows.foundation.IInspectable>, value: ConstRef<winrt.windows.foundation.IInspectable>, index: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    function GetValue(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.foundation.IInspectable;
+    function SetValue(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
+    function GetIndexedValue(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, index: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.foundation.IInspectable;
+    function SetIndexedValue(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, index: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
     overload function CanWrite(): Bool;
     overload function CanRead(): Bool;
 }

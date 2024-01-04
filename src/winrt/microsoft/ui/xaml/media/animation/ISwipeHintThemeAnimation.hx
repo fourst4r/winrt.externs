@@ -9,9 +9,9 @@ package winrt.microsoft.ui.xaml.media.animation;
 extern interface ISwipeHintThemeAnimation extends winrt.windows.foundation.IInspectable
 {
     overload function TargetName(): winrt.HString;
-    overload function TargetName(value: ConstRef<winrt.HString>): Void;
-    overload function ToHorizontalOffset(): Float64;
-    overload function ToHorizontalOffset(value: Float64): Void;
-    overload function ToVerticalOffset(): Float64;
-    overload function ToVerticalOffset(value: Float64): Void;
+    overload function TargetName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function ToHorizontalOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ToHorizontalOffset(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function ToVerticalOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ToVerticalOffset(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

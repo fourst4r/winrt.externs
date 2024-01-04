@@ -10,6 +10,6 @@ extern class GattDeviceServicesResult
     implements winrt.windows.devices.bluetooth.genericattributeprofile.IGattDeviceServicesResult
 {
     overload function Status(): winrt.windows.devices.bluetooth.genericattributeprofile.GattCommunicationStatus;
-    overload function ProtocolError(): winrt.windows.foundation.IReference<UInt8> /* GenericTypeInstSig */;
+    overload function ProtocolError(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8> /* GenericTypeInstSig */;
     overload function Services(): winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.bluetooth.genericattributeprofile.GattDeviceService> /* GenericTypeInstSig */;
 }

@@ -9,9 +9,9 @@ package winrt.windows.media.miracast;
 extern interface IMiracastTransmitter extends winrt.windows.foundation.IInspectable
 {
     overload function Name(): winrt.HString;
-    overload function Name(value: ConstRef<winrt.HString>): Void;
+    overload function Name(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function AuthorizationStatus(): winrt.windows.media.miracast.MiracastTransmitterAuthorizationStatus;
-    overload function AuthorizationStatus(value: ConstRef<winrt.windows.media.miracast.MiracastTransmitterAuthorizationStatus>): Void;
+    overload function AuthorizationStatus(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.miracast.MiracastTransmitterAuthorizationStatus>): Void;
     function GetConnections(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.miracast.MiracastReceiverConnection> /* GenericTypeInstSig */;
     overload function MacAddress(): winrt.HString;
     overload function LastConnectionTime(): winrt.windows.foundation.DateTime;

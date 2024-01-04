@@ -9,7 +9,7 @@ package winrt.windows.storage.provider;
 extern interface IStorageProviderKnownFolderEntry extends winrt.windows.foundation.IInspectable
 {
     overload function KnownFolderId(): winrt.Guid;
-    overload function KnownFolderId(value: ConstRef<winrt.Guid>): Void;
+    overload function KnownFolderId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): Void;
     overload function Status(): winrt.windows.storage.provider.StorageProviderKnownFolderSyncStatus;
-    overload function Status(value: ConstRef<winrt.windows.storage.provider.StorageProviderKnownFolderSyncStatus>): Void;
+    overload function Status(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.provider.StorageProviderKnownFolderSyncStatus>): Void;
 }

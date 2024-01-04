@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.data;
 @:native("winrt::Windows::UI::Xaml::Data::IBindingOperationsStatics")
 extern interface IBindingOperationsStatics extends winrt.windows.foundation.IInspectable
 {
-    function SetBinding(target: ConstRef<winrt.windows.ui.xaml.DependencyObject>, dp: ConstRef<winrt.windows.ui.xaml.DependencyProperty>, binding: ConstRef<winrt.windows.ui.xaml.data.BindingBase>): Void;
+    function SetBinding(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>, dp: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyProperty>, binding: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.data.BindingBase>): Void;
 }

@@ -8,6 +8,6 @@ package winrt.windows.ui.notifications;
 @:native("winrt::Windows::UI::Notifications::IToastNotificationManagerStatics4")
 extern interface IToastNotificationManagerStatics4 extends winrt.windows.foundation.IInspectable
 {
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.ui.notifications.ToastNotificationManagerForUser;
-    function ConfigureNotificationMirroring(value: ConstRef<winrt.windows.ui.notifications.NotificationMirroring>): Void;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.ui.notifications.ToastNotificationManagerForUser;
+    function ConfigureNotificationMirroring(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.notifications.NotificationMirroring>): Void;
 }

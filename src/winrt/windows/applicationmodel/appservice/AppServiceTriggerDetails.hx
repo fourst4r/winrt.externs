@@ -16,6 +16,6 @@ extern class AppServiceTriggerDetails
     overload function CallerPackageFamilyName(): winrt.HString;
     overload function AppServiceConnection(): winrt.windows.applicationmodel.appservice.AppServiceConnection;
     overload function IsRemoteSystemConnection(): Bool;
-    function CheckCallerForCapabilityAsync(capabilityName: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function CheckCallerForCapabilityAsync(capabilityName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     overload function CallerRemoteConnectionToken(): winrt.HString;
 }

@@ -9,6 +9,6 @@ package winrt.microsoft.ui.xaml;
 extern interface IWindow2 extends winrt.windows.foundation.IInspectable
 {
     overload function SystemBackdrop(): winrt.microsoft.ui.xaml.media.SystemBackdrop;
-    overload function SystemBackdrop(value: ConstRef<winrt.microsoft.ui.xaml.media.SystemBackdrop>): Void;
+    overload function SystemBackdrop(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.SystemBackdrop>): Void;
     overload function AppWindow(): winrt.microsoft.ui.windowing.AppWindow;
 }

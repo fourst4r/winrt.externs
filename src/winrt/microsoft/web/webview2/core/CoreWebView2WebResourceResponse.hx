@@ -10,10 +10,10 @@ extern class CoreWebView2WebResourceResponse
     implements winrt.microsoft.web.webview2.core.ICoreWebView2WebResourceResponse
 {
     overload function Content(): winrt.windows.storage.streams.IRandomAccessStream;
-    overload function Content(value: ConstRef<winrt.windows.storage.streams.IRandomAccessStream>): Void;
+    overload function Content(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStream>): Void;
     overload function Headers(): winrt.microsoft.web.webview2.core.CoreWebView2HttpResponseHeaders;
-    overload function StatusCode(): Int32;
-    overload function StatusCode(value: Int32): Void;
+    overload function StatusCode(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function StatusCode(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function ReasonPhrase(): winrt.HString;
-    overload function ReasonPhrase(value: ConstRef<winrt.HString>): Void;
+    overload function ReasonPhrase(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

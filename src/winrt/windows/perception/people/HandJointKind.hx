@@ -2,7 +2,7 @@ package winrt.windows.perception.people;
 
 @:include("winrt/Windows.Perception.People.h", true)
 @:native("winrt::Windows::Perception::People::HandJointKind")
-extern enum abstract HandJointKind(Int32)
+extern enum abstract HandJointKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Perception::People::HandJointKind::Palm") final Palm;
     @:native("winrt::Windows::Perception::People::HandJointKind::Wrist") final Wrist;

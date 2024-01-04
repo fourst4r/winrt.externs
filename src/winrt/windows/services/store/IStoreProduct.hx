@@ -24,6 +24,6 @@ extern interface IStoreProduct extends winrt.windows.foundation.IInspectable
     overload function LinkUri(): winrt.windows.foundation.Uri;
     function GetIsAnySkuInstalledAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     overload function RequestPurchaseAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.store.StorePurchaseResult> /* GenericTypeInstSig */;
-    overload function RequestPurchaseAsync(storePurchaseProperties: ConstRef<winrt.windows.services.store.StorePurchaseProperties>): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.store.StorePurchaseResult> /* GenericTypeInstSig */;
+    overload function RequestPurchaseAsync(storePurchaseProperties: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.services.store.StorePurchaseProperties>): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.store.StorePurchaseResult> /* GenericTypeInstSig */;
     overload function InAppOfferToken(): winrt.HString;
 }

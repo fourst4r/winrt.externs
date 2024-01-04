@@ -10,8 +10,8 @@ extern interface IXamlRoot extends winrt.windows.foundation.IInspectable
 {
     overload function Content(): winrt.microsoft.ui.xaml.UIElement;
     overload function Size(): winrt.windows.foundation.Size;
-    overload function RasterizationScale(): Float64;
+    overload function RasterizationScale(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function IsHostVisible(): Bool;
-    overload function Changed(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.microsoft.ui.xaml.XamlRoot, winrt.microsoft.ui.xaml.XamlRootChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Changed(token: ConstRef<winrt.EventToken>): Void;
+    overload function Changed(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.microsoft.ui.xaml.XamlRoot, winrt.microsoft.ui.xaml.XamlRootChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Changed(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

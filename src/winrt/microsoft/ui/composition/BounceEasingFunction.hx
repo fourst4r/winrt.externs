@@ -10,7 +10,7 @@ extern class BounceEasingFunction
     extends winrt.microsoft.ui.composition.CompositionEasingFunction
     implements winrt.microsoft.ui.composition.IBounceEasingFunction
 {
-    overload function Bounciness(): Float32;
+    overload function Bounciness(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
     overload function Mode(): winrt.microsoft.ui.composition.CompositionEasingFunctionMode;
-    overload function Bounces(): Int32;
+    overload function Bounces(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

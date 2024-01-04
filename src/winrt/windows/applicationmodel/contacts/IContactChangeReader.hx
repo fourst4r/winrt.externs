@@ -9,6 +9,6 @@ package winrt.windows.applicationmodel.contacts;
 extern interface IContactChangeReader extends winrt.windows.foundation.IInspectable
 {
     function AcceptChanges(): Void;
-    function AcceptChangesThrough(lastChangeToAccept: ConstRef<winrt.windows.applicationmodel.contacts.ContactChange>): Void;
+    function AcceptChangesThrough(lastChangeToAccept: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.contacts.ContactChange>): Void;
     function ReadBatchAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.contacts.ContactChange> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
 }

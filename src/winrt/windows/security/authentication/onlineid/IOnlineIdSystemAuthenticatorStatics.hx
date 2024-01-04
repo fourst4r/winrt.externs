@@ -9,5 +9,5 @@ package winrt.windows.security.authentication.onlineid;
 extern interface IOnlineIdSystemAuthenticatorStatics extends winrt.windows.foundation.IInspectable
 {
     overload function Default(): winrt.windows.security.authentication.onlineid.OnlineIdSystemAuthenticatorForUser;
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.security.authentication.onlineid.OnlineIdSystemAuthenticatorForUser;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.security.authentication.onlineid.OnlineIdSystemAuthenticatorForUser;
 }

@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml;
 
 @:include("winrt/Windows.UI.Xaml.h", true)
 @:native("winrt::Windows::UI::Xaml::FontFraction")
-extern enum abstract FontFraction(Int32)
+extern enum abstract FontFraction(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Xaml::FontFraction::Normal") final Normal;
     @:native("winrt::Windows::UI::Xaml::FontFraction::Stacked") final Stacked;

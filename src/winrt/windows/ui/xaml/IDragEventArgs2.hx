@@ -12,6 +12,6 @@ extern interface IDragEventArgs2 extends winrt.windows.foundation.IInspectable
     overload function DragUIOverride(): winrt.windows.ui.xaml.DragUIOverride;
     overload function Modifiers(): winrt.windows.applicationmodel.datatransfer.dragdrop.DragDropModifiers;
     overload function AcceptedOperation(): winrt.windows.applicationmodel.datatransfer.DataPackageOperation;
-    overload function AcceptedOperation(value: ConstRef<winrt.windows.applicationmodel.datatransfer.DataPackageOperation>): Void;
+    overload function AcceptedOperation(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.datatransfer.DataPackageOperation>): Void;
     function GetDeferral(): winrt.windows.ui.xaml.DragOperationDeferral;
 }

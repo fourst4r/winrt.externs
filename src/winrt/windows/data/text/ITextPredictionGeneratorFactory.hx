@@ -8,5 +8,5 @@ package winrt.windows.data.text;
 @:native("winrt::Windows::Data::Text::ITextPredictionGeneratorFactory")
 extern interface ITextPredictionGeneratorFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(languageTag: ConstRef<winrt.HString>): winrt.windows.data.text.TextPredictionGenerator;
+    function Create(languageTag: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.data.text.TextPredictionGenerator;
 }

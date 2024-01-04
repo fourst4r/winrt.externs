@@ -10,5 +10,5 @@ extern interface IPrepareTranscodeResult extends winrt.windows.foundation.IInspe
 {
     overload function CanTranscode(): Bool;
     overload function FailureReason(): winrt.windows.media.transcoding.TranscodeFailureReason;
-    function TranscodeAsync(): winrt.windows.foundation.IAsyncActionWithProgress<Float64> /* GenericTypeInstSig */;
+    function TranscodeAsync(): winrt.windows.foundation.IAsyncActionWithProgress<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
 }

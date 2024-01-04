@@ -8,5 +8,5 @@ package winrt.windows.ui;
 @:native("winrt::Windows::UI::IColorHelperStatics2")
 extern interface IColorHelperStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function ToDisplayName(color: ConstRef<winrt.windows.ui.Color>): winrt.HString;
+    function ToDisplayName(color: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): winrt.HString;
 }

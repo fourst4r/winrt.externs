@@ -12,9 +12,9 @@ extern class Run
 {
     function new();
     overload function Text(): winrt.HString;
-    overload function Text(value: ConstRef<winrt.HString>): Void;
+    overload function Text(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function FlowDirection(): winrt.microsoft.ui.xaml.FlowDirection;
-    overload function FlowDirection(value: ConstRef<winrt.microsoft.ui.xaml.FlowDirection>): Void;
+    overload function FlowDirection(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.FlowDirection>): Void;
     overload function FlowDirectionProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function FlowDirectionProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
 }

@@ -9,7 +9,7 @@ package winrt.windows.devices.alljoyn;
 extern class AllJoynAboutDataView
     implements winrt.windows.devices.alljoyn.IAllJoynAboutDataView
 {
-    overload function Status(): Int32;
+    overload function Status(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function Properties(): winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;
     overload function AJSoftwareVersion(): winrt.HString;
     overload function AppId(): winrt.Guid;
@@ -25,8 +25,8 @@ extern class AllJoynAboutDataView
     overload function Description(): winrt.HString;
     overload function DeviceName(): winrt.HString;
     overload function Manufacturer(): winrt.HString;
-    overload function GetDataBySessionPortAsync(uniqueName: ConstRef<winrt.HString>, busAttachment: ConstRef<winrt.windows.devices.alljoyn.AllJoynBusAttachment>, sessionPort: UInt16): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.alljoyn.AllJoynAboutDataView> /* GenericTypeInstSig */;
-    overload function GetDataBySessionPortAsync(uniqueName: ConstRef<winrt.HString>, busAttachment: ConstRef<winrt.windows.devices.alljoyn.AllJoynBusAttachment>, sessionPort: UInt16, language: ConstRef<winrt.windows.globalization.Language>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.alljoyn.AllJoynAboutDataView> /* GenericTypeInstSig */;
-    static overload function GetDataBySessionPortAsync(uniqueName: ConstRef<winrt.HString>, busAttachment: ConstRef<winrt.windows.devices.alljoyn.AllJoynBusAttachment>, sessionPort: UInt16): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.alljoyn.AllJoynAboutDataView> /* GenericTypeInstSig */;
-    static overload function GetDataBySessionPortAsync(uniqueName: ConstRef<winrt.HString>, busAttachment: ConstRef<winrt.windows.devices.alljoyn.AllJoynBusAttachment>, sessionPort: UInt16, language: ConstRef<winrt.windows.globalization.Language>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.alljoyn.AllJoynAboutDataView> /* GenericTypeInstSig */;
+    overload function GetDataBySessionPortAsync(uniqueName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, busAttachment: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.alljoyn.AllJoynBusAttachment>, sessionPort: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.alljoyn.AllJoynAboutDataView> /* GenericTypeInstSig */;
+    overload function GetDataBySessionPortAsync(uniqueName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, busAttachment: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.alljoyn.AllJoynBusAttachment>, sessionPort: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, language: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.globalization.Language>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.alljoyn.AllJoynAboutDataView> /* GenericTypeInstSig */;
+    static overload function GetDataBySessionPortAsync(uniqueName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, busAttachment: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.alljoyn.AllJoynBusAttachment>, sessionPort: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.alljoyn.AllJoynAboutDataView> /* GenericTypeInstSig */;
+    static overload function GetDataBySessionPortAsync(uniqueName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, busAttachment: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.alljoyn.AllJoynBusAttachment>, sessionPort: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, language: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.globalization.Language>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.alljoyn.AllJoynAboutDataView> /* GenericTypeInstSig */;
 }

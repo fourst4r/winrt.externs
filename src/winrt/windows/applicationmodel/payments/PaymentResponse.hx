@@ -15,5 +15,5 @@ extern class PaymentResponse
     overload function PayerEmail(): winrt.HString;
     overload function PayerName(): winrt.HString;
     overload function PayerPhoneNumber(): winrt.HString;
-    function CompleteAsync(status: ConstRef<winrt.windows.applicationmodel.payments.PaymentRequestCompletionStatus>): winrt.windows.foundation.IAsyncAction;
+    function CompleteAsync(status: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.payments.PaymentRequestCompletionStatus>): winrt.windows.foundation.IAsyncAction;
 }

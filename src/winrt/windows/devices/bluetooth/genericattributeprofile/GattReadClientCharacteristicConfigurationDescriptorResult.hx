@@ -12,5 +12,5 @@ extern class GattReadClientCharacteristicConfigurationDescriptorResult
 {
     overload function Status(): winrt.windows.devices.bluetooth.genericattributeprofile.GattCommunicationStatus;
     overload function ClientCharacteristicConfigurationDescriptor(): winrt.windows.devices.bluetooth.genericattributeprofile.GattClientCharacteristicConfigurationDescriptorValue;
-    overload function ProtocolError(): winrt.windows.foundation.IReference<UInt8> /* GenericTypeInstSig */;
+    overload function ProtocolError(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8> /* GenericTypeInstSig */;
 }

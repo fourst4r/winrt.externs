@@ -12,12 +12,12 @@ extern class HolographicViewConfiguration
 {
     overload function NativeRenderTargetSize(): winrt.windows.foundation.Size;
     overload function RenderTargetSize(): winrt.windows.foundation.Size;
-    function RequestRenderTargetSize(size: ConstRef<winrt.windows.foundation.Size>): winrt.windows.foundation.Size;
+    function RequestRenderTargetSize(size: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Size>): winrt.windows.foundation.Size;
     overload function SupportedPixelFormats(): winrt.windows.foundation.collections.IVectorView<winrt.windows.graphics.directx.DirectXPixelFormat> /* GenericTypeInstSig */;
     overload function PixelFormat(): winrt.windows.graphics.directx.DirectXPixelFormat;
-    overload function PixelFormat(value: ConstRef<winrt.windows.graphics.directx.DirectXPixelFormat>): Void;
+    overload function PixelFormat(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.directx.DirectXPixelFormat>): Void;
     overload function IsStereo(): Bool;
-    overload function RefreshRate(): Float64;
+    overload function RefreshRate(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function Kind(): winrt.windows.graphics.holographic.HolographicViewConfigurationKind;
     overload function Display(): winrt.windows.graphics.holographic.HolographicDisplay;
     overload function IsEnabled(): Bool;

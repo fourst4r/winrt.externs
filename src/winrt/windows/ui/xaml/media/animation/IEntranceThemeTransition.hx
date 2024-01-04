@@ -8,10 +8,10 @@ package winrt.windows.ui.xaml.media.animation;
 @:native("winrt::Windows::UI::Xaml::Media::Animation::IEntranceThemeTransition")
 extern interface IEntranceThemeTransition extends winrt.windows.foundation.IInspectable
 {
-    overload function FromHorizontalOffset(): Float64;
-    overload function FromHorizontalOffset(value: Float64): Void;
-    overload function FromVerticalOffset(): Float64;
-    overload function FromVerticalOffset(value: Float64): Void;
+    overload function FromHorizontalOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function FromHorizontalOffset(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function FromVerticalOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function FromVerticalOffset(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function IsStaggeringEnabled(): Bool;
     overload function IsStaggeringEnabled(value: Bool): Void;
 }

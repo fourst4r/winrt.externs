@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.navigation;
 
 @:include("winrt/Windows.UI.Xaml.Navigation.h", true)
 @:native("winrt::Windows::UI::Xaml::Navigation::NavigationMode")
-extern enum abstract NavigationMode(Int32)
+extern enum abstract NavigationMode(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Navigation::NavigationMode::New") final New;
     @:native("winrt::Windows::UI::Xaml::Navigation::NavigationMode::Back") final Back;

@@ -11,7 +11,7 @@ extern class IconElement
     implements winrt.windows.ui.xaml.controls.IIconElement
 {
     overload function Foreground(): winrt.windows.ui.xaml.media.Brush;
-    overload function Foreground(value: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
+    overload function Foreground(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Brush>): Void;
     overload function ForegroundProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function ForegroundProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

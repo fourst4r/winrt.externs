@@ -2,7 +2,7 @@ package winrt.windows.devices.wifi;
 
 @:include("winrt/Windows.Devices.WiFi.h", true)
 @:native("winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectStatus")
-extern enum abstract WiFiOnDemandHotspotConnectStatus(Int32)
+extern enum abstract WiFiOnDemandHotspotConnectStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectStatus::UnspecifiedFailure") final UnspecifiedFailure;
     @:native("winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectStatus::Success") final Success;

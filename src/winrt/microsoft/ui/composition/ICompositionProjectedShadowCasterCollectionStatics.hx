@@ -8,5 +8,5 @@ package winrt.microsoft.ui.composition;
 @:native("winrt::Microsoft::UI::Composition::ICompositionProjectedShadowCasterCollectionStatics")
 extern interface ICompositionProjectedShadowCasterCollectionStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function MaxRespectedCasters(): Int32;
+    overload function MaxRespectedCasters(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

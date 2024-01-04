@@ -9,9 +9,9 @@ package winrt.windows.ui.composition;
 extern interface ICompositionTexture extends winrt.windows.foundation.IInspectable
 {
     overload function SourceRect(): winrt.windows.graphics.RectInt32;
-    overload function SourceRect(value: ConstRef<winrt.windows.graphics.RectInt32>): Void;
+    overload function SourceRect(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.RectInt32>): Void;
     overload function AlphaMode(): winrt.windows.graphics.directx.DirectXAlphaMode;
-    overload function AlphaMode(value: ConstRef<winrt.windows.graphics.directx.DirectXAlphaMode>): Void;
+    overload function AlphaMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.directx.DirectXAlphaMode>): Void;
     overload function ColorSpace(): winrt.windows.graphics.directx.DirectXColorSpace;
-    overload function ColorSpace(value: ConstRef<winrt.windows.graphics.directx.DirectXColorSpace>): Void;
+    overload function ColorSpace(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.directx.DirectXColorSpace>): Void;
 }

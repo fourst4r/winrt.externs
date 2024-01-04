@@ -10,6 +10,6 @@ extern interface IUserDataTaskListCompleteTaskRequest extends winrt.windows.foun
 {
     overload function TaskListId(): winrt.HString;
     overload function TaskId(): winrt.HString;
-    function ReportCompletedAsync(completedTaskId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncAction;
+    function ReportCompletedAsync(completedTaskId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncAction;
     function ReportFailedAsync(): winrt.windows.foundation.IAsyncAction;
 }

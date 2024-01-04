@@ -8,7 +8,7 @@ package winrt.windows.networking.vpn;
 @:native("winrt::Windows::Networking::Vpn::IVpnCustomPromptTextInput")
 extern interface IVpnCustomPromptTextInput extends winrt.windows.foundation.IInspectable
 {
-    overload function PlaceholderText(value: ConstRef<winrt.HString>): Void;
+    overload function PlaceholderText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function PlaceholderText(): winrt.HString;
     overload function IsTextHidden(value: Bool): Void;
     overload function IsTextHidden(): Bool;

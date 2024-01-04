@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml.media;
 @:native("winrt::Microsoft::UI::Xaml::Media::ISystemBackdrop")
 extern interface ISystemBackdrop extends winrt.windows.foundation.IInspectable
 {
-    function GetDefaultSystemBackdropConfiguration(target: ConstRef<winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>, xamlRoot: ConstRef<winrt.microsoft.ui.xaml.XamlRoot>): winrt.microsoft.ui.composition.systembackdrops.SystemBackdropConfiguration;
+    function GetDefaultSystemBackdropConfiguration(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>, xamlRoot: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.XamlRoot>): winrt.microsoft.ui.composition.systembackdrops.SystemBackdropConfiguration;
 }

@@ -9,5 +9,5 @@ package winrt.windows.media.dialprotocol;
 extern interface IDialDevice extends winrt.windows.foundation.IInspectable
 {
     overload function Id(): winrt.HString;
-    function GetDialApp(appName: ConstRef<winrt.HString>): winrt.windows.media.dialprotocol.DialApp;
+    function GetDialApp(appName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.media.dialprotocol.DialApp;
 }

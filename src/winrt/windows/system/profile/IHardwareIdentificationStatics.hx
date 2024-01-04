@@ -8,5 +8,5 @@ package winrt.windows.system.profile;
 @:native("winrt::Windows::System::Profile::IHardwareIdentificationStatics")
 extern interface IHardwareIdentificationStatics extends winrt.windows.foundation.IInspectable
 {
-    function GetPackageSpecificToken(nonce: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.system.profile.HardwareToken;
+    function GetPackageSpecificToken(nonce: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.system.profile.HardwareToken;
 }

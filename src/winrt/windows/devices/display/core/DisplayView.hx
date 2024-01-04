@@ -11,7 +11,7 @@ extern class DisplayView
 {
     overload function Paths(): winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.display.core.DisplayPath> /* GenericTypeInstSig */;
     overload function ContentResolution(): winrt.windows.foundation.IReference<winrt.windows.graphics.SizeInt32> /* GenericTypeInstSig */;
-    overload function ContentResolution(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.graphics.SizeInt32> /* temp_GenericTypeInstSig */>): Void;
-    function SetPrimaryPath(path: ConstRef<winrt.windows.devices.display.core.DisplayPath>): Void;
+    overload function ContentResolution(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.graphics.SizeInt32> /* temp_GenericTypeInstSig */>): Void;
+    function SetPrimaryPath(path: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.display.core.DisplayPath>): Void;
     overload function Properties(): winrt.windows.foundation.collections.IMap<winrt.Guid, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;
 }

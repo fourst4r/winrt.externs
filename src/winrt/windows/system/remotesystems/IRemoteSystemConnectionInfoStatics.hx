@@ -8,5 +8,5 @@ package winrt.windows.system.remotesystems;
 @:native("winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionInfoStatics")
 extern interface IRemoteSystemConnectionInfoStatics extends winrt.windows.foundation.IInspectable
 {
-    function TryCreateFromAppServiceConnection(connection: ConstRef<winrt.windows.applicationmodel.appservice.AppServiceConnection>): winrt.windows.system.remotesystems.RemoteSystemConnectionInfo;
+    function TryCreateFromAppServiceConnection(connection: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.appservice.AppServiceConnection>): winrt.windows.system.remotesystems.RemoteSystemConnectionInfo;
 }

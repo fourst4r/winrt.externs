@@ -8,6 +8,6 @@ package winrt.windows.devices.sensors;
 @:native("winrt::Windows::Devices::Sensors::IAccelerometerStatics3")
 extern interface IAccelerometerStatics3 extends winrt.windows.foundation.IInspectable
 {
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.sensors.Accelerometer> /* GenericTypeInstSig */;
-    function GetDeviceSelector(readingType: ConstRef<winrt.windows.devices.sensors.AccelerometerReadingType>): winrt.HString;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.sensors.Accelerometer> /* GenericTypeInstSig */;
+    function GetDeviceSelector(readingType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.sensors.AccelerometerReadingType>): winrt.HString;
 }

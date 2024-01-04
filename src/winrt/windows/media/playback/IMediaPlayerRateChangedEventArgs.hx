@@ -8,5 +8,5 @@ package winrt.windows.media.playback;
 @:native("winrt::Windows::Media::Playback::IMediaPlayerRateChangedEventArgs")
 extern interface IMediaPlayerRateChangedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function NewRate(): Float64;
+    overload function NewRate(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

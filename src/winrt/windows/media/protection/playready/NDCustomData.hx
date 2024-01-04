@@ -9,7 +9,7 @@ package winrt.windows.media.protection.playready;
 extern class NDCustomData
     implements winrt.windows.media.protection.playready.INDCustomData
 {
-    function new(customDataTypeIDBytes: winrt.ArrayView<UInt8>, customDataBytes: winrt.ArrayView<UInt8>);
-    overload function CustomDataTypeID(): winrt.ComArray<UInt8>;
-    overload function CustomData(): winrt.ComArray<UInt8>;
+    function new(customDataTypeIDBytes: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>, customDataBytes: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>);
+    overload function CustomDataTypeID(): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
+    overload function CustomData(): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
 }

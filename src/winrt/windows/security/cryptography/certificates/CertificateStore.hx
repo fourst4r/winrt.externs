@@ -10,7 +10,7 @@ extern class CertificateStore
     implements winrt.windows.security.cryptography.certificates.ICertificateStore
     implements winrt.windows.security.cryptography.certificates.ICertificateStore2
 {
-    function Add(certificate: ConstRef<winrt.windows.security.cryptography.certificates.Certificate>): Void;
-    function Delete(certificate: ConstRef<winrt.windows.security.cryptography.certificates.Certificate>): Void;
+    function Add(certificate: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.certificates.Certificate>): Void;
+    function Delete(certificate: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.certificates.Certificate>): Void;
     overload function Name(): winrt.HString;
 }

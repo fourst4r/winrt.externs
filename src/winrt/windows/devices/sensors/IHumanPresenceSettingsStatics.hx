@@ -10,11 +10,11 @@ extern interface IHumanPresenceSettingsStatics extends winrt.windows.foundation.
 {
     function GetCurrentSettingsAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.sensors.HumanPresenceSettings> /* GenericTypeInstSig */;
     function GetCurrentSettings(): winrt.windows.devices.sensors.HumanPresenceSettings;
-    function UpdateSettingsAsync(settings: ConstRef<winrt.windows.devices.sensors.HumanPresenceSettings>): winrt.windows.foundation.IAsyncAction;
-    function UpdateSettings(settings: ConstRef<winrt.windows.devices.sensors.HumanPresenceSettings>): Void;
-    function GetSupportedFeaturesForSensorIdAsync(sensorId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.sensors.HumanPresenceFeatures> /* GenericTypeInstSig */;
-    function GetSupportedFeaturesForSensorId(sensorId: ConstRef<winrt.HString>): winrt.windows.devices.sensors.HumanPresenceFeatures;
+    function UpdateSettingsAsync(settings: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.sensors.HumanPresenceSettings>): winrt.windows.foundation.IAsyncAction;
+    function UpdateSettings(settings: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.sensors.HumanPresenceSettings>): Void;
+    function GetSupportedFeaturesForSensorIdAsync(sensorId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.sensors.HumanPresenceFeatures> /* GenericTypeInstSig */;
+    function GetSupportedFeaturesForSensorId(sensorId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.devices.sensors.HumanPresenceFeatures;
     function GetSupportedLockOnLeaveTimeouts(): winrt.windows.foundation.collections.IVectorView<winrt.windows.foundation.TimeSpan> /* GenericTypeInstSig */;
-    overload function SettingsChanged(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function SettingsChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function SettingsChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function SettingsChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

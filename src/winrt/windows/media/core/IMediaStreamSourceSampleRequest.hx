@@ -10,7 +10,7 @@ extern interface IMediaStreamSourceSampleRequest extends winrt.windows.foundatio
 {
     overload function StreamDescriptor(): winrt.windows.media.core.IMediaStreamDescriptor;
     function GetDeferral(): winrt.windows.media.core.MediaStreamSourceSampleRequestDeferral;
-    overload function Sample(value: ConstRef<winrt.windows.media.core.MediaStreamSample>): Void;
+    overload function Sample(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.MediaStreamSample>): Void;
     overload function Sample(): winrt.windows.media.core.MediaStreamSample;
-    function ReportSampleProgress(progress: UInt32): Void;
+    function ReportSampleProgress(progress: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
 }

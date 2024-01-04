@@ -13,5 +13,5 @@ extern class MobileBroadbandDeviceServiceTriggerDetails
     overload function DeviceId(): winrt.HString;
     overload function DeviceServiceId(): winrt.Guid;
     overload function ReceivedData(): winrt.windows.storage.streams.IBuffer;
-    overload function EventId(): UInt32;
+    overload function EventId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

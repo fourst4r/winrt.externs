@@ -9,7 +9,7 @@ package winrt.windows.security.credentials.ui;
 extern class CredentialPickerResults
     implements winrt.windows.security.credentials.ui.ICredentialPickerResults
 {
-    overload function ErrorCode(): UInt32;
+    overload function ErrorCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function CredentialSaveOption(): winrt.windows.security.credentials.ui.CredentialSaveOption;
     overload function CredentialSaved(): Bool;
     overload function Credential(): winrt.windows.storage.streams.IBuffer;

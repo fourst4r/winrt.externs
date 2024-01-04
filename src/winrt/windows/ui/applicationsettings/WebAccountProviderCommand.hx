@@ -9,7 +9,7 @@ package winrt.windows.ui.applicationsettings;
 extern class WebAccountProviderCommand
     implements winrt.windows.ui.applicationsettings.IWebAccountProviderCommand
 {
-    function new(webAccountProvider: ConstRef<winrt.windows.security.credentials.WebAccountProvider>, invoked: ConstRef<winrt.windows.ui.applicationsettings.WebAccountProviderCommandInvokedHandler>);
+    function new(webAccountProvider: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.WebAccountProvider>, invoked: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.applicationsettings.WebAccountProviderCommandInvokedHandler>);
     overload function WebAccountProvider(): winrt.windows.security.credentials.WebAccountProvider;
     overload function Invoked(): winrt.windows.ui.applicationsettings.WebAccountProviderCommandInvokedHandler;
 }

@@ -10,7 +10,7 @@ extern interface IAutomationRemoteOperationResult extends winrt.windows.foundati
 {
     overload function Status(): winrt.windows.ui.uiautomation.core.AutomationRemoteOperationStatus;
     overload function ExtendedError(): winrt.HResult;
-    overload function ErrorLocation(): Int32;
-    function HasOperand(operandId: ConstRef<winrt.windows.ui.uiautomation.core.AutomationRemoteOperationOperandId>): Bool;
-    function GetOperand(operandId: ConstRef<winrt.windows.ui.uiautomation.core.AutomationRemoteOperationOperandId>): winrt.windows.foundation.IInspectable;
+    overload function ErrorLocation(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function HasOperand(operandId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.uiautomation.core.AutomationRemoteOperationOperandId>): Bool;
+    function GetOperand(operandId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.uiautomation.core.AutomationRemoteOperationOperandId>): winrt.windows.foundation.IInspectable;
 }

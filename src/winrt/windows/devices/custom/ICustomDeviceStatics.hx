@@ -8,6 +8,6 @@ package winrt.windows.devices.custom;
 @:native("winrt::Windows::Devices::Custom::ICustomDeviceStatics")
 extern interface ICustomDeviceStatics extends winrt.windows.foundation.IInspectable
 {
-    function GetDeviceSelector(classGuid: ConstRef<winrt.Guid>): winrt.HString;
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>, desiredAccess: ConstRef<winrt.windows.devices.custom.DeviceAccessMode>, sharingMode: ConstRef<winrt.windows.devices.custom.DeviceSharingMode>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.custom.CustomDevice> /* GenericTypeInstSig */;
+    function GetDeviceSelector(classGuid: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): winrt.HString;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, desiredAccess: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.custom.DeviceAccessMode>, sharingMode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.custom.DeviceSharingMode>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.custom.CustomDevice> /* GenericTypeInstSig */;
 }

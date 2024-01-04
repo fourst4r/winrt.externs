@@ -2,7 +2,7 @@ package winrt.windows.graphics.imaging;
 
 @:include("winrt/Windows.Graphics.Imaging.h", true)
 @:native("winrt::Windows::Graphics::Imaging::BitmapAlphaMode")
-extern enum abstract BitmapAlphaMode(Int32)
+extern enum abstract BitmapAlphaMode(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Graphics::Imaging::BitmapAlphaMode::Premultiplied") final Premultiplied;
     @:native("winrt::Windows::Graphics::Imaging::BitmapAlphaMode::Straight") final Straight;

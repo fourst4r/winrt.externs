@@ -2,7 +2,7 @@ package winrt.microsoft.web.webview2.core;
 
 @:include("winrt/Microsoft.Web.WebView2.Core.h", true)
 @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebErrorStatus")
-extern enum abstract CoreWebView2WebErrorStatus(Int32)
+extern enum abstract CoreWebView2WebErrorStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebErrorStatus::Unknown") final Unknown;
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebErrorStatus::CertificateCommonNameIsIncorrect") final CertificateCommonNameIsIncorrect;

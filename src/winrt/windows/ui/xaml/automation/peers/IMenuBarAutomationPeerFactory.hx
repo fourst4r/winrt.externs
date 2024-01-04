@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.automation.peers;
 @:native("winrt::Windows::UI::Xaml::Automation::Peers::IMenuBarAutomationPeerFactory")
 extern interface IMenuBarAutomationPeerFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(owner: ConstRef<winrt.windows.ui.xaml.controls.MenuBar>, baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.automation.peers.MenuBarAutomationPeer;
+    function CreateInstance(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.MenuBar>, baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.automation.peers.MenuBarAutomationPeer;
 }

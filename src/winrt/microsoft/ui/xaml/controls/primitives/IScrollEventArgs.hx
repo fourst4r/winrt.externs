@@ -8,6 +8,6 @@ package winrt.microsoft.ui.xaml.controls.primitives;
 @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::IScrollEventArgs")
 extern interface IScrollEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function NewValue(): Float64;
+    overload function NewValue(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function ScrollEventType(): winrt.microsoft.ui.xaml.controls.primitives.ScrollEventType;
 }

@@ -8,6 +8,6 @@ package winrt.microsoft.ui.composition.systembackdrops;
 @:native("winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController")
 extern interface ISystemBackdropController extends winrt.windows.foundation.IInspectable
 {
-    overload function SetTarget(windowId: ConstRef<winrt.microsoft.ui.WindowId>, desktopWindowTarget: ConstRef<winrt.windows.ui.composition.CompositionTarget>): Bool;
-    overload function SetTarget(coreWindow: ConstRef<winrt.windows.ui.core.CoreWindow>, compositionTarget: ConstRef<winrt.windows.ui.composition.CompositionTarget>): Bool;
+    overload function SetTarget(windowId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.WindowId>, desktopWindowTarget: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionTarget>): Bool;
+    overload function SetTarget(coreWindow: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.CoreWindow>, compositionTarget: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionTarget>): Bool;
 }

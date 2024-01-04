@@ -9,6 +9,6 @@ package winrt.microsoft.web.webview2.core;
 extern interface ICoreWebView2_12 extends winrt.windows.foundation.IInspectable
 {
     overload function StatusBarText(): winrt.HString;
-    overload function StatusBarTextChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.microsoft.web.webview2.core.CoreWebView2, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function StatusBarTextChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function StatusBarTextChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.microsoft.web.webview2.core.CoreWebView2, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function StatusBarTextChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

@@ -8,5 +8,5 @@ package winrt.windows.networking.networkoperators;
 @:native("winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceTriggerDetails2")
 extern interface IMobileBroadbandDeviceServiceTriggerDetails2 extends winrt.windows.foundation.IInspectable
 {
-    overload function EventId(): UInt32;
+    overload function EventId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

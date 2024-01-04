@@ -11,9 +11,9 @@ extern class AllJoynCredentials
 {
     overload function AuthenticationMechanism(): winrt.windows.devices.alljoyn.AllJoynAuthenticationMechanism;
     overload function Certificate(): winrt.windows.security.cryptography.certificates.Certificate;
-    overload function Certificate(value: ConstRef<winrt.windows.security.cryptography.certificates.Certificate>): Void;
+    overload function Certificate(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.certificates.Certificate>): Void;
     overload function PasswordCredential(): winrt.windows.security.credentials.PasswordCredential;
-    overload function PasswordCredential(value: ConstRef<winrt.windows.security.credentials.PasswordCredential>): Void;
+    overload function PasswordCredential(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.PasswordCredential>): Void;
     overload function Timeout(): winrt.windows.foundation.TimeSpan;
-    overload function Timeout(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function Timeout(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
 }

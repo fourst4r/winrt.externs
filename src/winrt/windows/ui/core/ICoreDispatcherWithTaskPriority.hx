@@ -9,8 +9,8 @@ package winrt.windows.ui.core;
 extern interface ICoreDispatcherWithTaskPriority extends winrt.windows.foundation.IInspectable
 {
     overload function CurrentPriority(): winrt.windows.ui.core.CoreDispatcherPriority;
-    overload function CurrentPriority(value: ConstRef<winrt.windows.ui.core.CoreDispatcherPriority>): Void;
+    overload function CurrentPriority(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.CoreDispatcherPriority>): Void;
     overload function ShouldYield(): Bool;
-    overload function ShouldYield(priority: ConstRef<winrt.windows.ui.core.CoreDispatcherPriority>): Bool;
+    overload function ShouldYield(priority: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.CoreDispatcherPriority>): Bool;
     function StopProcessEvents(): Void;
 }

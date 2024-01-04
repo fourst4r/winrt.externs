@@ -9,5 +9,5 @@ package winrt.windows.networking.sockets;
 extern interface IStreamSocketControl4 extends winrt.windows.foundation.IInspectable
 {
     overload function MinProtectionLevel(): winrt.windows.networking.sockets.SocketProtectionLevel;
-    overload function MinProtectionLevel(value: ConstRef<winrt.windows.networking.sockets.SocketProtectionLevel>): Void;
+    overload function MinProtectionLevel(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.sockets.SocketProtectionLevel>): Void;
 }

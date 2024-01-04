@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.chat;
 extern interface IChatMessageManager2Statics extends winrt.windows.foundation.IInspectable
 {
     function RegisterTransportAsync(): winrt.windows.foundation.IAsyncOperation<winrt.HString> /* GenericTypeInstSig */;
-    function GetTransportAsync(transportId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.chat.ChatMessageTransport> /* GenericTypeInstSig */;
+    function GetTransportAsync(transportId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.chat.ChatMessageTransport> /* GenericTypeInstSig */;
 }

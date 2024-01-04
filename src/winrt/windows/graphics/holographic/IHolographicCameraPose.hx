@@ -10,10 +10,10 @@ extern interface IHolographicCameraPose extends winrt.windows.foundation.IInspec
 {
     overload function HolographicCamera(): winrt.windows.graphics.holographic.HolographicCamera;
     overload function Viewport(): winrt.windows.foundation.Rect;
-    function TryGetViewTransform(coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.foundation.IReference<winrt.windows.graphics.holographic.HolographicStereoTransform> /* GenericTypeInstSig */;
+    function TryGetViewTransform(coordinateSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.foundation.IReference<winrt.windows.graphics.holographic.HolographicStereoTransform> /* GenericTypeInstSig */;
     overload function ProjectionTransform(): winrt.windows.graphics.holographic.HolographicStereoTransform;
-    function TryGetCullingFrustum(coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.foundation.IReference<winrt.windows.perception.spatial.SpatialBoundingFrustum> /* GenericTypeInstSig */;
-    function TryGetVisibleFrustum(coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.foundation.IReference<winrt.windows.perception.spatial.SpatialBoundingFrustum> /* GenericTypeInstSig */;
-    overload function NearPlaneDistance(): Float64;
-    overload function FarPlaneDistance(): Float64;
+    function TryGetCullingFrustum(coordinateSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.foundation.IReference<winrt.windows.perception.spatial.SpatialBoundingFrustum> /* GenericTypeInstSig */;
+    function TryGetVisibleFrustum(coordinateSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.foundation.IReference<winrt.windows.perception.spatial.SpatialBoundingFrustum> /* GenericTypeInstSig */;
+    overload function NearPlaneDistance(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function FarPlaneDistance(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

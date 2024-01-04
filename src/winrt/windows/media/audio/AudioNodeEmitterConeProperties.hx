@@ -9,7 +9,7 @@ package winrt.windows.media.audio;
 extern class AudioNodeEmitterConeProperties
     implements winrt.windows.media.audio.IAudioNodeEmitterConeProperties
 {
-    overload function InnerAngle(): Float64;
-    overload function OuterAngle(): Float64;
-    overload function OuterAngleGain(): Float64;
+    overload function InnerAngle(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function OuterAngle(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function OuterAngleGain(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

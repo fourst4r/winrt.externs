@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.email;
 @:native("winrt::Windows::ApplicationModel::Email::IEmailAttachmentFactory2")
 extern interface IEmailAttachmentFactory2 extends winrt.windows.foundation.IInspectable
 {
-    function Create(fileName: ConstRef<winrt.HString>, data: ConstRef<winrt.windows.storage.streams.IRandomAccessStreamReference>, mimeType: ConstRef<winrt.HString>): winrt.windows.applicationmodel.email.EmailAttachment;
+    function Create(fileName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, data: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStreamReference>, mimeType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.email.EmailAttachment;
 }

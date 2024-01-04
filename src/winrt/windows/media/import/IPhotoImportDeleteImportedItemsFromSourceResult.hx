@@ -11,14 +11,14 @@ extern interface IPhotoImportDeleteImportedItemsFromSourceResult extends winrt.w
     overload function Session(): winrt.windows.media.import.PhotoImportSession;
     overload function HasSucceeded(): Bool;
     overload function DeletedItems(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.import.PhotoImportItem> /* GenericTypeInstSig */;
-    overload function PhotosCount(): UInt32;
-    overload function PhotosSizeInBytes(): UInt64;
-    overload function VideosCount(): UInt32;
-    overload function VideosSizeInBytes(): UInt64;
-    overload function SidecarsCount(): UInt32;
-    overload function SidecarsSizeInBytes(): UInt64;
-    overload function SiblingsCount(): UInt32;
-    overload function SiblingsSizeInBytes(): UInt64;
-    overload function TotalCount(): UInt32;
-    overload function TotalSizeInBytes(): UInt64;
+    overload function PhotosCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function PhotosSizeInBytes(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
+    overload function VideosCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function VideosSizeInBytes(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
+    overload function SidecarsCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function SidecarsSizeInBytes(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
+    overload function SiblingsCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function SiblingsSizeInBytes(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
+    overload function TotalCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function TotalSizeInBytes(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

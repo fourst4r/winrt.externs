@@ -11,5 +11,5 @@ extern interface ITreeViewItemTemplateSettings extends winrt.windows.foundation.
     overload function ExpandedGlyphVisibility(): winrt.microsoft.ui.xaml.Visibility;
     overload function CollapsedGlyphVisibility(): winrt.microsoft.ui.xaml.Visibility;
     overload function Indentation(): winrt.microsoft.ui.xaml.Thickness;
-    overload function DragItemsCount(): Int32;
+    overload function DragItemsCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

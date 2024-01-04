@@ -9,6 +9,6 @@ package winrt.windows.devices.power;
 extern interface IBatteryStatics extends winrt.windows.foundation.IInspectable
 {
     overload function AggregateBattery(): winrt.windows.devices.power.Battery;
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.power.Battery> /* GenericTypeInstSig */;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.power.Battery> /* GenericTypeInstSig */;
     function GetDeviceSelector(): winrt.HString;
 }

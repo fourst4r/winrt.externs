@@ -8,5 +8,5 @@ package winrt.windows.networking;
 @:native("winrt::Windows::Networking::IHostNameStatics")
 extern interface IHostNameStatics extends winrt.windows.foundation.IInspectable
 {
-    function Compare(value1: ConstRef<winrt.HString>, value2: ConstRef<winrt.HString>): Int32;
+    function Compare(value1: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, value2: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

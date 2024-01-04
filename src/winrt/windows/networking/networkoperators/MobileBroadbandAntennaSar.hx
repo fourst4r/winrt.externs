@@ -9,7 +9,7 @@ package winrt.windows.networking.networkoperators;
 extern class MobileBroadbandAntennaSar
     implements winrt.windows.networking.networkoperators.IMobileBroadbandAntennaSar
 {
-    function new(antennaIndex: Int32, sarBackoffIndex: Int32);
-    overload function AntennaIndex(): Int32;
-    overload function SarBackoffIndex(): Int32;
+    function new(antennaIndex: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, sarBackoffIndex: #if reflaxe.cpp cxx.num. #else cpp. #end Int32);
+    overload function AntennaIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function SarBackoffIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

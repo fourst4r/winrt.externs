@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.data;
 @:native("winrt::Windows::UI::Xaml::Data::IItemsRangeInfo")
 extern interface IItemsRangeInfo extends winrt.windows.foundation.IInspectable
 {
-    function RangesChanged(visibleRange: ConstRef<winrt.windows.ui.xaml.data.ItemIndexRange>, trackedItems: ConstRef<winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.xaml.data.ItemIndexRange> /* temp_GenericTypeInstSig */>): Void;
+    function RangesChanged(visibleRange: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.data.ItemIndexRange>, trackedItems: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.xaml.data.ItemIndexRange> /* temp_GenericTypeInstSig */>): Void;
 }

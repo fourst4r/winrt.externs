@@ -9,6 +9,6 @@ package winrt.windows.devices.display.core;
 extern interface IDisplaySource extends winrt.windows.foundation.IInspectable
 {
     overload function AdapterId(): winrt.windows.graphics.DisplayAdapterId;
-    overload function SourceId(): UInt32;
-    function GetMetadata(Key: ConstRef<winrt.Guid>): winrt.windows.storage.streams.IBuffer;
+    overload function SourceId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function GetMetadata(Key: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): winrt.windows.storage.streams.IBuffer;
 }

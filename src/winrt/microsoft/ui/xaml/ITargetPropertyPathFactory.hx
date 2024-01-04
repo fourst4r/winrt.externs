@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml;
 @:native("winrt::Microsoft::UI::Xaml::ITargetPropertyPathFactory")
 extern interface ITargetPropertyPathFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(targetProperty: ConstRef<winrt.microsoft.ui.xaml.DependencyProperty>): winrt.microsoft.ui.xaml.TargetPropertyPath;
+    function CreateInstance(targetProperty: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyProperty>): winrt.microsoft.ui.xaml.TargetPropertyPath;
 }

@@ -8,6 +8,6 @@ package winrt.windows.storage.compression;
 @:native("winrt::Windows::Storage::Compression::ICompressorFactory")
 extern interface ICompressorFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateCompressor(underlyingStream: ConstRef<winrt.windows.storage.streams.IOutputStream>): winrt.windows.storage.compression.Compressor;
-    function CreateCompressorEx(underlyingStream: ConstRef<winrt.windows.storage.streams.IOutputStream>, algorithm: ConstRef<winrt.windows.storage.compression.CompressAlgorithm>, blockSize: UInt32): winrt.windows.storage.compression.Compressor;
+    function CreateCompressor(underlyingStream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IOutputStream>): winrt.windows.storage.compression.Compressor;
+    function CreateCompressorEx(underlyingStream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IOutputStream>, algorithm: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.compression.CompressAlgorithm>, blockSize: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.storage.compression.Compressor;
 }

@@ -8,5 +8,5 @@ package winrt.microsoft.windows.appnotifications;
 @:native("winrt::Microsoft::Windows::AppNotifications::IAppNotificationManager2")
 extern interface IAppNotificationManager2 extends winrt.windows.foundation.IInspectable
 {
-    function Register(displayName: ConstRef<winrt.HString>, iconUri: ConstRef<winrt.windows.foundation.Uri>): Void;
+    function Register(displayName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, iconUri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
 }

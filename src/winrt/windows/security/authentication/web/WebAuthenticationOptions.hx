@@ -2,7 +2,7 @@ package winrt.windows.security.authentication.web;
 
 @:include("winrt/Windows.Security.Authentication.Web.h", true)
 @:native("winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions")
-extern enum abstract WebAuthenticationOptions(UInt32)
+extern enum abstract WebAuthenticationOptions(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions::None") final None;
     @:native("winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions::SilentMode") final SilentMode;

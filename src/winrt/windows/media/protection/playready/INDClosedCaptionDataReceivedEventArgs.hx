@@ -9,6 +9,6 @@ package winrt.windows.media.protection.playready;
 extern interface INDClosedCaptionDataReceivedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function ClosedCaptionDataFormat(): winrt.windows.media.protection.playready.NDClosedCaptionFormat;
-    overload function PresentationTimestamp(): Int64;
-    overload function ClosedCaptionData(): winrt.ComArray<UInt8>;
+    overload function PresentationTimestamp(): #if reflaxe.cpp cxx.num. #else cpp. #end Int64;
+    overload function ClosedCaptionData(): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
 }

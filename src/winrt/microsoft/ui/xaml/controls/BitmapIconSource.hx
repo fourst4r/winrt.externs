@@ -12,7 +12,7 @@ extern class BitmapIconSource
 {
     function new();
     overload function UriSource(): winrt.windows.foundation.Uri;
-    overload function UriSource(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function UriSource(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function ShowAsMonochrome(): Bool;
     overload function ShowAsMonochrome(value: Bool): Void;
     overload function UriSourceProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

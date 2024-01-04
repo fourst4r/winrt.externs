@@ -9,7 +9,7 @@ package winrt.microsoft.web.webview2.core;
 extern interface ICoreWebView2BasicAuthenticationResponse extends winrt.windows.foundation.IInspectable
 {
     overload function UserName(): winrt.HString;
-    overload function UserName(value: ConstRef<winrt.HString>): Void;
+    overload function UserName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Password(): winrt.HString;
-    overload function Password(value: ConstRef<winrt.HString>): Void;
+    overload function Password(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

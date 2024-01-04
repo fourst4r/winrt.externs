@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.payments;
 
 @:include("winrt/Windows.ApplicationModel.Payments.h", true)
 @:native("winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus")
-extern enum abstract PaymentCanMakePaymentResultStatus(Int32)
+extern enum abstract PaymentCanMakePaymentResultStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus::Unknown") final Unknown;
     @:native("winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus::Yes") final Yes;

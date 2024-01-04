@@ -13,5 +13,5 @@ extern class FolderLauncherOptions
     function new();
     overload function ItemsToSelect(): winrt.windows.foundation.collections.IVector<winrt.windows.storage.IStorageItem> /* GenericTypeInstSig */;
     overload function DesiredRemainingView(): winrt.windows.ui.viewmanagement.ViewSizePreference;
-    overload function DesiredRemainingView(value: ConstRef<winrt.windows.ui.viewmanagement.ViewSizePreference>): Void;
+    overload function DesiredRemainingView(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.viewmanagement.ViewSizePreference>): Void;
 }

@@ -8,5 +8,5 @@ package winrt.windows.security.cryptography.core;
 @:native("winrt::Windows::Security::Cryptography::Core::IMacAlgorithmProviderStatics")
 extern interface IMacAlgorithmProviderStatics extends winrt.windows.foundation.IInspectable
 {
-    function OpenAlgorithm(algorithm: ConstRef<winrt.HString>): winrt.windows.security.cryptography.core.MacAlgorithmProvider;
+    function OpenAlgorithm(algorithm: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.security.cryptography.core.MacAlgorithmProvider;
 }

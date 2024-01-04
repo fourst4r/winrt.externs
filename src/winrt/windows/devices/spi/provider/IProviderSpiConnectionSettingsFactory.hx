@@ -8,5 +8,5 @@ package winrt.windows.devices.spi.provider;
 @:native("winrt::Windows::Devices::Spi::Provider::IProviderSpiConnectionSettingsFactory")
 extern interface IProviderSpiConnectionSettingsFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(chipSelectLine: Int32): winrt.windows.devices.spi.provider.ProviderSpiConnectionSettings;
+    function Create(chipSelectLine: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.devices.spi.provider.ProviderSpiConnectionSettings;
 }

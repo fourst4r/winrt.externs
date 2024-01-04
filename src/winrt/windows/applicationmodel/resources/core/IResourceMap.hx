@@ -9,7 +9,7 @@ package winrt.windows.applicationmodel.resources.core;
 extern interface IResourceMap extends winrt.windows.foundation.IInspectable
 {
     overload function Uri(): winrt.windows.foundation.Uri;
-    overload function GetValue(resource: ConstRef<winrt.HString>): winrt.windows.applicationmodel.resources.core.ResourceCandidate;
-    overload function GetValue(resource: ConstRef<winrt.HString>, context: ConstRef<winrt.windows.applicationmodel.resources.core.ResourceContext>): winrt.windows.applicationmodel.resources.core.ResourceCandidate;
-    function GetSubtree(reference: ConstRef<winrt.HString>): winrt.windows.applicationmodel.resources.core.ResourceMap;
+    overload function GetValue(resource: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.resources.core.ResourceCandidate;
+    overload function GetValue(resource: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, context: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.resources.core.ResourceContext>): winrt.windows.applicationmodel.resources.core.ResourceCandidate;
+    function GetSubtree(reference: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.resources.core.ResourceMap;
 }

@@ -12,7 +12,7 @@ extern class ColorPickerSlider
 {
     function new();
     overload function ColorChannel(): winrt.windows.ui.xaml.controls.ColorPickerHsvChannel;
-    overload function ColorChannel(value: ConstRef<winrt.windows.ui.xaml.controls.ColorPickerHsvChannel>): Void;
+    overload function ColorChannel(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.ColorPickerHsvChannel>): Void;
     overload function ColorChannelProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function ColorChannelProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

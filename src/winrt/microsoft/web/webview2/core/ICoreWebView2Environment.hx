@@ -9,8 +9,8 @@ package winrt.microsoft.web.webview2.core;
 extern interface ICoreWebView2Environment extends winrt.windows.foundation.IInspectable
 {
     overload function BrowserVersionString(): winrt.HString;
-    overload function NewBrowserVersionAvailable(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.microsoft.web.webview2.core.CoreWebView2Environment, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function NewBrowserVersionAvailable(token: ConstRef<winrt.EventToken>): Void;
-    function CreateCoreWebView2ControllerAsync(ParentWindow: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2ControllerWindowReference>): winrt.windows.foundation.IAsyncOperation<winrt.microsoft.web.webview2.core.CoreWebView2Controller> /* GenericTypeInstSig */;
-    function CreateWebResourceResponse(Content: ConstRef<winrt.windows.storage.streams.IRandomAccessStream>, StatusCode: Int32, ReasonPhrase: ConstRef<winrt.HString>, Headers: ConstRef<winrt.HString>): winrt.microsoft.web.webview2.core.CoreWebView2WebResourceResponse;
+    overload function NewBrowserVersionAvailable(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.microsoft.web.webview2.core.CoreWebView2Environment, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function NewBrowserVersionAvailable(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    function CreateCoreWebView2ControllerAsync(ParentWindow: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.CoreWebView2ControllerWindowReference>): winrt.windows.foundation.IAsyncOperation<winrt.microsoft.web.webview2.core.CoreWebView2Controller> /* GenericTypeInstSig */;
+    function CreateWebResourceResponse(Content: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStream>, StatusCode: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, ReasonPhrase: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, Headers: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.microsoft.web.webview2.core.CoreWebView2WebResourceResponse;
 }

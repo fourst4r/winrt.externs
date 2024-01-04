@@ -8,5 +8,5 @@ package winrt.windows.media.protection.playready;
 @:native("winrt::Windows::Media::Protection::PlayReady::INDClientFactory")
 extern interface INDClientFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(downloadEngine: ConstRef<winrt.windows.media.protection.playready.INDDownloadEngine>, streamParser: ConstRef<winrt.windows.media.protection.playready.INDStreamParser>, pMessenger: ConstRef<winrt.windows.media.protection.playready.INDMessenger>): winrt.windows.media.protection.playready.NDClient;
+    function CreateInstance(downloadEngine: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.protection.playready.INDDownloadEngine>, streamParser: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.protection.playready.INDStreamParser>, pMessenger: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.protection.playready.INDMessenger>): winrt.windows.media.protection.playready.NDClient;
 }

@@ -13,5 +13,5 @@ extern interface IPerceptionFrameProvider extends winrt.windows.foundation.IInsp
     overload function Properties(): winrt.windows.foundation.collections.IPropertySet;
     function Start(): Void;
     function Stop(): Void;
-    function SetProperty(value: ConstRef<winrt.windows.devices.perception.provider.PerceptionPropertyChangeRequest>): Void;
+    function SetProperty(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.perception.provider.PerceptionPropertyChangeRequest>): Void;
 }

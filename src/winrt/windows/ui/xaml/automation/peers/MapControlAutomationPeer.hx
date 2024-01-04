@@ -14,23 +14,23 @@ extern class MapControlAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.ITransformProvider2
 {
     overload function HorizontallyScrollable(): Bool;
-    overload function HorizontalScrollPercent(): Float64;
-    overload function HorizontalViewSize(): Float64;
+    overload function HorizontalScrollPercent(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function HorizontalViewSize(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function VerticallyScrollable(): Bool;
-    overload function VerticalScrollPercent(): Float64;
-    overload function VerticalViewSize(): Float64;
-    function Scroll(horizontalAmount: ConstRef<winrt.windows.ui.xaml.automation.ScrollAmount>, verticalAmount: ConstRef<winrt.windows.ui.xaml.automation.ScrollAmount>): Void;
-    function SetScrollPercent(horizontalPercent: Float64, verticalPercent: Float64): Void;
+    overload function VerticalScrollPercent(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function VerticalViewSize(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    function Scroll(horizontalAmount: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.ScrollAmount>, verticalAmount: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.ScrollAmount>): Void;
+    function SetScrollPercent(horizontalPercent: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, verticalPercent: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function CanZoom(): Bool;
-    overload function ZoomLevel(): Float64;
-    overload function MaxZoom(): Float64;
-    overload function MinZoom(): Float64;
-    function Zoom(zoom: Float64): Void;
-    function ZoomByUnit(zoomUnit: ConstRef<winrt.windows.ui.xaml.automation.ZoomUnit>): Void;
+    overload function ZoomLevel(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function MaxZoom(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function MinZoom(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    function Zoom(zoom: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    function ZoomByUnit(zoomUnit: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.ZoomUnit>): Void;
     overload function CanMove(): Bool;
     overload function CanResize(): Bool;
     overload function CanRotate(): Bool;
-    function Move(x: Float64, y: Float64): Void;
-    function Resize(width: Float64, height: Float64): Void;
-    function Rotate(degrees: Float64): Void;
+    function Move(x: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, y: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    function Resize(width: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, height: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    function Rotate(degrees: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

@@ -13,5 +13,5 @@ extern interface ICertificateQuery2 extends winrt.windows.foundation.IInspectabl
     overload function IncludeExpiredCertificates(): Bool;
     overload function IncludeExpiredCertificates(value: Bool): Void;
     overload function StoreName(): winrt.HString;
-    overload function StoreName(value: ConstRef<winrt.HString>): Void;
+    overload function StoreName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

@@ -8,20 +8,20 @@ package winrt.microsoft.ui.composition;
 @:native("winrt::Microsoft::UI::Composition::IRectangleClip")
 extern interface IRectangleClip extends winrt.windows.foundation.IInspectable
 {
-    overload function Bottom(): Float32;
-    overload function Bottom(value: Float32): Void;
+    overload function Bottom(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Bottom(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
     overload function BottomLeftRadius(): winrt.windows.foundation.numerics.Vector2;
-    overload function BottomLeftRadius(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function BottomLeftRadius(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
     overload function BottomRightRadius(): winrt.windows.foundation.numerics.Vector2;
-    overload function BottomRightRadius(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
-    overload function Left(): Float32;
-    overload function Left(value: Float32): Void;
-    overload function Right(): Float32;
-    overload function Right(value: Float32): Void;
-    overload function Top(): Float32;
-    overload function Top(value: Float32): Void;
+    overload function BottomRightRadius(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function Left(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Left(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function Right(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Right(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function Top(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Top(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
     overload function TopLeftRadius(): winrt.windows.foundation.numerics.Vector2;
-    overload function TopLeftRadius(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function TopLeftRadius(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
     overload function TopRightRadius(): winrt.windows.foundation.numerics.Vector2;
-    overload function TopRightRadius(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function TopRightRadius(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
 }

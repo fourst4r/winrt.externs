@@ -9,5 +9,5 @@ package winrt.windows.ui.composition;
 extern interface IKeyFrameAnimation2 extends winrt.windows.foundation.IInspectable
 {
     overload function Direction(): winrt.windows.ui.composition.AnimationDirection;
-    overload function Direction(value: ConstRef<winrt.windows.ui.composition.AnimationDirection>): Void;
+    overload function Direction(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.AnimationDirection>): Void;
 }

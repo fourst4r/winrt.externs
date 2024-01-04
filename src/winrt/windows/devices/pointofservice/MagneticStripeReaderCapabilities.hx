@@ -10,7 +10,7 @@ extern class MagneticStripeReaderCapabilities
     implements winrt.windows.devices.pointofservice.IMagneticStripeReaderCapabilities
 {
     overload function CardAuthentication(): winrt.HString;
-    overload function SupportedEncryptionAlgorithms(): UInt32;
+    overload function SupportedEncryptionAlgorithms(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function AuthenticationLevel(): winrt.windows.devices.pointofservice.MagneticStripeReaderAuthenticationLevel;
     overload function IsIsoSupported(): Bool;
     overload function IsJisOneSupported(): Bool;

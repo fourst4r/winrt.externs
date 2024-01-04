@@ -2,7 +2,7 @@ package winrt.windows.networking.networkoperators;
 
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::UiccAppKind")
-extern enum abstract UiccAppKind(Int32)
+extern enum abstract UiccAppKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Networking::NetworkOperators::UiccAppKind::Unknown") final Unknown;
     @:native("winrt::Windows::Networking::NetworkOperators::UiccAppKind::MF") final MF;

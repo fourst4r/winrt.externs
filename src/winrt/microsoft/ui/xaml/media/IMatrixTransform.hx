@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.media;
 extern interface IMatrixTransform extends winrt.windows.foundation.IInspectable
 {
     overload function Matrix(): winrt.microsoft.ui.xaml.media.Matrix;
-    overload function Matrix(value: ConstRef<winrt.microsoft.ui.xaml.media.Matrix>): Void;
+    overload function Matrix(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.Matrix>): Void;
 }

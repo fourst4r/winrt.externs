@@ -9,5 +9,5 @@ package winrt.windows.ui.core;
 extern interface ISystemNavigationManager2 extends winrt.windows.foundation.IInspectable
 {
     overload function AppViewBackButtonVisibility(): winrt.windows.ui.core.AppViewBackButtonVisibility;
-    overload function AppViewBackButtonVisibility(value: ConstRef<winrt.windows.ui.core.AppViewBackButtonVisibility>): Void;
+    overload function AppViewBackButtonVisibility(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.AppViewBackButtonVisibility>): Void;
 }

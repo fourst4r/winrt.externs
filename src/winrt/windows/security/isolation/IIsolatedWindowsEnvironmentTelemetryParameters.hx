@@ -9,5 +9,5 @@ package winrt.windows.security.isolation;
 extern interface IIsolatedWindowsEnvironmentTelemetryParameters extends winrt.windows.foundation.IInspectable
 {
     overload function CorrelationId(): winrt.Guid;
-    overload function CorrelationId(value: ConstRef<winrt.Guid>): Void;
+    overload function CorrelationId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): Void;
 }

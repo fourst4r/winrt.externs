@@ -11,9 +11,9 @@ extern class CompositionRadialGradientBrush
     implements winrt.windows.ui.composition.ICompositionRadialGradientBrush
 {
     overload function EllipseCenter(): winrt.windows.foundation.numerics.Vector2;
-    overload function EllipseCenter(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function EllipseCenter(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
     overload function EllipseRadius(): winrt.windows.foundation.numerics.Vector2;
-    overload function EllipseRadius(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function EllipseRadius(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
     overload function GradientOriginOffset(): winrt.windows.foundation.numerics.Vector2;
-    overload function GradientOriginOffset(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function GradientOriginOffset(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
 }

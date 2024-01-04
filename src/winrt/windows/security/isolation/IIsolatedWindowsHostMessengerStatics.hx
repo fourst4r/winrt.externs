@@ -8,6 +8,6 @@ package winrt.windows.security.isolation;
 @:native("winrt::Windows::Security::Isolation::IIsolatedWindowsHostMessengerStatics")
 extern interface IIsolatedWindowsHostMessengerStatics extends winrt.windows.foundation.IInspectable
 {
-    function PostMessageToReceiver(receiverId: ConstRef<winrt.Guid>, message: ConstRef<winrt.windows.foundation.collections.IVectorView<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): Void;
-    function GetFileId(filePath: ConstRef<winrt.HString>): winrt.Guid;
+    function PostMessageToReceiver(receiverId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>, message: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IVectorView<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): Void;
+    function GetFileId(filePath: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.Guid;
 }

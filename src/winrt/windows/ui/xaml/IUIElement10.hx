@@ -11,8 +11,8 @@ extern interface IUIElement10 extends winrt.windows.foundation.IInspectable
     overload function ActualOffset(): winrt.windows.foundation.numerics.Vector3;
     overload function ActualSize(): winrt.windows.foundation.numerics.Vector2;
     overload function XamlRoot(): winrt.windows.ui.xaml.XamlRoot;
-    overload function XamlRoot(value: ConstRef<winrt.windows.ui.xaml.XamlRoot>): Void;
+    overload function XamlRoot(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.XamlRoot>): Void;
     overload function UIContext(): winrt.windows.ui.UIContext;
     overload function Shadow(): winrt.windows.ui.xaml.media.Shadow;
-    overload function Shadow(value: ConstRef<winrt.windows.ui.xaml.media.Shadow>): Void;
+    overload function Shadow(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Shadow>): Void;
 }

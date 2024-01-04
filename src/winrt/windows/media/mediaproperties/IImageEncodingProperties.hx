@@ -8,8 +8,8 @@ package winrt.windows.media.mediaproperties;
 @:native("winrt::Windows::Media::MediaProperties::IImageEncodingProperties")
 extern interface IImageEncodingProperties extends winrt.windows.foundation.IInspectable
 {
-    overload function Width(value: UInt32): Void;
-    overload function Width(): UInt32;
-    overload function Height(value: UInt32): Void;
-    overload function Height(): UInt32;
+    overload function Width(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function Width(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Height(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function Height(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

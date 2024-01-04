@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.appservice;
 
 @:include("winrt/Windows.ApplicationModel.AppService.h", true)
 @:native("winrt::Windows::ApplicationModel::AppService::AppServiceConnectionStatus")
-extern enum abstract AppServiceConnectionStatus(Int32)
+extern enum abstract AppServiceConnectionStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::AppService::AppServiceConnectionStatus::Success") final Success;
     @:native("winrt::Windows::ApplicationModel::AppService::AppServiceConnectionStatus::AppNotInstalled") final AppNotInstalled;

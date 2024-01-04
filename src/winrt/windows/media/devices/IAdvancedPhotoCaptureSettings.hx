@@ -9,5 +9,5 @@ package winrt.windows.media.devices;
 extern interface IAdvancedPhotoCaptureSettings extends winrt.windows.foundation.IInspectable
 {
     overload function Mode(): winrt.windows.media.devices.AdvancedPhotoMode;
-    overload function Mode(value: ConstRef<winrt.windows.media.devices.AdvancedPhotoMode>): Void;
+    overload function Mode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.AdvancedPhotoMode>): Void;
 }

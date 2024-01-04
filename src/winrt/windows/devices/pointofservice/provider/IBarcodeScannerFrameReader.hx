@@ -12,6 +12,6 @@ extern interface IBarcodeScannerFrameReader extends winrt.windows.foundation.IIn
     function StopAsync(): winrt.windows.foundation.IAsyncAction;
     function TryAcquireLatestFrameAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.pointofservice.provider.BarcodeScannerVideoFrame> /* GenericTypeInstSig */;
     overload function Connection(): winrt.windows.devices.pointofservice.provider.BarcodeScannerProviderConnection;
-    overload function FrameArrived(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.pointofservice.provider.BarcodeScannerFrameReader, winrt.windows.devices.pointofservice.provider.BarcodeScannerFrameReaderFrameArrivedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function FrameArrived(token: ConstRef<winrt.EventToken>): Void;
+    overload function FrameArrived(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.pointofservice.provider.BarcodeScannerFrameReader, winrt.windows.devices.pointofservice.provider.BarcodeScannerFrameReaderFrameArrivedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function FrameArrived(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

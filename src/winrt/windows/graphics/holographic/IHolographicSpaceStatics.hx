@@ -8,5 +8,5 @@ package winrt.windows.graphics.holographic;
 @:native("winrt::Windows::Graphics::Holographic::IHolographicSpaceStatics")
 extern interface IHolographicSpaceStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateForCoreWindow(window: ConstRef<winrt.windows.ui.core.CoreWindow>): winrt.windows.graphics.holographic.HolographicSpace;
+    function CreateForCoreWindow(window: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.CoreWindow>): winrt.windows.graphics.holographic.HolographicSpace;
 }

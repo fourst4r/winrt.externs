@@ -8,5 +8,5 @@ package winrt.windows.media.protection;
 @:native("winrt::Windows::Media::Protection::IProtectionCapabilities")
 extern interface IProtectionCapabilities extends winrt.windows.foundation.IInspectable
 {
-    function IsTypeSupported(type: ConstRef<winrt.HString>, keySystem: ConstRef<winrt.HString>): winrt.windows.media.protection.ProtectionCapabilityResult;
+    function IsTypeSupported(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, keySystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.media.protection.ProtectionCapabilityResult;
 }

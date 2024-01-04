@@ -11,7 +11,7 @@ extern class CortanaActionableInsightsOptions
 {
     function new();
     overload function ContentSourceWebLink(): winrt.windows.foundation.Uri;
-    overload function ContentSourceWebLink(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function ContentSourceWebLink(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function SurroundingText(): winrt.HString;
-    overload function SurroundingText(value: ConstRef<winrt.HString>): Void;
+    overload function SurroundingText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

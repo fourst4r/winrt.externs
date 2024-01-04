@@ -11,9 +11,9 @@ extern class VpnCustomTextBox
     implements winrt.windows.networking.vpn.IVpnCustomTextBox
 {
     function new();
-    overload function DisplayText(value: ConstRef<winrt.HString>): Void;
+    overload function DisplayText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function DisplayText(): winrt.HString;
-    overload function Label(value: ConstRef<winrt.HString>): Void;
+    overload function Label(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Label(): winrt.HString;
     overload function Compulsory(value: Bool): Void;
     overload function Compulsory(): Bool;

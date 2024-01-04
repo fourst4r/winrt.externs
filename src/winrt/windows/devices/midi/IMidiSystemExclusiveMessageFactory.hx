@@ -8,5 +8,5 @@ package winrt.windows.devices.midi;
 @:native("winrt::Windows::Devices::Midi::IMidiSystemExclusiveMessageFactory")
 extern interface IMidiSystemExclusiveMessageFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateMidiSystemExclusiveMessage(rawData: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.devices.midi.MidiSystemExclusiveMessage;
+    function CreateMidiSystemExclusiveMessage(rawData: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.devices.midi.MidiSystemExclusiveMessage;
 }

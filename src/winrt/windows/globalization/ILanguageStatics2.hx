@@ -8,5 +8,5 @@ package winrt.windows.globalization;
 @:native("winrt::Windows::Globalization::ILanguageStatics2")
 extern interface ILanguageStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function TrySetInputMethodLanguageTag(languageTag: ConstRef<winrt.HString>): Bool;
+    function TrySetInputMethodLanguageTag(languageTag: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
 }

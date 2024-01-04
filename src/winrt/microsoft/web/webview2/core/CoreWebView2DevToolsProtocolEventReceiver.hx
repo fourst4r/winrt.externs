@@ -9,6 +9,6 @@ package winrt.microsoft.web.webview2.core;
 extern class CoreWebView2DevToolsProtocolEventReceiver
     implements winrt.microsoft.web.webview2.core.ICoreWebView2DevToolsProtocolEventReceiver
 {
-    overload function DevToolsProtocolEventReceived(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.microsoft.web.webview2.core.CoreWebView2, winrt.microsoft.web.webview2.core.CoreWebView2DevToolsProtocolEventReceivedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function DevToolsProtocolEventReceived(token: ConstRef<winrt.EventToken>): Void;
+    overload function DevToolsProtocolEventReceived(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.microsoft.web.webview2.core.CoreWebView2, winrt.microsoft.web.webview2.core.CoreWebView2DevToolsProtocolEventReceivedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function DevToolsProtocolEventReceived(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

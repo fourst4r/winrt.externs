@@ -13,5 +13,5 @@ extern class LanguageFont
     overload function FontWeight(): winrt.windows.ui.text.FontWeight;
     overload function FontStretch(): winrt.windows.ui.text.FontStretch;
     overload function FontStyle(): winrt.windows.ui.text.FontStyle;
-    overload function ScaleFactor(): Float64;
+    overload function ScaleFactor(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

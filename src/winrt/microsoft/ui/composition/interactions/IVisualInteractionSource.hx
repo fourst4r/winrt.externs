@@ -13,19 +13,19 @@ extern interface IVisualInteractionSource extends winrt.windows.foundation.IInsp
     overload function IsPositionYRailsEnabled(): Bool;
     overload function IsPositionYRailsEnabled(value: Bool): Void;
     overload function ManipulationRedirectionMode(): winrt.microsoft.ui.composition.interactions.VisualInteractionSourceRedirectionMode;
-    overload function ManipulationRedirectionMode(value: ConstRef<winrt.microsoft.ui.composition.interactions.VisualInteractionSourceRedirectionMode>): Void;
+    overload function ManipulationRedirectionMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.interactions.VisualInteractionSourceRedirectionMode>): Void;
     overload function PositionXChainingMode(): winrt.microsoft.ui.composition.interactions.InteractionChainingMode;
-    overload function PositionXChainingMode(value: ConstRef<winrt.microsoft.ui.composition.interactions.InteractionChainingMode>): Void;
+    overload function PositionXChainingMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.interactions.InteractionChainingMode>): Void;
     overload function PositionXSourceMode(): winrt.microsoft.ui.composition.interactions.InteractionSourceMode;
-    overload function PositionXSourceMode(value: ConstRef<winrt.microsoft.ui.composition.interactions.InteractionSourceMode>): Void;
+    overload function PositionXSourceMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.interactions.InteractionSourceMode>): Void;
     overload function PositionYChainingMode(): winrt.microsoft.ui.composition.interactions.InteractionChainingMode;
-    overload function PositionYChainingMode(value: ConstRef<winrt.microsoft.ui.composition.interactions.InteractionChainingMode>): Void;
+    overload function PositionYChainingMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.interactions.InteractionChainingMode>): Void;
     overload function PositionYSourceMode(): winrt.microsoft.ui.composition.interactions.InteractionSourceMode;
-    overload function PositionYSourceMode(value: ConstRef<winrt.microsoft.ui.composition.interactions.InteractionSourceMode>): Void;
+    overload function PositionYSourceMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.interactions.InteractionSourceMode>): Void;
     overload function ScaleChainingMode(): winrt.microsoft.ui.composition.interactions.InteractionChainingMode;
-    overload function ScaleChainingMode(value: ConstRef<winrt.microsoft.ui.composition.interactions.InteractionChainingMode>): Void;
+    overload function ScaleChainingMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.interactions.InteractionChainingMode>): Void;
     overload function ScaleSourceMode(): winrt.microsoft.ui.composition.interactions.InteractionSourceMode;
-    overload function ScaleSourceMode(value: ConstRef<winrt.microsoft.ui.composition.interactions.InteractionSourceMode>): Void;
+    overload function ScaleSourceMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.interactions.InteractionSourceMode>): Void;
     overload function Source(): winrt.microsoft.ui.composition.Visual;
-    function TryRedirectForManipulation(pointerPoint: ConstRef<winrt.microsoft.ui.input.PointerPoint>): Void;
+    function TryRedirectForManipulation(pointerPoint: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.input.PointerPoint>): Void;
 }

@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml;
 
 @:include("winrt/Windows.UI.Xaml.h", true)
 @:native("winrt::Windows::UI::Xaml::HorizontalAlignment")
-extern enum abstract HorizontalAlignment(Int32)
+extern enum abstract HorizontalAlignment(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Xaml::HorizontalAlignment::Left") final Left;
     @:native("winrt::Windows::UI::Xaml::HorizontalAlignment::Center") final Center;

@@ -10,7 +10,7 @@ extern class ProcessDiagnosticInfo
     implements winrt.windows.system.diagnostics.IProcessDiagnosticInfo
     implements winrt.windows.system.diagnostics.IProcessDiagnosticInfo2
 {
-    overload function ProcessId(): UInt32;
+    overload function ProcessId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function ExecutableFileName(): winrt.HString;
     overload function Parent(): winrt.windows.system.diagnostics.ProcessDiagnosticInfo;
     overload function ProcessStartTime(): winrt.windows.foundation.DateTime;
@@ -19,10 +19,10 @@ extern class ProcessDiagnosticInfo
     overload function CpuUsage(): winrt.windows.system.diagnostics.ProcessCpuUsage;
     function GetAppDiagnosticInfos(): winrt.windows.foundation.collections.IVector<winrt.windows.system.AppDiagnosticInfo> /* GenericTypeInstSig */;
     overload function IsPackaged(): Bool;
-    function TryGetForProcessId(processId: UInt32): winrt.windows.system.diagnostics.ProcessDiagnosticInfo;
+    function TryGetForProcessId(processId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.system.diagnostics.ProcessDiagnosticInfo;
     function GetForProcesses(): winrt.windows.foundation.collections.IVectorView<winrt.windows.system.diagnostics.ProcessDiagnosticInfo> /* GenericTypeInstSig */;
     function GetForCurrentProcess(): winrt.windows.system.diagnostics.ProcessDiagnosticInfo;
     static function GetForProcesses(): winrt.windows.foundation.collections.IVectorView<winrt.windows.system.diagnostics.ProcessDiagnosticInfo> /* GenericTypeInstSig */;
     static function GetForCurrentProcess(): winrt.windows.system.diagnostics.ProcessDiagnosticInfo;
-    static function TryGetForProcessId(processId: UInt32): winrt.windows.system.diagnostics.ProcessDiagnosticInfo;
+    static function TryGetForProcessId(processId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.system.diagnostics.ProcessDiagnosticInfo;
 }

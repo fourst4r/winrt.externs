@@ -10,6 +10,6 @@ extern class RemoteSystemWebAccountFilter
     implements winrt.windows.system.remotesystems.IRemoteSystemWebAccountFilter
     implements winrt.windows.system.remotesystems.IRemoteSystemFilter
 {
-    /* explicit */ function new(account: ConstRef<winrt.windows.security.credentials.WebAccount>);
+    /* explicit */ function new(account: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.WebAccount>);
     overload function Account(): winrt.windows.security.credentials.WebAccount;
 }

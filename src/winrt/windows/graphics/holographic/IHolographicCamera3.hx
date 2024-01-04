@@ -10,6 +10,6 @@ extern interface IHolographicCamera3 extends winrt.windows.foundation.IInspectab
 {
     overload function IsPrimaryLayerEnabled(): Bool;
     overload function IsPrimaryLayerEnabled(value: Bool): Void;
-    overload function MaxQuadLayerCount(): UInt32;
+    overload function MaxQuadLayerCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function QuadLayers(): winrt.windows.foundation.collections.IVector<winrt.windows.graphics.holographic.HolographicQuadLayer> /* GenericTypeInstSig */;
 }

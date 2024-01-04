@@ -12,8 +12,8 @@ extern class CompositionMipmapSurface
     implements winrt.microsoft.ui.composition.ICompositionSurface
 {
     overload function AlphaMode(): winrt.microsoft.graphics.directx.DirectXAlphaMode;
-    function GetDrawingSurfaceForLevel(level: UInt32): winrt.microsoft.ui.composition.CompositionDrawingSurface;
-    overload function LevelCount(): UInt32;
+    function GetDrawingSurfaceForLevel(level: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.microsoft.ui.composition.CompositionDrawingSurface;
+    overload function LevelCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function PixelFormat(): winrt.microsoft.graphics.directx.DirectXPixelFormat;
     overload function SizeInt32(): winrt.windows.graphics.SizeInt32;
 }

@@ -14,11 +14,11 @@ extern class VpnPlugInProfile
     function new();
     overload function ServerUris(): winrt.windows.foundation.collections.IVector<winrt.windows.foundation.Uri> /* GenericTypeInstSig */;
     overload function CustomConfiguration(): winrt.HString;
-    overload function CustomConfiguration(value: ConstRef<winrt.HString>): Void;
+    overload function CustomConfiguration(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function VpnPluginPackageFamilyName(): winrt.HString;
-    overload function VpnPluginPackageFamilyName(value: ConstRef<winrt.HString>): Void;
+    overload function VpnPluginPackageFamilyName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function ProfileName(): winrt.HString;
-    overload function ProfileName(value: ConstRef<winrt.HString>): Void;
+    overload function ProfileName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function AppTriggers(): winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnAppId> /* GenericTypeInstSig */;
     overload function Routes(): winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnRoute> /* GenericTypeInstSig */;
     overload function DomainNameInfoList(): winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnDomainNameInfo> /* GenericTypeInstSig */;

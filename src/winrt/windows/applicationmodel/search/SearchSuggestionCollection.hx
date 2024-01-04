@@ -9,9 +9,9 @@ package winrt.windows.applicationmodel.search;
 extern class SearchSuggestionCollection
     implements winrt.windows.applicationmodel.search.ISearchSuggestionCollection
 {
-    overload function Size(): UInt32;
-    function AppendQuerySuggestion(text: ConstRef<winrt.HString>): Void;
-    function AppendQuerySuggestions(suggestions: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): Void;
-    function AppendResultSuggestion(text: ConstRef<winrt.HString>, detailText: ConstRef<winrt.HString>, tag: ConstRef<winrt.HString>, image: ConstRef<winrt.windows.storage.streams.IRandomAccessStreamReference>, imageAlternateText: ConstRef<winrt.HString>): Void;
-    function AppendSearchSeparator(label: ConstRef<winrt.HString>): Void;
+    overload function Size(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function AppendQuerySuggestion(text: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function AppendQuerySuggestions(suggestions: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): Void;
+    function AppendResultSuggestion(text: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, detailText: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, tag: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, image: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStreamReference>, imageAlternateText: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function AppendSearchSeparator(label: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

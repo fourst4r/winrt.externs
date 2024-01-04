@@ -8,5 +8,5 @@ package winrt.windows.networking.networkoperators;
 @:native("winrt::Windows::Networking::NetworkOperators::IMobileBroadbandCurrentSlotIndexChangedEventArgs")
 extern interface IMobileBroadbandCurrentSlotIndexChangedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function CurrentSlotIndex(): Int32;
+    overload function CurrentSlotIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

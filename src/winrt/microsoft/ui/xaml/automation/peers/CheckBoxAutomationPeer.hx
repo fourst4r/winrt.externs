@@ -10,5 +10,5 @@ extern class CheckBoxAutomationPeer
     extends winrt.microsoft.ui.xaml.automation.peers.ToggleButtonAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.ICheckBoxAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.CheckBox>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.CheckBox>);
 }

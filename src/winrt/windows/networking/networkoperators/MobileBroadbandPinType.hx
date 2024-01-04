@@ -2,7 +2,7 @@ package winrt.windows.networking.networkoperators;
 
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinType")
-extern enum abstract MobileBroadbandPinType(Int32)
+extern enum abstract MobileBroadbandPinType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinType::None") final None;
     @:native("winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinType::Custom") final Custom;

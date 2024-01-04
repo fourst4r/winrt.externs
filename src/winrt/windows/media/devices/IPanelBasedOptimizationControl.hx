@@ -10,5 +10,5 @@ extern interface IPanelBasedOptimizationControl extends winrt.windows.foundation
 {
     overload function IsSupported(): Bool;
     overload function Panel(): winrt.windows.devices.enumeration.Panel;
-    overload function Panel(value: ConstRef<winrt.windows.devices.enumeration.Panel>): Void;
+    overload function Panel(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.enumeration.Panel>): Void;
 }

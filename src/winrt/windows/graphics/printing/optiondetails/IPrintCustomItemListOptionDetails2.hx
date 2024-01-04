@@ -8,5 +8,5 @@ package winrt.windows.graphics.printing.optiondetails;
 @:native("winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomItemListOptionDetails2")
 extern interface IPrintCustomItemListOptionDetails2 extends winrt.windows.foundation.IInspectable
 {
-    function AddItem(itemId: ConstRef<winrt.HString>, displayName: ConstRef<winrt.HString>, description: ConstRef<winrt.HString>, icon: ConstRef<winrt.windows.storage.streams.IRandomAccessStreamWithContentType>): Void;
+    function AddItem(itemId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, displayName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, description: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, icon: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStreamWithContentType>): Void;
 }

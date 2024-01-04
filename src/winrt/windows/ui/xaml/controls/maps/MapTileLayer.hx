@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.controls.maps;
 
 @:include("winrt/Windows.UI.Xaml.Controls.Maps.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapTileLayer")
-extern enum abstract MapTileLayer(Int32)
+extern enum abstract MapTileLayer(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapTileLayer::LabelOverlay") final LabelOverlay;
     @:native("winrt::Windows::UI::Xaml::Controls::Maps::MapTileLayer::RoadOverlay") final RoadOverlay;

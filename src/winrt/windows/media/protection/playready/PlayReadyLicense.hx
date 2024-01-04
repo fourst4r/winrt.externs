@@ -13,12 +13,12 @@ extern class PlayReadyLicense
     overload function FullyEvaluated(): Bool;
     overload function UsableForPlay(): Bool;
     overload function ExpirationDate(): winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* GenericTypeInstSig */;
-    overload function ExpireAfterFirstPlay(): UInt32;
+    overload function ExpireAfterFirstPlay(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function DomainAccountID(): winrt.Guid;
-    overload function ChainDepth(): UInt32;
-    function GetKIDAtChainDepth(chainDepth: UInt32): winrt.Guid;
+    overload function ChainDepth(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function GetKIDAtChainDepth(chainDepth: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.Guid;
     overload function SecureStopId(): winrt.Guid;
-    overload function SecurityLevel(): UInt32;
+    overload function SecurityLevel(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function InMemoryOnly(): Bool;
     overload function ExpiresInRealTime(): Bool;
 }

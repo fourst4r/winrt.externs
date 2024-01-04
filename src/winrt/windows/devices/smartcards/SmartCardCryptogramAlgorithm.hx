@@ -2,7 +2,7 @@ package winrt.windows.devices.smartcards;
 
 @:include("winrt/Windows.Devices.SmartCards.h", true)
 @:native("winrt::Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm")
-extern enum abstract SmartCardCryptogramAlgorithm(Int32)
+extern enum abstract SmartCardCryptogramAlgorithm(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm::None") final None;
     @:native("winrt::Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm::CbcMac") final CbcMac;

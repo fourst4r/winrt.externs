@@ -2,7 +2,7 @@ package winrt.windows.devices.pointofservice;
 
 @:include("winrt/Windows.Devices.PointOfService.h", true)
 @:native("winrt::Windows::Devices::PointOfService::BarcodeScannerStatus")
-extern enum abstract BarcodeScannerStatus(Int32)
+extern enum abstract BarcodeScannerStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::PointOfService::BarcodeScannerStatus::Online") final Online;
     @:native("winrt::Windows::Devices::PointOfService::BarcodeScannerStatus::Off") final Off;

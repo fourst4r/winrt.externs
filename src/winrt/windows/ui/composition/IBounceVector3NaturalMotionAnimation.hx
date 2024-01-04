@@ -8,8 +8,8 @@ package winrt.windows.ui.composition;
 @:native("winrt::Windows::UI::Composition::IBounceVector3NaturalMotionAnimation")
 extern interface IBounceVector3NaturalMotionAnimation extends winrt.windows.foundation.IInspectable
 {
-    overload function Acceleration(): Float32;
-    overload function Acceleration(value: Float32): Void;
-    overload function Restitution(): Float32;
-    overload function Restitution(value: Float32): Void;
+    overload function Acceleration(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Acceleration(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function Restitution(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Restitution(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
 }

@@ -8,6 +8,6 @@ package winrt.windows.ui.xaml.media.imaging;
 @:native("winrt::Windows::UI::Xaml::Media::Imaging::ISvgImageSourceFactory")
 extern interface ISvgImageSourceFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.media.imaging.SvgImageSource;
-    function CreateInstanceWithUriSource(uriSource: ConstRef<winrt.windows.foundation.Uri>, baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.media.imaging.SvgImageSource;
+    function CreateInstance(baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.media.imaging.SvgImageSource;
+    function CreateInstanceWithUriSource(uriSource: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>, baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.media.imaging.SvgImageSource;
 }

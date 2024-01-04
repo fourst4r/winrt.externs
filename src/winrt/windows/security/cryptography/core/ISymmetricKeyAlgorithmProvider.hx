@@ -9,6 +9,6 @@ package winrt.windows.security.cryptography.core;
 extern interface ISymmetricKeyAlgorithmProvider extends winrt.windows.foundation.IInspectable
 {
     overload function AlgorithmName(): winrt.HString;
-    overload function BlockLength(): UInt32;
-    function CreateSymmetricKey(keyMaterial: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.security.cryptography.core.CryptographicKey;
+    overload function BlockLength(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function CreateSymmetricKey(keyMaterial: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.security.cryptography.core.CryptographicKey;
 }

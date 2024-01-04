@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.chat;
 @:native("winrt::Windows::ApplicationModel::Chat::IChatMessageBlockingStatic")
 extern interface IChatMessageBlockingStatic extends winrt.windows.foundation.IInspectable
 {
-    function MarkMessageAsBlockedAsync(localChatMessageId: ConstRef<winrt.HString>, blocked: Bool): winrt.windows.foundation.IAsyncAction;
+    function MarkMessageAsBlockedAsync(localChatMessageId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, blocked: Bool): winrt.windows.foundation.IAsyncAction;
 }

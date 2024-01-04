@@ -9,9 +9,9 @@ package winrt.windows.graphics.printing3d;
 extern interface IPrinting3DModelTexture extends winrt.windows.foundation.IInspectable
 {
     overload function TextureResource(): winrt.windows.graphics.printing3d.Printing3DTextureResource;
-    overload function TextureResource(value: ConstRef<winrt.windows.graphics.printing3d.Printing3DTextureResource>): Void;
+    overload function TextureResource(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing3d.Printing3DTextureResource>): Void;
     overload function TileStyleU(): winrt.windows.graphics.printing3d.Printing3DTextureEdgeBehavior;
-    overload function TileStyleU(value: ConstRef<winrt.windows.graphics.printing3d.Printing3DTextureEdgeBehavior>): Void;
+    overload function TileStyleU(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing3d.Printing3DTextureEdgeBehavior>): Void;
     overload function TileStyleV(): winrt.windows.graphics.printing3d.Printing3DTextureEdgeBehavior;
-    overload function TileStyleV(value: ConstRef<winrt.windows.graphics.printing3d.Printing3DTextureEdgeBehavior>): Void;
+    overload function TileStyleV(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing3d.Printing3DTextureEdgeBehavior>): Void;
 }

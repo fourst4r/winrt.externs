@@ -8,5 +8,5 @@ package winrt.windows.ui.input.spatial;
 @:native("winrt::Windows::UI::Input::Spatial::ISpatialInteractionManagerStatics2")
 extern interface ISpatialInteractionManagerStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function IsSourceKindSupported(kind: ConstRef<winrt.windows.ui.input.spatial.SpatialInteractionSourceKind>): Bool;
+    function IsSourceKindSupported(kind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.spatial.SpatialInteractionSourceKind>): Bool;
 }

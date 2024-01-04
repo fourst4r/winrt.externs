@@ -9,9 +9,9 @@ package winrt.windows.media.speechrecognition;
 extern interface ISpeechRecognizerUIOptions extends winrt.windows.foundation.IInspectable
 {
     overload function ExampleText(): winrt.HString;
-    overload function ExampleText(value: ConstRef<winrt.HString>): Void;
+    overload function ExampleText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function AudiblePrompt(): winrt.HString;
-    overload function AudiblePrompt(value: ConstRef<winrt.HString>): Void;
+    overload function AudiblePrompt(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function IsReadBackEnabled(): Bool;
     overload function IsReadBackEnabled(value: Bool): Void;
     overload function ShowConfirmation(): Bool;

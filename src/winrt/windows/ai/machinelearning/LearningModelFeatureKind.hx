@@ -2,7 +2,7 @@ package winrt.windows.ai.machinelearning;
 
 @:include("winrt/Windows.AI.MachineLearning.h", true)
 @:native("winrt::Windows::AI::MachineLearning::LearningModelFeatureKind")
-extern enum abstract LearningModelFeatureKind(Int32)
+extern enum abstract LearningModelFeatureKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::AI::MachineLearning::LearningModelFeatureKind::Tensor") final Tensor;
     @:native("winrt::Windows::AI::MachineLearning::LearningModelFeatureKind::Sequence") final Sequence;

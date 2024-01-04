@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.controls;
 
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::ListViewSelectionMode")
-extern enum abstract ListViewSelectionMode(Int32)
+extern enum abstract ListViewSelectionMode(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Controls::ListViewSelectionMode::None") final None;
     @:native("winrt::Microsoft::UI::Xaml::Controls::ListViewSelectionMode::Single") final Single;

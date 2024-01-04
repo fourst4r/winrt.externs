@@ -8,8 +8,8 @@ package winrt.windows.devices.pointofservice;
 @:native("winrt::Windows::Devices::PointOfService::IMagneticStripeReaderCardTypesStatics")
 extern interface IMagneticStripeReaderCardTypesStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function Unknown(): UInt32;
-    overload function Bank(): UInt32;
-    overload function Aamva(): UInt32;
-    overload function ExtendedBase(): UInt32;
+    overload function Unknown(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Bank(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Aamva(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function ExtendedBase(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

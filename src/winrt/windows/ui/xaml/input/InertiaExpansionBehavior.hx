@@ -9,8 +9,8 @@ package winrt.windows.ui.xaml.input;
 extern class InertiaExpansionBehavior
     implements winrt.windows.ui.xaml.input.IInertiaExpansionBehavior
 {
-    overload function DesiredDeceleration(): Float64;
-    overload function DesiredDeceleration(value: Float64): Void;
-    overload function DesiredExpansion(): Float64;
-    overload function DesiredExpansion(value: Float64): Void;
+    overload function DesiredDeceleration(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function DesiredDeceleration(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function DesiredExpansion(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function DesiredExpansion(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

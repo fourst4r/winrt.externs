@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.background;
 extern interface IBackgroundTaskBuilder4 extends winrt.windows.foundation.IInspectable
 {
     overload function TaskGroup(): winrt.windows.applicationmodel.background.BackgroundTaskRegistrationGroup;
-    overload function TaskGroup(value: ConstRef<winrt.windows.applicationmodel.background.BackgroundTaskRegistrationGroup>): Void;
+    overload function TaskGroup(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.background.BackgroundTaskRegistrationGroup>): Void;
 }

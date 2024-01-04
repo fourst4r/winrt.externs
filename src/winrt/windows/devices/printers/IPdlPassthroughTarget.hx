@@ -8,7 +8,7 @@ package winrt.windows.devices.printers;
 @:native("winrt::Windows::Devices::Printers::IPdlPassthroughTarget")
 extern interface IPdlPassthroughTarget extends winrt.windows.foundation.IInspectable
 {
-    overload function PrintJobId(): Int32;
+    overload function PrintJobId(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     function GetOutputStream(): winrt.windows.storage.streams.IOutputStream;
     function Submit(): Void;
 }

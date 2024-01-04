@@ -8,5 +8,5 @@ package winrt.windows.media;
 @:native("winrt::Windows::Media::IAudioFrame")
 extern interface IAudioFrame extends winrt.windows.foundation.IInspectable
 {
-    function LockBuffer(mode: ConstRef<winrt.windows.media.AudioBufferAccessMode>): winrt.windows.media.AudioBuffer;
+    function LockBuffer(mode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.AudioBufferAccessMode>): winrt.windows.media.AudioBuffer;
 }

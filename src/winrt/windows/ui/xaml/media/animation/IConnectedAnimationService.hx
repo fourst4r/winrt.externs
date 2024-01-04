@@ -9,9 +9,9 @@ package winrt.windows.ui.xaml.media.animation;
 extern interface IConnectedAnimationService extends winrt.windows.foundation.IInspectable
 {
     overload function DefaultDuration(): winrt.windows.foundation.TimeSpan;
-    overload function DefaultDuration(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function DefaultDuration(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function DefaultEasingFunction(): winrt.windows.ui.composition.CompositionEasingFunction;
-    overload function DefaultEasingFunction(value: ConstRef<winrt.windows.ui.composition.CompositionEasingFunction>): Void;
-    function PrepareToAnimate(key: ConstRef<winrt.HString>, source: ConstRef<winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.xaml.media.animation.ConnectedAnimation;
-    function GetAnimation(key: ConstRef<winrt.HString>): winrt.windows.ui.xaml.media.animation.ConnectedAnimation;
+    overload function DefaultEasingFunction(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionEasingFunction>): Void;
+    function PrepareToAnimate(key: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, source: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.xaml.media.animation.ConnectedAnimation;
+    function GetAnimation(key: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.xaml.media.animation.ConnectedAnimation;
 }

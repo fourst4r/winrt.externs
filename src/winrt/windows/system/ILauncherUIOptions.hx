@@ -9,9 +9,9 @@ package winrt.windows.system;
 extern interface ILauncherUIOptions extends winrt.windows.foundation.IInspectable
 {
     overload function InvocationPoint(): winrt.windows.foundation.IReference<winrt.windows.foundation.Point> /* GenericTypeInstSig */;
-    overload function InvocationPoint(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.foundation.Point> /* temp_GenericTypeInstSig */>): Void;
+    overload function InvocationPoint(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.foundation.Point> /* temp_GenericTypeInstSig */>): Void;
     overload function SelectionRect(): winrt.windows.foundation.IReference<winrt.windows.foundation.Rect> /* GenericTypeInstSig */;
-    overload function SelectionRect(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.foundation.Rect> /* temp_GenericTypeInstSig */>): Void;
+    overload function SelectionRect(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.foundation.Rect> /* temp_GenericTypeInstSig */>): Void;
     overload function PreferredPlacement(): winrt.windows.ui.popups.Placement;
-    overload function PreferredPlacement(value: ConstRef<winrt.windows.ui.popups.Placement>): Void;
+    overload function PreferredPlacement(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.popups.Placement>): Void;
 }

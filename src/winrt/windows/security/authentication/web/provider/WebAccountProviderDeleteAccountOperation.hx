@@ -14,5 +14,5 @@ extern class WebAccountProviderDeleteAccountOperation
     overload function WebAccount(): winrt.windows.security.credentials.WebAccount;
     overload function Kind(): winrt.windows.security.authentication.web.provider.WebAccountProviderOperationKind;
     function ReportCompleted(): Void;
-    function ReportError(value: ConstRef<winrt.windows.security.authentication.web.core.WebProviderError>): Void;
+    function ReportError(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.authentication.web.core.WebProviderError>): Void;
 }

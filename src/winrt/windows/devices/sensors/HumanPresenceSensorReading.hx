@@ -13,6 +13,6 @@ extern class HumanPresenceSensorReading
     overload function Timestamp(): winrt.windows.foundation.DateTime;
     overload function Presence(): winrt.windows.devices.sensors.HumanPresence;
     overload function Engagement(): winrt.windows.devices.sensors.HumanEngagement;
-    overload function DistanceInMillimeters(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
+    overload function DistanceInMillimeters(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
     overload function Properties(): winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;
 }

@@ -8,8 +8,8 @@ package winrt.windows.devices.pointofservice;
 @:native("winrt::Windows::Devices::PointOfService::IPosPrinterJob")
 extern interface IPosPrinterJob extends winrt.windows.foundation.IInspectable
 {
-    function Print(data: ConstRef<winrt.HString>): Void;
-    overload function PrintLine(data: ConstRef<winrt.HString>): Void;
+    function Print(data: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function PrintLine(data: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function PrintLine(): Void;
     function ExecuteAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

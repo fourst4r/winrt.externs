@@ -11,12 +11,12 @@ extern class DisplayAdapter
 {
     overload function Id(): winrt.windows.graphics.DisplayAdapterId;
     overload function DeviceInterfacePath(): winrt.HString;
-    overload function SourceCount(): UInt32;
-    overload function PciVendorId(): UInt32;
-    overload function PciDeviceId(): UInt32;
-    overload function PciSubSystemId(): UInt32;
-    overload function PciRevision(): UInt32;
+    overload function SourceCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function PciVendorId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function PciDeviceId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function PciSubSystemId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function PciRevision(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function Properties(): winrt.windows.foundation.collections.IMapView<winrt.Guid, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;
-    function FromId(id: ConstRef<winrt.windows.graphics.DisplayAdapterId>): winrt.windows.devices.display.core.DisplayAdapter;
-    static function FromId(id: ConstRef<winrt.windows.graphics.DisplayAdapterId>): winrt.windows.devices.display.core.DisplayAdapter;
+    function FromId(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.DisplayAdapterId>): winrt.windows.devices.display.core.DisplayAdapter;
+    static function FromId(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.DisplayAdapterId>): winrt.windows.devices.display.core.DisplayAdapter;
 }

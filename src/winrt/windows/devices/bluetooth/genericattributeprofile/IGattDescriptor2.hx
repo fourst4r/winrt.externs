@@ -8,5 +8,5 @@ package winrt.windows.devices.bluetooth.genericattributeprofile;
 @:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattDescriptor2")
 extern interface IGattDescriptor2 extends winrt.windows.foundation.IInspectable
 {
-    function WriteValueWithResultAsync(value: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.bluetooth.genericattributeprofile.GattWriteResult> /* GenericTypeInstSig */;
+    function WriteValueWithResultAsync(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.bluetooth.genericattributeprofile.GattWriteResult> /* GenericTypeInstSig */;
 }

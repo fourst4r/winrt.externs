@@ -15,14 +15,14 @@ extern class SpeechSynthesizerOptions
     overload function IncludeWordBoundaryMetadata(value: Bool): Void;
     overload function IncludeSentenceBoundaryMetadata(): Bool;
     overload function IncludeSentenceBoundaryMetadata(value: Bool): Void;
-    overload function AudioVolume(): Float64;
-    overload function AudioVolume(value: Float64): Void;
-    overload function SpeakingRate(): Float64;
-    overload function SpeakingRate(value: Float64): Void;
-    overload function AudioPitch(): Float64;
-    overload function AudioPitch(value: Float64): Void;
+    overload function AudioVolume(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function AudioVolume(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function SpeakingRate(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function SpeakingRate(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function AudioPitch(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function AudioPitch(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function AppendedSilence(): winrt.windows.media.speechsynthesis.SpeechAppendedSilence;
-    overload function AppendedSilence(value: ConstRef<winrt.windows.media.speechsynthesis.SpeechAppendedSilence>): Void;
+    overload function AppendedSilence(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.speechsynthesis.SpeechAppendedSilence>): Void;
     overload function PunctuationSilence(): winrt.windows.media.speechsynthesis.SpeechPunctuationSilence;
-    overload function PunctuationSilence(value: ConstRef<winrt.windows.media.speechsynthesis.SpeechPunctuationSilence>): Void;
+    overload function PunctuationSilence(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.speechsynthesis.SpeechPunctuationSilence>): Void;
 }

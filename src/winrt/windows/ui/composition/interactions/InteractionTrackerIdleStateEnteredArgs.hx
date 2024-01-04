@@ -10,6 +10,6 @@ extern class InteractionTrackerIdleStateEnteredArgs
     implements winrt.windows.ui.composition.interactions.IInteractionTrackerIdleStateEnteredArgs
     implements winrt.windows.ui.composition.interactions.IInteractionTrackerIdleStateEnteredArgs2
 {
-    overload function RequestId(): Int32;
+    overload function RequestId(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function IsFromBinding(): Bool;
 }

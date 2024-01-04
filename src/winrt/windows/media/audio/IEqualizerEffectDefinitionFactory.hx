@@ -8,5 +8,5 @@ package winrt.windows.media.audio;
 @:native("winrt::Windows::Media::Audio::IEqualizerEffectDefinitionFactory")
 extern interface IEqualizerEffectDefinitionFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(audioGraph: ConstRef<winrt.windows.media.audio.AudioGraph>): winrt.windows.media.audio.EqualizerEffectDefinition;
+    function Create(audioGraph: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.audio.AudioGraph>): winrt.windows.media.audio.EqualizerEffectDefinition;
 }

@@ -8,5 +8,5 @@ package winrt.windows.devices.usb;
 @:native("winrt::Windows::Devices::Usb::IUsbSetupPacketFactory")
 extern interface IUsbSetupPacketFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWithEightByteBuffer(eightByteBuffer: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.devices.usb.UsbSetupPacket;
+    function CreateWithEightByteBuffer(eightByteBuffer: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.devices.usb.UsbSetupPacket;
 }

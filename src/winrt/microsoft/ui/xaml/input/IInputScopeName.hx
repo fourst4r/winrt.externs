@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.input;
 extern interface IInputScopeName extends winrt.windows.foundation.IInspectable
 {
     overload function NameValue(): winrt.microsoft.ui.xaml.input.InputScopeNameValue;
-    overload function NameValue(value: ConstRef<winrt.microsoft.ui.xaml.input.InputScopeNameValue>): Void;
+    overload function NameValue(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.InputScopeNameValue>): Void;
 }

@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.calls;
 
 @:include("winrt/Windows.ApplicationModel.Calls.h", true)
 @:native("winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryQueryDesiredMedia")
-extern enum abstract PhoneCallHistoryEntryQueryDesiredMedia(UInt32)
+extern enum abstract PhoneCallHistoryEntryQueryDesiredMedia(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryQueryDesiredMedia::None") final None;
     @:native("winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryQueryDesiredMedia::Audio") final Audio;

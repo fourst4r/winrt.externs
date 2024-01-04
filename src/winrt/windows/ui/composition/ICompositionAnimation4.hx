@@ -8,5 +8,5 @@ package winrt.windows.ui.composition;
 @:native("winrt::Windows::UI::Composition::ICompositionAnimation4")
 extern interface ICompositionAnimation4 extends winrt.windows.foundation.IInspectable
 {
-    function SetExpressionReferenceParameter(parameterName: ConstRef<winrt.HString>, source: ConstRef<winrt.windows.ui.composition.IAnimationObject>): Void;
+    function SetExpressionReferenceParameter(parameterName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, source: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.IAnimationObject>): Void;
 }

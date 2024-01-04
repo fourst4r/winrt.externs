@@ -8,6 +8,6 @@ package winrt.windows.applicationmodel.core;
 @:native("winrt::Windows::ApplicationModel::Core::ICoreApplication3")
 extern interface ICoreApplication3 extends winrt.windows.foundation.IInspectable
 {
-    function RequestRestartAsync(launchArguments: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.core.AppRestartFailureReason> /* GenericTypeInstSig */;
-    function RequestRestartForUserAsync(user: ConstRef<winrt.windows.system.User>, launchArguments: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.core.AppRestartFailureReason> /* GenericTypeInstSig */;
+    function RequestRestartAsync(launchArguments: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.core.AppRestartFailureReason> /* GenericTypeInstSig */;
+    function RequestRestartForUserAsync(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>, launchArguments: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.core.AppRestartFailureReason> /* GenericTypeInstSig */;
 }

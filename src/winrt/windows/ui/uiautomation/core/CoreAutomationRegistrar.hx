@@ -4,6 +4,6 @@ package winrt.windows.ui.uiautomation.core;
 @:native("winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar")
 extern class CoreAutomationRegistrar
 {
-    static function RegisterAnnotationType(guid: ConstRef<winrt.Guid>): winrt.windows.ui.uiautomation.core.AutomationAnnotationTypeRegistration;
-    static function UnregisterAnnotationType(registration: ConstRef<winrt.windows.ui.uiautomation.core.AutomationAnnotationTypeRegistration>): Void;
+    static function RegisterAnnotationType(guid: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): winrt.windows.ui.uiautomation.core.AutomationAnnotationTypeRegistration;
+    static function UnregisterAnnotationType(registration: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.uiautomation.core.AutomationAnnotationTypeRegistration>): Void;
 }

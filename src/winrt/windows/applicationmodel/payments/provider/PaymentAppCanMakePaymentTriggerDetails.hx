@@ -10,5 +10,5 @@ extern class PaymentAppCanMakePaymentTriggerDetails
     implements winrt.windows.applicationmodel.payments.provider.IPaymentAppCanMakePaymentTriggerDetails
 {
     overload function Request(): winrt.windows.applicationmodel.payments.PaymentRequest;
-    function ReportCanMakePaymentResult(value: ConstRef<winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResult>): Void;
+    function ReportCanMakePaymentResult(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResult>): Void;
 }

@@ -10,6 +10,6 @@ extern class SmartCardConnection
     implements winrt.windows.foundation.IClosable
     implements winrt.windows.devices.smartcards.ISmartCardConnection
 {
-    function TransmitAsync(command: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.streams.IBuffer> /* GenericTypeInstSig */;
+    function TransmitAsync(command: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.streams.IBuffer> /* GenericTypeInstSig */;
     function Close(): Void;
 }

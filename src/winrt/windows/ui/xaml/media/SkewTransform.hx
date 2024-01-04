@@ -11,14 +11,14 @@ extern class SkewTransform
     implements winrt.windows.ui.xaml.media.ISkewTransform
 {
     function new();
-    overload function CenterX(): Float64;
-    overload function CenterX(value: Float64): Void;
-    overload function CenterY(): Float64;
-    overload function CenterY(value: Float64): Void;
-    overload function AngleX(): Float64;
-    overload function AngleX(value: Float64): Void;
-    overload function AngleY(): Float64;
-    overload function AngleY(value: Float64): Void;
+    overload function CenterX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function CenterX(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function CenterY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function CenterY(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function AngleX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function AngleX(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function AngleY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function AngleY(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function CenterXProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function CenterYProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function AngleXProperty(): winrt.windows.ui.xaml.DependencyProperty;

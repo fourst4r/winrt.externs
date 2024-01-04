@@ -8,5 +8,5 @@ package winrt.windows.data.json;
 @:native("winrt::Windows::Data::Json::IJsonErrorStatics2")
 extern interface IJsonErrorStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function GetJsonStatus(hresult: Int32): winrt.windows.data.json.JsonErrorStatus;
+    function GetJsonStatus(hresult: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.data.json.JsonErrorStatus;
 }

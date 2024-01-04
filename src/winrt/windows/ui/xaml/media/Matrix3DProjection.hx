@@ -12,7 +12,7 @@ extern class Matrix3DProjection
 {
     function new();
     overload function ProjectionMatrix(): winrt.windows.ui.xaml.media.media3d.Matrix3D;
-    overload function ProjectionMatrix(value: ConstRef<winrt.windows.ui.xaml.media.media3d.Matrix3D>): Void;
+    overload function ProjectionMatrix(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.media3d.Matrix3D>): Void;
     overload function ProjectionMatrixProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function ProjectionMatrixProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

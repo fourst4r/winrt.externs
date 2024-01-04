@@ -8,5 +8,5 @@ package winrt.windows.devices.bluetooth.genericattributeprofile;
 @:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattClientNotificationResult2")
 extern interface IGattClientNotificationResult2 extends winrt.windows.foundation.IInspectable
 {
-    overload function BytesSent(): UInt16;
+    overload function BytesSent(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
 }

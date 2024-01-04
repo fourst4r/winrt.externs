@@ -10,5 +10,5 @@ extern interface IUIElementOverrides extends winrt.windows.foundation.IInspectab
 {
     function OnCreateAutomationPeer(): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
     function OnDisconnectVisualChildren(): Void;
-    function FindSubElementsForTouchTargeting(point: ConstRef<winrt.windows.foundation.Point>, boundingRect: ConstRef<winrt.windows.foundation.Rect>): winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.Point> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+    function FindSubElementsForTouchTargeting(point: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>, boundingRect: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Rect>): winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.collections.IIterable<winrt.windows.foundation.Point> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
 }

@@ -10,6 +10,6 @@ extern interface IImageFeatureDescriptor extends winrt.windows.foundation.IInspe
 {
     overload function BitmapPixelFormat(): winrt.windows.graphics.imaging.BitmapPixelFormat;
     overload function BitmapAlphaMode(): winrt.windows.graphics.imaging.BitmapAlphaMode;
-    overload function Width(): UInt32;
-    overload function Height(): UInt32;
+    overload function Width(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Height(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

@@ -8,5 +8,5 @@ package winrt.windows.ui.input.inking;
 @:native("winrt::Windows::UI::Input::Inking::IInkPresenterRulerFactory")
 extern interface IInkPresenterRulerFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(inkPresenter: ConstRef<winrt.windows.ui.input.inking.InkPresenter>): winrt.windows.ui.input.inking.InkPresenterRuler;
+    function Create(inkPresenter: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.inking.InkPresenter>): winrt.windows.ui.input.inking.InkPresenterRuler;
 }

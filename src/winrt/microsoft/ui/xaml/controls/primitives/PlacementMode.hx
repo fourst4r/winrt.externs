@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.controls.primitives;
 
 @:include("winrt/Microsoft.UI.Xaml.Controls.Primitives.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::PlacementMode")
-extern enum abstract PlacementMode(Int32)
+extern enum abstract PlacementMode(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::PlacementMode::Bottom") final Bottom;
     @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::PlacementMode::Left") final Left;

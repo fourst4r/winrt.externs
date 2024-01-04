@@ -9,5 +9,5 @@ package winrt.windows.security.authentication.web.provider;
 extern interface IWebAccountProviderBaseReportOperation extends winrt.windows.foundation.IInspectable
 {
     function ReportCompleted(): Void;
-    function ReportError(value: ConstRef<winrt.windows.security.authentication.web.core.WebProviderError>): Void;
+    function ReportError(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.authentication.web.core.WebProviderError>): Void;
 }

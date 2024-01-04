@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IUserControl extends winrt.windows.foundation.IInspectable
 {
     overload function Content(): winrt.windows.ui.xaml.UIElement;
-    overload function Content(value: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
+    overload function Content(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
 }

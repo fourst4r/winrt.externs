@@ -9,7 +9,7 @@ package winrt.windows.media.capture;
 extern interface IMediaCaptureInitializationSettings7 extends winrt.windows.foundation.IInspectable
 {
     overload function DeviceUriPasswordCredential(): winrt.windows.security.credentials.PasswordCredential;
-    overload function DeviceUriPasswordCredential(value: ConstRef<winrt.windows.security.credentials.PasswordCredential>): Void;
+    overload function DeviceUriPasswordCredential(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.credentials.PasswordCredential>): Void;
     overload function DeviceUri(): winrt.windows.foundation.Uri;
-    overload function DeviceUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function DeviceUri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
 }

@@ -12,9 +12,9 @@ extern class ContactSignificantOther
 {
     function new();
     overload function Name(): winrt.HString;
-    overload function Name(value: ConstRef<winrt.HString>): Void;
+    overload function Name(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Description(): winrt.HString;
-    overload function Description(value: ConstRef<winrt.HString>): Void;
+    overload function Description(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Relationship(): winrt.windows.applicationmodel.contacts.ContactRelationship;
-    overload function Relationship(value: ConstRef<winrt.windows.applicationmodel.contacts.ContactRelationship>): Void;
+    overload function Relationship(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.contacts.ContactRelationship>): Void;
 }

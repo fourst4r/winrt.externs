@@ -9,7 +9,7 @@ package winrt.windows.ui.core;
 extern class CoreCursor
     implements winrt.windows.ui.core.ICoreCursor
 {
-    function new(type: ConstRef<winrt.windows.ui.core.CoreCursorType>, id: UInt32);
-    overload function Id(): UInt32;
+    function new(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.CoreCursorType>, id: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32);
+    overload function Id(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function Type(): winrt.windows.ui.core.CoreCursorType;
 }

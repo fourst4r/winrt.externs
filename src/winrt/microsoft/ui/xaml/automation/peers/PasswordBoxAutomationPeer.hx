@@ -10,5 +10,5 @@ extern class PasswordBoxAutomationPeer
     extends winrt.microsoft.ui.xaml.automation.peers.FrameworkElementAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IPasswordBoxAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.PasswordBox>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.PasswordBox>);
 }

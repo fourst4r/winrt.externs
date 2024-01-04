@@ -2,7 +2,7 @@ package winrt.windows.media.casting;
 
 @:include("winrt/Windows.Media.Casting.h", true)
 @:native("winrt::Windows::Media::Casting::CastingConnectionErrorStatus")
-extern enum abstract CastingConnectionErrorStatus(Int32)
+extern enum abstract CastingConnectionErrorStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Casting::CastingConnectionErrorStatus::Succeeded") final Succeeded;
     @:native("winrt::Windows::Media::Casting::CastingConnectionErrorStatus::DeviceDidNotRespond") final DeviceDidNotRespond;

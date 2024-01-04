@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.background;
 @:native("winrt::Windows::ApplicationModel::Background::IGattCharacteristicNotificationTriggerFactory")
 extern interface IGattCharacteristicNotificationTriggerFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(characteristic: ConstRef<winrt.windows.devices.bluetooth.genericattributeprofile.GattCharacteristic>): winrt.windows.applicationmodel.background.GattCharacteristicNotificationTrigger;
+    function Create(characteristic: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.bluetooth.genericattributeprofile.GattCharacteristic>): winrt.windows.applicationmodel.background.GattCharacteristicNotificationTrigger;
 }

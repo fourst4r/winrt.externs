@@ -2,7 +2,7 @@ package winrt.windows.storage.provider;
 
 @:include("winrt/Windows.Storage.Provider.h", true)
 @:native("winrt::Windows::Storage::Provider::UIStatus")
-extern enum abstract UIStatus(Int32)
+extern enum abstract UIStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Storage::Provider::UIStatus::Unavailable") final Unavailable;
     @:native("winrt::Windows::Storage::Provider::UIStatus::Hidden") final Hidden;

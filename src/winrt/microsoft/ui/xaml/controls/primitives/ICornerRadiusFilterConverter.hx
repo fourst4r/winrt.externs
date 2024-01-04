@@ -9,7 +9,7 @@ package winrt.microsoft.ui.xaml.controls.primitives;
 extern interface ICornerRadiusFilterConverter extends winrt.windows.foundation.IInspectable
 {
     overload function Filter(): winrt.microsoft.ui.xaml.controls.primitives.CornerRadiusFilterKind;
-    overload function Filter(value: ConstRef<winrt.microsoft.ui.xaml.controls.primitives.CornerRadiusFilterKind>): Void;
-    overload function Scale(): Float64;
-    overload function Scale(value: Float64): Void;
+    overload function Filter(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.primitives.CornerRadiusFilterKind>): Void;
+    overload function Scale(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Scale(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

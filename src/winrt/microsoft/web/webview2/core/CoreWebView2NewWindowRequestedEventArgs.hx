@@ -13,7 +13,7 @@ extern class CoreWebView2NewWindowRequestedEventArgs
     overload function Name(): winrt.HString;
     overload function Uri(): winrt.HString;
     overload function NewWindow(): winrt.microsoft.web.webview2.core.CoreWebView2;
-    overload function NewWindow(value: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2>): Void;
+    overload function NewWindow(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.CoreWebView2>): Void;
     overload function Handled(): Bool;
     overload function Handled(value: Bool): Void;
     overload function IsUserInitiated(): Bool;

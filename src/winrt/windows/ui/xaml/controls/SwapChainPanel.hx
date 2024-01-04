@@ -11,11 +11,11 @@ extern class SwapChainPanel
     implements winrt.windows.ui.xaml.controls.ISwapChainPanel
 {
     function new();
-    overload function CompositionScaleX(): Float32;
-    overload function CompositionScaleY(): Float32;
-    overload function CompositionScaleChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.xaml.controls.SwapChainPanel, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function CompositionScaleChanged(token: ConstRef<winrt.EventToken>): Void;
-    function CreateCoreIndependentInputSource(deviceTypes: ConstRef<winrt.windows.ui.core.CoreInputDeviceTypes>): winrt.windows.ui.core.CoreIndependentInputSource;
+    overload function CompositionScaleX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function CompositionScaleY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function CompositionScaleChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.xaml.controls.SwapChainPanel, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function CompositionScaleChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    function CreateCoreIndependentInputSource(deviceTypes: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.CoreInputDeviceTypes>): winrt.windows.ui.core.CoreIndependentInputSource;
     overload function CompositionScaleXProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function CompositionScaleYProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function CompositionScaleXProperty(): winrt.windows.ui.xaml.DependencyProperty;

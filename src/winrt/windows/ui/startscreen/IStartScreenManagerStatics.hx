@@ -9,5 +9,5 @@ package winrt.windows.ui.startscreen;
 extern interface IStartScreenManagerStatics extends winrt.windows.foundation.IInspectable
 {
     function GetDefault(): winrt.windows.ui.startscreen.StartScreenManager;
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.ui.startscreen.StartScreenManager;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.ui.startscreen.StartScreenManager;
 }

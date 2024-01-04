@@ -9,6 +9,6 @@ package winrt.windows.devices.geolocation;
 extern interface IGeoshape extends winrt.windows.foundation.IInspectable
 {
     overload function GeoshapeType(): winrt.windows.devices.geolocation.GeoshapeType;
-    overload function SpatialReferenceId(): UInt32;
+    overload function SpatialReferenceId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function AltitudeReferenceSystem(): winrt.windows.devices.geolocation.AltitudeReferenceSystem;
 }

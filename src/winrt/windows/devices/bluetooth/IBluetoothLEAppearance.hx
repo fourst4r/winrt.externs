@@ -8,7 +8,7 @@ package winrt.windows.devices.bluetooth;
 @:native("winrt::Windows::Devices::Bluetooth::IBluetoothLEAppearance")
 extern interface IBluetoothLEAppearance extends winrt.windows.foundation.IInspectable
 {
-    overload function RawValue(): UInt16;
-    overload function Category(): UInt16;
-    overload function SubCategory(): UInt16;
+    overload function RawValue(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    overload function Category(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    overload function SubCategory(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
 }

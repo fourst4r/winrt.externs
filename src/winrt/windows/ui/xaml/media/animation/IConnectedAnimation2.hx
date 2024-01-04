@@ -10,6 +10,6 @@ extern interface IConnectedAnimation2 extends winrt.windows.foundation.IInspecta
 {
     overload function IsScaleAnimationEnabled(): Bool;
     overload function IsScaleAnimationEnabled(value: Bool): Void;
-    function TryStart(destination: ConstRef<winrt.windows.ui.xaml.UIElement>, coordinatedElements: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.ui.xaml.UIElement> /* temp_GenericTypeInstSig */>): Bool;
-    function SetAnimationComponent(component: ConstRef<winrt.windows.ui.xaml.media.animation.ConnectedAnimationComponent>, animation: ConstRef<winrt.windows.ui.composition.ICompositionAnimationBase>): Void;
+    function TryStart(destination: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>, coordinatedElements: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.windows.ui.xaml.UIElement> /* temp_GenericTypeInstSig */>): Bool;
+    function SetAnimationComponent(component: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.animation.ConnectedAnimationComponent>, animation: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.ICompositionAnimationBase>): Void;
 }

@@ -8,5 +8,5 @@ package winrt.windows.web.syndication;
 @:native("winrt::Windows::Web::Syndication::ISyndicationErrorStatics")
 extern interface ISyndicationErrorStatics extends winrt.windows.foundation.IInspectable
 {
-    function GetStatus(hresult: Int32): winrt.windows.web.syndication.SyndicationErrorStatus;
+    function GetStatus(hresult: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.web.syndication.SyndicationErrorStatus;
 }

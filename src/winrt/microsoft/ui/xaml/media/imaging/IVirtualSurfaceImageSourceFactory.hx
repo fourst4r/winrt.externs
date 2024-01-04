@@ -8,6 +8,6 @@ package winrt.microsoft.ui.xaml.media.imaging;
 @:native("winrt::Microsoft::UI::Xaml::Media::Imaging::IVirtualSurfaceImageSourceFactory")
 extern interface IVirtualSurfaceImageSourceFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstanceWithDimensions(pixelWidth: Int32, pixelHeight: Int32): winrt.microsoft.ui.xaml.media.imaging.VirtualSurfaceImageSource;
-    function CreateInstanceWithDimensionsAndOpacity(pixelWidth: Int32, pixelHeight: Int32, isOpaque: Bool): winrt.microsoft.ui.xaml.media.imaging.VirtualSurfaceImageSource;
+    function CreateInstanceWithDimensions(pixelWidth: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, pixelHeight: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.microsoft.ui.xaml.media.imaging.VirtualSurfaceImageSource;
+    function CreateInstanceWithDimensionsAndOpacity(pixelWidth: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, pixelHeight: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, isOpaque: Bool): winrt.microsoft.ui.xaml.media.imaging.VirtualSurfaceImageSource;
 }

@@ -8,5 +8,5 @@ package winrt.windows.ui.input;
 @:native("winrt::Windows::UI::Input::IRightTappedEventArgs2")
 extern interface IRightTappedEventArgs2 extends winrt.windows.foundation.IInspectable
 {
-    overload function ContactCount(): UInt32;
+    overload function ContactCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

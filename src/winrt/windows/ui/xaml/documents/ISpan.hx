@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.documents;
 extern interface ISpan extends winrt.windows.foundation.IInspectable
 {
     overload function Inlines(): winrt.windows.ui.xaml.documents.InlineCollection;
-    overload function Inlines(value: ConstRef<winrt.windows.ui.xaml.documents.InlineCollection>): Void;
+    overload function Inlines(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.documents.InlineCollection>): Void;
 }

@@ -9,6 +9,6 @@ package winrt.microsoft.ui.composition;
 extern interface IElasticEasingFunction extends winrt.windows.foundation.IInspectable
 {
     overload function Mode(): winrt.microsoft.ui.composition.CompositionEasingFunctionMode;
-    overload function Oscillations(): Int32;
-    overload function Springiness(): Float32;
+    overload function Oscillations(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Springiness(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
 }

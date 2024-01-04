@@ -13,9 +13,9 @@ extern class TabViewItemTemplateSettings
 {
     function new();
     overload function IconElement(): winrt.microsoft.ui.xaml.controls.IconElement;
-    overload function IconElement(value: ConstRef<winrt.microsoft.ui.xaml.controls.IconElement>): Void;
+    overload function IconElement(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.IconElement>): Void;
     overload function TabGeometry(): winrt.microsoft.ui.xaml.media.Geometry;
-    overload function TabGeometry(value: ConstRef<winrt.microsoft.ui.xaml.media.Geometry>): Void;
+    overload function TabGeometry(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.Geometry>): Void;
     overload function TabGeometryProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function IconElementProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function IconElementProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

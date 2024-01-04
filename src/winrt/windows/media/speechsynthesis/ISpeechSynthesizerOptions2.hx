@@ -8,10 +8,10 @@ package winrt.windows.media.speechsynthesis;
 @:native("winrt::Windows::Media::SpeechSynthesis::ISpeechSynthesizerOptions2")
 extern interface ISpeechSynthesizerOptions2 extends winrt.windows.foundation.IInspectable
 {
-    overload function AudioVolume(): Float64;
-    overload function AudioVolume(value: Float64): Void;
-    overload function SpeakingRate(): Float64;
-    overload function SpeakingRate(value: Float64): Void;
-    overload function AudioPitch(): Float64;
-    overload function AudioPitch(value: Float64): Void;
+    overload function AudioVolume(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function AudioVolume(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function SpeakingRate(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function SpeakingRate(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function AudioPitch(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function AudioPitch(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

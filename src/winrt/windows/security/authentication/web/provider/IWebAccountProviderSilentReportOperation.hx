@@ -9,5 +9,5 @@ package winrt.windows.security.authentication.web.provider;
 extern interface IWebAccountProviderSilentReportOperation extends winrt.windows.foundation.IInspectable
 {
     overload function ReportUserInteractionRequired(): Void;
-    overload function ReportUserInteractionRequired(value: ConstRef<winrt.windows.security.authentication.web.core.WebProviderError>): Void;
+    overload function ReportUserInteractionRequired(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.authentication.web.core.WebProviderError>): Void;
 }

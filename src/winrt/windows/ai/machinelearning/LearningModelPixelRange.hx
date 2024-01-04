@@ -2,7 +2,7 @@ package winrt.windows.ai.machinelearning;
 
 @:include("winrt/Windows.AI.MachineLearning.h", true)
 @:native("winrt::Windows::AI::MachineLearning::LearningModelPixelRange")
-extern enum abstract LearningModelPixelRange(Int32)
+extern enum abstract LearningModelPixelRange(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::AI::MachineLearning::LearningModelPixelRange::ZeroTo255") final ZeroTo255;
     @:native("winrt::Windows::AI::MachineLearning::LearningModelPixelRange::ZeroToOne") final ZeroToOne;

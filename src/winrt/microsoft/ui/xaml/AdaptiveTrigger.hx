@@ -11,10 +11,10 @@ extern class AdaptiveTrigger
     implements winrt.microsoft.ui.xaml.IAdaptiveTrigger
 {
     function new();
-    overload function MinWindowWidth(): Float64;
-    overload function MinWindowWidth(value: Float64): Void;
-    overload function MinWindowHeight(): Float64;
-    overload function MinWindowHeight(value: Float64): Void;
+    overload function MinWindowWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function MinWindowWidth(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function MinWindowHeight(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function MinWindowHeight(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function MinWindowWidthProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function MinWindowHeightProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function MinWindowWidthProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

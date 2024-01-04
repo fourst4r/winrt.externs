@@ -10,5 +10,5 @@ extern interface IXmlProcessingInstruction extends winrt.windows.foundation.IIns
 {
     overload function Target(): winrt.HString;
     overload function Data(): winrt.HString;
-    overload function Data(value: ConstRef<winrt.HString>): Void;
+    overload function Data(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

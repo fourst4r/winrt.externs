@@ -9,6 +9,6 @@ package winrt.windows.security.authentication.web.provider;
 extern class WebProviderTokenResponse
     implements winrt.windows.security.authentication.web.provider.IWebProviderTokenResponse
 {
-    /* explicit */ function new(webTokenResponse: ConstRef<winrt.windows.security.authentication.web.core.WebTokenResponse>);
+    /* explicit */ function new(webTokenResponse: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.authentication.web.core.WebTokenResponse>);
     overload function ClientResponse(): winrt.windows.security.authentication.web.core.WebTokenResponse;
 }

@@ -2,7 +2,7 @@ package winrt.windows.media.import;
 
 @:include("winrt/Windows.Media.Import.h", true)
 @:native("winrt::Windows::Media::Import::PhotoImportConnectionTransport")
-extern enum abstract PhotoImportConnectionTransport(Int32)
+extern enum abstract PhotoImportConnectionTransport(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Import::PhotoImportConnectionTransport::Unknown") final Unknown;
     @:native("winrt::Windows::Media::Import::PhotoImportConnectionTransport::Usb") final Usb;

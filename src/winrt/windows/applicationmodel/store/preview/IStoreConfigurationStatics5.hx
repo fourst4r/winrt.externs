@@ -11,6 +11,6 @@ extern interface IStoreConfigurationStatics5 extends winrt.windows.foundation.II
     function IsPinToDesktopSupported(): Bool;
     function IsPinToTaskbarSupported(): Bool;
     function IsPinToStartSupported(): Bool;
-    function PinToDesktop(appPackageFamilyName: ConstRef<winrt.HString>): Void;
-    function PinToDesktopForUser(user: ConstRef<winrt.windows.system.User>, appPackageFamilyName: ConstRef<winrt.HString>): Void;
+    function PinToDesktop(appPackageFamilyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function PinToDesktopForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>, appPackageFamilyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

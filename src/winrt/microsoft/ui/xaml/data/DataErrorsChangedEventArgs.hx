@@ -9,7 +9,7 @@ package winrt.microsoft.ui.xaml.data;
 extern class DataErrorsChangedEventArgs
     implements winrt.microsoft.ui.xaml.data.IDataErrorsChangedEventArgs
 {
-    /* explicit */ function new(name: ConstRef<winrt.HString>);
+    /* explicit */ function new(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     overload function PropertyName(): winrt.HString;
-    overload function PropertyName(value: ConstRef<winrt.HString>): Void;
+    overload function PropertyName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

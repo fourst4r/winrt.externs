@@ -9,9 +9,9 @@ package winrt.microsoft.ui.xaml.automation.provider;
 extern interface ITransformProvider2 extends winrt.windows.foundation.IInspectable
 {
     overload function CanZoom(): Bool;
-    overload function ZoomLevel(): Float64;
-    overload function MaxZoom(): Float64;
-    overload function MinZoom(): Float64;
-    function Zoom(zoom: Float64): Void;
-    function ZoomByUnit(zoomUnit: ConstRef<winrt.microsoft.ui.xaml.automation.ZoomUnit>): Void;
+    overload function ZoomLevel(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function MaxZoom(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function MinZoom(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    function Zoom(zoom: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    function ZoomByUnit(zoomUnit: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.automation.ZoomUnit>): Void;
 }

@@ -9,6 +9,6 @@ package winrt.windows.ui.input.inking;
 extern class InkDrawingAttributesPencilProperties
     implements winrt.windows.ui.input.inking.IInkDrawingAttributesPencilProperties
 {
-    overload function Opacity(): Float64;
-    overload function Opacity(value: Float64): Void;
+    overload function Opacity(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Opacity(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

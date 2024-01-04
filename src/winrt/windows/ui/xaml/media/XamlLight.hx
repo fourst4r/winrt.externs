@@ -14,16 +14,16 @@ extern class XamlLight
 {
     function new();
     overload function CompositionLight(): winrt.windows.ui.composition.CompositionLight;
-    overload function CompositionLight(value: ConstRef<winrt.windows.ui.composition.CompositionLight>): Void;
+    overload function CompositionLight(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionLight>): Void;
     function GetId(): winrt.HString;
-    function OnConnected(newElement: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
-    function OnDisconnected(oldElement: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
-    function AddTargetElement(lightId: ConstRef<winrt.HString>, element: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
-    function RemoveTargetElement(lightId: ConstRef<winrt.HString>, element: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
-    function AddTargetBrush(lightId: ConstRef<winrt.HString>, brush: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
-    function RemoveTargetBrush(lightId: ConstRef<winrt.HString>, brush: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
-    static function AddTargetElement(lightId: ConstRef<winrt.HString>, element: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
-    static function RemoveTargetElement(lightId: ConstRef<winrt.HString>, element: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
-    static function AddTargetBrush(lightId: ConstRef<winrt.HString>, brush: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
-    static function RemoveTargetBrush(lightId: ConstRef<winrt.HString>, brush: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
+    function OnConnected(newElement: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
+    function OnDisconnected(oldElement: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
+    function AddTargetElement(lightId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
+    function RemoveTargetElement(lightId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
+    function AddTargetBrush(lightId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, brush: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Brush>): Void;
+    function RemoveTargetBrush(lightId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, brush: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Brush>): Void;
+    static function AddTargetElement(lightId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
+    static function RemoveTargetElement(lightId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
+    static function AddTargetBrush(lightId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, brush: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Brush>): Void;
+    static function RemoveTargetBrush(lightId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, brush: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Brush>): Void;
 }

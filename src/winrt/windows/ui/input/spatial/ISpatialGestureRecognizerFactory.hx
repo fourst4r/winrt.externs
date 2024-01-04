@@ -8,5 +8,5 @@ package winrt.windows.ui.input.spatial;
 @:native("winrt::Windows::UI::Input::Spatial::ISpatialGestureRecognizerFactory")
 extern interface ISpatialGestureRecognizerFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(settings: ConstRef<winrt.windows.ui.input.spatial.SpatialGestureSettings>): winrt.windows.ui.input.spatial.SpatialGestureRecognizer;
+    function Create(settings: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.spatial.SpatialGestureSettings>): winrt.windows.ui.input.spatial.SpatialGestureRecognizer;
 }

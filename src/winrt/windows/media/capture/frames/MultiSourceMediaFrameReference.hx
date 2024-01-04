@@ -10,6 +10,6 @@ extern class MultiSourceMediaFrameReference
     implements winrt.windows.foundation.IClosable
     implements winrt.windows.media.capture.frames.IMultiSourceMediaFrameReference
 {
-    function TryGetFrameReferenceBySourceId(sourceId: ConstRef<winrt.HString>): winrt.windows.media.capture.frames.MediaFrameReference;
+    function TryGetFrameReferenceBySourceId(sourceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.media.capture.frames.MediaFrameReference;
     function Close(): Void;
 }

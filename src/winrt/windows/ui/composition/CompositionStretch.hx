@@ -2,7 +2,7 @@ package winrt.windows.ui.composition;
 
 @:include("winrt/Windows.UI.Composition.h", true)
 @:native("winrt::Windows::UI::Composition::CompositionStretch")
-extern enum abstract CompositionStretch(Int32)
+extern enum abstract CompositionStretch(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Composition::CompositionStretch::None") final None;
     @:native("winrt::Windows::UI::Composition::CompositionStretch::Fill") final Fill;

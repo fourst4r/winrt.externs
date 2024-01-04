@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.useractivities;
 extern class UserActivityRequest
     implements winrt.windows.applicationmodel.useractivities.IUserActivityRequest
 {
-    function SetUserActivity(activity: ConstRef<winrt.windows.applicationmodel.useractivities.UserActivity>): Void;
+    function SetUserActivity(activity: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.useractivities.UserActivity>): Void;
 }

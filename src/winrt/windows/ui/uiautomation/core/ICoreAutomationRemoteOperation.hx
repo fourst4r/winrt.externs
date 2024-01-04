@@ -8,9 +8,9 @@ package winrt.windows.ui.uiautomation.core;
 @:native("winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation")
 extern interface ICoreAutomationRemoteOperation extends winrt.windows.foundation.IInspectable
 {
-    function IsOpcodeSupported(opcode: UInt32): Bool;
-    function ImportElement(operandId: ConstRef<winrt.windows.ui.uiautomation.core.AutomationRemoteOperationOperandId>, element: ConstRef<winrt.windows.ui.uiautomation.AutomationElement>): Void;
-    function ImportTextRange(operandId: ConstRef<winrt.windows.ui.uiautomation.core.AutomationRemoteOperationOperandId>, textRange: ConstRef<winrt.windows.ui.uiautomation.AutomationTextRange>): Void;
-    function AddToResults(operandId: ConstRef<winrt.windows.ui.uiautomation.core.AutomationRemoteOperationOperandId>): Void;
-    function Execute(bytecodeBuffer: winrt.ArrayView<UInt8>): winrt.windows.ui.uiautomation.core.AutomationRemoteOperationResult;
+    function IsOpcodeSupported(opcode: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Bool;
+    function ImportElement(operandId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.uiautomation.core.AutomationRemoteOperationOperandId>, element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.uiautomation.AutomationElement>): Void;
+    function ImportTextRange(operandId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.uiautomation.core.AutomationRemoteOperationOperandId>, textRange: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.uiautomation.AutomationTextRange>): Void;
+    function AddToResults(operandId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.uiautomation.core.AutomationRemoteOperationOperandId>): Void;
+    function Execute(bytecodeBuffer: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): winrt.windows.ui.uiautomation.core.AutomationRemoteOperationResult;
 }

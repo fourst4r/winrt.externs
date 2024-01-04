@@ -18,5 +18,5 @@ extern class ToastNotificationActivatedEventArgs
     overload function PreviousExecutionState(): winrt.windows.applicationmodel.activation.ApplicationExecutionState;
     overload function SplashScreen(): winrt.windows.applicationmodel.activation.SplashScreen;
     overload function User(): winrt.windows.system.User;
-    overload function CurrentlyShownApplicationViewId(): Int32;
+    overload function CurrentlyShownApplicationViewId(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

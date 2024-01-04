@@ -9,5 +9,5 @@ package winrt.microsoft.web.webview2.core;
 extern interface ICoreWebView2NavigationStartingEventArgs2 extends winrt.windows.foundation.IInspectable
 {
     overload function AdditionalAllowedFrameAncestors(): winrt.HString;
-    overload function AdditionalAllowedFrameAncestors(value: ConstRef<winrt.HString>): Void;
+    overload function AdditionalAllowedFrameAncestors(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

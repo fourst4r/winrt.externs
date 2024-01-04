@@ -9,9 +9,9 @@ package winrt.windows.ui.composition.interactions;
 extern interface IInteractionSourceConfiguration extends winrt.windows.foundation.IInspectable
 {
     overload function PositionXSourceMode(): winrt.windows.ui.composition.interactions.InteractionSourceRedirectionMode;
-    overload function PositionXSourceMode(value: ConstRef<winrt.windows.ui.composition.interactions.InteractionSourceRedirectionMode>): Void;
+    overload function PositionXSourceMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.interactions.InteractionSourceRedirectionMode>): Void;
     overload function PositionYSourceMode(): winrt.windows.ui.composition.interactions.InteractionSourceRedirectionMode;
-    overload function PositionYSourceMode(value: ConstRef<winrt.windows.ui.composition.interactions.InteractionSourceRedirectionMode>): Void;
+    overload function PositionYSourceMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.interactions.InteractionSourceRedirectionMode>): Void;
     overload function ScaleSourceMode(): winrt.windows.ui.composition.interactions.InteractionSourceRedirectionMode;
-    overload function ScaleSourceMode(value: ConstRef<winrt.windows.ui.composition.interactions.InteractionSourceRedirectionMode>): Void;
+    overload function ScaleSourceMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.interactions.InteractionSourceRedirectionMode>): Void;
 }

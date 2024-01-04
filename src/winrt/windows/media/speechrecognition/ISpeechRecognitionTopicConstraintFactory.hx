@@ -8,6 +8,6 @@ package winrt.windows.media.speechrecognition;
 @:native("winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionTopicConstraintFactory")
 extern interface ISpeechRecognitionTopicConstraintFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(scenario: ConstRef<winrt.windows.media.speechrecognition.SpeechRecognitionScenario>, topicHint: ConstRef<winrt.HString>): winrt.windows.media.speechrecognition.SpeechRecognitionTopicConstraint;
-    function CreateWithTag(scenario: ConstRef<winrt.windows.media.speechrecognition.SpeechRecognitionScenario>, topicHint: ConstRef<winrt.HString>, tag: ConstRef<winrt.HString>): winrt.windows.media.speechrecognition.SpeechRecognitionTopicConstraint;
+    function Create(scenario: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.speechrecognition.SpeechRecognitionScenario>, topicHint: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.media.speechrecognition.SpeechRecognitionTopicConstraint;
+    function CreateWithTag(scenario: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.speechrecognition.SpeechRecognitionScenario>, topicHint: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, tag: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.media.speechrecognition.SpeechRecognitionTopicConstraint;
 }

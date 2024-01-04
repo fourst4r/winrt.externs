@@ -10,6 +10,6 @@ extern interface IPerceptionInfraredFrameSourceStatics extends winrt.windows.fou
 {
     function CreateWatcher(): winrt.windows.devices.perception.PerceptionInfraredFrameSourceWatcher;
     function FindAllAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.perception.PerceptionInfraredFrameSource> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
-    function FromIdAsync(id: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionInfraredFrameSource> /* GenericTypeInstSig */;
+    function FromIdAsync(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionInfraredFrameSource> /* GenericTypeInstSig */;
     function RequestAccessAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.perception.PerceptionFrameSourceAccessStatus> /* GenericTypeInstSig */;
 }

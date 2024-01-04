@@ -9,6 +9,6 @@ package winrt.windows.ui.input.preview.injection;
 extern interface IInputInjector2 extends winrt.windows.foundation.IInspectable
 {
     function InitializeGamepadInjection(): Void;
-    function InjectGamepadInput(input: ConstRef<winrt.windows.ui.input.preview.injection.InjectedInputGamepadInfo>): Void;
+    function InjectGamepadInput(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.preview.injection.InjectedInputGamepadInfo>): Void;
     function UninitializeGamepadInjection(): Void;
 }

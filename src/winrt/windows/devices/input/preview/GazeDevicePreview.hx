@@ -9,11 +9,11 @@ package winrt.windows.devices.input.preview;
 extern class GazeDevicePreview
     implements winrt.windows.devices.input.preview.IGazeDevicePreview
 {
-    overload function Id(): UInt32;
+    overload function Id(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function CanTrackEyes(): Bool;
     overload function CanTrackHead(): Bool;
     overload function ConfigurationState(): winrt.windows.devices.input.preview.GazeDeviceConfigurationStatePreview;
     function RequestCalibrationAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
-    function GetNumericControlDescriptions(usagePage: UInt16, usageId: UInt16): winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.humaninterfacedevice.HidNumericControlDescription> /* GenericTypeInstSig */;
-    function GetBooleanControlDescriptions(usagePage: UInt16, usageId: UInt16): winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.humaninterfacedevice.HidBooleanControlDescription> /* GenericTypeInstSig */;
+    function GetNumericControlDescriptions(usagePage: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, usageId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.humaninterfacedevice.HidNumericControlDescription> /* GenericTypeInstSig */;
+    function GetBooleanControlDescriptions(usagePage: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, usageId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.humaninterfacedevice.HidBooleanControlDescription> /* GenericTypeInstSig */;
 }

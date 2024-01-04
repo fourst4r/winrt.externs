@@ -8,5 +8,5 @@ package winrt.windows.security.cryptography.core;
 @:native("winrt::Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProviderStatics")
 extern interface ISymmetricKeyAlgorithmProviderStatics extends winrt.windows.foundation.IInspectable
 {
-    function OpenAlgorithm(algorithm: ConstRef<winrt.HString>): winrt.windows.security.cryptography.core.SymmetricKeyAlgorithmProvider;
+    function OpenAlgorithm(algorithm: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.security.cryptography.core.SymmetricKeyAlgorithmProvider;
 }

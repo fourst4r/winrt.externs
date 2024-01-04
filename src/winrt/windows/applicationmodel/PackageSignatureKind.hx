@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel;
 
 @:include("winrt/Windows.ApplicationModel.h", true)
 @:native("winrt::Windows::ApplicationModel::PackageSignatureKind")
-extern enum abstract PackageSignatureKind(Int32)
+extern enum abstract PackageSignatureKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::PackageSignatureKind::None") final None;
     @:native("winrt::Windows::ApplicationModel::PackageSignatureKind::Developer") final Developer;

@@ -9,7 +9,7 @@ package winrt.windows.ui.notifications;
 extern interface ITileUpdateManagerForUser extends winrt.windows.foundation.IInspectable
 {
     function CreateTileUpdaterForApplicationForUser(): winrt.windows.ui.notifications.TileUpdater;
-    function CreateTileUpdaterForApplication(applicationId: ConstRef<winrt.HString>): winrt.windows.ui.notifications.TileUpdater;
-    function CreateTileUpdaterForSecondaryTile(tileId: ConstRef<winrt.HString>): winrt.windows.ui.notifications.TileUpdater;
+    function CreateTileUpdaterForApplication(applicationId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.notifications.TileUpdater;
+    function CreateTileUpdaterForSecondaryTile(tileId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.notifications.TileUpdater;
     overload function User(): winrt.windows.system.User;
 }

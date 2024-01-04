@@ -8,5 +8,5 @@ package winrt.windows.web.http.filters;
 @:native("winrt::Windows::Web::Http::Filters::IHttpBaseProtocolFilterStatics")
 extern interface IHttpBaseProtocolFilterStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.web.http.filters.HttpBaseProtocolFilter;
+    function CreateForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.web.http.filters.HttpBaseProtocolFilter;
 }

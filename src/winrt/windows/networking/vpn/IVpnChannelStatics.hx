@@ -8,5 +8,5 @@ package winrt.windows.networking.vpn;
 @:native("winrt::Windows::Networking::Vpn::IVpnChannelStatics")
 extern interface IVpnChannelStatics extends winrt.windows.foundation.IInspectable
 {
-    function ProcessEventAsync(thirdPartyPlugIn: ConstRef<winrt.windows.foundation.IInspectable>, event: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    function ProcessEventAsync(thirdPartyPlugIn: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, event: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
 }

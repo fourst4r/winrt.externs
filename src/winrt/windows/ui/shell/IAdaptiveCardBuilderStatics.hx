@@ -8,5 +8,5 @@ package winrt.windows.ui.shell;
 @:native("winrt::Windows::UI::Shell::IAdaptiveCardBuilderStatics")
 extern interface IAdaptiveCardBuilderStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateAdaptiveCardFromJson(value: ConstRef<winrt.HString>): winrt.windows.ui.shell.IAdaptiveCard;
+    function CreateAdaptiveCardFromJson(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.shell.IAdaptiveCard;
 }

@@ -9,6 +9,6 @@ package winrt.windows.networking.sockets;
 extern class WebSocketClosedEventArgs
     implements winrt.windows.networking.sockets.IWebSocketClosedEventArgs
 {
-    overload function Code(): UInt16;
+    overload function Code(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
     overload function Reason(): winrt.HString;
 }

@@ -9,13 +9,13 @@ package winrt.windows.devices.usb;
 extern class UsbInterfaceDescriptor
     implements winrt.windows.devices.usb.IUsbInterfaceDescriptor
 {
-    overload function ClassCode(): UInt8;
-    overload function SubclassCode(): UInt8;
-    overload function ProtocolCode(): UInt8;
-    overload function AlternateSettingNumber(): UInt8;
-    overload function InterfaceNumber(): UInt8;
-    function TryParse(descriptor: ConstRef<winrt.windows.devices.usb.UsbDescriptor>, parsed: Ref<winrt.windows.devices.usb.UsbInterfaceDescriptor>): Bool;
-    function Parse(descriptor: ConstRef<winrt.windows.devices.usb.UsbDescriptor>): winrt.windows.devices.usb.UsbInterfaceDescriptor;
-    static function TryParse(descriptor: ConstRef<winrt.windows.devices.usb.UsbDescriptor>, parsed: Ref<winrt.windows.devices.usb.UsbInterfaceDescriptor>): Bool;
-    static function Parse(descriptor: ConstRef<winrt.windows.devices.usb.UsbDescriptor>): winrt.windows.devices.usb.UsbInterfaceDescriptor;
+    overload function ClassCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function SubclassCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function ProtocolCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function AlternateSettingNumber(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function InterfaceNumber(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    function TryParse(descriptor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.usb.UsbDescriptor>, parsed: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.devices.usb.UsbInterfaceDescriptor>): Bool;
+    function Parse(descriptor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.usb.UsbDescriptor>): winrt.windows.devices.usb.UsbInterfaceDescriptor;
+    static function TryParse(descriptor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.usb.UsbDescriptor>, parsed: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.devices.usb.UsbInterfaceDescriptor>): Bool;
+    static function Parse(descriptor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.usb.UsbDescriptor>): winrt.windows.devices.usb.UsbInterfaceDescriptor;
 }

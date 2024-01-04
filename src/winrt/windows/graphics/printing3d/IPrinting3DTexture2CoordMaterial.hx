@@ -9,9 +9,9 @@ package winrt.windows.graphics.printing3d;
 extern interface IPrinting3DTexture2CoordMaterial extends winrt.windows.foundation.IInspectable
 {
     overload function Texture(): winrt.windows.graphics.printing3d.Printing3DModelTexture;
-    overload function Texture(value: ConstRef<winrt.windows.graphics.printing3d.Printing3DModelTexture>): Void;
-    overload function U(): Float64;
-    overload function U(value: Float64): Void;
-    overload function V(): Float64;
-    overload function V(value: Float64): Void;
+    overload function Texture(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing3d.Printing3DModelTexture>): Void;
+    overload function U(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function U(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function V(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function V(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

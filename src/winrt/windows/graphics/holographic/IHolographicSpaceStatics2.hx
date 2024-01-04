@@ -10,6 +10,6 @@ extern interface IHolographicSpaceStatics2 extends winrt.windows.foundation.IIns
 {
     overload function IsSupported(): Bool;
     overload function IsAvailable(): Bool;
-    overload function IsAvailableChanged(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function IsAvailableChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function IsAvailableChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function IsAvailableChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

@@ -9,8 +9,8 @@ package winrt.windows.networking.proximity;
 extern interface IPeerFinderStatics2 extends winrt.windows.foundation.IInspectable
 {
     overload function Role(): winrt.windows.networking.proximity.PeerRole;
-    overload function Role(value: ConstRef<winrt.windows.networking.proximity.PeerRole>): Void;
+    overload function Role(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.proximity.PeerRole>): Void;
     overload function DiscoveryData(): winrt.windows.storage.streams.IBuffer;
-    overload function DiscoveryData(value: ConstRef<winrt.windows.storage.streams.IBuffer>): Void;
+    overload function DiscoveryData(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): Void;
     function CreateWatcher(): winrt.windows.networking.proximity.PeerWatcher;
 }

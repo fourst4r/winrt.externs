@@ -13,19 +13,19 @@ extern class GroupStyle
 {
     function new();
     overload function Panel(): winrt.windows.ui.xaml.controls.ItemsPanelTemplate;
-    overload function Panel(value: ConstRef<winrt.windows.ui.xaml.controls.ItemsPanelTemplate>): Void;
+    overload function Panel(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.ItemsPanelTemplate>): Void;
     overload function ContainerStyle(): winrt.windows.ui.xaml.Style;
-    overload function ContainerStyle(value: ConstRef<winrt.windows.ui.xaml.Style>): Void;
+    overload function ContainerStyle(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.Style>): Void;
     overload function ContainerStyleSelector(): winrt.windows.ui.xaml.controls.StyleSelector;
-    overload function ContainerStyleSelector(value: ConstRef<winrt.windows.ui.xaml.controls.StyleSelector>): Void;
+    overload function ContainerStyleSelector(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.StyleSelector>): Void;
     overload function HeaderTemplate(): winrt.windows.ui.xaml.DataTemplate;
-    overload function HeaderTemplate(value: ConstRef<winrt.windows.ui.xaml.DataTemplate>): Void;
+    overload function HeaderTemplate(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DataTemplate>): Void;
     overload function HeaderTemplateSelector(): winrt.windows.ui.xaml.controls.DataTemplateSelector;
-    overload function HeaderTemplateSelector(value: ConstRef<winrt.windows.ui.xaml.controls.DataTemplateSelector>): Void;
+    overload function HeaderTemplateSelector(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.DataTemplateSelector>): Void;
     overload function HidesIfEmpty(): Bool;
     overload function HidesIfEmpty(value: Bool): Void;
     overload function HeaderContainerStyle(): winrt.windows.ui.xaml.Style;
-    overload function HeaderContainerStyle(value: ConstRef<winrt.windows.ui.xaml.Style>): Void;
-    overload function PropertyChanged(handler: ConstRef<winrt.windows.ui.xaml.data.PropertyChangedEventHandler>): winrt.EventToken;
-    @:noExcept overload function PropertyChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function HeaderContainerStyle(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.Style>): Void;
+    overload function PropertyChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.data.PropertyChangedEventHandler>): winrt.EventToken;
+    @:noExcept overload function PropertyChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

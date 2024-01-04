@@ -9,6 +9,6 @@ package winrt.windows.devices.sensors;
 extern class BarometerDataThreshold
     implements winrt.windows.devices.sensors.IBarometerDataThreshold
 {
-    overload function Hectopascals(): Float64;
-    overload function Hectopascals(value: Float64): Void;
+    overload function Hectopascals(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Hectopascals(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

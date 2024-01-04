@@ -11,10 +11,10 @@ extern class CoreWebView2WindowFeatures
 {
     overload function HasPosition(): Bool;
     overload function HasSize(): Bool;
-    overload function Left(): UInt32;
-    overload function Top(): UInt32;
-    overload function Height(): UInt32;
-    overload function Width(): UInt32;
+    overload function Left(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Top(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Height(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Width(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function ShouldDisplayMenuBar(): Bool;
     overload function ShouldDisplayStatus(): Bool;
     overload function ShouldDisplayToolbar(): Bool;

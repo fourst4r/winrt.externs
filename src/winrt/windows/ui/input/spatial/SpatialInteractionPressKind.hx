@@ -2,7 +2,7 @@ package winrt.windows.ui.input.spatial;
 
 @:include("winrt/Windows.UI.Input.Spatial.h", true)
 @:native("winrt::Windows::UI::Input::Spatial::SpatialInteractionPressKind")
-extern enum abstract SpatialInteractionPressKind(Int32)
+extern enum abstract SpatialInteractionPressKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Input::Spatial::SpatialInteractionPressKind::None") final None;
     @:native("winrt::Windows::UI::Input::Spatial::SpatialInteractionPressKind::Select") final Select;

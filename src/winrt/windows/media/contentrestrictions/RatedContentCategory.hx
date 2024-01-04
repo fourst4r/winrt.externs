@@ -2,7 +2,7 @@ package winrt.windows.media.contentrestrictions;
 
 @:include("winrt/Windows.Media.ContentRestrictions.h", true)
 @:native("winrt::Windows::Media::ContentRestrictions::RatedContentCategory")
-extern enum abstract RatedContentCategory(Int32)
+extern enum abstract RatedContentCategory(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::ContentRestrictions::RatedContentCategory::General") final General;
     @:native("winrt::Windows::Media::ContentRestrictions::RatedContentCategory::Application") final Application;

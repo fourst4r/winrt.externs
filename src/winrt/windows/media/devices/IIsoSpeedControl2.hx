@@ -8,11 +8,11 @@ package winrt.windows.media.devices;
 @:native("winrt::Windows::Media::Devices::IIsoSpeedControl2")
 extern interface IIsoSpeedControl2 extends winrt.windows.foundation.IInspectable
 {
-    overload function Min(): UInt32;
-    overload function Max(): UInt32;
-    overload function Step(): UInt32;
-    overload function Value(): UInt32;
-    function SetValueAsync(isoSpeed: UInt32): winrt.windows.foundation.IAsyncAction;
+    overload function Min(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Max(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Step(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Value(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function SetValueAsync(isoSpeed: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.foundation.IAsyncAction;
     overload function Auto(): Bool;
     function SetAutoAsync(): winrt.windows.foundation.IAsyncAction;
 }

@@ -8,5 +8,5 @@ package winrt.windows.globalization;
 @:native("winrt::Windows::Globalization::IGeographicRegionFactory")
 extern interface IGeographicRegionFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateGeographicRegion(geographicRegionCode: ConstRef<winrt.HString>): winrt.windows.globalization.GeographicRegion;
+    function CreateGeographicRegion(geographicRegionCode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.globalization.GeographicRegion;
 }

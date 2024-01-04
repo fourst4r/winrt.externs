@@ -8,8 +8,8 @@ package winrt.windows.media;
 @:native("winrt::Windows::Media::IVideoFrameStatics")
 extern interface IVideoFrameStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function CreateAsDirect3D11SurfaceBacked(format: ConstRef<winrt.windows.graphics.directx.DirectXPixelFormat>, width: Int32, height: Int32): winrt.windows.media.VideoFrame;
-    overload function CreateAsDirect3D11SurfaceBacked(format: ConstRef<winrt.windows.graphics.directx.DirectXPixelFormat>, width: Int32, height: Int32, device: ConstRef<winrt.windows.graphics.directx.direct3d11.IDirect3DDevice>): winrt.windows.media.VideoFrame;
-    function CreateWithSoftwareBitmap(bitmap: ConstRef<winrt.windows.graphics.imaging.SoftwareBitmap>): winrt.windows.media.VideoFrame;
-    function CreateWithDirect3D11Surface(surface: ConstRef<winrt.windows.graphics.directx.direct3d11.IDirect3DSurface>): winrt.windows.media.VideoFrame;
+    overload function CreateAsDirect3D11SurfaceBacked(format: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.directx.DirectXPixelFormat>, width: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, height: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.media.VideoFrame;
+    overload function CreateAsDirect3D11SurfaceBacked(format: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.directx.DirectXPixelFormat>, width: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, height: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, device: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.directx.direct3d11.IDirect3DDevice>): winrt.windows.media.VideoFrame;
+    function CreateWithSoftwareBitmap(bitmap: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.imaging.SoftwareBitmap>): winrt.windows.media.VideoFrame;
+    function CreateWithDirect3D11Surface(surface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.directx.direct3d11.IDirect3DSurface>): winrt.windows.media.VideoFrame;
 }

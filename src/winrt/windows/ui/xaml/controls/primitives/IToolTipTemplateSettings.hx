@@ -8,6 +8,6 @@ package winrt.windows.ui.xaml.controls.primitives;
 @:native("winrt::Windows::UI::Xaml::Controls::Primitives::IToolTipTemplateSettings")
 extern interface IToolTipTemplateSettings extends winrt.windows.foundation.IInspectable
 {
-    overload function FromHorizontalOffset(): Float64;
-    overload function FromVerticalOffset(): Float64;
+    overload function FromHorizontalOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function FromVerticalOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

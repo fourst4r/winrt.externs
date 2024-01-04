@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.contacts;
 
 @:include("winrt/Windows.ApplicationModel.Contacts.h", true)
 @:native("winrt::Windows::ApplicationModel::Contacts::ContactQuerySearchFields")
-extern enum abstract ContactQuerySearchFields(UInt32)
+extern enum abstract ContactQuerySearchFields(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactQuerySearchFields::None") final None;
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactQuerySearchFields::Name") final Name;

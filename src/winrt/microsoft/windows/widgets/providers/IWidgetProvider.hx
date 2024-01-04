@@ -8,10 +8,10 @@ package winrt.microsoft.windows.widgets.providers;
 @:native("winrt::Microsoft::Windows::Widgets::Providers::IWidgetProvider")
 extern interface IWidgetProvider extends winrt.windows.foundation.IInspectable
 {
-    function CreateWidget(widgetContext: ConstRef<winrt.microsoft.windows.widgets.providers.WidgetContext>): Void;
-    function DeleteWidget(widgetId: ConstRef<winrt.HString>, customState: ConstRef<winrt.HString>): Void;
-    function OnActionInvoked(actionInvokedArgs: ConstRef<winrt.microsoft.windows.widgets.providers.WidgetActionInvokedArgs>): Void;
-    function OnWidgetContextChanged(contextChangedArgs: ConstRef<winrt.microsoft.windows.widgets.providers.WidgetContextChangedArgs>): Void;
-    function Activate(widgetContext: ConstRef<winrt.microsoft.windows.widgets.providers.WidgetContext>): Void;
-    function Deactivate(widgetId: ConstRef<winrt.HString>): Void;
+    function CreateWidget(widgetContext: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.windows.widgets.providers.WidgetContext>): Void;
+    function DeleteWidget(widgetId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, customState: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function OnActionInvoked(actionInvokedArgs: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.windows.widgets.providers.WidgetActionInvokedArgs>): Void;
+    function OnWidgetContextChanged(contextChangedArgs: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.windows.widgets.providers.WidgetContextChangedArgs>): Void;
+    function Activate(widgetContext: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.windows.widgets.providers.WidgetContext>): Void;
+    function Deactivate(widgetId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

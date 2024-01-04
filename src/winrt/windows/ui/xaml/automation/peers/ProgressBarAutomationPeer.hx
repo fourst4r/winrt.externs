@@ -10,5 +10,5 @@ extern class ProgressBarAutomationPeer
     extends winrt.windows.ui.xaml.automation.peers.RangeBaseAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IProgressBarAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.ProgressBar>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.ProgressBar>);
 }

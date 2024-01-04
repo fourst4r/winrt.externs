@@ -8,6 +8,6 @@ package winrt.windows.networking.sockets;
 @:native("winrt::Windows::Networking::Sockets::IWebSocketClosedEventArgs")
 extern interface IWebSocketClosedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function Code(): UInt16;
+    overload function Code(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
     overload function Reason(): winrt.HString;
 }

@@ -10,5 +10,5 @@ extern interface IAppInstanceStatics extends winrt.windows.foundation.IInspectab
 {
     function GetCurrent(): winrt.microsoft.windows.applifecycle.AppInstance;
     function GetInstances(): winrt.windows.foundation.collections.IVector<winrt.microsoft.windows.applifecycle.AppInstance> /* GenericTypeInstSig */;
-    function FindOrRegisterForKey(key: ConstRef<winrt.HString>): winrt.microsoft.windows.applifecycle.AppInstance;
+    function FindOrRegisterForKey(key: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.microsoft.windows.applifecycle.AppInstance;
 }

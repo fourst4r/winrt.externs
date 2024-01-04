@@ -4,9 +4,9 @@ package winrt.windows.media.mediaproperties;
 @:native("winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds")
 extern class Mpeg2ProfileIds
 {
-    static overload function Simple(): Int32;
-    static overload function Main(): Int32;
-    static overload function SignalNoiseRatioScalable(): Int32;
-    static overload function SpatiallyScalable(): Int32;
-    static overload function High(): Int32;
+    static overload function Simple(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function Main(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function SignalNoiseRatioScalable(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function SpatiallyScalable(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function High(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

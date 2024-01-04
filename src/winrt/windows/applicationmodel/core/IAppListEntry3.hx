@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.core;
 @:native("winrt::Windows::ApplicationModel::Core::IAppListEntry3")
 extern interface IAppListEntry3 extends winrt.windows.foundation.IInspectable
 {
-    function LaunchForUserAsync(user: ConstRef<winrt.windows.system.User>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function LaunchForUserAsync(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

@@ -9,8 +9,8 @@ package winrt.windows.applicationmodel.search;
 extern class SearchQueryLinguisticDetails
     implements winrt.windows.applicationmodel.search.ISearchQueryLinguisticDetails
 {
-    function new(queryTextAlternatives: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, queryTextCompositionStart: UInt32, queryTextCompositionLength: UInt32);
+    function new(queryTextAlternatives: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, queryTextCompositionStart: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, queryTextCompositionLength: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32);
     overload function QueryTextAlternatives(): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
-    overload function QueryTextCompositionStart(): UInt32;
-    overload function QueryTextCompositionLength(): UInt32;
+    overload function QueryTextCompositionStart(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function QueryTextCompositionLength(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

@@ -10,5 +10,5 @@ extern interface ISceneModeControl extends winrt.windows.foundation.IInspectable
 {
     overload function SupportedModes(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.devices.CaptureSceneMode> /* GenericTypeInstSig */;
     overload function Value(): winrt.windows.media.devices.CaptureSceneMode;
-    function SetValueAsync(sceneMode: ConstRef<winrt.windows.media.devices.CaptureSceneMode>): winrt.windows.foundation.IAsyncAction;
+    function SetValueAsync(sceneMode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.CaptureSceneMode>): winrt.windows.foundation.IAsyncAction;
 }

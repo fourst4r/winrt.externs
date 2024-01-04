@@ -8,7 +8,7 @@ package winrt.windows.graphics.printing;
 @:native("winrt::Windows::Graphics::Printing::IPrintTaskOptions")
 extern interface IPrintTaskOptions extends winrt.windows.foundation.IInspectable
 {
-    overload function Bordering(value: ConstRef<winrt.windows.graphics.printing.PrintBordering>): Void;
+    overload function Bordering(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing.PrintBordering>): Void;
     overload function Bordering(): winrt.windows.graphics.printing.PrintBordering;
-    function GetPagePrintTicket(printPageInfo: ConstRef<winrt.windows.graphics.printing.PrintPageInfo>): winrt.windows.storage.streams.IRandomAccessStream;
+    function GetPagePrintTicket(printPageInfo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing.PrintPageInfo>): winrt.windows.storage.streams.IRandomAccessStream;
 }

@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.background;
 @:native("winrt::Windows::ApplicationModel::Background::ISystemConditionFactory")
 extern interface ISystemConditionFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(conditionType: ConstRef<winrt.windows.applicationmodel.background.SystemConditionType>): winrt.windows.applicationmodel.background.SystemCondition;
+    function Create(conditionType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.background.SystemConditionType>): winrt.windows.applicationmodel.background.SystemCondition;
 }

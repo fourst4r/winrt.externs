@@ -11,13 +11,13 @@ extern class FocusSettings
 {
     function new();
     overload function Mode(): winrt.windows.media.devices.FocusMode;
-    overload function Mode(value: ConstRef<winrt.windows.media.devices.FocusMode>): Void;
+    overload function Mode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.FocusMode>): Void;
     overload function AutoFocusRange(): winrt.windows.media.devices.AutoFocusRange;
-    overload function AutoFocusRange(value: ConstRef<winrt.windows.media.devices.AutoFocusRange>): Void;
-    overload function Value(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
-    overload function Value(value: ConstRef<winrt.windows.foundation.IReference<UInt32> /* temp_GenericTypeInstSig */>): Void;
+    overload function AutoFocusRange(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.AutoFocusRange>): Void;
+    overload function Value(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
+    overload function Value(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* temp_GenericTypeInstSig */>): Void;
     overload function Distance(): winrt.windows.foundation.IReference<winrt.windows.media.devices.ManualFocusDistance> /* GenericTypeInstSig */;
-    overload function Distance(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.media.devices.ManualFocusDistance> /* temp_GenericTypeInstSig */>): Void;
+    overload function Distance(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.media.devices.ManualFocusDistance> /* temp_GenericTypeInstSig */>): Void;
     overload function WaitForFocus(): Bool;
     overload function WaitForFocus(value: Bool): Void;
     overload function DisableDriverFallback(): Bool;

@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.userdataaccounts.systemaccess;
 
 @:include("winrt/Windows.ApplicationModel.UserDataAccounts.SystemAccess.h", true)
 @:native("winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter")
-extern enum abstract DeviceAccountMailAgeFilter(Int32)
+extern enum abstract DeviceAccountMailAgeFilter(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter::All") final All;
     @:native("winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter::Last1Day") final Last1Day;

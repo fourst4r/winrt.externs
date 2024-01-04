@@ -8,12 +8,12 @@ package winrt.windows.networking.networkoperators;
 @:native("winrt::Windows::Networking::NetworkOperators::IMobileBroadbandCellLte")
 extern interface IMobileBroadbandCellLte extends winrt.windows.foundation.IInspectable
 {
-    overload function CellId(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
-    overload function ChannelNumber(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
-    overload function PhysicalCellId(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
+    overload function CellId(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
+    overload function ChannelNumber(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
+    overload function PhysicalCellId(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
     overload function ProviderId(): winrt.HString;
-    overload function ReferenceSignalReceivedPowerInDBm(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
-    overload function ReferenceSignalReceivedQualityInDBm(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
-    overload function TimingAdvanceInBitPeriods(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
-    overload function TrackingAreaCode(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
+    overload function ReferenceSignalReceivedPowerInDBm(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
+    overload function ReferenceSignalReceivedQualityInDBm(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
+    overload function TimingAdvanceInBitPeriods(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
+    overload function TrackingAreaCode(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
 }

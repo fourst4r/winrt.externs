@@ -8,10 +8,10 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::IMediaCue")
 extern interface IMediaCue extends winrt.windows.foundation.IInspectable
 {
-    overload function StartTime(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function StartTime(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function StartTime(): winrt.windows.foundation.TimeSpan;
-    overload function Duration(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function Duration(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function Duration(): winrt.windows.foundation.TimeSpan;
-    overload function Id(value: ConstRef<winrt.HString>): Void;
+    overload function Id(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Id(): winrt.HString;
 }

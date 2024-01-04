@@ -12,8 +12,8 @@ extern interface IBasicVideoEffect extends winrt.windows.foundation.IInspectable
     overload function SupportedMemoryTypes(): winrt.windows.media.effects.MediaMemoryTypes;
     overload function TimeIndependent(): Bool;
     overload function SupportedEncodingProperties(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.mediaproperties.VideoEncodingProperties> /* GenericTypeInstSig */;
-    function SetEncodingProperties(encodingProperties: ConstRef<winrt.windows.media.mediaproperties.VideoEncodingProperties>, device: ConstRef<winrt.windows.graphics.directx.direct3d11.IDirect3DDevice>): Void;
-    function ProcessFrame(context: ConstRef<winrt.windows.media.effects.ProcessVideoFrameContext>): Void;
-    function Close(reason: ConstRef<winrt.windows.media.effects.MediaEffectClosedReason>): Void;
+    function SetEncodingProperties(encodingProperties: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.mediaproperties.VideoEncodingProperties>, device: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.directx.direct3d11.IDirect3DDevice>): Void;
+    function ProcessFrame(context: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.effects.ProcessVideoFrameContext>): Void;
+    function Close(reason: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.effects.MediaEffectClosedReason>): Void;
     function DiscardQueuedFrames(): Void;
 }

@@ -12,6 +12,6 @@ extern interface ITimedTextStyle3 extends winrt.windows.foundation.IInspectable
     overload function Bouten(): winrt.windows.media.core.TimedTextBouten;
     overload function IsTextCombined(): Bool;
     overload function IsTextCombined(value: Bool): Void;
-    overload function FontAngleInDegrees(): Float64;
-    overload function FontAngleInDegrees(value: Float64): Void;
+    overload function FontAngleInDegrees(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function FontAngleInDegrees(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

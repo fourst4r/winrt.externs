@@ -12,7 +12,7 @@ extern class GuidanceRoadSegment
 {
     overload function RoadName(): winrt.HString;
     overload function ShortRoadName(): winrt.HString;
-    overload function SpeedLimit(): Float64;
+    overload function SpeedLimit(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function TravelTime(): winrt.windows.foundation.TimeSpan;
     overload function Path(): winrt.windows.devices.geolocation.Geopath;
     overload function Id(): winrt.HString;

@@ -8,6 +8,6 @@ package winrt.windows.ui.composition;
 @:native("winrt::Windows::UI::Composition::IPathKeyFrameAnimation")
 extern interface IPathKeyFrameAnimation extends winrt.windows.foundation.IInspectable
 {
-    overload function InsertKeyFrame(normalizedProgressKey: Float32, path: ConstRef<winrt.windows.ui.composition.CompositionPath>): Void;
-    overload function InsertKeyFrame(normalizedProgressKey: Float32, path: ConstRef<winrt.windows.ui.composition.CompositionPath>, easingFunction: ConstRef<winrt.windows.ui.composition.CompositionEasingFunction>): Void;
+    overload function InsertKeyFrame(normalizedProgressKey: #if reflaxe.cpp cxx.num. #else cpp. #end Float32, path: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionPath>): Void;
+    overload function InsertKeyFrame(normalizedProgressKey: #if reflaxe.cpp cxx.num. #else cpp. #end Float32, path: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionPath>, easingFunction: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionEasingFunction>): Void;
 }

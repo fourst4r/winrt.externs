@@ -14,13 +14,13 @@ extern class MobileBroadbandSarManager
     overload function IsSarControlledByHardware(): Bool;
     overload function Antennas(): winrt.windows.foundation.collections.IVectorView<winrt.windows.networking.networkoperators.MobileBroadbandAntennaSar> /* GenericTypeInstSig */;
     overload function HysteresisTimerPeriod(): winrt.windows.foundation.TimeSpan;
-    overload function TransmissionStateChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.networking.networkoperators.MobileBroadbandSarManager, winrt.windows.networking.networkoperators.MobileBroadbandTransmissionStateChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function TransmissionStateChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function TransmissionStateChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.networking.networkoperators.MobileBroadbandSarManager, winrt.windows.networking.networkoperators.MobileBroadbandTransmissionStateChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function TransmissionStateChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     function EnableBackoffAsync(): winrt.windows.foundation.IAsyncAction;
     function DisableBackoffAsync(): winrt.windows.foundation.IAsyncAction;
-    function SetConfigurationAsync(antennas: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.networking.networkoperators.MobileBroadbandAntennaSar> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncAction;
+    function SetConfigurationAsync(antennas: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.windows.networking.networkoperators.MobileBroadbandAntennaSar> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncAction;
     function RevertSarToHardwareControlAsync(): winrt.windows.foundation.IAsyncAction;
-    function SetTransmissionStateChangedHysteresisAsync(timerPeriod: ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.foundation.IAsyncAction;
+    function SetTransmissionStateChangedHysteresisAsync(timerPeriod: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): winrt.windows.foundation.IAsyncAction;
     function GetIsTransmittingAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     function StartTransmissionStateMonitoring(): Void;
     function StopTransmissionStateMonitoring(): Void;

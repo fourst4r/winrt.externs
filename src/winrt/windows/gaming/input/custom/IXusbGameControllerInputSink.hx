@@ -8,5 +8,5 @@ package winrt.windows.gaming.input.custom;
 @:native("winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink")
 extern interface IXusbGameControllerInputSink extends winrt.windows.foundation.IInspectable
 {
-    function OnInputReceived(timestamp: UInt64, reportId: UInt8, inputBuffer: winrt.ArrayView<UInt8>): Void;
+    function OnInputReceived(timestamp: #if reflaxe.cpp cxx.num. #else cpp. #end UInt64, reportId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, inputBuffer: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): Void;
 }

@@ -9,8 +9,8 @@ package winrt.windows.devices.lights.effects;
 extern interface ILampArrayUpdateRequestedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function SinceStarted(): winrt.windows.foundation.TimeSpan;
-    function SetColor(desiredColor: ConstRef<winrt.windows.ui.Color>): Void;
-    function SetColorForIndex(lampIndex: Int32, desiredColor: ConstRef<winrt.windows.ui.Color>): Void;
-    function SetSingleColorForIndices(desiredColor: ConstRef<winrt.windows.ui.Color>, lampIndexes: winrt.ArrayView<Int32>): Void;
-    function SetColorsForIndices(desiredColors: winrt.ArrayView<winrt.windows.ui.Color>, lampIndexes: winrt.ArrayView<Int32>): Void;
+    function SetColor(desiredColor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
+    function SetColorForIndex(lampIndex: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, desiredColor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
+    function SetSingleColorForIndices(desiredColor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>, lampIndexes: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end Int32>): Void;
+    function SetColorsForIndices(desiredColors: winrt.ArrayView<winrt.windows.ui.Color>, lampIndexes: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end Int32>): Void;
 }

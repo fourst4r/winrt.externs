@@ -2,7 +2,7 @@ package winrt.microsoft.web.webview2.core;
 
 @:include("winrt/Microsoft.Web.WebView2.Core.h", true)
 @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedKind")
-extern enum abstract CoreWebView2ProcessFailedKind(Int32)
+extern enum abstract CoreWebView2ProcessFailedKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedKind::BrowserProcessExited") final BrowserProcessExited;
     @:native("winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedKind::RenderProcessExited") final RenderProcessExited;

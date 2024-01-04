@@ -8,8 +8,8 @@ package winrt.windows.applicationmodel.userdataaccounts;
 @:native("winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics")
 extern interface IUserDataAccountManagerStatics extends winrt.windows.foundation.IInspectable
 {
-    function RequestStoreAsync(storeAccessType: ConstRef<winrt.windows.applicationmodel.userdataaccounts.UserDataAccountStoreAccessType>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.userdataaccounts.UserDataAccountStore> /* GenericTypeInstSig */;
-    function ShowAddAccountAsync(contentKinds: ConstRef<winrt.windows.applicationmodel.userdataaccounts.UserDataAccountContentKinds>): winrt.windows.foundation.IAsyncOperation<winrt.HString> /* GenericTypeInstSig */;
-    function ShowAccountSettingsAsync(id: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncAction;
-    function ShowAccountErrorResolverAsync(id: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncAction;
+    function RequestStoreAsync(storeAccessType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.userdataaccounts.UserDataAccountStoreAccessType>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.userdataaccounts.UserDataAccountStore> /* GenericTypeInstSig */;
+    function ShowAddAccountAsync(contentKinds: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.userdataaccounts.UserDataAccountContentKinds>): winrt.windows.foundation.IAsyncOperation<winrt.HString> /* GenericTypeInstSig */;
+    function ShowAccountSettingsAsync(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncAction;
+    function ShowAccountErrorResolverAsync(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncAction;
 }

@@ -12,7 +12,7 @@ extern class CoreWebView2SharedBuffer
     implements winrt.windows.foundation.IClosable
 {
     overload function Buffer(): winrt.windows.foundation.IMemoryBufferReference;
-    overload function Size(): UInt64;
+    overload function Size(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
     function OpenStream(): winrt.windows.storage.streams.IRandomAccessStream;
     function Close(): Void;
 }

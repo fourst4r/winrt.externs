@@ -11,6 +11,6 @@ extern class ListBoxItemDataAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IListBoxItemDataAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IScrollItemProvider
 {
-    function new(item: ConstRef<winrt.windows.foundation.IInspectable>, parent: ConstRef<winrt.microsoft.ui.xaml.automation.peers.ListBoxAutomationPeer>);
+    function new(item: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, parent: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.automation.peers.ListBoxAutomationPeer>);
     function ScrollIntoView(): Void;
 }

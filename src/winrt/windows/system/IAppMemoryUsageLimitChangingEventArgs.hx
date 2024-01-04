@@ -8,6 +8,6 @@ package winrt.windows.system;
 @:native("winrt::Windows::System::IAppMemoryUsageLimitChangingEventArgs")
 extern interface IAppMemoryUsageLimitChangingEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function OldLimit(): UInt64;
-    overload function NewLimit(): UInt64;
+    overload function OldLimit(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
+    overload function NewLimit(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

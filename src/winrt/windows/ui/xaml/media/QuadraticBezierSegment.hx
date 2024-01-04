@@ -12,9 +12,9 @@ extern class QuadraticBezierSegment
 {
     function new();
     overload function Point1(): winrt.windows.foundation.Point;
-    overload function Point1(value: ConstRef<winrt.windows.foundation.Point>): Void;
+    overload function Point1(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
     overload function Point2(): winrt.windows.foundation.Point;
-    overload function Point2(value: ConstRef<winrt.windows.foundation.Point>): Void;
+    overload function Point2(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
     overload function Point1Property(): winrt.windows.ui.xaml.DependencyProperty;
     overload function Point2Property(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function Point1Property(): winrt.windows.ui.xaml.DependencyProperty;

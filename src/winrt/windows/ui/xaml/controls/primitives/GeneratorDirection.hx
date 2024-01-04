@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.controls.primitives;
 
 @:include("winrt/Windows.UI.Xaml.Controls.Primitives.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorDirection")
-extern enum abstract GeneratorDirection(Int32)
+extern enum abstract GeneratorDirection(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorDirection::Forward") final Forward;
     @:native("winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorDirection::Backward") final Backward;

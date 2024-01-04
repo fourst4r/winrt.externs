@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.contacts;
 extern interface IContactList3 extends winrt.windows.foundation.IInspectable
 {
     overload function LimitedWriteOperations(): winrt.windows.applicationmodel.contacts.ContactListLimitedWriteOperations;
-    function GetChangeTracker(identity: ConstRef<winrt.HString>): winrt.windows.applicationmodel.contacts.ContactChangeTracker;
+    function GetChangeTracker(identity: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.contacts.ContactChangeTracker;
 }

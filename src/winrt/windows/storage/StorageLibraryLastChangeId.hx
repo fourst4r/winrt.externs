@@ -9,6 +9,6 @@ package winrt.windows.storage;
 extern class StorageLibraryLastChangeId
     implements winrt.windows.storage.IStorageLibraryLastChangeId
 {
-    overload function Unknown(): UInt64;
-    static overload function Unknown(): UInt64;
+    overload function Unknown(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
+    static overload function Unknown(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

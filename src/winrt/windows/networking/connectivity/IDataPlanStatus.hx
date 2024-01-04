@@ -9,9 +9,9 @@ package winrt.windows.networking.connectivity;
 extern interface IDataPlanStatus extends winrt.windows.foundation.IInspectable
 {
     overload function DataPlanUsage(): winrt.windows.networking.connectivity.DataPlanUsage;
-    overload function DataLimitInMegabytes(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
-    overload function InboundBitsPerSecond(): winrt.windows.foundation.IReference<UInt64> /* GenericTypeInstSig */;
-    overload function OutboundBitsPerSecond(): winrt.windows.foundation.IReference<UInt64> /* GenericTypeInstSig */;
+    overload function DataLimitInMegabytes(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
+    overload function InboundBitsPerSecond(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt64> /* GenericTypeInstSig */;
+    overload function OutboundBitsPerSecond(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt64> /* GenericTypeInstSig */;
     overload function NextBillingCycle(): winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* GenericTypeInstSig */;
-    overload function MaxTransferSizeInMegabytes(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
+    overload function MaxTransferSizeInMegabytes(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
 }

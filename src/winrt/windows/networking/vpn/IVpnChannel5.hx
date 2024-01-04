@@ -8,8 +8,8 @@ package winrt.windows.networking.vpn;
 @:native("winrt::Windows::Networking::Vpn::IVpnChannel5")
 extern interface IVpnChannel5 extends winrt.windows.foundation.IInspectable
 {
-    function AppendVpnReceivePacketBuffer(decapsulatedPacketBuffer: ConstRef<winrt.windows.networking.vpn.VpnPacketBuffer>): Void;
-    function AppendVpnSendPacketBuffer(encapsulatedPacketBuffer: ConstRef<winrt.windows.networking.vpn.VpnPacketBuffer>): Void;
+    function AppendVpnReceivePacketBuffer(decapsulatedPacketBuffer: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.vpn.VpnPacketBuffer>): Void;
+    function AppendVpnSendPacketBuffer(encapsulatedPacketBuffer: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.vpn.VpnPacketBuffer>): Void;
     function FlushVpnReceivePacketBuffers(): Void;
     function FlushVpnSendPacketBuffers(): Void;
 }

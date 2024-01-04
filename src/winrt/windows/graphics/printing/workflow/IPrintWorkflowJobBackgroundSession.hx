@@ -9,9 +9,9 @@ package winrt.windows.graphics.printing.workflow;
 extern interface IPrintWorkflowJobBackgroundSession extends winrt.windows.foundation.IInspectable
 {
     overload function Status(): winrt.windows.graphics.printing.workflow.PrintWorkflowSessionStatus;
-    overload function JobStarting(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.graphics.printing.workflow.PrintWorkflowJobBackgroundSession, winrt.windows.graphics.printing.workflow.PrintWorkflowJobStartingEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function JobStarting(token: ConstRef<winrt.EventToken>): Void;
-    overload function PdlModificationRequested(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.graphics.printing.workflow.PrintWorkflowJobBackgroundSession, winrt.windows.graphics.printing.workflow.PrintWorkflowPdlModificationRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function PdlModificationRequested(token: ConstRef<winrt.EventToken>): Void;
+    overload function JobStarting(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.graphics.printing.workflow.PrintWorkflowJobBackgroundSession, winrt.windows.graphics.printing.workflow.PrintWorkflowJobStartingEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function JobStarting(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function PdlModificationRequested(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.graphics.printing.workflow.PrintWorkflowJobBackgroundSession, winrt.windows.graphics.printing.workflow.PrintWorkflowPdlModificationRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function PdlModificationRequested(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     function Start(): Void;
 }

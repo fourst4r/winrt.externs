@@ -11,7 +11,7 @@ extern interface IAccessKeyManagerStatics extends winrt.windows.foundation.IInsp
     overload function IsDisplayModeEnabled(): Bool;
     overload function AreKeyTipsEnabled(): Bool;
     overload function AreKeyTipsEnabled(value: Bool): Void;
-    overload function IsDisplayModeEnabledChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.foundation.IInspectable, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function IsDisplayModeEnabledChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function IsDisplayModeEnabledChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.foundation.IInspectable, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function IsDisplayModeEnabledChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     function ExitDisplayMode(): Void;
 }

@@ -10,5 +10,5 @@ extern interface IWebProviderTokenRequest3 extends winrt.windows.foundation.IIns
 {
     overload function ApplicationPackageFamilyName(): winrt.HString;
     overload function ApplicationProcessName(): winrt.HString;
-    function CheckApplicationForCapabilityAsync(capabilityName: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function CheckApplicationForCapabilityAsync(capabilityName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

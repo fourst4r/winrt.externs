@@ -9,10 +9,10 @@ package winrt.windows.media.devices;
 extern class DigitalWindowCapability
     implements winrt.windows.media.devices.IDigitalWindowCapability
 {
-    overload function Width(): Int32;
-    overload function Height(): Int32;
-    overload function MinScaleValue(): Float64;
-    overload function MaxScaleValue(): Float64;
-    overload function MinScaleValueWithoutUpsampling(): Float64;
+    overload function Width(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Height(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function MinScaleValue(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function MaxScaleValue(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function MinScaleValueWithoutUpsampling(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function NormalizedFieldOfViewLimit(): winrt.windows.foundation.Rect;
 }

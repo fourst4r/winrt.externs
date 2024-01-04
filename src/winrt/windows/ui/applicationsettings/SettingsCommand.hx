@@ -9,13 +9,13 @@ package winrt.windows.ui.applicationsettings;
 extern class SettingsCommand
     implements winrt.windows.ui.popups.IUICommand
 {
-    function new(settingsCommandId: ConstRef<winrt.windows.foundation.IInspectable>, label: ConstRef<winrt.HString>, handler: ConstRef<winrt.windows.ui.popups.UICommandInvokedHandler>);
+    function new(settingsCommandId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, label: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.popups.UICommandInvokedHandler>);
     overload function Label(): winrt.HString;
-    overload function Label(value: ConstRef<winrt.HString>): Void;
+    overload function Label(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Invoked(): winrt.windows.ui.popups.UICommandInvokedHandler;
-    overload function Invoked(value: ConstRef<winrt.windows.ui.popups.UICommandInvokedHandler>): Void;
+    overload function Invoked(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.popups.UICommandInvokedHandler>): Void;
     overload function Id(): winrt.windows.foundation.IInspectable;
-    overload function Id(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Id(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
     overload function AccountsCommand(): winrt.windows.ui.applicationsettings.SettingsCommand;
     static overload function AccountsCommand(): winrt.windows.ui.applicationsettings.SettingsCommand;
 }

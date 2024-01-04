@@ -9,9 +9,9 @@ package winrt.windows.applicationmodel.email;
 extern interface IEmailMessage extends winrt.windows.foundation.IInspectable
 {
     overload function Subject(): winrt.HString;
-    overload function Subject(value: ConstRef<winrt.HString>): Void;
+    overload function Subject(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Body(): winrt.HString;
-    overload function Body(value: ConstRef<winrt.HString>): Void;
+    overload function Body(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function To(): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.email.EmailRecipient> /* GenericTypeInstSig */;
     overload function CC(): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.email.EmailRecipient> /* GenericTypeInstSig */;
     overload function Bcc(): winrt.windows.foundation.collections.IVector<winrt.windows.applicationmodel.email.EmailRecipient> /* GenericTypeInstSig */;

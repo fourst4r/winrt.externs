@@ -2,7 +2,7 @@ package winrt.windows.storage.search;
 
 @:include("winrt/Windows.Storage.Search.h", true)
 @:native("winrt::Windows::Storage::Search::CommonFileQuery")
-extern enum abstract CommonFileQuery(Int32)
+extern enum abstract CommonFileQuery(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Storage::Search::CommonFileQuery::DefaultQuery") final DefaultQuery;
     @:native("winrt::Windows::Storage::Search::CommonFileQuery::OrderByName") final OrderByName;

@@ -8,5 +8,5 @@ package winrt.windows.devices.perception.provider;
 @:native("winrt::Windows::Devices::Perception::Provider::IPerceptionControlGroupFactory")
 extern interface IPerceptionControlGroupFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(ids: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.devices.perception.provider.PerceptionControlGroup;
+    function Create(ids: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.devices.perception.provider.PerceptionControlGroup;
 }

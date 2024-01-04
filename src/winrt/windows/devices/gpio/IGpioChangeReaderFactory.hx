@@ -8,6 +8,6 @@ package winrt.windows.devices.gpio;
 @:native("winrt::Windows::Devices::Gpio::IGpioChangeReaderFactory")
 extern interface IGpioChangeReaderFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(pin: ConstRef<winrt.windows.devices.gpio.GpioPin>): winrt.windows.devices.gpio.GpioChangeReader;
-    function CreateWithCapacity(pin: ConstRef<winrt.windows.devices.gpio.GpioPin>, minCapacity: Int32): winrt.windows.devices.gpio.GpioChangeReader;
+    function Create(pin: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.gpio.GpioPin>): winrt.windows.devices.gpio.GpioChangeReader;
+    function CreateWithCapacity(pin: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.gpio.GpioPin>, minCapacity: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.devices.gpio.GpioChangeReader;
 }

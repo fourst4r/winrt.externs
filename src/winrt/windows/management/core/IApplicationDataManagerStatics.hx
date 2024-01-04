@@ -8,5 +8,5 @@ package winrt.windows.management.core;
 @:native("winrt::Windows::Management::Core::IApplicationDataManagerStatics")
 extern interface IApplicationDataManagerStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateForPackageFamily(packageFamilyName: ConstRef<winrt.HString>): winrt.windows.storage.ApplicationData;
+    function CreateForPackageFamily(packageFamilyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.storage.ApplicationData;
 }

@@ -9,5 +9,5 @@ package winrt.windows.system;
 extern class ProtocolForResultsOperation
     implements winrt.windows.system.IProtocolForResultsOperation
 {
-    function ReportCompleted(data: ConstRef<winrt.windows.foundation.collections.ValueSet>): Void;
+    function ReportCompleted(data: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.ValueSet>): Void;
 }

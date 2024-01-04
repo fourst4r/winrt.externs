@@ -9,5 +9,5 @@ package winrt.windows.ui.composition;
 extern interface ICompositionGradientBrush2 extends winrt.windows.foundation.IInspectable
 {
     overload function MappingMode(): winrt.windows.ui.composition.CompositionMappingMode;
-    overload function MappingMode(value: ConstRef<winrt.windows.ui.composition.CompositionMappingMode>): Void;
+    overload function MappingMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionMappingMode>): Void;
 }

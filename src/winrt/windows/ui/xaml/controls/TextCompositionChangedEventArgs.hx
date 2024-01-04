@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml.controls;
 extern class TextCompositionChangedEventArgs
     implements winrt.windows.ui.xaml.controls.ITextCompositionChangedEventArgs
 {
-    overload function StartIndex(): Int32;
-    overload function Length(): Int32;
+    overload function StartIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Length(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

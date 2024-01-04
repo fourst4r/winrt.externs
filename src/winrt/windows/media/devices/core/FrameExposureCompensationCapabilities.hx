@@ -10,7 +10,7 @@ extern class FrameExposureCompensationCapabilities
     implements winrt.windows.media.devices.core.IFrameExposureCompensationCapabilities
 {
     overload function Supported(): Bool;
-    overload function Min(): Float32;
-    overload function Max(): Float32;
-    overload function Step(): Float32;
+    overload function Min(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Max(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Step(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
 }

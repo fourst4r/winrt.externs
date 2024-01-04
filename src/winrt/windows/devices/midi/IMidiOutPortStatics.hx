@@ -8,6 +8,6 @@ package winrt.windows.devices.midi;
 @:native("winrt::Windows::Devices::Midi::IMidiOutPortStatics")
 extern interface IMidiOutPortStatics extends winrt.windows.foundation.IInspectable
 {
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.midi.IMidiOutPort> /* GenericTypeInstSig */;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.midi.IMidiOutPort> /* GenericTypeInstSig */;
     function GetDeviceSelector(): winrt.HString;
 }

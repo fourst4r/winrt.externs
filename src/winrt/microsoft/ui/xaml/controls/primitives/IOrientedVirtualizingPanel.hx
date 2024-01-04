@@ -12,14 +12,14 @@ extern interface IOrientedVirtualizingPanel extends winrt.windows.foundation.IIn
     overload function CanVerticallyScroll(value: Bool): Void;
     overload function CanHorizontallyScroll(): Bool;
     overload function CanHorizontallyScroll(value: Bool): Void;
-    overload function ExtentWidth(): Float64;
-    overload function ExtentHeight(): Float64;
-    overload function ViewportWidth(): Float64;
-    overload function ViewportHeight(): Float64;
-    overload function HorizontalOffset(): Float64;
-    overload function VerticalOffset(): Float64;
+    overload function ExtentWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ExtentHeight(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ViewportWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ViewportHeight(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function HorizontalOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function VerticalOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function ScrollOwner(): winrt.windows.foundation.IInspectable;
-    overload function ScrollOwner(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function ScrollOwner(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
     function LineUp(): Void;
     function LineDown(): Void;
     function LineLeft(): Void;
@@ -32,7 +32,7 @@ extern interface IOrientedVirtualizingPanel extends winrt.windows.foundation.IIn
     function MouseWheelDown(): Void;
     function MouseWheelLeft(): Void;
     function MouseWheelRight(): Void;
-    function SetHorizontalOffset(offset: Float64): Void;
-    function SetVerticalOffset(offset: Float64): Void;
-    function MakeVisible(visual: ConstRef<winrt.microsoft.ui.xaml.UIElement>, rectangle: ConstRef<winrt.windows.foundation.Rect>): winrt.windows.foundation.Rect;
+    function SetHorizontalOffset(offset: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    function SetVerticalOffset(offset: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    function MakeVisible(visual: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>, rectangle: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Rect>): winrt.windows.foundation.Rect;
 }

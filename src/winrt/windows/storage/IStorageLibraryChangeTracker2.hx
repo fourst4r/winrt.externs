@@ -8,6 +8,6 @@ package winrt.windows.storage;
 @:native("winrt::Windows::Storage::IStorageLibraryChangeTracker2")
 extern interface IStorageLibraryChangeTracker2 extends winrt.windows.foundation.IInspectable
 {
-    function Enable(options: ConstRef<winrt.windows.storage.StorageLibraryChangeTrackerOptions>): Void;
+    function Enable(options: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.StorageLibraryChangeTrackerOptions>): Void;
     function Disable(): Void;
 }

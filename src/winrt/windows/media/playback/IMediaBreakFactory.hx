@@ -8,6 +8,6 @@ package winrt.windows.media.playback;
 @:native("winrt::Windows::Media::Playback::IMediaBreakFactory")
 extern interface IMediaBreakFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(insertionMethod: ConstRef<winrt.windows.media.playback.MediaBreakInsertionMethod>): winrt.windows.media.playback.MediaBreak;
-    function CreateWithPresentationPosition(insertionMethod: ConstRef<winrt.windows.media.playback.MediaBreakInsertionMethod>, presentationPosition: ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.media.playback.MediaBreak;
+    function Create(insertionMethod: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.playback.MediaBreakInsertionMethod>): winrt.windows.media.playback.MediaBreak;
+    function CreateWithPresentationPosition(insertionMethod: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.playback.MediaBreakInsertionMethod>, presentationPosition: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): winrt.windows.media.playback.MediaBreak;
 }

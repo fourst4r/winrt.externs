@@ -12,15 +12,15 @@ extern class ArcSegment
 {
     function new();
     overload function Point(): winrt.windows.foundation.Point;
-    overload function Point(value: ConstRef<winrt.windows.foundation.Point>): Void;
+    overload function Point(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
     overload function Size(): winrt.windows.foundation.Size;
-    overload function Size(value: ConstRef<winrt.windows.foundation.Size>): Void;
-    overload function RotationAngle(): Float64;
-    overload function RotationAngle(value: Float64): Void;
+    overload function Size(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Size>): Void;
+    overload function RotationAngle(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function RotationAngle(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function IsLargeArc(): Bool;
     overload function IsLargeArc(value: Bool): Void;
     overload function SweepDirection(): winrt.microsoft.ui.xaml.media.SweepDirection;
-    overload function SweepDirection(value: ConstRef<winrt.microsoft.ui.xaml.media.SweepDirection>): Void;
+    overload function SweepDirection(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.SweepDirection>): Void;
     overload function PointProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function SizeProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function RotationAngleProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls.primitives;
 extern interface ITickBar extends winrt.windows.foundation.IInspectable
 {
     overload function Fill(): winrt.windows.ui.xaml.media.Brush;
-    overload function Fill(value: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
+    overload function Fill(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Brush>): Void;
 }

@@ -8,5 +8,5 @@ package winrt.windows.data.text;
 @:native("winrt::Windows::Data::Text::ITextReverseConversionGenerator2")
 extern interface ITextReverseConversionGenerator2 extends winrt.windows.foundation.IInspectable
 {
-    function GetPhonemesAsync(input: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.data.text.TextPhoneme> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
+    function GetPhonemesAsync(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.data.text.TextPhoneme> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
 }

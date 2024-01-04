@@ -12,7 +12,7 @@ extern class HyperlinkButton
 {
     function new();
     overload function NavigateUri(): winrt.windows.foundation.Uri;
-    overload function NavigateUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function NavigateUri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function NavigateUriProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function NavigateUriProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
 }

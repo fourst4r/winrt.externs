@@ -15,11 +15,11 @@ extern class BarcodeSymbologyAttributes
     overload function IsCheckDigitTransmissionEnabled(): Bool;
     overload function IsCheckDigitTransmissionEnabled(value: Bool): Void;
     overload function IsCheckDigitTransmissionSupported(): Bool;
-    overload function DecodeLength1(): UInt32;
-    overload function DecodeLength1(value: UInt32): Void;
-    overload function DecodeLength2(): UInt32;
-    overload function DecodeLength2(value: UInt32): Void;
+    overload function DecodeLength1(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function DecodeLength1(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function DecodeLength2(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function DecodeLength2(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
     overload function DecodeLengthKind(): winrt.windows.devices.pointofservice.BarcodeSymbologyDecodeLengthKind;
-    overload function DecodeLengthKind(value: ConstRef<winrt.windows.devices.pointofservice.BarcodeSymbologyDecodeLengthKind>): Void;
+    overload function DecodeLengthKind(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.pointofservice.BarcodeSymbologyDecodeLengthKind>): Void;
     overload function IsDecodeLengthSupported(): Bool;
 }

@@ -8,5 +8,5 @@ package winrt.windows.management.deployment;
 @:native("winrt::Windows::Management::Deployment::IPackageManager8")
 extern interface IPackageManager8 extends winrt.windows.foundation.IInspectable
 {
-    function DeprovisionPackageForAllUsersAsync(packageFamilyName: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperationWithProgress<winrt.windows.management.deployment.DeploymentResult, winrt.windows.management.deployment.DeploymentProgress> /* GenericTypeInstSig */;
+    function DeprovisionPackageForAllUsersAsync(packageFamilyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperationWithProgress<winrt.windows.management.deployment.DeploymentResult, winrt.windows.management.deployment.DeploymentProgress> /* GenericTypeInstSig */;
 }

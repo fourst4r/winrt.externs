@@ -8,5 +8,5 @@ package winrt.windows.web.http;
 @:native("winrt::Windows::Web::Http::IHttpMultipartContent")
 extern interface IHttpMultipartContent extends winrt.windows.foundation.IInspectable
 {
-    function Add(content: ConstRef<winrt.windows.web.http.IHttpContent>): Void;
+    function Add(content: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.IHttpContent>): Void;
 }

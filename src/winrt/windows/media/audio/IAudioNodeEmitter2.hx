@@ -9,5 +9,5 @@ package winrt.windows.media.audio;
 extern interface IAudioNodeEmitter2 extends winrt.windows.foundation.IInspectable
 {
     overload function SpatialAudioModel(): winrt.windows.media.audio.SpatialAudioModel;
-    overload function SpatialAudioModel(value: ConstRef<winrt.windows.media.audio.SpatialAudioModel>): Void;
+    overload function SpatialAudioModel(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.audio.SpatialAudioModel>): Void;
 }

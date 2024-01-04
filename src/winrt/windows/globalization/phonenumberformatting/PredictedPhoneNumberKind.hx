@@ -2,7 +2,7 @@ package winrt.windows.globalization.phonenumberformatting;
 
 @:include("winrt/Windows.Globalization.PhoneNumberFormatting.h", true)
 @:native("winrt::Windows::Globalization::PhoneNumberFormatting::PredictedPhoneNumberKind")
-extern enum abstract PredictedPhoneNumberKind(Int32)
+extern enum abstract PredictedPhoneNumberKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Globalization::PhoneNumberFormatting::PredictedPhoneNumberKind::FixedLine") final FixedLine;
     @:native("winrt::Windows::Globalization::PhoneNumberFormatting::PredictedPhoneNumberKind::Mobile") final Mobile;

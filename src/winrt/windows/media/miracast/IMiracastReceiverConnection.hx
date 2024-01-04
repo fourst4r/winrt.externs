@@ -8,8 +8,8 @@ package winrt.windows.media.miracast;
 @:native("winrt::Windows::Media::Miracast::IMiracastReceiverConnection")
 extern interface IMiracastReceiverConnection extends winrt.windows.foundation.IInspectable
 {
-    overload function Disconnect(reason: ConstRef<winrt.windows.media.miracast.MiracastReceiverDisconnectReason>): Void;
-    overload function Disconnect(reason: ConstRef<winrt.windows.media.miracast.MiracastReceiverDisconnectReason>, message: ConstRef<winrt.HString>): Void;
+    overload function Disconnect(reason: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.miracast.MiracastReceiverDisconnectReason>): Void;
+    overload function Disconnect(reason: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.miracast.MiracastReceiverDisconnectReason>, message: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     function Pause(): Void;
     function PauseAsync(): winrt.windows.foundation.IAsyncAction;
     function Resume(): Void;

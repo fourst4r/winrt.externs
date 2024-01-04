@@ -8,5 +8,5 @@ package winrt.microsoft.ui.composition.interactions;
 @:native("winrt::Microsoft::UI::Composition::Interactions::IVisualInteractionSourceStatics")
 extern interface IVisualInteractionSourceStatics extends winrt.windows.foundation.IInspectable
 {
-    function Create(source: ConstRef<winrt.microsoft.ui.composition.Visual>): winrt.microsoft.ui.composition.interactions.VisualInteractionSource;
+    function Create(source: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.Visual>): winrt.microsoft.ui.composition.interactions.VisualInteractionSource;
 }

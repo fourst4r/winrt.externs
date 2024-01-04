@@ -11,17 +11,17 @@ extern class ControlChannelTrigger
     implements winrt.windows.networking.sockets.IControlChannelTrigger
     implements winrt.windows.networking.sockets.IControlChannelTrigger2
 {
-    function new(channelId: ConstRef<winrt.HString>, serverKeepAliveIntervalInMinutes: UInt32);
+    function new(channelId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, serverKeepAliveIntervalInMinutes: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32);
     @:native("winrt::Windows::Networking::Sockets::ControlChannelTrigger")
-    static overload function make(channelId: ConstRef<winrt.HString>, serverKeepAliveIntervalInMinutes: UInt32, resourceRequestType: ConstRef<winrt.windows.networking.sockets.ControlChannelTriggerResourceType>): winrt.windows.networking.sockets.ControlChannelTrigger;
+    static overload function make(channelId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, serverKeepAliveIntervalInMinutes: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, resourceRequestType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.sockets.ControlChannelTriggerResourceType>): winrt.windows.networking.sockets.ControlChannelTrigger;
     overload function ControlChannelTriggerId(): winrt.HString;
-    overload function ServerKeepAliveIntervalInMinutes(): UInt32;
-    overload function ServerKeepAliveIntervalInMinutes(value: UInt32): Void;
-    overload function CurrentKeepAliveIntervalInMinutes(): UInt32;
+    overload function ServerKeepAliveIntervalInMinutes(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function ServerKeepAliveIntervalInMinutes(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function CurrentKeepAliveIntervalInMinutes(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function TransportObject(): winrt.windows.foundation.IInspectable;
     overload function KeepAliveTrigger(): winrt.windows.applicationmodel.background.IBackgroundTrigger;
     overload function PushNotificationTrigger(): winrt.windows.applicationmodel.background.IBackgroundTrigger;
-    function UsingTransport(transport: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    function UsingTransport(transport: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
     function WaitForPushEnabled(): winrt.windows.networking.sockets.ControlChannelTriggerStatus;
     function DecreaseNetworkKeepAliveInterval(): Void;
     function FlushTransport(): Void;

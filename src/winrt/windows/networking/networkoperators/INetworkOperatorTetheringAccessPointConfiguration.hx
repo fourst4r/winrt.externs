@@ -9,7 +9,7 @@ package winrt.windows.networking.networkoperators;
 extern interface INetworkOperatorTetheringAccessPointConfiguration extends winrt.windows.foundation.IInspectable
 {
     overload function Ssid(): winrt.HString;
-    overload function Ssid(value: ConstRef<winrt.HString>): Void;
+    overload function Ssid(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Passphrase(): winrt.HString;
-    overload function Passphrase(value: ConstRef<winrt.HString>): Void;
+    overload function Passphrase(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

@@ -12,7 +12,7 @@ extern class AutoSuggestBoxTextChangedEventArgs
 {
     function new();
     overload function Reason(): winrt.windows.ui.xaml.controls.AutoSuggestionBoxTextChangeReason;
-    overload function Reason(value: ConstRef<winrt.windows.ui.xaml.controls.AutoSuggestionBoxTextChangeReason>): Void;
+    overload function Reason(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.AutoSuggestionBoxTextChangeReason>): Void;
     function CheckCurrent(): Bool;
     overload function ReasonProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function ReasonProperty(): winrt.windows.ui.xaml.DependencyProperty;

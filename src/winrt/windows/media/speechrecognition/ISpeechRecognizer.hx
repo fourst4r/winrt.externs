@@ -15,8 +15,8 @@ extern interface ISpeechRecognizer extends winrt.windows.foundation.IInspectable
     function CompileConstraintsAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.speechrecognition.SpeechRecognitionCompilationResult> /* GenericTypeInstSig */;
     function RecognizeAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.speechrecognition.SpeechRecognitionResult> /* GenericTypeInstSig */;
     function RecognizeWithUIAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.speechrecognition.SpeechRecognitionResult> /* GenericTypeInstSig */;
-    overload function RecognitionQualityDegrading(speechRecognitionQualityDegradingHandler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.speechrecognition.SpeechRecognizer, winrt.windows.media.speechrecognition.SpeechRecognitionQualityDegradingEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function RecognitionQualityDegrading(cookie: ConstRef<winrt.EventToken>): Void;
-    overload function StateChanged(stateChangedHandler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.speechrecognition.SpeechRecognizer, winrt.windows.media.speechrecognition.SpeechRecognizerStateChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function StateChanged(cookie: ConstRef<winrt.EventToken>): Void;
+    overload function RecognitionQualityDegrading(speechRecognitionQualityDegradingHandler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.speechrecognition.SpeechRecognizer, winrt.windows.media.speechrecognition.SpeechRecognitionQualityDegradingEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function RecognitionQualityDegrading(cookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function StateChanged(stateChangedHandler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.speechrecognition.SpeechRecognizer, winrt.windows.media.speechrecognition.SpeechRecognizerStateChangedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function StateChanged(cookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

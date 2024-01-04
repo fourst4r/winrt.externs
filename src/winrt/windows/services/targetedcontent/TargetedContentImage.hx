@@ -10,7 +10,7 @@ extern class TargetedContentImage
     implements winrt.windows.storage.streams.IRandomAccessStreamReference
     implements winrt.windows.services.targetedcontent.ITargetedContentImage
 {
-    overload function Height(): UInt32;
-    overload function Width(): UInt32;
+    overload function Height(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Width(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     function OpenReadAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.streams.IRandomAccessStreamWithContentType> /* GenericTypeInstSig */;
 }

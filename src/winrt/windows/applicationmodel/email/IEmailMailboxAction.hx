@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.email;
 extern interface IEmailMailboxAction extends winrt.windows.foundation.IInspectable
 {
     overload function Kind(): winrt.windows.applicationmodel.email.EmailMailboxActionKind;
-    overload function ChangeNumber(): UInt64;
+    overload function ChangeNumber(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

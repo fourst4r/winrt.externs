@@ -2,7 +2,7 @@ package winrt.microsoft.windows.system.power;
 
 @:include("winrt/Microsoft.Windows.System.Power.h", true)
 @:native("winrt::Microsoft::Windows::System::Power::EnergySaverStatus")
-extern enum abstract EnergySaverStatus(Int32)
+extern enum abstract EnergySaverStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::Windows::System::Power::EnergySaverStatus::Uninitialized") final Uninitialized;
     @:native("winrt::Microsoft::Windows::System::Power::EnergySaverStatus::Disabled") final Disabled;

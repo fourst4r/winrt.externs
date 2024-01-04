@@ -8,6 +8,6 @@ package winrt.windows.media;
 @:native("winrt::Windows::Media::IMusicDisplayProperties3")
 extern interface IMusicDisplayProperties3 extends winrt.windows.foundation.IInspectable
 {
-    overload function AlbumTrackCount(): UInt32;
-    overload function AlbumTrackCount(value: UInt32): Void;
+    overload function AlbumTrackCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function AlbumTrackCount(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
 }

@@ -10,6 +10,6 @@ extern interface IHingeAngleSensorStatics extends winrt.windows.foundation.IInsp
 {
     function GetDeviceSelector(): winrt.HString;
     function GetDefaultAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.sensors.HingeAngleSensor> /* GenericTypeInstSig */;
-    function GetRelatedToAdjacentPanelsAsync(firstPanelId: ConstRef<winrt.HString>, secondPanelId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.sensors.HingeAngleSensor> /* GenericTypeInstSig */;
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.sensors.HingeAngleSensor> /* GenericTypeInstSig */;
+    function GetRelatedToAdjacentPanelsAsync(firstPanelId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, secondPanelId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.sensors.HingeAngleSensor> /* GenericTypeInstSig */;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.sensors.HingeAngleSensor> /* GenericTypeInstSig */;
 }

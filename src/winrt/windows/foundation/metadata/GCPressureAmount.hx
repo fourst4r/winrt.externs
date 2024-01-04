@@ -2,7 +2,7 @@ package winrt.windows.foundation.metadata;
 
 @:include("winrt/Windows.Foundation.Metadata.h", true)
 @:native("winrt::Windows::Foundation::Metadata::GCPressureAmount")
-extern enum abstract GCPressureAmount(Int32)
+extern enum abstract GCPressureAmount(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Foundation::Metadata::GCPressureAmount::Low") final Low;
     @:native("winrt::Windows::Foundation::Metadata::GCPressureAmount::Medium") final Medium;

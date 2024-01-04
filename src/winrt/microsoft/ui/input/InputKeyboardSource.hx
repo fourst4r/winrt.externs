@@ -10,6 +10,6 @@ extern class InputKeyboardSource
     extends winrt.microsoft.ui.input.InputObject
     implements winrt.microsoft.ui.input.IInputKeyboardSource
 {
-    function GetKeyStateForCurrentThread(virtualKey: ConstRef<winrt.windows.system.VirtualKey>): winrt.windows.ui.core.CoreVirtualKeyStates;
-    static function GetKeyStateForCurrentThread(virtualKey: ConstRef<winrt.windows.system.VirtualKey>): winrt.windows.ui.core.CoreVirtualKeyStates;
+    function GetKeyStateForCurrentThread(virtualKey: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.VirtualKey>): winrt.windows.ui.core.CoreVirtualKeyStates;
+    static function GetKeyStateForCurrentThread(virtualKey: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.VirtualKey>): winrt.windows.ui.core.CoreVirtualKeyStates;
 }

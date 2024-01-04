@@ -8,7 +8,7 @@ package winrt.windows.ai.machinelearning.preview;
 @:native("winrt::Windows::AI::MachineLearning::Preview::ILearningModelBindingPreview")
 extern interface ILearningModelBindingPreview extends winrt.windows.foundation.IInspectable
 {
-    overload function Bind(name: ConstRef<winrt.HString>, value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
-    overload function Bind(name: ConstRef<winrt.HString>, value: ConstRef<winrt.windows.foundation.IInspectable>, metadata: ConstRef<winrt.windows.foundation.collections.IPropertySet>): Void;
+    overload function Bind(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
+    overload function Bind(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, metadata: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IPropertySet>): Void;
     function Clear(): Void;
 }

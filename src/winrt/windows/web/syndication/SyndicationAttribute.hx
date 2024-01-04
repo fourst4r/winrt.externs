@@ -11,11 +11,11 @@ extern class SyndicationAttribute
 {
     function new();
     @:native("winrt::Windows::Web::Syndication::SyndicationAttribute")
-    static overload function make(attributeName: ConstRef<winrt.HString>, attributeNamespace: ConstRef<winrt.HString>, attributeValue: ConstRef<winrt.HString>): winrt.windows.web.syndication.SyndicationAttribute;
+    static overload function make(attributeName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, attributeNamespace: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, attributeValue: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.syndication.SyndicationAttribute;
     overload function Name(): winrt.HString;
-    overload function Name(value: ConstRef<winrt.HString>): Void;
+    overload function Name(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Namespace(): winrt.HString;
-    overload function Namespace(value: ConstRef<winrt.HString>): Void;
+    overload function Namespace(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Value(): winrt.HString;
-    overload function Value(value: ConstRef<winrt.HString>): Void;
+    overload function Value(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

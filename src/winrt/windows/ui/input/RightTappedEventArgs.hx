@@ -12,5 +12,5 @@ extern class RightTappedEventArgs
 {
     overload function PointerDeviceType(): winrt.windows.devices.input.PointerDeviceType;
     overload function Position(): winrt.windows.foundation.Point;
-    overload function ContactCount(): UInt32;
+    overload function ContactCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

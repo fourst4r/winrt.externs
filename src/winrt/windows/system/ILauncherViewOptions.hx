@@ -9,5 +9,5 @@ package winrt.windows.system;
 extern interface ILauncherViewOptions extends winrt.windows.foundation.IInspectable
 {
     overload function DesiredRemainingView(): winrt.windows.ui.viewmanagement.ViewSizePreference;
-    overload function DesiredRemainingView(value: ConstRef<winrt.windows.ui.viewmanagement.ViewSizePreference>): Void;
+    overload function DesiredRemainingView(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.viewmanagement.ViewSizePreference>): Void;
 }

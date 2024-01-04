@@ -8,5 +8,5 @@ package winrt.windows.management.deployment;
 @:native("winrt::Windows::Management::Deployment::IAutoUpdateSettingsOptionsStatics")
 extern interface IAutoUpdateSettingsOptionsStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateFromAppInstallerInfo(appInstallerInfo: ConstRef<winrt.windows.applicationmodel.AppInstallerInfo>): winrt.windows.management.deployment.AutoUpdateSettingsOptions;
+    function CreateFromAppInstallerInfo(appInstallerInfo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.AppInstallerInfo>): winrt.windows.management.deployment.AutoUpdateSettingsOptions;
 }

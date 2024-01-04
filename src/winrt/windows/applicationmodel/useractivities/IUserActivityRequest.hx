@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.useractivities;
 @:native("winrt::Windows::ApplicationModel::UserActivities::IUserActivityRequest")
 extern interface IUserActivityRequest extends winrt.windows.foundation.IInspectable
 {
-    function SetUserActivity(activity: ConstRef<winrt.windows.applicationmodel.useractivities.UserActivity>): Void;
+    function SetUserActivity(activity: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.useractivities.UserActivity>): Void;
 }

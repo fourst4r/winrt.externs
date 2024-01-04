@@ -9,6 +9,6 @@ package winrt.windows.devices.pwm;
 extern interface IPwmControllerStatics3 extends winrt.windows.foundation.IInspectable
 {
     overload function GetDeviceSelector(): winrt.HString;
-    overload function GetDeviceSelector(friendlyName: ConstRef<winrt.HString>): winrt.HString;
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.pwm.PwmController> /* GenericTypeInstSig */;
+    overload function GetDeviceSelector(friendlyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.HString;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.pwm.PwmController> /* GenericTypeInstSig */;
 }

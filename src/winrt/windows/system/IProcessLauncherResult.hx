@@ -8,5 +8,5 @@ package winrt.windows.system;
 @:native("winrt::Windows::System::IProcessLauncherResult")
 extern interface IProcessLauncherResult extends winrt.windows.foundation.IInspectable
 {
-    overload function ExitCode(): UInt32;
+    overload function ExitCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

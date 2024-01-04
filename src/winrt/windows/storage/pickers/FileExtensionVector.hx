@@ -10,17 +10,17 @@ extern class FileExtensionVector
     implements winrt.windows.foundation.collections.IIterable<winrt.HString> /* GenericTypeInstSig */
     implements winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */
 {
-    function GetAt(index: UInt32): winrt.HString;
-    overload function Size(): UInt32;
+    function GetAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.HString;
+    overload function Size(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     function GetView(): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
-    function IndexOf(value: ConstRef<winrt.HString>, index: Ref<UInt32>): Bool;
-    function SetAt(index: UInt32, value: ConstRef<winrt.HString>): Void;
-    function InsertAt(index: UInt32, value: ConstRef<winrt.HString>): Void;
-    function RemoveAt(index: UInt32): Void;
-    function Append(value: ConstRef<winrt.HString>): Void;
+    function IndexOf(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, index: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <#if reflaxe.cpp cxx.num. #else cpp. #end UInt32>): Bool;
+    function SetAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function InsertAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function RemoveAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    function Append(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     function RemoveAtEnd(): Void;
     function Clear(): Void;
-    function GetMany(startIndex: UInt32, items: winrt.ArrayView<winrt.HString>): UInt32;
+    function GetMany(startIndex: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, items: winrt.ArrayView<winrt.HString>): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     function ReplaceAll(items: winrt.ArrayView<winrt.HString>): Void;
     function First(): winrt.windows.foundation.collections.IIterator<winrt.HString> /* GenericTypeInstSig */;
 }

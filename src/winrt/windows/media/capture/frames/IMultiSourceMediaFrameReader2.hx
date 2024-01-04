@@ -8,6 +8,6 @@ package winrt.windows.media.capture.frames;
 @:native("winrt::Windows::Media::Capture::Frames::IMultiSourceMediaFrameReader2")
 extern interface IMultiSourceMediaFrameReader2 extends winrt.windows.foundation.IInspectable
 {
-    overload function AcquisitionMode(value: ConstRef<winrt.windows.media.capture.frames.MediaFrameReaderAcquisitionMode>): Void;
+    overload function AcquisitionMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.capture.frames.MediaFrameReaderAcquisitionMode>): Void;
     overload function AcquisitionMode(): winrt.windows.media.capture.frames.MediaFrameReaderAcquisitionMode;
 }

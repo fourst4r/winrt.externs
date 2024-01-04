@@ -8,6 +8,6 @@ package winrt.windows.data.text;
 @:native("winrt::Windows::Data::Text::ISemanticTextQueryFactory")
 extern interface ISemanticTextQueryFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(aqsFilter: ConstRef<winrt.HString>): winrt.windows.data.text.SemanticTextQuery;
-    function CreateWithLanguage(aqsFilter: ConstRef<winrt.HString>, filterLanguage: ConstRef<winrt.HString>): winrt.windows.data.text.SemanticTextQuery;
+    function Create(aqsFilter: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.data.text.SemanticTextQuery;
+    function CreateWithLanguage(aqsFilter: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, filterLanguage: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.data.text.SemanticTextQuery;
 }

@@ -9,16 +9,16 @@ package winrt.windows.applicationmodel.calls;
 extern class PhoneCallHistoryStore
     implements winrt.windows.applicationmodel.calls.IPhoneCallHistoryStore
 {
-    function GetEntryAsync(callHistoryEntryId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.calls.PhoneCallHistoryEntry> /* GenericTypeInstSig */;
+    function GetEntryAsync(callHistoryEntryId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.calls.PhoneCallHistoryEntry> /* GenericTypeInstSig */;
     overload function GetEntryReader(): winrt.windows.applicationmodel.calls.PhoneCallHistoryEntryReader;
-    overload function GetEntryReader(queryOptions: ConstRef<winrt.windows.applicationmodel.calls.PhoneCallHistoryEntryQueryOptions>): winrt.windows.applicationmodel.calls.PhoneCallHistoryEntryReader;
-    function SaveEntryAsync(callHistoryEntry: ConstRef<winrt.windows.applicationmodel.calls.PhoneCallHistoryEntry>): winrt.windows.foundation.IAsyncAction;
-    function DeleteEntryAsync(callHistoryEntry: ConstRef<winrt.windows.applicationmodel.calls.PhoneCallHistoryEntry>): winrt.windows.foundation.IAsyncAction;
-    function DeleteEntriesAsync(callHistoryEntries: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.applicationmodel.calls.PhoneCallHistoryEntry> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncAction;
-    function MarkEntryAsSeenAsync(callHistoryEntry: ConstRef<winrt.windows.applicationmodel.calls.PhoneCallHistoryEntry>): winrt.windows.foundation.IAsyncAction;
-    function MarkEntriesAsSeenAsync(callHistoryEntries: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.windows.applicationmodel.calls.PhoneCallHistoryEntry> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncAction;
-    function GetUnseenCountAsync(): winrt.windows.foundation.IAsyncOperation<UInt32> /* GenericTypeInstSig */;
+    overload function GetEntryReader(queryOptions: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.calls.PhoneCallHistoryEntryQueryOptions>): winrt.windows.applicationmodel.calls.PhoneCallHistoryEntryReader;
+    function SaveEntryAsync(callHistoryEntry: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.calls.PhoneCallHistoryEntry>): winrt.windows.foundation.IAsyncAction;
+    function DeleteEntryAsync(callHistoryEntry: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.calls.PhoneCallHistoryEntry>): winrt.windows.foundation.IAsyncAction;
+    function DeleteEntriesAsync(callHistoryEntries: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.windows.applicationmodel.calls.PhoneCallHistoryEntry> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncAction;
+    function MarkEntryAsSeenAsync(callHistoryEntry: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.calls.PhoneCallHistoryEntry>): winrt.windows.foundation.IAsyncAction;
+    function MarkEntriesAsSeenAsync(callHistoryEntries: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.windows.applicationmodel.calls.PhoneCallHistoryEntry> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncAction;
+    function GetUnseenCountAsync(): winrt.windows.foundation.IAsyncOperation<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
     function MarkAllAsSeenAsync(): winrt.windows.foundation.IAsyncAction;
-    function GetSourcesUnseenCountAsync(sourceIds: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<UInt32> /* GenericTypeInstSig */;
-    function MarkSourcesAsSeenAsync(sourceIds: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncAction;
+    function GetSourcesUnseenCountAsync(sourceIds: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
+    function MarkSourcesAsSeenAsync(sourceIds: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncAction;
 }

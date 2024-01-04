@@ -8,10 +8,10 @@ package winrt.windows.devices.sensors;
 @:native("winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtension")
 extern interface IHumanPresenceSensorExtension extends winrt.windows.foundation.IInspectable
 {
-    function Initialize(deviceInterface: ConstRef<winrt.HString>): Void;
+    function Initialize(deviceInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     function Start(): Void;
-    function ProcessReading(reading: ConstRef<winrt.windows.devices.sensors.HumanPresenceSensorReading>): winrt.windows.devices.sensors.HumanPresenceSensorReadingUpdate;
-    function ProcessReadingTimeoutExpired(reading: ConstRef<winrt.windows.devices.sensors.HumanPresenceSensorReading>): Void;
+    function ProcessReading(reading: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.sensors.HumanPresenceSensorReading>): winrt.windows.devices.sensors.HumanPresenceSensorReadingUpdate;
+    function ProcessReadingTimeoutExpired(reading: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.sensors.HumanPresenceSensorReading>): Void;
     function Stop(): Void;
     function Uninitialize(): Void;
     function Reset(): Void;

@@ -12,6 +12,6 @@ extern class PenDevice
 {
     overload function PenId(): winrt.Guid;
     overload function SimpleHapticsController(): winrt.windows.devices.haptics.SimpleHapticsController;
-    function GetFromPointerId(pointerId: UInt32): winrt.windows.devices.input.PenDevice;
-    static function GetFromPointerId(pointerId: UInt32): winrt.windows.devices.input.PenDevice;
+    function GetFromPointerId(pointerId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.devices.input.PenDevice;
+    static function GetFromPointerId(pointerId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.devices.input.PenDevice;
 }

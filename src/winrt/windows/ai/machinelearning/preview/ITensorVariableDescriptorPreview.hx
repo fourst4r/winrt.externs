@@ -9,5 +9,5 @@ package winrt.windows.ai.machinelearning.preview;
 extern interface ITensorVariableDescriptorPreview extends winrt.windows.foundation.IInspectable
 {
     overload function DataType(): winrt.windows.ai.machinelearning.preview.FeatureElementKindPreview;
-    overload function Shape(): winrt.windows.foundation.collections.IIterable<Int64> /* GenericTypeInstSig */;
+    overload function Shape(): winrt.windows.foundation.collections.IIterable<#if reflaxe.cpp cxx.num. #else cpp. #end Int64> /* GenericTypeInstSig */;
 }

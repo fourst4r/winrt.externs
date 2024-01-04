@@ -9,5 +9,5 @@ package winrt.windows.perception.spatial;
 extern interface ISpatialEntityStoreStatics extends winrt.windows.foundation.IInspectable
 {
     overload function IsSupported(): Bool;
-    function TryGet(session: ConstRef<winrt.windows.system.remotesystems.RemoteSystemSession>): winrt.windows.perception.spatial.SpatialEntityStore;
+    function TryGet(session: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.remotesystems.RemoteSystemSession>): winrt.windows.perception.spatial.SpatialEntityStore;
 }

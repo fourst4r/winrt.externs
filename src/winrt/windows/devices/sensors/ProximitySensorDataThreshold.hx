@@ -9,5 +9,5 @@ package winrt.windows.devices.sensors;
 extern class ProximitySensorDataThreshold
     implements winrt.windows.devices.sensors.ISensorDataThreshold
 {
-    /* explicit */ function new(sensor: ConstRef<winrt.windows.devices.sensors.ProximitySensor>);
+    /* explicit */ function new(sensor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.sensors.ProximitySensor>);
 }

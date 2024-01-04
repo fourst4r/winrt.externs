@@ -17,5 +17,5 @@ extern interface IFocusControl2 extends winrt.windows.foundation.IInspectable
     overload function FocusState(): winrt.windows.media.devices.MediaCaptureFocusState;
     function UnlockAsync(): winrt.windows.foundation.IAsyncAction;
     function LockAsync(): winrt.windows.foundation.IAsyncAction;
-    function Configure(settings: ConstRef<winrt.windows.media.devices.FocusSettings>): Void;
+    function Configure(settings: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.FocusSettings>): Void;
 }

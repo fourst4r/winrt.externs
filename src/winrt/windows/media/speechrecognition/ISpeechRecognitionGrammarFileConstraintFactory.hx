@@ -8,6 +8,6 @@ package winrt.windows.media.speechrecognition;
 @:native("winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionGrammarFileConstraintFactory")
 extern interface ISpeechRecognitionGrammarFileConstraintFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(file: ConstRef<winrt.windows.storage.StorageFile>): winrt.windows.media.speechrecognition.SpeechRecognitionGrammarFileConstraint;
-    function CreateWithTag(file: ConstRef<winrt.windows.storage.StorageFile>, tag: ConstRef<winrt.HString>): winrt.windows.media.speechrecognition.SpeechRecognitionGrammarFileConstraint;
+    function Create(file: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.StorageFile>): winrt.windows.media.speechrecognition.SpeechRecognitionGrammarFileConstraint;
+    function CreateWithTag(file: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.StorageFile>, tag: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.media.speechrecognition.SpeechRecognitionGrammarFileConstraint;
 }

@@ -4,5 +4,5 @@ package winrt.windows.applicationmodel.chat;
 @:native("winrt::Windows::ApplicationModel::Chat::ChatMessageBlocking")
 extern class ChatMessageBlocking
 {
-    static function MarkMessageAsBlockedAsync(localChatMessageId: ConstRef<winrt.HString>, blocked: Bool): winrt.windows.foundation.IAsyncAction;
+    static function MarkMessageAsBlockedAsync(localChatMessageId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, blocked: Bool): winrt.windows.foundation.IAsyncAction;
 }

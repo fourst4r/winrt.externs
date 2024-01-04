@@ -8,5 +8,5 @@ package winrt.windows.ui.composition;
 @:native("winrt::Windows::UI::Composition::ICompositionEffectSourceParameterFactory")
 extern interface ICompositionEffectSourceParameterFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(name: ConstRef<winrt.HString>): winrt.windows.ui.composition.CompositionEffectSourceParameter;
+    function Create(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.composition.CompositionEffectSourceParameter;
 }

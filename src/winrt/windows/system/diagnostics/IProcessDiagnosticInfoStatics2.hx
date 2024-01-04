@@ -8,5 +8,5 @@ package winrt.windows.system.diagnostics;
 @:native("winrt::Windows::System::Diagnostics::IProcessDiagnosticInfoStatics2")
 extern interface IProcessDiagnosticInfoStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function TryGetForProcessId(processId: UInt32): winrt.windows.system.diagnostics.ProcessDiagnosticInfo;
+    function TryGetForProcessId(processId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.system.diagnostics.ProcessDiagnosticInfo;
 }

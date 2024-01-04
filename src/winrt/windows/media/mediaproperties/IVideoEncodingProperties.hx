@@ -8,12 +8,12 @@ package winrt.windows.media.mediaproperties;
 @:native("winrt::Windows::Media::MediaProperties::IVideoEncodingProperties")
 extern interface IVideoEncodingProperties extends winrt.windows.foundation.IInspectable
 {
-    overload function Bitrate(value: UInt32): Void;
-    overload function Bitrate(): UInt32;
-    overload function Width(value: UInt32): Void;
-    overload function Width(): UInt32;
-    overload function Height(value: UInt32): Void;
-    overload function Height(): UInt32;
+    overload function Bitrate(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function Bitrate(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Width(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function Width(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Height(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function Height(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function FrameRate(): winrt.windows.media.mediaproperties.MediaRatio;
     overload function PixelAspectRatio(): winrt.windows.media.mediaproperties.MediaRatio;
 }

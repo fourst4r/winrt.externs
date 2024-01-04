@@ -9,5 +9,5 @@ package winrt.windows.graphics.printing3d;
 extern class Print3DTaskRequest
     implements winrt.windows.graphics.printing3d.IPrint3DTaskRequest
 {
-    function CreateTask(title: ConstRef<winrt.HString>, printerId: ConstRef<winrt.HString>, handler: ConstRef<winrt.windows.graphics.printing3d.Print3DTaskSourceRequestedHandler>): winrt.windows.graphics.printing3d.Print3DTask;
+    function CreateTask(title: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, printerId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing3d.Print3DTaskSourceRequestedHandler>): winrt.windows.graphics.printing3d.Print3DTask;
 }

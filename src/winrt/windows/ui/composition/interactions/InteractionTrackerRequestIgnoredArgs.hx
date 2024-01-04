@@ -9,5 +9,5 @@ package winrt.windows.ui.composition.interactions;
 extern class InteractionTrackerRequestIgnoredArgs
     implements winrt.windows.ui.composition.interactions.IInteractionTrackerRequestIgnoredArgs
 {
-    overload function RequestId(): Int32;
+    overload function RequestId(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

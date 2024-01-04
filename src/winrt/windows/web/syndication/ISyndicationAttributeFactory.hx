@@ -8,5 +8,5 @@ package winrt.windows.web.syndication;
 @:native("winrt::Windows::Web::Syndication::ISyndicationAttributeFactory")
 extern interface ISyndicationAttributeFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateSyndicationAttribute(attributeName: ConstRef<winrt.HString>, attributeNamespace: ConstRef<winrt.HString>, attributeValue: ConstRef<winrt.HString>): winrt.windows.web.syndication.SyndicationAttribute;
+    function CreateSyndicationAttribute(attributeName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, attributeNamespace: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, attributeValue: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.syndication.SyndicationAttribute;
 }

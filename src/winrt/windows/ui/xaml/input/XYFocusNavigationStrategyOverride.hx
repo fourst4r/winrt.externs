@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.input;
 
 @:include("winrt/Windows.UI.Xaml.Input.h", true)
 @:native("winrt::Windows::UI::Xaml::Input::XYFocusNavigationStrategyOverride")
-extern enum abstract XYFocusNavigationStrategyOverride(Int32)
+extern enum abstract XYFocusNavigationStrategyOverride(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Input::XYFocusNavigationStrategyOverride::None") final None;
     @:native("winrt::Windows::UI::Xaml::Input::XYFocusNavigationStrategyOverride::Auto") final Auto;

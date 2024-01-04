@@ -9,6 +9,6 @@ package winrt.windows.media.protection;
 extern class MediaProtectionPMPServer
     implements winrt.windows.media.protection.IMediaProtectionPMPServer
 {
-    /* explicit */ function new(pProperties: ConstRef<winrt.windows.foundation.collections.IPropertySet>);
+    /* explicit */ function new(pProperties: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IPropertySet>);
     overload function Properties(): winrt.windows.foundation.collections.IPropertySet;
 }

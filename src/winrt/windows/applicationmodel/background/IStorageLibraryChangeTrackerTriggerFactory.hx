@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.background;
 @:native("winrt::Windows::ApplicationModel::Background::IStorageLibraryChangeTrackerTriggerFactory")
 extern interface IStorageLibraryChangeTrackerTriggerFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(tracker: ConstRef<winrt.windows.storage.StorageLibraryChangeTracker>): winrt.windows.applicationmodel.background.StorageLibraryChangeTrackerTrigger;
+    function Create(tracker: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.StorageLibraryChangeTracker>): winrt.windows.applicationmodel.background.StorageLibraryChangeTrackerTrigger;
 }

@@ -2,7 +2,7 @@ package winrt.windows.data.text;
 
 @:include("winrt/Windows.Data.Text.h", true)
 @:native("winrt::Windows::Data::Text::UnicodeGeneralCategory")
-extern enum abstract UnicodeGeneralCategory(Int32)
+extern enum abstract UnicodeGeneralCategory(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Data::Text::UnicodeGeneralCategory::UppercaseLetter") final UppercaseLetter;
     @:native("winrt::Windows::Data::Text::UnicodeGeneralCategory::LowercaseLetter") final LowercaseLetter;

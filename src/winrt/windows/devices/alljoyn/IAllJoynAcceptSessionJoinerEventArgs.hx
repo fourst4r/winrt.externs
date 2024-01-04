@@ -9,7 +9,7 @@ package winrt.windows.devices.alljoyn;
 extern interface IAllJoynAcceptSessionJoinerEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function UniqueName(): winrt.HString;
-    overload function SessionPort(): UInt16;
+    overload function SessionPort(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
     overload function TrafficType(): winrt.windows.devices.alljoyn.AllJoynTrafficType;
     overload function SamePhysicalNode(): Bool;
     overload function SameNetwork(): Bool;

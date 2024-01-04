@@ -9,12 +9,12 @@ package winrt.windows.graphics.display;
 extern class BrightnessOverrideSettings
     implements winrt.windows.graphics.display.IBrightnessOverrideSettings
 {
-    overload function DesiredLevel(): Float64;
-    overload function DesiredNits(): Float32;
-    function CreateFromLevel(level: Float64): winrt.windows.graphics.display.BrightnessOverrideSettings;
-    function CreateFromNits(nits: Float32): winrt.windows.graphics.display.BrightnessOverrideSettings;
-    function CreateFromDisplayBrightnessOverrideScenario(overrideScenario: ConstRef<winrt.windows.graphics.display.DisplayBrightnessOverrideScenario>): winrt.windows.graphics.display.BrightnessOverrideSettings;
-    static function CreateFromLevel(level: Float64): winrt.windows.graphics.display.BrightnessOverrideSettings;
-    static function CreateFromNits(nits: Float32): winrt.windows.graphics.display.BrightnessOverrideSettings;
-    static function CreateFromDisplayBrightnessOverrideScenario(overrideScenario: ConstRef<winrt.windows.graphics.display.DisplayBrightnessOverrideScenario>): winrt.windows.graphics.display.BrightnessOverrideSettings;
+    overload function DesiredLevel(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function DesiredNits(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    function CreateFromLevel(level: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.windows.graphics.display.BrightnessOverrideSettings;
+    function CreateFromNits(nits: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): winrt.windows.graphics.display.BrightnessOverrideSettings;
+    function CreateFromDisplayBrightnessOverrideScenario(overrideScenario: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.display.DisplayBrightnessOverrideScenario>): winrt.windows.graphics.display.BrightnessOverrideSettings;
+    static function CreateFromLevel(level: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.windows.graphics.display.BrightnessOverrideSettings;
+    static function CreateFromNits(nits: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): winrt.windows.graphics.display.BrightnessOverrideSettings;
+    static function CreateFromDisplayBrightnessOverrideScenario(overrideScenario: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.display.DisplayBrightnessOverrideScenario>): winrt.windows.graphics.display.BrightnessOverrideSettings;
 }

@@ -8,5 +8,5 @@ package winrt.windows.graphics.printing3d;
 @:native("winrt::Windows::Graphics::Printing3D::IPrint3DTaskRequest")
 extern interface IPrint3DTaskRequest extends winrt.windows.foundation.IInspectable
 {
-    function CreateTask(title: ConstRef<winrt.HString>, printerId: ConstRef<winrt.HString>, handler: ConstRef<winrt.windows.graphics.printing3d.Print3DTaskSourceRequestedHandler>): winrt.windows.graphics.printing3d.Print3DTask;
+    function CreateTask(title: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, printerId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing3d.Print3DTaskSourceRequestedHandler>): winrt.windows.graphics.printing3d.Print3DTask;
 }

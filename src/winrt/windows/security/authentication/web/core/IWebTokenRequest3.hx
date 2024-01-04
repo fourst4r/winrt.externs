@@ -9,5 +9,5 @@ package winrt.windows.security.authentication.web.core;
 extern interface IWebTokenRequest3 extends winrt.windows.foundation.IInspectable
 {
     overload function CorrelationId(): winrt.HString;
-    overload function CorrelationId(value: ConstRef<winrt.HString>): Void;
+    overload function CorrelationId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

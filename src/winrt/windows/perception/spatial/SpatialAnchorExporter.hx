@@ -9,8 +9,8 @@ package winrt.windows.perception.spatial;
 extern class SpatialAnchorExporter
     implements winrt.windows.perception.spatial.ISpatialAnchorExporter
 {
-    function GetAnchorExportSufficiencyAsync(anchor: ConstRef<winrt.windows.perception.spatial.SpatialAnchor>, purpose: ConstRef<winrt.windows.perception.spatial.SpatialAnchorExportPurpose>): winrt.windows.foundation.IAsyncOperation<winrt.windows.perception.spatial.SpatialAnchorExportSufficiency> /* GenericTypeInstSig */;
-    function TryExportAnchorAsync(anchor: ConstRef<winrt.windows.perception.spatial.SpatialAnchor>, purpose: ConstRef<winrt.windows.perception.spatial.SpatialAnchorExportPurpose>, stream: ConstRef<winrt.windows.storage.streams.IOutputStream>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function GetAnchorExportSufficiencyAsync(anchor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialAnchor>, purpose: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialAnchorExportPurpose>): winrt.windows.foundation.IAsyncOperation<winrt.windows.perception.spatial.SpatialAnchorExportSufficiency> /* GenericTypeInstSig */;
+    function TryExportAnchorAsync(anchor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialAnchor>, purpose: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialAnchorExportPurpose>, stream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IOutputStream>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     function GetDefault(): winrt.windows.perception.spatial.SpatialAnchorExporter;
     function RequestAccessAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.perception.spatial.SpatialPerceptionAccessStatus> /* GenericTypeInstSig */;
     static function GetDefault(): winrt.windows.perception.spatial.SpatialAnchorExporter;

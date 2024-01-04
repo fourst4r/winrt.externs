@@ -12,6 +12,6 @@ extern class GattClientNotificationResult
 {
     overload function SubscribedClient(): winrt.windows.devices.bluetooth.genericattributeprofile.GattSubscribedClient;
     overload function Status(): winrt.windows.devices.bluetooth.genericattributeprofile.GattCommunicationStatus;
-    overload function ProtocolError(): winrt.windows.foundation.IReference<UInt8> /* GenericTypeInstSig */;
-    overload function BytesSent(): UInt16;
+    overload function ProtocolError(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8> /* GenericTypeInstSig */;
+    overload function BytesSent(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
 }

@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.resources;
 @:native("winrt::Windows::UI::Xaml::Resources::ICustomXamlResourceLoaderOverrides")
 extern interface ICustomXamlResourceLoaderOverrides extends winrt.windows.foundation.IInspectable
 {
-    function GetResource(resourceId: ConstRef<winrt.HString>, objectType: ConstRef<winrt.HString>, propertyName: ConstRef<winrt.HString>, propertyType: ConstRef<winrt.HString>): winrt.windows.foundation.IInspectable;
+    function GetResource(resourceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, objectType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, propertyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, propertyType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IInspectable;
 }

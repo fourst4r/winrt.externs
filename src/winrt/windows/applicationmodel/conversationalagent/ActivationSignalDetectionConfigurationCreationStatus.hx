@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.conversationalagent;
 
 @:include("winrt/Windows.ApplicationModel.ConversationalAgent.h", true)
 @:native("winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationStatus")
-extern enum abstract ActivationSignalDetectionConfigurationCreationStatus(Int32)
+extern enum abstract ActivationSignalDetectionConfigurationCreationStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationStatus::Success") final Success;
     @:native("winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationStatus::SignalIdNotAvailable") final SignalIdNotAvailable;

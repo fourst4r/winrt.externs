@@ -10,15 +10,15 @@ extern class HttpChallengeHeaderValue
     implements winrt.windows.web.http.headers.IHttpChallengeHeaderValue
     implements winrt.windows.foundation.IStringable
 {
-    /* explicit */ function new(scheme: ConstRef<winrt.HString>);
+    /* explicit */ function new(scheme: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     @:native("winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue")
-    static overload function make(scheme: ConstRef<winrt.HString>, token: ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpChallengeHeaderValue;
+    static overload function make(scheme: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.http.headers.HttpChallengeHeaderValue;
     overload function Parameters(): winrt.windows.foundation.collections.IVector<winrt.windows.web.http.headers.HttpNameValueHeaderValue> /* GenericTypeInstSig */;
     overload function Scheme(): winrt.HString;
     overload function Token(): winrt.HString;
     function ToString(): winrt.HString;
-    function Parse(input: ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpChallengeHeaderValue;
-    function TryParse(input: ConstRef<winrt.HString>, challengeHeaderValue: Ref<winrt.windows.web.http.headers.HttpChallengeHeaderValue>): Bool;
-    static function Parse(input: ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpChallengeHeaderValue;
-    static function TryParse(input: ConstRef<winrt.HString>, challengeHeaderValue: Ref<winrt.windows.web.http.headers.HttpChallengeHeaderValue>): Bool;
+    function Parse(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.http.headers.HttpChallengeHeaderValue;
+    function TryParse(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, challengeHeaderValue: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.web.http.headers.HttpChallengeHeaderValue>): Bool;
+    static function Parse(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.http.headers.HttpChallengeHeaderValue;
+    static function TryParse(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, challengeHeaderValue: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.web.http.headers.HttpChallengeHeaderValue>): Bool;
 }

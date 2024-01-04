@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml.controls;
 extern interface INavigationViewItem extends winrt.windows.foundation.IInspectable
 {
     overload function Icon(): winrt.windows.ui.xaml.controls.IconElement;
-    overload function Icon(value: ConstRef<winrt.windows.ui.xaml.controls.IconElement>): Void;
-    overload function CompactPaneLength(): Float64;
+    overload function Icon(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.IconElement>): Void;
+    overload function CompactPaneLength(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

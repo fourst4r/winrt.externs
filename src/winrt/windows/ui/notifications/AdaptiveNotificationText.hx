@@ -12,9 +12,9 @@ extern class AdaptiveNotificationText
 {
     function new();
     overload function Text(): winrt.HString;
-    overload function Text(value: ConstRef<winrt.HString>): Void;
+    overload function Text(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Language(): winrt.HString;
-    overload function Language(value: ConstRef<winrt.HString>): Void;
+    overload function Language(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Kind(): winrt.windows.ui.notifications.AdaptiveNotificationContentKind;
     overload function Hints(): winrt.windows.foundation.collections.IMap<winrt.HString, winrt.HString> /* GenericTypeInstSig */;
 }

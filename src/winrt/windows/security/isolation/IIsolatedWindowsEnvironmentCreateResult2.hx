@@ -8,5 +8,5 @@ package winrt.windows.security.isolation;
 @:native("winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult2")
 extern interface IIsolatedWindowsEnvironmentCreateResult2 extends winrt.windows.foundation.IInspectable
 {
-    function ChangeCreationPriority(priority: ConstRef<winrt.windows.security.isolation.IsolatedWindowsEnvironmentCreationPriority>): Void;
+    function ChangeCreationPriority(priority: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.isolation.IsolatedWindowsEnvironmentCreationPriority>): Void;
 }

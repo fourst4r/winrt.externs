@@ -10,5 +10,5 @@ extern class BooleanKeyFrameAnimation
     extends winrt.windows.ui.composition.KeyFrameAnimation
     implements winrt.windows.ui.composition.IBooleanKeyFrameAnimation
 {
-    function InsertKeyFrame(normalizedProgressKey: Float32, value: Bool): Void;
+    function InsertKeyFrame(normalizedProgressKey: #if reflaxe.cpp cxx.num. #else cpp. #end Float32, value: Bool): Void;
 }

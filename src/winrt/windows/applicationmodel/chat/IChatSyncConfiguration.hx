@@ -11,5 +11,5 @@ extern interface IChatSyncConfiguration extends winrt.windows.foundation.IInspec
     overload function IsSyncEnabled(): Bool;
     overload function IsSyncEnabled(value: Bool): Void;
     overload function RestoreHistorySpan(): winrt.windows.applicationmodel.chat.ChatRestoreHistorySpan;
-    overload function RestoreHistorySpan(value: ConstRef<winrt.windows.applicationmodel.chat.ChatRestoreHistorySpan>): Void;
+    overload function RestoreHistorySpan(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.chat.ChatRestoreHistorySpan>): Void;
 }

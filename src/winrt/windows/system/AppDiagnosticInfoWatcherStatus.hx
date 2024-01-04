@@ -2,7 +2,7 @@ package winrt.windows.system;
 
 @:include("winrt/Windows.System.h", true)
 @:native("winrt::Windows::System::AppDiagnosticInfoWatcherStatus")
-extern enum abstract AppDiagnosticInfoWatcherStatus(Int32)
+extern enum abstract AppDiagnosticInfoWatcherStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::System::AppDiagnosticInfoWatcherStatus::Created") final Created;
     @:native("winrt::Windows::System::AppDiagnosticInfoWatcherStatus::Started") final Started;

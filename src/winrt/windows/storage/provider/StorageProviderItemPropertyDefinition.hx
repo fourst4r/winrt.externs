@@ -10,8 +10,8 @@ extern class StorageProviderItemPropertyDefinition
     implements winrt.windows.storage.provider.IStorageProviderItemPropertyDefinition
 {
     function new();
-    overload function Id(): Int32;
-    overload function Id(value: Int32): Void;
+    overload function Id(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Id(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function DisplayNameResource(): winrt.HString;
-    overload function DisplayNameResource(value: ConstRef<winrt.HString>): Void;
+    overload function DisplayNameResource(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

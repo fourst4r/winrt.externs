@@ -9,11 +9,11 @@ package winrt.microsoft.ui.xaml.controls;
 extern interface ISplitButton extends winrt.windows.foundation.IInspectable
 {
     overload function Flyout(): winrt.microsoft.ui.xaml.controls.primitives.FlyoutBase;
-    overload function Flyout(value: ConstRef<winrt.microsoft.ui.xaml.controls.primitives.FlyoutBase>): Void;
+    overload function Flyout(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.primitives.FlyoutBase>): Void;
     overload function Command(): winrt.microsoft.ui.xaml.input.ICommand;
-    overload function Command(value: ConstRef<winrt.microsoft.ui.xaml.input.ICommand>): Void;
+    overload function Command(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.ICommand>): Void;
     overload function CommandParameter(): winrt.windows.foundation.IInspectable;
-    overload function CommandParameter(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
-    overload function Click(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.microsoft.ui.xaml.controls.SplitButton, winrt.microsoft.ui.xaml.controls.SplitButtonClickEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Click(token: ConstRef<winrt.EventToken>): Void;
+    overload function CommandParameter(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
+    overload function Click(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.microsoft.ui.xaml.controls.SplitButton, winrt.microsoft.ui.xaml.controls.SplitButtonClickEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Click(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

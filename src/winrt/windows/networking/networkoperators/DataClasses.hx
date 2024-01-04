@@ -2,7 +2,7 @@ package winrt.windows.networking.networkoperators;
 
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::DataClasses")
-extern enum abstract DataClasses(UInt32)
+extern enum abstract DataClasses(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::Networking::NetworkOperators::DataClasses::None") final None;
     @:native("winrt::Windows::Networking::NetworkOperators::DataClasses::Gprs") final Gprs;

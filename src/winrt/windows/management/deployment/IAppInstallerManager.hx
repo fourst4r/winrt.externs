@@ -8,7 +8,7 @@ package winrt.windows.management.deployment;
 @:native("winrt::Windows::Management::Deployment::IAppInstallerManager")
 extern interface IAppInstallerManager extends winrt.windows.foundation.IInspectable
 {
-    function SetAutoUpdateSettings(packageFamilyName: ConstRef<winrt.HString>, appInstallerInfo: ConstRef<winrt.windows.management.deployment.AutoUpdateSettingsOptions>): Void;
-    function ClearAutoUpdateSettings(packageFamilyName: ConstRef<winrt.HString>): Void;
-    function PauseAutoUpdatesUntil(packageFamilyName: ConstRef<winrt.HString>, dateTime: ConstRef<winrt.windows.foundation.DateTime>): Void;
+    function SetAutoUpdateSettings(packageFamilyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, appInstallerInfo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.management.deployment.AutoUpdateSettingsOptions>): Void;
+    function ClearAutoUpdateSettings(packageFamilyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function PauseAutoUpdatesUntil(packageFamilyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, dateTime: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>): Void;
 }

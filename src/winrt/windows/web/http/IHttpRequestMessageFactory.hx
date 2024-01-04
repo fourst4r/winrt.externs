@@ -8,5 +8,5 @@ package winrt.windows.web.http;
 @:native("winrt::Windows::Web::Http::IHttpRequestMessageFactory")
 extern interface IHttpRequestMessageFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(method: ConstRef<winrt.windows.web.http.HttpMethod>, uri: ConstRef<winrt.windows.foundation.Uri>): winrt.windows.web.http.HttpRequestMessage;
+    function Create(method: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.HttpMethod>, uri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): winrt.windows.web.http.HttpRequestMessage;
 }

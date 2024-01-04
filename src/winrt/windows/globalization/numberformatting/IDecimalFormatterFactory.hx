@@ -8,5 +8,5 @@ package winrt.windows.globalization.numberformatting;
 @:native("winrt::Windows::Globalization::NumberFormatting::IDecimalFormatterFactory")
 extern interface IDecimalFormatterFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateDecimalFormatter(languages: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, geographicRegion: ConstRef<winrt.HString>): winrt.windows.globalization.numberformatting.DecimalFormatter;
+    function CreateDecimalFormatter(languages: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>, geographicRegion: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.globalization.numberformatting.DecimalFormatter;
 }

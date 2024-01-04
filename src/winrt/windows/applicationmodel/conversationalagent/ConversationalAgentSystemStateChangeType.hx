@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.conversationalagent;
 
 @:include("winrt/Windows.ApplicationModel.ConversationalAgent.h", true)
 @:native("winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangeType")
-extern enum abstract ConversationalAgentSystemStateChangeType(Int32)
+extern enum abstract ConversationalAgentSystemStateChangeType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangeType::UserAuthentication") final UserAuthentication;
     @:native("winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangeType::ScreenAvailability") final ScreenAvailability;

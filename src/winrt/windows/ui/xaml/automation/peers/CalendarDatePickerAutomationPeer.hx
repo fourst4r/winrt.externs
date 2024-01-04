@@ -12,9 +12,9 @@ extern class CalendarDatePickerAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.IInvokeProvider
     implements winrt.windows.ui.xaml.automation.provider.IValueProvider
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.CalendarDatePicker>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.CalendarDatePicker>);
     function Invoke(): Void;
     overload function IsReadOnly(): Bool;
     overload function Value(): winrt.HString;
-    function SetValue(value: ConstRef<winrt.HString>): Void;
+    function SetValue(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

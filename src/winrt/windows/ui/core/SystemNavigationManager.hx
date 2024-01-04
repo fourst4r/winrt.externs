@@ -10,10 +10,10 @@ extern class SystemNavigationManager
     implements winrt.windows.ui.core.ISystemNavigationManager
     implements winrt.windows.ui.core.ISystemNavigationManager2
 {
-    overload function BackRequested(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.windows.ui.core.BackRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function BackRequested(token: ConstRef<winrt.EventToken>): Void;
+    overload function BackRequested(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.EventHandler<winrt.windows.ui.core.BackRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function BackRequested(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function AppViewBackButtonVisibility(): winrt.windows.ui.core.AppViewBackButtonVisibility;
-    overload function AppViewBackButtonVisibility(value: ConstRef<winrt.windows.ui.core.AppViewBackButtonVisibility>): Void;
+    overload function AppViewBackButtonVisibility(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.AppViewBackButtonVisibility>): Void;
     function GetForCurrentView(): winrt.windows.ui.core.SystemNavigationManager;
     static function GetForCurrentView(): winrt.windows.ui.core.SystemNavigationManager;
 }

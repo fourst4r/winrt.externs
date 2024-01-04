@@ -8,5 +8,5 @@ package winrt.windows.ui.applicationsettings;
 @:native("winrt::Windows::UI::ApplicationSettings::ISettingsCommandFactory")
 extern interface ISettingsCommandFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateSettingsCommand(settingsCommandId: ConstRef<winrt.windows.foundation.IInspectable>, label: ConstRef<winrt.HString>, handler: ConstRef<winrt.windows.ui.popups.UICommandInvokedHandler>): winrt.windows.ui.applicationsettings.SettingsCommand;
+    function CreateSettingsCommand(settingsCommandId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, label: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.popups.UICommandInvokedHandler>): winrt.windows.ui.applicationsettings.SettingsCommand;
 }

@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.interop;
 
 @:include("winrt/Microsoft.UI.Xaml.Interop.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedAction")
-extern enum abstract NotifyCollectionChangedAction(Int32)
+extern enum abstract NotifyCollectionChangedAction(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedAction::Add") final Add;
     @:native("winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedAction::Remove") final Remove;

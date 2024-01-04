@@ -8,5 +8,5 @@ package winrt.windows.networking.vpn;
 @:native("winrt::Windows::Networking::Vpn::IVpnInterfaceIdFactory")
 extern interface IVpnInterfaceIdFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateVpnInterfaceId(address: winrt.ArrayView<UInt8>): winrt.windows.networking.vpn.VpnInterfaceId;
+    function CreateVpnInterfaceId(address: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): winrt.windows.networking.vpn.VpnInterfaceId;
 }

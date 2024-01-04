@@ -18,10 +18,10 @@ extern class DebugSettings
     overload function IsTextPerformanceVisualizationEnabled(value: Bool): Void;
     overload function FailFastOnErrors(): Bool;
     overload function FailFastOnErrors(value: Bool): Void;
-    overload function BindingFailed(handler: ConstRef<winrt.microsoft.ui.xaml.BindingFailedEventHandler>): winrt.EventToken;
-    @:noExcept overload function BindingFailed(token: ConstRef<winrt.EventToken>): Void;
+    overload function BindingFailed(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.BindingFailedEventHandler>): winrt.EventToken;
+    @:noExcept overload function BindingFailed(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function IsXamlResourceReferenceTracingEnabled(): Bool;
     overload function IsXamlResourceReferenceTracingEnabled(value: Bool): Void;
-    overload function XamlResourceReferenceFailed(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.microsoft.ui.xaml.DebugSettings, winrt.microsoft.ui.xaml.XamlResourceReferenceFailedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function XamlResourceReferenceFailed(token: ConstRef<winrt.EventToken>): Void;
+    overload function XamlResourceReferenceFailed(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.microsoft.ui.xaml.DebugSettings, winrt.microsoft.ui.xaml.XamlResourceReferenceFailedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function XamlResourceReferenceFailed(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

@@ -8,7 +8,7 @@ package winrt.windows.devices.usb;
 @:native("winrt::Windows::Devices::Usb::IUsbEndpointDescriptor")
 extern interface IUsbEndpointDescriptor extends winrt.windows.foundation.IInspectable
 {
-    overload function EndpointNumber(): UInt8;
+    overload function EndpointNumber(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
     overload function Direction(): winrt.windows.devices.usb.UsbTransferDirection;
     overload function EndpointType(): winrt.windows.devices.usb.UsbEndpointType;
     overload function AsBulkInEndpointDescriptor(): winrt.windows.devices.usb.UsbBulkInEndpointDescriptor;

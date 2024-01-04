@@ -11,7 +11,7 @@ extern class BackgroundTransferGroup
 {
     overload function Name(): winrt.HString;
     overload function TransferBehavior(): winrt.windows.networking.backgroundtransfer.BackgroundTransferBehavior;
-    overload function TransferBehavior(value: ConstRef<winrt.windows.networking.backgroundtransfer.BackgroundTransferBehavior>): Void;
-    function CreateGroup(name: ConstRef<winrt.HString>): winrt.windows.networking.backgroundtransfer.BackgroundTransferGroup;
-    static function CreateGroup(name: ConstRef<winrt.HString>): winrt.windows.networking.backgroundtransfer.BackgroundTransferGroup;
+    overload function TransferBehavior(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.backgroundtransfer.BackgroundTransferBehavior>): Void;
+    function CreateGroup(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.networking.backgroundtransfer.BackgroundTransferGroup;
+    static function CreateGroup(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.networking.backgroundtransfer.BackgroundTransferGroup;
 }

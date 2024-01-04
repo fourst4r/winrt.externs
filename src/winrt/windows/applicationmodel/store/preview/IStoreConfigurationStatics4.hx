@@ -9,11 +9,11 @@ package winrt.windows.applicationmodel.store.preview;
 extern interface IStoreConfigurationStatics4 extends winrt.windows.foundation.IInspectable
 {
     function GetStoreWebAccountId(): winrt.HString;
-    function GetStoreWebAccountIdForUser(user: ConstRef<winrt.windows.system.User>): winrt.HString;
-    function SetEnterpriseStoreWebAccountId(webAccountId: ConstRef<winrt.HString>): Void;
-    function SetEnterpriseStoreWebAccountIdForUser(user: ConstRef<winrt.windows.system.User>, webAccountId: ConstRef<winrt.HString>): Void;
+    function GetStoreWebAccountIdForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.HString;
+    function SetEnterpriseStoreWebAccountId(webAccountId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function SetEnterpriseStoreWebAccountIdForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>, webAccountId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     function GetEnterpriseStoreWebAccountId(): winrt.HString;
-    function GetEnterpriseStoreWebAccountIdForUser(user: ConstRef<winrt.windows.system.User>): winrt.HString;
+    function GetEnterpriseStoreWebAccountIdForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.HString;
     function ShouldRestrictToEnterpriseStoreOnly(): Bool;
-    function ShouldRestrictToEnterpriseStoreOnlyForUser(user: ConstRef<winrt.windows.system.User>): Bool;
+    function ShouldRestrictToEnterpriseStoreOnlyForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): Bool;
 }

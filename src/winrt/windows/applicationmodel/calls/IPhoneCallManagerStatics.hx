@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.calls;
 @:native("winrt::Windows::ApplicationModel::Calls::IPhoneCallManagerStatics")
 extern interface IPhoneCallManagerStatics extends winrt.windows.foundation.IInspectable
 {
-    function ShowPhoneCallUI(phoneNumber: ConstRef<winrt.HString>, displayName: ConstRef<winrt.HString>): Void;
+    function ShowPhoneCallUI(phoneNumber: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, displayName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

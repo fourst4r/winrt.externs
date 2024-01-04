@@ -2,7 +2,7 @@ package winrt.windows.media.protection.playready;
 
 @:include("winrt/Windows.Media.Protection.PlayReady.h", true)
 @:native("winrt::Windows::Media::Protection::PlayReady::PlayReadyHardwareDRMFeatures")
-extern enum abstract PlayReadyHardwareDRMFeatures(Int32)
+extern enum abstract PlayReadyHardwareDRMFeatures(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Protection::PlayReady::PlayReadyHardwareDRMFeatures::HardwareDRM") final HardwareDRM;
     @:native("winrt::Windows::Media::Protection::PlayReady::PlayReadyHardwareDRMFeatures::HEVC") final HEVC;

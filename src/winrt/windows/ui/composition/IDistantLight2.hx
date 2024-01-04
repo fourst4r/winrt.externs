@@ -8,6 +8,6 @@ package winrt.windows.ui.composition;
 @:native("winrt::Windows::UI::Composition::IDistantLight2")
 extern interface IDistantLight2 extends winrt.windows.foundation.IInspectable
 {
-    overload function Intensity(): Float32;
-    overload function Intensity(value: Float32): Void;
+    overload function Intensity(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Intensity(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
 }

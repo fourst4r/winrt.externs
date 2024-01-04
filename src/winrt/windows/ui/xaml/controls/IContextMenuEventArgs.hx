@@ -10,6 +10,6 @@ extern interface IContextMenuEventArgs extends winrt.windows.foundation.IInspect
 {
     overload function Handled(): Bool;
     overload function Handled(value: Bool): Void;
-    overload function CursorLeft(): Float64;
-    overload function CursorTop(): Float64;
+    overload function CursorLeft(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function CursorTop(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

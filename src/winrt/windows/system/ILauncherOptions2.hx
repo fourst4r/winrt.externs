@@ -9,7 +9,7 @@ package winrt.windows.system;
 extern interface ILauncherOptions2 extends winrt.windows.foundation.IInspectable
 {
     overload function TargetApplicationPackageFamilyName(): winrt.HString;
-    overload function TargetApplicationPackageFamilyName(value: ConstRef<winrt.HString>): Void;
+    overload function TargetApplicationPackageFamilyName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function NeighboringFilesQuery(): winrt.windows.storage.search.StorageFileQueryResult;
-    overload function NeighboringFilesQuery(value: ConstRef<winrt.windows.storage.search.StorageFileQueryResult>): Void;
+    overload function NeighboringFilesQuery(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.search.StorageFileQueryResult>): Void;
 }

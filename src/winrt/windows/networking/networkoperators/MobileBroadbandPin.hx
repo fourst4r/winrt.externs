@@ -13,12 +13,12 @@ extern class MobileBroadbandPin
     overload function LockState(): winrt.windows.networking.networkoperators.MobileBroadbandPinLockState;
     overload function Format(): winrt.windows.networking.networkoperators.MobileBroadbandPinFormat;
     overload function Enabled(): Bool;
-    overload function MaxLength(): UInt32;
-    overload function MinLength(): UInt32;
-    overload function AttemptsRemaining(): UInt32;
-    function EnableAsync(currentPin: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.MobileBroadbandPinOperationResult> /* GenericTypeInstSig */;
-    function DisableAsync(currentPin: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.MobileBroadbandPinOperationResult> /* GenericTypeInstSig */;
-    function EnterAsync(currentPin: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.MobileBroadbandPinOperationResult> /* GenericTypeInstSig */;
-    function ChangeAsync(currentPin: ConstRef<winrt.HString>, newPin: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.MobileBroadbandPinOperationResult> /* GenericTypeInstSig */;
-    function UnblockAsync(pinUnblockKey: ConstRef<winrt.HString>, newPin: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.MobileBroadbandPinOperationResult> /* GenericTypeInstSig */;
+    overload function MaxLength(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function MinLength(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function AttemptsRemaining(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function EnableAsync(currentPin: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.MobileBroadbandPinOperationResult> /* GenericTypeInstSig */;
+    function DisableAsync(currentPin: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.MobileBroadbandPinOperationResult> /* GenericTypeInstSig */;
+    function EnterAsync(currentPin: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.MobileBroadbandPinOperationResult> /* GenericTypeInstSig */;
+    function ChangeAsync(currentPin: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, newPin: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.MobileBroadbandPinOperationResult> /* GenericTypeInstSig */;
+    function UnblockAsync(pinUnblockKey: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, newPin: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.MobileBroadbandPinOperationResult> /* GenericTypeInstSig */;
 }

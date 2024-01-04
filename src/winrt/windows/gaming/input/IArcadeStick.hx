@@ -8,6 +8,6 @@ package winrt.windows.gaming.input;
 @:native("winrt::Windows::Gaming::Input::IArcadeStick")
 extern interface IArcadeStick extends winrt.windows.foundation.IInspectable
 {
-    function GetButtonLabel(button: ConstRef<winrt.windows.gaming.input.ArcadeStickButtons>): winrt.windows.gaming.input.GameControllerButtonLabel;
+    function GetButtonLabel(button: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.gaming.input.ArcadeStickButtons>): winrt.windows.gaming.input.GameControllerButtonLabel;
     function GetCurrentReading(): winrt.windows.gaming.input.ArcadeStickReading;
 }

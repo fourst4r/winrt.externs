@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.userdatatasks;
 extern interface IUserDataTaskManagerStatics extends winrt.windows.foundation.IInspectable
 {
     function GetDefault(): winrt.windows.applicationmodel.userdatatasks.UserDataTaskManager;
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.applicationmodel.userdatatasks.UserDataTaskManager;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.applicationmodel.userdatatasks.UserDataTaskManager;
 }

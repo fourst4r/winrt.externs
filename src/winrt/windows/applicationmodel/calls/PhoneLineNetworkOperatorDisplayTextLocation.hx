@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.calls;
 
 @:include("winrt/Windows.ApplicationModel.Calls.h", true)
 @:native("winrt::Windows::ApplicationModel::Calls::PhoneLineNetworkOperatorDisplayTextLocation")
-extern enum abstract PhoneLineNetworkOperatorDisplayTextLocation(Int32)
+extern enum abstract PhoneLineNetworkOperatorDisplayTextLocation(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Calls::PhoneLineNetworkOperatorDisplayTextLocation::Default") final Default;
     @:native("winrt::Windows::ApplicationModel::Calls::PhoneLineNetworkOperatorDisplayTextLocation::Tile") final Tile;

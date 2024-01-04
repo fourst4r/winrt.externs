@@ -8,5 +8,5 @@ package winrt.windows.security.credentials;
 @:native("winrt::Windows::Security::Credentials::IWebAccountProviderFactory")
 extern interface IWebAccountProviderFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWebAccountProvider(id: ConstRef<winrt.HString>, displayName: ConstRef<winrt.HString>, iconUri: ConstRef<winrt.windows.foundation.Uri>): winrt.windows.security.credentials.WebAccountProvider;
+    function CreateWebAccountProvider(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, displayName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, iconUri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): winrt.windows.security.credentials.WebAccountProvider;
 }

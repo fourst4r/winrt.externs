@@ -9,7 +9,7 @@ package winrt.windows.storage;
 extern class SetVersionRequest
     implements winrt.windows.storage.ISetVersionRequest
 {
-    overload function CurrentVersion(): UInt32;
-    overload function DesiredVersion(): UInt32;
+    overload function CurrentVersion(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function DesiredVersion(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     function GetDeferral(): winrt.windows.storage.SetVersionDeferral;
 }

@@ -9,12 +9,12 @@ package winrt.microsoft.ui.xaml.controls;
 extern interface ITreeViewNode extends winrt.windows.foundation.IInspectable
 {
     overload function Content(): winrt.windows.foundation.IInspectable;
-    overload function Content(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Content(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
     overload function Parent(): winrt.microsoft.ui.xaml.controls.TreeViewNode;
     overload function IsExpanded(): Bool;
     overload function IsExpanded(value: Bool): Void;
     overload function HasChildren(): Bool;
-    overload function Depth(): Int32;
+    overload function Depth(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function HasUnrealizedChildren(): Bool;
     overload function HasUnrealizedChildren(value: Bool): Void;
     overload function Children(): winrt.windows.foundation.collections.IVector<winrt.microsoft.ui.xaml.controls.TreeViewNode> /* GenericTypeInstSig */;

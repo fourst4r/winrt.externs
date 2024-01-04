@@ -2,7 +2,7 @@ package winrt.windows.devices.wifidirect.services;
 
 @:include("winrt/Windows.Devices.WiFiDirect.Services.h", true)
 @:native("winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionErrorStatus")
-extern enum abstract WiFiDirectServiceSessionErrorStatus(Int32)
+extern enum abstract WiFiDirectServiceSessionErrorStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionErrorStatus::Ok") final Ok;
     @:native("winrt::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionErrorStatus::Disassociated") final Disassociated;

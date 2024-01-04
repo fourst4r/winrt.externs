@@ -13,5 +13,5 @@ extern class FrameNavigationOptions
     overload function IsNavigationStackEnabled(): Bool;
     overload function IsNavigationStackEnabled(value: Bool): Void;
     overload function TransitionInfoOverride(): winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo;
-    overload function TransitionInfoOverride(value: ConstRef<winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo>): Void;
+    overload function TransitionInfoOverride(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo>): Void;
 }

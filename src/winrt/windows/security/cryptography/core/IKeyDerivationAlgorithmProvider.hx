@@ -9,5 +9,5 @@ package winrt.windows.security.cryptography.core;
 extern interface IKeyDerivationAlgorithmProvider extends winrt.windows.foundation.IInspectable
 {
     overload function AlgorithmName(): winrt.HString;
-    function CreateKey(keyMaterial: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.security.cryptography.core.CryptographicKey;
+    function CreateKey(keyMaterial: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.security.cryptography.core.CryptographicKey;
 }

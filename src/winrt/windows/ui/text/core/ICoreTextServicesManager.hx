@@ -9,7 +9,7 @@ package winrt.windows.ui.text.core;
 extern interface ICoreTextServicesManager extends winrt.windows.foundation.IInspectable
 {
     overload function InputLanguage(): winrt.windows.globalization.Language;
-    overload function InputLanguageChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.text.core.CoreTextServicesManager, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function InputLanguageChanged(cookie: ConstRef<winrt.EventToken>): Void;
+    overload function InputLanguageChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.text.core.CoreTextServicesManager, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function InputLanguageChanged(cookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     function CreateEditContext(): winrt.windows.ui.text.core.CoreTextEditContext;
 }

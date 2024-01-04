@@ -9,8 +9,8 @@ package winrt.windows.devices.sensors;
 extern class LightSensorDataThreshold
     implements winrt.windows.devices.sensors.ILightSensorDataThreshold
 {
-    overload function LuxPercentage(): Float32;
-    overload function LuxPercentage(value: Float32): Void;
-    overload function AbsoluteLux(): Float32;
-    overload function AbsoluteLux(value: Float32): Void;
+    overload function LuxPercentage(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function LuxPercentage(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function AbsoluteLux(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function AbsoluteLux(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
 }

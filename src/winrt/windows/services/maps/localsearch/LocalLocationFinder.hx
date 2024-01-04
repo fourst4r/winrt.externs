@@ -4,5 +4,5 @@ package winrt.windows.services.maps.localsearch;
 @:native("winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinder")
 extern class LocalLocationFinder
 {
-    static function FindLocalLocationsAsync(searchTerm: ConstRef<winrt.HString>, searchArea: ConstRef<winrt.windows.devices.geolocation.Geocircle>, localCategory: ConstRef<winrt.HString>, maxResults: UInt32): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.maps.localsearch.LocalLocationFinderResult> /* GenericTypeInstSig */;
+    static function FindLocalLocationsAsync(searchTerm: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, searchArea: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.geolocation.Geocircle>, localCategory: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, maxResults: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.maps.localsearch.LocalLocationFinderResult> /* GenericTypeInstSig */;
 }

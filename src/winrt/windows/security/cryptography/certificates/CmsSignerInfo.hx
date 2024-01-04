@@ -11,8 +11,8 @@ extern class CmsSignerInfo
 {
     function new();
     overload function Certificate(): winrt.windows.security.cryptography.certificates.Certificate;
-    overload function Certificate(value: ConstRef<winrt.windows.security.cryptography.certificates.Certificate>): Void;
+    overload function Certificate(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.certificates.Certificate>): Void;
     overload function HashAlgorithmName(): winrt.HString;
-    overload function HashAlgorithmName(value: ConstRef<winrt.HString>): Void;
+    overload function HashAlgorithmName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function TimestampInfo(): winrt.windows.security.cryptography.certificates.CmsTimestampInfo;
 }

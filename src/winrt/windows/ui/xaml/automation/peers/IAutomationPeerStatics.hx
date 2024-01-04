@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.automation.peers;
 @:native("winrt::Windows::UI::Xaml::Automation::Peers::IAutomationPeerStatics")
 extern interface IAutomationPeerStatics extends winrt.windows.foundation.IInspectable
 {
-    function ListenerExists(eventId: ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationEvents>): Bool;
+    function ListenerExists(eventId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.peers.AutomationEvents>): Bool;
 }

@@ -9,7 +9,7 @@ package winrt.windows.globalization;
 extern class CurrencyAmount
     implements winrt.windows.globalization.ICurrencyAmount
 {
-    function new(amount: ConstRef<winrt.HString>, currency: ConstRef<winrt.HString>);
+    function new(amount: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, currency: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     overload function Amount(): winrt.HString;
     overload function Currency(): winrt.HString;
 }

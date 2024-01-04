@@ -10,5 +10,5 @@ extern interface IShapeVisual extends winrt.windows.foundation.IInspectable
 {
     overload function Shapes(): winrt.microsoft.ui.composition.CompositionShapeCollection;
     overload function ViewBox(): winrt.microsoft.ui.composition.CompositionViewBox;
-    overload function ViewBox(value: ConstRef<winrt.microsoft.ui.composition.CompositionViewBox>): Void;
+    overload function ViewBox(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.CompositionViewBox>): Void;
 }

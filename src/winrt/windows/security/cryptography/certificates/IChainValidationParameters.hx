@@ -9,7 +9,7 @@ package winrt.windows.security.cryptography.certificates;
 extern interface IChainValidationParameters extends winrt.windows.foundation.IInspectable
 {
     overload function CertificateChainPolicy(): winrt.windows.security.cryptography.certificates.CertificateChainPolicy;
-    overload function CertificateChainPolicy(value: ConstRef<winrt.windows.security.cryptography.certificates.CertificateChainPolicy>): Void;
+    overload function CertificateChainPolicy(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.certificates.CertificateChainPolicy>): Void;
     overload function ServerDnsName(): winrt.windows.networking.HostName;
-    overload function ServerDnsName(value: ConstRef<winrt.windows.networking.HostName>): Void;
+    overload function ServerDnsName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.HostName>): Void;
 }

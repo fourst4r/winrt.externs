@@ -9,7 +9,7 @@ package winrt.windows.devices.bluetooth.rfcomm;
 extern interface IRfcommServiceProvider extends winrt.windows.foundation.IInspectable
 {
     overload function ServiceId(): winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId;
-    overload function SdpRawAttributes(): winrt.windows.foundation.collections.IMap<UInt32, winrt.windows.storage.streams.IBuffer> /* GenericTypeInstSig */;
-    function StartAdvertising(listener: ConstRef<winrt.windows.networking.sockets.StreamSocketListener>): Void;
+    overload function SdpRawAttributes(): winrt.windows.foundation.collections.IMap<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32, winrt.windows.storage.streams.IBuffer> /* GenericTypeInstSig */;
+    function StartAdvertising(listener: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.sockets.StreamSocketListener>): Void;
     function StopAdvertising(): Void;
 }

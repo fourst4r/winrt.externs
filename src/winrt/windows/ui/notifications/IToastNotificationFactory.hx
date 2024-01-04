@@ -8,5 +8,5 @@ package winrt.windows.ui.notifications;
 @:native("winrt::Windows::UI::Notifications::IToastNotificationFactory")
 extern interface IToastNotificationFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateToastNotification(content: ConstRef<winrt.windows.data.xml.dom.XmlDocument>): winrt.windows.ui.notifications.ToastNotification;
+    function CreateToastNotification(content: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.data.xml.dom.XmlDocument>): winrt.windows.ui.notifications.ToastNotification;
 }

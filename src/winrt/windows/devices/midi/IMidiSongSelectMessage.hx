@@ -8,5 +8,5 @@ package winrt.windows.devices.midi;
 @:native("winrt::Windows::Devices::Midi::IMidiSongSelectMessage")
 extern interface IMidiSongSelectMessage extends winrt.windows.foundation.IInspectable
 {
-    overload function Song(): UInt8;
+    overload function Song(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
 }

@@ -13,7 +13,7 @@ extern class UserPicker
     overload function AllowGuestAccounts(): Bool;
     overload function AllowGuestAccounts(value: Bool): Void;
     overload function SuggestedSelectedUser(): winrt.windows.system.User;
-    overload function SuggestedSelectedUser(value: ConstRef<winrt.windows.system.User>): Void;
+    overload function SuggestedSelectedUser(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): Void;
     function PickSingleUserAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.system.User> /* GenericTypeInstSig */;
     function IsSupported(): Bool;
     static function IsSupported(): Bool;

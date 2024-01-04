@@ -8,7 +8,7 @@ package winrt.windows.devices.alljoyn;
 @:native("winrt::Windows::Devices::AllJoyn::IAllJoynCredentialsRequestedEventArgs")
 extern interface IAllJoynCredentialsRequestedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function AttemptCount(): UInt16;
+    overload function AttemptCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
     overload function Credentials(): winrt.windows.devices.alljoyn.AllJoynCredentials;
     overload function PeerUniqueName(): winrt.HString;
     overload function RequestedUserName(): winrt.HString;

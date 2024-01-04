@@ -12,7 +12,7 @@ extern class TransformGroup
 {
     function new();
     overload function Children(): winrt.windows.ui.xaml.media.TransformCollection;
-    overload function Children(value: ConstRef<winrt.windows.ui.xaml.media.TransformCollection>): Void;
+    overload function Children(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.TransformCollection>): Void;
     overload function Value(): winrt.windows.ui.xaml.media.Matrix;
     overload function ChildrenProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function ChildrenProperty(): winrt.windows.ui.xaml.DependencyProperty;

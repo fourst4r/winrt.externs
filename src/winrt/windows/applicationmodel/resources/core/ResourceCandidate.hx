@@ -17,7 +17,7 @@ extern class ResourceCandidate
     overload function IsDefault(): Bool;
     overload function ValueAsString(): winrt.HString;
     function GetValueAsFileAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.StorageFile> /* GenericTypeInstSig */;
-    function GetQualifierValue(qualifierName: ConstRef<winrt.HString>): winrt.HString;
+    function GetQualifierValue(qualifierName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.HString;
     function GetValueAsStreamAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.streams.IRandomAccessStream> /* GenericTypeInstSig */;
     overload function Kind(): winrt.windows.applicationmodel.resources.core.ResourceCandidateKind;
 }

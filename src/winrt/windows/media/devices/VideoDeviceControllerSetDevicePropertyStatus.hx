@@ -2,7 +2,7 @@ package winrt.windows.media.devices;
 
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::VideoDeviceControllerSetDevicePropertyStatus")
-extern enum abstract VideoDeviceControllerSetDevicePropertyStatus(Int32)
+extern enum abstract VideoDeviceControllerSetDevicePropertyStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Devices::VideoDeviceControllerSetDevicePropertyStatus::Success") final Success;
     @:native("winrt::Windows::Media::Devices::VideoDeviceControllerSetDevicePropertyStatus::UnknownFailure") final UnknownFailure;

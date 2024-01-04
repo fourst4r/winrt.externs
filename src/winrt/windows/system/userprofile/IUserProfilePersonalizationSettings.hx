@@ -8,6 +8,6 @@ package winrt.windows.system.userprofile;
 @:native("winrt::Windows::System::UserProfile::IUserProfilePersonalizationSettings")
 extern interface IUserProfilePersonalizationSettings extends winrt.windows.foundation.IInspectable
 {
-    function TrySetLockScreenImageAsync(imageFile: ConstRef<winrt.windows.storage.StorageFile>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
-    function TrySetWallpaperImageAsync(imageFile: ConstRef<winrt.windows.storage.StorageFile>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function TrySetLockScreenImageAsync(imageFile: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.StorageFile>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function TrySetWallpaperImageAsync(imageFile: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.StorageFile>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

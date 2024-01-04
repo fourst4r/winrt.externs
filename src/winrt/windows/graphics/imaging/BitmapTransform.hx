@@ -10,16 +10,16 @@ extern class BitmapTransform
     implements winrt.windows.graphics.imaging.IBitmapTransform
 {
     function new();
-    overload function ScaledWidth(): UInt32;
-    overload function ScaledWidth(value: UInt32): Void;
-    overload function ScaledHeight(): UInt32;
-    overload function ScaledHeight(value: UInt32): Void;
+    overload function ScaledWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function ScaledWidth(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function ScaledHeight(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function ScaledHeight(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
     overload function InterpolationMode(): winrt.windows.graphics.imaging.BitmapInterpolationMode;
-    overload function InterpolationMode(value: ConstRef<winrt.windows.graphics.imaging.BitmapInterpolationMode>): Void;
+    overload function InterpolationMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.imaging.BitmapInterpolationMode>): Void;
     overload function Flip(): winrt.windows.graphics.imaging.BitmapFlip;
-    overload function Flip(value: ConstRef<winrt.windows.graphics.imaging.BitmapFlip>): Void;
+    overload function Flip(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.imaging.BitmapFlip>): Void;
     overload function Rotation(): winrt.windows.graphics.imaging.BitmapRotation;
-    overload function Rotation(value: ConstRef<winrt.windows.graphics.imaging.BitmapRotation>): Void;
+    overload function Rotation(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.imaging.BitmapRotation>): Void;
     overload function Bounds(): winrt.windows.graphics.imaging.BitmapBounds;
-    overload function Bounds(value: ConstRef<winrt.windows.graphics.imaging.BitmapBounds>): Void;
+    overload function Bounds(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.imaging.BitmapBounds>): Void;
 }

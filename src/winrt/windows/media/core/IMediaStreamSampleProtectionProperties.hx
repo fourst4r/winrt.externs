@@ -8,10 +8,10 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::IMediaStreamSampleProtectionProperties")
 extern interface IMediaStreamSampleProtectionProperties extends winrt.windows.foundation.IInspectable
 {
-    function SetKeyIdentifier(value: winrt.ArrayView<UInt8>): Void;
-    function GetKeyIdentifier(value: Ref<winrt.ComArray<UInt8>>): Void;
-    function SetInitializationVector(value: winrt.ArrayView<UInt8>): Void;
-    function GetInitializationVector(value: Ref<winrt.ComArray<UInt8>>): Void;
-    function SetSubSampleMapping(value: winrt.ArrayView<UInt8>): Void;
-    function GetSubSampleMapping(value: Ref<winrt.ComArray<UInt8>>): Void;
+    function SetKeyIdentifier(value: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): Void;
+    function GetKeyIdentifier(value: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>>): Void;
+    function SetInitializationVector(value: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): Void;
+    function GetInitializationVector(value: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>>): Void;
+    function SetSubSampleMapping(value: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): Void;
+    function GetSubSampleMapping(value: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>>): Void;
 }

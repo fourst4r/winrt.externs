@@ -12,7 +12,7 @@ extern interface ICoreWebView2Profile extends winrt.windows.foundation.IInspecta
     overload function IsInPrivateModeEnabled(): Bool;
     overload function ProfilePath(): winrt.HString;
     overload function DefaultDownloadFolderPath(): winrt.HString;
-    overload function DefaultDownloadFolderPath(value: ConstRef<winrt.HString>): Void;
+    overload function DefaultDownloadFolderPath(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function PreferredColorScheme(): winrt.microsoft.web.webview2.core.CoreWebView2PreferredColorScheme;
-    overload function PreferredColorScheme(value: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2PreferredColorScheme>): Void;
+    overload function PreferredColorScheme(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.CoreWebView2PreferredColorScheme>): Void;
 }

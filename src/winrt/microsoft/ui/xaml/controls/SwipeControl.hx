@@ -12,13 +12,13 @@ extern class SwipeControl
 {
     function new();
     overload function LeftItems(): winrt.microsoft.ui.xaml.controls.SwipeItems;
-    overload function LeftItems(value: ConstRef<winrt.microsoft.ui.xaml.controls.SwipeItems>): Void;
+    overload function LeftItems(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.SwipeItems>): Void;
     overload function RightItems(): winrt.microsoft.ui.xaml.controls.SwipeItems;
-    overload function RightItems(value: ConstRef<winrt.microsoft.ui.xaml.controls.SwipeItems>): Void;
+    overload function RightItems(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.SwipeItems>): Void;
     overload function TopItems(): winrt.microsoft.ui.xaml.controls.SwipeItems;
-    overload function TopItems(value: ConstRef<winrt.microsoft.ui.xaml.controls.SwipeItems>): Void;
+    overload function TopItems(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.SwipeItems>): Void;
     overload function BottomItems(): winrt.microsoft.ui.xaml.controls.SwipeItems;
-    overload function BottomItems(value: ConstRef<winrt.microsoft.ui.xaml.controls.SwipeItems>): Void;
+    overload function BottomItems(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.SwipeItems>): Void;
     function Close(): Void;
     overload function LeftItemsProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function RightItemsProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

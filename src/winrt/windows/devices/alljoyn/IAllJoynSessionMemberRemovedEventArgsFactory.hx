@@ -8,5 +8,5 @@ package winrt.windows.devices.alljoyn;
 @:native("winrt::Windows::Devices::AllJoyn::IAllJoynSessionMemberRemovedEventArgsFactory")
 extern interface IAllJoynSessionMemberRemovedEventArgsFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(uniqueName: ConstRef<winrt.HString>): winrt.windows.devices.alljoyn.AllJoynSessionMemberRemovedEventArgs;
+    function Create(uniqueName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.devices.alljoyn.AllJoynSessionMemberRemovedEventArgs;
 }

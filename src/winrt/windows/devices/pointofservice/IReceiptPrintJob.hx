@@ -8,7 +8,7 @@ package winrt.windows.devices.pointofservice;
 @:native("winrt::Windows::Devices::PointOfService::IReceiptPrintJob")
 extern interface IReceiptPrintJob extends winrt.windows.foundation.IInspectable
 {
-    function MarkFeed(kind: ConstRef<winrt.windows.devices.pointofservice.PosPrinterMarkFeedKind>): Void;
-    overload function CutPaper(percentage: Float64): Void;
+    function MarkFeed(kind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.pointofservice.PosPrinterMarkFeedKind>): Void;
+    overload function CutPaper(percentage: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function CutPaper(): Void;
 }

@@ -2,7 +2,7 @@ package winrt.windows.media.mediaproperties;
 
 @:include("winrt/Windows.Media.MediaProperties.h", true)
 @:native("winrt::Windows::Media::MediaProperties::MediaPixelFormat")
-extern enum abstract MediaPixelFormat(Int32)
+extern enum abstract MediaPixelFormat(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::MediaProperties::MediaPixelFormat::Nv12") final Nv12;
     @:native("winrt::Windows::Media::MediaProperties::MediaPixelFormat::Bgra8") final Bgra8;

@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.controls;
 
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::RefreshVisualizerOrientation")
-extern enum abstract RefreshVisualizerOrientation(Int32)
+extern enum abstract RefreshVisualizerOrientation(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Controls::RefreshVisualizerOrientation::Auto") final Auto;
     @:native("winrt::Windows::UI::Xaml::Controls::RefreshVisualizerOrientation::Normal") final Normal;

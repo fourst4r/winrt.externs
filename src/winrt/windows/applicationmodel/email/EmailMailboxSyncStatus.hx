@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.email;
 
 @:include("winrt/Windows.ApplicationModel.Email.h", true)
 @:native("winrt::Windows::ApplicationModel::Email::EmailMailboxSyncStatus")
-extern enum abstract EmailMailboxSyncStatus(Int32)
+extern enum abstract EmailMailboxSyncStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Email::EmailMailboxSyncStatus::Idle") final Idle;
     @:native("winrt::Windows::ApplicationModel::Email::EmailMailboxSyncStatus::Syncing") final Syncing;

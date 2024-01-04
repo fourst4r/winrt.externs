@@ -2,7 +2,7 @@ package winrt.windows.devices.sensors;
 
 @:include("winrt/Windows.Devices.Sensors.h", true)
 @:native("winrt::Windows::Devices::Sensors::ActivityType")
-extern enum abstract ActivityType(Int32)
+extern enum abstract ActivityType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::Sensors::ActivityType::Unknown") final Unknown;
     @:native("winrt::Windows::Devices::Sensors::ActivityType::Idle") final Idle;

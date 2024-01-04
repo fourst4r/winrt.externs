@@ -9,5 +9,5 @@ package winrt.windows.ui.windowmanagement;
 extern interface IAppWindowTitleBarVisibility extends winrt.windows.foundation.IInspectable
 {
     function GetPreferredVisibility(): winrt.windows.ui.windowmanagement.AppWindowTitleBarVisibility;
-    function SetPreferredVisibility(visibilityMode: ConstRef<winrt.windows.ui.windowmanagement.AppWindowTitleBarVisibility>): Void;
+    function SetPreferredVisibility(visibilityMode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.windowmanagement.AppWindowTitleBarVisibility>): Void;
 }

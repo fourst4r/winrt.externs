@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.background;
 @:native("winrt::Windows::ApplicationModel::Background::IPushNotificationTriggerFactory")
 extern interface IPushNotificationTriggerFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(applicationId: ConstRef<winrt.HString>): winrt.windows.applicationmodel.background.PushNotificationTrigger;
+    function Create(applicationId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.background.PushNotificationTrigger;
 }

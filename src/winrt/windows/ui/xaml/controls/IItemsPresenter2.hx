@@ -9,9 +9,9 @@ package winrt.windows.ui.xaml.controls;
 extern interface IItemsPresenter2 extends winrt.windows.foundation.IInspectable
 {
     overload function Footer(): winrt.windows.foundation.IInspectable;
-    overload function Footer(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Footer(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
     overload function FooterTemplate(): winrt.windows.ui.xaml.DataTemplate;
-    overload function FooterTemplate(value: ConstRef<winrt.windows.ui.xaml.DataTemplate>): Void;
+    overload function FooterTemplate(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DataTemplate>): Void;
     overload function FooterTransitions(): winrt.windows.ui.xaml.media.animation.TransitionCollection;
-    overload function FooterTransitions(value: ConstRef<winrt.windows.ui.xaml.media.animation.TransitionCollection>): Void;
+    overload function FooterTransitions(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.animation.TransitionCollection>): Void;
 }

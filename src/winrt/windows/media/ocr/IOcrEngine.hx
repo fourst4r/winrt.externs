@@ -8,6 +8,6 @@ package winrt.windows.media.ocr;
 @:native("winrt::Windows::Media::Ocr::IOcrEngine")
 extern interface IOcrEngine extends winrt.windows.foundation.IInspectable
 {
-    function RecognizeAsync(bitmap: ConstRef<winrt.windows.graphics.imaging.SoftwareBitmap>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.ocr.OcrResult> /* GenericTypeInstSig */;
+    function RecognizeAsync(bitmap: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.imaging.SoftwareBitmap>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.ocr.OcrResult> /* GenericTypeInstSig */;
     overload function RecognizerLanguage(): winrt.windows.globalization.Language;
 }

@@ -9,5 +9,5 @@ package winrt.windows.ui.uiautomation.core;
 extern interface IRemoteAutomationConnectionRequestedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function LocalPipeName(): winrt.HString;
-    overload function RemoteProcessId(): UInt32;
+    overload function RemoteProcessId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

@@ -2,7 +2,7 @@ package winrt.windows.networking.vpn;
 
 @:include("winrt/Windows.Networking.Vpn.h", true)
 @:native("winrt::Windows::Networking::Vpn::VpnIPProtocol")
-extern enum abstract VpnIPProtocol(Int32)
+extern enum abstract VpnIPProtocol(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Networking::Vpn::VpnIPProtocol::None") final None;
     @:native("winrt::Windows::Networking::Vpn::VpnIPProtocol::Tcp") final Tcp;

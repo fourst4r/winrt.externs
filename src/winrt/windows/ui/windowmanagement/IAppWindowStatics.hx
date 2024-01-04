@@ -10,5 +10,5 @@ extern interface IAppWindowStatics extends winrt.windows.foundation.IInspectable
 {
     function TryCreateAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.ui.windowmanagement.AppWindow> /* GenericTypeInstSig */;
     function ClearAllPersistedState(): Void;
-    function ClearPersistedState(key: ConstRef<winrt.HString>): Void;
+    function ClearPersistedState(key: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

@@ -13,5 +13,5 @@ extern interface ISelectorStatics extends winrt.windows.foundation.IInspectable
     overload function SelectedValueProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function SelectedValuePathProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function IsSynchronizedWithCurrentItemProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetIsSelectionActive(element: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): Bool;
+    function GetIsSelectionActive(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyObject>): Bool;
 }

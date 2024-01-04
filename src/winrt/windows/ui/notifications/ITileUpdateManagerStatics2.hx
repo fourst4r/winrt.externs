@@ -8,5 +8,5 @@ package winrt.windows.ui.notifications;
 @:native("winrt::Windows::UI::Notifications::ITileUpdateManagerStatics2")
 extern interface ITileUpdateManagerStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.ui.notifications.TileUpdateManagerForUser;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.ui.notifications.TileUpdateManagerForUser;
 }

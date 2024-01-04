@@ -2,7 +2,7 @@ package winrt.windows.devices.display.core;
 
 @:include("winrt/Windows.Devices.Display.Core.h", true)
 @:native("winrt::Windows::Devices::Display::Core::DisplayWireFormatPixelEncoding")
-extern enum abstract DisplayWireFormatPixelEncoding(Int32)
+extern enum abstract DisplayWireFormatPixelEncoding(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::Display::Core::DisplayWireFormatPixelEncoding::Rgb444") final Rgb444;
     @:native("winrt::Windows::Devices::Display::Core::DisplayWireFormatPixelEncoding::Ycc444") final Ycc444;

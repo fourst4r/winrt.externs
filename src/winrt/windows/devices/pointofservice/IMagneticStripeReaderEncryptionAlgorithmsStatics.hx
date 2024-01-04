@@ -8,7 +8,7 @@ package winrt.windows.devices.pointofservice;
 @:native("winrt::Windows::Devices::PointOfService::IMagneticStripeReaderEncryptionAlgorithmsStatics")
 extern interface IMagneticStripeReaderEncryptionAlgorithmsStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function None(): UInt32;
-    overload function TripleDesDukpt(): UInt32;
-    overload function ExtendedBase(): UInt32;
+    overload function None(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function TripleDesDukpt(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function ExtendedBase(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

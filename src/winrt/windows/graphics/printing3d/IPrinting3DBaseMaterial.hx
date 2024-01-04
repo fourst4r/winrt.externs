@@ -9,7 +9,7 @@ package winrt.windows.graphics.printing3d;
 extern interface IPrinting3DBaseMaterial extends winrt.windows.foundation.IInspectable
 {
     overload function Name(): winrt.HString;
-    overload function Name(value: ConstRef<winrt.HString>): Void;
+    overload function Name(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Color(): winrt.windows.graphics.printing3d.Printing3DColorMaterial;
-    overload function Color(value: ConstRef<winrt.windows.graphics.printing3d.Printing3DColorMaterial>): Void;
+    overload function Color(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing3d.Printing3DColorMaterial>): Void;
 }

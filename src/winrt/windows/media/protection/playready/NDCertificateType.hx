@@ -2,7 +2,7 @@ package winrt.windows.media.protection.playready;
 
 @:include("winrt/Windows.Media.Protection.PlayReady.h", true)
 @:native("winrt::Windows::Media::Protection::PlayReady::NDCertificateType")
-extern enum abstract NDCertificateType(Int32)
+extern enum abstract NDCertificateType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Protection::PlayReady::NDCertificateType::Unknown") final Unknown;
     @:native("winrt::Windows::Media::Protection::PlayReady::NDCertificateType::PC") final PC;

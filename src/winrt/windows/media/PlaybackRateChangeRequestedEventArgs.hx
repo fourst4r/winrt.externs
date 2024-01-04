@@ -9,5 +9,5 @@ package winrt.windows.media;
 extern class PlaybackRateChangeRequestedEventArgs
     implements winrt.windows.media.IPlaybackRateChangeRequestedEventArgs
 {
-    overload function RequestedPlaybackRate(): Float64;
+    overload function RequestedPlaybackRate(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

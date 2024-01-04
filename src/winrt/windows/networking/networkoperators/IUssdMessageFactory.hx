@@ -8,5 +8,5 @@ package winrt.windows.networking.networkoperators;
 @:native("winrt::Windows::Networking::NetworkOperators::IUssdMessageFactory")
 extern interface IUssdMessageFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateMessage(messageText: ConstRef<winrt.HString>): winrt.windows.networking.networkoperators.UssdMessage;
+    function CreateMessage(messageText: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.networking.networkoperators.UssdMessage;
 }

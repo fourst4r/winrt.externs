@@ -12,10 +12,10 @@ extern class InfraredTorchControl
     overload function IsSupported(): Bool;
     overload function SupportedModes(): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.devices.InfraredTorchMode> /* GenericTypeInstSig */;
     overload function CurrentMode(): winrt.windows.media.devices.InfraredTorchMode;
-    overload function CurrentMode(value: ConstRef<winrt.windows.media.devices.InfraredTorchMode>): Void;
-    overload function MinPower(): Int32;
-    overload function MaxPower(): Int32;
-    overload function PowerStep(): Int32;
-    overload function Power(): Int32;
-    overload function Power(value: Int32): Void;
+    overload function CurrentMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.InfraredTorchMode>): Void;
+    overload function MinPower(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function MaxPower(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function PowerStep(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Power(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Power(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
 }

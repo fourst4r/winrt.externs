@@ -9,13 +9,13 @@ package winrt.windows.media;
 extern interface ISystemMediaTransportControlsTimelineProperties extends winrt.windows.foundation.IInspectable
 {
     overload function StartTime(): winrt.windows.foundation.TimeSpan;
-    overload function StartTime(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function StartTime(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function EndTime(): winrt.windows.foundation.TimeSpan;
-    overload function EndTime(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function EndTime(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function MinSeekTime(): winrt.windows.foundation.TimeSpan;
-    overload function MinSeekTime(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function MinSeekTime(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function MaxSeekTime(): winrt.windows.foundation.TimeSpan;
-    overload function MaxSeekTime(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function MaxSeekTime(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function Position(): winrt.windows.foundation.TimeSpan;
-    overload function Position(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function Position(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
 }

@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml.markup;
 extern class XamlMarkupHelper
     implements winrt.windows.ui.xaml.markup.IXamlMarkupHelper
 {
-    function UnloadObject(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>): Void;
-    static function UnloadObject(element: ConstRef<winrt.windows.ui.xaml.DependencyObject>): Void;
+    function UnloadObject(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): Void;
+    static function UnloadObject(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): Void;
 }

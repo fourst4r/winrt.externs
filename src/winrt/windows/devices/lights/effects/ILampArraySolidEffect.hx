@@ -9,11 +9,11 @@ package winrt.windows.devices.lights.effects;
 extern interface ILampArraySolidEffect extends winrt.windows.foundation.IInspectable
 {
     overload function Color(): winrt.windows.ui.Color;
-    overload function Color(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function Color(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
     overload function Duration(): winrt.windows.foundation.TimeSpan;
-    overload function Duration(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function Duration(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function StartDelay(): winrt.windows.foundation.TimeSpan;
-    overload function StartDelay(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function StartDelay(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function CompletionBehavior(): winrt.windows.devices.lights.effects.LampArrayEffectCompletionBehavior;
-    overload function CompletionBehavior(value: ConstRef<winrt.windows.devices.lights.effects.LampArrayEffectCompletionBehavior>): Void;
+    overload function CompletionBehavior(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.lights.effects.LampArrayEffectCompletionBehavior>): Void;
 }

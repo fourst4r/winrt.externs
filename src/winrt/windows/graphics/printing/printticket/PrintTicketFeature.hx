@@ -13,9 +13,9 @@ extern class PrintTicketFeature
     overload function XmlNamespace(): winrt.HString;
     overload function XmlNode(): winrt.windows.data.xml.dom.IXmlNode;
     overload function DisplayName(): winrt.HString;
-    function GetOption(name: ConstRef<winrt.HString>, xmlNamespace: ConstRef<winrt.HString>): winrt.windows.graphics.printing.printticket.PrintTicketOption;
+    function GetOption(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, xmlNamespace: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.graphics.printing.printticket.PrintTicketOption;
     overload function Options(): winrt.windows.foundation.collections.IVectorView<winrt.windows.graphics.printing.printticket.PrintTicketOption> /* GenericTypeInstSig */;
     function GetSelectedOption(): winrt.windows.graphics.printing.printticket.PrintTicketOption;
-    function SetSelectedOption(value: ConstRef<winrt.windows.graphics.printing.printticket.PrintTicketOption>): Void;
+    function SetSelectedOption(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing.printticket.PrintTicketOption>): Void;
     overload function SelectionType(): winrt.windows.graphics.printing.printticket.PrintTicketFeatureSelectionType;
 }

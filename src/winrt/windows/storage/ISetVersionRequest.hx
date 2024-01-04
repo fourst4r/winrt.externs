@@ -8,7 +8,7 @@ package winrt.windows.storage;
 @:native("winrt::Windows::Storage::ISetVersionRequest")
 extern interface ISetVersionRequest extends winrt.windows.foundation.IInspectable
 {
-    overload function CurrentVersion(): UInt32;
-    overload function DesiredVersion(): UInt32;
+    overload function CurrentVersion(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function DesiredVersion(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     function GetDeferral(): winrt.windows.storage.SetVersionDeferral;
 }

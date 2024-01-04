@@ -12,7 +12,7 @@ extern class InputScopeName
 {
     function new();
     @:native("winrt::Microsoft::UI::Xaml::Input::InputScopeName")
-    /* explicit */ static overload function make(nameValue: ConstRef<winrt.microsoft.ui.xaml.input.InputScopeNameValue>): winrt.microsoft.ui.xaml.input.InputScopeName;
+    /* explicit */ static overload function make(nameValue: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.InputScopeNameValue>): winrt.microsoft.ui.xaml.input.InputScopeName;
     overload function NameValue(): winrt.microsoft.ui.xaml.input.InputScopeNameValue;
-    overload function NameValue(value: ConstRef<winrt.microsoft.ui.xaml.input.InputScopeNameValue>): Void;
+    overload function NameValue(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.InputScopeNameValue>): Void;
 }

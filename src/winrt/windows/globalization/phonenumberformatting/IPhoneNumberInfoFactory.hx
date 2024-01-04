@@ -8,5 +8,5 @@ package winrt.windows.globalization.phonenumberformatting;
 @:native("winrt::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoFactory")
 extern interface IPhoneNumberInfoFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(number: ConstRef<winrt.HString>): winrt.windows.globalization.phonenumberformatting.PhoneNumberInfo;
+    function Create(number: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.globalization.phonenumberformatting.PhoneNumberInfo;
 }

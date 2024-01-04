@@ -10,7 +10,7 @@ extern interface IRemoteTextConnection extends winrt.windows.foundation.IInspect
 {
     overload function IsEnabled(): Bool;
     overload function IsEnabled(value: Bool): Void;
-    function RegisterThread(threadId: UInt32): Void;
-    function UnregisterThread(threadId: UInt32): Void;
-    function ReportDataReceived(pduData: winrt.ArrayView<UInt8>): Void;
+    function RegisterThread(threadId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    function UnregisterThread(threadId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    function ReportDataReceived(pduData: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): Void;
 }

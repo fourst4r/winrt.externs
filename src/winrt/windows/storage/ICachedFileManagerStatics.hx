@@ -8,6 +8,6 @@ package winrt.windows.storage;
 @:native("winrt::Windows::Storage::ICachedFileManagerStatics")
 extern interface ICachedFileManagerStatics extends winrt.windows.foundation.IInspectable
 {
-    function DeferUpdates(file: ConstRef<winrt.windows.storage.IStorageFile>): Void;
-    function CompleteUpdatesAsync(file: ConstRef<winrt.windows.storage.IStorageFile>): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.provider.FileUpdateStatus> /* GenericTypeInstSig */;
+    function DeferUpdates(file: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.IStorageFile>): Void;
+    function CompleteUpdatesAsync(file: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.IStorageFile>): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.provider.FileUpdateStatus> /* GenericTypeInstSig */;
 }

@@ -13,5 +13,5 @@ extern interface IUIElementStatics8 extends winrt.windows.foundation.IInspectabl
     overload function KeyTipTargetProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function KeyboardAcceleratorPlacementTargetProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function KeyboardAcceleratorPlacementModeProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function RegisterAsScrollPort(element: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
+    function RegisterAsScrollPort(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
 }

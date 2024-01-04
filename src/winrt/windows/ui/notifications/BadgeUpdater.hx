@@ -9,9 +9,9 @@ package winrt.windows.ui.notifications;
 extern class BadgeUpdater
     implements winrt.windows.ui.notifications.IBadgeUpdater
 {
-    function Update(notification: ConstRef<winrt.windows.ui.notifications.BadgeNotification>): Void;
+    function Update(notification: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.notifications.BadgeNotification>): Void;
     function Clear(): Void;
-    overload function StartPeriodicUpdate(badgeContent: ConstRef<winrt.windows.foundation.Uri>, requestedInterval: ConstRef<winrt.windows.ui.notifications.PeriodicUpdateRecurrence>): Void;
-    overload function StartPeriodicUpdate(badgeContent: ConstRef<winrt.windows.foundation.Uri>, startTime: ConstRef<winrt.windows.foundation.DateTime>, requestedInterval: ConstRef<winrt.windows.ui.notifications.PeriodicUpdateRecurrence>): Void;
+    overload function StartPeriodicUpdate(badgeContent: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>, requestedInterval: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.notifications.PeriodicUpdateRecurrence>): Void;
+    overload function StartPeriodicUpdate(badgeContent: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>, startTime: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>, requestedInterval: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.notifications.PeriodicUpdateRecurrence>): Void;
     function StopPeriodicUpdate(): Void;
 }

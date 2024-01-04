@@ -12,5 +12,5 @@ extern class StorageProvider
 {
     overload function Id(): winrt.HString;
     overload function DisplayName(): winrt.HString;
-    function IsPropertySupportedForPartialFileAsync(propertyCanonicalName: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function IsPropertySupportedForPartialFileAsync(propertyCanonicalName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

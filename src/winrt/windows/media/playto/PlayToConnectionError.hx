@@ -2,7 +2,7 @@ package winrt.windows.media.playto;
 
 @:include("winrt/Windows.Media.PlayTo.h", true)
 @:native("winrt::Windows::Media::PlayTo::PlayToConnectionError")
-extern enum abstract PlayToConnectionError(Int32)
+extern enum abstract PlayToConnectionError(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::PlayTo::PlayToConnectionError::None") final None;
     @:native("winrt::Windows::Media::PlayTo::PlayToConnectionError::DeviceNotResponding") final DeviceNotResponding;

@@ -9,5 +9,5 @@ package winrt.windows.foundation.collections;
 extern interface IVectorChangedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function CollectionChange(): winrt.windows.foundation.collections.CollectionChange;
-    overload function Index(): UInt32;
+    overload function Index(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

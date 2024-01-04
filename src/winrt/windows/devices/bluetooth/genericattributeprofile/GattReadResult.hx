@@ -12,5 +12,5 @@ extern class GattReadResult
 {
     overload function Status(): winrt.windows.devices.bluetooth.genericattributeprofile.GattCommunicationStatus;
     overload function Value(): winrt.windows.storage.streams.IBuffer;
-    overload function ProtocolError(): winrt.windows.foundation.IReference<UInt8> /* GenericTypeInstSig */;
+    overload function ProtocolError(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8> /* GenericTypeInstSig */;
 }

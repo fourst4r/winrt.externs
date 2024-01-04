@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.userdataaccounts;
 
 @:include("winrt/Windows.ApplicationModel.UserDataAccounts.h", true)
 @:native("winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess")
-extern enum abstract UserDataAccountOtherAppReadAccess(Int32)
+extern enum abstract UserDataAccountOtherAppReadAccess(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess::SystemOnly") final SystemOnly;
     @:native("winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess::Full") final Full;

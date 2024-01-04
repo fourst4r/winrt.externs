@@ -10,5 +10,5 @@ extern interface ITetheringEntitlementCheckTriggerDetails extends winrt.windows.
 {
     overload function NetworkAccountId(): winrt.HString;
     function AllowTethering(): Void;
-    function DenyTethering(entitlementFailureReason: ConstRef<winrt.HString>): Void;
+    function DenyTethering(entitlementFailureReason: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

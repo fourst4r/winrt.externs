@@ -9,13 +9,13 @@ package winrt.windows.ui.text;
 extern interface ITextSelection extends winrt.windows.foundation.IInspectable
 {
     overload function Options(): winrt.windows.ui.text.SelectionOptions;
-    overload function Options(value: ConstRef<winrt.windows.ui.text.SelectionOptions>): Void;
+    overload function Options(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.text.SelectionOptions>): Void;
     overload function Type(): winrt.windows.ui.text.SelectionType;
-    function EndKey(unit: ConstRef<winrt.windows.ui.text.TextRangeUnit>, extend: Bool): Int32;
-    function HomeKey(unit: ConstRef<winrt.windows.ui.text.TextRangeUnit>, extend: Bool): Int32;
-    function MoveDown(unit: ConstRef<winrt.windows.ui.text.TextRangeUnit>, count: Int32, extend: Bool): Int32;
-    function MoveLeft(unit: ConstRef<winrt.windows.ui.text.TextRangeUnit>, count: Int32, extend: Bool): Int32;
-    function MoveRight(unit: ConstRef<winrt.windows.ui.text.TextRangeUnit>, count: Int32, extend: Bool): Int32;
-    function MoveUp(unit: ConstRef<winrt.windows.ui.text.TextRangeUnit>, count: Int32, extend: Bool): Int32;
-    function TypeText(value: ConstRef<winrt.HString>): Void;
+    function EndKey(unit: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.text.TextRangeUnit>, extend: Bool): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function HomeKey(unit: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.text.TextRangeUnit>, extend: Bool): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function MoveDown(unit: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.text.TextRangeUnit>, count: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, extend: Bool): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function MoveLeft(unit: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.text.TextRangeUnit>, count: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, extend: Bool): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function MoveRight(unit: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.text.TextRangeUnit>, count: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, extend: Bool): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function MoveUp(unit: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.text.TextRangeUnit>, count: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, extend: Bool): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function TypeText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

@@ -2,7 +2,7 @@ package winrt.windows.devices.sms;
 
 @:include("winrt/Windows.Devices.Sms.h", true)
 @:native("winrt::Windows::Devices::Sms::SmsEncoding")
-extern enum abstract SmsEncoding(Int32)
+extern enum abstract SmsEncoding(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::Sms::SmsEncoding::Unknown") final Unknown;
     @:native("winrt::Windows::Devices::Sms::SmsEncoding::Optimal") final Optimal;

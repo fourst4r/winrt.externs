@@ -8,8 +8,8 @@ package winrt.windows.devices.bluetooth.advertisement;
 @:native("winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementPublisher2")
 extern interface IBluetoothLEAdvertisementPublisher2 extends winrt.windows.foundation.IInspectable
 {
-    overload function PreferredTransmitPowerLevelInDBm(): winrt.windows.foundation.IReference<Int16> /* GenericTypeInstSig */;
-    overload function PreferredTransmitPowerLevelInDBm(value: ConstRef<winrt.windows.foundation.IReference<Int16> /* temp_GenericTypeInstSig */>): Void;
+    overload function PreferredTransmitPowerLevelInDBm(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int16> /* GenericTypeInstSig */;
+    overload function PreferredTransmitPowerLevelInDBm(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int16> /* temp_GenericTypeInstSig */>): Void;
     overload function UseExtendedAdvertisement(): Bool;
     overload function UseExtendedAdvertisement(value: Bool): Void;
     overload function IsAnonymous(): Bool;

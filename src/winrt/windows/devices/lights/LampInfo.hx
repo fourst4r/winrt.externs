@@ -9,14 +9,14 @@ package winrt.windows.devices.lights;
 extern class LampInfo
     implements winrt.windows.devices.lights.ILampInfo
 {
-    overload function Index(): Int32;
+    overload function Index(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function Purposes(): winrt.windows.devices.lights.LampPurposes;
     overload function Position(): winrt.windows.foundation.numerics.Vector3;
-    overload function RedLevelCount(): Int32;
-    overload function GreenLevelCount(): Int32;
-    overload function BlueLevelCount(): Int32;
-    overload function GainLevelCount(): Int32;
+    overload function RedLevelCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function GreenLevelCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function BlueLevelCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function GainLevelCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function FixedColor(): winrt.windows.foundation.IReference<winrt.windows.ui.Color> /* GenericTypeInstSig */;
-    function GetNearestSupportedColor(desiredColor: ConstRef<winrt.windows.ui.Color>): winrt.windows.ui.Color;
+    function GetNearestSupportedColor(desiredColor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): winrt.windows.ui.Color;
     overload function UpdateLatency(): winrt.windows.foundation.TimeSpan;
 }

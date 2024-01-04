@@ -10,5 +10,5 @@ extern class CoreWebView2ContentLoadingEventArgs
     implements winrt.microsoft.web.webview2.core.ICoreWebView2ContentLoadingEventArgs
 {
     overload function IsErrorPage(): Bool;
-    overload function NavigationId(): UInt64;
+    overload function NavigationId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

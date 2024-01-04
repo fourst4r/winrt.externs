@@ -8,5 +8,5 @@ package winrt.windows.media.protection.playready;
 @:native("winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseManagement")
 extern interface IPlayReadyLicenseManagement extends winrt.windows.foundation.IInspectable
 {
-    function DeleteLicenses(contentHeader: ConstRef<winrt.windows.media.protection.playready.PlayReadyContentHeader>): winrt.windows.foundation.IAsyncAction;
+    function DeleteLicenses(contentHeader: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.protection.playready.PlayReadyContentHeader>): winrt.windows.foundation.IAsyncAction;
 }

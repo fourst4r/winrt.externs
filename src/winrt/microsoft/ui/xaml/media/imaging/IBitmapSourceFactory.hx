@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml.media.imaging;
 @:native("winrt::Microsoft::UI::Xaml::Media::Imaging::IBitmapSourceFactory")
 extern interface IBitmapSourceFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.media.imaging.BitmapSource;
+    function CreateInstance(baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.media.imaging.BitmapSource;
 }

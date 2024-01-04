@@ -11,7 +11,7 @@ extern class PaymentMerchantInfo
 {
     function new();
     @:native("winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo")
-    /* explicit */ static overload function make(uri: ConstRef<winrt.windows.foundation.Uri>): winrt.windows.applicationmodel.payments.PaymentMerchantInfo;
+    /* explicit */ static overload function make(uri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): winrt.windows.applicationmodel.payments.PaymentMerchantInfo;
     overload function PackageFullName(): winrt.HString;
     overload function Uri(): winrt.windows.foundation.Uri;
 }

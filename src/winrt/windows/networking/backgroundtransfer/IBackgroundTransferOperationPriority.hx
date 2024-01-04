@@ -9,5 +9,5 @@ package winrt.windows.networking.backgroundtransfer;
 extern interface IBackgroundTransferOperationPriority extends winrt.windows.foundation.IInspectable
 {
     overload function Priority(): winrt.windows.networking.backgroundtransfer.BackgroundTransferPriority;
-    overload function Priority(value: ConstRef<winrt.windows.networking.backgroundtransfer.BackgroundTransferPriority>): Void;
+    overload function Priority(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.backgroundtransfer.BackgroundTransferPriority>): Void;
 }

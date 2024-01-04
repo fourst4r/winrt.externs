@@ -2,7 +2,7 @@ package winrt.microsoft.ui.input;
 
 @:include("winrt/Microsoft.UI.Input.h", true)
 @:native("winrt::Microsoft::UI::Input::PointerUpdateKind")
-extern enum abstract PointerUpdateKind(Int32)
+extern enum abstract PointerUpdateKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Input::PointerUpdateKind::Other") final Other;
     @:native("winrt::Microsoft::UI::Input::PointerUpdateKind::LeftButtonPressed") final LeftButtonPressed;

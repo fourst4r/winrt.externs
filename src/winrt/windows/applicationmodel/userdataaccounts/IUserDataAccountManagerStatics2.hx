@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.userdataaccounts;
 @:native("winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics2")
 extern interface IUserDataAccountManagerStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.applicationmodel.userdataaccounts.UserDataAccountManagerForUser;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.applicationmodel.userdataaccounts.UserDataAccountManagerForUser;
 }

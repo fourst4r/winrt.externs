@@ -9,5 +9,5 @@ package winrt.windows.ui.input.inking;
 extern interface IInkPoint extends winrt.windows.foundation.IInspectable
 {
     overload function Position(): winrt.windows.foundation.Point;
-    overload function Pressure(): Float32;
+    overload function Pressure(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
 }

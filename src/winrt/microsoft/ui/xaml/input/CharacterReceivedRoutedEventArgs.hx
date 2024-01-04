@@ -10,7 +10,7 @@ extern class CharacterReceivedRoutedEventArgs
     extends winrt.microsoft.ui.xaml.RoutedEventArgs
     implements winrt.microsoft.ui.xaml.input.ICharacterReceivedRoutedEventArgs
 {
-    overload function Character(): Char;
+    overload function Character(): #if reflaxe.cpp cxx. #else cpp. #end Char;
     overload function KeyStatus(): winrt.windows.ui.core.CorePhysicalKeyStatus;
     overload function Handled(): Bool;
     overload function Handled(value: Bool): Void;

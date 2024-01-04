@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.appextensions;
 @:native("winrt::Windows::ApplicationModel::AppExtensions::IAppExtensionCatalogStatics")
 extern interface IAppExtensionCatalogStatics extends winrt.windows.foundation.IInspectable
 {
-    function Open(appExtensionName: ConstRef<winrt.HString>): winrt.windows.applicationmodel.appextensions.AppExtensionCatalog;
+    function Open(appExtensionName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.appextensions.AppExtensionCatalog;
 }

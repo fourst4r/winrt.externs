@@ -12,5 +12,5 @@ extern class RelativeSource
 {
     function new();
     overload function Mode(): winrt.microsoft.ui.xaml.data.RelativeSourceMode;
-    overload function Mode(value: ConstRef<winrt.microsoft.ui.xaml.data.RelativeSourceMode>): Void;
+    overload function Mode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.data.RelativeSourceMode>): Void;
 }

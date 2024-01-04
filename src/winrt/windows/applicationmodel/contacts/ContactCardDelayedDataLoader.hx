@@ -10,6 +10,6 @@ extern class ContactCardDelayedDataLoader
     implements winrt.windows.foundation.IClosable
     implements winrt.windows.applicationmodel.contacts.IContactCardDelayedDataLoader
 {
-    function SetData(contact: ConstRef<winrt.windows.applicationmodel.contacts.Contact>): Void;
+    function SetData(contact: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.contacts.Contact>): Void;
     function Close(): Void;
 }

@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.appointments;
 
 @:include("winrt/Windows.ApplicationModel.Appointments.h", true)
 @:native("winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncStatus")
-extern enum abstract AppointmentCalendarSyncStatus(Int32)
+extern enum abstract AppointmentCalendarSyncStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncStatus::Idle") final Idle;
     @:native("winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncStatus::Syncing") final Syncing;

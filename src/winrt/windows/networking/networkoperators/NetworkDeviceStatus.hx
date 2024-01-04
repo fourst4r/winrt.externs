@@ -2,7 +2,7 @@ package winrt.windows.networking.networkoperators;
 
 @:include("winrt/Windows.Networking.NetworkOperators.h", true)
 @:native("winrt::Windows::Networking::NetworkOperators::NetworkDeviceStatus")
-extern enum abstract NetworkDeviceStatus(Int32)
+extern enum abstract NetworkDeviceStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Networking::NetworkOperators::NetworkDeviceStatus::DeviceNotReady") final DeviceNotReady;
     @:native("winrt::Windows::Networking::NetworkOperators::NetworkDeviceStatus::DeviceReady") final DeviceReady;

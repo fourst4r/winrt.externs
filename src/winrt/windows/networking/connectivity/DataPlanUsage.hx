@@ -9,6 +9,6 @@ package winrt.windows.networking.connectivity;
 extern class DataPlanUsage
     implements winrt.windows.networking.connectivity.IDataPlanUsage
 {
-    overload function MegabytesUsed(): UInt32;
+    overload function MegabytesUsed(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function LastSyncTime(): winrt.windows.foundation.DateTime;
 }

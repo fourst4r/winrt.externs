@@ -12,5 +12,5 @@ extern interface ISceneNode extends winrt.windows.foundation.IInspectable
     overload function Components(): winrt.microsoft.ui.composition.scenes.SceneComponentCollection;
     overload function Parent(): winrt.microsoft.ui.composition.scenes.SceneNode;
     overload function Transform(): winrt.microsoft.ui.composition.scenes.SceneModelTransform;
-    function FindFirstComponentOfType(value: ConstRef<winrt.microsoft.ui.composition.scenes.SceneComponentType>): winrt.microsoft.ui.composition.scenes.SceneComponent;
+    function FindFirstComponentOfType(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.scenes.SceneComponentType>): winrt.microsoft.ui.composition.scenes.SceneComponent;
 }

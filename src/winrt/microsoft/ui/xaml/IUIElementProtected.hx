@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml;
 extern interface IUIElementProtected extends winrt.windows.foundation.IInspectable
 {
     overload function ProtectedCursor(): winrt.microsoft.ui.input.InputCursor;
-    overload function ProtectedCursor(value: ConstRef<winrt.microsoft.ui.input.InputCursor>): Void;
+    overload function ProtectedCursor(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.input.InputCursor>): Void;
 }

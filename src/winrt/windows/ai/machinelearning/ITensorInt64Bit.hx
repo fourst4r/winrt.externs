@@ -8,5 +8,5 @@ package winrt.windows.ai.machinelearning;
 @:native("winrt::Windows::AI::MachineLearning::ITensorInt64Bit")
 extern interface ITensorInt64Bit extends winrt.windows.foundation.IInspectable
 {
-    function GetAsVectorView(): winrt.windows.foundation.collections.IVectorView<Int64> /* GenericTypeInstSig */;
+    function GetAsVectorView(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end Int64> /* GenericTypeInstSig */;
 }

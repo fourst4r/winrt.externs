@@ -12,7 +12,7 @@ extern class AppInstallerInfo
 {
     overload function Uri(): winrt.windows.foundation.Uri;
     overload function OnLaunch(): Bool;
-    overload function HoursBetweenUpdateChecks(): UInt32;
+    overload function HoursBetweenUpdateChecks(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function ShowPrompt(): Bool;
     overload function UpdateBlocksActivation(): Bool;
     overload function AutomaticBackgroundTask(): Bool;

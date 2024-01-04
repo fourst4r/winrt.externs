@@ -2,7 +2,7 @@ package winrt.windows.globalization.datetimeformatting;
 
 @:include("winrt/Windows.Globalization.DateTimeFormatting.h", true)
 @:native("winrt::Windows::Globalization::DateTimeFormatting::MonthFormat")
-extern enum abstract MonthFormat(Int32)
+extern enum abstract MonthFormat(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Globalization::DateTimeFormatting::MonthFormat::None") final None;
     @:native("winrt::Windows::Globalization::DateTimeFormatting::MonthFormat::Default") final Default;

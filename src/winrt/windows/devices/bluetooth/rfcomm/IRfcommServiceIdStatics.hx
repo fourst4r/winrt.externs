@@ -8,8 +8,8 @@ package winrt.windows.devices.bluetooth.rfcomm;
 @:native("winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceIdStatics")
 extern interface IRfcommServiceIdStatics extends winrt.windows.foundation.IInspectable
 {
-    function FromUuid(uuid: ConstRef<winrt.Guid>): winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId;
-    function FromShortId(shortId: UInt32): winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId;
+    function FromUuid(uuid: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId;
+    function FromShortId(shortId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId;
     overload function SerialPort(): winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId;
     overload function ObexObjectPush(): winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId;
     overload function ObexFileTransfer(): winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId;

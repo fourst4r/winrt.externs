@@ -8,5 +8,5 @@ package winrt.windows.storage;
 @:native("winrt::Windows::Storage::IStorageFolderStatics")
 extern interface IStorageFolderStatics extends winrt.windows.foundation.IInspectable
 {
-    function GetFolderFromPathAsync(path: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.StorageFolder> /* GenericTypeInstSig */;
+    function GetFolderFromPathAsync(path: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.StorageFolder> /* GenericTypeInstSig */;
 }

@@ -9,6 +9,6 @@ package winrt.microsoft.ui.xaml.media;
 extern interface IGeometryStatics extends winrt.windows.foundation.IInspectable
 {
     overload function Empty(): winrt.microsoft.ui.xaml.media.Geometry;
-    overload function StandardFlatteningTolerance(): Float64;
+    overload function StandardFlatteningTolerance(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function TransformProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
 }

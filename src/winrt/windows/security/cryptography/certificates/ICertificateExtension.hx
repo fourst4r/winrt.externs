@@ -9,10 +9,10 @@ package winrt.windows.security.cryptography.certificates;
 extern interface ICertificateExtension extends winrt.windows.foundation.IInspectable
 {
     overload function ObjectId(): winrt.HString;
-    overload function ObjectId(value: ConstRef<winrt.HString>): Void;
+    overload function ObjectId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function IsCritical(): Bool;
     overload function IsCritical(value: Bool): Void;
-    function EncodeValue(value: ConstRef<winrt.HString>): Void;
-    overload function Value(): winrt.ComArray<UInt8>;
-    overload function Value(value: winrt.ArrayView<UInt8>): Void;
+    function EncodeValue(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function Value(): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
+    overload function Value(value: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): Void;
 }

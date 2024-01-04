@@ -8,5 +8,5 @@ package winrt.windows.graphics.holographic;
 @:native("winrt::Windows::Graphics::Holographic::IHolographicDisplay3")
 extern interface IHolographicDisplay3 extends winrt.windows.foundation.IInspectable
 {
-    function TryGetViewConfiguration(kind: ConstRef<winrt.windows.graphics.holographic.HolographicViewConfigurationKind>): winrt.windows.graphics.holographic.HolographicViewConfiguration;
+    function TryGetViewConfiguration(kind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.holographic.HolographicViewConfigurationKind>): winrt.windows.graphics.holographic.HolographicViewConfiguration;
 }

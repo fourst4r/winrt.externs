@@ -13,5 +13,5 @@ extern class EnclosureLocation
     overload function InDock(): Bool;
     overload function InLid(): Bool;
     overload function Panel(): winrt.windows.devices.enumeration.Panel;
-    overload function RotationAngleInDegreesClockwise(): UInt32;
+    overload function RotationAngleInDegreesClockwise(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

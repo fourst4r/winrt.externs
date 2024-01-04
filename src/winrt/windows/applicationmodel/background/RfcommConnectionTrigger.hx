@@ -16,7 +16,7 @@ extern class RfcommConnectionTrigger
     overload function AllowMultipleConnections(): Bool;
     overload function AllowMultipleConnections(value: Bool): Void;
     overload function ProtectionLevel(): winrt.windows.networking.sockets.SocketProtectionLevel;
-    overload function ProtectionLevel(value: ConstRef<winrt.windows.networking.sockets.SocketProtectionLevel>): Void;
+    overload function ProtectionLevel(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.sockets.SocketProtectionLevel>): Void;
     overload function RemoteHostName(): winrt.windows.networking.HostName;
-    overload function RemoteHostName(value: ConstRef<winrt.windows.networking.HostName>): Void;
+    overload function RemoteHostName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.HostName>): Void;
 }

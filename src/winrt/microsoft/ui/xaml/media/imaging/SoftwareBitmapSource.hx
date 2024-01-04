@@ -12,6 +12,6 @@ extern class SoftwareBitmapSource
     implements winrt.windows.foundation.IClosable
 {
     function new();
-    function SetBitmapAsync(softwareBitmap: ConstRef<winrt.windows.graphics.imaging.SoftwareBitmap>): winrt.windows.foundation.IAsyncAction;
+    function SetBitmapAsync(softwareBitmap: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.imaging.SoftwareBitmap>): winrt.windows.foundation.IAsyncAction;
     function Close(): Void;
 }

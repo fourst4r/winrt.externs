@@ -11,10 +11,10 @@ extern class SystemDiagnosticInfo
 {
     overload function MemoryUsage(): winrt.windows.system.diagnostics.SystemMemoryUsage;
     overload function CpuUsage(): winrt.windows.system.diagnostics.SystemCpuUsage;
-    function IsArchitectureSupported(type: ConstRef<winrt.windows.system.ProcessorArchitecture>): Bool;
+    function IsArchitectureSupported(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.ProcessorArchitecture>): Bool;
     overload function PreferredArchitecture(): winrt.windows.system.ProcessorArchitecture;
     function GetForCurrentSystem(): winrt.windows.system.diagnostics.SystemDiagnosticInfo;
     static function GetForCurrentSystem(): winrt.windows.system.diagnostics.SystemDiagnosticInfo;
-    static function IsArchitectureSupported(type: ConstRef<winrt.windows.system.ProcessorArchitecture>): Bool;
+    static function IsArchitectureSupported(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.ProcessorArchitecture>): Bool;
     static overload function PreferredArchitecture(): winrt.windows.system.ProcessorArchitecture;
 }

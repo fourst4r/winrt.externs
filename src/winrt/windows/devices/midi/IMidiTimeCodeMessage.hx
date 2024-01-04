@@ -8,6 +8,6 @@ package winrt.windows.devices.midi;
 @:native("winrt::Windows::Devices::Midi::IMidiTimeCodeMessage")
 extern interface IMidiTimeCodeMessage extends winrt.windows.foundation.IInspectable
 {
-    overload function FrameType(): UInt8;
-    overload function Values(): UInt8;
+    overload function FrameType(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function Values(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
 }

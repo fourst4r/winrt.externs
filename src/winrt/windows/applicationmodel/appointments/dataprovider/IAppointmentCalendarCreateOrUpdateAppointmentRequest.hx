@@ -12,6 +12,6 @@ extern interface IAppointmentCalendarCreateOrUpdateAppointmentRequest extends wi
     overload function Appointment(): winrt.windows.applicationmodel.appointments.Appointment;
     overload function NotifyInvitees(): Bool;
     overload function ChangedProperties(): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
-    function ReportCompletedAsync(createdOrUpdatedAppointment: ConstRef<winrt.windows.applicationmodel.appointments.Appointment>): winrt.windows.foundation.IAsyncAction;
+    function ReportCompletedAsync(createdOrUpdatedAppointment: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.appointments.Appointment>): winrt.windows.foundation.IAsyncAction;
     function ReportFailedAsync(): winrt.windows.foundation.IAsyncAction;
 }

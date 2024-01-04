@@ -9,6 +9,6 @@ package winrt.windows.perception.spatial;
 extern interface ISpatialAnchorExportSufficiency extends winrt.windows.foundation.IInspectable
 {
     overload function IsMinimallySufficient(): Bool;
-    overload function SufficiencyLevel(): Float64;
-    overload function RecommendedSufficiencyLevel(): Float64;
+    overload function SufficiencyLevel(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function RecommendedSufficiencyLevel(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

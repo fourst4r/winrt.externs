@@ -12,7 +12,7 @@ extern class EdgeUIThemeTransition
 {
     function new();
     overload function Edge(): winrt.windows.ui.xaml.controls.primitives.EdgeTransitionLocation;
-    overload function Edge(value: ConstRef<winrt.windows.ui.xaml.controls.primitives.EdgeTransitionLocation>): Void;
+    overload function Edge(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.primitives.EdgeTransitionLocation>): Void;
     overload function EdgeProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function EdgeProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

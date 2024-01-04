@@ -9,7 +9,7 @@ package winrt.windows.devices.sms;
 extern interface ISmsDevice2Statics extends winrt.windows.foundation.IInspectable
 {
     function GetDeviceSelector(): winrt.HString;
-    function FromId(deviceId: ConstRef<winrt.HString>): winrt.windows.devices.sms.SmsDevice2;
+    function FromId(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.devices.sms.SmsDevice2;
     function GetDefault(): winrt.windows.devices.sms.SmsDevice2;
-    function FromParentId(parentDeviceId: ConstRef<winrt.HString>): winrt.windows.devices.sms.SmsDevice2;
+    function FromParentId(parentDeviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.devices.sms.SmsDevice2;
 }

@@ -9,6 +9,6 @@ package winrt.windows.devices.alljoyn;
 extern class AllJoynMessageInfo
     implements winrt.windows.devices.alljoyn.IAllJoynMessageInfo
 {
-    /* explicit */ function new(senderUniqueName: ConstRef<winrt.HString>);
+    /* explicit */ function new(senderUniqueName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     overload function SenderUniqueName(): winrt.HString;
 }

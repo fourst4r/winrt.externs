@@ -8,14 +8,14 @@ package winrt.windows.media.mediaproperties;
 @:native("winrt::Windows::Media::MediaProperties::IH264ProfileIdsStatics")
 extern interface IH264ProfileIdsStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function ConstrainedBaseline(): Int32;
-    overload function Baseline(): Int32;
-    overload function Extended(): Int32;
-    overload function Main(): Int32;
-    overload function High(): Int32;
-    overload function High10(): Int32;
-    overload function High422(): Int32;
-    overload function High444(): Int32;
-    overload function StereoHigh(): Int32;
-    overload function MultiviewHigh(): Int32;
+    overload function ConstrainedBaseline(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Baseline(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Extended(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Main(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function High(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function High10(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function High422(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function High444(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function StereoHigh(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function MultiviewHigh(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

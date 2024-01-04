@@ -10,7 +10,7 @@ extern interface IUsbBulkOutPipe extends winrt.windows.foundation.IInspectable
 {
     overload function EndpointDescriptor(): winrt.windows.devices.usb.UsbBulkOutEndpointDescriptor;
     function ClearStallAsync(): winrt.windows.foundation.IAsyncAction;
-    overload function WriteOptions(value: ConstRef<winrt.windows.devices.usb.UsbWriteOptions>): Void;
+    overload function WriteOptions(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.usb.UsbWriteOptions>): Void;
     overload function WriteOptions(): winrt.windows.devices.usb.UsbWriteOptions;
     overload function OutputStream(): winrt.windows.storage.streams.IOutputStream;
 }

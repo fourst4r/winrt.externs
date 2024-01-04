@@ -8,17 +8,17 @@ package winrt.windows.devices.pointofservice;
 @:native("winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation")
 extern interface ICommonClaimedPosPrinterStation extends winrt.windows.foundation.IInspectable
 {
-    overload function CharactersPerLine(value: UInt32): Void;
-    overload function CharactersPerLine(): UInt32;
-    overload function LineHeight(value: UInt32): Void;
-    overload function LineHeight(): UInt32;
-    overload function LineSpacing(value: UInt32): Void;
-    overload function LineSpacing(): UInt32;
-    overload function LineWidth(): UInt32;
+    overload function CharactersPerLine(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function CharactersPerLine(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function LineHeight(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function LineHeight(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function LineSpacing(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function LineSpacing(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function LineWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function IsLetterQuality(value: Bool): Void;
     overload function IsLetterQuality(): Bool;
     overload function IsPaperNearEnd(): Bool;
-    overload function ColorCartridge(value: ConstRef<winrt.windows.devices.pointofservice.PosPrinterColorCartridge>): Void;
+    overload function ColorCartridge(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.pointofservice.PosPrinterColorCartridge>): Void;
     overload function ColorCartridge(): winrt.windows.devices.pointofservice.PosPrinterColorCartridge;
     overload function IsCoverOpen(): Bool;
     overload function IsCartridgeRemoved(): Bool;
@@ -26,5 +26,5 @@ extern interface ICommonClaimedPosPrinterStation extends winrt.windows.foundatio
     overload function IsHeadCleaning(): Bool;
     overload function IsPaperEmpty(): Bool;
     overload function IsReadyToPrint(): Bool;
-    function ValidateData(data: ConstRef<winrt.HString>): Bool;
+    function ValidateData(data: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
 }

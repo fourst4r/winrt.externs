@@ -12,5 +12,5 @@ extern class ClosestInteractiveBoundsRequestedEventArgs
     overload function PointerPosition(): winrt.windows.foundation.Point;
     overload function SearchBounds(): winrt.windows.foundation.Rect;
     overload function ClosestInteractiveBounds(): winrt.windows.foundation.Rect;
-    overload function ClosestInteractiveBounds(value: ConstRef<winrt.windows.foundation.Rect>): Void;
+    overload function ClosestInteractiveBounds(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Rect>): Void;
 }

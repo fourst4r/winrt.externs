@@ -2,7 +2,7 @@ package winrt.windows.storage;
 
 @:include("winrt/Windows.Storage.h", true)
 @:native("winrt::Windows::Storage::KnownFoldersAccessStatus")
-extern enum abstract KnownFoldersAccessStatus(Int32)
+extern enum abstract KnownFoldersAccessStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Storage::KnownFoldersAccessStatus::DeniedBySystem") final DeniedBySystem;
     @:native("winrt::Windows::Storage::KnownFoldersAccessStatus::NotDeclaredByApp") final NotDeclaredByApp;

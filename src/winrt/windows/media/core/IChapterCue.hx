@@ -8,6 +8,6 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::IChapterCue")
 extern interface IChapterCue extends winrt.windows.foundation.IInspectable
 {
-    overload function Title(value: ConstRef<winrt.HString>): Void;
+    overload function Title(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Title(): winrt.HString;
 }

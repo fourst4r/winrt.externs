@@ -8,6 +8,6 @@ package winrt.windows.ui.xaml.interop;
 @:native("winrt::Windows::UI::Xaml::Interop::IBindableObservableVector")
 extern interface IBindableObservableVector extends winrt.windows.foundation.IInspectable
 {
-    overload function VectorChanged(handler: ConstRef<winrt.windows.ui.xaml.interop.BindableVectorChangedEventHandler>): winrt.EventToken;
-    @:noExcept overload function VectorChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function VectorChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.interop.BindableVectorChangedEventHandler>): winrt.EventToken;
+    @:noExcept overload function VectorChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

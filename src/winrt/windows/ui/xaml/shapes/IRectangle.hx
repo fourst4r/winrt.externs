@@ -8,8 +8,8 @@ package winrt.windows.ui.xaml.shapes;
 @:native("winrt::Windows::UI::Xaml::Shapes::IRectangle")
 extern interface IRectangle extends winrt.windows.foundation.IInspectable
 {
-    overload function RadiusX(): Float64;
-    overload function RadiusX(value: Float64): Void;
-    overload function RadiusY(): Float64;
-    overload function RadiusY(value: Float64): Void;
+    overload function RadiusX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function RadiusX(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function RadiusY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function RadiusY(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

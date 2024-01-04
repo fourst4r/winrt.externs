@@ -2,7 +2,7 @@ package winrt.microsoft.ui.composition;
 
 @:include("winrt/Microsoft.UI.Composition.h", true)
 @:native("winrt::Microsoft::UI::Composition::CompositionColorSpace")
-extern enum abstract CompositionColorSpace(Int32)
+extern enum abstract CompositionColorSpace(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Composition::CompositionColorSpace::Auto") final Auto;
     @:native("winrt::Microsoft::UI::Composition::CompositionColorSpace::Hsl") final Hsl;

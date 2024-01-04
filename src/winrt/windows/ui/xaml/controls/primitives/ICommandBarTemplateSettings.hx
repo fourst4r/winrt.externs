@@ -8,11 +8,11 @@ package winrt.windows.ui.xaml.controls.primitives;
 @:native("winrt::Windows::UI::Xaml::Controls::Primitives::ICommandBarTemplateSettings")
 extern interface ICommandBarTemplateSettings extends winrt.windows.foundation.IInspectable
 {
-    overload function ContentHeight(): Float64;
+    overload function ContentHeight(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function OverflowContentClipRect(): winrt.windows.foundation.Rect;
-    overload function OverflowContentMinWidth(): Float64;
-    overload function OverflowContentMaxHeight(): Float64;
-    overload function OverflowContentHorizontalOffset(): Float64;
-    overload function OverflowContentHeight(): Float64;
-    overload function NegativeOverflowContentHeight(): Float64;
+    overload function OverflowContentMinWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function OverflowContentMaxHeight(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function OverflowContentHorizontalOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function OverflowContentHeight(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function NegativeOverflowContentHeight(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

@@ -12,7 +12,7 @@ extern class GettingFocusEventArgs
 {
     overload function OldFocusedElement(): winrt.microsoft.ui.xaml.DependencyObject;
     overload function NewFocusedElement(): winrt.microsoft.ui.xaml.DependencyObject;
-    overload function NewFocusedElement(value: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): Void;
+    overload function NewFocusedElement(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyObject>): Void;
     overload function FocusState(): winrt.microsoft.ui.xaml.FocusState;
     overload function Direction(): winrt.microsoft.ui.xaml.input.FocusNavigationDirection;
     overload function Handled(): Bool;
@@ -22,5 +22,5 @@ extern class GettingFocusEventArgs
     overload function Cancel(value: Bool): Void;
     overload function CorrelationId(): winrt.Guid;
     function TryCancel(): Bool;
-    function TrySetNewFocusedElement(element: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): Bool;
+    function TrySetNewFocusedElement(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyObject>): Bool;
 }

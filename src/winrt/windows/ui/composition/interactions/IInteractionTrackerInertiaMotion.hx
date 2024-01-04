@@ -9,7 +9,7 @@ package winrt.windows.ui.composition.interactions;
 extern interface IInteractionTrackerInertiaMotion extends winrt.windows.foundation.IInspectable
 {
     overload function Condition(): winrt.windows.ui.composition.ExpressionAnimation;
-    overload function Condition(value: ConstRef<winrt.windows.ui.composition.ExpressionAnimation>): Void;
+    overload function Condition(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.ExpressionAnimation>): Void;
     overload function Motion(): winrt.windows.ui.composition.ExpressionAnimation;
-    overload function Motion(value: ConstRef<winrt.windows.ui.composition.ExpressionAnimation>): Void;
+    overload function Motion(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.ExpressionAnimation>): Void;
 }

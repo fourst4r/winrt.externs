@@ -8,7 +8,7 @@ package winrt.windows.devices.sensors;
 @:native("winrt::Windows::Devices::Sensors::IInclinometer2")
 extern interface IInclinometer2 extends winrt.windows.foundation.IInspectable
 {
-    overload function ReadingTransform(value: ConstRef<winrt.windows.graphics.display.DisplayOrientations>): Void;
+    overload function ReadingTransform(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.display.DisplayOrientations>): Void;
     overload function ReadingTransform(): winrt.windows.graphics.display.DisplayOrientations;
     overload function ReadingType(): winrt.windows.devices.sensors.SensorReadingType;
 }

@@ -9,9 +9,9 @@ package winrt.windows.security.cryptography.core;
 extern class CryptographicKey
     implements winrt.windows.security.cryptography.core.ICryptographicKey
 {
-    overload function KeySize(): UInt32;
+    overload function KeySize(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function Export(): winrt.windows.storage.streams.IBuffer;
-    overload function Export(BlobType: ConstRef<winrt.windows.security.cryptography.core.CryptographicPrivateKeyBlobType>): winrt.windows.storage.streams.IBuffer;
+    overload function Export(BlobType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.core.CryptographicPrivateKeyBlobType>): winrt.windows.storage.streams.IBuffer;
     overload function ExportPublicKey(): winrt.windows.storage.streams.IBuffer;
-    overload function ExportPublicKey(BlobType: ConstRef<winrt.windows.security.cryptography.core.CryptographicPublicKeyBlobType>): winrt.windows.storage.streams.IBuffer;
+    overload function ExportPublicKey(BlobType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.core.CryptographicPublicKeyBlobType>): winrt.windows.storage.streams.IBuffer;
 }

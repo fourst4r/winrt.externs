@@ -9,6 +9,6 @@ package winrt.windows.networking.connectivity;
 extern class LanIdentifierData
     implements winrt.windows.networking.connectivity.ILanIdentifierData
 {
-    overload function Type(): UInt32;
-    overload function Value(): winrt.windows.foundation.collections.IVectorView<UInt8> /* GenericTypeInstSig */;
+    overload function Type(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Value(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8> /* GenericTypeInstSig */;
 }

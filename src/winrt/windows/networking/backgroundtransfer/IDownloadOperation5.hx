@@ -8,6 +8,6 @@ package winrt.windows.networking.backgroundtransfer;
 @:native("winrt::Windows::Networking::BackgroundTransfer::IDownloadOperation5")
 extern interface IDownloadOperation5 extends winrt.windows.foundation.IInspectable
 {
-    function SetRequestHeader(headerName: ConstRef<winrt.HString>, headerValue: ConstRef<winrt.HString>): Void;
-    function RemoveRequestHeader(headerName: ConstRef<winrt.HString>): Void;
+    function SetRequestHeader(headerName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, headerValue: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function RemoveRequestHeader(headerName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

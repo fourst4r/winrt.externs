@@ -8,6 +8,6 @@ package winrt.windows.management.policies;
 @:native("winrt::Windows::Management::Policies::INamedPolicyStatics")
 extern interface INamedPolicyStatics extends winrt.windows.foundation.IInspectable
 {
-    function GetPolicyFromPath(area: ConstRef<winrt.HString>, name: ConstRef<winrt.HString>): winrt.windows.management.policies.NamedPolicyData;
-    function GetPolicyFromPathForUser(user: ConstRef<winrt.windows.system.User>, area: ConstRef<winrt.HString>, name: ConstRef<winrt.HString>): winrt.windows.management.policies.NamedPolicyData;
+    function GetPolicyFromPath(area: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.management.policies.NamedPolicyData;
+    function GetPolicyFromPathForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>, area: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.management.policies.NamedPolicyData;
 }

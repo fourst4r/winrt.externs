@@ -13,7 +13,7 @@ extern class DepthMediaFrame
     overload function FrameReference(): winrt.windows.media.capture.frames.MediaFrameReference;
     overload function VideoMediaFrame(): winrt.windows.media.capture.frames.VideoMediaFrame;
     overload function DepthFormat(): winrt.windows.media.capture.frames.DepthMediaFrameFormat;
-    function TryCreateCoordinateMapper(cameraIntrinsics: ConstRef<winrt.windows.media.devices.core.CameraIntrinsics>, coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.media.devices.core.DepthCorrelatedCoordinateMapper;
-    overload function MaxReliableDepth(): UInt32;
-    overload function MinReliableDepth(): UInt32;
+    function TryCreateCoordinateMapper(cameraIntrinsics: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.core.CameraIntrinsics>, coordinateSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.media.devices.core.DepthCorrelatedCoordinateMapper;
+    overload function MaxReliableDepth(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function MinReliableDepth(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

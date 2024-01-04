@@ -10,5 +10,5 @@ extern interface IGuidHelperStatics extends winrt.windows.foundation.IInspectabl
 {
     function CreateNewGuid(): winrt.Guid;
     overload function Empty(): winrt.Guid;
-    function Equals(target: ConstRef<winrt.Guid>, value: ConstRef<winrt.Guid>): Bool;
+    function Equals(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): Bool;
 }

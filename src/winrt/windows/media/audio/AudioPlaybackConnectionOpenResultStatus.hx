@@ -2,7 +2,7 @@ package winrt.windows.media.audio;
 
 @:include("winrt/Windows.Media.Audio.h", true)
 @:native("winrt::Windows::Media::Audio::AudioPlaybackConnectionOpenResultStatus")
-extern enum abstract AudioPlaybackConnectionOpenResultStatus(Int32)
+extern enum abstract AudioPlaybackConnectionOpenResultStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Audio::AudioPlaybackConnectionOpenResultStatus::Success") final Success;
     @:native("winrt::Windows::Media::Audio::AudioPlaybackConnectionOpenResultStatus::RequestTimedOut") final RequestTimedOut;

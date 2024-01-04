@@ -2,7 +2,7 @@ package winrt.windows.ui.input;
 
 @:include("winrt/Windows.UI.Input.h", true)
 @:native("winrt::Windows::UI::Input::RadialControllerMenuKnownIcon")
-extern enum abstract RadialControllerMenuKnownIcon(Int32)
+extern enum abstract RadialControllerMenuKnownIcon(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Input::RadialControllerMenuKnownIcon::Scroll") final Scroll;
     @:native("winrt::Windows::UI::Input::RadialControllerMenuKnownIcon::Zoom") final Zoom;

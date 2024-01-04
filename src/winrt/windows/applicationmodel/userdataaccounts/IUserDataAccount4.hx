@@ -15,5 +15,5 @@ extern interface IUserDataAccount4 extends winrt.windows.foundation.IInspectable
     function FindContactGroupsAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.contacts.ContactGroup> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
     function TryShowCreateContactGroupAsync(): winrt.windows.foundation.IAsyncOperation<winrt.HString> /* GenericTypeInstSig */;
     overload function IsProtectedUnderLock(value: Bool): Void;
-    overload function Icon(value: ConstRef<winrt.windows.storage.streams.IRandomAccessStreamReference>): Void;
+    overload function Icon(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStreamReference>): Void;
 }

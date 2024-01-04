@@ -8,6 +8,6 @@ package winrt.windows.devices.input;
 @:native("winrt::Windows::Devices::Input::IMouseDevice")
 extern interface IMouseDevice extends winrt.windows.foundation.IInspectable
 {
-    overload function MouseMoved(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.input.MouseDevice, winrt.windows.devices.input.MouseEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function MouseMoved(cookie: ConstRef<winrt.EventToken>): Void;
+    overload function MouseMoved(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.input.MouseDevice, winrt.windows.devices.input.MouseEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function MouseMoved(cookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

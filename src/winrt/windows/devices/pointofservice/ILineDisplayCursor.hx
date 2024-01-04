@@ -16,5 +16,5 @@ extern interface ILineDisplayCursor extends winrt.windows.foundation.IInspectabl
     overload function IsReverseSupported(): Bool;
     overload function IsOtherSupported(): Bool;
     function GetAttributes(): winrt.windows.devices.pointofservice.LineDisplayCursorAttributes;
-    function TryUpdateAttributesAsync(attributes: ConstRef<winrt.windows.devices.pointofservice.LineDisplayCursorAttributes>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function TryUpdateAttributesAsync(attributes: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.pointofservice.LineDisplayCursorAttributes>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

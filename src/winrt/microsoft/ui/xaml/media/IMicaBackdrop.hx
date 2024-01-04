@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.media;
 extern interface IMicaBackdrop extends winrt.windows.foundation.IInspectable
 {
     overload function Kind(): winrt.microsoft.ui.composition.systembackdrops.MicaKind;
-    overload function Kind(value: ConstRef<winrt.microsoft.ui.composition.systembackdrops.MicaKind>): Void;
+    overload function Kind(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.systembackdrops.MicaKind>): Void;
 }

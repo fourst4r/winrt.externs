@@ -8,5 +8,5 @@ package winrt.windows.security.authentication.web.provider;
 @:native("winrt::Windows::Security::Authentication::Web::Provider::IWebProviderTokenResponseFactory")
 extern interface IWebProviderTokenResponseFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(webTokenResponse: ConstRef<winrt.windows.security.authentication.web.core.WebTokenResponse>): winrt.windows.security.authentication.web.provider.WebProviderTokenResponse;
+    function Create(webTokenResponse: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.authentication.web.core.WebTokenResponse>): winrt.windows.security.authentication.web.provider.WebProviderTokenResponse;
 }

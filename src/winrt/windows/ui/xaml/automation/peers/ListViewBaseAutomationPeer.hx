@@ -11,7 +11,7 @@ extern class ListViewBaseAutomationPeer
     implements winrt.windows.ui.xaml.automation.peers.IListViewBaseAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.IDropTargetProvider
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.ListViewBase>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.ListViewBase>);
     overload function DropEffect(): winrt.HString;
     overload function DropEffects(): winrt.ComArray<winrt.HString>;
 }

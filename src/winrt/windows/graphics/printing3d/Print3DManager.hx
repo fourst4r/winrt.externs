@@ -9,8 +9,8 @@ package winrt.windows.graphics.printing3d;
 extern class Print3DManager
     implements winrt.windows.graphics.printing3d.IPrint3DManager
 {
-    overload function TaskRequested(eventHandler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.graphics.printing3d.Print3DManager, winrt.windows.graphics.printing3d.Print3DTaskRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function TaskRequested(token: ConstRef<winrt.EventToken>): Void;
+    overload function TaskRequested(eventHandler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.graphics.printing3d.Print3DManager, winrt.windows.graphics.printing3d.Print3DTaskRequestedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function TaskRequested(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     function GetForCurrentView(): winrt.windows.graphics.printing3d.Print3DManager;
     function ShowPrintUIAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     static function GetForCurrentView(): winrt.windows.graphics.printing3d.Print3DManager;

@@ -8,5 +8,5 @@ package winrt.windows.networking.networkoperators;
 @:native("winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModemIsolationFactory")
 extern interface IMobileBroadbandModemIsolationFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(modemDeviceId: ConstRef<winrt.HString>, ruleGroupId: ConstRef<winrt.HString>): winrt.windows.networking.networkoperators.MobileBroadbandModemIsolation;
+    function Create(modemDeviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, ruleGroupId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.networking.networkoperators.MobileBroadbandModemIsolation;
 }

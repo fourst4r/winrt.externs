@@ -11,10 +11,10 @@ extern class NumeralSystemTranslator
 {
     function new();
     @:native("winrt::Windows::Globalization::NumberFormatting::NumeralSystemTranslator")
-    /* explicit */ static overload function make(languages: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.globalization.numberformatting.NumeralSystemTranslator;
+    /* explicit */ static overload function make(languages: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.globalization.numberformatting.NumeralSystemTranslator;
     overload function Languages(): winrt.windows.foundation.collections.IVectorView<winrt.HString> /* GenericTypeInstSig */;
     overload function ResolvedLanguage(): winrt.HString;
     overload function NumeralSystem(): winrt.HString;
-    overload function NumeralSystem(value: ConstRef<winrt.HString>): Void;
-    function TranslateNumerals(value: ConstRef<winrt.HString>): winrt.HString;
+    overload function NumeralSystem(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function TranslateNumerals(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.HString;
 }

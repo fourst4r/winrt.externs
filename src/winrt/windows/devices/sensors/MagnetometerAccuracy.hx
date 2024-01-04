@@ -2,7 +2,7 @@ package winrt.windows.devices.sensors;
 
 @:include("winrt/Windows.Devices.Sensors.h", true)
 @:native("winrt::Windows::Devices::Sensors::MagnetometerAccuracy")
-extern enum abstract MagnetometerAccuracy(Int32)
+extern enum abstract MagnetometerAccuracy(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::Sensors::MagnetometerAccuracy::Unknown") final Unknown;
     @:native("winrt::Windows::Devices::Sensors::MagnetometerAccuracy::Unreliable") final Unreliable;

@@ -12,6 +12,6 @@ extern interface ITextProvider extends winrt.windows.foundation.IInspectable
     overload function SupportedTextSelection(): winrt.windows.ui.xaml.automation.SupportedTextSelection;
     function GetSelection(): winrt.ComArray<winrt.windows.ui.xaml.automation.provider.ITextRangeProvider>;
     function GetVisibleRanges(): winrt.ComArray<winrt.windows.ui.xaml.automation.provider.ITextRangeProvider>;
-    function RangeFromChild(childElement: ConstRef<winrt.windows.ui.xaml.automation.provider.IRawElementProviderSimple>): winrt.windows.ui.xaml.automation.provider.ITextRangeProvider;
-    function RangeFromPoint(screenLocation: ConstRef<winrt.windows.foundation.Point>): winrt.windows.ui.xaml.automation.provider.ITextRangeProvider;
+    function RangeFromChild(childElement: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.provider.IRawElementProviderSimple>): winrt.windows.ui.xaml.automation.provider.ITextRangeProvider;
+    function RangeFromPoint(screenLocation: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): winrt.windows.ui.xaml.automation.provider.ITextRangeProvider;
 }

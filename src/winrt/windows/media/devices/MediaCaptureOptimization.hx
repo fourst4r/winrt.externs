@@ -2,7 +2,7 @@ package winrt.windows.media.devices;
 
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::MediaCaptureOptimization")
-extern enum abstract MediaCaptureOptimization(Int32)
+extern enum abstract MediaCaptureOptimization(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Devices::MediaCaptureOptimization::Default") final Default;
     @:native("winrt::Windows::Media::Devices::MediaCaptureOptimization::Quality") final Quality;

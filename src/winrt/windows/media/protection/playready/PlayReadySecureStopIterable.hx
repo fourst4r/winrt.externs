@@ -9,6 +9,6 @@ package winrt.windows.media.protection.playready;
 extern class PlayReadySecureStopIterable
     implements winrt.windows.foundation.collections.IIterable<winrt.windows.media.protection.playready.IPlayReadySecureStopServiceRequest> /* GenericTypeInstSig */
 {
-    /* explicit */ function new(publisherCertBytes: winrt.ArrayView<UInt8>);
+    /* explicit */ function new(publisherCertBytes: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>);
     function First(): winrt.windows.foundation.collections.IIterator<winrt.windows.media.protection.playready.IPlayReadySecureStopServiceRequest> /* GenericTypeInstSig */;
 }

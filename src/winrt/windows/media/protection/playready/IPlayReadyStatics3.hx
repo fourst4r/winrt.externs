@@ -9,5 +9,5 @@ package winrt.windows.media.protection.playready;
 extern interface IPlayReadyStatics3 extends winrt.windows.foundation.IInspectable
 {
     overload function SecureStopServiceRequestType(): winrt.Guid;
-    function CheckSupportedHardware(hwdrmFeature: ConstRef<winrt.windows.media.protection.playready.PlayReadyHardwareDRMFeatures>): Bool;
+    function CheckSupportedHardware(hwdrmFeature: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.protection.playready.PlayReadyHardwareDRMFeatures>): Bool;
 }

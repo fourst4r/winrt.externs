@@ -12,6 +12,6 @@ extern class EventTrigger
 {
     function new();
     overload function RoutedEvent(): winrt.microsoft.ui.xaml.RoutedEvent;
-    overload function RoutedEvent(value: ConstRef<winrt.microsoft.ui.xaml.RoutedEvent>): Void;
+    overload function RoutedEvent(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.RoutedEvent>): Void;
     overload function Actions(): winrt.microsoft.ui.xaml.TriggerActionCollection;
 }

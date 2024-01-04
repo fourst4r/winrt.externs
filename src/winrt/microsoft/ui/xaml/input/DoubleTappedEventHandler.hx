@@ -2,4 +2,4 @@ package winrt.microsoft.ui.xaml.input;
 
 
 @:extern 
-typedef DoubleTappedEventHandler = Fn<(sender: ConstRef<winrt.windows.foundation.IInspectable>, e: ConstRef<winrt.microsoft.ui.xaml.input.DoubleTappedRoutedEventArgs>)->Void>;
+typedef DoubleTappedEventHandler = Fn<(sender: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, e: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.DoubleTappedRoutedEventArgs>)->Void>;

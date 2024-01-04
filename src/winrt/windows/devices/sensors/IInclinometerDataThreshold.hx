@@ -8,10 +8,10 @@ package winrt.windows.devices.sensors;
 @:native("winrt::Windows::Devices::Sensors::IInclinometerDataThreshold")
 extern interface IInclinometerDataThreshold extends winrt.windows.foundation.IInspectable
 {
-    overload function PitchInDegrees(): Float32;
-    overload function PitchInDegrees(value: Float32): Void;
-    overload function RollInDegrees(): Float32;
-    overload function RollInDegrees(value: Float32): Void;
-    overload function YawInDegrees(): Float32;
-    overload function YawInDegrees(value: Float32): Void;
+    overload function PitchInDegrees(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function PitchInDegrees(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function RollInDegrees(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function RollInDegrees(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function YawInDegrees(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function YawInDegrees(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
 }

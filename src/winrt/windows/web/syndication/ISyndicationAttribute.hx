@@ -9,9 +9,9 @@ package winrt.windows.web.syndication;
 extern interface ISyndicationAttribute extends winrt.windows.foundation.IInspectable
 {
     overload function Name(): winrt.HString;
-    overload function Name(value: ConstRef<winrt.HString>): Void;
+    overload function Name(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Namespace(): winrt.HString;
-    overload function Namespace(value: ConstRef<winrt.HString>): Void;
+    overload function Namespace(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Value(): winrt.HString;
-    overload function Value(value: ConstRef<winrt.HString>): Void;
+    overload function Value(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

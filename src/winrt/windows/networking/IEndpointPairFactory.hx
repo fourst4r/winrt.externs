@@ -8,5 +8,5 @@ package winrt.windows.networking;
 @:native("winrt::Windows::Networking::IEndpointPairFactory")
 extern interface IEndpointPairFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateEndpointPair(localHostName: ConstRef<winrt.windows.networking.HostName>, localServiceName: ConstRef<winrt.HString>, remoteHostName: ConstRef<winrt.windows.networking.HostName>, remoteServiceName: ConstRef<winrt.HString>): winrt.windows.networking.EndpointPair;
+    function CreateEndpointPair(localHostName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.HostName>, localServiceName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, remoteHostName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.HostName>, remoteServiceName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.networking.EndpointPair;
 }

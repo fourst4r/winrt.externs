@@ -11,12 +11,12 @@ extern class PerspectiveTransform3D
     implements winrt.windows.ui.xaml.media.media3d.IPerspectiveTransform3D
 {
     function new();
-    overload function Depth(): Float64;
-    overload function Depth(value: Float64): Void;
-    overload function OffsetX(): Float64;
-    overload function OffsetX(value: Float64): Void;
-    overload function OffsetY(): Float64;
-    overload function OffsetY(value: Float64): Void;
+    overload function Depth(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Depth(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function OffsetX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function OffsetX(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function OffsetY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function OffsetY(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function DepthProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function OffsetXProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function OffsetYProperty(): winrt.windows.ui.xaml.DependencyProperty;

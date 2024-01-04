@@ -2,7 +2,7 @@ package winrt.windows.media.capture;
 
 @:include("winrt/Windows.Media.Capture.h", true)
 @:native("winrt::Windows::Media::Capture::VideoDeviceCharacteristic")
-extern enum abstract VideoDeviceCharacteristic(Int32)
+extern enum abstract VideoDeviceCharacteristic(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Capture::VideoDeviceCharacteristic::AllStreamsIndependent") final AllStreamsIndependent;
     @:native("winrt::Windows::Media::Capture::VideoDeviceCharacteristic::PreviewRecordStreamsIdentical") final PreviewRecordStreamsIdentical;

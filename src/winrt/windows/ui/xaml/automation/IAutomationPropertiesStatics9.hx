@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml.automation;
 extern interface IAutomationPropertiesStatics9 extends winrt.windows.foundation.IInspectable
 {
     overload function AutomationControlTypeProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetAutomationControlType(element: ConstRef<winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.xaml.automation.peers.AutomationControlType;
-    function SetAutomationControlType(element: ConstRef<winrt.windows.ui.xaml.UIElement>, value: ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationControlType>): Void;
+    function GetAutomationControlType(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.xaml.automation.peers.AutomationControlType;
+    function SetAutomationControlType(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.peers.AutomationControlType>): Void;
 }

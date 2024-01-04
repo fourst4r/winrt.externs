@@ -9,5 +9,5 @@ package winrt.windows.ui.text;
 extern interface IRichEditTextRange extends winrt.windows.foundation.IInspectable
 {
     overload function ContentLinkInfo(): winrt.windows.ui.text.ContentLinkInfo;
-    overload function ContentLinkInfo(value: ConstRef<winrt.windows.ui.text.ContentLinkInfo>): Void;
+    overload function ContentLinkInfo(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.text.ContentLinkInfo>): Void;
 }

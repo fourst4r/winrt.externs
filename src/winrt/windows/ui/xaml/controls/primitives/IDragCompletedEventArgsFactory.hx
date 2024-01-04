@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls.primitives;
 @:native("winrt::Windows::UI::Xaml::Controls::Primitives::IDragCompletedEventArgsFactory")
 extern interface IDragCompletedEventArgsFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstanceWithHorizontalChangeVerticalChangeAndCanceled(horizontalChange: Float64, verticalChange: Float64, canceled: Bool, baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.controls.primitives.DragCompletedEventArgs;
+    function CreateInstanceWithHorizontalChangeVerticalChangeAndCanceled(horizontalChange: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, verticalChange: #if reflaxe.cpp cxx.num. #else cpp. #end Float64, canceled: Bool, baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.ui.xaml.controls.primitives.DragCompletedEventArgs;
 }

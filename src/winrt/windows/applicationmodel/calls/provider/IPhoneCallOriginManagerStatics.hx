@@ -10,5 +10,5 @@ extern interface IPhoneCallOriginManagerStatics extends winrt.windows.foundation
 {
     overload function IsCurrentAppActiveCallOriginApp(): Bool;
     function ShowPhoneCallOriginSettingsUI(): Void;
-    function SetCallOrigin(requestId: ConstRef<winrt.Guid>, callOrigin: ConstRef<winrt.windows.applicationmodel.calls.provider.PhoneCallOrigin>): Void;
+    function SetCallOrigin(requestId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>, callOrigin: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.calls.provider.PhoneCallOrigin>): Void;
 }

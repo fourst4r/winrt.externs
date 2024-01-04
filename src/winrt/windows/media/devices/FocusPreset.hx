@@ -2,7 +2,7 @@ package winrt.windows.media.devices;
 
 @:include("winrt/Windows.Media.Devices.h", true)
 @:native("winrt::Windows::Media::Devices::FocusPreset")
-extern enum abstract FocusPreset(Int32)
+extern enum abstract FocusPreset(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Devices::FocusPreset::Auto") final Auto;
     @:native("winrt::Windows::Media::Devices::FocusPreset::Manual") final Manual;

@@ -10,5 +10,5 @@ extern class MenuFlyoutItemTemplateSettings
     extends winrt.windows.ui.xaml.DependencyObject
     implements winrt.windows.ui.xaml.controls.primitives.IMenuFlyoutItemTemplateSettings
 {
-    overload function KeyboardAcceleratorTextMinWidth(): Float64;
+    overload function KeyboardAcceleratorTextMinWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

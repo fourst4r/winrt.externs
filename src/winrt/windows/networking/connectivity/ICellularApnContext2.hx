@@ -9,5 +9,5 @@ package winrt.windows.networking.connectivity;
 extern interface ICellularApnContext2 extends winrt.windows.foundation.IInspectable
 {
     overload function ProfileName(): winrt.HString;
-    overload function ProfileName(value: ConstRef<winrt.HString>): Void;
+    overload function ProfileName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

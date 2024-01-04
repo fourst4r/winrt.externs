@@ -12,6 +12,6 @@ extern class UserDataAccountProviderAddAccountOperation
 {
     overload function ContentKinds(): winrt.windows.applicationmodel.userdataaccounts.UserDataAccountContentKinds;
     overload function PartnerAccountInfos(): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.userdataaccounts.provider.UserDataAccountPartnerAccountInfo> /* GenericTypeInstSig */;
-    function ReportCompleted(userDataAccountId: ConstRef<winrt.HString>): Void;
+    function ReportCompleted(userDataAccountId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Kind(): winrt.windows.applicationmodel.userdataaccounts.provider.UserDataAccountProviderOperationKind;
 }

@@ -9,6 +9,6 @@ package winrt.windows.applicationmodel.calls;
 extern class PhoneCallHistoryManagerForUser
     implements winrt.windows.applicationmodel.calls.IPhoneCallHistoryManagerForUser
 {
-    function RequestStoreAsync(accessType: ConstRef<winrt.windows.applicationmodel.calls.PhoneCallHistoryStoreAccessType>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.calls.PhoneCallHistoryStore> /* GenericTypeInstSig */;
+    function RequestStoreAsync(accessType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.calls.PhoneCallHistoryStoreAccessType>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.calls.PhoneCallHistoryStore> /* GenericTypeInstSig */;
     overload function User(): winrt.windows.system.User;
 }

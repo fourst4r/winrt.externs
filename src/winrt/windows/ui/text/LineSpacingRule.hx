@@ -2,7 +2,7 @@ package winrt.windows.ui.text;
 
 @:include("winrt/Windows.UI.Text.h", true)
 @:native("winrt::Windows::UI::Text::LineSpacingRule")
-extern enum abstract LineSpacingRule(Int32)
+extern enum abstract LineSpacingRule(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Text::LineSpacingRule::Undefined") final Undefined;
     @:native("winrt::Windows::UI::Text::LineSpacingRule::Single") final Single;

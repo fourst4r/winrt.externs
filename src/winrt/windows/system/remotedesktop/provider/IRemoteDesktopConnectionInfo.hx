@@ -8,6 +8,6 @@ package winrt.windows.system.remotedesktop.provider;
 @:native("winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfo")
 extern interface IRemoteDesktopConnectionInfo extends winrt.windows.foundation.IInspectable
 {
-    function SetConnectionStatus(value: ConstRef<winrt.windows.system.remotedesktop.provider.RemoteDesktopConnectionStatus>): Void;
+    function SetConnectionStatus(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.remotedesktop.provider.RemoteDesktopConnectionStatus>): Void;
     function SwitchToLocalSession(): Void;
 }

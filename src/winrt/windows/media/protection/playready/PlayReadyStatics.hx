@@ -11,10 +11,10 @@ extern class PlayReadyStatics
     static overload function MeteringReportServiceRequestType(): winrt.Guid;
     static overload function RevocationServiceRequestType(): winrt.Guid;
     static overload function MediaProtectionSystemId(): winrt.Guid;
-    static overload function PlayReadySecurityVersion(): UInt32;
-    static overload function PlayReadyCertificateSecurityLevel(): UInt32;
+    static overload function PlayReadySecurityVersion(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    static overload function PlayReadyCertificateSecurityLevel(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     static overload function SecureStopServiceRequestType(): winrt.Guid;
-    static function CheckSupportedHardware(hwdrmFeature: ConstRef<winrt.windows.media.protection.playready.PlayReadyHardwareDRMFeatures>): Bool;
+    static function CheckSupportedHardware(hwdrmFeature: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.protection.playready.PlayReadyHardwareDRMFeatures>): Bool;
     static overload function InputTrustAuthorityToCreate(): winrt.HString;
     static overload function ProtectionSystemId(): winrt.Guid;
     static overload function HardwareDRMDisabledAtTime(): winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* GenericTypeInstSig */;

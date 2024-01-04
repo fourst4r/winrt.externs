@@ -8,6 +8,6 @@ package winrt.windows.web.http.headers;
 @:native("winrt::Windows::Web::Http::Headers::IHttpContentCodingWithQualityHeaderValueFactory")
 extern interface IHttpContentCodingWithQualityHeaderValueFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateFromValue(contentCoding: ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValue;
-    function CreateFromValueWithQuality(contentCoding: ConstRef<winrt.HString>, quality: Float64): winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValue;
+    function CreateFromValue(contentCoding: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValue;
+    function CreateFromValueWithQuality(contentCoding: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, quality: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.windows.web.http.headers.HttpContentCodingWithQualityHeaderValue;
 }

@@ -13,7 +13,7 @@ extern class AppBarAutomationPeer
     implements winrt.windows.ui.xaml.automation.provider.IExpandCollapseProvider
     implements winrt.windows.ui.xaml.automation.provider.IWindowProvider
 {
-    /* explicit */ function new(owner: ConstRef<winrt.windows.ui.xaml.controls.AppBar>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.AppBar>);
     overload function ToggleState(): winrt.windows.ui.xaml.automation.ToggleState;
     function Toggle(): Void;
     overload function ExpandCollapseState(): winrt.windows.ui.xaml.automation.ExpandCollapseState;
@@ -26,6 +26,6 @@ extern class AppBarAutomationPeer
     overload function InteractionState(): winrt.windows.ui.xaml.automation.WindowInteractionState;
     overload function VisualState(): winrt.windows.ui.xaml.automation.WindowVisualState;
     function Close(): Void;
-    function SetVisualState(state: ConstRef<winrt.windows.ui.xaml.automation.WindowVisualState>): Void;
-    function WaitForInputIdle(milliseconds: Int32): Bool;
+    function SetVisualState(state: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.WindowVisualState>): Void;
+    function WaitForInputIdle(milliseconds: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Bool;
 }

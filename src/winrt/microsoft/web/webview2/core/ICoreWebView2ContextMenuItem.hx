@@ -10,7 +10,7 @@ extern interface ICoreWebView2ContextMenuItem extends winrt.windows.foundation.I
 {
     overload function Name(): winrt.HString;
     overload function Label(): winrt.HString;
-    overload function CommandId(): Int32;
+    overload function CommandId(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function ShortcutKeyDescription(): winrt.HString;
     overload function Icon(): winrt.windows.storage.streams.IRandomAccessStream;
     overload function Kind(): winrt.microsoft.web.webview2.core.CoreWebView2ContextMenuItemKind;
@@ -19,6 +19,6 @@ extern interface ICoreWebView2ContextMenuItem extends winrt.windows.foundation.I
     overload function IsChecked(): Bool;
     overload function IsChecked(value: Bool): Void;
     overload function Children(): winrt.windows.foundation.collections.IVector<winrt.microsoft.web.webview2.core.CoreWebView2ContextMenuItem> /* GenericTypeInstSig */;
-    overload function CustomItemSelected(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.microsoft.web.webview2.core.CoreWebView2ContextMenuItem, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function CustomItemSelected(token: ConstRef<winrt.EventToken>): Void;
+    overload function CustomItemSelected(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.microsoft.web.webview2.core.CoreWebView2ContextMenuItem, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function CustomItemSelected(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

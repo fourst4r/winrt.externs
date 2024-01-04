@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IItemsControl3")
 extern interface IItemsControl3 extends winrt.windows.foundation.IInspectable
 {
-    function GroupHeaderContainerFromItemContainer(itemContainer: ConstRef<winrt.windows.ui.xaml.DependencyObject>): winrt.windows.ui.xaml.DependencyObject;
+    function GroupHeaderContainerFromItemContainer(itemContainer: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): winrt.windows.ui.xaml.DependencyObject;
 }

@@ -8,5 +8,5 @@ package winrt.windows.media.contentrestrictions;
 @:native("winrt::Windows::Media::ContentRestrictions::IRatedContentRestrictionsFactory")
 extern interface IRatedContentRestrictionsFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWithMaxAgeRating(maxAgeRating: UInt32): winrt.windows.media.contentrestrictions.RatedContentRestrictions;
+    function CreateWithMaxAgeRating(maxAgeRating: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.media.contentrestrictions.RatedContentRestrictions;
 }

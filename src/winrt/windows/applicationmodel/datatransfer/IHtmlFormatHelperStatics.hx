@@ -8,6 +8,6 @@ package winrt.windows.applicationmodel.datatransfer;
 @:native("winrt::Windows::ApplicationModel::DataTransfer::IHtmlFormatHelperStatics")
 extern interface IHtmlFormatHelperStatics extends winrt.windows.foundation.IInspectable
 {
-    function GetStaticFragment(htmlFormat: ConstRef<winrt.HString>): winrt.HString;
-    function CreateHtmlFormat(htmlFragment: ConstRef<winrt.HString>): winrt.HString;
+    function GetStaticFragment(htmlFormat: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.HString;
+    function CreateHtmlFormat(htmlFragment: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.HString;
 }

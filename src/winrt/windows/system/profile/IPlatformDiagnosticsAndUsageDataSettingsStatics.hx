@@ -9,7 +9,7 @@ package winrt.windows.system.profile;
 extern interface IPlatformDiagnosticsAndUsageDataSettingsStatics extends winrt.windows.foundation.IInspectable
 {
     overload function CollectionLevel(): winrt.windows.system.profile.PlatformDataCollectionLevel;
-    overload function CollectionLevelChanged(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function CollectionLevelChanged(token: ConstRef<winrt.EventToken>): Void;
-    function CanCollectDiagnostics(level: ConstRef<winrt.windows.system.profile.PlatformDataCollectionLevel>): Bool;
+    overload function CollectionLevelChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.EventHandler<winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function CollectionLevelChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    function CanCollectDiagnostics(level: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.profile.PlatformDataCollectionLevel>): Bool;
 }

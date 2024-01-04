@@ -12,5 +12,5 @@ extern class PlayReadyDomainIterator
     overload function Current(): winrt.windows.media.protection.playready.IPlayReadyDomain;
     overload function HasCurrent(): Bool;
     function MoveNext(): Bool;
-    function GetMany(items: winrt.ArrayView<winrt.windows.media.protection.playready.IPlayReadyDomain>): UInt32;
+    function GetMany(items: winrt.ArrayView<winrt.windows.media.protection.playready.IPlayReadyDomain>): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

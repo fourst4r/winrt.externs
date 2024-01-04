@@ -8,5 +8,5 @@ package winrt.windows.ui.input.inking.core;
 @:native("winrt::Windows::UI::Input::Inking::Core::ICoreWetStrokeUpdateSourceStatics")
 extern interface ICoreWetStrokeUpdateSourceStatics extends winrt.windows.foundation.IInspectable
 {
-    function Create(inkPresenter: ConstRef<winrt.windows.ui.input.inking.InkPresenter>): winrt.windows.ui.input.inking.core.CoreWetStrokeUpdateSource;
+    function Create(inkPresenter: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.inking.InkPresenter>): winrt.windows.ui.input.inking.core.CoreWetStrokeUpdateSource;
 }

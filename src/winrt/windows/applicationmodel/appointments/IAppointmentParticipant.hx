@@ -9,7 +9,7 @@ package winrt.windows.applicationmodel.appointments;
 extern interface IAppointmentParticipant extends winrt.windows.foundation.IInspectable
 {
     overload function DisplayName(): winrt.HString;
-    overload function DisplayName(value: ConstRef<winrt.HString>): Void;
+    overload function DisplayName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Address(): winrt.HString;
-    overload function Address(value: ConstRef<winrt.HString>): Void;
+    overload function Address(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

@@ -11,6 +11,6 @@ extern class VpnDomainNameAssignment
 {
     function new();
     overload function DomainNameList(): winrt.windows.foundation.collections.IVector<winrt.windows.networking.vpn.VpnDomainNameInfo> /* GenericTypeInstSig */;
-    overload function ProxyAutoConfigurationUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function ProxyAutoConfigurationUri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function ProxyAutoConfigurationUri(): winrt.windows.foundation.Uri;
 }

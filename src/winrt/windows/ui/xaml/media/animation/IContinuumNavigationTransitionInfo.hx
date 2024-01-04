@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.media.animation;
 extern interface IContinuumNavigationTransitionInfo extends winrt.windows.foundation.IInspectable
 {
     overload function ExitElement(): winrt.windows.ui.xaml.UIElement;
-    overload function ExitElement(value: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
+    overload function ExitElement(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
 }

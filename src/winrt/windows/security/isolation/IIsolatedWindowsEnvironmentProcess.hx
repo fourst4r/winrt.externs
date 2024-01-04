@@ -9,8 +9,8 @@ package winrt.windows.security.isolation;
 extern interface IIsolatedWindowsEnvironmentProcess extends winrt.windows.foundation.IInspectable
 {
     overload function State(): winrt.windows.security.isolation.IsolatedWindowsEnvironmentProcessState;
-    overload function ExitCode(): UInt32;
+    overload function ExitCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     function WaitForExit(): Void;
-    function WaitForExitWithTimeout(timeoutMilliseconds: UInt32): Void;
+    function WaitForExitWithTimeout(timeoutMilliseconds: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
     function WaitForExitAsync(): winrt.windows.foundation.IAsyncAction;
 }

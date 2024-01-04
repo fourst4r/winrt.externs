@@ -11,7 +11,7 @@ extern interface IServerStreamWebSocket extends winrt.windows.foundation.IInspec
     overload function Information(): winrt.windows.networking.sockets.ServerStreamWebSocketInformation;
     overload function InputStream(): winrt.windows.storage.streams.IInputStream;
     overload function OutputStream(): winrt.windows.storage.streams.IOutputStream;
-    overload function Closed(value: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.networking.sockets.ServerStreamWebSocket, winrt.windows.networking.sockets.WebSocketClosedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Closed(token: ConstRef<winrt.EventToken>): Void;
-    function Close(code: UInt16, reason: ConstRef<winrt.HString>): Void;
+    overload function Closed(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.networking.sockets.ServerStreamWebSocket, winrt.windows.networking.sockets.WebSocketClosedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Closed(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    function Close(code: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, reason: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

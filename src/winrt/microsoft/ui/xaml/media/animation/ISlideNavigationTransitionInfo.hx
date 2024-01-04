@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.media.animation;
 extern interface ISlideNavigationTransitionInfo extends winrt.windows.foundation.IInspectable
 {
     overload function Effect(): winrt.microsoft.ui.xaml.media.animation.SlideNavigationTransitionEffect;
-    overload function Effect(value: ConstRef<winrt.microsoft.ui.xaml.media.animation.SlideNavigationTransitionEffect>): Void;
+    overload function Effect(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.animation.SlideNavigationTransitionEffect>): Void;
 }

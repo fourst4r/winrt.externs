@@ -9,10 +9,10 @@ package winrt.windows.devices.usb;
 extern class UsbDeviceDescriptor
     implements winrt.windows.devices.usb.IUsbDeviceDescriptor
 {
-    overload function BcdUsb(): UInt32;
-    overload function MaxPacketSize0(): UInt8;
-    overload function VendorId(): UInt32;
-    overload function ProductId(): UInt32;
-    overload function BcdDeviceRevision(): UInt32;
-    overload function NumberOfConfigurations(): UInt8;
+    overload function BcdUsb(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function MaxPacketSize0(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function VendorId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function ProductId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function BcdDeviceRevision(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function NumberOfConfigurations(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
 }

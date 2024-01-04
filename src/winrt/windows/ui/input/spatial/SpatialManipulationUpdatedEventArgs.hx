@@ -10,5 +10,5 @@ extern class SpatialManipulationUpdatedEventArgs
     implements winrt.windows.ui.input.spatial.ISpatialManipulationUpdatedEventArgs
 {
     overload function InteractionSourceKind(): winrt.windows.ui.input.spatial.SpatialInteractionSourceKind;
-    function TryGetCumulativeDelta(coordinateSystem: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.ui.input.spatial.SpatialManipulationDelta;
+    function TryGetCumulativeDelta(coordinateSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.ui.input.spatial.SpatialManipulationDelta;
 }

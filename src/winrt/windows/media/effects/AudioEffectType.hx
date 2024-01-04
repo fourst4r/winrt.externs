@@ -2,7 +2,7 @@ package winrt.windows.media.effects;
 
 @:include("winrt/Windows.Media.Effects.h", true)
 @:native("winrt::Windows::Media::Effects::AudioEffectType")
-extern enum abstract AudioEffectType(Int32)
+extern enum abstract AudioEffectType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Effects::AudioEffectType::Other") final Other;
     @:native("winrt::Windows::Media::Effects::AudioEffectType::AcousticEchoCancellation") final AcousticEchoCancellation;

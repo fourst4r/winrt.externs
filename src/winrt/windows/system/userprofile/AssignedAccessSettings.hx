@@ -13,7 +13,7 @@ extern class AssignedAccessSettings
     overload function IsSingleAppKioskMode(): Bool;
     overload function User(): winrt.windows.system.User;
     function GetDefault(): winrt.windows.system.userprofile.AssignedAccessSettings;
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.system.userprofile.AssignedAccessSettings;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.system.userprofile.AssignedAccessSettings;
     static function GetDefault(): winrt.windows.system.userprofile.AssignedAccessSettings;
-    static function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.system.userprofile.AssignedAccessSettings;
+    static function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.system.userprofile.AssignedAccessSettings;
 }

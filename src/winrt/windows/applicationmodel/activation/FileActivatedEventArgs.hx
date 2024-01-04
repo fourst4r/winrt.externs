@@ -22,7 +22,7 @@ extern class FileActivatedEventArgs
     overload function SplashScreen(): winrt.windows.applicationmodel.activation.SplashScreen;
     overload function NeighboringFilesQuery(): winrt.windows.storage.search.StorageFileQueryResult;
     overload function CallerPackageFamilyName(): winrt.HString;
-    overload function CurrentlyShownApplicationViewId(): Int32;
+    overload function CurrentlyShownApplicationViewId(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function ViewSwitcher(): winrt.windows.ui.viewmanagement.ActivationViewSwitcher;
     overload function User(): winrt.windows.system.User;
 }

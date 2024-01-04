@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.background;
 @:native("winrt::Windows::ApplicationModel::Background::ILocationTriggerFactory")
 extern interface ILocationTriggerFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(triggerType: ConstRef<winrt.windows.applicationmodel.background.LocationTriggerType>): winrt.windows.applicationmodel.background.LocationTrigger;
+    function Create(triggerType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.background.LocationTriggerType>): winrt.windows.applicationmodel.background.LocationTrigger;
 }

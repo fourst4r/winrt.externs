@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel;
 @:native("winrt::Windows::ApplicationModel::IFindRelatedPackagesOptionsFactory")
 extern interface IFindRelatedPackagesOptionsFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(Relationship: ConstRef<winrt.windows.applicationmodel.PackageRelationship>): winrt.windows.applicationmodel.FindRelatedPackagesOptions;
+    function CreateInstance(Relationship: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.PackageRelationship>): winrt.windows.applicationmodel.FindRelatedPackagesOptions;
 }

@@ -11,9 +11,9 @@ extern class PosPrinterPrintOptions
 {
     function new();
     overload function TypeFace(): winrt.HString;
-    overload function TypeFace(value: ConstRef<winrt.HString>): Void;
-    overload function CharacterHeight(): UInt32;
-    overload function CharacterHeight(value: UInt32): Void;
+    overload function TypeFace(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function CharacterHeight(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function CharacterHeight(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
     overload function Bold(): Bool;
     overload function Bold(value: Bool): Void;
     overload function Italic(): Bool;
@@ -33,7 +33,7 @@ extern class PosPrinterPrintOptions
     overload function DoubleHigh(): Bool;
     overload function DoubleHigh(value: Bool): Void;
     overload function Alignment(): winrt.windows.devices.pointofservice.PosPrinterAlignment;
-    overload function Alignment(value: ConstRef<winrt.windows.devices.pointofservice.PosPrinterAlignment>): Void;
-    overload function CharacterSet(): UInt32;
-    overload function CharacterSet(value: UInt32): Void;
+    overload function Alignment(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.pointofservice.PosPrinterAlignment>): Void;
+    overload function CharacterSet(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function CharacterSet(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
 }

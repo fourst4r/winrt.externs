@@ -2,7 +2,7 @@ package winrt.windows.services.maps;
 
 @:include("winrt/Windows.Services.Maps.h", true)
 @:native("winrt::Windows::Services::Maps::ManeuverWarningSeverity")
-extern enum abstract ManeuverWarningSeverity(Int32)
+extern enum abstract ManeuverWarningSeverity(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Services::Maps::ManeuverWarningSeverity::None") final None;
     @:native("winrt::Windows::Services::Maps::ManeuverWarningSeverity::LowImpact") final LowImpact;

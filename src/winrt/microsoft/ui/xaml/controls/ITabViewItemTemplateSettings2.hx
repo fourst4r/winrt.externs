@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.controls;
 extern interface ITabViewItemTemplateSettings2 extends winrt.windows.foundation.IInspectable
 {
     overload function TabGeometry(): winrt.microsoft.ui.xaml.media.Geometry;
-    overload function TabGeometry(value: ConstRef<winrt.microsoft.ui.xaml.media.Geometry>): Void;
+    overload function TabGeometry(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.Geometry>): Void;
 }

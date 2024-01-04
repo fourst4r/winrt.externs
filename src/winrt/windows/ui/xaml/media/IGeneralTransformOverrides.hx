@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml.media;
 extern interface IGeneralTransformOverrides extends winrt.windows.foundation.IInspectable
 {
     overload function InverseCore(): winrt.windows.ui.xaml.media.GeneralTransform;
-    function TryTransformCore(inPoint: ConstRef<winrt.windows.foundation.Point>, outPoint: Ref<winrt.windows.foundation.Point>): Bool;
-    function TransformBoundsCore(rect: ConstRef<winrt.windows.foundation.Rect>): winrt.windows.foundation.Rect;
+    function TryTransformCore(inPoint: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>, outPoint: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.Point>): Bool;
+    function TransformBoundsCore(rect: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Rect>): winrt.windows.foundation.Rect;
 }

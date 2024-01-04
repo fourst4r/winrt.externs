@@ -15,5 +15,5 @@ extern class HoldingRoutedEventArgs
     overload function HoldingState(): winrt.microsoft.ui.input.HoldingState;
     overload function Handled(): Bool;
     overload function Handled(value: Bool): Void;
-    function GetPosition(relativeTo: ConstRef<winrt.microsoft.ui.xaml.UIElement>): winrt.windows.foundation.Point;
+    function GetPosition(relativeTo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): winrt.windows.foundation.Point;
 }

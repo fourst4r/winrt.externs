@@ -12,5 +12,5 @@ extern interface ISpatialInteractionSource2 extends winrt.windows.foundation.IIn
     overload function IsMenuSupported(): Bool;
     overload function IsGraspSupported(): Bool;
     overload function Controller(): winrt.windows.ui.input.spatial.SpatialInteractionController;
-    function TryGetStateAtTimestamp(timestamp: ConstRef<winrt.windows.perception.PerceptionTimestamp>): winrt.windows.ui.input.spatial.SpatialInteractionSourceState;
+    function TryGetStateAtTimestamp(timestamp: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.PerceptionTimestamp>): winrt.windows.ui.input.spatial.SpatialInteractionSourceState;
 }

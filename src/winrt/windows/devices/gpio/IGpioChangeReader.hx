@@ -8,11 +8,11 @@ package winrt.windows.devices.gpio;
 @:native("winrt::Windows::Devices::Gpio::IGpioChangeReader")
 extern interface IGpioChangeReader extends winrt.windows.foundation.IInspectable
 {
-    overload function Capacity(): Int32;
-    overload function Length(): Int32;
+    overload function Capacity(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Length(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function IsEmpty(): Bool;
     overload function IsOverflowed(): Bool;
-    overload function Polarity(value: ConstRef<winrt.windows.devices.gpio.GpioChangePolarity>): Void;
+    overload function Polarity(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.gpio.GpioChangePolarity>): Void;
     overload function Polarity(): winrt.windows.devices.gpio.GpioChangePolarity;
     overload function IsStarted(): Bool;
     function Start(): Void;
@@ -21,5 +21,5 @@ extern interface IGpioChangeReader extends winrt.windows.foundation.IInspectable
     function GetNextItem(): winrt.windows.devices.gpio.GpioChangeRecord;
     function PeekNextItem(): winrt.windows.devices.gpio.GpioChangeRecord;
     function GetAllItems(): winrt.windows.foundation.collections.IVector<winrt.windows.devices.gpio.GpioChangeRecord> /* GenericTypeInstSig */;
-    function WaitForItemsAsync(count: Int32): winrt.windows.foundation.IAsyncAction;
+    function WaitForItemsAsync(count: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.foundation.IAsyncAction;
 }

@@ -10,8 +10,8 @@ extern class DataRequest
     implements winrt.windows.applicationmodel.datatransfer.IDataRequest
 {
     overload function Data(): winrt.windows.applicationmodel.datatransfer.DataPackage;
-    overload function Data(value: ConstRef<winrt.windows.applicationmodel.datatransfer.DataPackage>): Void;
+    overload function Data(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.datatransfer.DataPackage>): Void;
     overload function Deadline(): winrt.windows.foundation.DateTime;
-    function FailWithDisplayText(value: ConstRef<winrt.HString>): Void;
+    function FailWithDisplayText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     function GetDeferral(): winrt.windows.applicationmodel.datatransfer.DataRequestDeferral;
 }

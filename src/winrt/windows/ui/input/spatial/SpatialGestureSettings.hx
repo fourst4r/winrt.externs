@@ -2,7 +2,7 @@ package winrt.windows.ui.input.spatial;
 
 @:include("winrt/Windows.UI.Input.Spatial.h", true)
 @:native("winrt::Windows::UI::Input::Spatial::SpatialGestureSettings")
-extern enum abstract SpatialGestureSettings(UInt32)
+extern enum abstract SpatialGestureSettings(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::UI::Input::Spatial::SpatialGestureSettings::None") final None;
     @:native("winrt::Windows::UI::Input::Spatial::SpatialGestureSettings::Tap") final Tap;

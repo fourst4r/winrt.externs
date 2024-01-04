@@ -12,5 +12,5 @@ extern interface IResourceQualifier extends winrt.windows.foundation.IInspectabl
     overload function QualifierValue(): winrt.HString;
     overload function IsDefault(): Bool;
     overload function IsMatch(): Bool;
-    overload function Score(): Float64;
+    overload function Score(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.automation.provider;
 extern interface IDockProvider extends winrt.windows.foundation.IInspectable
 {
     overload function DockPosition(): winrt.microsoft.ui.xaml.automation.DockPosition;
-    function SetDockPosition(dockPosition: ConstRef<winrt.microsoft.ui.xaml.automation.DockPosition>): Void;
+    function SetDockPosition(dockPosition: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.automation.DockPosition>): Void;
 }

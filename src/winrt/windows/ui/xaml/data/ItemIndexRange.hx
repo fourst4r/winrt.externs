@@ -9,8 +9,8 @@ package winrt.windows.ui.xaml.data;
 extern class ItemIndexRange
     implements winrt.windows.ui.xaml.data.IItemIndexRange
 {
-    function new(firstIndex: Int32, length: UInt32);
-    overload function FirstIndex(): Int32;
-    overload function Length(): UInt32;
-    overload function LastIndex(): Int32;
+    function new(firstIndex: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, length: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32);
+    overload function FirstIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Length(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function LastIndex(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

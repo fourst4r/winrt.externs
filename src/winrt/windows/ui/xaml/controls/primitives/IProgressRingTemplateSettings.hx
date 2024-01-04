@@ -8,7 +8,7 @@ package winrt.windows.ui.xaml.controls.primitives;
 @:native("winrt::Windows::UI::Xaml::Controls::Primitives::IProgressRingTemplateSettings")
 extern interface IProgressRingTemplateSettings extends winrt.windows.foundation.IInspectable
 {
-    overload function EllipseDiameter(): Float64;
+    overload function EllipseDiameter(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function EllipseOffset(): winrt.windows.ui.xaml.Thickness;
-    overload function MaxSideLength(): Float64;
+    overload function MaxSideLength(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

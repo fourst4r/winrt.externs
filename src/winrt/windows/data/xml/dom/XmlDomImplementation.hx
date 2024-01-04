@@ -9,5 +9,5 @@ package winrt.windows.data.xml.dom;
 extern class XmlDomImplementation
     implements winrt.windows.data.xml.dom.IXmlDomImplementation
 {
-    function HasFeature(feature: ConstRef<winrt.HString>, version: ConstRef<winrt.windows.foundation.IInspectable>): Bool;
+    function HasFeature(feature: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, version: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Bool;
 }

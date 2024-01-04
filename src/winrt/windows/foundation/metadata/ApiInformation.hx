@@ -4,14 +4,14 @@ package winrt.windows.foundation.metadata;
 @:native("winrt::Windows::Foundation::Metadata::ApiInformation")
 extern class ApiInformation
 {
-    static function IsTypePresent(typeName: ConstRef<winrt.HString>): Bool;
-    static overload function IsMethodPresent(typeName: ConstRef<winrt.HString>, methodName: ConstRef<winrt.HString>): Bool;
-    static overload function IsMethodPresent(typeName: ConstRef<winrt.HString>, methodName: ConstRef<winrt.HString>, inputParameterCount: UInt32): Bool;
-    static function IsEventPresent(typeName: ConstRef<winrt.HString>, eventName: ConstRef<winrt.HString>): Bool;
-    static function IsPropertyPresent(typeName: ConstRef<winrt.HString>, propertyName: ConstRef<winrt.HString>): Bool;
-    static function IsReadOnlyPropertyPresent(typeName: ConstRef<winrt.HString>, propertyName: ConstRef<winrt.HString>): Bool;
-    static function IsWriteablePropertyPresent(typeName: ConstRef<winrt.HString>, propertyName: ConstRef<winrt.HString>): Bool;
-    static function IsEnumNamedValuePresent(enumTypeName: ConstRef<winrt.HString>, valueName: ConstRef<winrt.HString>): Bool;
-    static overload function IsApiContractPresent(contractName: ConstRef<winrt.HString>, majorVersion: UInt16): Bool;
-    static overload function IsApiContractPresent(contractName: ConstRef<winrt.HString>, majorVersion: UInt16, minorVersion: UInt16): Bool;
+    static function IsTypePresent(typeName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
+    static overload function IsMethodPresent(typeName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, methodName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
+    static overload function IsMethodPresent(typeName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, methodName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, inputParameterCount: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Bool;
+    static function IsEventPresent(typeName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, eventName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
+    static function IsPropertyPresent(typeName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, propertyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
+    static function IsReadOnlyPropertyPresent(typeName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, propertyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
+    static function IsWriteablePropertyPresent(typeName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, propertyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
+    static function IsEnumNamedValuePresent(enumTypeName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, valueName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
+    static overload function IsApiContractPresent(contractName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, majorVersion: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): Bool;
+    static overload function IsApiContractPresent(contractName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, majorVersion: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, minorVersion: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): Bool;
 }

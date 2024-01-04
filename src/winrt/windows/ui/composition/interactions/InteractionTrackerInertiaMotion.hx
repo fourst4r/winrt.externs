@@ -11,9 +11,9 @@ extern class InteractionTrackerInertiaMotion
     implements winrt.windows.ui.composition.interactions.IInteractionTrackerInertiaMotion
 {
     overload function Condition(): winrt.windows.ui.composition.ExpressionAnimation;
-    overload function Condition(value: ConstRef<winrt.windows.ui.composition.ExpressionAnimation>): Void;
+    overload function Condition(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.ExpressionAnimation>): Void;
     overload function Motion(): winrt.windows.ui.composition.ExpressionAnimation;
-    overload function Motion(value: ConstRef<winrt.windows.ui.composition.ExpressionAnimation>): Void;
-    function Create(compositor: ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.interactions.InteractionTrackerInertiaMotion;
-    static function Create(compositor: ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.interactions.InteractionTrackerInertiaMotion;
+    overload function Motion(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.ExpressionAnimation>): Void;
+    function Create(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.interactions.InteractionTrackerInertiaMotion;
+    static function Create(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.interactions.InteractionTrackerInertiaMotion;
 }

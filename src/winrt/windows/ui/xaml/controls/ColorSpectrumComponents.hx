@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.controls;
 
 @:include("winrt/Windows.UI.Xaml.Controls.h", true)
 @:native("winrt::Windows::UI::Xaml::Controls::ColorSpectrumComponents")
-extern enum abstract ColorSpectrumComponents(Int32)
+extern enum abstract ColorSpectrumComponents(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Controls::ColorSpectrumComponents::HueValue") final HueValue;
     @:native("winrt::Windows::UI::Xaml::Controls::ColorSpectrumComponents::ValueHue") final ValueHue;

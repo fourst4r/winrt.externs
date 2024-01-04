@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern class RefreshInteractionRatioChangedEventArgs
     implements winrt.windows.ui.xaml.controls.IRefreshInteractionRatioChangedEventArgs
 {
-    overload function InteractionRatio(): Float64;
+    overload function InteractionRatio(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

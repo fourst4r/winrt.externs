@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.data;
 extern interface IRelativeSource extends winrt.windows.foundation.IInspectable
 {
     overload function Mode(): winrt.windows.ui.xaml.data.RelativeSourceMode;
-    overload function Mode(value: ConstRef<winrt.windows.ui.xaml.data.RelativeSourceMode>): Void;
+    overload function Mode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.data.RelativeSourceMode>): Void;
 }

@@ -8,5 +8,5 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::ITimedMetadataTrackFactory")
 extern interface ITimedMetadataTrackFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(id: ConstRef<winrt.HString>, language: ConstRef<winrt.HString>, kind: ConstRef<winrt.windows.media.core.TimedMetadataKind>): winrt.windows.media.core.TimedMetadataTrack;
+    function Create(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, language: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, kind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.TimedMetadataKind>): winrt.windows.media.core.TimedMetadataTrack;
 }

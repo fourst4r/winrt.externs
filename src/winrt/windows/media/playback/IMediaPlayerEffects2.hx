@@ -8,5 +8,5 @@ package winrt.windows.media.playback;
 @:native("winrt::Windows::Media::Playback::IMediaPlayerEffects2")
 extern interface IMediaPlayerEffects2 extends winrt.windows.foundation.IInspectable
 {
-    function AddVideoEffect(activatableClassId: ConstRef<winrt.HString>, effectOptional: Bool, effectConfiguration: ConstRef<winrt.windows.foundation.collections.IPropertySet>): Void;
+    function AddVideoEffect(activatableClassId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, effectOptional: Bool, effectConfiguration: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IPropertySet>): Void;
 }

@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.contacts;
 extern interface IContactSignificantOther2 extends winrt.windows.foundation.IInspectable
 {
     overload function Relationship(): winrt.windows.applicationmodel.contacts.ContactRelationship;
-    overload function Relationship(value: ConstRef<winrt.windows.applicationmodel.contacts.ContactRelationship>): Void;
+    overload function Relationship(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.contacts.ContactRelationship>): Void;
 }

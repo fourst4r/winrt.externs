@@ -9,7 +9,7 @@ package winrt.windows.media.protection.playready;
 extern class PlayReadySoapMessage
     implements winrt.windows.media.protection.playready.IPlayReadySoapMessage
 {
-    function GetMessageBody(): winrt.ComArray<UInt8>;
+    function GetMessageBody(): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
     overload function MessageHeaders(): winrt.windows.foundation.collections.IPropertySet;
     overload function Uri(): winrt.windows.foundation.Uri;
 }

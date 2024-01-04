@@ -2,7 +2,7 @@ package winrt.windows.gaming.input.forcefeedback;
 
 @:include("winrt/Windows.Gaming.Input.ForceFeedback.h", true)
 @:native("winrt::Windows::Gaming::Input::ForceFeedback::ConditionForceEffectKind")
-extern enum abstract ConditionForceEffectKind(Int32)
+extern enum abstract ConditionForceEffectKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Gaming::Input::ForceFeedback::ConditionForceEffectKind::Spring") final Spring;
     @:native("winrt::Windows::Gaming::Input::ForceFeedback::ConditionForceEffectKind::Damper") final Damper;

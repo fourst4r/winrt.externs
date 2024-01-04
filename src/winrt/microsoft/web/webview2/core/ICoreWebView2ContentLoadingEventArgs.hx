@@ -9,5 +9,5 @@ package winrt.microsoft.web.webview2.core;
 extern interface ICoreWebView2ContentLoadingEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function IsErrorPage(): Bool;
-    overload function NavigationId(): UInt64;
+    overload function NavigationId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

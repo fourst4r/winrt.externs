@@ -2,7 +2,7 @@ package winrt.windows.devices.bluetooth.genericattributeprofile;
 
 @:include("winrt/Windows.Devices.Bluetooth.GenericAttributeProfile.h", true)
 @:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicProperties")
-extern enum abstract GattCharacteristicProperties(UInt32)
+extern enum abstract GattCharacteristicProperties(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicProperties::None") final None;
     @:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicProperties::Broadcast") final Broadcast;

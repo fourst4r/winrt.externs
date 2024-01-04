@@ -11,8 +11,8 @@ extern interface IContactListServerSearchReadBatchRequest extends winrt.windows.
     overload function SessionId(): winrt.HString;
     overload function ContactListId(): winrt.HString;
     overload function Options(): winrt.windows.applicationmodel.contacts.ContactQueryOptions;
-    overload function SuggestedBatchSize(): UInt32;
-    function SaveContactAsync(contact: ConstRef<winrt.windows.applicationmodel.contacts.Contact>): winrt.windows.foundation.IAsyncAction;
+    overload function SuggestedBatchSize(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function SaveContactAsync(contact: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.contacts.Contact>): winrt.windows.foundation.IAsyncAction;
     function ReportCompletedAsync(): winrt.windows.foundation.IAsyncAction;
-    function ReportFailedAsync(batchStatus: ConstRef<winrt.windows.applicationmodel.contacts.ContactBatchStatus>): winrt.windows.foundation.IAsyncAction;
+    function ReportFailedAsync(batchStatus: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.contacts.ContactBatchStatus>): winrt.windows.foundation.IAsyncAction;
 }

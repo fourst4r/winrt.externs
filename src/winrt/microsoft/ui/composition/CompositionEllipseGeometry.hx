@@ -10,8 +10,8 @@ extern class CompositionEllipseGeometry
     extends winrt.microsoft.ui.composition.CompositionGeometry
     implements winrt.microsoft.ui.composition.ICompositionEllipseGeometry
 {
-    overload function Radius(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function Radius(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
     overload function Radius(): winrt.windows.foundation.numerics.Vector2;
-    overload function Center(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function Center(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
     overload function Center(): winrt.windows.foundation.numerics.Vector2;
 }

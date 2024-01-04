@@ -8,8 +8,8 @@ package winrt.microsoft.ui.composition;
 @:native("winrt::Microsoft::UI::Composition::ISpotLight3")
 extern interface ISpotLight3 extends winrt.windows.foundation.IInspectable
 {
-    overload function MinAttenuationCutoff(): Float32;
-    overload function MinAttenuationCutoff(value: Float32): Void;
-    overload function MaxAttenuationCutoff(): Float32;
-    overload function MaxAttenuationCutoff(value: Float32): Void;
+    overload function MinAttenuationCutoff(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function MinAttenuationCutoff(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function MaxAttenuationCutoff(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function MaxAttenuationCutoff(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
 }

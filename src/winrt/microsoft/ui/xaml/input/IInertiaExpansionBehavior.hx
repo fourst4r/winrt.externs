@@ -8,8 +8,8 @@ package winrt.microsoft.ui.xaml.input;
 @:native("winrt::Microsoft::UI::Xaml::Input::IInertiaExpansionBehavior")
 extern interface IInertiaExpansionBehavior extends winrt.windows.foundation.IInspectable
 {
-    overload function DesiredDeceleration(): Float64;
-    overload function DesiredDeceleration(value: Float64): Void;
-    overload function DesiredExpansion(): Float64;
-    overload function DesiredExpansion(value: Float64): Void;
+    overload function DesiredDeceleration(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function DesiredDeceleration(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function DesiredExpansion(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function DesiredExpansion(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

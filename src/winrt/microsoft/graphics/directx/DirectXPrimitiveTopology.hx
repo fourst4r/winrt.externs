@@ -2,7 +2,7 @@ package winrt.microsoft.graphics.directx;
 
 @:include("winrt/Microsoft.Graphics.DirectX.h", true)
 @:native("winrt::Microsoft::Graphics::DirectX::DirectXPrimitiveTopology")
-extern enum abstract DirectXPrimitiveTopology(Int32)
+extern enum abstract DirectXPrimitiveTopology(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::Graphics::DirectX::DirectXPrimitiveTopology::Undefined") final Undefined;
     @:native("winrt::Microsoft::Graphics::DirectX::DirectXPrimitiveTopology::PointList") final PointList;

@@ -4,14 +4,14 @@ package winrt.windows.media.mediaproperties;
 @:native("winrt::Windows::Media::MediaProperties::H264ProfileIds")
 extern class H264ProfileIds
 {
-    static overload function ConstrainedBaseline(): Int32;
-    static overload function Baseline(): Int32;
-    static overload function Extended(): Int32;
-    static overload function Main(): Int32;
-    static overload function High(): Int32;
-    static overload function High10(): Int32;
-    static overload function High422(): Int32;
-    static overload function High444(): Int32;
-    static overload function StereoHigh(): Int32;
-    static overload function MultiviewHigh(): Int32;
+    static overload function ConstrainedBaseline(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function Baseline(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function Extended(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function Main(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function High(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function High10(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function High422(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function High444(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function StereoHigh(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    static overload function MultiviewHigh(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

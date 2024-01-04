@@ -8,8 +8,8 @@ package winrt.windows.system.diagnostics.telemetry;
 @:native("winrt::Windows::System::Diagnostics::Telemetry::IPlatformTelemetryRegistrationSettings")
 extern interface IPlatformTelemetryRegistrationSettings extends winrt.windows.foundation.IInspectable
 {
-    overload function StorageSize(): UInt32;
-    overload function StorageSize(value: UInt32): Void;
-    overload function UploadQuotaSize(): UInt32;
-    overload function UploadQuotaSize(value: UInt32): Void;
+    overload function StorageSize(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function StorageSize(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function UploadQuotaSize(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function UploadQuotaSize(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
 }

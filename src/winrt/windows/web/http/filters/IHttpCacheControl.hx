@@ -9,7 +9,7 @@ package winrt.windows.web.http.filters;
 extern interface IHttpCacheControl extends winrt.windows.foundation.IInspectable
 {
     overload function ReadBehavior(): winrt.windows.web.http.filters.HttpCacheReadBehavior;
-    overload function ReadBehavior(value: ConstRef<winrt.windows.web.http.filters.HttpCacheReadBehavior>): Void;
+    overload function ReadBehavior(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.filters.HttpCacheReadBehavior>): Void;
     overload function WriteBehavior(): winrt.windows.web.http.filters.HttpCacheWriteBehavior;
-    overload function WriteBehavior(value: ConstRef<winrt.windows.web.http.filters.HttpCacheWriteBehavior>): Void;
+    overload function WriteBehavior(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.filters.HttpCacheWriteBehavior>): Void;
 }

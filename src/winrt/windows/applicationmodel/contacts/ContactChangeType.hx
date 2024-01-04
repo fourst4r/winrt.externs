@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.contacts;
 
 @:include("winrt/Windows.ApplicationModel.Contacts.h", true)
 @:native("winrt::Windows::ApplicationModel::Contacts::ContactChangeType")
-extern enum abstract ContactChangeType(Int32)
+extern enum abstract ContactChangeType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactChangeType::Created") final Created;
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactChangeType::Modified") final Modified;

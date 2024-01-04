@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml;
 extern interface IFrameworkElement6 extends winrt.windows.foundation.IInspectable
 {
     overload function ActualTheme(): winrt.windows.ui.xaml.ElementTheme;
-    overload function ActualThemeChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.xaml.FrameworkElement, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function ActualThemeChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function ActualThemeChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.xaml.FrameworkElement, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function ActualThemeChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

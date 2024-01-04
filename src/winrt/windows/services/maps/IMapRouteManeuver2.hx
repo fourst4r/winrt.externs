@@ -8,7 +8,7 @@ package winrt.windows.services.maps;
 @:native("winrt::Windows::Services::Maps::IMapRouteManeuver2")
 extern interface IMapRouteManeuver2 extends winrt.windows.foundation.IInspectable
 {
-    overload function StartHeading(): Float64;
-    overload function EndHeading(): Float64;
+    overload function StartHeading(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function EndHeading(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function StreetName(): winrt.HString;
 }

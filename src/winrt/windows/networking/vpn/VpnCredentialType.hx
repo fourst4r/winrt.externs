@@ -2,7 +2,7 @@ package winrt.windows.networking.vpn;
 
 @:include("winrt/Windows.Networking.Vpn.h", true)
 @:native("winrt::Windows::Networking::Vpn::VpnCredentialType")
-extern enum abstract VpnCredentialType(Int32)
+extern enum abstract VpnCredentialType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Networking::Vpn::VpnCredentialType::UsernamePassword") final UsernamePassword;
     @:native("winrt::Windows::Networking::Vpn::VpnCredentialType::UsernameOtpPin") final UsernameOtpPin;

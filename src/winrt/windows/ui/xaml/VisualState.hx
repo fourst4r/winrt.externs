@@ -14,7 +14,7 @@ extern class VisualState
     function new();
     overload function Name(): winrt.HString;
     overload function Storyboard(): winrt.windows.ui.xaml.media.animation.Storyboard;
-    overload function Storyboard(value: ConstRef<winrt.windows.ui.xaml.media.animation.Storyboard>): Void;
+    overload function Storyboard(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.animation.Storyboard>): Void;
     overload function Setters(): winrt.windows.ui.xaml.SetterBaseCollection;
     overload function StateTriggers(): winrt.windows.foundation.collections.IVector<winrt.windows.ui.xaml.StateTriggerBase> /* GenericTypeInstSig */;
 }

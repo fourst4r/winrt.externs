@@ -9,9 +9,9 @@ package winrt.windows.applicationmodel;
 extern class FindRelatedPackagesOptions
     implements winrt.windows.applicationmodel.IFindRelatedPackagesOptions
 {
-    /* explicit */ function new(Relationship: ConstRef<winrt.windows.applicationmodel.PackageRelationship>);
+    /* explicit */ function new(Relationship: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.PackageRelationship>);
     overload function Relationship(): winrt.windows.applicationmodel.PackageRelationship;
-    overload function Relationship(value: ConstRef<winrt.windows.applicationmodel.PackageRelationship>): Void;
+    overload function Relationship(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.PackageRelationship>): Void;
     overload function IncludeFrameworks(): Bool;
     overload function IncludeFrameworks(value: Bool): Void;
     overload function IncludeHostRuntimes(): Bool;

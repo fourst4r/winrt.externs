@@ -9,6 +9,6 @@ package winrt.windows.storage.provider;
 extern interface IStorageProviderKnownFolderSyncInfoSource extends winrt.windows.foundation.IInspectable
 {
     function GetKnownFolderSyncInfo(): winrt.windows.storage.provider.StorageProviderKnownFolderSyncInfo;
-    overload function KnownFolderSyncInfoChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.storage.provider.IStorageProviderKnownFolderSyncInfoSource, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function KnownFolderSyncInfoChanged(token: ConstRef<winrt.EventToken>): Void;
+    overload function KnownFolderSyncInfoChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.storage.provider.IStorageProviderKnownFolderSyncInfoSource, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function KnownFolderSyncInfoChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

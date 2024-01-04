@@ -8,5 +8,5 @@ package winrt.windows.system.remotedesktop.provider;
 @:native("winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopInfoFactory")
 extern interface IRemoteDesktopInfoFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(id: ConstRef<winrt.HString>, displayName: ConstRef<winrt.HString>): winrt.windows.system.remotedesktop.provider.RemoteDesktopInfo;
+    function CreateInstance(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, displayName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.system.remotedesktop.provider.RemoteDesktopInfo;
 }

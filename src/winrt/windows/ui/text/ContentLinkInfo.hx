@@ -10,14 +10,14 @@ extern class ContentLinkInfo
     implements winrt.windows.ui.text.IContentLinkInfo
 {
     function new();
-    overload function Id(): UInt32;
-    overload function Id(value: UInt32): Void;
+    overload function Id(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Id(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
     overload function DisplayText(): winrt.HString;
-    overload function DisplayText(value: ConstRef<winrt.HString>): Void;
+    overload function DisplayText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function SecondaryText(): winrt.HString;
-    overload function SecondaryText(value: ConstRef<winrt.HString>): Void;
+    overload function SecondaryText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Uri(): winrt.windows.foundation.Uri;
-    overload function Uri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function Uri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function LinkContentKind(): winrt.HString;
-    overload function LinkContentKind(value: ConstRef<winrt.HString>): Void;
+    overload function LinkContentKind(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

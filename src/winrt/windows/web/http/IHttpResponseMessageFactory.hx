@@ -8,5 +8,5 @@ package winrt.windows.web.http;
 @:native("winrt::Windows::Web::Http::IHttpResponseMessageFactory")
 extern interface IHttpResponseMessageFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(statusCode: ConstRef<winrt.windows.web.http.HttpStatusCode>): winrt.windows.web.http.HttpResponseMessage;
+    function Create(statusCode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.HttpStatusCode>): winrt.windows.web.http.HttpResponseMessage;
 }

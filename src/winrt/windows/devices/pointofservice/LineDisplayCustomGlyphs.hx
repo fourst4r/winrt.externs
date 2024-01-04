@@ -10,6 +10,6 @@ extern class LineDisplayCustomGlyphs
     implements winrt.windows.devices.pointofservice.ILineDisplayCustomGlyphs
 {
     overload function SizeInPixels(): winrt.windows.foundation.Size;
-    overload function SupportedGlyphCodes(): winrt.windows.foundation.collections.IVectorView<UInt32> /* GenericTypeInstSig */;
-    function TryRedefineAsync(glyphCode: UInt32, glyphData: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    overload function SupportedGlyphCodes(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
+    function TryRedefineAsync(glyphCode: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, glyphData: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

@@ -10,6 +10,6 @@ extern class CompositionEffectBrush
     extends winrt.windows.ui.composition.CompositionBrush
     implements winrt.windows.ui.composition.ICompositionEffectBrush
 {
-    function GetSourceParameter(name: ConstRef<winrt.HString>): winrt.windows.ui.composition.CompositionBrush;
-    function SetSourceParameter(name: ConstRef<winrt.HString>, source: ConstRef<winrt.windows.ui.composition.CompositionBrush>): Void;
+    function GetSourceParameter(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.composition.CompositionBrush;
+    function SetSourceParameter(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, source: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionBrush>): Void;
 }

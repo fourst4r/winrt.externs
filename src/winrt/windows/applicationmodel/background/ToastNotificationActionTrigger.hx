@@ -11,5 +11,5 @@ extern class ToastNotificationActionTrigger
 {
     function new();
     @:native("winrt::Windows::ApplicationModel::Background::ToastNotificationActionTrigger")
-    /* explicit */ static overload function make(applicationId: ConstRef<winrt.HString>): winrt.windows.applicationmodel.background.ToastNotificationActionTrigger;
+    /* explicit */ static overload function make(applicationId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.background.ToastNotificationActionTrigger;
 }

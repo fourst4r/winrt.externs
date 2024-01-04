@@ -9,7 +9,7 @@ package winrt.windows.ui.core;
 extern interface ICoreDispatcher extends winrt.windows.foundation.IInspectable
 {
     overload function HasThreadAccess(): Bool;
-    function ProcessEvents(options: ConstRef<winrt.windows.ui.core.CoreProcessEventsOption>): Void;
-    function RunAsync(priority: ConstRef<winrt.windows.ui.core.CoreDispatcherPriority>, agileCallback: ConstRef<winrt.windows.ui.core.DispatchedHandler>): winrt.windows.foundation.IAsyncAction;
-    function RunIdleAsync(agileCallback: ConstRef<winrt.windows.ui.core.IdleDispatchedHandler>): winrt.windows.foundation.IAsyncAction;
+    function ProcessEvents(options: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.CoreProcessEventsOption>): Void;
+    function RunAsync(priority: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.CoreDispatcherPriority>, agileCallback: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.DispatchedHandler>): winrt.windows.foundation.IAsyncAction;
+    function RunIdleAsync(agileCallback: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.IdleDispatchedHandler>): winrt.windows.foundation.IAsyncAction;
 }

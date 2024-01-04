@@ -9,7 +9,7 @@ package winrt.microsoft.ui.xaml.media;
 extern interface IQuadraticBezierSegment extends winrt.windows.foundation.IInspectable
 {
     overload function Point1(): winrt.windows.foundation.Point;
-    overload function Point1(value: ConstRef<winrt.windows.foundation.Point>): Void;
+    overload function Point1(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
     overload function Point2(): winrt.windows.foundation.Point;
-    overload function Point2(value: ConstRef<winrt.windows.foundation.Point>): Void;
+    overload function Point2(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
 }

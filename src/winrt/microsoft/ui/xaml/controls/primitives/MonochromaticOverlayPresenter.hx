@@ -12,9 +12,9 @@ extern class MonochromaticOverlayPresenter
 {
     function new();
     overload function SourceElement(): winrt.microsoft.ui.xaml.UIElement;
-    overload function SourceElement(value: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    overload function SourceElement(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): Void;
     overload function ReplacementColor(): winrt.windows.ui.Color;
-    overload function ReplacementColor(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function ReplacementColor(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
     overload function SourceElementProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function ReplacementColorProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function SourceElementProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

@@ -8,5 +8,5 @@ package winrt.windows.foundation;
 @:native("winrt::Windows::Foundation::IWwwFormUrlDecoderRuntimeClassFactory")
 extern interface IWwwFormUrlDecoderRuntimeClassFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWwwFormUrlDecoder(query: ConstRef<winrt.HString>): winrt.windows.foundation.WwwFormUrlDecoder;
+    function CreateWwwFormUrlDecoder(query: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.WwwFormUrlDecoder;
 }

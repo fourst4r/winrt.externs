@@ -9,7 +9,7 @@ package winrt.windows.devices.display.core;
 extern interface IDisplayWireFormat extends winrt.windows.foundation.IInspectable
 {
     overload function PixelEncoding(): winrt.windows.devices.display.core.DisplayWireFormatPixelEncoding;
-    overload function BitsPerChannel(): Int32;
+    overload function BitsPerChannel(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function ColorSpace(): winrt.windows.devices.display.core.DisplayWireFormatColorSpace;
     overload function Eotf(): winrt.windows.devices.display.core.DisplayWireFormatEotf;
     overload function HdrMetadata(): winrt.windows.devices.display.core.DisplayWireFormatHdrMetadata;

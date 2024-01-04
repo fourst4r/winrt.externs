@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.controls;
 
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::RefreshVisualizerState")
-extern enum abstract RefreshVisualizerState(Int32)
+extern enum abstract RefreshVisualizerState(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Controls::RefreshVisualizerState::Idle") final Idle;
     @:native("winrt::Microsoft::UI::Xaml::Controls::RefreshVisualizerState::Peeking") final Peeking;

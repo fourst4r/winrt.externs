@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.controls;
 
 @:include("winrt/Microsoft.UI.Xaml.Controls.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Controls::TeachingTipPlacementMode")
-extern enum abstract TeachingTipPlacementMode(Int32)
+extern enum abstract TeachingTipPlacementMode(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Controls::TeachingTipPlacementMode::Auto") final Auto;
     @:native("winrt::Microsoft::UI::Xaml::Controls::TeachingTipPlacementMode::Top") final Top;

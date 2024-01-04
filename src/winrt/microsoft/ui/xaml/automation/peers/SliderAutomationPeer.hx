@@ -10,5 +10,5 @@ extern class SliderAutomationPeer
     extends winrt.microsoft.ui.xaml.automation.peers.RangeBaseAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.ISliderAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.Slider>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.Slider>);
 }

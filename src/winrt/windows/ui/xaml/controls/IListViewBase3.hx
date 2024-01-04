@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IListViewBase3 extends winrt.windows.foundation.IInspectable
 {
     overload function ReorderMode(): winrt.windows.ui.xaml.controls.ListViewReorderMode;
-    overload function ReorderMode(value: ConstRef<winrt.windows.ui.xaml.controls.ListViewReorderMode>): Void;
+    overload function ReorderMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.ListViewReorderMode>): Void;
 }

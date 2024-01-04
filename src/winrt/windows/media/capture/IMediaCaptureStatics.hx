@@ -8,8 +8,8 @@ package winrt.windows.media.capture;
 @:native("winrt::Windows::Media::Capture::IMediaCaptureStatics")
 extern interface IMediaCaptureStatics extends winrt.windows.foundation.IInspectable
 {
-    function IsVideoProfileSupported(videoDeviceId: ConstRef<winrt.HString>): Bool;
-    function FindAllVideoProfiles(videoDeviceId: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.capture.MediaCaptureVideoProfile> /* GenericTypeInstSig */;
-    function FindConcurrentProfiles(videoDeviceId: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.capture.MediaCaptureVideoProfile> /* GenericTypeInstSig */;
-    function FindKnownVideoProfiles(videoDeviceId: ConstRef<winrt.HString>, name: ConstRef<winrt.windows.media.capture.KnownVideoProfile>): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.capture.MediaCaptureVideoProfile> /* GenericTypeInstSig */;
+    function IsVideoProfileSupported(videoDeviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
+    function FindAllVideoProfiles(videoDeviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.capture.MediaCaptureVideoProfile> /* GenericTypeInstSig */;
+    function FindConcurrentProfiles(videoDeviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.capture.MediaCaptureVideoProfile> /* GenericTypeInstSig */;
+    function FindKnownVideoProfiles(videoDeviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.capture.KnownVideoProfile>): winrt.windows.foundation.collections.IVectorView<winrt.windows.media.capture.MediaCaptureVideoProfile> /* GenericTypeInstSig */;
 }

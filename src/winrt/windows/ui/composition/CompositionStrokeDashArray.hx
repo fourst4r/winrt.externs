@@ -8,20 +8,20 @@ package winrt.windows.ui.composition;
 @:native("winrt::Windows::UI::Composition::CompositionStrokeDashArray")
 extern class CompositionStrokeDashArray
     extends winrt.windows.ui.composition.CompositionObject
-    implements winrt.windows.foundation.collections.IIterable<Float32> /* GenericTypeInstSig */
-    implements winrt.windows.foundation.collections.IVector<Float32> /* GenericTypeInstSig */
+    implements winrt.windows.foundation.collections.IIterable<#if reflaxe.cpp cxx.num. #else cpp. #end Float32> /* GenericTypeInstSig */
+    implements winrt.windows.foundation.collections.IVector<#if reflaxe.cpp cxx.num. #else cpp. #end Float32> /* GenericTypeInstSig */
 {
-    function GetAt(index: UInt32): Float32;
-    overload function Size(): UInt32;
-    function GetView(): winrt.windows.foundation.collections.IVectorView<Float32> /* GenericTypeInstSig */;
-    function IndexOf(value: Float32, index: Ref<UInt32>): Bool;
-    function SetAt(index: UInt32, value: Float32): Void;
-    function InsertAt(index: UInt32, value: Float32): Void;
-    function RemoveAt(index: UInt32): Void;
-    function Append(value: Float32): Void;
+    function GetAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Size(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function GetView(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end Float32> /* GenericTypeInstSig */;
+    function IndexOf(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32, index: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <#if reflaxe.cpp cxx.num. #else cpp. #end UInt32>): Bool;
+    function SetAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    function InsertAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    function RemoveAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    function Append(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
     function RemoveAtEnd(): Void;
     function Clear(): Void;
-    function GetMany(startIndex: UInt32, items: winrt.ArrayView<Float32>): UInt32;
-    function ReplaceAll(items: winrt.ArrayView<Float32>): Void;
-    function First(): winrt.windows.foundation.collections.IIterator<Float32> /* GenericTypeInstSig */;
+    function GetMany(startIndex: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, items: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end Float32>): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function ReplaceAll(items: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end Float32>): Void;
+    function First(): winrt.windows.foundation.collections.IIterator<#if reflaxe.cpp cxx.num. #else cpp. #end Float32> /* GenericTypeInstSig */;
 }

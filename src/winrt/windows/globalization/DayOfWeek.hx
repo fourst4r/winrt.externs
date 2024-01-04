@@ -2,7 +2,7 @@ package winrt.windows.globalization;
 
 @:include("winrt/Windows.Globalization.h", true)
 @:native("winrt::Windows::Globalization::DayOfWeek")
-extern enum abstract DayOfWeek(Int32)
+extern enum abstract DayOfWeek(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Globalization::DayOfWeek::Sunday") final Sunday;
     @:native("winrt::Windows::Globalization::DayOfWeek::Monday") final Monday;

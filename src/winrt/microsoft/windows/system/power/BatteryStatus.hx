@@ -2,7 +2,7 @@ package winrt.microsoft.windows.system.power;
 
 @:include("winrt/Microsoft.Windows.System.Power.h", true)
 @:native("winrt::Microsoft::Windows::System::Power::BatteryStatus")
-extern enum abstract BatteryStatus(Int32)
+extern enum abstract BatteryStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::Windows::System::Power::BatteryStatus::NotPresent") final NotPresent;
     @:native("winrt::Microsoft::Windows::System::Power::BatteryStatus::Discharging") final Discharging;

@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml;
 extern interface ISetter2 extends winrt.windows.foundation.IInspectable
 {
     overload function Target(): winrt.windows.ui.xaml.TargetPropertyPath;
-    overload function Target(value: ConstRef<winrt.windows.ui.xaml.TargetPropertyPath>): Void;
+    overload function Target(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.TargetPropertyPath>): Void;
 }

@@ -12,5 +12,5 @@ extern interface IHoldingRoutedEventArgs extends winrt.windows.foundation.IInspe
     overload function HoldingState(): winrt.windows.ui.input.HoldingState;
     overload function Handled(): Bool;
     overload function Handled(value: Bool): Void;
-    function GetPosition(relativeTo: ConstRef<winrt.windows.ui.xaml.UIElement>): winrt.windows.foundation.Point;
+    function GetPosition(relativeTo: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): winrt.windows.foundation.Point;
 }

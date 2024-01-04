@@ -24,7 +24,7 @@ extern interface IStoreSku extends winrt.windows.foundation.IInspectable
     overload function CollectionData(): winrt.windows.services.store.StoreCollectionData;
     function GetIsInstalledAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     overload function RequestPurchaseAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.store.StorePurchaseResult> /* GenericTypeInstSig */;
-    overload function RequestPurchaseAsync(storePurchaseProperties: ConstRef<winrt.windows.services.store.StorePurchaseProperties>): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.store.StorePurchaseResult> /* GenericTypeInstSig */;
+    overload function RequestPurchaseAsync(storePurchaseProperties: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.services.store.StorePurchaseProperties>): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.store.StorePurchaseResult> /* GenericTypeInstSig */;
     overload function IsSubscription(): Bool;
     overload function SubscriptionInfo(): winrt.windows.services.store.StoreSubscriptionInfo;
 }

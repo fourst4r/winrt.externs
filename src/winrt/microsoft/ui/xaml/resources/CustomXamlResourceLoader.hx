@@ -11,9 +11,9 @@ extern class CustomXamlResourceLoader
     implements winrt.microsoft.ui.xaml.resources.ICustomXamlResourceLoaderOverrides
 {
     function new();
-    function GetResource(resourceId: ConstRef<winrt.HString>, objectType: ConstRef<winrt.HString>, propertyName: ConstRef<winrt.HString>, propertyType: ConstRef<winrt.HString>): winrt.windows.foundation.IInspectable;
+    function GetResource(resourceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, objectType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, propertyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, propertyType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IInspectable;
     overload function Current(): winrt.microsoft.ui.xaml.resources.CustomXamlResourceLoader;
-    overload function Current(value: ConstRef<winrt.microsoft.ui.xaml.resources.CustomXamlResourceLoader>): Void;
+    overload function Current(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.resources.CustomXamlResourceLoader>): Void;
     static overload function Current(): winrt.microsoft.ui.xaml.resources.CustomXamlResourceLoader;
-    static overload function Current(value: ConstRef<winrt.microsoft.ui.xaml.resources.CustomXamlResourceLoader>): Void;
+    static overload function Current(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.resources.CustomXamlResourceLoader>): Void;
 }

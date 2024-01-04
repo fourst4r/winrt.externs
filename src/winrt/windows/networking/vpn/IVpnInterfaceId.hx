@@ -8,5 +8,5 @@ package winrt.windows.networking.vpn;
 @:native("winrt::Windows::Networking::Vpn::IVpnInterfaceId")
 extern interface IVpnInterfaceId extends winrt.windows.foundation.IInspectable
 {
-    function GetAddressInfo(id: Ref<winrt.ComArray<UInt8>>): Void;
+    function GetAddressInfo(id: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>>): Void;
 }

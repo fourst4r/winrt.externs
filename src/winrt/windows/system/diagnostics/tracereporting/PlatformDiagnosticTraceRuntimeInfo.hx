@@ -9,6 +9,6 @@ package winrt.windows.system.diagnostics.tracereporting;
 extern class PlatformDiagnosticTraceRuntimeInfo
     implements winrt.windows.system.diagnostics.tracereporting.IPlatformDiagnosticTraceRuntimeInfo
 {
-    overload function RuntimeFileTime(): Int64;
-    overload function EtwRuntimeFileTime(): Int64;
+    overload function RuntimeFileTime(): #if reflaxe.cpp cxx.num. #else cpp. #end Int64;
+    overload function EtwRuntimeFileTime(): #if reflaxe.cpp cxx.num. #else cpp. #end Int64;
 }

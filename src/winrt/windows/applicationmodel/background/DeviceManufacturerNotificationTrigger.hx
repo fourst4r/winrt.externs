@@ -10,7 +10,7 @@ extern class DeviceManufacturerNotificationTrigger
     implements winrt.windows.applicationmodel.background.IBackgroundTrigger
     implements winrt.windows.applicationmodel.background.IDeviceManufacturerNotificationTrigger
 {
-    function new(triggerQualifier: ConstRef<winrt.HString>, oneShot: Bool);
+    function new(triggerQualifier: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, oneShot: Bool);
     overload function TriggerQualifier(): winrt.HString;
     overload function OneShot(): Bool;
 }

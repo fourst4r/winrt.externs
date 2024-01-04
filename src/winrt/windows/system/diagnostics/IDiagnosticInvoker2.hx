@@ -8,5 +8,5 @@ package winrt.windows.system.diagnostics;
 @:native("winrt::Windows::System::Diagnostics::IDiagnosticInvoker2")
 extern interface IDiagnosticInvoker2 extends winrt.windows.foundation.IInspectable
 {
-    function RunDiagnosticActionFromStringAsync(context: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperationWithProgress<winrt.windows.system.diagnostics.DiagnosticActionResult, winrt.windows.system.diagnostics.DiagnosticActionState> /* GenericTypeInstSig */;
+    function RunDiagnosticActionFromStringAsync(context: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperationWithProgress<winrt.windows.system.diagnostics.DiagnosticActionResult, winrt.windows.system.diagnostics.DiagnosticActionState> /* GenericTypeInstSig */;
 }

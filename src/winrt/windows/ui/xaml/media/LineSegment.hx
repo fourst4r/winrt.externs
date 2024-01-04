@@ -12,7 +12,7 @@ extern class LineSegment
 {
     function new();
     overload function Point(): winrt.windows.foundation.Point;
-    overload function Point(value: ConstRef<winrt.windows.foundation.Point>): Void;
+    overload function Point(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
     overload function PointProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function PointProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

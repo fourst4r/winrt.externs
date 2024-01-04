@@ -15,18 +15,18 @@ extern class HolographicCamera
     implements winrt.windows.graphics.holographic.IHolographicCamera6
 {
     overload function RenderTargetSize(): winrt.windows.foundation.Size;
-    overload function ViewportScaleFactor(): Float64;
-    overload function ViewportScaleFactor(value: Float64): Void;
+    overload function ViewportScaleFactor(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ViewportScaleFactor(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function IsStereo(): Bool;
-    overload function Id(): UInt32;
-    function SetNearPlaneDistance(value: Float64): Void;
-    function SetFarPlaneDistance(value: Float64): Void;
+    overload function Id(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function SetNearPlaneDistance(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    function SetFarPlaneDistance(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function LeftViewportParameters(): winrt.windows.graphics.holographic.HolographicCameraViewportParameters;
     overload function RightViewportParameters(): winrt.windows.graphics.holographic.HolographicCameraViewportParameters;
     overload function Display(): winrt.windows.graphics.holographic.HolographicDisplay;
     overload function IsPrimaryLayerEnabled(): Bool;
     overload function IsPrimaryLayerEnabled(value: Bool): Void;
-    overload function MaxQuadLayerCount(): UInt32;
+    overload function MaxQuadLayerCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function QuadLayers(): winrt.windows.foundation.collections.IVector<winrt.windows.graphics.holographic.HolographicQuadLayer> /* GenericTypeInstSig */;
     overload function CanOverrideViewport(): Bool;
     overload function IsHardwareContentProtectionSupported(): Bool;

@@ -10,12 +10,12 @@ extern class StorageProviderQuotaUI
     implements winrt.windows.storage.provider.IStorageProviderQuotaUI
 {
     function new();
-    overload function QuotaTotalInBytes(): UInt64;
-    overload function QuotaTotalInBytes(value: UInt64): Void;
-    overload function QuotaUsedInBytes(): UInt64;
-    overload function QuotaUsedInBytes(value: UInt64): Void;
+    overload function QuotaTotalInBytes(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
+    overload function QuotaTotalInBytes(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt64): Void;
+    overload function QuotaUsedInBytes(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
+    overload function QuotaUsedInBytes(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt64): Void;
     overload function QuotaUsedLabel(): winrt.HString;
-    overload function QuotaUsedLabel(value: ConstRef<winrt.HString>): Void;
+    overload function QuotaUsedLabel(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function QuotaUsedColor(): winrt.windows.foundation.IReference<winrt.windows.ui.Color> /* GenericTypeInstSig */;
-    overload function QuotaUsedColor(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.ui.Color> /* temp_GenericTypeInstSig */>): Void;
+    overload function QuotaUsedColor(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.ui.Color> /* temp_GenericTypeInstSig */>): Void;
 }

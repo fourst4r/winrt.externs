@@ -9,7 +9,7 @@ package winrt.microsoft.windows.applicationmodel.resources;
 extern interface IResourceCandidate extends winrt.windows.foundation.IInspectable
 {
     overload function ValueAsString(): winrt.HString;
-    overload function ValueAsBytes(): winrt.ComArray<UInt8>;
+    overload function ValueAsBytes(): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
     overload function Kind(): winrt.microsoft.windows.applicationmodel.resources.ResourceCandidateKind;
     overload function QualifierValues(): winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.HString> /* GenericTypeInstSig */;
 }

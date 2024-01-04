@@ -14,8 +14,8 @@ extern class NavigationViewItem
 {
     function new();
     overload function Icon(): winrt.microsoft.ui.xaml.controls.IconElement;
-    overload function Icon(value: ConstRef<winrt.microsoft.ui.xaml.controls.IconElement>): Void;
-    overload function CompactPaneLength(): Float64;
+    overload function Icon(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.IconElement>): Void;
+    overload function CompactPaneLength(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function SelectsOnInvoked(): Bool;
     overload function SelectsOnInvoked(value: Bool): Void;
     overload function IsExpanded(): Bool;
@@ -26,9 +26,9 @@ extern class NavigationViewItem
     overload function IsChildSelected(value: Bool): Void;
     overload function MenuItems(): winrt.windows.foundation.collections.IVector<winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;
     overload function MenuItemsSource(): winrt.windows.foundation.IInspectable;
-    overload function MenuItemsSource(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function MenuItemsSource(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
     overload function InfoBadge(): winrt.microsoft.ui.xaml.controls.InfoBadge;
-    overload function InfoBadge(value: ConstRef<winrt.microsoft.ui.xaml.controls.InfoBadge>): Void;
+    overload function InfoBadge(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.InfoBadge>): Void;
     overload function InfoBadgeProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function SelectsOnInvokedProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function IsExpandedProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

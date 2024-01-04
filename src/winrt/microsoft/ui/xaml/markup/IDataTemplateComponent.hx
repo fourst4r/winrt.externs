@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.markup;
 extern interface IDataTemplateComponent extends winrt.windows.foundation.IInspectable
 {
     function Recycle(): Void;
-    function ProcessBindings(item: ConstRef<winrt.windows.foundation.IInspectable>, itemIndex: Int32, phase: Int32, nextPhase: Ref<Int32>): Void;
+    function ProcessBindings(item: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, itemIndex: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, phase: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, nextPhase: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <#if reflaxe.cpp cxx.num. #else cpp. #end Int32>): Void;
 }

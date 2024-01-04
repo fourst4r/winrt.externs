@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.contacts;
 
 @:include("winrt/Windows.ApplicationModel.Contacts.h", true)
 @:native("winrt::Windows::ApplicationModel::Contacts::ContactStoreAccessType")
-extern enum abstract ContactStoreAccessType(Int32)
+extern enum abstract ContactStoreAccessType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactStoreAccessType::AppContactsReadWrite") final AppContactsReadWrite;
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactStoreAccessType::AllContactsReadOnly") final AllContactsReadOnly;

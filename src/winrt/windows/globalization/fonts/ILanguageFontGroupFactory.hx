@@ -8,5 +8,5 @@ package winrt.windows.globalization.fonts;
 @:native("winrt::Windows::Globalization::Fonts::ILanguageFontGroupFactory")
 extern interface ILanguageFontGroupFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateLanguageFontGroup(languageTag: ConstRef<winrt.HString>): winrt.windows.globalization.fonts.LanguageFontGroup;
+    function CreateLanguageFontGroup(languageTag: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.globalization.fonts.LanguageFontGroup;
 }

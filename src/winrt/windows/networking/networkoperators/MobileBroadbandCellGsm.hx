@@ -9,11 +9,11 @@ package winrt.windows.networking.networkoperators;
 extern class MobileBroadbandCellGsm
     implements winrt.windows.networking.networkoperators.IMobileBroadbandCellGsm
 {
-    overload function BaseStationId(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
-    overload function CellId(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
-    overload function ChannelNumber(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
-    overload function LocationAreaCode(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
+    overload function BaseStationId(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
+    overload function CellId(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
+    overload function ChannelNumber(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
+    overload function LocationAreaCode(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
     overload function ProviderId(): winrt.HString;
-    overload function ReceivedSignalStrengthInDBm(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
-    overload function TimingAdvanceInBitPeriods(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
+    overload function ReceivedSignalStrengthInDBm(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
+    overload function TimingAdvanceInBitPeriods(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
 }

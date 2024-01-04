@@ -9,5 +9,5 @@ package winrt.windows.media.capture;
 extern interface IMediaCaptureFailedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function Message(): winrt.HString;
-    overload function Code(): UInt32;
+    overload function Code(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

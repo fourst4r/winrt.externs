@@ -2,7 +2,7 @@ package winrt.windows.ui.text;
 
 @:include("winrt/Windows.UI.Text.h", true)
 @:native("winrt::Windows::UI::Text::TextScript")
-extern enum abstract TextScript(Int32)
+extern enum abstract TextScript(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Text::TextScript::Undefined") final Undefined;
     @:native("winrt::Windows::UI::Text::TextScript::Ansi") final Ansi;

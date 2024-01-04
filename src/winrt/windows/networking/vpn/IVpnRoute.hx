@@ -8,8 +8,8 @@ package winrt.windows.networking.vpn;
 @:native("winrt::Windows::Networking::Vpn::IVpnRoute")
 extern interface IVpnRoute extends winrt.windows.foundation.IInspectable
 {
-    overload function Address(value: ConstRef<winrt.windows.networking.HostName>): Void;
+    overload function Address(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.HostName>): Void;
     overload function Address(): winrt.windows.networking.HostName;
-    overload function PrefixSize(value: UInt8): Void;
-    overload function PrefixSize(): UInt8;
+    overload function PrefixSize(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8): Void;
+    overload function PrefixSize(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
 }

@@ -10,6 +10,6 @@ extern class CompositionDebugSettings
     implements winrt.windows.ui.composition.diagnostics.ICompositionDebugSettings
 {
     overload function HeatMaps(): winrt.windows.ui.composition.diagnostics.CompositionDebugHeatMaps;
-    function TryGetSettings(compositor: ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.diagnostics.CompositionDebugSettings;
-    static function TryGetSettings(compositor: ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.diagnostics.CompositionDebugSettings;
+    function TryGetSettings(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.diagnostics.CompositionDebugSettings;
+    static function TryGetSettings(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.diagnostics.CompositionDebugSettings;
 }

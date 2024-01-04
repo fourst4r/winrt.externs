@@ -10,5 +10,5 @@ extern class ListViewHeaderItemAutomationPeer
     extends winrt.microsoft.ui.xaml.automation.peers.ListViewBaseHeaderItemAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IListViewHeaderItemAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.ListViewHeaderItem>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.ListViewHeaderItem>);
 }

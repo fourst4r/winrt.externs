@@ -8,6 +8,6 @@ package winrt.windows.web.http.headers;
 @:native("winrt::Windows::Web::Http::Headers::IHttpProductHeaderValueFactory")
 extern interface IHttpProductHeaderValueFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateFromName(productName: ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpProductHeaderValue;
-    function CreateFromNameWithVersion(productName: ConstRef<winrt.HString>, productVersion: ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpProductHeaderValue;
+    function CreateFromName(productName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.http.headers.HttpProductHeaderValue;
+    function CreateFromNameWithVersion(productName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, productVersion: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.http.headers.HttpProductHeaderValue;
 }

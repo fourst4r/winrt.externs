@@ -10,10 +10,10 @@ extern interface IPanel extends winrt.windows.foundation.IInspectable
 {
     overload function Children(): winrt.microsoft.ui.xaml.controls.UIElementCollection;
     overload function Background(): winrt.microsoft.ui.xaml.media.Brush;
-    overload function Background(value: ConstRef<winrt.microsoft.ui.xaml.media.Brush>): Void;
+    overload function Background(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.Brush>): Void;
     overload function IsItemsHost(): Bool;
     overload function ChildrenTransitions(): winrt.microsoft.ui.xaml.media.animation.TransitionCollection;
-    overload function ChildrenTransitions(value: ConstRef<winrt.microsoft.ui.xaml.media.animation.TransitionCollection>): Void;
+    overload function ChildrenTransitions(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.animation.TransitionCollection>): Void;
     overload function BackgroundTransition(): winrt.microsoft.ui.xaml.BrushTransition;
-    overload function BackgroundTransition(value: ConstRef<winrt.microsoft.ui.xaml.BrushTransition>): Void;
+    overload function BackgroundTransition(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.BrushTransition>): Void;
 }

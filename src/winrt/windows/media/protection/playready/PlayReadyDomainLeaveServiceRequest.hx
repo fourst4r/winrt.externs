@@ -13,18 +13,18 @@ extern class PlayReadyDomainLeaveServiceRequest
 {
     function new();
     overload function DomainAccountId(): winrt.Guid;
-    overload function DomainAccountId(value: ConstRef<winrt.Guid>): Void;
+    overload function DomainAccountId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): Void;
     overload function DomainServiceId(): winrt.Guid;
-    overload function DomainServiceId(value: ConstRef<winrt.Guid>): Void;
+    overload function DomainServiceId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): Void;
     overload function Uri(): winrt.windows.foundation.Uri;
-    overload function Uri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function Uri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function ResponseCustomData(): winrt.HString;
     overload function ChallengeCustomData(): winrt.HString;
-    overload function ChallengeCustomData(value: ConstRef<winrt.HString>): Void;
+    overload function ChallengeCustomData(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     function BeginServiceRequest(): winrt.windows.foundation.IAsyncAction;
     function NextServiceRequest(): winrt.windows.media.protection.playready.IPlayReadyServiceRequest;
     function GenerateManualEnablingChallenge(): winrt.windows.media.protection.playready.PlayReadySoapMessage;
-    function ProcessManualEnablingResponse(responseBytes: winrt.ArrayView<UInt8>): winrt.HResult;
+    function ProcessManualEnablingResponse(responseBytes: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): winrt.HResult;
     overload function ProtectionSystem(): winrt.Guid;
     overload function Type(): winrt.Guid;
 }

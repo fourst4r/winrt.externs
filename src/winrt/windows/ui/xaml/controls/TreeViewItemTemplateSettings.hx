@@ -14,7 +14,7 @@ extern class TreeViewItemTemplateSettings
     overload function ExpandedGlyphVisibility(): winrt.windows.ui.xaml.Visibility;
     overload function CollapsedGlyphVisibility(): winrt.windows.ui.xaml.Visibility;
     overload function Indentation(): winrt.windows.ui.xaml.Thickness;
-    overload function DragItemsCount(): Int32;
+    overload function DragItemsCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function ExpandedGlyphVisibilityProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function CollapsedGlyphVisibilityProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function IndentationProperty(): winrt.windows.ui.xaml.DependencyProperty;

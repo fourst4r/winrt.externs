@@ -11,7 +11,7 @@ extern class ContactConnectedServiceAccount
 {
     function new();
     overload function Id(): winrt.HString;
-    overload function Id(value: ConstRef<winrt.HString>): Void;
+    overload function Id(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function ServiceName(): winrt.HString;
-    overload function ServiceName(value: ConstRef<winrt.HString>): Void;
+    overload function ServiceName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

@@ -10,5 +10,5 @@ extern class StorageLibraryContentChangedTriggerDetails
     implements winrt.windows.storage.search.IStorageLibraryContentChangedTriggerDetails
 {
     overload function Folder(): winrt.windows.storage.StorageFolder;
-    function CreateModifiedSinceQuery(lastQueryTime: ConstRef<winrt.windows.foundation.DateTime>): winrt.windows.storage.search.StorageItemQueryResult;
+    function CreateModifiedSinceQuery(lastQueryTime: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>): winrt.windows.storage.search.StorageItemQueryResult;
 }

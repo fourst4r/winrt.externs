@@ -9,7 +9,7 @@ package winrt.windows.applicationmodel.email;
 extern interface IEmailAttachment extends winrt.windows.foundation.IInspectable
 {
     overload function FileName(): winrt.HString;
-    overload function FileName(value: ConstRef<winrt.HString>): Void;
+    overload function FileName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Data(): winrt.windows.storage.streams.IRandomAccessStreamReference;
-    overload function Data(value: ConstRef<winrt.windows.storage.streams.IRandomAccessStreamReference>): Void;
+    overload function Data(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStreamReference>): Void;
 }

@@ -9,7 +9,7 @@ package winrt.windows.networking.connectivity;
 extern class RoutePolicy
     implements winrt.windows.networking.connectivity.IRoutePolicy
 {
-    function new(connectionProfile: ConstRef<winrt.windows.networking.connectivity.ConnectionProfile>, hostName: ConstRef<winrt.windows.networking.HostName>, type: ConstRef<winrt.windows.networking.DomainNameType>);
+    function new(connectionProfile: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.connectivity.ConnectionProfile>, hostName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.HostName>, type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.DomainNameType>);
     overload function ConnectionProfile(): winrt.windows.networking.connectivity.ConnectionProfile;
     overload function HostName(): winrt.windows.networking.HostName;
     overload function HostNameType(): winrt.windows.networking.DomainNameType;

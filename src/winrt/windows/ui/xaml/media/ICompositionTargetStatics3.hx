@@ -8,6 +8,6 @@ package winrt.windows.ui.xaml.media;
 @:native("winrt::Windows::UI::Xaml::Media::ICompositionTargetStatics3")
 extern interface ICompositionTargetStatics3 extends winrt.windows.foundation.IInspectable
 {
-    overload function Rendered(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.windows.ui.xaml.media.RenderedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Rendered(token: ConstRef<winrt.EventToken>): Void;
+    overload function Rendered(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.EventHandler<winrt.windows.ui.xaml.media.RenderedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Rendered(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

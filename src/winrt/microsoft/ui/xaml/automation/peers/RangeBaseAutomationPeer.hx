@@ -11,12 +11,12 @@ extern class RangeBaseAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IRangeBaseAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IRangeValueProvider
 {
-    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.primitives.RangeBase>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.primitives.RangeBase>);
     overload function IsReadOnly(): Bool;
-    overload function LargeChange(): Float64;
-    overload function Maximum(): Float64;
-    overload function Minimum(): Float64;
-    overload function SmallChange(): Float64;
-    overload function Value(): Float64;
-    function SetValue(value: Float64): Void;
+    overload function LargeChange(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Maximum(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Minimum(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function SmallChange(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Value(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    function SetValue(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

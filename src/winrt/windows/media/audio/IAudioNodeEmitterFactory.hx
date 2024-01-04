@@ -8,5 +8,5 @@ package winrt.windows.media.audio;
 @:native("winrt::Windows::Media::Audio::IAudioNodeEmitterFactory")
 extern interface IAudioNodeEmitterFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateAudioNodeEmitter(shape: ConstRef<winrt.windows.media.audio.AudioNodeEmitterShape>, decayModel: ConstRef<winrt.windows.media.audio.AudioNodeEmitterDecayModel>, settings: ConstRef<winrt.windows.media.audio.AudioNodeEmitterSettings>): winrt.windows.media.audio.AudioNodeEmitter;
+    function CreateAudioNodeEmitter(shape: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.audio.AudioNodeEmitterShape>, decayModel: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.audio.AudioNodeEmitterDecayModel>, settings: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.audio.AudioNodeEmitterSettings>): winrt.windows.media.audio.AudioNodeEmitter;
 }

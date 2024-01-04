@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.chat;
 
 @:include("winrt/Windows.ApplicationModel.Chat.h", true)
 @:native("winrt::Windows::ApplicationModel::Chat::ChatMessageStatus")
-extern enum abstract ChatMessageStatus(Int32)
+extern enum abstract ChatMessageStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Chat::ChatMessageStatus::Draft") final Draft;
     @:native("winrt::Windows::ApplicationModel::Chat::ChatMessageStatus::Sending") final Sending;

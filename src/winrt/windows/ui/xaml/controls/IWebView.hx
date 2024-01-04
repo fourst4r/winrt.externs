@@ -9,17 +9,17 @@ package winrt.windows.ui.xaml.controls;
 extern interface IWebView extends winrt.windows.foundation.IInspectable
 {
     overload function Source(): winrt.windows.foundation.Uri;
-    overload function Source(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function Source(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function AllowedScriptNotifyUris(): winrt.windows.foundation.collections.IVector<winrt.windows.foundation.Uri> /* GenericTypeInstSig */;
-    overload function AllowedScriptNotifyUris(value: ConstRef<winrt.windows.foundation.collections.IVector<winrt.windows.foundation.Uri> /* temp_GenericTypeInstSig */>): Void;
+    overload function AllowedScriptNotifyUris(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IVector<winrt.windows.foundation.Uri> /* temp_GenericTypeInstSig */>): Void;
     overload function DataTransferPackage(): winrt.windows.applicationmodel.datatransfer.DataPackage;
-    overload function LoadCompleted(handler: ConstRef<winrt.windows.ui.xaml.navigation.LoadCompletedEventHandler>): winrt.EventToken;
-    @:noExcept overload function LoadCompleted(token: ConstRef<winrt.EventToken>): Void;
-    overload function ScriptNotify(handler: ConstRef<winrt.windows.ui.xaml.controls.NotifyEventHandler>): winrt.EventToken;
-    @:noExcept overload function ScriptNotify(token: ConstRef<winrt.EventToken>): Void;
-    overload function NavigationFailed(handler: ConstRef<winrt.windows.ui.xaml.controls.WebViewNavigationFailedEventHandler>): winrt.EventToken;
-    @:noExcept overload function NavigationFailed(token: ConstRef<winrt.EventToken>): Void;
-    function InvokeScript(scriptName: ConstRef<winrt.HString>, arguments: winrt.ArrayView<winrt.HString>): winrt.HString;
-    function Navigate(source: ConstRef<winrt.windows.foundation.Uri>): Void;
-    function NavigateToString(text: ConstRef<winrt.HString>): Void;
+    overload function LoadCompleted(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.navigation.LoadCompletedEventHandler>): winrt.EventToken;
+    @:noExcept overload function LoadCompleted(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function ScriptNotify(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.NotifyEventHandler>): winrt.EventToken;
+    @:noExcept overload function ScriptNotify(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function NavigationFailed(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.WebViewNavigationFailedEventHandler>): winrt.EventToken;
+    @:noExcept overload function NavigationFailed(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    function InvokeScript(scriptName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, arguments: winrt.ArrayView<winrt.HString>): winrt.HString;
+    function Navigate(source: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
+    function NavigateToString(text: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

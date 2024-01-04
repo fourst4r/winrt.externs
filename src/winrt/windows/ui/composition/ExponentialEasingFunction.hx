@@ -11,5 +11,5 @@ extern class ExponentialEasingFunction
     implements winrt.windows.ui.composition.IExponentialEasingFunction
 {
     overload function Mode(): winrt.windows.ui.composition.CompositionEasingFunctionMode;
-    overload function Exponent(): Float32;
+    overload function Exponent(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
 }

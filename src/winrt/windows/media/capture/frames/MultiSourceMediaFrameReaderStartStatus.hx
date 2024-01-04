@@ -2,7 +2,7 @@ package winrt.windows.media.capture.frames;
 
 @:include("winrt/Windows.Media.Capture.Frames.h", true)
 @:native("winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReaderStartStatus")
-extern enum abstract MultiSourceMediaFrameReaderStartStatus(Int32)
+extern enum abstract MultiSourceMediaFrameReaderStartStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReaderStartStatus::Success") final Success;
     @:native("winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReaderStartStatus::NotSupported") final NotSupported;

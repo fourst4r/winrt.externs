@@ -9,7 +9,7 @@ package winrt.windows.ui.xaml;
 extern interface ISizeHelperStatics extends winrt.windows.foundation.IInspectable
 {
     overload function Empty(): winrt.windows.foundation.Size;
-    function FromDimensions(width: Float32, height: Float32): winrt.windows.foundation.Size;
-    function GetIsEmpty(target: ConstRef<winrt.windows.foundation.Size>): Bool;
-    function Equals(target: ConstRef<winrt.windows.foundation.Size>, value: ConstRef<winrt.windows.foundation.Size>): Bool;
+    function FromDimensions(width: #if reflaxe.cpp cxx.num. #else cpp. #end Float32, height: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): winrt.windows.foundation.Size;
+    function GetIsEmpty(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Size>): Bool;
+    function Equals(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Size>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Size>): Bool;
 }

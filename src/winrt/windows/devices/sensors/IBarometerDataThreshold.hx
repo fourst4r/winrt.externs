@@ -8,6 +8,6 @@ package winrt.windows.devices.sensors;
 @:native("winrt::Windows::Devices::Sensors::IBarometerDataThreshold")
 extern interface IBarometerDataThreshold extends winrt.windows.foundation.IInspectable
 {
-    overload function Hectopascals(): Float64;
-    overload function Hectopascals(value: Float64): Void;
+    overload function Hectopascals(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Hectopascals(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

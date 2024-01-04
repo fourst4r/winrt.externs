@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.background;
 @:native("winrt::Windows::ApplicationModel::Background::IBackgroundTaskBuilder5")
 extern interface IBackgroundTaskBuilder5 extends winrt.windows.foundation.IInspectable
 {
-    function SetTaskEntryPointClsid(TaskEntryPoint: ConstRef<winrt.Guid>): Void;
+    function SetTaskEntryPointClsid(TaskEntryPoint: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): Void;
 }

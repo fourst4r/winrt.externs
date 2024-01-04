@@ -10,7 +10,7 @@ extern interface IChainBuildingParameters extends winrt.windows.foundation.IInsp
 {
     overload function EnhancedKeyUsages(): winrt.windows.foundation.collections.IVector<winrt.HString> /* GenericTypeInstSig */;
     overload function ValidationTimestamp(): winrt.windows.foundation.DateTime;
-    overload function ValidationTimestamp(value: ConstRef<winrt.windows.foundation.DateTime>): Void;
+    overload function ValidationTimestamp(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>): Void;
     overload function RevocationCheckEnabled(): Bool;
     overload function RevocationCheckEnabled(value: Bool): Void;
     overload function NetworkRetrievalEnabled(): Bool;

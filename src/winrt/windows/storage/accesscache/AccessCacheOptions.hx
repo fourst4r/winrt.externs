@@ -2,7 +2,7 @@ package winrt.windows.storage.accesscache;
 
 @:include("winrt/Windows.Storage.AccessCache.h", true)
 @:native("winrt::Windows::Storage::AccessCache::AccessCacheOptions")
-extern enum abstract AccessCacheOptions(UInt32)
+extern enum abstract AccessCacheOptions(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::Storage::AccessCache::AccessCacheOptions::None") final None;
     @:native("winrt::Windows::Storage::AccessCache::AccessCacheOptions::DisallowUserInput") final DisallowUserInput;

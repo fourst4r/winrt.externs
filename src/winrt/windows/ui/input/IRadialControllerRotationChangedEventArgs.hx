@@ -8,6 +8,6 @@ package winrt.windows.ui.input;
 @:native("winrt::Windows::UI::Input::IRadialControllerRotationChangedEventArgs")
 extern interface IRadialControllerRotationChangedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function RotationDeltaInDegrees(): Float64;
+    overload function RotationDeltaInDegrees(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function Contact(): winrt.windows.ui.input.RadialControllerScreenContact;
 }

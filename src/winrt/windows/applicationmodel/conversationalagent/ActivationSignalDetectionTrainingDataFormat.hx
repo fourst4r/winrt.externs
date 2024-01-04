@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.conversationalagent;
 
 @:include("winrt/Windows.ApplicationModel.ConversationalAgent.h", true)
 @:native("winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat")
-extern enum abstract ActivationSignalDetectionTrainingDataFormat(Int32)
+extern enum abstract ActivationSignalDetectionTrainingDataFormat(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat::Voice8kHz8BitMono") final Voice8kHz8BitMono;
     @:native("winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat::Voice8kHz16BitMono") final Voice8kHz16BitMono;

@@ -9,6 +9,6 @@ package winrt.windows.media.protection.playready;
 extern class PlayReadyDomainIterable
     implements winrt.windows.foundation.collections.IIterable<winrt.windows.media.protection.playready.IPlayReadyDomain> /* GenericTypeInstSig */
 {
-    /* explicit */ function new(domainAccountId: ConstRef<winrt.Guid>);
+    /* explicit */ function new(domainAccountId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>);
     function First(): winrt.windows.foundation.collections.IIterator<winrt.windows.media.protection.playready.IPlayReadyDomain> /* GenericTypeInstSig */;
 }

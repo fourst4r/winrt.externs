@@ -9,7 +9,7 @@ package winrt.windows.ui.input.inking.core;
 extern interface ICoreWetStrokeUpdateEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function NewInkPoints(): winrt.windows.foundation.collections.IVector<winrt.windows.ui.input.inking.InkPoint> /* GenericTypeInstSig */;
-    overload function PointerId(): UInt32;
+    overload function PointerId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function Disposition(): winrt.windows.ui.input.inking.core.CoreWetStrokeDisposition;
-    overload function Disposition(value: ConstRef<winrt.windows.ui.input.inking.core.CoreWetStrokeDisposition>): Void;
+    overload function Disposition(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.input.inking.core.CoreWetStrokeDisposition>): Void;
 }

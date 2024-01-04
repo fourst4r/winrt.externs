@@ -9,5 +9,5 @@ package winrt.windows.ui.composition;
 extern interface IBackEasingFunction extends winrt.windows.foundation.IInspectable
 {
     overload function Mode(): winrt.windows.ui.composition.CompositionEasingFunctionMode;
-    overload function Amplitude(): Float32;
+    overload function Amplitude(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
 }

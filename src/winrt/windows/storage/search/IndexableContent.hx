@@ -11,10 +11,10 @@ extern class IndexableContent
 {
     function new();
     overload function Id(): winrt.HString;
-    overload function Id(value: ConstRef<winrt.HString>): Void;
+    overload function Id(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Properties(): winrt.windows.foundation.collections.IMap<winrt.HString, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;
     overload function Stream(): winrt.windows.storage.streams.IRandomAccessStream;
-    overload function Stream(value: ConstRef<winrt.windows.storage.streams.IRandomAccessStream>): Void;
+    overload function Stream(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStream>): Void;
     overload function StreamContentType(): winrt.HString;
-    overload function StreamContentType(value: ConstRef<winrt.HString>): Void;
+    overload function StreamContentType(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

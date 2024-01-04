@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml;
 @:native("winrt::Windows::UI::Xaml::IVisualStateManagerOverrides")
 extern interface IVisualStateManagerOverrides extends winrt.windows.foundation.IInspectable
 {
-    function GoToStateCore(control: ConstRef<winrt.windows.ui.xaml.controls.Control>, templateRoot: ConstRef<winrt.windows.ui.xaml.FrameworkElement>, stateName: ConstRef<winrt.HString>, group: ConstRef<winrt.windows.ui.xaml.VisualStateGroup>, state: ConstRef<winrt.windows.ui.xaml.VisualState>, useTransitions: Bool): Bool;
+    function GoToStateCore(control: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.Control>, templateRoot: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.FrameworkElement>, stateName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, group: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.VisualStateGroup>, state: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.VisualState>, useTransitions: Bool): Bool;
 }

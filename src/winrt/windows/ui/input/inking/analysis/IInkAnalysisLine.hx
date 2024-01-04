@@ -9,5 +9,5 @@ package winrt.windows.ui.input.inking.analysis;
 extern interface IInkAnalysisLine extends winrt.windows.foundation.IInspectable
 {
     overload function RecognizedText(): winrt.HString;
-    overload function IndentLevel(): Int32;
+    overload function IndentLevel(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

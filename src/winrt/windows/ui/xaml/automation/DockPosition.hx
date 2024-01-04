@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml.automation;
 
 @:include("winrt/Windows.UI.Xaml.Automation.h", true)
 @:native("winrt::Windows::UI::Xaml::Automation::DockPosition")
-extern enum abstract DockPosition(Int32)
+extern enum abstract DockPosition(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Xaml::Automation::DockPosition::Top") final Top;
     @:native("winrt::Windows::UI::Xaml::Automation::DockPosition::Left") final Left;

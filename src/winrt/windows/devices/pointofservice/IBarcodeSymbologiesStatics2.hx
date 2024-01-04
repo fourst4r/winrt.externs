@@ -8,5 +8,5 @@ package winrt.windows.devices.pointofservice;
 @:native("winrt::Windows::Devices::PointOfService::IBarcodeSymbologiesStatics2")
 extern interface IBarcodeSymbologiesStatics2 extends winrt.windows.foundation.IInspectable
 {
-    overload function Gs1DWCode(): UInt32;
+    overload function Gs1DWCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

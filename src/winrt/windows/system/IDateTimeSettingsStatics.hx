@@ -8,5 +8,5 @@ package winrt.windows.system;
 @:native("winrt::Windows::System::IDateTimeSettingsStatics")
 extern interface IDateTimeSettingsStatics extends winrt.windows.foundation.IInspectable
 {
-    function SetSystemDateTime(utcDateTime: ConstRef<winrt.windows.foundation.DateTime>): Void;
+    function SetSystemDateTime(utcDateTime: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.DateTime>): Void;
 }

@@ -12,7 +12,7 @@ extern class PosPrinterCapabilities
     overload function PowerReportingType(): winrt.windows.devices.pointofservice.UnifiedPosPowerReportingType;
     overload function IsStatisticsReportingSupported(): Bool;
     overload function IsStatisticsUpdatingSupported(): Bool;
-    overload function DefaultCharacterSet(): UInt32;
+    overload function DefaultCharacterSet(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function HasCoverSensor(): Bool;
     overload function CanMapCharacterSet(): Bool;
     overload function IsTransactionSupported(): Bool;

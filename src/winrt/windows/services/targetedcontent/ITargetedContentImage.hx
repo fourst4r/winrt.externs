@@ -8,6 +8,6 @@ package winrt.windows.services.targetedcontent;
 @:native("winrt::Windows::Services::TargetedContent::ITargetedContentImage")
 extern interface ITargetedContentImage extends winrt.windows.foundation.IInspectable
 {
-    overload function Height(): UInt32;
-    overload function Width(): UInt32;
+    overload function Height(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Width(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

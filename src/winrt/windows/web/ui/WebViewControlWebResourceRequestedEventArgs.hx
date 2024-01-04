@@ -11,6 +11,6 @@ extern class WebViewControlWebResourceRequestedEventArgs
 {
     function GetDeferral(): winrt.windows.foundation.Deferral;
     overload function Request(): winrt.windows.web.http.HttpRequestMessage;
-    overload function Response(value: ConstRef<winrt.windows.web.http.HttpResponseMessage>): Void;
+    overload function Response(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.HttpResponseMessage>): Void;
     overload function Response(): winrt.windows.web.http.HttpResponseMessage;
 }

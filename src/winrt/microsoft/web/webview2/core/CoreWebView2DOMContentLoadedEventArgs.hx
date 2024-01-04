@@ -9,5 +9,5 @@ package winrt.microsoft.web.webview2.core;
 extern class CoreWebView2DOMContentLoadedEventArgs
     implements winrt.microsoft.web.webview2.core.ICoreWebView2DOMContentLoadedEventArgs
 {
-    overload function NavigationId(): UInt64;
+    overload function NavigationId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

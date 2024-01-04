@@ -2,7 +2,7 @@ package winrt.windows.services.maps.localsearch;
 
 @:include("winrt/Windows.Services.Maps.LocalSearch.h", true)
 @:native("winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderStatus")
-extern enum abstract LocalLocationFinderStatus(Int32)
+extern enum abstract LocalLocationFinderStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderStatus::Success") final Success;
     @:native("winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderStatus::UnknownError") final UnknownError;

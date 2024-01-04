@@ -11,14 +11,14 @@ extern class RemoteSystemConnectionRequest
     implements winrt.windows.system.remotesystems.IRemoteSystemConnectionRequest2
     implements winrt.windows.system.remotesystems.IRemoteSystemConnectionRequest3
 {
-    /* explicit */ function new(remoteSystem: ConstRef<winrt.windows.system.remotesystems.RemoteSystem>);
+    /* explicit */ function new(remoteSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.remotesystems.RemoteSystem>);
     overload function RemoteSystem(): winrt.windows.system.remotesystems.RemoteSystem;
     overload function RemoteSystemApp(): winrt.windows.system.remotesystems.RemoteSystemApp;
     overload function ConnectionToken(): winrt.HString;
-    function CreateFromConnectionToken(connectionToken: ConstRef<winrt.HString>): winrt.windows.system.remotesystems.RemoteSystemConnectionRequest;
-    function CreateFromConnectionTokenForUser(user: ConstRef<winrt.windows.system.User>, connectionToken: ConstRef<winrt.HString>): winrt.windows.system.remotesystems.RemoteSystemConnectionRequest;
-    function CreateForApp(remoteSystemApp: ConstRef<winrt.windows.system.remotesystems.RemoteSystemApp>): winrt.windows.system.remotesystems.RemoteSystemConnectionRequest;
-    static function CreateForApp(remoteSystemApp: ConstRef<winrt.windows.system.remotesystems.RemoteSystemApp>): winrt.windows.system.remotesystems.RemoteSystemConnectionRequest;
-    static function CreateFromConnectionToken(connectionToken: ConstRef<winrt.HString>): winrt.windows.system.remotesystems.RemoteSystemConnectionRequest;
-    static function CreateFromConnectionTokenForUser(user: ConstRef<winrt.windows.system.User>, connectionToken: ConstRef<winrt.HString>): winrt.windows.system.remotesystems.RemoteSystemConnectionRequest;
+    function CreateFromConnectionToken(connectionToken: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.system.remotesystems.RemoteSystemConnectionRequest;
+    function CreateFromConnectionTokenForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>, connectionToken: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.system.remotesystems.RemoteSystemConnectionRequest;
+    function CreateForApp(remoteSystemApp: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.remotesystems.RemoteSystemApp>): winrt.windows.system.remotesystems.RemoteSystemConnectionRequest;
+    static function CreateForApp(remoteSystemApp: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.remotesystems.RemoteSystemApp>): winrt.windows.system.remotesystems.RemoteSystemConnectionRequest;
+    static function CreateFromConnectionToken(connectionToken: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.system.remotesystems.RemoteSystemConnectionRequest;
+    static function CreateFromConnectionTokenForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>, connectionToken: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.system.remotesystems.RemoteSystemConnectionRequest;
 }

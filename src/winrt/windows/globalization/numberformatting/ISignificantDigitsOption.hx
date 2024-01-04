@@ -8,6 +8,6 @@ package winrt.windows.globalization.numberformatting;
 @:native("winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption")
 extern interface ISignificantDigitsOption extends winrt.windows.foundation.IInspectable
 {
-    overload function SignificantDigits(): Int32;
-    overload function SignificantDigits(value: Int32): Void;
+    overload function SignificantDigits(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function SignificantDigits(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
 }

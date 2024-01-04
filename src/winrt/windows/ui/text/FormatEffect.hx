@@ -2,7 +2,7 @@ package winrt.windows.ui.text;
 
 @:include("winrt/Windows.UI.Text.h", true)
 @:native("winrt::Windows::UI::Text::FormatEffect")
-extern enum abstract FormatEffect(Int32)
+extern enum abstract FormatEffect(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Text::FormatEffect::Off") final Off;
     @:native("winrt::Windows::UI::Text::FormatEffect::On") final On;

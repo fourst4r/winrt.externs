@@ -9,9 +9,9 @@ package winrt.windows.ui.composition;
 extern interface IVisual2 extends winrt.windows.foundation.IInspectable
 {
     overload function ParentForTransform(): winrt.windows.ui.composition.Visual;
-    overload function ParentForTransform(value: ConstRef<winrt.windows.ui.composition.Visual>): Void;
+    overload function ParentForTransform(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Visual>): Void;
     overload function RelativeOffsetAdjustment(): winrt.windows.foundation.numerics.Vector3;
-    overload function RelativeOffsetAdjustment(value: ConstRef<winrt.windows.foundation.numerics.Vector3>): Void;
+    overload function RelativeOffsetAdjustment(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector3>): Void;
     overload function RelativeSizeAdjustment(): winrt.windows.foundation.numerics.Vector2;
-    overload function RelativeSizeAdjustment(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function RelativeSizeAdjustment(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
 }

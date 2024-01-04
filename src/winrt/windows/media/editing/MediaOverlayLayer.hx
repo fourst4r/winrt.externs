@@ -11,7 +11,7 @@ extern class MediaOverlayLayer
 {
     function new();
     @:native("winrt::Windows::Media::Editing::MediaOverlayLayer")
-    /* explicit */ static overload function make(compositorDefinition: ConstRef<winrt.windows.media.effects.IVideoCompositorDefinition>): winrt.windows.media.editing.MediaOverlayLayer;
+    /* explicit */ static overload function make(compositorDefinition: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.effects.IVideoCompositorDefinition>): winrt.windows.media.editing.MediaOverlayLayer;
     function Clone(): winrt.windows.media.editing.MediaOverlayLayer;
     overload function Overlays(): winrt.windows.foundation.collections.IVector<winrt.windows.media.editing.MediaOverlay> /* GenericTypeInstSig */;
     overload function CustomCompositorDefinition(): winrt.windows.media.effects.IVideoCompositorDefinition;

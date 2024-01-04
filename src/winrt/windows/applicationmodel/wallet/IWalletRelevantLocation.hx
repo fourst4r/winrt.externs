@@ -9,7 +9,7 @@ package winrt.windows.applicationmodel.wallet;
 extern interface IWalletRelevantLocation extends winrt.windows.foundation.IInspectable
 {
     overload function Position(): winrt.windows.devices.geolocation.BasicGeoposition;
-    overload function Position(value: ConstRef<winrt.windows.devices.geolocation.BasicGeoposition>): Void;
+    overload function Position(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.geolocation.BasicGeoposition>): Void;
     overload function DisplayMessage(): winrt.HString;
-    overload function DisplayMessage(value: ConstRef<winrt.HString>): Void;
+    overload function DisplayMessage(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

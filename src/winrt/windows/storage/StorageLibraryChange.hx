@@ -12,6 +12,6 @@ extern class StorageLibraryChange
     overload function ChangeType(): winrt.windows.storage.StorageLibraryChangeType;
     overload function Path(): winrt.HString;
     overload function PreviousPath(): winrt.HString;
-    function IsOfType(type: ConstRef<winrt.windows.storage.StorageItemTypes>): Bool;
+    function IsOfType(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.StorageItemTypes>): Bool;
     function GetStorageItemAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.storage.IStorageItem> /* GenericTypeInstSig */;
 }

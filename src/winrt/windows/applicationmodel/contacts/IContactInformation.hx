@@ -15,5 +15,5 @@ extern interface IContactInformation extends winrt.windows.foundation.IInspectab
     overload function Locations(): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.contacts.ContactLocationField> /* GenericTypeInstSig */;
     overload function InstantMessages(): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.contacts.ContactInstantMessageField> /* GenericTypeInstSig */;
     overload function CustomFields(): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.contacts.ContactField> /* GenericTypeInstSig */;
-    function QueryCustomFields(customName: ConstRef<winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.contacts.ContactField> /* GenericTypeInstSig */;
+    function QueryCustomFields(customName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.contacts.ContactField> /* GenericTypeInstSig */;
 }

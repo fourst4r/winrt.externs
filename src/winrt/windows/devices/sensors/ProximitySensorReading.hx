@@ -11,5 +11,5 @@ extern class ProximitySensorReading
 {
     overload function Timestamp(): winrt.windows.foundation.DateTime;
     overload function IsDetected(): Bool;
-    overload function DistanceInMillimeters(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
+    overload function DistanceInMillimeters(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
 }

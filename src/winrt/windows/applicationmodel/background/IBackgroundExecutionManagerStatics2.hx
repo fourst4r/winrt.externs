@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.background;
 @:native("winrt::Windows::ApplicationModel::Background::IBackgroundExecutionManagerStatics2")
 extern interface IBackgroundExecutionManagerStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function RequestAccessKindAsync(requestedAccess: ConstRef<winrt.windows.applicationmodel.background.BackgroundAccessRequestKind>, reason: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function RequestAccessKindAsync(requestedAccess: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.background.BackgroundAccessRequestKind>, reason: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

@@ -8,5 +8,5 @@ package winrt.windows.graphics.holographic;
 @:native("winrt::Windows::Graphics::Holographic::IHolographicDisplay2")
 extern interface IHolographicDisplay2 extends winrt.windows.foundation.IInspectable
 {
-    overload function RefreshRate(): Float64;
+    overload function RefreshRate(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

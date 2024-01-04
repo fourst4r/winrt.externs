@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.calls;
 @:native("winrt::Windows::ApplicationModel::Calls::IVoipCallCoordinator2")
 extern interface IVoipCallCoordinator2 extends winrt.windows.foundation.IInspectable
 {
-    function SetupNewAcceptedCall(context: ConstRef<winrt.HString>, contactName: ConstRef<winrt.HString>, contactNumber: ConstRef<winrt.HString>, serviceName: ConstRef<winrt.HString>, media: ConstRef<winrt.windows.applicationmodel.calls.VoipPhoneCallMedia>): winrt.windows.applicationmodel.calls.VoipPhoneCall;
+    function SetupNewAcceptedCall(context: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, contactName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, contactNumber: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, serviceName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, media: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.calls.VoipPhoneCallMedia>): winrt.windows.applicationmodel.calls.VoipPhoneCall;
 }

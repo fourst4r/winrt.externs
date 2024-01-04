@@ -14,7 +14,7 @@ extern interface IDisplayModeInfo extends winrt.windows.foundation.IInspectable
     overload function TargetResolution(): winrt.windows.graphics.SizeInt32;
     overload function PresentationRate(): winrt.windows.devices.display.core.DisplayPresentationRate;
     overload function IsInterlaced(): Bool;
-    function GetWireFormatSupportedBitsPerChannel(encoding: ConstRef<winrt.windows.devices.display.core.DisplayWireFormatPixelEncoding>): winrt.windows.devices.display.core.DisplayBitsPerChannel;
-    function IsWireFormatSupported(wireFormat: ConstRef<winrt.windows.devices.display.core.DisplayWireFormat>): Bool;
+    function GetWireFormatSupportedBitsPerChannel(encoding: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.display.core.DisplayWireFormatPixelEncoding>): winrt.windows.devices.display.core.DisplayBitsPerChannel;
+    function IsWireFormatSupported(wireFormat: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.display.core.DisplayWireFormat>): Bool;
     overload function Properties(): winrt.windows.foundation.collections.IMapView<winrt.Guid, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;
 }

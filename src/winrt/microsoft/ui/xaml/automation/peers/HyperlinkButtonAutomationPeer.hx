@@ -11,6 +11,6 @@ extern class HyperlinkButtonAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IHyperlinkButtonAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.provider.IInvokeProvider
 {
-    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.HyperlinkButton>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.HyperlinkButton>);
     function Invoke(): Void;
 }

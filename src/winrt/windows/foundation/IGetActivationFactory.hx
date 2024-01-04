@@ -8,5 +8,5 @@ package winrt.windows.foundation;
 @:native("winrt::Windows::Foundation::IGetActivationFactory")
 extern interface IGetActivationFactory extends winrt.windows.foundation.IInspectable
 {
-    function GetActivationFactory(activatableClassId: ConstRef<winrt.HString>): winrt.windows.foundation.IInspectable;
+    function GetActivationFactory(activatableClassId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IInspectable;
 }

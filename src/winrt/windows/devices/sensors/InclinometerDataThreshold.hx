@@ -9,10 +9,10 @@ package winrt.windows.devices.sensors;
 extern class InclinometerDataThreshold
     implements winrt.windows.devices.sensors.IInclinometerDataThreshold
 {
-    overload function PitchInDegrees(): Float32;
-    overload function PitchInDegrees(value: Float32): Void;
-    overload function RollInDegrees(): Float32;
-    overload function RollInDegrees(value: Float32): Void;
-    overload function YawInDegrees(): Float32;
-    overload function YawInDegrees(value: Float32): Void;
+    overload function PitchInDegrees(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function PitchInDegrees(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function RollInDegrees(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function RollInDegrees(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
+    overload function YawInDegrees(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function YawInDegrees(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
 }

@@ -9,5 +9,5 @@ package winrt.windows.networking.vpn;
 extern class VpnForegroundActivationOperation
     implements winrt.windows.networking.vpn.IVpnForegroundActivationOperation
 {
-    function Complete(result: ConstRef<winrt.windows.foundation.collections.ValueSet>): Void;
+    function Complete(result: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.ValueSet>): Void;
 }

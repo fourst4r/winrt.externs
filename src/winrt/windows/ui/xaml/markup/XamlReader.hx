@@ -9,8 +9,8 @@ package winrt.windows.ui.xaml.markup;
 extern class XamlReader
     implements winrt.windows.ui.xaml.markup.IXamlReader
 {
-    function Load(xaml: ConstRef<winrt.HString>): winrt.windows.foundation.IInspectable;
-    function LoadWithInitialTemplateValidation(xaml: ConstRef<winrt.HString>): winrt.windows.foundation.IInspectable;
-    static function Load(xaml: ConstRef<winrt.HString>): winrt.windows.foundation.IInspectable;
-    static function LoadWithInitialTemplateValidation(xaml: ConstRef<winrt.HString>): winrt.windows.foundation.IInspectable;
+    function Load(xaml: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IInspectable;
+    function LoadWithInitialTemplateValidation(xaml: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IInspectable;
+    static function Load(xaml: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IInspectable;
+    static function LoadWithInitialTemplateValidation(xaml: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IInspectable;
 }

@@ -9,6 +9,6 @@ package winrt.windows.devices.alljoyn;
 extern class AllJoynServiceInfoRemovedEventArgs
     implements winrt.windows.devices.alljoyn.IAllJoynServiceInfoRemovedEventArgs
 {
-    /* explicit */ function new(uniqueName: ConstRef<winrt.HString>);
+    /* explicit */ function new(uniqueName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     overload function UniqueName(): winrt.HString;
 }

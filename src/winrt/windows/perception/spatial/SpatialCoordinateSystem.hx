@@ -9,5 +9,5 @@ package winrt.windows.perception.spatial;
 extern class SpatialCoordinateSystem
     implements winrt.windows.perception.spatial.ISpatialCoordinateSystem
 {
-    function TryGetTransformTo(target: ConstRef<winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.foundation.IReference<winrt.windows.foundation.numerics.Matrix4x4> /* GenericTypeInstSig */;
+    function TryGetTransformTo(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialCoordinateSystem>): winrt.windows.foundation.IReference<winrt.windows.foundation.numerics.Matrix4x4> /* GenericTypeInstSig */;
 }

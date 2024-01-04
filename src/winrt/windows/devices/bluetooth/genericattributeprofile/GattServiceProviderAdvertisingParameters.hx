@@ -15,6 +15,6 @@ extern class GattServiceProviderAdvertisingParameters
     overload function IsConnectable(): Bool;
     overload function IsDiscoverable(value: Bool): Void;
     overload function IsDiscoverable(): Bool;
-    overload function ServiceData(value: ConstRef<winrt.windows.storage.streams.IBuffer>): Void;
+    overload function ServiceData(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): Void;
     overload function ServiceData(): winrt.windows.storage.streams.IBuffer;
 }

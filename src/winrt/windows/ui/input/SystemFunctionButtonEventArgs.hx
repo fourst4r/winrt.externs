@@ -9,7 +9,7 @@ package winrt.windows.ui.input;
 extern class SystemFunctionButtonEventArgs
     implements winrt.windows.ui.input.ISystemFunctionButtonEventArgs
 {
-    overload function Timestamp(): UInt64;
+    overload function Timestamp(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
     overload function Handled(): Bool;
     overload function Handled(value: Bool): Void;
 }

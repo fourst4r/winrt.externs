@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IRefreshInteractionRatioChangedEventArgs")
 extern interface IRefreshInteractionRatioChangedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function InteractionRatio(): Float64;
+    overload function InteractionRatio(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

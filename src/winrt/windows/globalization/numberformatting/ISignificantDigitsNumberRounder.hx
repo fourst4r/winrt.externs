@@ -9,7 +9,7 @@ package winrt.windows.globalization.numberformatting;
 extern interface ISignificantDigitsNumberRounder extends winrt.windows.foundation.IInspectable
 {
     overload function RoundingAlgorithm(): winrt.windows.globalization.numberformatting.RoundingAlgorithm;
-    overload function RoundingAlgorithm(value: ConstRef<winrt.windows.globalization.numberformatting.RoundingAlgorithm>): Void;
-    overload function SignificantDigits(): UInt32;
-    overload function SignificantDigits(value: UInt32): Void;
+    overload function RoundingAlgorithm(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.globalization.numberformatting.RoundingAlgorithm>): Void;
+    overload function SignificantDigits(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function SignificantDigits(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
 }

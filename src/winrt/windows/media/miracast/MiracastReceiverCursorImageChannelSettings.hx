@@ -12,5 +12,5 @@ extern class MiracastReceiverCursorImageChannelSettings
     overload function IsEnabled(): Bool;
     overload function IsEnabled(value: Bool): Void;
     overload function MaxImageSize(): winrt.windows.graphics.SizeInt32;
-    overload function MaxImageSize(value: ConstRef<winrt.windows.graphics.SizeInt32>): Void;
+    overload function MaxImageSize(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.SizeInt32>): Void;
 }

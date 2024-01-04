@@ -11,6 +11,6 @@ extern class ContactListCreateOrUpdateContactRequest
 {
     overload function ContactListId(): winrt.HString;
     overload function Contact(): winrt.windows.applicationmodel.contacts.Contact;
-    function ReportCompletedAsync(createdOrUpdatedContact: ConstRef<winrt.windows.applicationmodel.contacts.Contact>): winrt.windows.foundation.IAsyncAction;
+    function ReportCompletedAsync(createdOrUpdatedContact: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.contacts.Contact>): winrt.windows.foundation.IAsyncAction;
     function ReportFailedAsync(): winrt.windows.foundation.IAsyncAction;
 }

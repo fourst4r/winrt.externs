@@ -10,7 +10,7 @@ extern class PdlPassthroughTarget
     implements winrt.windows.devices.printers.IPdlPassthroughTarget
     implements winrt.windows.foundation.IClosable
 {
-    overload function PrintJobId(): Int32;
+    overload function PrintJobId(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     function GetOutputStream(): winrt.windows.storage.streams.IOutputStream;
     function Submit(): Void;
     function Close(): Void;

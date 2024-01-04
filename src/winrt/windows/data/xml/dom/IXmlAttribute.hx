@@ -11,5 +11,5 @@ extern interface IXmlAttribute extends winrt.windows.foundation.IInspectable
     overload function Name(): winrt.HString;
     overload function Specified(): Bool;
     overload function Value(): winrt.HString;
-    overload function Value(value: ConstRef<winrt.HString>): Void;
+    overload function Value(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

@@ -8,6 +8,6 @@ package winrt.windows.security.isolation;
 @:native("winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentOwnerRegistrationStatics")
 extern interface IIsolatedWindowsEnvironmentOwnerRegistrationStatics extends winrt.windows.foundation.IInspectable
 {
-    function Register(ownerName: ConstRef<winrt.HString>, ownerRegistrationData: ConstRef<winrt.windows.security.isolation.IsolatedWindowsEnvironmentOwnerRegistrationData>): winrt.windows.security.isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult;
-    function Unregister(ownerName: ConstRef<winrt.HString>): Void;
+    function Register(ownerName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, ownerRegistrationData: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.isolation.IsolatedWindowsEnvironmentOwnerRegistrationData>): winrt.windows.security.isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult;
+    function Unregister(ownerName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

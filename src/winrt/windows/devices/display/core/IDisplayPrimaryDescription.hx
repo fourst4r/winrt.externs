@@ -8,8 +8,8 @@ package winrt.windows.devices.display.core;
 @:native("winrt::Windows::Devices::Display::Core::IDisplayPrimaryDescription")
 extern interface IDisplayPrimaryDescription extends winrt.windows.foundation.IInspectable
 {
-    overload function Width(): UInt32;
-    overload function Height(): UInt32;
+    overload function Width(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Height(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function Format(): winrt.windows.graphics.directx.DirectXPixelFormat;
     overload function ColorSpace(): winrt.windows.graphics.directx.DirectXColorSpace;
     overload function IsStereo(): Bool;

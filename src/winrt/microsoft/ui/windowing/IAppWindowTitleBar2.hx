@@ -9,5 +9,5 @@ package winrt.microsoft.ui.windowing;
 extern interface IAppWindowTitleBar2 extends winrt.windows.foundation.IInspectable
 {
     overload function PreferredHeightOption(): winrt.microsoft.ui.windowing.TitleBarHeightOption;
-    overload function PreferredHeightOption(value: ConstRef<winrt.microsoft.ui.windowing.TitleBarHeightOption>): Void;
+    overload function PreferredHeightOption(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.windowing.TitleBarHeightOption>): Void;
 }

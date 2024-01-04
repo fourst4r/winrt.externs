@@ -9,6 +9,6 @@ package winrt.windows.ui.windowmanagement.preview;
 extern class WindowManagementPreview
     implements winrt.windows.ui.windowmanagement.preview.IWindowManagementPreview
 {
-    function SetPreferredMinSize(window: ConstRef<winrt.windows.ui.windowmanagement.AppWindow>, preferredFrameMinSize: ConstRef<winrt.windows.foundation.Size>): Void;
-    static function SetPreferredMinSize(window: ConstRef<winrt.windows.ui.windowmanagement.AppWindow>, preferredFrameMinSize: ConstRef<winrt.windows.foundation.Size>): Void;
+    function SetPreferredMinSize(window: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.windowmanagement.AppWindow>, preferredFrameMinSize: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Size>): Void;
+    static function SetPreferredMinSize(window: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.windowmanagement.AppWindow>, preferredFrameMinSize: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Size>): Void;
 }

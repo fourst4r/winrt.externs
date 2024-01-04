@@ -8,5 +8,5 @@ package winrt.windows.devices.alljoyn;
 @:native("winrt::Windows::Devices::AllJoyn::IAllJoynWatcherStoppedEventArgs")
 extern interface IAllJoynWatcherStoppedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function Status(): Int32;
+    overload function Status(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

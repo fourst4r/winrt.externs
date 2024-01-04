@@ -9,6 +9,6 @@ package winrt.windows.networking.connectivity;
 extern class DataUsage
     implements winrt.windows.networking.connectivity.IDataUsage
 {
-    overload function BytesSent(): UInt64;
-    overload function BytesReceived(): UInt64;
+    overload function BytesSent(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
+    overload function BytesReceived(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

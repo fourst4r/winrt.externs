@@ -8,5 +8,5 @@ package winrt.windows.web.http;
 @:native("winrt::Windows::Web::Http::IHttpMethodFactory")
 extern interface IHttpMethodFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(method: ConstRef<winrt.HString>): winrt.windows.web.http.HttpMethod;
+    function Create(method: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.http.HttpMethod;
 }

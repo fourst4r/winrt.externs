@@ -11,5 +11,5 @@ extern class WebAuthenticationResult
 {
     overload function ResponseData(): winrt.HString;
     overload function ResponseStatus(): winrt.windows.security.authentication.web.WebAuthenticationStatus;
-    overload function ResponseErrorDetail(): UInt32;
+    overload function ResponseErrorDetail(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

@@ -10,7 +10,7 @@ extern class LowLevelDevicesController
     implements winrt.windows.devices.ILowLevelDevicesController
 {
     overload function DefaultProvider(): winrt.windows.devices.ILowLevelDevicesAggregateProvider;
-    overload function DefaultProvider(value: ConstRef<winrt.windows.devices.ILowLevelDevicesAggregateProvider>): Void;
+    overload function DefaultProvider(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.ILowLevelDevicesAggregateProvider>): Void;
     static overload function DefaultProvider(): winrt.windows.devices.ILowLevelDevicesAggregateProvider;
-    static overload function DefaultProvider(value: ConstRef<winrt.windows.devices.ILowLevelDevicesAggregateProvider>): Void;
+    static overload function DefaultProvider(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.ILowLevelDevicesAggregateProvider>): Void;
 }

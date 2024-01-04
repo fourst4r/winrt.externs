@@ -9,7 +9,7 @@ package winrt.microsoft.ui.xaml.media;
 extern interface IGeometryGroup extends winrt.windows.foundation.IInspectable
 {
     overload function FillRule(): winrt.microsoft.ui.xaml.media.FillRule;
-    overload function FillRule(value: ConstRef<winrt.microsoft.ui.xaml.media.FillRule>): Void;
+    overload function FillRule(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.FillRule>): Void;
     overload function Children(): winrt.microsoft.ui.xaml.media.GeometryCollection;
-    overload function Children(value: ConstRef<winrt.microsoft.ui.xaml.media.GeometryCollection>): Void;
+    overload function Children(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.GeometryCollection>): Void;
 }

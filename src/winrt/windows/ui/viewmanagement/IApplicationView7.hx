@@ -9,5 +9,5 @@ package winrt.windows.ui.viewmanagement;
 extern interface IApplicationView7 extends winrt.windows.foundation.IInspectable
 {
     overload function PersistedStateId(): winrt.HString;
-    overload function PersistedStateId(value: ConstRef<winrt.HString>): Void;
+    overload function PersistedStateId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

@@ -10,8 +10,8 @@ extern class PlaceInfoCreateOptions
     implements winrt.windows.services.maps.IPlaceInfoCreateOptions
 {
     function new();
-    overload function DisplayName(value: ConstRef<winrt.HString>): Void;
+    overload function DisplayName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function DisplayName(): winrt.HString;
-    overload function DisplayAddress(value: ConstRef<winrt.HString>): Void;
+    overload function DisplayAddress(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function DisplayAddress(): winrt.HString;
 }

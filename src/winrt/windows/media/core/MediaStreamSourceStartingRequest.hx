@@ -11,5 +11,5 @@ extern class MediaStreamSourceStartingRequest
 {
     overload function StartPosition(): winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* GenericTypeInstSig */;
     function GetDeferral(): winrt.windows.media.core.MediaStreamSourceStartingRequestDeferral;
-    function SetActualStartPosition(position: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    function SetActualStartPosition(position: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
 }

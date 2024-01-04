@@ -14,7 +14,7 @@ extern class CoreTextTextUpdatingEventArgs
     overload function NewSelection(): winrt.windows.ui.text.core.CoreTextRange;
     overload function InputLanguage(): winrt.windows.globalization.Language;
     overload function Result(): winrt.windows.ui.text.core.CoreTextTextUpdatingResult;
-    overload function Result(value: ConstRef<winrt.windows.ui.text.core.CoreTextTextUpdatingResult>): Void;
+    overload function Result(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.text.core.CoreTextTextUpdatingResult>): Void;
     overload function IsCanceled(): Bool;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

@@ -9,7 +9,7 @@ package winrt.windows.ui.composition;
 extern interface ICompositor4 extends winrt.windows.foundation.IInspectable
 {
     overload function CreateColorGradientStop(): winrt.windows.ui.composition.CompositionColorGradientStop;
-    overload function CreateColorGradientStop(offset: Float32, color: ConstRef<winrt.windows.ui.Color>): winrt.windows.ui.composition.CompositionColorGradientStop;
+    overload function CreateColorGradientStop(offset: #if reflaxe.cpp cxx.num. #else cpp. #end Float32, color: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): winrt.windows.ui.composition.CompositionColorGradientStop;
     function CreateLinearGradientBrush(): winrt.windows.ui.composition.CompositionLinearGradientBrush;
     function CreateSpringScalarAnimation(): winrt.windows.ui.composition.SpringScalarNaturalMotionAnimation;
     function CreateSpringVector2Animation(): winrt.windows.ui.composition.SpringVector2NaturalMotionAnimation;

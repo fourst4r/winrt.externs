@@ -8,5 +8,5 @@ package winrt.windows.storage;
 @:native("winrt::Windows::Storage::IStreamedFileDataRequest")
 extern interface IStreamedFileDataRequest extends winrt.windows.foundation.IInspectable
 {
-    function FailAndClose(failureMode: ConstRef<winrt.windows.storage.StreamedFileFailureMode>): Void;
+    function FailAndClose(failureMode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.StreamedFileFailureMode>): Void;
 }

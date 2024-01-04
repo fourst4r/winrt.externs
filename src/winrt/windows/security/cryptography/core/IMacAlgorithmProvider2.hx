@@ -8,5 +8,5 @@ package winrt.windows.security.cryptography.core;
 @:native("winrt::Windows::Security::Cryptography::Core::IMacAlgorithmProvider2")
 extern interface IMacAlgorithmProvider2 extends winrt.windows.foundation.IInspectable
 {
-    function CreateHash(keyMaterial: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.security.cryptography.core.CryptographicHash;
+    function CreateHash(keyMaterial: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.security.cryptography.core.CryptographicHash;
 }

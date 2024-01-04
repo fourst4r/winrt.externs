@@ -8,5 +8,5 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::IMediaBindingEventArgs3")
 extern interface IMediaBindingEventArgs3 extends winrt.windows.foundation.IInspectable
 {
-    function SetDownloadOperation(downloadOperation: ConstRef<winrt.windows.networking.backgroundtransfer.DownloadOperation>): Void;
+    function SetDownloadOperation(downloadOperation: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.backgroundtransfer.DownloadOperation>): Void;
 }

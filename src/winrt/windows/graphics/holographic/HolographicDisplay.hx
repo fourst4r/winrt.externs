@@ -17,8 +17,8 @@ extern class HolographicDisplay
     overload function IsOpaque(): Bool;
     overload function AdapterId(): winrt.windows.graphics.holographic.HolographicAdapterId;
     overload function SpatialLocator(): winrt.windows.perception.spatial.SpatialLocator;
-    overload function RefreshRate(): Float64;
-    function TryGetViewConfiguration(kind: ConstRef<winrt.windows.graphics.holographic.HolographicViewConfigurationKind>): winrt.windows.graphics.holographic.HolographicViewConfiguration;
+    overload function RefreshRate(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    function TryGetViewConfiguration(kind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.holographic.HolographicViewConfigurationKind>): winrt.windows.graphics.holographic.HolographicViewConfiguration;
     function GetDefault(): winrt.windows.graphics.holographic.HolographicDisplay;
     static function GetDefault(): winrt.windows.graphics.holographic.HolographicDisplay;
 }

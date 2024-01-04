@@ -2,7 +2,7 @@ package winrt.windows.services.maps;
 
 @:include("winrt/Windows.Services.Maps.h", true)
 @:native("winrt::Windows::Services::Maps::MapRouteManeuverKind")
-extern enum abstract MapRouteManeuverKind(Int32)
+extern enum abstract MapRouteManeuverKind(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Services::Maps::MapRouteManeuverKind::None") final None;
     @:native("winrt::Windows::Services::Maps::MapRouteManeuverKind::Start") final Start;

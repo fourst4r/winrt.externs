@@ -2,7 +2,7 @@ package winrt.windows.security.isolation;
 
 @:include("winrt/Windows.Security.Isolation.h", true)
 @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAvailablePrinters")
-extern enum abstract IsolatedWindowsEnvironmentAvailablePrinters(UInt32)
+extern enum abstract IsolatedWindowsEnvironmentAvailablePrinters(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAvailablePrinters::None") final None;
     @:native("winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAvailablePrinters::Local") final Local;

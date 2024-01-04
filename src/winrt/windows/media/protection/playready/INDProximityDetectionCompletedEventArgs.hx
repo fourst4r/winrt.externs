@@ -8,5 +8,5 @@ package winrt.windows.media.protection.playready;
 @:native("winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs")
 extern interface INDProximityDetectionCompletedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function ProximityDetectionRetryCount(): UInt32;
+    overload function ProximityDetectionRetryCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

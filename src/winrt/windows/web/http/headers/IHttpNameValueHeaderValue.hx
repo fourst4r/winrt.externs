@@ -10,5 +10,5 @@ extern interface IHttpNameValueHeaderValue extends winrt.windows.foundation.IIns
 {
     overload function Name(): winrt.HString;
     overload function Value(): winrt.HString;
-    overload function Value(value: ConstRef<winrt.HString>): Void;
+    overload function Value(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

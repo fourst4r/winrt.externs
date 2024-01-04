@@ -12,7 +12,7 @@ extern class AppUpdateOptions
 {
     function new();
     overload function CatalogId(): winrt.HString;
-    overload function CatalogId(value: ConstRef<winrt.HString>): Void;
+    overload function CatalogId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function AllowForcedAppRestart(): Bool;
     overload function AllowForcedAppRestart(value: Bool): Void;
     overload function AutomaticallyDownloadAndInstallUpdateIfFound(): Bool;

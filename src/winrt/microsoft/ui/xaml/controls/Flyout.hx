@@ -12,9 +12,9 @@ extern class Flyout
 {
     function new();
     overload function Content(): winrt.microsoft.ui.xaml.UIElement;
-    overload function Content(value: ConstRef<winrt.microsoft.ui.xaml.UIElement>): Void;
+    overload function Content(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): Void;
     overload function FlyoutPresenterStyle(): winrt.microsoft.ui.xaml.Style;
-    overload function FlyoutPresenterStyle(value: ConstRef<winrt.microsoft.ui.xaml.Style>): Void;
+    overload function FlyoutPresenterStyle(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.Style>): Void;
     overload function ContentProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function FlyoutPresenterStyleProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function ContentProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

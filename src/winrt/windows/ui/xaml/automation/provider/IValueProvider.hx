@@ -10,5 +10,5 @@ extern interface IValueProvider extends winrt.windows.foundation.IInspectable
 {
     overload function IsReadOnly(): Bool;
     overload function Value(): winrt.HString;
-    function SetValue(value: ConstRef<winrt.HString>): Void;
+    function SetValue(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

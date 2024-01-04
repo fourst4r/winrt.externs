@@ -9,6 +9,6 @@ package winrt.windows.graphics.printing.workflow;
 extern interface IPrintWorkflowSubmittedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function Operation(): winrt.windows.graphics.printing.workflow.PrintWorkflowSubmittedOperation;
-    function GetTarget(jobPrintTicket: ConstRef<winrt.windows.graphics.printing.printticket.WorkflowPrintTicket>): winrt.windows.graphics.printing.workflow.PrintWorkflowTarget;
+    function GetTarget(jobPrintTicket: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing.printticket.WorkflowPrintTicket>): winrt.windows.graphics.printing.workflow.PrintWorkflowTarget;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

@@ -10,7 +10,7 @@ extern class DialApp
     implements winrt.windows.media.dialprotocol.IDialApp
 {
     overload function AppName(): winrt.HString;
-    function RequestLaunchAsync(appArgument: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.dialprotocol.DialAppLaunchResult> /* GenericTypeInstSig */;
+    function RequestLaunchAsync(appArgument: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.dialprotocol.DialAppLaunchResult> /* GenericTypeInstSig */;
     function StopAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.dialprotocol.DialAppStopResult> /* GenericTypeInstSig */;
     function GetAppStateAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.dialprotocol.DialAppStateDetails> /* GenericTypeInstSig */;
 }

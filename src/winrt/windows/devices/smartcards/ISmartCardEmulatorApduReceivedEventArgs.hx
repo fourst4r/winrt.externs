@@ -10,6 +10,6 @@ extern interface ISmartCardEmulatorApduReceivedEventArgs extends winrt.windows.f
 {
     overload function CommandApdu(): winrt.windows.storage.streams.IBuffer;
     overload function ConnectionProperties(): winrt.windows.devices.smartcards.SmartCardEmulatorConnectionProperties;
-    function TryRespondAsync(responseApdu: ConstRef<winrt.windows.storage.streams.IBuffer>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function TryRespondAsync(responseApdu: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     overload function AutomaticResponseStatus(): winrt.windows.devices.smartcards.SmartCardAutomaticResponseStatus;
 }

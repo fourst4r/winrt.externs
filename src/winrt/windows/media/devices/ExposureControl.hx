@@ -16,5 +16,5 @@ extern class ExposureControl
     overload function Max(): winrt.windows.foundation.TimeSpan;
     overload function Step(): winrt.windows.foundation.TimeSpan;
     overload function Value(): winrt.windows.foundation.TimeSpan;
-    function SetValueAsync(shutterDuration: ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.foundation.IAsyncAction;
+    function SetValueAsync(shutterDuration: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): winrt.windows.foundation.IAsyncAction;
 }

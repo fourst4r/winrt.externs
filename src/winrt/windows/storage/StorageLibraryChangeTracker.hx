@@ -13,6 +13,6 @@ extern class StorageLibraryChangeTracker
     function GetChangeReader(): winrt.windows.storage.StorageLibraryChangeReader;
     overload function Enable(): Void;
     function Reset(): Void;
-    overload function Enable(options: ConstRef<winrt.windows.storage.StorageLibraryChangeTrackerOptions>): Void;
+    overload function Enable(options: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.StorageLibraryChangeTrackerOptions>): Void;
     function Disable(): Void;
 }

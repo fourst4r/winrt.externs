@@ -5,5 +5,5 @@ package winrt.windows.security.authentication.onlineid;
 extern class OnlineIdSystemAuthenticator
 {
     static overload function Default(): winrt.windows.security.authentication.onlineid.OnlineIdSystemAuthenticatorForUser;
-    static function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.security.authentication.onlineid.OnlineIdSystemAuthenticatorForUser;
+    static function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.security.authentication.onlineid.OnlineIdSystemAuthenticatorForUser;
 }

@@ -9,7 +9,7 @@ package winrt.windows.media.streaming.adaptive;
 extern class AdaptiveMediaSourceDownloadStatistics
     implements winrt.windows.media.streaming.adaptive.IAdaptiveMediaSourceDownloadStatistics
 {
-    overload function ContentBytesReceivedCount(): UInt64;
+    overload function ContentBytesReceivedCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
     overload function TimeToHeadersReceived(): winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* GenericTypeInstSig */;
     overload function TimeToFirstByteReceived(): winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* GenericTypeInstSig */;
     overload function TimeToLastByteReceived(): winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* GenericTypeInstSig */;

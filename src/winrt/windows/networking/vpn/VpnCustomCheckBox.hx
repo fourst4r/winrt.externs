@@ -14,7 +14,7 @@ extern class VpnCustomCheckBox
     overload function InitialCheckState(value: Bool): Void;
     overload function InitialCheckState(): Bool;
     overload function Checked(): Bool;
-    overload function Label(value: ConstRef<winrt.HString>): Void;
+    overload function Label(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Label(): winrt.HString;
     overload function Compulsory(value: Bool): Void;
     overload function Compulsory(): Bool;

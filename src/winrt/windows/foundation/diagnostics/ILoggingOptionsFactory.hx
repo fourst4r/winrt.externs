@@ -8,5 +8,5 @@ package winrt.windows.foundation.diagnostics;
 @:native("winrt::Windows::Foundation::Diagnostics::ILoggingOptionsFactory")
 extern interface ILoggingOptionsFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWithKeywords(keywords: Int64): winrt.windows.foundation.diagnostics.LoggingOptions;
+    function CreateWithKeywords(keywords: #if reflaxe.cpp cxx.num. #else cpp. #end Int64): winrt.windows.foundation.diagnostics.LoggingOptions;
 }

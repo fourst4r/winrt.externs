@@ -9,7 +9,7 @@ package winrt.windows.services.maps.localsearch;
 extern class LocalLocationRatingInfo
     implements winrt.windows.services.maps.localsearch.ILocalLocationRatingInfo
 {
-    overload function AggregateRating(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
-    overload function RatingCount(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
+    overload function AggregateRating(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
+    overload function RatingCount(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
     overload function ProviderIdentifier(): winrt.HString;
 }

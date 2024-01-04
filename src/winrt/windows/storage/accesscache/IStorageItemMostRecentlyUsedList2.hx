@@ -8,6 +8,6 @@ package winrt.windows.storage.accesscache;
 @:native("winrt::Windows::Storage::AccessCache::IStorageItemMostRecentlyUsedList2")
 extern interface IStorageItemMostRecentlyUsedList2 extends winrt.windows.foundation.IInspectable
 {
-    function Add(file: ConstRef<winrt.windows.storage.IStorageItem>, metadata: ConstRef<winrt.HString>, visibility: ConstRef<winrt.windows.storage.accesscache.RecentStorageItemVisibility>): winrt.HString;
-    function AddOrReplace(token: ConstRef<winrt.HString>, file: ConstRef<winrt.windows.storage.IStorageItem>, metadata: ConstRef<winrt.HString>, visibility: ConstRef<winrt.windows.storage.accesscache.RecentStorageItemVisibility>): Void;
+    function Add(file: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.IStorageItem>, metadata: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, visibility: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.accesscache.RecentStorageItemVisibility>): winrt.HString;
+    function AddOrReplace(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, file: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.IStorageItem>, metadata: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, visibility: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.accesscache.RecentStorageItemVisibility>): Void;
 }

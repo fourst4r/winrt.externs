@@ -8,10 +8,10 @@ package winrt.windows.system.diagnostics;
 @:native("winrt::Windows::System::Diagnostics::IProcessDiskUsageReport")
 extern interface IProcessDiskUsageReport extends winrt.windows.foundation.IInspectable
 {
-    overload function ReadOperationCount(): Int64;
-    overload function WriteOperationCount(): Int64;
-    overload function OtherOperationCount(): Int64;
-    overload function BytesReadCount(): Int64;
-    overload function BytesWrittenCount(): Int64;
-    overload function OtherBytesCount(): Int64;
+    overload function ReadOperationCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int64;
+    overload function WriteOperationCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int64;
+    overload function OtherOperationCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int64;
+    overload function BytesReadCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int64;
+    overload function BytesWrittenCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int64;
+    overload function OtherBytesCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int64;
 }

@@ -2,7 +2,7 @@ package winrt.windows.security.cryptography.certificates;
 
 @:include("winrt/Windows.Security.Cryptography.Certificates.h", true)
 @:native("winrt::Windows::Security::Cryptography::Certificates::CertificateChainPolicy")
-extern enum abstract CertificateChainPolicy(Int32)
+extern enum abstract CertificateChainPolicy(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Security::Cryptography::Certificates::CertificateChainPolicy::Base") final Base;
     @:native("winrt::Windows::Security::Cryptography::Certificates::CertificateChainPolicy::Ssl") final Ssl;

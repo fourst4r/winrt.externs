@@ -2,7 +2,7 @@ package winrt.microsoft.ui.input;
 
 @:include("winrt/Microsoft.UI.Input.h", true)
 @:native("winrt::Microsoft::UI::Input::PointerDeviceType")
-extern enum abstract PointerDeviceType(Int32)
+extern enum abstract PointerDeviceType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Input::PointerDeviceType::Touch") final Touch;
     @:native("winrt::Microsoft::UI::Input::PointerDeviceType::Pen") final Pen;

@@ -8,10 +8,10 @@ package winrt.windows.devices.bluetooth.advertisement;
 @:native("winrt::Windows::Devices::Bluetooth::Advertisement::IBluetoothLEAdvertisementBytePattern")
 extern interface IBluetoothLEAdvertisementBytePattern extends winrt.windows.foundation.IInspectable
 {
-    overload function DataType(): UInt8;
-    overload function DataType(value: UInt8): Void;
-    overload function Offset(): Int16;
-    overload function Offset(value: Int16): Void;
+    overload function DataType(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function DataType(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8): Void;
+    overload function Offset(): #if reflaxe.cpp cxx.num. #else cpp. #end Int16;
+    overload function Offset(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int16): Void;
     overload function Data(): winrt.windows.storage.streams.IBuffer;
-    overload function Data(value: ConstRef<winrt.windows.storage.streams.IBuffer>): Void;
+    overload function Data(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IBuffer>): Void;
 }

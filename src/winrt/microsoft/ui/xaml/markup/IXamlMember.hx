@@ -14,6 +14,6 @@ extern interface IXamlMember extends winrt.windows.foundation.IInspectable
     overload function Name(): winrt.HString;
     overload function TargetType(): winrt.microsoft.ui.xaml.markup.IXamlType;
     overload function Type(): winrt.microsoft.ui.xaml.markup.IXamlType;
-    function GetValue(instance: ConstRef<winrt.windows.foundation.IInspectable>): winrt.windows.foundation.IInspectable;
-    function SetValue(instance: ConstRef<winrt.windows.foundation.IInspectable>, value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    function GetValue(instance: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.windows.foundation.IInspectable;
+    function SetValue(instance: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
 }

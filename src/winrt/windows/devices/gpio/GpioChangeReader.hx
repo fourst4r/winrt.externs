@@ -10,14 +10,14 @@ extern class GpioChangeReader
     implements winrt.windows.foundation.IClosable
     implements winrt.windows.devices.gpio.IGpioChangeReader
 {
-    /* explicit */ function new(pin: ConstRef<winrt.windows.devices.gpio.GpioPin>);
+    /* explicit */ function new(pin: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.gpio.GpioPin>);
     @:native("winrt::Windows::Devices::Gpio::GpioChangeReader")
-    static overload function make(pin: ConstRef<winrt.windows.devices.gpio.GpioPin>, minCapacity: Int32): winrt.windows.devices.gpio.GpioChangeReader;
-    overload function Capacity(): Int32;
-    overload function Length(): Int32;
+    static overload function make(pin: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.gpio.GpioPin>, minCapacity: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.devices.gpio.GpioChangeReader;
+    overload function Capacity(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Length(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function IsEmpty(): Bool;
     overload function IsOverflowed(): Bool;
-    overload function Polarity(value: ConstRef<winrt.windows.devices.gpio.GpioChangePolarity>): Void;
+    overload function Polarity(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.gpio.GpioChangePolarity>): Void;
     overload function Polarity(): winrt.windows.devices.gpio.GpioChangePolarity;
     overload function IsStarted(): Bool;
     function Start(): Void;
@@ -26,6 +26,6 @@ extern class GpioChangeReader
     function GetNextItem(): winrt.windows.devices.gpio.GpioChangeRecord;
     function PeekNextItem(): winrt.windows.devices.gpio.GpioChangeRecord;
     function GetAllItems(): winrt.windows.foundation.collections.IVector<winrt.windows.devices.gpio.GpioChangeRecord> /* GenericTypeInstSig */;
-    function WaitForItemsAsync(count: Int32): winrt.windows.foundation.IAsyncAction;
+    function WaitForItemsAsync(count: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.foundation.IAsyncAction;
     function Close(): Void;
 }

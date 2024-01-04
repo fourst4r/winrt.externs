@@ -9,7 +9,7 @@ package winrt.windows.perception.spatial;
 extern interface ISpatialAnchorStore extends winrt.windows.foundation.IInspectable
 {
     function GetAllSavedAnchors(): winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.windows.perception.spatial.SpatialAnchor> /* GenericTypeInstSig */;
-    function TrySave(id: ConstRef<winrt.HString>, anchor: ConstRef<winrt.windows.perception.spatial.SpatialAnchor>): Bool;
-    function Remove(id: ConstRef<winrt.HString>): Void;
+    function TrySave(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, anchor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.spatial.SpatialAnchor>): Bool;
+    function Remove(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     function Clear(): Void;
 }

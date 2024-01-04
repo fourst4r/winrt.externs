@@ -8,5 +8,5 @@ package winrt.windows.devices.bluetooth.genericattributeprofile;
 @:native("winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::IGattSessionStatics")
 extern interface IGattSessionStatics extends winrt.windows.foundation.IInspectable
 {
-    function FromDeviceIdAsync(deviceId: ConstRef<winrt.windows.devices.bluetooth.BluetoothDeviceId>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.bluetooth.genericattributeprofile.GattSession> /* GenericTypeInstSig */;
+    function FromDeviceIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.bluetooth.BluetoothDeviceId>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.bluetooth.genericattributeprofile.GattSession> /* GenericTypeInstSig */;
 }

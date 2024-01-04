@@ -13,12 +13,12 @@ extern interface IUISettings extends winrt.windows.foundation.IInspectable
     overload function ScrollBarSize(): winrt.windows.foundation.Size;
     overload function ScrollBarArrowSize(): winrt.windows.foundation.Size;
     overload function ScrollBarThumbBoxSize(): winrt.windows.foundation.Size;
-    overload function MessageDuration(): UInt32;
+    overload function MessageDuration(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function AnimationsEnabled(): Bool;
     overload function CaretBrowsingEnabled(): Bool;
-    overload function CaretBlinkRate(): UInt32;
-    overload function CaretWidth(): UInt32;
-    overload function DoubleClickTime(): UInt32;
-    overload function MouseHoverTime(): UInt32;
-    function UIElementColor(desiredElement: ConstRef<winrt.windows.ui.viewmanagement.UIElementType>): winrt.windows.ui.Color;
+    overload function CaretBlinkRate(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function CaretWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function DoubleClickTime(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function MouseHoverTime(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function UIElementColor(desiredElement: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.viewmanagement.UIElementType>): winrt.windows.ui.Color;
 }

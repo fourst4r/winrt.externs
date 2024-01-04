@@ -9,12 +9,12 @@ package winrt.windows.networking.networkoperators;
 extern class MobileBroadbandCellUmts
     implements winrt.windows.networking.networkoperators.IMobileBroadbandCellUmts
 {
-    overload function CellId(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
-    overload function ChannelNumber(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
-    overload function LocationAreaCode(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
-    overload function PathLossInDB(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
-    overload function PrimaryScramblingCode(): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
+    overload function CellId(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
+    overload function ChannelNumber(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
+    overload function LocationAreaCode(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
+    overload function PathLossInDB(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
+    overload function PrimaryScramblingCode(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
     overload function ProviderId(): winrt.HString;
-    overload function ReceivedSignalCodePowerInDBm(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
-    overload function SignalToNoiseRatioInDB(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
+    overload function ReceivedSignalCodePowerInDBm(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
+    overload function SignalToNoiseRatioInDB(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
 }

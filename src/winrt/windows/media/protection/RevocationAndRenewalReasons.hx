@@ -2,7 +2,7 @@ package winrt.windows.media.protection;
 
 @:include("winrt/Windows.Media.Protection.h", true)
 @:native("winrt::Windows::Media::Protection::RevocationAndRenewalReasons")
-extern enum abstract RevocationAndRenewalReasons(UInt32)
+extern enum abstract RevocationAndRenewalReasons(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Windows::Media::Protection::RevocationAndRenewalReasons::UserModeComponentLoad") final UserModeComponentLoad;
     @:native("winrt::Windows::Media::Protection::RevocationAndRenewalReasons::KernelModeComponentLoad") final KernelModeComponentLoad;

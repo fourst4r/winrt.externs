@@ -11,23 +11,23 @@ extern class PlayReadySecureStopServiceRequest
     implements winrt.windows.media.protection.playready.IPlayReadyServiceRequest
     implements winrt.windows.media.protection.playready.IPlayReadySecureStopServiceRequest
 {
-    /* explicit */ function new(publisherCertBytes: winrt.ArrayView<UInt8>);
+    /* explicit */ function new(publisherCertBytes: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>);
     @:native("winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest")
-    static overload function make(sessionID: ConstRef<winrt.Guid>, publisherCertBytes: winrt.ArrayView<UInt8>): winrt.windows.media.protection.playready.PlayReadySecureStopServiceRequest;
+    static overload function make(sessionID: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>, publisherCertBytes: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): winrt.windows.media.protection.playready.PlayReadySecureStopServiceRequest;
     overload function SessionID(): winrt.Guid;
     overload function StartTime(): winrt.windows.foundation.DateTime;
     overload function UpdateTime(): winrt.windows.foundation.DateTime;
     overload function Stopped(): Bool;
-    overload function PublisherCertificate(): winrt.ComArray<UInt8>;
+    overload function PublisherCertificate(): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
     overload function Uri(): winrt.windows.foundation.Uri;
-    overload function Uri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function Uri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function ResponseCustomData(): winrt.HString;
     overload function ChallengeCustomData(): winrt.HString;
-    overload function ChallengeCustomData(value: ConstRef<winrt.HString>): Void;
+    overload function ChallengeCustomData(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     function BeginServiceRequest(): winrt.windows.foundation.IAsyncAction;
     function NextServiceRequest(): winrt.windows.media.protection.playready.IPlayReadyServiceRequest;
     function GenerateManualEnablingChallenge(): winrt.windows.media.protection.playready.PlayReadySoapMessage;
-    function ProcessManualEnablingResponse(responseBytes: winrt.ArrayView<UInt8>): winrt.HResult;
+    function ProcessManualEnablingResponse(responseBytes: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): winrt.HResult;
     overload function ProtectionSystem(): winrt.Guid;
     overload function Type(): winrt.Guid;
 }

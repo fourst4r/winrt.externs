@@ -9,6 +9,6 @@ package winrt.windows.devices.sensors;
 extern interface ICompassReading extends winrt.windows.foundation.IInspectable
 {
     overload function Timestamp(): winrt.windows.foundation.DateTime;
-    overload function HeadingMagneticNorth(): Float64;
-    overload function HeadingTrueNorth(): winrt.windows.foundation.IReference<Float64> /* GenericTypeInstSig */;
+    overload function HeadingMagneticNorth(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function HeadingTrueNorth(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Float64> /* GenericTypeInstSig */;
 }

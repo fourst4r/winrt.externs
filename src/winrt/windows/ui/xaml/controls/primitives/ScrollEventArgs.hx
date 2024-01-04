@@ -11,6 +11,6 @@ extern class ScrollEventArgs
     implements winrt.windows.ui.xaml.controls.primitives.IScrollEventArgs
 {
     function new();
-    overload function NewValue(): Float64;
+    overload function NewValue(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function ScrollEventType(): winrt.windows.ui.xaml.controls.primitives.ScrollEventType;
 }

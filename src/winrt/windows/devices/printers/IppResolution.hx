@@ -9,8 +9,8 @@ package winrt.windows.devices.printers;
 extern class IppResolution
     implements winrt.windows.devices.printers.IIppResolution
 {
-    function new(width: Int32, height: Int32, unit: ConstRef<winrt.windows.devices.printers.IppResolutionUnit>);
-    overload function Width(): Int32;
-    overload function Height(): Int32;
+    function new(width: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, height: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, unit: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.printers.IppResolutionUnit>);
+    overload function Width(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Height(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function Unit(): winrt.windows.devices.printers.IppResolutionUnit;
 }

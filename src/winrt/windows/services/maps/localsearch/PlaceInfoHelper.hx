@@ -4,5 +4,5 @@ package winrt.windows.services.maps.localsearch;
 @:native("winrt::Windows::Services::Maps::LocalSearch::PlaceInfoHelper")
 extern class PlaceInfoHelper
 {
-    static function CreateFromLocalLocation(location: ConstRef<winrt.windows.services.maps.localsearch.LocalLocation>): winrt.windows.services.maps.PlaceInfo;
+    static function CreateFromLocalLocation(location: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.services.maps.localsearch.LocalLocation>): winrt.windows.services.maps.PlaceInfo;
 }

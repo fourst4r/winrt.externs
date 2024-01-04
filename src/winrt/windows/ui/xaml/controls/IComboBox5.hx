@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IComboBox5 extends winrt.windows.foundation.IInspectable
 {
     overload function PlaceholderForeground(): winrt.windows.ui.xaml.media.Brush;
-    overload function PlaceholderForeground(value: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
+    overload function PlaceholderForeground(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Brush>): Void;
 }

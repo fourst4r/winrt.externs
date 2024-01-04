@@ -12,6 +12,6 @@ extern interface ILicenseInformation extends winrt.windows.foundation.IInspectab
     overload function IsActive(): Bool;
     overload function IsTrial(): Bool;
     overload function ExpirationDate(): winrt.windows.foundation.DateTime;
-    overload function LicenseChanged(handler: ConstRef<winrt.windows.applicationmodel.store.LicenseChangedEventHandler>): winrt.EventToken;
-    @:noExcept overload function LicenseChanged(cookie: ConstRef<winrt.EventToken>): Void;
+    overload function LicenseChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.store.LicenseChangedEventHandler>): winrt.EventToken;
+    @:noExcept overload function LicenseChanged(cookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

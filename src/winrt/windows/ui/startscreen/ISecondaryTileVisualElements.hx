@@ -8,19 +8,19 @@ package winrt.windows.ui.startscreen;
 @:native("winrt::Windows::UI::StartScreen::ISecondaryTileVisualElements")
 extern interface ISecondaryTileVisualElements extends winrt.windows.foundation.IInspectable
 {
-    overload function Square30x30Logo(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function Square30x30Logo(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function Square30x30Logo(): winrt.windows.foundation.Uri;
-    overload function Square70x70Logo(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function Square70x70Logo(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function Square70x70Logo(): winrt.windows.foundation.Uri;
-    overload function Square150x150Logo(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function Square150x150Logo(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function Square150x150Logo(): winrt.windows.foundation.Uri;
-    overload function Wide310x150Logo(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function Wide310x150Logo(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function Wide310x150Logo(): winrt.windows.foundation.Uri;
-    overload function Square310x310Logo(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function Square310x310Logo(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function Square310x310Logo(): winrt.windows.foundation.Uri;
-    overload function ForegroundText(value: ConstRef<winrt.windows.ui.startscreen.ForegroundText>): Void;
+    overload function ForegroundText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.startscreen.ForegroundText>): Void;
     overload function ForegroundText(): winrt.windows.ui.startscreen.ForegroundText;
-    overload function BackgroundColor(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function BackgroundColor(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
     overload function BackgroundColor(): winrt.windows.ui.Color;
     overload function ShowNameOnSquare150x150Logo(value: Bool): Void;
     overload function ShowNameOnSquare150x150Logo(): Bool;

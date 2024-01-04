@@ -11,7 +11,7 @@ extern class CompositionLineGeometry
     implements winrt.windows.ui.composition.ICompositionLineGeometry
 {
     overload function Start(): winrt.windows.foundation.numerics.Vector2;
-    overload function Start(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function Start(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
     overload function End(): winrt.windows.foundation.numerics.Vector2;
-    overload function End(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function End(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
 }

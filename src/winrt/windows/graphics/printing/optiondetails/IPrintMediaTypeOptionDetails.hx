@@ -8,8 +8,8 @@ package winrt.windows.graphics.printing.optiondetails;
 @:native("winrt::Windows::Graphics::Printing::OptionDetails::IPrintMediaTypeOptionDetails")
 extern interface IPrintMediaTypeOptionDetails extends winrt.windows.foundation.IInspectable
 {
-    overload function WarningText(value: ConstRef<winrt.HString>): Void;
+    overload function WarningText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function WarningText(): winrt.HString;
-    overload function Description(value: ConstRef<winrt.HString>): Void;
+    overload function Description(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Description(): winrt.HString;
 }

@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml;
 
 @:include("winrt/Windows.UI.Xaml.h", true)
 @:native("winrt::Windows::UI::Xaml::AutomationTextAttributesEnum")
-extern enum abstract AutomationTextAttributesEnum(Int32)
+extern enum abstract AutomationTextAttributesEnum(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Xaml::AutomationTextAttributesEnum::AnimationStyleAttribute") final AnimationStyleAttribute;
     @:native("winrt::Windows::UI::Xaml::AutomationTextAttributesEnum::BackgroundColorAttribute") final BackgroundColorAttribute;

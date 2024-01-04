@@ -9,7 +9,7 @@ package winrt.windows.devices.bluetooth.advertisement;
 extern interface IBluetoothLEAdvertisementReceivedEventArgs2 extends winrt.windows.foundation.IInspectable
 {
     overload function BluetoothAddressType(): winrt.windows.devices.bluetooth.BluetoothAddressType;
-    overload function TransmitPowerLevelInDBm(): winrt.windows.foundation.IReference<Int16> /* GenericTypeInstSig */;
+    overload function TransmitPowerLevelInDBm(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int16> /* GenericTypeInstSig */;
     overload function IsAnonymous(): Bool;
     overload function IsConnectable(): Bool;
     overload function IsScannable(): Bool;

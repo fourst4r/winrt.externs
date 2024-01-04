@@ -10,6 +10,6 @@ extern class ColorOverrideSettings
     implements winrt.windows.graphics.display.IColorOverrideSettings
 {
     overload function DesiredDisplayColorOverrideScenario(): winrt.windows.graphics.display.DisplayColorOverrideScenario;
-    function CreateFromDisplayColorOverrideScenario(overrideScenario: ConstRef<winrt.windows.graphics.display.DisplayColorOverrideScenario>): winrt.windows.graphics.display.ColorOverrideSettings;
-    static function CreateFromDisplayColorOverrideScenario(overrideScenario: ConstRef<winrt.windows.graphics.display.DisplayColorOverrideScenario>): winrt.windows.graphics.display.ColorOverrideSettings;
+    function CreateFromDisplayColorOverrideScenario(overrideScenario: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.display.DisplayColorOverrideScenario>): winrt.windows.graphics.display.ColorOverrideSettings;
+    static function CreateFromDisplayColorOverrideScenario(overrideScenario: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.display.DisplayColorOverrideScenario>): winrt.windows.graphics.display.ColorOverrideSettings;
 }

@@ -12,5 +12,5 @@ extern interface IMapControl4 extends winrt.windows.foundation.IInspectable
     overload function BusinessLandmarksEnabled(value: Bool): Void;
     overload function TransitFeaturesEnabled(): Bool;
     overload function TransitFeaturesEnabled(value: Bool): Void;
-    function GetVisibleRegion(region: ConstRef<winrt.windows.ui.xaml.controls.maps.MapVisibleRegionKind>): winrt.windows.devices.geolocation.Geopath;
+    function GetVisibleRegion(region: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.maps.MapVisibleRegionKind>): winrt.windows.devices.geolocation.Geopath;
 }

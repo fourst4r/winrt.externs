@@ -19,6 +19,6 @@ extern class CoreWebView2PermissionRequestedEventArgs
     overload function PermissionKind(): winrt.microsoft.web.webview2.core.CoreWebView2PermissionKind;
     overload function IsUserInitiated(): Bool;
     overload function State(): winrt.microsoft.web.webview2.core.CoreWebView2PermissionState;
-    overload function State(value: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2PermissionState>): Void;
+    overload function State(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.CoreWebView2PermissionState>): Void;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

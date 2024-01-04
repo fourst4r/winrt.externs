@@ -22,7 +22,7 @@ extern class ProtocolForResultsActivatedEventArgs
     overload function Uri(): winrt.windows.foundation.Uri;
     overload function CallerPackageFamilyName(): winrt.HString;
     overload function Data(): winrt.windows.foundation.collections.ValueSet;
-    overload function CurrentlyShownApplicationViewId(): Int32;
+    overload function CurrentlyShownApplicationViewId(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function ViewSwitcher(): winrt.windows.ui.viewmanagement.ActivationViewSwitcher;
     overload function User(): winrt.windows.system.User;
 }

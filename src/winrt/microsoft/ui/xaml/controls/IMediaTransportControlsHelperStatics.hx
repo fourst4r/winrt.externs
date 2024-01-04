@@ -9,6 +9,6 @@ package winrt.microsoft.ui.xaml.controls;
 extern interface IMediaTransportControlsHelperStatics extends winrt.windows.foundation.IInspectable
 {
     overload function DropoutOrderProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
-    function GetDropoutOrder(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>): winrt.windows.foundation.IReference<Int32> /* GenericTypeInstSig */;
-    function SetDropoutOrder(element: ConstRef<winrt.microsoft.ui.xaml.UIElement>, value: ConstRef<winrt.windows.foundation.IReference<Int32> /* temp_GenericTypeInstSig */>): Void;
+    function GetDropoutOrder(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
+    function SetDropoutOrder(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.UIElement>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* temp_GenericTypeInstSig */>): Void;
 }

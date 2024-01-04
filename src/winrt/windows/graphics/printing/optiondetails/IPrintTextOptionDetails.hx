@@ -8,5 +8,5 @@ package winrt.windows.graphics.printing.optiondetails;
 @:native("winrt::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails")
 extern interface IPrintTextOptionDetails extends winrt.windows.foundation.IInspectable
 {
-    overload function MaxCharacters(): UInt32;
+    overload function MaxCharacters(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

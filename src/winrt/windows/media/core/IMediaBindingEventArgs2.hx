@@ -8,6 +8,6 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::IMediaBindingEventArgs2")
 extern interface IMediaBindingEventArgs2 extends winrt.windows.foundation.IInspectable
 {
-    function SetAdaptiveMediaSource(mediaSource: ConstRef<winrt.windows.media.streaming.adaptive.AdaptiveMediaSource>): Void;
-    function SetStorageFile(file: ConstRef<winrt.windows.storage.IStorageFile>): Void;
+    function SetAdaptiveMediaSource(mediaSource: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.streaming.adaptive.AdaptiveMediaSource>): Void;
+    function SetStorageFile(file: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.IStorageFile>): Void;
 }

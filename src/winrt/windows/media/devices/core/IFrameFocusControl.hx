@@ -8,6 +8,6 @@ package winrt.windows.media.devices.core;
 @:native("winrt::Windows::Media::Devices::Core::IFrameFocusControl")
 extern interface IFrameFocusControl extends winrt.windows.foundation.IInspectable
 {
-    overload function Value(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
-    overload function Value(value: ConstRef<winrt.windows.foundation.IReference<UInt32> /* temp_GenericTypeInstSig */>): Void;
+    overload function Value(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
+    overload function Value(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* temp_GenericTypeInstSig */>): Void;
 }

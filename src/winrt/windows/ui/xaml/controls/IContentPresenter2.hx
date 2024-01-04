@@ -9,7 +9,7 @@ package winrt.windows.ui.xaml.controls;
 extern interface IContentPresenter2 extends winrt.windows.foundation.IInspectable
 {
     overload function OpticalMarginAlignment(): winrt.windows.ui.xaml.OpticalMarginAlignment;
-    overload function OpticalMarginAlignment(value: ConstRef<winrt.windows.ui.xaml.OpticalMarginAlignment>): Void;
+    overload function OpticalMarginAlignment(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.OpticalMarginAlignment>): Void;
     overload function TextLineBounds(): winrt.windows.ui.xaml.TextLineBounds;
-    overload function TextLineBounds(value: ConstRef<winrt.windows.ui.xaml.TextLineBounds>): Void;
+    overload function TextLineBounds(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.TextLineBounds>): Void;
 }

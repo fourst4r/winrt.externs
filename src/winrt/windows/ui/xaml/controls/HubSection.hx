@@ -12,11 +12,11 @@ extern class HubSection
 {
     function new();
     overload function Header(): winrt.windows.foundation.IInspectable;
-    overload function Header(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Header(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
     overload function HeaderTemplate(): winrt.windows.ui.xaml.DataTemplate;
-    overload function HeaderTemplate(value: ConstRef<winrt.windows.ui.xaml.DataTemplate>): Void;
+    overload function HeaderTemplate(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DataTemplate>): Void;
     overload function ContentTemplate(): winrt.windows.ui.xaml.DataTemplate;
-    overload function ContentTemplate(value: ConstRef<winrt.windows.ui.xaml.DataTemplate>): Void;
+    overload function ContentTemplate(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DataTemplate>): Void;
     overload function IsHeaderInteractive(): Bool;
     overload function IsHeaderInteractive(value: Bool): Void;
     overload function HeaderProperty(): winrt.windows.ui.xaml.DependencyProperty;

@@ -12,7 +12,7 @@ extern class MatrixTransform
 {
     function new();
     overload function Matrix(): winrt.microsoft.ui.xaml.media.Matrix;
-    overload function Matrix(value: ConstRef<winrt.microsoft.ui.xaml.media.Matrix>): Void;
+    overload function Matrix(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.media.Matrix>): Void;
     overload function MatrixProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function MatrixProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
 }

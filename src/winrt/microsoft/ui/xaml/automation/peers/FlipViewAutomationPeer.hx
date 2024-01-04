@@ -10,5 +10,5 @@ extern class FlipViewAutomationPeer
     extends winrt.microsoft.ui.xaml.automation.peers.SelectorAutomationPeer
     implements winrt.microsoft.ui.xaml.automation.peers.IFlipViewAutomationPeer
 {
-    /* explicit */ function new(owner: ConstRef<winrt.microsoft.ui.xaml.controls.FlipView>);
+    /* explicit */ function new(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.FlipView>);
 }

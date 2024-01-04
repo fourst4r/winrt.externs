@@ -9,5 +9,5 @@ package winrt.windows.graphics.effects;
 extern interface IGraphicsEffect extends winrt.windows.foundation.IInspectable
 {
     overload function Name(): winrt.HString;
-    overload function Name(name: ConstRef<winrt.HString>): Void;
+    overload function Name(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

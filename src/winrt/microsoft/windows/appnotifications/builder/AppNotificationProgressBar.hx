@@ -11,19 +11,19 @@ extern class AppNotificationProgressBar
 {
     function new();
     overload function Title(): winrt.HString;
-    overload function Title(value: ConstRef<winrt.HString>): Void;
+    overload function Title(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Status(): winrt.HString;
-    overload function Status(value: ConstRef<winrt.HString>): Void;
-    overload function Value(): Float64;
-    overload function Value(value: Float64): Void;
+    overload function Status(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function Value(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Value(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function ValueStringOverride(): winrt.HString;
-    overload function ValueStringOverride(value: ConstRef<winrt.HString>): Void;
-    function SetTitle(value: ConstRef<winrt.HString>): winrt.microsoft.windows.appnotifications.builder.AppNotificationProgressBar;
+    overload function ValueStringOverride(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function SetTitle(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.microsoft.windows.appnotifications.builder.AppNotificationProgressBar;
     function BindTitle(): winrt.microsoft.windows.appnotifications.builder.AppNotificationProgressBar;
-    function SetStatus(value: ConstRef<winrt.HString>): winrt.microsoft.windows.appnotifications.builder.AppNotificationProgressBar;
+    function SetStatus(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.microsoft.windows.appnotifications.builder.AppNotificationProgressBar;
     function BindStatus(): winrt.microsoft.windows.appnotifications.builder.AppNotificationProgressBar;
-    function SetValue(value: Float64): winrt.microsoft.windows.appnotifications.builder.AppNotificationProgressBar;
+    function SetValue(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.microsoft.windows.appnotifications.builder.AppNotificationProgressBar;
     function BindValue(): winrt.microsoft.windows.appnotifications.builder.AppNotificationProgressBar;
-    function SetValueStringOverride(value: ConstRef<winrt.HString>): winrt.microsoft.windows.appnotifications.builder.AppNotificationProgressBar;
+    function SetValueStringOverride(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.microsoft.windows.appnotifications.builder.AppNotificationProgressBar;
     function BindValueStringOverride(): winrt.microsoft.windows.appnotifications.builder.AppNotificationProgressBar;
 }

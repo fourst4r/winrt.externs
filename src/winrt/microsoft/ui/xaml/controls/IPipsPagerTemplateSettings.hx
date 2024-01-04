@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml.controls;
 @:native("winrt::Microsoft::UI::Xaml::Controls::IPipsPagerTemplateSettings")
 extern interface IPipsPagerTemplateSettings extends winrt.windows.foundation.IInspectable
 {
-    overload function PipsPagerItems(): winrt.windows.foundation.collections.IVector<Int32> /* GenericTypeInstSig */;
+    overload function PipsPagerItems(): winrt.windows.foundation.collections.IVector<#if reflaxe.cpp cxx.num. #else cpp. #end Int32> /* GenericTypeInstSig */;
 }

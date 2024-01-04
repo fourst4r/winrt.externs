@@ -12,9 +12,9 @@ extern class StackLayout
 {
     function new();
     overload function Orientation(): winrt.microsoft.ui.xaml.controls.Orientation;
-    overload function Orientation(value: ConstRef<winrt.microsoft.ui.xaml.controls.Orientation>): Void;
-    overload function Spacing(): Float64;
-    overload function Spacing(value: Float64): Void;
+    overload function Orientation(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.Orientation>): Void;
+    overload function Spacing(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Spacing(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function OrientationProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     overload function SpacingProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function OrientationProperty(): winrt.microsoft.ui.xaml.DependencyProperty;

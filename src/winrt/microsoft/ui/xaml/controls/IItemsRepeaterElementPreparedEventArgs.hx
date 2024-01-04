@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.controls;
 extern interface IItemsRepeaterElementPreparedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function Element(): winrt.microsoft.ui.xaml.UIElement;
-    overload function Index(): Int32;
+    overload function Index(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

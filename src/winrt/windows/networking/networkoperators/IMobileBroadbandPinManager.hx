@@ -9,5 +9,5 @@ package winrt.windows.networking.networkoperators;
 extern interface IMobileBroadbandPinManager extends winrt.windows.foundation.IInspectable
 {
     overload function SupportedPins(): winrt.windows.foundation.collections.IVectorView<winrt.windows.networking.networkoperators.MobileBroadbandPinType> /* GenericTypeInstSig */;
-    function GetPin(pinType: ConstRef<winrt.windows.networking.networkoperators.MobileBroadbandPinType>): winrt.windows.networking.networkoperators.MobileBroadbandPin;
+    function GetPin(pinType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.networkoperators.MobileBroadbandPinType>): winrt.windows.networking.networkoperators.MobileBroadbandPin;
 }

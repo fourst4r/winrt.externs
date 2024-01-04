@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.controls.primitives;
 extern interface IFlyoutBaseOverrides extends winrt.windows.foundation.IInspectable
 {
     function CreatePresenter(): winrt.microsoft.ui.xaml.controls.Control;
-    function OnProcessKeyboardAccelerators(args: ConstRef<winrt.microsoft.ui.xaml.input.ProcessKeyboardAcceleratorEventArgs>): Void;
+    function OnProcessKeyboardAccelerators(args: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.ProcessKeyboardAcceleratorEventArgs>): Void;
 }

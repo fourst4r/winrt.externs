@@ -8,5 +8,5 @@ package winrt.windows.security.credentials;
 @:native("winrt::Windows::Security::Credentials::ICredentialFactory")
 extern interface ICredentialFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreatePasswordCredential(resource: ConstRef<winrt.HString>, userName: ConstRef<winrt.HString>, password: ConstRef<winrt.HString>): winrt.windows.security.credentials.PasswordCredential;
+    function CreatePasswordCredential(resource: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, userName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, password: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.security.credentials.PasswordCredential;
 }

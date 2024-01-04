@@ -9,7 +9,7 @@ package winrt.windows.devices.printers;
 extern interface IPageConfigurationSettings extends winrt.windows.foundation.IInspectable
 {
     overload function OrientationSource(): winrt.windows.devices.printers.PageConfigurationSource;
-    overload function OrientationSource(value: ConstRef<winrt.windows.devices.printers.PageConfigurationSource>): Void;
+    overload function OrientationSource(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.printers.PageConfigurationSource>): Void;
     overload function SizeSource(): winrt.windows.devices.printers.PageConfigurationSource;
-    overload function SizeSource(value: ConstRef<winrt.windows.devices.printers.PageConfigurationSource>): Void;
+    overload function SizeSource(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.printers.PageConfigurationSource>): Void;
 }

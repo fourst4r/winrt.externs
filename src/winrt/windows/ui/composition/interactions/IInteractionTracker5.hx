@@ -8,5 +8,5 @@ package winrt.windows.ui.composition.interactions;
 @:native("winrt::Windows::UI::Composition::Interactions::IInteractionTracker5")
 extern interface IInteractionTracker5 extends winrt.windows.foundation.IInspectable
 {
-    function TryUpdatePosition(value: ConstRef<winrt.windows.foundation.numerics.Vector3>, option: ConstRef<winrt.windows.ui.composition.interactions.InteractionTrackerClampingOption>, posUpdateOption: ConstRef<winrt.windows.ui.composition.interactions.InteractionTrackerPositionUpdateOption>): Int32;
+    function TryUpdatePosition(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector3>, option: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.interactions.InteractionTrackerClampingOption>, posUpdateOption: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.interactions.InteractionTrackerPositionUpdateOption>): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

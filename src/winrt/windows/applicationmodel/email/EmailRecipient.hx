@@ -11,11 +11,11 @@ extern class EmailRecipient
 {
     function new();
     @:native("winrt::Windows::ApplicationModel::Email::EmailRecipient")
-    /* explicit */ static overload function make(address: ConstRef<winrt.HString>): winrt.windows.applicationmodel.email.EmailRecipient;
+    /* explicit */ static overload function make(address: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.email.EmailRecipient;
     @:native("winrt::Windows::ApplicationModel::Email::EmailRecipient")
-    static overload function make(address: ConstRef<winrt.HString>, name: ConstRef<winrt.HString>): winrt.windows.applicationmodel.email.EmailRecipient;
+    static overload function make(address: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.email.EmailRecipient;
     overload function Name(): winrt.HString;
-    overload function Name(value: ConstRef<winrt.HString>): Void;
+    overload function Name(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Address(): winrt.HString;
-    overload function Address(value: ConstRef<winrt.HString>): Void;
+    overload function Address(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

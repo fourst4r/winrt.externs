@@ -9,11 +9,11 @@ package winrt.windows.ui.xaml.controls;
 extern interface IWebView5 extends winrt.windows.foundation.IInspectable
 {
     overload function XYFocusLeft(): winrt.windows.ui.xaml.DependencyObject;
-    overload function XYFocusLeft(value: ConstRef<winrt.windows.ui.xaml.DependencyObject>): Void;
+    overload function XYFocusLeft(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): Void;
     overload function XYFocusRight(): winrt.windows.ui.xaml.DependencyObject;
-    overload function XYFocusRight(value: ConstRef<winrt.windows.ui.xaml.DependencyObject>): Void;
+    overload function XYFocusRight(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): Void;
     overload function XYFocusUp(): winrt.windows.ui.xaml.DependencyObject;
-    overload function XYFocusUp(value: ConstRef<winrt.windows.ui.xaml.DependencyObject>): Void;
+    overload function XYFocusUp(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): Void;
     overload function XYFocusDown(): winrt.windows.ui.xaml.DependencyObject;
-    overload function XYFocusDown(value: ConstRef<winrt.windows.ui.xaml.DependencyObject>): Void;
+    overload function XYFocusDown(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): Void;
 }

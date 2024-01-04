@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml;
 @:native("winrt::Microsoft::UI::Xaml::IApplicationOverrides")
 extern interface IApplicationOverrides extends winrt.windows.foundation.IInspectable
 {
-    function OnLaunched(args: ConstRef<winrt.microsoft.ui.xaml.LaunchActivatedEventArgs>): Void;
+    function OnLaunched(args: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.LaunchActivatedEventArgs>): Void;
 }

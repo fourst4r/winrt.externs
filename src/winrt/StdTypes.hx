@@ -1,11 +1,21 @@
 package winrt;
 
-typedef Fn<T> =
-    #if cpp
-    cpp.Callable<T>;
-    #else
-    T;
-    #end
+import haxe.Constraints;
+
+#if cpp
+@:transitive
+abstract Fn<T>(cpp.Callable<T>) from cpp.Callable<T> to cpp.Callable<T> {
+    // @:from inline static public function fromStaticFunction<T>(fn:T):Fn<T> {
+    //     return cpp.Callable.fromStaticFunction(fn);
+    // }
+    // @:to inline function toConstRef():ConstRef<T> {
+    //     return cast this;
+    // }
+}
+// cpp.Callable<T>;
+#else
+typedef Fn<T> = T;
+#end
 
 typedef RawPtr<T> =
     #if cpp
@@ -44,14 +54,13 @@ typedef Ref<T> =
     Dynamic;
     #end
 
-@:semantics(reference)
-typedef ConstRef<T> =
+//typedef ConstRef<T> =
     #if cpp
-    cpp.Reference<T>;
+//    cpp.Reference<T>;
     #elseif reflaxe.cpp
-    cxx.ConstRef<T>;
+//    cxx.ConstRef<T>;
     #else
-    Dynamic;
+//    Dynamic;
     #end
 
 typedef Char =

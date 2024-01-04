@@ -8,5 +8,5 @@ package winrt.windows.ui.viewmanagement;
 @:native("winrt::Windows::UI::ViewManagement::IViewModePreferencesStatics")
 extern interface IViewModePreferencesStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateDefault(mode: ConstRef<winrt.windows.ui.viewmanagement.ApplicationViewMode>): winrt.windows.ui.viewmanagement.ViewModePreferences;
+    function CreateDefault(mode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.viewmanagement.ApplicationViewMode>): winrt.windows.ui.viewmanagement.ViewModePreferences;
 }

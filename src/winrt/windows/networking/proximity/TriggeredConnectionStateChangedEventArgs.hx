@@ -10,6 +10,6 @@ extern class TriggeredConnectionStateChangedEventArgs
     implements winrt.windows.networking.proximity.ITriggeredConnectionStateChangedEventArgs
 {
     overload function State(): winrt.windows.networking.proximity.TriggeredConnectState;
-    overload function Id(): UInt32;
+    overload function Id(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function Socket(): winrt.windows.networking.sockets.StreamSocket;
 }

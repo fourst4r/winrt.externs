@@ -8,6 +8,6 @@ package winrt.windows.media.playback;
 @:native("winrt::Windows::Media::Playback::IMediaPlaybackItemFactory2")
 extern interface IMediaPlaybackItemFactory2 extends winrt.windows.foundation.IInspectable
 {
-    function CreateWithStartTime(source: ConstRef<winrt.windows.media.core.MediaSource>, startTime: ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.media.playback.MediaPlaybackItem;
-    function CreateWithStartTimeAndDurationLimit(source: ConstRef<winrt.windows.media.core.MediaSource>, startTime: ConstRef<winrt.windows.foundation.TimeSpan>, durationLimit: ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.media.playback.MediaPlaybackItem;
+    function CreateWithStartTime(source: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.MediaSource>, startTime: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): winrt.windows.media.playback.MediaPlaybackItem;
+    function CreateWithStartTimeAndDurationLimit(source: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.core.MediaSource>, startTime: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>, durationLimit: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): winrt.windows.media.playback.MediaPlaybackItem;
 }

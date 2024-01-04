@@ -2,7 +2,7 @@ package winrt.microsoft.ui.windowing;
 
 @:include("winrt/Microsoft.UI.Windowing.h", true)
 @:native("winrt::Microsoft::UI::Windowing::DisplayAreaWatcherStatus")
-extern enum abstract DisplayAreaWatcherStatus(Int32)
+extern enum abstract DisplayAreaWatcherStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Windowing::DisplayAreaWatcherStatus::Created") final Created;
     @:native("winrt::Microsoft::UI::Windowing::DisplayAreaWatcherStatus::Started") final Started;

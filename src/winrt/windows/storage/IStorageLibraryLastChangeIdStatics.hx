@@ -8,5 +8,5 @@ package winrt.windows.storage;
 @:native("winrt::Windows::Storage::IStorageLibraryLastChangeIdStatics")
 extern interface IStorageLibraryLastChangeIdStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function Unknown(): UInt64;
+    overload function Unknown(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
 }

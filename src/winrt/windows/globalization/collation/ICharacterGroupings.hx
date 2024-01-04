@@ -8,5 +8,5 @@ package winrt.windows.globalization.collation;
 @:native("winrt::Windows::Globalization::Collation::ICharacterGroupings")
 extern interface ICharacterGroupings extends winrt.windows.foundation.IInspectable
 {
-    function Lookup(text: ConstRef<winrt.HString>): winrt.HString;
+    function Lookup(text: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.HString;
 }

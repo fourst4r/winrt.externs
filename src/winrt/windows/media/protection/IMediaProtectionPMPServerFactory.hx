@@ -8,5 +8,5 @@ package winrt.windows.media.protection;
 @:native("winrt::Windows::Media::Protection::IMediaProtectionPMPServerFactory")
 extern interface IMediaProtectionPMPServerFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreatePMPServer(pProperties: ConstRef<winrt.windows.foundation.collections.IPropertySet>): winrt.windows.media.protection.MediaProtectionPMPServer;
+    function CreatePMPServer(pProperties: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IPropertySet>): winrt.windows.media.protection.MediaProtectionPMPServer;
 }

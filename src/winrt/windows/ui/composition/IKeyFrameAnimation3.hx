@@ -9,5 +9,5 @@ package winrt.windows.ui.composition;
 extern interface IKeyFrameAnimation3 extends winrt.windows.foundation.IInspectable
 {
     overload function DelayBehavior(): winrt.windows.ui.composition.AnimationDelayBehavior;
-    overload function DelayBehavior(value: ConstRef<winrt.windows.ui.composition.AnimationDelayBehavior>): Void;
+    overload function DelayBehavior(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.AnimationDelayBehavior>): Void;
 }

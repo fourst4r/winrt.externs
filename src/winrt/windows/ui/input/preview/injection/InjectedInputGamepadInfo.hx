@@ -11,19 +11,19 @@ extern class InjectedInputGamepadInfo
 {
     function new();
     @:native("winrt::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo")
-    /* explicit */ static overload function make(reading: ConstRef<winrt.windows.gaming.input.GamepadReading>): winrt.windows.ui.input.preview.injection.InjectedInputGamepadInfo;
+    /* explicit */ static overload function make(reading: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.gaming.input.GamepadReading>): winrt.windows.ui.input.preview.injection.InjectedInputGamepadInfo;
     overload function Buttons(): winrt.windows.gaming.input.GamepadButtons;
-    overload function Buttons(value: ConstRef<winrt.windows.gaming.input.GamepadButtons>): Void;
-    overload function LeftThumbstickX(): Float64;
-    overload function LeftThumbstickX(value: Float64): Void;
-    overload function LeftThumbstickY(): Float64;
-    overload function LeftThumbstickY(value: Float64): Void;
-    overload function LeftTrigger(): Float64;
-    overload function LeftTrigger(value: Float64): Void;
-    overload function RightThumbstickX(): Float64;
-    overload function RightThumbstickX(value: Float64): Void;
-    overload function RightThumbstickY(): Float64;
-    overload function RightThumbstickY(value: Float64): Void;
-    overload function RightTrigger(): Float64;
-    overload function RightTrigger(value: Float64): Void;
+    overload function Buttons(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.gaming.input.GamepadButtons>): Void;
+    overload function LeftThumbstickX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function LeftThumbstickX(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function LeftThumbstickY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function LeftThumbstickY(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function LeftTrigger(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function LeftTrigger(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function RightThumbstickX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function RightThumbstickX(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function RightThumbstickY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function RightThumbstickY(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function RightTrigger(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function RightTrigger(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

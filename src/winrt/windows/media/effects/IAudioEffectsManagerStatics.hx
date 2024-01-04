@@ -8,8 +8,8 @@ package winrt.windows.media.effects;
 @:native("winrt::Windows::Media::Effects::IAudioEffectsManagerStatics")
 extern interface IAudioEffectsManagerStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function CreateAudioRenderEffectsManager(deviceId: ConstRef<winrt.HString>, category: ConstRef<winrt.windows.media.render.AudioRenderCategory>): winrt.windows.media.effects.AudioRenderEffectsManager;
-    overload function CreateAudioRenderEffectsManager(deviceId: ConstRef<winrt.HString>, category: ConstRef<winrt.windows.media.render.AudioRenderCategory>, mode: ConstRef<winrt.windows.media.AudioProcessing>): winrt.windows.media.effects.AudioRenderEffectsManager;
-    overload function CreateAudioCaptureEffectsManager(deviceId: ConstRef<winrt.HString>, category: ConstRef<winrt.windows.media.capture.MediaCategory>): winrt.windows.media.effects.AudioCaptureEffectsManager;
-    overload function CreateAudioCaptureEffectsManager(deviceId: ConstRef<winrt.HString>, category: ConstRef<winrt.windows.media.capture.MediaCategory>, mode: ConstRef<winrt.windows.media.AudioProcessing>): winrt.windows.media.effects.AudioCaptureEffectsManager;
+    overload function CreateAudioRenderEffectsManager(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, category: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.render.AudioRenderCategory>): winrt.windows.media.effects.AudioRenderEffectsManager;
+    overload function CreateAudioRenderEffectsManager(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, category: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.render.AudioRenderCategory>, mode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.AudioProcessing>): winrt.windows.media.effects.AudioRenderEffectsManager;
+    overload function CreateAudioCaptureEffectsManager(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, category: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.capture.MediaCategory>): winrt.windows.media.effects.AudioCaptureEffectsManager;
+    overload function CreateAudioCaptureEffectsManager(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, category: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.capture.MediaCategory>, mode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.AudioProcessing>): winrt.windows.media.effects.AudioCaptureEffectsManager;
 }

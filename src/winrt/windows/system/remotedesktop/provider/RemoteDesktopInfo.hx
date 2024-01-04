@@ -9,7 +9,7 @@ package winrt.windows.system.remotedesktop.provider;
 extern class RemoteDesktopInfo
     implements winrt.windows.system.remotedesktop.provider.IRemoteDesktopInfo
 {
-    function new(id: ConstRef<winrt.HString>, displayName: ConstRef<winrt.HString>);
+    function new(id: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, displayName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     overload function DisplayName(): winrt.HString;
     overload function Id(): winrt.HString;
 }

@@ -8,6 +8,6 @@ package winrt.windows.services.targetedcontent;
 @:native("winrt::Windows::Services::TargetedContent::ITargetedContentSubscriptionStatics")
 extern interface ITargetedContentSubscriptionStatics extends winrt.windows.foundation.IInspectable
 {
-    function GetAsync(subscriptionId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.targetedcontent.TargetedContentSubscription> /* GenericTypeInstSig */;
-    function GetOptions(subscriptionId: ConstRef<winrt.HString>): winrt.windows.services.targetedcontent.TargetedContentSubscriptionOptions;
+    function GetAsync(subscriptionId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.services.targetedcontent.TargetedContentSubscription> /* GenericTypeInstSig */;
+    function GetOptions(subscriptionId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.services.targetedcontent.TargetedContentSubscriptionOptions;
 }

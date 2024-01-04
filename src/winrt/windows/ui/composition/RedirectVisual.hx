@@ -11,5 +11,5 @@ extern class RedirectVisual
     implements winrt.windows.ui.composition.IRedirectVisual
 {
     overload function Source(): winrt.windows.ui.composition.Visual;
-    overload function Source(value: ConstRef<winrt.windows.ui.composition.Visual>): Void;
+    overload function Source(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Visual>): Void;
 }

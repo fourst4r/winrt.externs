@@ -10,9 +10,9 @@ extern class NotificationBinding
     implements winrt.windows.ui.notifications.INotificationBinding
 {
     overload function Template(): winrt.HString;
-    overload function Template(value: ConstRef<winrt.HString>): Void;
+    overload function Template(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Language(): winrt.HString;
-    overload function Language(value: ConstRef<winrt.HString>): Void;
+    overload function Language(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Hints(): winrt.windows.foundation.collections.IMap<winrt.HString, winrt.HString> /* GenericTypeInstSig */;
     function GetTextElements(): winrt.windows.foundation.collections.IVectorView<winrt.windows.ui.notifications.AdaptiveNotificationText> /* GenericTypeInstSig */;
 }

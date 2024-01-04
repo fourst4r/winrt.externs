@@ -10,7 +10,7 @@ extern interface IPlayReadyDomain extends winrt.windows.foundation.IInspectable
 {
     overload function AccountId(): winrt.Guid;
     overload function ServiceId(): winrt.Guid;
-    overload function Revision(): UInt32;
+    overload function Revision(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function FriendlyName(): winrt.HString;
     overload function DomainJoinUrl(): winrt.windows.foundation.Uri;
 }

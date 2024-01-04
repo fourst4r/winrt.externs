@@ -9,11 +9,11 @@ package winrt.windows.media.editing;
 extern interface IMediaOverlay extends winrt.windows.foundation.IInspectable
 {
     overload function Position(): winrt.windows.foundation.Rect;
-    overload function Position(value: ConstRef<winrt.windows.foundation.Rect>): Void;
-    overload function Delay(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function Position(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Rect>): Void;
+    overload function Delay(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function Delay(): winrt.windows.foundation.TimeSpan;
-    overload function Opacity(): Float64;
-    overload function Opacity(value: Float64): Void;
+    overload function Opacity(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Opacity(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     function Clone(): winrt.windows.media.editing.MediaOverlay;
     overload function Clip(): winrt.windows.media.editing.MediaClip;
     overload function AudioEnabled(): Bool;

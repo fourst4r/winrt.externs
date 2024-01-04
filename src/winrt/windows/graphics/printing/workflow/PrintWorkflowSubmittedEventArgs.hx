@@ -10,6 +10,6 @@ extern class PrintWorkflowSubmittedEventArgs
     implements winrt.windows.graphics.printing.workflow.IPrintWorkflowSubmittedEventArgs
 {
     overload function Operation(): winrt.windows.graphics.printing.workflow.PrintWorkflowSubmittedOperation;
-    function GetTarget(jobPrintTicket: ConstRef<winrt.windows.graphics.printing.printticket.WorkflowPrintTicket>): winrt.windows.graphics.printing.workflow.PrintWorkflowTarget;
+    function GetTarget(jobPrintTicket: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing.printticket.WorkflowPrintTicket>): winrt.windows.graphics.printing.workflow.PrintWorkflowTarget;
     function GetDeferral(): winrt.windows.foundation.Deferral;
 }

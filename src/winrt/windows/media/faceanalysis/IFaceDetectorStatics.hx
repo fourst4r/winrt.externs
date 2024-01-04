@@ -10,6 +10,6 @@ extern interface IFaceDetectorStatics extends winrt.windows.foundation.IInspecta
 {
     function CreateAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.faceanalysis.FaceDetector> /* GenericTypeInstSig */;
     function GetSupportedBitmapPixelFormats(): winrt.windows.foundation.collections.IVectorView<winrt.windows.graphics.imaging.BitmapPixelFormat> /* GenericTypeInstSig */;
-    function IsBitmapPixelFormatSupported(bitmapPixelFormat: ConstRef<winrt.windows.graphics.imaging.BitmapPixelFormat>): Bool;
+    function IsBitmapPixelFormatSupported(bitmapPixelFormat: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.imaging.BitmapPixelFormat>): Bool;
     overload function IsSupported(): Bool;
 }

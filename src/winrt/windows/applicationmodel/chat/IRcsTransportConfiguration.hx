@@ -8,10 +8,10 @@ package winrt.windows.applicationmodel.chat;
 @:native("winrt::Windows::ApplicationModel::Chat::IRcsTransportConfiguration")
 extern interface IRcsTransportConfiguration extends winrt.windows.foundation.IInspectable
 {
-    overload function MaxAttachmentCount(): Int32;
-    overload function MaxMessageSizeInKilobytes(): Int32;
-    overload function MaxGroupMessageSizeInKilobytes(): Int32;
-    overload function MaxRecipientCount(): Int32;
-    overload function MaxFileSizeInKilobytes(): Int32;
-    overload function WarningFileSizeInKilobytes(): Int32;
+    overload function MaxAttachmentCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function MaxMessageSizeInKilobytes(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function MaxGroupMessageSizeInKilobytes(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function MaxRecipientCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function MaxFileSizeInKilobytes(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function WarningFileSizeInKilobytes(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

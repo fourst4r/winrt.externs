@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.appointments;
 
 @:include("winrt/Windows.ApplicationModel.Appointments.h", true)
 @:native("winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangeType")
-extern enum abstract AppointmentStoreChangeType(Int32)
+extern enum abstract AppointmentStoreChangeType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangeType::AppointmentCreated") final AppointmentCreated;
     @:native("winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangeType::AppointmentModified") final AppointmentModified;

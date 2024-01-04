@@ -9,7 +9,7 @@ package winrt.windows.globalization.fonts;
 extern class LanguageFontGroup
     implements winrt.windows.globalization.fonts.ILanguageFontGroup
 {
-    /* explicit */ function new(languageTag: ConstRef<winrt.HString>);
+    /* explicit */ function new(languageTag: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     overload function UITextFont(): winrt.windows.globalization.fonts.LanguageFont;
     overload function UIHeadingFont(): winrt.windows.globalization.fonts.LanguageFont;
     overload function UITitleFont(): winrt.windows.globalization.fonts.LanguageFont;

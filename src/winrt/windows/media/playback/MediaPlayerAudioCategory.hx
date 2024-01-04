@@ -2,7 +2,7 @@ package winrt.windows.media.playback;
 
 @:include("winrt/Windows.Media.Playback.h", true)
 @:native("winrt::Windows::Media::Playback::MediaPlayerAudioCategory")
-extern enum abstract MediaPlayerAudioCategory(Int32)
+extern enum abstract MediaPlayerAudioCategory(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Playback::MediaPlayerAudioCategory::Other") final Other;
     @:native("winrt::Windows::Media::Playback::MediaPlayerAudioCategory::Communications") final Communications;

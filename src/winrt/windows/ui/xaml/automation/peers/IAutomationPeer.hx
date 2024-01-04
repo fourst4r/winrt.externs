@@ -9,10 +9,10 @@ package winrt.windows.ui.xaml.automation.peers;
 extern interface IAutomationPeer extends winrt.windows.foundation.IInspectable
 {
     overload function EventsSource(): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
-    overload function EventsSource(value: ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationPeer>): Void;
-    function GetPattern(patternInterface: ConstRef<winrt.windows.ui.xaml.automation.peers.PatternInterface>): winrt.windows.foundation.IInspectable;
-    function RaiseAutomationEvent(eventId: ConstRef<winrt.windows.ui.xaml.automation.peers.AutomationEvents>): Void;
-    function RaisePropertyChangedEvent(automationProperty: ConstRef<winrt.windows.ui.xaml.automation.AutomationProperty>, oldValue: ConstRef<winrt.windows.foundation.IInspectable>, newValue: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function EventsSource(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.peers.AutomationPeer>): Void;
+    function GetPattern(patternInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.peers.PatternInterface>): winrt.windows.foundation.IInspectable;
+    function RaiseAutomationEvent(eventId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.peers.AutomationEvents>): Void;
+    function RaisePropertyChangedEvent(automationProperty: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.AutomationProperty>, oldValue: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, newValue: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
     function GetAcceleratorKey(): winrt.HString;
     function GetAccessKey(): winrt.HString;
     function GetAutomationControlType(): winrt.windows.ui.xaml.automation.peers.AutomationControlType;
@@ -39,6 +39,6 @@ extern interface IAutomationPeer extends winrt.windows.foundation.IInspectable
     function SetFocus(): Void;
     function GetParent(): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
     function InvalidatePeer(): Void;
-    function GetPeerFromPoint(point: ConstRef<winrt.windows.foundation.Point>): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
+    function GetPeerFromPoint(point: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): winrt.windows.ui.xaml.automation.peers.AutomationPeer;
     function GetLiveSetting(): winrt.windows.ui.xaml.automation.peers.AutomationLiveSetting;
 }

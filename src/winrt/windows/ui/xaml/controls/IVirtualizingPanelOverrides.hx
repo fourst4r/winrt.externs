@@ -8,7 +8,7 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IVirtualizingPanelOverrides")
 extern interface IVirtualizingPanelOverrides extends winrt.windows.foundation.IInspectable
 {
-    function OnItemsChanged(sender: ConstRef<winrt.windows.foundation.IInspectable>, args: ConstRef<winrt.windows.ui.xaml.controls.primitives.ItemsChangedEventArgs>): Void;
+    function OnItemsChanged(sender: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, args: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.primitives.ItemsChangedEventArgs>): Void;
     function OnClearChildren(): Void;
-    function BringIndexIntoView(index: Int32): Void;
+    function BringIndexIntoView(index: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
 }

@@ -2,7 +2,7 @@ package winrt.microsoft.ui.text;
 
 @:include("winrt/Microsoft.UI.Text.h", true)
 @:native("winrt::Microsoft::UI::Text::UnderlineType")
-extern enum abstract UnderlineType(Int32)
+extern enum abstract UnderlineType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Text::UnderlineType::Undefined") final Undefined;
     @:native("winrt::Microsoft::UI::Text::UnderlineType::None") final None;

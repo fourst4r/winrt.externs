@@ -11,7 +11,7 @@ extern class NavigationViewTemplateSettings
     implements winrt.windows.ui.xaml.controls.INavigationViewTemplateSettings
 {
     function new();
-    overload function TopPadding(): Float64;
+    overload function TopPadding(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function OverflowButtonVisibility(): winrt.windows.ui.xaml.Visibility;
     overload function PaneToggleButtonVisibility(): winrt.windows.ui.xaml.Visibility;
     overload function BackButtonVisibility(): winrt.windows.ui.xaml.Visibility;

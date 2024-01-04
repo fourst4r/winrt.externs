@@ -9,5 +9,5 @@ package winrt.windows.graphics.printing.workflow;
 extern class PrintWorkflowObjectModelSourceFileContent
     implements winrt.windows.graphics.printing.workflow.IPrintWorkflowObjectModelSourceFileContent
 {
-    /* explicit */ function new(xpsStream: ConstRef<winrt.windows.storage.streams.IInputStream>);
+    /* explicit */ function new(xpsStream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IInputStream>);
 }

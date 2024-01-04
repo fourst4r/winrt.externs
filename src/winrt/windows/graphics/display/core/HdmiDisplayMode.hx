@@ -10,12 +10,12 @@ extern class HdmiDisplayMode
     implements winrt.windows.graphics.display.core.IHdmiDisplayMode
     implements winrt.windows.graphics.display.core.IHdmiDisplayMode2
 {
-    overload function ResolutionWidthInRawPixels(): UInt32;
-    overload function ResolutionHeightInRawPixels(): UInt32;
-    overload function RefreshRate(): Float64;
+    overload function ResolutionWidthInRawPixels(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function ResolutionHeightInRawPixels(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function RefreshRate(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function StereoEnabled(): Bool;
-    overload function BitsPerPixel(): UInt16;
-    function IsEqual(mode: ConstRef<winrt.windows.graphics.display.core.HdmiDisplayMode>): Bool;
+    overload function BitsPerPixel(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    function IsEqual(mode: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.display.core.HdmiDisplayMode>): Bool;
     overload function ColorSpace(): winrt.windows.graphics.display.core.HdmiDisplayColorSpace;
     overload function PixelEncoding(): winrt.windows.graphics.display.core.HdmiDisplayPixelEncoding;
     overload function IsSdrLuminanceSupported(): Bool;

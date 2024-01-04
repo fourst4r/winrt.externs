@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.email;
 
 @:include("winrt/Windows.ApplicationModel.Email.h", true)
 @:native("winrt::Windows::ApplicationModel::Email::EmailMessageDownloadState")
-extern enum abstract EmailMessageDownloadState(Int32)
+extern enum abstract EmailMessageDownloadState(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Email::EmailMessageDownloadState::PartiallyDownloaded") final PartiallyDownloaded;
     @:native("winrt::Windows::ApplicationModel::Email::EmailMessageDownloadState::Downloading") final Downloading;

@@ -10,7 +10,7 @@ extern class SpatialSurfaceMeshBuffer
     implements winrt.windows.perception.spatial.surfaces.ISpatialSurfaceMeshBuffer
 {
     overload function Format(): winrt.windows.graphics.directx.DirectXPixelFormat;
-    overload function Stride(): UInt32;
-    overload function ElementCount(): UInt32;
+    overload function Stride(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function ElementCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function Data(): winrt.windows.storage.streams.IBuffer;
 }

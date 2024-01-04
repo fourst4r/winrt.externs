@@ -9,7 +9,7 @@ package winrt.windows.devices.sensors;
 extern interface IGyrometerReading extends winrt.windows.foundation.IInspectable
 {
     overload function Timestamp(): winrt.windows.foundation.DateTime;
-    overload function AngularVelocityX(): Float64;
-    overload function AngularVelocityY(): Float64;
-    overload function AngularVelocityZ(): Float64;
+    overload function AngularVelocityX(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function AngularVelocityY(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function AngularVelocityZ(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

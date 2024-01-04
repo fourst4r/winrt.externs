@@ -11,14 +11,14 @@ extern class IncrementNumberRounder
     implements winrt.windows.globalization.numberformatting.IIncrementNumberRounder
 {
     function new();
-    function RoundInt32(value: Int32): Int32;
-    function RoundUInt32(value: UInt32): UInt32;
-    function RoundInt64(value: Int64): Int64;
-    function RoundUInt64(value: UInt64): UInt64;
-    function RoundSingle(value: Float32): Float32;
-    function RoundDouble(value: Float64): Float64;
+    function RoundInt32(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function RoundUInt32(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function RoundInt64(value: #if reflaxe.cpp cxx.num. #else cpp. #end Int64): #if reflaxe.cpp cxx.num. #else cpp. #end Int64;
+    function RoundUInt64(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt64): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
+    function RoundSingle(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    function RoundDouble(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function RoundingAlgorithm(): winrt.windows.globalization.numberformatting.RoundingAlgorithm;
-    overload function RoundingAlgorithm(value: ConstRef<winrt.windows.globalization.numberformatting.RoundingAlgorithm>): Void;
-    overload function Increment(): Float64;
-    overload function Increment(value: Float64): Void;
+    overload function RoundingAlgorithm(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.globalization.numberformatting.RoundingAlgorithm>): Void;
+    overload function Increment(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function Increment(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
 }

@@ -11,6 +11,6 @@ extern interface ICoreWebView2_3 extends winrt.windows.foundation.IInspectable
     overload function IsSuspended(): Bool;
     function TrySuspendAsync(): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
     function Resume(): Void;
-    function SetVirtualHostNameToFolderMapping(hostName: ConstRef<winrt.HString>, folderPath: ConstRef<winrt.HString>, accessKind: ConstRef<winrt.microsoft.web.webview2.core.CoreWebView2HostResourceAccessKind>): Void;
-    function ClearVirtualHostNameToFolderMapping(hostName: ConstRef<winrt.HString>): Void;
+    function SetVirtualHostNameToFolderMapping(hostName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, folderPath: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, accessKind: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.web.webview2.core.CoreWebView2HostResourceAccessKind>): Void;
+    function ClearVirtualHostNameToFolderMapping(hostName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

@@ -9,5 +9,5 @@ package winrt.windows.ui.composition.scenes;
 extern interface ISceneVisual extends winrt.windows.foundation.IInspectable
 {
     overload function Root(): winrt.windows.ui.composition.scenes.SceneNode;
-    overload function Root(value: ConstRef<winrt.windows.ui.composition.scenes.SceneNode>): Void;
+    overload function Root(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.scenes.SceneNode>): Void;
 }

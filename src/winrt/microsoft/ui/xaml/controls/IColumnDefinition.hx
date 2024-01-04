@@ -9,10 +9,10 @@ package winrt.microsoft.ui.xaml.controls;
 extern interface IColumnDefinition extends winrt.windows.foundation.IInspectable
 {
     overload function Width(): winrt.microsoft.ui.xaml.GridLength;
-    overload function Width(value: ConstRef<winrt.microsoft.ui.xaml.GridLength>): Void;
-    overload function MaxWidth(): Float64;
-    overload function MaxWidth(value: Float64): Void;
-    overload function MinWidth(): Float64;
-    overload function MinWidth(value: Float64): Void;
-    overload function ActualWidth(): Float64;
+    overload function Width(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.GridLength>): Void;
+    overload function MaxWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function MaxWidth(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function MinWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function MinWidth(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
+    overload function ActualWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

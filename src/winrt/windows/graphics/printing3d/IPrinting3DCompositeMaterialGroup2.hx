@@ -9,5 +9,5 @@ package winrt.windows.graphics.printing3d;
 extern interface IPrinting3DCompositeMaterialGroup2 extends winrt.windows.foundation.IInspectable
 {
     overload function BaseMaterialGroup(): winrt.windows.graphics.printing3d.Printing3DBaseMaterialGroup;
-    overload function BaseMaterialGroup(value: ConstRef<winrt.windows.graphics.printing3d.Printing3DBaseMaterialGroup>): Void;
+    overload function BaseMaterialGroup(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.printing3d.Printing3DBaseMaterialGroup>): Void;
 }

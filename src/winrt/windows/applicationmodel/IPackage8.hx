@@ -17,7 +17,7 @@ extern interface IPackage8 extends winrt.windows.foundation.IInspectable
     overload function EffectiveExternalPath(): winrt.HString;
     overload function MachineExternalPath(): winrt.HString;
     overload function UserExternalPath(): winrt.HString;
-    function GetLogoAsRandomAccessStreamReference(size: ConstRef<winrt.windows.foundation.Size>): winrt.windows.storage.streams.RandomAccessStreamReference;
+    function GetLogoAsRandomAccessStreamReference(size: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Size>): winrt.windows.storage.streams.RandomAccessStreamReference;
     function GetAppListEntries(): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.core.AppListEntry> /* GenericTypeInstSig */;
     overload function IsStub(): Bool;
 }

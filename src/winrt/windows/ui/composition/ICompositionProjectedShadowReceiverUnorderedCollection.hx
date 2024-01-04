@@ -8,8 +8,8 @@ package winrt.windows.ui.composition;
 @:native("winrt::Windows::UI::Composition::ICompositionProjectedShadowReceiverUnorderedCollection")
 extern interface ICompositionProjectedShadowReceiverUnorderedCollection extends winrt.windows.foundation.IInspectable
 {
-    function Add(value: ConstRef<winrt.windows.ui.composition.CompositionProjectedShadowReceiver>): Void;
-    overload function Count(): Int32;
-    function Remove(value: ConstRef<winrt.windows.ui.composition.CompositionProjectedShadowReceiver>): Void;
+    function Add(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionProjectedShadowReceiver>): Void;
+    overload function Count(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function Remove(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.CompositionProjectedShadowReceiver>): Void;
     function RemoveAll(): Void;
 }

@@ -9,9 +9,9 @@ package winrt.microsoft.ui.composition;
 extern interface ICompositionVisualSurface extends winrt.windows.foundation.IInspectable
 {
     overload function SourceVisual(): winrt.microsoft.ui.composition.Visual;
-    overload function SourceVisual(value: ConstRef<winrt.microsoft.ui.composition.Visual>): Void;
+    overload function SourceVisual(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.Visual>): Void;
     overload function SourceOffset(): winrt.windows.foundation.numerics.Vector2;
-    overload function SourceOffset(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function SourceOffset(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
     overload function SourceSize(): winrt.windows.foundation.numerics.Vector2;
-    overload function SourceSize(value: ConstRef<winrt.windows.foundation.numerics.Vector2>): Void;
+    overload function SourceSize(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.numerics.Vector2>): Void;
 }

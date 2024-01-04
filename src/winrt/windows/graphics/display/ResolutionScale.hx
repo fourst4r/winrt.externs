@@ -2,7 +2,7 @@ package winrt.windows.graphics.display;
 
 @:include("winrt/Windows.Graphics.Display.h", true)
 @:native("winrt::Windows::Graphics::Display::ResolutionScale")
-extern enum abstract ResolutionScale(Int32)
+extern enum abstract ResolutionScale(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Graphics::Display::ResolutionScale::Invalid") final Invalid;
     @:native("winrt::Windows::Graphics::Display::ResolutionScale::Scale100Percent") final Scale100Percent;

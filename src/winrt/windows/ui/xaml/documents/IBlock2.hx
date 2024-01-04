@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.documents;
 extern interface IBlock2 extends winrt.windows.foundation.IInspectable
 {
     overload function HorizontalTextAlignment(): winrt.windows.ui.xaml.TextAlignment;
-    overload function HorizontalTextAlignment(value: ConstRef<winrt.windows.ui.xaml.TextAlignment>): Void;
+    overload function HorizontalTextAlignment(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.TextAlignment>): Void;
 }

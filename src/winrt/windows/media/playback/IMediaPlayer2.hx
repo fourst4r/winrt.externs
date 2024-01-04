@@ -10,7 +10,7 @@ extern interface IMediaPlayer2 extends winrt.windows.foundation.IInspectable
 {
     overload function SystemMediaTransportControls(): winrt.windows.media.SystemMediaTransportControls;
     overload function AudioCategory(): winrt.windows.media.playback.MediaPlayerAudioCategory;
-    overload function AudioCategory(value: ConstRef<winrt.windows.media.playback.MediaPlayerAudioCategory>): Void;
+    overload function AudioCategory(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.playback.MediaPlayerAudioCategory>): Void;
     overload function AudioDeviceType(): winrt.windows.media.playback.MediaPlayerAudioDeviceType;
-    overload function AudioDeviceType(value: ConstRef<winrt.windows.media.playback.MediaPlayerAudioDeviceType>): Void;
+    overload function AudioDeviceType(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.playback.MediaPlayerAudioDeviceType>): Void;
 }

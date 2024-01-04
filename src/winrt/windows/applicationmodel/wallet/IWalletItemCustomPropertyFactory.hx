@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.wallet;
 @:native("winrt::Windows::ApplicationModel::Wallet::IWalletItemCustomPropertyFactory")
 extern interface IWalletItemCustomPropertyFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWalletItemCustomProperty(name: ConstRef<winrt.HString>, value: ConstRef<winrt.HString>): winrt.windows.applicationmodel.wallet.WalletItemCustomProperty;
+    function CreateWalletItemCustomProperty(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.wallet.WalletItemCustomProperty;
 }

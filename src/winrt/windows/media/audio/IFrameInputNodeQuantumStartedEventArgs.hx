@@ -8,5 +8,5 @@ package winrt.windows.media.audio;
 @:native("winrt::Windows::Media::Audio::IFrameInputNodeQuantumStartedEventArgs")
 extern interface IFrameInputNodeQuantumStartedEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function RequiredSamples(): Int32;
+    overload function RequiredSamples(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

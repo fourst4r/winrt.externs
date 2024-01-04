@@ -8,5 +8,5 @@ package winrt.windows.ui.composition.interactions;
 @:native("winrt::Windows::UI::Composition::Interactions::IInteractionTrackerInertiaNaturalMotionStatics")
 extern interface IInteractionTrackerInertiaNaturalMotionStatics extends winrt.windows.foundation.IInspectable
 {
-    function Create(compositor: ConstRef<winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.interactions.InteractionTrackerInertiaNaturalMotion;
+    function Create(compositor: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.Compositor>): winrt.windows.ui.composition.interactions.InteractionTrackerInertiaNaturalMotion;
 }

@@ -2,7 +2,7 @@ package winrt.windows.media.import;
 
 @:include("winrt/Windows.Media.Import.h", true)
 @:native("winrt::Windows::Media::Import::PhotoImportStage")
-extern enum abstract PhotoImportStage(Int32)
+extern enum abstract PhotoImportStage(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Import::PhotoImportStage::NotStarted") final NotStarted;
     @:native("winrt::Windows::Media::Import::PhotoImportStage::FindingItems") final FindingItems;

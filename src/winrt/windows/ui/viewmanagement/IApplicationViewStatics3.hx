@@ -9,7 +9,7 @@ package winrt.windows.ui.viewmanagement;
 extern interface IApplicationViewStatics3 extends winrt.windows.foundation.IInspectable
 {
     overload function PreferredLaunchWindowingMode(): winrt.windows.ui.viewmanagement.ApplicationViewWindowingMode;
-    overload function PreferredLaunchWindowingMode(value: ConstRef<winrt.windows.ui.viewmanagement.ApplicationViewWindowingMode>): Void;
+    overload function PreferredLaunchWindowingMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.viewmanagement.ApplicationViewWindowingMode>): Void;
     overload function PreferredLaunchViewSize(): winrt.windows.foundation.Size;
-    overload function PreferredLaunchViewSize(value: ConstRef<winrt.windows.foundation.Size>): Void;
+    overload function PreferredLaunchViewSize(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Size>): Void;
 }

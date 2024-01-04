@@ -10,6 +10,6 @@ extern class SystemCondition
     implements winrt.windows.applicationmodel.background.IBackgroundCondition
     implements winrt.windows.applicationmodel.background.ISystemCondition
 {
-    /* explicit */ function new(conditionType: ConstRef<winrt.windows.applicationmodel.background.SystemConditionType>);
+    /* explicit */ function new(conditionType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.background.SystemConditionType>);
     overload function ConditionType(): winrt.windows.applicationmodel.background.SystemConditionType;
 }

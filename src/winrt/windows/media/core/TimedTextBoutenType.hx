@@ -2,7 +2,7 @@ package winrt.windows.media.core;
 
 @:include("winrt/Windows.Media.Core.h", true)
 @:native("winrt::Windows::Media::Core::TimedTextBoutenType")
-extern enum abstract TimedTextBoutenType(Int32)
+extern enum abstract TimedTextBoutenType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Core::TimedTextBoutenType::None") final None;
     @:native("winrt::Windows::Media::Core::TimedTextBoutenType::Auto") final Auto;

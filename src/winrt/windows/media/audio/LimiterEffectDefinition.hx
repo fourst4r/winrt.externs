@@ -10,11 +10,11 @@ extern class LimiterEffectDefinition
     implements winrt.windows.media.effects.IAudioEffectDefinition
     implements winrt.windows.media.audio.ILimiterEffectDefinition
 {
-    /* explicit */ function new(audioGraph: ConstRef<winrt.windows.media.audio.AudioGraph>);
-    overload function Release(value: UInt32): Void;
-    overload function Release(): UInt32;
-    overload function Loudness(value: UInt32): Void;
-    overload function Loudness(): UInt32;
+    /* explicit */ function new(audioGraph: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.audio.AudioGraph>);
+    overload function Release(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function Release(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Loudness(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function Loudness(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function ActivatableClassId(): winrt.HString;
     overload function Properties(): winrt.windows.foundation.collections.IPropertySet;
 }

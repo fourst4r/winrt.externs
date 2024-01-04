@@ -12,11 +12,11 @@ extern class TimelineMarker
 {
     function new();
     overload function Time(): winrt.windows.foundation.TimeSpan;
-    overload function Time(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
+    overload function Time(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
     overload function Type(): winrt.HString;
-    overload function Type(value: ConstRef<winrt.HString>): Void;
+    overload function Type(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Text(): winrt.HString;
-    overload function Text(value: ConstRef<winrt.HString>): Void;
+    overload function Text(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function TimeProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function TypeProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function TextProperty(): winrt.windows.ui.xaml.DependencyProperty;

@@ -10,5 +10,5 @@ extern class SensorDataThresholdTrigger
     implements winrt.windows.applicationmodel.background.IBackgroundTrigger
     implements winrt.windows.applicationmodel.background.ISensorDataThresholdTrigger
 {
-    /* explicit */ function new(threshold: ConstRef<winrt.windows.devices.sensors.ISensorDataThreshold>);
+    /* explicit */ function new(threshold: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.sensors.ISensorDataThreshold>);
 }

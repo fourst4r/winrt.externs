@@ -8,5 +8,5 @@ package winrt.windows.devices.i2c;
 @:native("winrt::Windows::Devices::I2c::II2cConnectionSettingsFactory")
 extern interface II2cConnectionSettingsFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(slaveAddress: Int32): winrt.windows.devices.i2c.I2cConnectionSettings;
+    function Create(slaveAddress: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.devices.i2c.I2cConnectionSettings;
 }

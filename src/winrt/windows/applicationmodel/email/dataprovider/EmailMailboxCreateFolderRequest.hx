@@ -12,6 +12,6 @@ extern class EmailMailboxCreateFolderRequest
     overload function EmailMailboxId(): winrt.HString;
     overload function ParentFolderId(): winrt.HString;
     overload function Name(): winrt.HString;
-    function ReportCompletedAsync(folder: ConstRef<winrt.windows.applicationmodel.email.EmailFolder>): winrt.windows.foundation.IAsyncAction;
-    function ReportFailedAsync(status: ConstRef<winrt.windows.applicationmodel.email.EmailMailboxCreateFolderStatus>): winrt.windows.foundation.IAsyncAction;
+    function ReportCompletedAsync(folder: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.email.EmailFolder>): winrt.windows.foundation.IAsyncAction;
+    function ReportFailedAsync(status: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.email.EmailMailboxCreateFolderStatus>): winrt.windows.foundation.IAsyncAction;
 }

@@ -9,6 +9,6 @@ package winrt.windows.ui.xaml.controls;
 extern interface IAutoSuggestBoxTextChangedEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function Reason(): winrt.windows.ui.xaml.controls.AutoSuggestionBoxTextChangeReason;
-    overload function Reason(value: ConstRef<winrt.windows.ui.xaml.controls.AutoSuggestionBoxTextChangeReason>): Void;
+    overload function Reason(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.AutoSuggestionBoxTextChangeReason>): Void;
     function CheckCurrent(): Bool;
 }

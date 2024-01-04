@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml.input;
 @:native("winrt::Microsoft::UI::Xaml::Input::IManipulationStartedRoutedEventArgsFactory")
 extern interface IManipulationStartedRoutedEventArgsFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.input.ManipulationStartedRoutedEventArgs;
+    function CreateInstance(baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.input.ManipulationStartedRoutedEventArgs;
 }

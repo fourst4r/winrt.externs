@@ -8,6 +8,6 @@ package winrt.windows.ui.input.spatial;
 @:native("winrt::Windows::UI::Input::Spatial::ISpatialInteractionSource")
 extern interface ISpatialInteractionSource extends winrt.windows.foundation.IInspectable
 {
-    overload function Id(): UInt32;
+    overload function Id(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function Kind(): winrt.windows.ui.input.spatial.SpatialInteractionSourceKind;
 }

@@ -8,7 +8,7 @@ package winrt.windows.media;
 @:native("winrt::Windows::Media::IAudioBuffer")
 extern interface IAudioBuffer extends winrt.windows.foundation.IInspectable
 {
-    overload function Capacity(): UInt32;
-    overload function Length(): UInt32;
-    overload function Length(value: UInt32): Void;
+    overload function Capacity(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Length(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Length(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
 }

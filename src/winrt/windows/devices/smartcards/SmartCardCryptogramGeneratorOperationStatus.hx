@@ -2,7 +2,7 @@ package winrt.windows.devices.smartcards;
 
 @:include("winrt/Windows.Devices.SmartCards.h", true)
 @:native("winrt::Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus")
-extern enum abstract SmartCardCryptogramGeneratorOperationStatus(Int32)
+extern enum abstract SmartCardCryptogramGeneratorOperationStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus::Success") final Success;
     @:native("winrt::Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus::AuthorizationFailed") final AuthorizationFailed;

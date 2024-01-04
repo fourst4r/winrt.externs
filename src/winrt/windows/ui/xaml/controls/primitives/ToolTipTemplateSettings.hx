@@ -10,6 +10,6 @@ extern class ToolTipTemplateSettings
     extends winrt.windows.ui.xaml.DependencyObject
     implements winrt.windows.ui.xaml.controls.primitives.IToolTipTemplateSettings
 {
-    overload function FromHorizontalOffset(): Float64;
-    overload function FromVerticalOffset(): Float64;
+    overload function FromHorizontalOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function FromVerticalOffset(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

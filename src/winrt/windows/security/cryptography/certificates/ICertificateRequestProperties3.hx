@@ -9,13 +9,13 @@ package winrt.windows.security.cryptography.certificates;
 extern interface ICertificateRequestProperties3 extends winrt.windows.foundation.IInspectable
 {
     overload function CurveName(): winrt.HString;
-    overload function CurveName(value: ConstRef<winrt.HString>): Void;
-    overload function CurveParameters(): winrt.ComArray<UInt8>;
-    overload function CurveParameters(value: winrt.ArrayView<UInt8>): Void;
+    overload function CurveName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function CurveParameters(): winrt.ComArray<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>;
+    overload function CurveParameters(value: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt8>): Void;
     overload function ContainerNamePrefix(): winrt.HString;
-    overload function ContainerNamePrefix(value: ConstRef<winrt.HString>): Void;
+    overload function ContainerNamePrefix(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function ContainerName(): winrt.HString;
-    overload function ContainerName(value: ConstRef<winrt.HString>): Void;
+    overload function ContainerName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function UseExistingKey(): Bool;
     overload function UseExistingKey(value: Bool): Void;
 }

@@ -2,7 +2,7 @@ package winrt.windows.devices.enumeration.pnp;
 
 @:include("winrt/Windows.Devices.Enumeration.Pnp.h", true)
 @:native("winrt::Windows::Devices::Enumeration::Pnp::PnpObjectType")
-extern enum abstract PnpObjectType(Int32)
+extern enum abstract PnpObjectType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::Enumeration::Pnp::PnpObjectType::Unknown") final Unknown;
     @:native("winrt::Windows::Devices::Enumeration::Pnp::PnpObjectType::DeviceInterface") final DeviceInterface;

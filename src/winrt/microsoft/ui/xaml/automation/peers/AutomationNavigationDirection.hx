@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.automation.peers;
 
 @:include("winrt/Microsoft.UI.Xaml.Automation.Peers.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationNavigationDirection")
-extern enum abstract AutomationNavigationDirection(Int32)
+extern enum abstract AutomationNavigationDirection(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationNavigationDirection::Parent") final Parent;
     @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationNavigationDirection::NextSibling") final NextSibling;

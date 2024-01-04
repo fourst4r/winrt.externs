@@ -12,6 +12,6 @@ extern class ContentPrefetchTrigger
 {
     function new();
     @:native("winrt::Windows::ApplicationModel::Background::ContentPrefetchTrigger")
-    /* explicit */ static overload function make(waitInterval: ConstRef<winrt.windows.foundation.TimeSpan>): winrt.windows.applicationmodel.background.ContentPrefetchTrigger;
+    /* explicit */ static overload function make(waitInterval: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): winrt.windows.applicationmodel.background.ContentPrefetchTrigger;
     overload function WaitInterval(): winrt.windows.foundation.TimeSpan;
 }

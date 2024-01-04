@@ -9,6 +9,6 @@ package winrt.windows.system.implementation.fileexplorer;
 extern class SysStorageProviderEventReceivedEventArgs
     implements winrt.windows.system.implementation.fileexplorer.ISysStorageProviderEventReceivedEventArgs
 {
-    /* explicit */ function new(json: ConstRef<winrt.HString>);
+    /* explicit */ function new(json: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
     overload function Json(): winrt.HString;
 }

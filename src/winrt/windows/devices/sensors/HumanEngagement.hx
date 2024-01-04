@@ -2,7 +2,7 @@ package winrt.windows.devices.sensors;
 
 @:include("winrt/Windows.Devices.Sensors.h", true)
 @:native("winrt::Windows::Devices::Sensors::HumanEngagement")
-extern enum abstract HumanEngagement(Int32)
+extern enum abstract HumanEngagement(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::Sensors::HumanEngagement::Unknown") final Unknown;
     @:native("winrt::Windows::Devices::Sensors::HumanEngagement::Engaged") final Engaged;

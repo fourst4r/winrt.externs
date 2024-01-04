@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.calls;
 @:native("winrt::Windows::ApplicationModel::Calls::IVoipPhoneCall3")
 extern interface IVoipPhoneCall3 extends winrt.windows.foundation.IInspectable
 {
-    function NotifyCallAccepted(media: ConstRef<winrt.windows.applicationmodel.calls.VoipPhoneCallMedia>): Void;
+    function NotifyCallAccepted(media: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.calls.VoipPhoneCallMedia>): Void;
 }

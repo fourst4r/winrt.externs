@@ -12,5 +12,5 @@ extern class EmailMailboxEmptyFolderRequest
     overload function EmailMailboxId(): winrt.HString;
     overload function EmailFolderId(): winrt.HString;
     function ReportCompletedAsync(): winrt.windows.foundation.IAsyncAction;
-    function ReportFailedAsync(status: ConstRef<winrt.windows.applicationmodel.email.EmailMailboxEmptyFolderStatus>): winrt.windows.foundation.IAsyncAction;
+    function ReportFailedAsync(status: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.email.EmailMailboxEmptyFolderStatus>): winrt.windows.foundation.IAsyncAction;
 }

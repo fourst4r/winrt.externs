@@ -9,7 +9,7 @@ package winrt.microsoft.windows.applicationmodel.dynamicdependency;
 extern class PackageDependencyContext
     implements winrt.microsoft.windows.applicationmodel.dynamicdependency.IPackageDependencyContext
 {
-    /* explicit */ function new(contextId: ConstRef<winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContextId>);
+    /* explicit */ function new(contextId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContextId>);
     overload function ContextId(): winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContextId;
     overload function PackageDependencyId(): winrt.HString;
     overload function PackageFullName(): winrt.HString;

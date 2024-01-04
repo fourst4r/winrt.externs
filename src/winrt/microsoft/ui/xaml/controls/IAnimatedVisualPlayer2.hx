@@ -9,5 +9,5 @@ package winrt.microsoft.ui.xaml.controls;
 extern interface IAnimatedVisualPlayer2 extends winrt.windows.foundation.IInspectable
 {
     overload function AnimationOptimization(): winrt.microsoft.ui.xaml.controls.PlayerAnimationOptimization;
-    overload function AnimationOptimization(value: ConstRef<winrt.microsoft.ui.xaml.controls.PlayerAnimationOptimization>): Void;
+    overload function AnimationOptimization(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.PlayerAnimationOptimization>): Void;
 }

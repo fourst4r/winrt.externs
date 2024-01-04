@@ -9,6 +9,6 @@ package winrt.windows.devices.display.core;
 extern interface IDisplayTaskResult extends winrt.windows.foundation.IInspectable
 {
     overload function PresentStatus(): winrt.windows.devices.display.core.DisplayPresentStatus;
-    overload function PresentId(): UInt64;
+    overload function PresentId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
     overload function SourceStatus(): winrt.windows.devices.display.core.DisplaySourceStatus;
 }

@@ -10,7 +10,7 @@ extern class HolographicFrameRenderingReport
     implements winrt.windows.graphics.holographic.IHolographicFrameRenderingReport
 {
     overload function FrameId(): winrt.windows.graphics.holographic.HolographicFrameId;
-    overload function MissedLatchCount(): UInt32;
+    overload function MissedLatchCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function SystemRelativeFrameReadyTime(): winrt.windows.foundation.TimeSpan;
     overload function SystemRelativeActualGpuFinishTime(): winrt.windows.foundation.TimeSpan;
     overload function SystemRelativeTargetLatchTime(): winrt.windows.foundation.TimeSpan;

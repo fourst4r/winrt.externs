@@ -8,6 +8,6 @@ package winrt.windows.devices.geolocation;
 @:native("winrt::Windows::Devices::Geolocation::IGeolocatorWithScalarAccuracy")
 extern interface IGeolocatorWithScalarAccuracy extends winrt.windows.foundation.IInspectable
 {
-    overload function DesiredAccuracyInMeters(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
-    overload function DesiredAccuracyInMeters(value: ConstRef<winrt.windows.foundation.IReference<UInt32> /* temp_GenericTypeInstSig */>): Void;
+    overload function DesiredAccuracyInMeters(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
+    overload function DesiredAccuracyInMeters(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* temp_GenericTypeInstSig */>): Void;
 }

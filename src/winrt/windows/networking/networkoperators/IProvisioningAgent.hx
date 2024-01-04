@@ -8,6 +8,6 @@ package winrt.windows.networking.networkoperators;
 @:native("winrt::Windows::Networking::NetworkOperators::IProvisioningAgent")
 extern interface IProvisioningAgent extends winrt.windows.foundation.IInspectable
 {
-    function ProvisionFromXmlDocumentAsync(provisioningXmlDocument: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.ProvisionFromXmlDocumentResults> /* GenericTypeInstSig */;
-    function GetProvisionedProfile(mediaType: ConstRef<winrt.windows.networking.networkoperators.ProfileMediaType>, profileName: ConstRef<winrt.HString>): winrt.windows.networking.networkoperators.ProvisionedProfile;
+    function ProvisionFromXmlDocumentAsync(provisioningXmlDocument: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.networking.networkoperators.ProvisionFromXmlDocumentResults> /* GenericTypeInstSig */;
+    function GetProvisionedProfile(mediaType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.networkoperators.ProfileMediaType>, profileName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.networking.networkoperators.ProvisionedProfile;
 }

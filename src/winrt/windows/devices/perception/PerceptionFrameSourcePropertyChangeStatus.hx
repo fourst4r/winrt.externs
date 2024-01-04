@@ -2,7 +2,7 @@ package winrt.windows.devices.perception;
 
 @:include("winrt/Windows.Devices.Perception.h", true)
 @:native("winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeStatus")
-extern enum abstract PerceptionFrameSourcePropertyChangeStatus(Int32)
+extern enum abstract PerceptionFrameSourcePropertyChangeStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeStatus::Unknown") final Unknown;
     @:native("winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeStatus::Accepted") final Accepted;

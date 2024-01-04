@@ -9,5 +9,5 @@ package winrt.windows.security.cryptography.core;
 extern interface IKeyDerivationParameters2 extends winrt.windows.foundation.IInspectable
 {
     overload function Capi1KdfTargetAlgorithm(): winrt.windows.security.cryptography.core.Capi1KdfTargetAlgorithm;
-    overload function Capi1KdfTargetAlgorithm(value: ConstRef<winrt.windows.security.cryptography.core.Capi1KdfTargetAlgorithm>): Void;
+    overload function Capi1KdfTargetAlgorithm(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.core.Capi1KdfTargetAlgorithm>): Void;
 }

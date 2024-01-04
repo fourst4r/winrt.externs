@@ -12,7 +12,7 @@ extern class KeySpline
 {
     function new();
     overload function ControlPoint1(): winrt.windows.foundation.Point;
-    overload function ControlPoint1(value: ConstRef<winrt.windows.foundation.Point>): Void;
+    overload function ControlPoint1(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
     overload function ControlPoint2(): winrt.windows.foundation.Point;
-    overload function ControlPoint2(value: ConstRef<winrt.windows.foundation.Point>): Void;
+    overload function ControlPoint2(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
 }

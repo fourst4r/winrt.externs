@@ -2,7 +2,7 @@ package winrt.windows.system.remotesystems;
 
 @:include("winrt/Windows.System.RemoteSystems.h", true)
 @:native("winrt::Windows::System::RemoteSystems::RemoteSystemPlatform")
-extern enum abstract RemoteSystemPlatform(Int32)
+extern enum abstract RemoteSystemPlatform(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::System::RemoteSystems::RemoteSystemPlatform::Unknown") final Unknown;
     @:native("winrt::Windows::System::RemoteSystems::RemoteSystemPlatform::Windows") final Windows;

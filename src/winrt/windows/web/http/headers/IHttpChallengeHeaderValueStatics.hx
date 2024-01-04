@@ -8,6 +8,6 @@ package winrt.windows.web.http.headers;
 @:native("winrt::Windows::Web::Http::Headers::IHttpChallengeHeaderValueStatics")
 extern interface IHttpChallengeHeaderValueStatics extends winrt.windows.foundation.IInspectable
 {
-    function Parse(input: ConstRef<winrt.HString>): winrt.windows.web.http.headers.HttpChallengeHeaderValue;
-    function TryParse(input: ConstRef<winrt.HString>, challengeHeaderValue: Ref<winrt.windows.web.http.headers.HttpChallengeHeaderValue>): Bool;
+    function Parse(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.http.headers.HttpChallengeHeaderValue;
+    function TryParse(input: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, challengeHeaderValue: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.web.http.headers.HttpChallengeHeaderValue>): Bool;
 }

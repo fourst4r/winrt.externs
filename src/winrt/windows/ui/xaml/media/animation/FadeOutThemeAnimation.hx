@@ -12,7 +12,7 @@ extern class FadeOutThemeAnimation
 {
     function new();
     overload function TargetName(): winrt.HString;
-    overload function TargetName(value: ConstRef<winrt.HString>): Void;
+    overload function TargetName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function TargetNameProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function TargetNameProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

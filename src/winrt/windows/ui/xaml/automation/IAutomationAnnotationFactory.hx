@@ -8,6 +8,6 @@ package winrt.windows.ui.xaml.automation;
 @:native("winrt::Windows::UI::Xaml::Automation::IAutomationAnnotationFactory")
 extern interface IAutomationAnnotationFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(type: ConstRef<winrt.windows.ui.xaml.automation.AnnotationType>): winrt.windows.ui.xaml.automation.AutomationAnnotation;
-    function CreateWithElementParameter(type: ConstRef<winrt.windows.ui.xaml.automation.AnnotationType>, element: ConstRef<winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.xaml.automation.AutomationAnnotation;
+    function CreateInstance(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.AnnotationType>): winrt.windows.ui.xaml.automation.AutomationAnnotation;
+    function CreateWithElementParameter(type: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.AnnotationType>, element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): winrt.windows.ui.xaml.automation.AutomationAnnotation;
 }

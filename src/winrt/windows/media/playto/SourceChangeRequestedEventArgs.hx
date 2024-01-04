@@ -17,6 +17,6 @@ extern class SourceChangeRequestedEventArgs
     overload function Description(): winrt.HString;
     overload function Date(): winrt.windows.foundation.IReference<winrt.windows.foundation.DateTime> /* GenericTypeInstSig */;
     overload function Thumbnail(): winrt.windows.storage.streams.IRandomAccessStreamReference;
-    overload function Rating(): winrt.windows.foundation.IReference<UInt32> /* GenericTypeInstSig */;
+    overload function Rating(): winrt.windows.foundation.IReference<#if reflaxe.cpp cxx.num. #else cpp. #end UInt32> /* GenericTypeInstSig */;
     overload function Properties(): winrt.windows.foundation.collections.IMapView<winrt.HString, winrt.windows.foundation.IInspectable> /* GenericTypeInstSig */;
 }

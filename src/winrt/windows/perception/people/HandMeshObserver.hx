@@ -10,11 +10,11 @@ extern class HandMeshObserver
     implements winrt.windows.perception.people.IHandMeshObserver
 {
     overload function Source(): winrt.windows.ui.input.spatial.SpatialInteractionSource;
-    overload function TriangleIndexCount(): UInt32;
-    overload function VertexCount(): UInt32;
-    function GetTriangleIndices(indices: winrt.ArrayView<UInt16>): Void;
-    function GetVertexStateForPose(handPose: ConstRef<winrt.windows.perception.people.HandPose>): winrt.windows.perception.people.HandMeshVertexState;
+    overload function TriangleIndexCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function VertexCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function GetTriangleIndices(indices: winrt.ArrayView<#if reflaxe.cpp cxx.num. #else cpp. #end UInt16>): Void;
+    function GetVertexStateForPose(handPose: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.perception.people.HandPose>): winrt.windows.perception.people.HandMeshVertexState;
     overload function NeutralPose(): winrt.windows.perception.people.HandPose;
-    overload function NeutralPoseVersion(): Int32;
-    overload function ModelId(): Int32;
+    overload function NeutralPoseVersion(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function ModelId(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

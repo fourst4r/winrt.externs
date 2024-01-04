@@ -8,6 +8,6 @@ package winrt.windows.devices.sensors;
 @:native("winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics2")
 extern interface IHumanPresenceSensorStatics2 extends winrt.windows.foundation.IInspectable
 {
-    function FromId(sensorId: ConstRef<winrt.HString>): winrt.windows.devices.sensors.HumanPresenceSensor;
+    function FromId(sensorId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.devices.sensors.HumanPresenceSensor;
     function GetDefault(): winrt.windows.devices.sensors.HumanPresenceSensor;
 }

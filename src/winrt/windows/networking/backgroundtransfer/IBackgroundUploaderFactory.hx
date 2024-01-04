@@ -8,5 +8,5 @@ package winrt.windows.networking.backgroundtransfer;
 @:native("winrt::Windows::Networking::BackgroundTransfer::IBackgroundUploaderFactory")
 extern interface IBackgroundUploaderFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateWithCompletionGroup(completionGroup: ConstRef<winrt.windows.networking.backgroundtransfer.BackgroundTransferCompletionGroup>): winrt.windows.networking.backgroundtransfer.BackgroundUploader;
+    function CreateWithCompletionGroup(completionGroup: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.backgroundtransfer.BackgroundTransferCompletionGroup>): winrt.windows.networking.backgroundtransfer.BackgroundUploader;
 }

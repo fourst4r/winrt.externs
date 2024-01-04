@@ -11,10 +11,10 @@ extern class BackgroundTransferContentPart
 {
     function new();
     @:native("winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart")
-    /* explicit */ static overload function make(name: ConstRef<winrt.HString>): winrt.windows.networking.backgroundtransfer.BackgroundTransferContentPart;
+    /* explicit */ static overload function make(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.networking.backgroundtransfer.BackgroundTransferContentPart;
     @:native("winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart")
-    static overload function make(name: ConstRef<winrt.HString>, fileName: ConstRef<winrt.HString>): winrt.windows.networking.backgroundtransfer.BackgroundTransferContentPart;
-    function SetHeader(headerName: ConstRef<winrt.HString>, headerValue: ConstRef<winrt.HString>): Void;
-    function SetText(value: ConstRef<winrt.HString>): Void;
-    function SetFile(value: ConstRef<winrt.windows.storage.IStorageFile>): Void;
+    static overload function make(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, fileName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.networking.backgroundtransfer.BackgroundTransferContentPart;
+    function SetHeader(headerName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, headerValue: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function SetText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function SetFile(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.IStorageFile>): Void;
 }

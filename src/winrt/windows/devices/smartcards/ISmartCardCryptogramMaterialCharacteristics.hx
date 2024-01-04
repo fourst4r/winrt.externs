@@ -14,6 +14,6 @@ extern interface ISmartCardCryptogramMaterialCharacteristics extends winrt.windo
     overload function AllowedValidations(): winrt.windows.foundation.collections.IVectorView<winrt.windows.devices.smartcards.SmartCardCryptogramAlgorithm> /* GenericTypeInstSig */;
     overload function MaterialType(): winrt.windows.devices.smartcards.SmartCardCryptogramMaterialType;
     overload function ProtectionMethod(): winrt.windows.devices.smartcards.SmartCardCryptogramMaterialProtectionMethod;
-    overload function ProtectionVersion(): Int32;
-    overload function MaterialLength(): Int32;
+    overload function ProtectionVersion(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function MaterialLength(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

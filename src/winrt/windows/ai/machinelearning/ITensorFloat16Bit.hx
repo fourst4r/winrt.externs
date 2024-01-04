@@ -8,5 +8,5 @@ package winrt.windows.ai.machinelearning;
 @:native("winrt::Windows::AI::MachineLearning::ITensorFloat16Bit")
 extern interface ITensorFloat16Bit extends winrt.windows.foundation.IInspectable
 {
-    function GetAsVectorView(): winrt.windows.foundation.collections.IVectorView<Float32> /* GenericTypeInstSig */;
+    function GetAsVectorView(): winrt.windows.foundation.collections.IVectorView<#if reflaxe.cpp cxx.num. #else cpp. #end Float32> /* GenericTypeInstSig */;
 }

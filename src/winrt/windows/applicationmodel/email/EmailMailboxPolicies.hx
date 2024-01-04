@@ -17,10 +17,10 @@ extern class EmailMailboxPolicies
     overload function RequiredSmimeSigningAlgorithm(): winrt.windows.foundation.IReference<winrt.windows.applicationmodel.email.EmailMailboxSmimeSigningAlgorithm> /* GenericTypeInstSig */;
     overload function MustEncryptSmimeMessages(): Bool;
     overload function MustSignSmimeMessages(): Bool;
-    overload function AllowedSmimeEncryptionAlgorithmNegotiation(value: ConstRef<winrt.windows.applicationmodel.email.EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation>): Void;
+    overload function AllowedSmimeEncryptionAlgorithmNegotiation(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.email.EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation>): Void;
     overload function AllowSmimeSoftCertificates(value: Bool): Void;
-    overload function RequiredSmimeEncryptionAlgorithm(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.applicationmodel.email.EmailMailboxSmimeEncryptionAlgorithm> /* temp_GenericTypeInstSig */>): Void;
-    overload function RequiredSmimeSigningAlgorithm(value: ConstRef<winrt.windows.foundation.IReference<winrt.windows.applicationmodel.email.EmailMailboxSmimeSigningAlgorithm> /* temp_GenericTypeInstSig */>): Void;
+    overload function RequiredSmimeEncryptionAlgorithm(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.applicationmodel.email.EmailMailboxSmimeEncryptionAlgorithm> /* temp_GenericTypeInstSig */>): Void;
+    overload function RequiredSmimeSigningAlgorithm(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IReference<winrt.windows.applicationmodel.email.EmailMailboxSmimeSigningAlgorithm> /* temp_GenericTypeInstSig */>): Void;
     overload function MustEncryptSmimeMessages(value: Bool): Void;
     overload function MustSignSmimeMessages(value: Bool): Void;
 }

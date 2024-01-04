@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IPivotItemEventArgs extends winrt.windows.foundation.IInspectable
 {
     overload function Item(): winrt.windows.ui.xaml.controls.PivotItem;
-    overload function Item(value: ConstRef<winrt.windows.ui.xaml.controls.PivotItem>): Void;
+    overload function Item(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.PivotItem>): Void;
 }

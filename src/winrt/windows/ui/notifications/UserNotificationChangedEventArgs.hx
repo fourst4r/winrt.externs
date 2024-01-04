@@ -10,5 +10,5 @@ extern class UserNotificationChangedEventArgs
     implements winrt.windows.ui.notifications.IUserNotificationChangedEventArgs
 {
     overload function ChangeKind(): winrt.windows.ui.notifications.UserNotificationChangedKind;
-    overload function UserNotificationId(): UInt32;
+    overload function UserNotificationId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

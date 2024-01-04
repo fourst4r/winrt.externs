@@ -9,6 +9,6 @@ package winrt.windows.gaming.input;
 extern interface IGamepad extends winrt.windows.foundation.IInspectable
 {
     overload function Vibration(): winrt.windows.gaming.input.GamepadVibration;
-    overload function Vibration(value: ConstRef<winrt.windows.gaming.input.GamepadVibration>): Void;
+    overload function Vibration(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.gaming.input.GamepadVibration>): Void;
     function GetCurrentReading(): winrt.windows.gaming.input.GamepadReading;
 }

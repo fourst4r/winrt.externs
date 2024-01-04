@@ -2,7 +2,7 @@ package winrt.microsoft.ui.text;
 
 @:include("winrt/Microsoft.UI.Text.h", true)
 @:native("winrt::Microsoft::UI::Text::TabAlignment")
-extern enum abstract TabAlignment(Int32)
+extern enum abstract TabAlignment(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Text::TabAlignment::Left") final Left;
     @:native("winrt::Microsoft::UI::Text::TabAlignment::Center") final Center;

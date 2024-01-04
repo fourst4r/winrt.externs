@@ -15,7 +15,7 @@ extern interface IAppInstallItem5 extends winrt.windows.foundation.IInspectable
     overload function PinToTaskbarAfterInstall(): Bool;
     overload function PinToTaskbarAfterInstall(value: Bool): Void;
     overload function CompletedInstallToastNotificationMode(): winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallationToastNotificationMode;
-    overload function CompletedInstallToastNotificationMode(value: ConstRef<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallationToastNotificationMode>): Void;
+    overload function CompletedInstallToastNotificationMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallationToastNotificationMode>): Void;
     overload function InstallInProgressToastNotificationMode(): winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallationToastNotificationMode;
-    overload function InstallInProgressToastNotificationMode(value: ConstRef<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallationToastNotificationMode>): Void;
+    overload function InstallInProgressToastNotificationMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallationToastNotificationMode>): Void;
 }

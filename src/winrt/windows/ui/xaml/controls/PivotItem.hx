@@ -12,7 +12,7 @@ extern class PivotItem
 {
     function new();
     overload function Header(): winrt.windows.foundation.IInspectable;
-    overload function Header(value: ConstRef<winrt.windows.foundation.IInspectable>): Void;
+    overload function Header(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): Void;
     overload function HeaderProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function HeaderProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

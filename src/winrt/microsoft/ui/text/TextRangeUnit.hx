@@ -2,7 +2,7 @@ package winrt.microsoft.ui.text;
 
 @:include("winrt/Microsoft.UI.Text.h", true)
 @:native("winrt::Microsoft::UI::Text::TextRangeUnit")
-extern enum abstract TextRangeUnit(Int32)
+extern enum abstract TextRangeUnit(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Text::TextRangeUnit::Character") final Character;
     @:native("winrt::Microsoft::UI::Text::TextRangeUnit::Word") final Word;

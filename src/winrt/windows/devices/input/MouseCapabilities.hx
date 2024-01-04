@@ -10,9 +10,9 @@ extern class MouseCapabilities
     implements winrt.windows.devices.input.IMouseCapabilities
 {
     function new();
-    overload function MousePresent(): Int32;
-    overload function VerticalWheelPresent(): Int32;
-    overload function HorizontalWheelPresent(): Int32;
-    overload function SwapButtons(): Int32;
-    overload function NumberOfButtons(): UInt32;
+    overload function MousePresent(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function VerticalWheelPresent(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function HorizontalWheelPresent(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function SwapButtons(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function NumberOfButtons(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

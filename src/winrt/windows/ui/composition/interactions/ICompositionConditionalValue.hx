@@ -9,7 +9,7 @@ package winrt.windows.ui.composition.interactions;
 extern interface ICompositionConditionalValue extends winrt.windows.foundation.IInspectable
 {
     overload function Condition(): winrt.windows.ui.composition.ExpressionAnimation;
-    overload function Condition(value: ConstRef<winrt.windows.ui.composition.ExpressionAnimation>): Void;
+    overload function Condition(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.ExpressionAnimation>): Void;
     overload function Value(): winrt.windows.ui.composition.ExpressionAnimation;
-    overload function Value(value: ConstRef<winrt.windows.ui.composition.ExpressionAnimation>): Void;
+    overload function Value(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.composition.ExpressionAnimation>): Void;
 }

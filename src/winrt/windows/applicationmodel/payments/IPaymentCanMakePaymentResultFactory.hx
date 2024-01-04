@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.payments;
 @:native("winrt::Windows::ApplicationModel::Payments::IPaymentCanMakePaymentResultFactory")
 extern interface IPaymentCanMakePaymentResultFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(value: ConstRef<winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResultStatus>): winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResult;
+    function Create(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResultStatus>): winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResult;
 }

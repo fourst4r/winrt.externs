@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel;
 @:native("winrt::Windows::ApplicationModel::IPackageCatalog3")
 extern interface IPackageCatalog3 extends winrt.windows.foundation.IInspectable
 {
-    function RemoveOptionalPackagesAsync(optionalPackageFamilyNames: ConstRef<winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.PackageCatalogRemoveOptionalPackagesResult> /* GenericTypeInstSig */;
+    function RemoveOptionalPackagesAsync(optionalPackageFamilyNames: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IIterable<winrt.HString> /* temp_GenericTypeInstSig */>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.PackageCatalogRemoveOptionalPackagesResult> /* GenericTypeInstSig */;
 }

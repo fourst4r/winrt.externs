@@ -12,5 +12,5 @@ extern class EmailMailboxAutoReply
     overload function IsEnabled(): Bool;
     overload function IsEnabled(value: Bool): Void;
     overload function Response(): winrt.HString;
-    overload function Response(value: ConstRef<winrt.HString>): Void;
+    overload function Response(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

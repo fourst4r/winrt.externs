@@ -26,6 +26,6 @@ extern interface IPrintTicketCapabilities extends winrt.windows.foundation.IInsp
     overload function PageOutputColorFeature(): winrt.windows.graphics.printing.printticket.PrintTicketFeature;
     overload function PageOutputQualityFeature(): winrt.windows.graphics.printing.printticket.PrintTicketFeature;
     overload function PageResolutionFeature(): winrt.windows.graphics.printing.printticket.PrintTicketFeature;
-    function GetFeature(name: ConstRef<winrt.HString>, xmlNamespace: ConstRef<winrt.HString>): winrt.windows.graphics.printing.printticket.PrintTicketFeature;
-    function GetParameterDefinition(name: ConstRef<winrt.HString>, xmlNamespace: ConstRef<winrt.HString>): winrt.windows.graphics.printing.printticket.PrintTicketParameterDefinition;
+    function GetFeature(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, xmlNamespace: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.graphics.printing.printticket.PrintTicketFeature;
+    function GetParameterDefinition(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, xmlNamespace: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.graphics.printing.printticket.PrintTicketParameterDefinition;
 }

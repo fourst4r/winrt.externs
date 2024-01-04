@@ -10,8 +10,8 @@ extern class MidiSongPositionPointerMessage
     implements winrt.windows.devices.midi.IMidiMessage
     implements winrt.windows.devices.midi.IMidiSongPositionPointerMessage
 {
-    /* explicit */ function new(beats: UInt16);
-    overload function Beats(): UInt16;
+    /* explicit */ function new(beats: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16);
+    overload function Beats(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
     overload function Timestamp(): winrt.windows.foundation.TimeSpan;
     overload function RawData(): winrt.windows.storage.streams.IBuffer;
     overload function Type(): winrt.windows.devices.midi.MidiMessageType;

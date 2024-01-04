@@ -8,7 +8,7 @@ package winrt.windows.devices.pointofservice;
 @:native("winrt::Windows::Devices::PointOfService::IPosPrinterCharacterSetIdsStatics")
 extern interface IPosPrinterCharacterSetIdsStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function Utf16LE(): UInt32;
-    overload function Ascii(): UInt32;
-    overload function Ansi(): UInt32;
+    overload function Utf16LE(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Ascii(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Ansi(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

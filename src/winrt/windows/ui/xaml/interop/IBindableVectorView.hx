@@ -8,7 +8,7 @@ package winrt.windows.ui.xaml.interop;
 @:native("winrt::Windows::UI::Xaml::Interop::IBindableVectorView")
 extern interface IBindableVectorView extends winrt.windows.foundation.IInspectable
 {
-    function GetAt(index: UInt32): winrt.windows.foundation.IInspectable;
-    overload function Size(): UInt32;
-    function IndexOf(value: ConstRef<winrt.windows.foundation.IInspectable>, index: Ref<UInt32>): Bool;
+    function GetAt(index: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): winrt.windows.foundation.IInspectable;
+    overload function Size(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    function IndexOf(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, index: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <#if reflaxe.cpp cxx.num. #else cpp. #end UInt32>): Bool;
 }

@@ -10,7 +10,7 @@ extern class PhoneVoicemail
     implements winrt.windows.applicationmodel.calls.IPhoneVoicemail
 {
     overload function Number(): winrt.HString;
-    overload function MessageCount(): Int32;
+    overload function MessageCount(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function Type(): winrt.windows.applicationmodel.calls.PhoneVoicemailType;
     function DialVoicemailAsync(): winrt.windows.foundation.IAsyncAction;
 }

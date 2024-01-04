@@ -12,6 +12,6 @@ extern class PushNotificationChannel
     overload function Uri(): winrt.HString;
     overload function ExpirationTime(): winrt.windows.foundation.DateTime;
     function Close(): Void;
-    overload function PushNotificationReceived(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.networking.pushnotifications.PushNotificationChannel, winrt.windows.networking.pushnotifications.PushNotificationReceivedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function PushNotificationReceived(token: ConstRef<winrt.EventToken>): Void;
+    overload function PushNotificationReceived(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.networking.pushnotifications.PushNotificationChannel, winrt.windows.networking.pushnotifications.PushNotificationReceivedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function PushNotificationReceived(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

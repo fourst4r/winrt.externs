@@ -9,10 +9,10 @@ package winrt.windows.ui.xaml.controls.primitives;
 extern interface IFlyoutBase5 extends winrt.windows.foundation.IInspectable
 {
     overload function ShowMode(): winrt.windows.ui.xaml.controls.primitives.FlyoutShowMode;
-    overload function ShowMode(value: ConstRef<winrt.windows.ui.xaml.controls.primitives.FlyoutShowMode>): Void;
+    overload function ShowMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.primitives.FlyoutShowMode>): Void;
     overload function InputDevicePrefersPrimaryCommands(): Bool;
     overload function AreOpenCloseAnimationsEnabled(): Bool;
     overload function AreOpenCloseAnimationsEnabled(value: Bool): Void;
     overload function IsOpen(): Bool;
-    function ShowAt(placementTarget: ConstRef<winrt.windows.ui.xaml.DependencyObject>, showOptions: ConstRef<winrt.windows.ui.xaml.controls.primitives.FlyoutShowOptions>): Void;
+    function ShowAt(placementTarget: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>, showOptions: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.primitives.FlyoutShowOptions>): Void;
 }

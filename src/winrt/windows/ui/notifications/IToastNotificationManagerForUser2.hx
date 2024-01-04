@@ -8,8 +8,8 @@ package winrt.windows.ui.notifications;
 @:native("winrt::Windows::UI::Notifications::IToastNotificationManagerForUser2")
 extern interface IToastNotificationManagerForUser2 extends winrt.windows.foundation.IInspectable
 {
-    function GetToastNotifierForToastCollectionIdAsync(collectionId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.ui.notifications.ToastNotifier> /* GenericTypeInstSig */;
-    function GetHistoryForToastCollectionIdAsync(collectionId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.ui.notifications.ToastNotificationHistory> /* GenericTypeInstSig */;
+    function GetToastNotifierForToastCollectionIdAsync(collectionId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.ui.notifications.ToastNotifier> /* GenericTypeInstSig */;
+    function GetHistoryForToastCollectionIdAsync(collectionId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.ui.notifications.ToastNotificationHistory> /* GenericTypeInstSig */;
     overload function GetToastCollectionManager(): winrt.windows.ui.notifications.ToastCollectionManager;
-    overload function GetToastCollectionManager(appId: ConstRef<winrt.HString>): winrt.windows.ui.notifications.ToastCollectionManager;
+    overload function GetToastCollectionManager(appId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.ui.notifications.ToastCollectionManager;
 }

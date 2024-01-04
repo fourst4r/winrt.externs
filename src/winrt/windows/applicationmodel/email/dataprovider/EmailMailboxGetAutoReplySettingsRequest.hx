@@ -11,6 +11,6 @@ extern class EmailMailboxGetAutoReplySettingsRequest
 {
     overload function EmailMailboxId(): winrt.HString;
     overload function RequestedFormat(): winrt.windows.applicationmodel.email.EmailMailboxAutoReplyMessageResponseKind;
-    function ReportCompletedAsync(autoReplySettings: ConstRef<winrt.windows.applicationmodel.email.EmailMailboxAutoReplySettings>): winrt.windows.foundation.IAsyncAction;
+    function ReportCompletedAsync(autoReplySettings: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.email.EmailMailboxAutoReplySettings>): winrt.windows.foundation.IAsyncAction;
     function ReportFailedAsync(): winrt.windows.foundation.IAsyncAction;
 }

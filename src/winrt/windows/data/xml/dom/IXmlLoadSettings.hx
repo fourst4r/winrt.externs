@@ -8,8 +8,8 @@ package winrt.windows.data.xml.dom;
 @:native("winrt::Windows::Data::Xml::Dom::IXmlLoadSettings")
 extern interface IXmlLoadSettings extends winrt.windows.foundation.IInspectable
 {
-    overload function MaxElementDepth(): UInt32;
-    overload function MaxElementDepth(value: UInt32): Void;
+    overload function MaxElementDepth(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function MaxElementDepth(value: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
     overload function ProhibitDtd(): Bool;
     overload function ProhibitDtd(value: Bool): Void;
     overload function ResolveExternals(): Bool;

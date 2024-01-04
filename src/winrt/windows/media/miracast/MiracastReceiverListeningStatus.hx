@@ -2,7 +2,7 @@ package winrt.windows.media.miracast;
 
 @:include("winrt/Windows.Media.Miracast.h", true)
 @:native("winrt::Windows::Media::Miracast::MiracastReceiverListeningStatus")
-extern enum abstract MiracastReceiverListeningStatus(Int32)
+extern enum abstract MiracastReceiverListeningStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Miracast::MiracastReceiverListeningStatus::NotListening") final NotListening;
     @:native("winrt::Windows::Media::Miracast::MiracastReceiverListeningStatus::Listening") final Listening;

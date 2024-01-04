@@ -9,5 +9,5 @@ package winrt.microsoft.ui.composition.effects;
 extern interface ISceneLightingEffect2 extends winrt.windows.foundation.IInspectable
 {
     overload function ReflectanceModel(): winrt.microsoft.ui.composition.effects.SceneLightingEffectReflectanceModel;
-    overload function ReflectanceModel(value: ConstRef<winrt.microsoft.ui.composition.effects.SceneLightingEffectReflectanceModel>): Void;
+    overload function ReflectanceModel(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.effects.SceneLightingEffectReflectanceModel>): Void;
 }

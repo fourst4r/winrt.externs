@@ -8,5 +8,5 @@ package winrt.windows.devices.alljoyn;
 @:native("winrt::Windows::Devices::AllJoyn::IAllJoynSessionJoinedEventArgsFactory")
 extern interface IAllJoynSessionJoinedEventArgsFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(session: ConstRef<winrt.windows.devices.alljoyn.AllJoynSession>): winrt.windows.devices.alljoyn.AllJoynSessionJoinedEventArgs;
+    function Create(session: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.alljoyn.AllJoynSession>): winrt.windows.devices.alljoyn.AllJoynSessionJoinedEventArgs;
 }

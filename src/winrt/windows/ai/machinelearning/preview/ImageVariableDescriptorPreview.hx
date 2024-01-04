@@ -11,8 +11,8 @@ extern class ImageVariableDescriptorPreview
     implements winrt.windows.ai.machinelearning.preview.IImageVariableDescriptorPreview
 {
     overload function BitmapPixelFormat(): winrt.windows.graphics.imaging.BitmapPixelFormat;
-    overload function Width(): UInt32;
-    overload function Height(): UInt32;
+    overload function Width(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function Height(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function Name(): winrt.HString;
     overload function Description(): winrt.HString;
     overload function ModelFeatureKind(): winrt.windows.ai.machinelearning.preview.LearningModelFeatureKindPreview;

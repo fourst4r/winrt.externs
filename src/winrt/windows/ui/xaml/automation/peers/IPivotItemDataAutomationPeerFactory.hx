@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.automation.peers;
 @:native("winrt::Windows::UI::Xaml::Automation::Peers::IPivotItemDataAutomationPeerFactory")
 extern interface IPivotItemDataAutomationPeerFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstanceWithParentAndItem(item: ConstRef<winrt.windows.foundation.IInspectable>, parent: ConstRef<winrt.windows.ui.xaml.automation.peers.PivotAutomationPeer>): winrt.windows.ui.xaml.automation.peers.PivotItemDataAutomationPeer;
+    function CreateInstanceWithParentAndItem(item: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, parent: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.automation.peers.PivotAutomationPeer>): winrt.windows.ui.xaml.automation.peers.PivotItemDataAutomationPeer;
 }

@@ -8,5 +8,5 @@ package winrt.windows.system;
 @:native("winrt::Windows::System::IAppUriHandlerHostFactory")
 extern interface IAppUriHandlerHostFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(name: ConstRef<winrt.HString>): winrt.windows.system.AppUriHandlerHost;
+    function CreateInstance(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.system.AppUriHandlerHost;
 }

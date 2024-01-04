@@ -9,6 +9,6 @@ package winrt.windows.networking.backgroundtransfer;
 extern interface IContentPrefetcher extends winrt.windows.foundation.IInspectable
 {
     overload function ContentUris(): winrt.windows.foundation.collections.IVector<winrt.windows.foundation.Uri> /* GenericTypeInstSig */;
-    overload function IndirectContentUri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function IndirectContentUri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function IndirectContentUri(): winrt.windows.foundation.Uri;
 }

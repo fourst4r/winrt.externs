@@ -9,11 +9,11 @@ package winrt.windows.devices.bluetooth;
 extern class BluetoothLEAppearance
     implements winrt.windows.devices.bluetooth.IBluetoothLEAppearance
 {
-    overload function RawValue(): UInt16;
-    overload function Category(): UInt16;
-    overload function SubCategory(): UInt16;
-    function FromRawValue(rawValue: UInt16): winrt.windows.devices.bluetooth.BluetoothLEAppearance;
-    function FromParts(appearanceCategory: UInt16, appearanceSubCategory: UInt16): winrt.windows.devices.bluetooth.BluetoothLEAppearance;
-    static function FromRawValue(rawValue: UInt16): winrt.windows.devices.bluetooth.BluetoothLEAppearance;
-    static function FromParts(appearanceCategory: UInt16, appearanceSubCategory: UInt16): winrt.windows.devices.bluetooth.BluetoothLEAppearance;
+    overload function RawValue(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    overload function Category(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    overload function SubCategory(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    function FromRawValue(rawValue: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.windows.devices.bluetooth.BluetoothLEAppearance;
+    function FromParts(appearanceCategory: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, appearanceSubCategory: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.windows.devices.bluetooth.BluetoothLEAppearance;
+    static function FromRawValue(rawValue: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.windows.devices.bluetooth.BluetoothLEAppearance;
+    static function FromParts(appearanceCategory: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, appearanceSubCategory: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.windows.devices.bluetooth.BluetoothLEAppearance;
 }

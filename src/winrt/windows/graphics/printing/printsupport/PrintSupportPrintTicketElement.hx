@@ -11,7 +11,7 @@ extern class PrintSupportPrintTicketElement
 {
     function new();
     overload function LocalName(): winrt.HString;
-    overload function LocalName(value: ConstRef<winrt.HString>): Void;
+    overload function LocalName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function NamespaceUri(): winrt.HString;
-    overload function NamespaceUri(value: ConstRef<winrt.HString>): Void;
+    overload function NamespaceUri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

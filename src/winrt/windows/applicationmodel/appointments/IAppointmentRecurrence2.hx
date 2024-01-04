@@ -10,5 +10,5 @@ extern interface IAppointmentRecurrence2 extends winrt.windows.foundation.IInspe
 {
     overload function RecurrenceType(): winrt.windows.applicationmodel.appointments.RecurrenceType;
     overload function TimeZone(): winrt.HString;
-    overload function TimeZone(value: ConstRef<winrt.HString>): Void;
+    overload function TimeZone(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

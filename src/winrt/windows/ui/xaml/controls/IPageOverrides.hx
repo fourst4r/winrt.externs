@@ -8,7 +8,7 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IPageOverrides")
 extern interface IPageOverrides extends winrt.windows.foundation.IInspectable
 {
-    function OnNavigatedFrom(e: ConstRef<winrt.windows.ui.xaml.navigation.NavigationEventArgs>): Void;
-    function OnNavigatedTo(e: ConstRef<winrt.windows.ui.xaml.navigation.NavigationEventArgs>): Void;
-    function OnNavigatingFrom(e: ConstRef<winrt.windows.ui.xaml.navigation.NavigatingCancelEventArgs>): Void;
+    function OnNavigatedFrom(e: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.navigation.NavigationEventArgs>): Void;
+    function OnNavigatedTo(e: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.navigation.NavigationEventArgs>): Void;
+    function OnNavigatingFrom(e: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.navigation.NavigatingCancelEventArgs>): Void;
 }

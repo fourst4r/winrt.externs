@@ -8,5 +8,5 @@ package winrt.windows.media.protection.playready;
 @:native("winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomainIterableFactory")
 extern interface IPlayReadyDomainIterableFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(domainAccountId: ConstRef<winrt.Guid>): winrt.windows.media.protection.playready.PlayReadyDomainIterable;
+    function CreateInstance(domainAccountId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): winrt.windows.media.protection.playready.PlayReadyDomainIterable;
 }

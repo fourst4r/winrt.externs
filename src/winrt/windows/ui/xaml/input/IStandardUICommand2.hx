@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.input;
 @:native("winrt::Windows::UI::Xaml::Input::IStandardUICommand2")
 extern interface IStandardUICommand2 extends winrt.windows.foundation.IInspectable
 {
-    overload function Kind(value: ConstRef<winrt.windows.ui.xaml.input.StandardUICommandKind>): Void;
+    overload function Kind(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.input.StandardUICommandKind>): Void;
 }

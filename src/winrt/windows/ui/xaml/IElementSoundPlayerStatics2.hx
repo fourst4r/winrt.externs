@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml;
 extern interface IElementSoundPlayerStatics2 extends winrt.windows.foundation.IInspectable
 {
     overload function SpatialAudioMode(): winrt.windows.ui.xaml.ElementSpatialAudioMode;
-    overload function SpatialAudioMode(value: ConstRef<winrt.windows.ui.xaml.ElementSpatialAudioMode>): Void;
+    overload function SpatialAudioMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.ElementSpatialAudioMode>): Void;
 }

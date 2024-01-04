@@ -12,12 +12,12 @@ extern interface IMediaTimelineController extends winrt.windows.foundation.IInsp
     function Resume(): Void;
     function Pause(): Void;
     overload function Position(): winrt.windows.foundation.TimeSpan;
-    overload function Position(value: ConstRef<winrt.windows.foundation.TimeSpan>): Void;
-    overload function ClockRate(): Float64;
-    overload function ClockRate(value: Float64): Void;
+    overload function Position(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TimeSpan>): Void;
+    overload function ClockRate(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
+    overload function ClockRate(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): Void;
     overload function State(): winrt.windows.media.MediaTimelineControllerState;
-    overload function PositionChanged(positionChangedEventHandler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.MediaTimelineController, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function PositionChanged(eventCookie: ConstRef<winrt.EventToken>): Void;
-    overload function StateChanged(stateChangedEventHandler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.MediaTimelineController, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function StateChanged(eventCookie: ConstRef<winrt.EventToken>): Void;
+    overload function PositionChanged(positionChangedEventHandler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.MediaTimelineController, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function PositionChanged(eventCookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function StateChanged(stateChangedEventHandler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.MediaTimelineController, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function StateChanged(eventCookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

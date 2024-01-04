@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.background;
 @:native("winrt::Windows::ApplicationModel::Background::ISystemTriggerFactory")
 extern interface ISystemTriggerFactory extends winrt.windows.foundation.IInspectable
 {
-    function Create(triggerType: ConstRef<winrt.windows.applicationmodel.background.SystemTriggerType>, oneShot: Bool): winrt.windows.applicationmodel.background.SystemTrigger;
+    function Create(triggerType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.background.SystemTriggerType>, oneShot: Bool): winrt.windows.applicationmodel.background.SystemTrigger;
 }

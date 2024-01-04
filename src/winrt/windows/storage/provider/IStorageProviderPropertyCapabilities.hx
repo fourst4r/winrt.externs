@@ -8,5 +8,5 @@ package winrt.windows.storage.provider;
 @:native("winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities")
 extern interface IStorageProviderPropertyCapabilities extends winrt.windows.foundation.IInspectable
 {
-    function IsPropertySupported(propertyCanonicalName: ConstRef<winrt.HString>): Bool;
+    function IsPropertySupported(propertyCanonicalName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Bool;
 }

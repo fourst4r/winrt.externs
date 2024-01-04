@@ -9,7 +9,7 @@ package winrt.windows.web.ui;
 extern class WebViewControlDeferredPermissionRequest
     implements winrt.windows.web.ui.IWebViewControlDeferredPermissionRequest
 {
-    overload function Id(): UInt32;
+    overload function Id(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function Uri(): winrt.windows.foundation.Uri;
     overload function PermissionType(): winrt.windows.web.ui.WebViewControlPermissionType;
     function Allow(): Void;

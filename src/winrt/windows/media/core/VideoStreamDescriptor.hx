@@ -12,14 +12,14 @@ extern class VideoStreamDescriptor
     implements winrt.windows.media.core.IMediaStreamDescriptor2
     implements winrt.windows.media.core.IVideoStreamDescriptor2
 {
-    /* explicit */ function new(encodingProperties: ConstRef<winrt.windows.media.mediaproperties.VideoEncodingProperties>);
+    /* explicit */ function new(encodingProperties: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.mediaproperties.VideoEncodingProperties>);
     overload function EncodingProperties(): winrt.windows.media.mediaproperties.VideoEncodingProperties;
     overload function IsSelected(): Bool;
-    overload function Name(value: ConstRef<winrt.HString>): Void;
+    overload function Name(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Name(): winrt.HString;
-    overload function Language(value: ConstRef<winrt.HString>): Void;
+    overload function Language(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Language(): winrt.HString;
-    overload function Label(value: ConstRef<winrt.HString>): Void;
+    overload function Label(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Label(): winrt.HString;
     function Copy(): winrt.windows.media.core.VideoStreamDescriptor;
 }

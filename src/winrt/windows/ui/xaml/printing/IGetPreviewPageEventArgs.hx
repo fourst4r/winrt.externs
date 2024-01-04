@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.printing;
 @:native("winrt::Windows::UI::Xaml::Printing::IGetPreviewPageEventArgs")
 extern interface IGetPreviewPageEventArgs extends winrt.windows.foundation.IInspectable
 {
-    overload function PageNumber(): Int32;
+    overload function PageNumber(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

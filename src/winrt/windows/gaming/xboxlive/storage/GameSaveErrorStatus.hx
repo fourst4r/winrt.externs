@@ -2,7 +2,7 @@ package winrt.windows.gaming.xboxlive.storage;
 
 @:include("winrt/Windows.Gaming.XboxLive.Storage.h", true)
 @:native("winrt::Windows::Gaming::XboxLive::Storage::GameSaveErrorStatus")
-extern enum abstract GameSaveErrorStatus(Int32)
+extern enum abstract GameSaveErrorStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Gaming::XboxLive::Storage::GameSaveErrorStatus::Ok") final Ok;
     @:native("winrt::Windows::Gaming::XboxLive::Storage::GameSaveErrorStatus::Abort") final Abort;

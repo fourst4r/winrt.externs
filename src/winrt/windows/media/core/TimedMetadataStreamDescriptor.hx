@@ -11,14 +11,14 @@ extern class TimedMetadataStreamDescriptor
     implements winrt.windows.media.core.IMediaStreamDescriptor
     implements winrt.windows.media.core.IMediaStreamDescriptor2
 {
-    /* explicit */ function new(encodingProperties: ConstRef<winrt.windows.media.mediaproperties.TimedMetadataEncodingProperties>);
+    /* explicit */ function new(encodingProperties: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.mediaproperties.TimedMetadataEncodingProperties>);
     overload function EncodingProperties(): winrt.windows.media.mediaproperties.TimedMetadataEncodingProperties;
     function Copy(): winrt.windows.media.core.TimedMetadataStreamDescriptor;
-    overload function Label(value: ConstRef<winrt.HString>): Void;
+    overload function Label(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Label(): winrt.HString;
     overload function IsSelected(): Bool;
-    overload function Name(value: ConstRef<winrt.HString>): Void;
+    overload function Name(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Name(): winrt.HString;
-    overload function Language(value: ConstRef<winrt.HString>): Void;
+    overload function Language(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Language(): winrt.HString;
 }

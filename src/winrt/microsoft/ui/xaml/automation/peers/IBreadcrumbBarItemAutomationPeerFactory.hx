@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml.automation.peers;
 @:native("winrt::Microsoft::UI::Xaml::Automation::Peers::IBreadcrumbBarItemAutomationPeerFactory")
 extern interface IBreadcrumbBarItemAutomationPeerFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(owner: ConstRef<winrt.microsoft.ui.xaml.controls.BreadcrumbBarItem>, baseInterface: ConstRef<winrt.windows.foundation.IInspectable>, innerInterface: Ref<winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.automation.peers.BreadcrumbBarItemAutomationPeer;
+    function CreateInstance(owner: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.BreadcrumbBarItem>, baseInterface: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>, innerInterface: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.foundation.IInspectable>): winrt.microsoft.ui.xaml.automation.peers.BreadcrumbBarItemAutomationPeer;
 }

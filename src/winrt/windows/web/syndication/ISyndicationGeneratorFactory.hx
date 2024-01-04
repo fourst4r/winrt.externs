@@ -8,5 +8,5 @@ package winrt.windows.web.syndication;
 @:native("winrt::Windows::Web::Syndication::ISyndicationGeneratorFactory")
 extern interface ISyndicationGeneratorFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateSyndicationGenerator(text: ConstRef<winrt.HString>): winrt.windows.web.syndication.SyndicationGenerator;
+    function CreateSyndicationGenerator(text: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.web.syndication.SyndicationGenerator;
 }

@@ -12,7 +12,7 @@ extern class BluetoothAdapter
     implements winrt.windows.devices.bluetooth.IBluetoothAdapter3
 {
     overload function DeviceId(): winrt.HString;
-    overload function BluetoothAddress(): UInt64;
+    overload function BluetoothAddress(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt64;
     overload function IsClassicSupported(): Bool;
     overload function IsLowEnergySupported(): Bool;
     overload function IsPeripheralRoleSupported(): Bool;
@@ -22,11 +22,11 @@ extern class BluetoothAdapter
     overload function AreClassicSecureConnectionsSupported(): Bool;
     overload function AreLowEnergySecureConnectionsSupported(): Bool;
     overload function IsExtendedAdvertisingSupported(): Bool;
-    overload function MaxAdvertisementDataLength(): UInt32;
+    overload function MaxAdvertisementDataLength(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     function GetDeviceSelector(): winrt.HString;
-    function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.bluetooth.BluetoothAdapter> /* GenericTypeInstSig */;
+    function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.bluetooth.BluetoothAdapter> /* GenericTypeInstSig */;
     function GetDefaultAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.bluetooth.BluetoothAdapter> /* GenericTypeInstSig */;
     static function GetDeviceSelector(): winrt.HString;
-    static function FromIdAsync(deviceId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.bluetooth.BluetoothAdapter> /* GenericTypeInstSig */;
+    static function FromIdAsync(deviceId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.bluetooth.BluetoothAdapter> /* GenericTypeInstSig */;
     static function GetDefaultAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.devices.bluetooth.BluetoothAdapter> /* GenericTypeInstSig */;
 }

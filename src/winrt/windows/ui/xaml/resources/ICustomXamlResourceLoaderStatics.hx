@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.resources;
 extern interface ICustomXamlResourceLoaderStatics extends winrt.windows.foundation.IInspectable
 {
     overload function Current(): winrt.windows.ui.xaml.resources.CustomXamlResourceLoader;
-    overload function Current(value: ConstRef<winrt.windows.ui.xaml.resources.CustomXamlResourceLoader>): Void;
+    overload function Current(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.resources.CustomXamlResourceLoader>): Void;
 }

@@ -11,9 +11,9 @@ extern class WiFiDirectAdvertisement
     implements winrt.windows.devices.wifidirect.IWiFiDirectAdvertisement2
 {
     overload function InformationElements(): winrt.windows.foundation.collections.IVector<winrt.windows.devices.wifidirect.WiFiDirectInformationElement> /* GenericTypeInstSig */;
-    overload function InformationElements(value: ConstRef<winrt.windows.foundation.collections.IVector<winrt.windows.devices.wifidirect.WiFiDirectInformationElement> /* temp_GenericTypeInstSig */>): Void;
+    overload function InformationElements(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IVector<winrt.windows.devices.wifidirect.WiFiDirectInformationElement> /* temp_GenericTypeInstSig */>): Void;
     overload function ListenStateDiscoverability(): winrt.windows.devices.wifidirect.WiFiDirectAdvertisementListenStateDiscoverability;
-    overload function ListenStateDiscoverability(value: ConstRef<winrt.windows.devices.wifidirect.WiFiDirectAdvertisementListenStateDiscoverability>): Void;
+    overload function ListenStateDiscoverability(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.wifidirect.WiFiDirectAdvertisementListenStateDiscoverability>): Void;
     overload function IsAutonomousGroupOwnerEnabled(): Bool;
     overload function IsAutonomousGroupOwnerEnabled(value: Bool): Void;
     overload function LegacySettings(): winrt.windows.devices.wifidirect.WiFiDirectLegacySettings;

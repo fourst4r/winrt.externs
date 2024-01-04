@@ -9,6 +9,6 @@ package winrt.windows.gaming.ui;
 extern interface IGameChatOverlay extends winrt.windows.foundation.IInspectable
 {
     overload function DesiredPosition(): winrt.windows.gaming.ui.GameChatOverlayPosition;
-    overload function DesiredPosition(value: ConstRef<winrt.windows.gaming.ui.GameChatOverlayPosition>): Void;
-    function AddMessage(sender: ConstRef<winrt.HString>, message: ConstRef<winrt.HString>, origin: ConstRef<winrt.windows.gaming.ui.GameChatMessageOrigin>): Void;
+    overload function DesiredPosition(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.gaming.ui.GameChatOverlayPosition>): Void;
+    function AddMessage(sender: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, message: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, origin: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.gaming.ui.GameChatMessageOrigin>): Void;
 }

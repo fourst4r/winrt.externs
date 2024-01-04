@@ -2,4 +2,4 @@ package winrt.microsoft.ui.xaml.controls;
 
 
 @:extern 
-typedef ListViewItemToKeyHandler = Fn<(item: ConstRef<winrt.windows.foundation.IInspectable>)->Void>;
+typedef ListViewItemToKeyHandler = Fn<(item: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.IInspectable>)->Void>;

@@ -9,5 +9,5 @@ package winrt.windows.system.profile;
 extern interface ISystemIdentificationStatics extends winrt.windows.foundation.IInspectable
 {
     function GetSystemIdForPublisher(): winrt.windows.system.profile.SystemIdentificationInfo;
-    function GetSystemIdForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.system.profile.SystemIdentificationInfo;
+    function GetSystemIdForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.system.profile.SystemIdentificationInfo;
 }

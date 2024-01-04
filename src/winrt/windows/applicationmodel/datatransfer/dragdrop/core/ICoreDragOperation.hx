@@ -9,10 +9,10 @@ package winrt.windows.applicationmodel.datatransfer.dragdrop.core;
 extern interface ICoreDragOperation extends winrt.windows.foundation.IInspectable
 {
     overload function Data(): winrt.windows.applicationmodel.datatransfer.DataPackage;
-    function SetPointerId(pointerId: UInt32): Void;
-    overload function SetDragUIContentFromSoftwareBitmap(softwareBitmap: ConstRef<winrt.windows.graphics.imaging.SoftwareBitmap>): Void;
-    overload function SetDragUIContentFromSoftwareBitmap(softwareBitmap: ConstRef<winrt.windows.graphics.imaging.SoftwareBitmap>, anchorPoint: ConstRef<winrt.windows.foundation.Point>): Void;
+    function SetPointerId(pointerId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32): Void;
+    overload function SetDragUIContentFromSoftwareBitmap(softwareBitmap: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.imaging.SoftwareBitmap>): Void;
+    overload function SetDragUIContentFromSoftwareBitmap(softwareBitmap: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.imaging.SoftwareBitmap>, anchorPoint: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
     overload function DragUIContentMode(): winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragUIContentMode;
-    overload function DragUIContentMode(value: ConstRef<winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragUIContentMode>): Void;
+    overload function DragUIContentMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragUIContentMode>): Void;
     function StartAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.datatransfer.DataPackageOperation> /* GenericTypeInstSig */;
 }

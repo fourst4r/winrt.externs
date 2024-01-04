@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IComboBox4 extends winrt.windows.foundation.IInspectable
 {
     overload function SelectionChangedTrigger(): winrt.windows.ui.xaml.controls.ComboBoxSelectionChangedTrigger;
-    overload function SelectionChangedTrigger(value: ConstRef<winrt.windows.ui.xaml.controls.ComboBoxSelectionChangedTrigger>): Void;
+    overload function SelectionChangedTrigger(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.ComboBoxSelectionChangedTrigger>): Void;
 }

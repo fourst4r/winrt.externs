@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IVirtualizingStackPanelOverrides")
 extern interface IVirtualizingStackPanelOverrides extends winrt.windows.foundation.IInspectable
 {
-    function OnCleanUpVirtualizedItem(e: ConstRef<winrt.windows.ui.xaml.controls.CleanUpVirtualizedItemEventArgs>): Void;
+    function OnCleanUpVirtualizedItem(e: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.CleanUpVirtualizedItemEventArgs>): Void;
 }

@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml.controls.primitives;
 @:native("winrt::Microsoft::UI::Xaml::Controls::Primitives::IMenuFlyoutItemTemplateSettings")
 extern interface IMenuFlyoutItemTemplateSettings extends winrt.windows.foundation.IInspectable
 {
-    overload function KeyboardAcceleratorTextMinWidth(): Float64;
+    overload function KeyboardAcceleratorTextMinWidth(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

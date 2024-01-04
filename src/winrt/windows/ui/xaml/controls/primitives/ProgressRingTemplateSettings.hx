@@ -10,7 +10,7 @@ extern class ProgressRingTemplateSettings
     extends winrt.windows.ui.xaml.DependencyObject
     implements winrt.windows.ui.xaml.controls.primitives.IProgressRingTemplateSettings
 {
-    overload function EllipseDiameter(): Float64;
+    overload function EllipseDiameter(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
     overload function EllipseOffset(): winrt.windows.ui.xaml.Thickness;
-    overload function MaxSideLength(): Float64;
+    overload function MaxSideLength(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

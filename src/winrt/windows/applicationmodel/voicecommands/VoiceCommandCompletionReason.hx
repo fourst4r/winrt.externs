@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.voicecommands;
 
 @:include("winrt/Windows.ApplicationModel.VoiceCommands.h", true)
 @:native("winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletionReason")
-extern enum abstract VoiceCommandCompletionReason(Int32)
+extern enum abstract VoiceCommandCompletionReason(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletionReason::Unknown") final Unknown;
     @:native("winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletionReason::CommunicationFailed") final CommunicationFailed;

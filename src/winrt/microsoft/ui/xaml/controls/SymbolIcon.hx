@@ -12,9 +12,9 @@ extern class SymbolIcon
 {
     function new();
     @:native("winrt::Microsoft::UI::Xaml::Controls::SymbolIcon")
-    /* explicit */ static overload function make(symbol: ConstRef<winrt.microsoft.ui.xaml.controls.Symbol>): winrt.microsoft.ui.xaml.controls.SymbolIcon;
+    /* explicit */ static overload function make(symbol: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.Symbol>): winrt.microsoft.ui.xaml.controls.SymbolIcon;
     overload function Symbol(): winrt.microsoft.ui.xaml.controls.Symbol;
-    overload function Symbol(value: ConstRef<winrt.microsoft.ui.xaml.controls.Symbol>): Void;
+    overload function Symbol(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.controls.Symbol>): Void;
     overload function SymbolProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function SymbolProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
 }

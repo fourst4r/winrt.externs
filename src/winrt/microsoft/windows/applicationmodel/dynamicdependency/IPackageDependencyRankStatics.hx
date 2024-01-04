@@ -8,5 +8,5 @@ package winrt.microsoft.windows.applicationmodel.dynamicdependency;
 @:native("winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::IPackageDependencyRankStatics")
 extern interface IPackageDependencyRankStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function Default(): Int32;
+    overload function Default(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
 }

@@ -9,6 +9,6 @@ package winrt.windows.devices.adc;
 extern interface IAdcChannel extends winrt.windows.foundation.IInspectable
 {
     overload function Controller(): winrt.windows.devices.adc.AdcController;
-    function ReadValue(): Int32;
-    function ReadRatio(): Float64;
+    function ReadValue(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function ReadRatio(): #if reflaxe.cpp cxx.num. #else cpp. #end Float64;
 }

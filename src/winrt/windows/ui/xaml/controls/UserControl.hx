@@ -12,7 +12,7 @@ extern class UserControl
 {
     function new();
     overload function Content(): winrt.windows.ui.xaml.UIElement;
-    overload function Content(value: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
+    overload function Content(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
     overload function ContentProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function ContentProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.automation;
 
 @:include("winrt/Microsoft.UI.Xaml.Automation.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Automation::WindowInteractionState")
-extern enum abstract WindowInteractionState(Int32)
+extern enum abstract WindowInteractionState(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Automation::WindowInteractionState::Running") final Running;
     @:native("winrt::Microsoft::UI::Xaml::Automation::WindowInteractionState::Closing") final Closing;

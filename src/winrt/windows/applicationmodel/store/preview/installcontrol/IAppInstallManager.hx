@@ -9,22 +9,22 @@ package winrt.windows.applicationmodel.store.preview.installcontrol;
 extern interface IAppInstallManager extends winrt.windows.foundation.IInspectable
 {
     overload function AppInstallItems(): winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallItem> /* GenericTypeInstSig */;
-    function Cancel(productId: ConstRef<winrt.HString>): Void;
-    function Pause(productId: ConstRef<winrt.HString>): Void;
-    function Restart(productId: ConstRef<winrt.HString>): Void;
-    overload function ItemCompleted(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallManager, winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallManagerItemEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function ItemCompleted(token: ConstRef<winrt.EventToken>): Void;
-    overload function ItemStatusChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallManager, winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallManagerItemEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function ItemStatusChanged(token: ConstRef<winrt.EventToken>): Void;
+    function Cancel(productId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function Pause(productId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function Restart(productId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function ItemCompleted(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallManager, winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallManagerItemEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function ItemCompleted(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function ItemStatusChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallManager, winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallManagerItemEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function ItemStatusChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function AutoUpdateSetting(): winrt.windows.applicationmodel.store.preview.installcontrol.AutoUpdateSetting;
-    overload function AutoUpdateSetting(value: ConstRef<winrt.windows.applicationmodel.store.preview.installcontrol.AutoUpdateSetting>): Void;
+    overload function AutoUpdateSetting(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.store.preview.installcontrol.AutoUpdateSetting>): Void;
     overload function AcquisitionIdentity(): winrt.HString;
-    overload function AcquisitionIdentity(value: ConstRef<winrt.HString>): Void;
-    function GetIsApplicableAsync(productId: ConstRef<winrt.HString>, skuId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
-    function StartAppInstallAsync(productId: ConstRef<winrt.HString>, skuId: ConstRef<winrt.HString>, repair: Bool, forceUseOfNonRemovableStorage: Bool): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallItem> /* GenericTypeInstSig */;
-    function UpdateAppByPackageFamilyNameAsync(packageFamilyName: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallItem> /* GenericTypeInstSig */;
-    function SearchForUpdatesAsync(productId: ConstRef<winrt.HString>, skuId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallItem> /* GenericTypeInstSig */;
+    overload function AcquisitionIdentity(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function GetIsApplicableAsync(productId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, skuId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function StartAppInstallAsync(productId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, skuId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, repair: Bool, forceUseOfNonRemovableStorage: Bool): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallItem> /* GenericTypeInstSig */;
+    function UpdateAppByPackageFamilyNameAsync(packageFamilyName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallItem> /* GenericTypeInstSig */;
+    function SearchForUpdatesAsync(productId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, skuId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallItem> /* GenericTypeInstSig */;
     function SearchForAllUpdatesAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.collections.IVectorView<winrt.windows.applicationmodel.store.preview.installcontrol.AppInstallItem> /* GenericTypeInstSig */> /* GenericTypeInstSig */;
-    function IsStoreBlockedByPolicyAsync(storeClientName: ConstRef<winrt.HString>, storeClientPublisher: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
-    function GetIsAppAllowedToInstallAsync(productId: ConstRef<winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function IsStoreBlockedByPolicyAsync(storeClientName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, storeClientPublisher: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
+    function GetIsAppAllowedToInstallAsync(productId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.foundation.IAsyncOperation<Bool> /* GenericTypeInstSig */;
 }

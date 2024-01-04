@@ -8,5 +8,5 @@ package winrt.windows.networking.networkoperators;
 @:native("winrt::Windows::Networking::NetworkOperators::IProvisioningAgentStaticMethods")
 extern interface IProvisioningAgentStaticMethods extends winrt.windows.foundation.IInspectable
 {
-    function CreateFromNetworkAccountId(networkAccountId: ConstRef<winrt.HString>): winrt.windows.networking.networkoperators.ProvisioningAgent;
+    function CreateFromNetworkAccountId(networkAccountId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.networking.networkoperators.ProvisioningAgent;
 }

@@ -9,5 +9,5 @@ package winrt.windows.networking.sockets;
 extern interface IServerMessageWebSocketControl extends winrt.windows.foundation.IInspectable
 {
     overload function MessageType(): winrt.windows.networking.sockets.SocketMessageType;
-    overload function MessageType(value: ConstRef<winrt.windows.networking.sockets.SocketMessageType>): Void;
+    overload function MessageType(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.sockets.SocketMessageType>): Void;
 }

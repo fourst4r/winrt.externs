@@ -12,6 +12,6 @@ extern class HolographicFramePresentationReport
     overload function CompositorGpuDuration(): winrt.windows.foundation.TimeSpan;
     overload function AppGpuDuration(): winrt.windows.foundation.TimeSpan;
     overload function AppGpuOverrun(): winrt.windows.foundation.TimeSpan;
-    overload function MissedPresentationOpportunityCount(): UInt32;
-    overload function PresentationCount(): UInt32;
+    overload function MissedPresentationOpportunityCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function PresentationCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

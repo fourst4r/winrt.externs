@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.background;
 @:native("winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance2")
 extern interface IBackgroundTaskInstance2 extends winrt.windows.foundation.IInspectable
 {
-    function GetThrottleCount(counter: ConstRef<winrt.windows.applicationmodel.background.BackgroundTaskThrottleCounter>): UInt32;
+    function GetThrottleCount(counter: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.background.BackgroundTaskThrottleCounter>): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

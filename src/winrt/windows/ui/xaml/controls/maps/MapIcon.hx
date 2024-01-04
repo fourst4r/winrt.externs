@@ -13,15 +13,15 @@ extern class MapIcon
 {
     function new();
     overload function Location(): winrt.windows.devices.geolocation.Geopoint;
-    overload function Location(value: ConstRef<winrt.windows.devices.geolocation.Geopoint>): Void;
+    overload function Location(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.geolocation.Geopoint>): Void;
     overload function Title(): winrt.HString;
-    overload function Title(value: ConstRef<winrt.HString>): Void;
+    overload function Title(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function NormalizedAnchorPoint(): winrt.windows.foundation.Point;
-    overload function NormalizedAnchorPoint(value: ConstRef<winrt.windows.foundation.Point>): Void;
+    overload function NormalizedAnchorPoint(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>): Void;
     overload function Image(): winrt.windows.storage.streams.IRandomAccessStreamReference;
-    overload function Image(value: ConstRef<winrt.windows.storage.streams.IRandomAccessStreamReference>): Void;
+    overload function Image(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStreamReference>): Void;
     overload function CollisionBehaviorDesired(): winrt.windows.ui.xaml.controls.maps.MapElementCollisionBehavior;
-    overload function CollisionBehaviorDesired(value: ConstRef<winrt.windows.ui.xaml.controls.maps.MapElementCollisionBehavior>): Void;
+    overload function CollisionBehaviorDesired(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.maps.MapElementCollisionBehavior>): Void;
     overload function CollisionBehaviorDesiredProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function LocationProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function TitleProperty(): winrt.windows.ui.xaml.DependencyProperty;

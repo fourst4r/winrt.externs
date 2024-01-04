@@ -8,25 +8,25 @@ package winrt.microsoft.ui.xaml.input;
 @:native("winrt::Microsoft::UI::Xaml::Input::IFocusManagerStatics")
 extern interface IFocusManagerStatics extends winrt.windows.foundation.IInspectable
 {
-    overload function GotFocus(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.microsoft.ui.xaml.input.FocusManagerGotFocusEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function GotFocus(token: ConstRef<winrt.EventToken>): Void;
-    overload function LostFocus(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.microsoft.ui.xaml.input.FocusManagerLostFocusEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function LostFocus(token: ConstRef<winrt.EventToken>): Void;
-    overload function GettingFocus(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.microsoft.ui.xaml.input.GettingFocusEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function GettingFocus(token: ConstRef<winrt.EventToken>): Void;
-    overload function LosingFocus(handler: ConstRef<winrt.windows.foundation.EventHandler<winrt.microsoft.ui.xaml.input.LosingFocusEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function LosingFocus(token: ConstRef<winrt.EventToken>): Void;
-    function TryFocusAsync(element: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>, value: ConstRef<winrt.microsoft.ui.xaml.FocusState>): winrt.windows.foundation.IAsyncOperation<winrt.microsoft.ui.xaml.input.FocusMovementResult> /* GenericTypeInstSig */;
-    overload function TryMoveFocusAsync(focusNavigationDirection: ConstRef<winrt.microsoft.ui.xaml.input.FocusNavigationDirection>): winrt.windows.foundation.IAsyncOperation<winrt.microsoft.ui.xaml.input.FocusMovementResult> /* GenericTypeInstSig */;
-    overload function TryMoveFocusAsync(focusNavigationDirection: ConstRef<winrt.microsoft.ui.xaml.input.FocusNavigationDirection>, focusNavigationOptions: ConstRef<winrt.microsoft.ui.xaml.input.FindNextElementOptions>): winrt.windows.foundation.IAsyncOperation<winrt.microsoft.ui.xaml.input.FocusMovementResult> /* GenericTypeInstSig */;
-    overload function TryMoveFocus(focusNavigationDirection: ConstRef<winrt.microsoft.ui.xaml.input.FocusNavigationDirection>, focusNavigationOptions: ConstRef<winrt.microsoft.ui.xaml.input.FindNextElementOptions>): Bool;
-    overload function FindNextElement(focusNavigationDirection: ConstRef<winrt.microsoft.ui.xaml.input.FocusNavigationDirection>): winrt.microsoft.ui.xaml.DependencyObject;
-    function FindFirstFocusableElement(searchScope: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.DependencyObject;
-    function FindLastFocusableElement(searchScope: ConstRef<winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.DependencyObject;
-    overload function FindNextElement(focusNavigationDirection: ConstRef<winrt.microsoft.ui.xaml.input.FocusNavigationDirection>, focusNavigationOptions: ConstRef<winrt.microsoft.ui.xaml.input.FindNextElementOptions>): winrt.microsoft.ui.xaml.DependencyObject;
-    overload function FindNextFocusableElement(focusNavigationDirection: ConstRef<winrt.microsoft.ui.xaml.input.FocusNavigationDirection>): winrt.microsoft.ui.xaml.UIElement;
-    overload function FindNextFocusableElement(focusNavigationDirection: ConstRef<winrt.microsoft.ui.xaml.input.FocusNavigationDirection>, hintRect: ConstRef<winrt.windows.foundation.Rect>): winrt.microsoft.ui.xaml.UIElement;
-    overload function TryMoveFocus(focusNavigationDirection: ConstRef<winrt.microsoft.ui.xaml.input.FocusNavigationDirection>): Bool;
+    overload function GotFocus(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.EventHandler<winrt.microsoft.ui.xaml.input.FocusManagerGotFocusEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function GotFocus(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function LostFocus(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.EventHandler<winrt.microsoft.ui.xaml.input.FocusManagerLostFocusEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function LostFocus(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function GettingFocus(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.EventHandler<winrt.microsoft.ui.xaml.input.GettingFocusEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function GettingFocus(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function LosingFocus(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.EventHandler<winrt.microsoft.ui.xaml.input.LosingFocusEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function LosingFocus(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    function TryFocusAsync(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyObject>, value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.FocusState>): winrt.windows.foundation.IAsyncOperation<winrt.microsoft.ui.xaml.input.FocusMovementResult> /* GenericTypeInstSig */;
+    overload function TryMoveFocusAsync(focusNavigationDirection: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.FocusNavigationDirection>): winrt.windows.foundation.IAsyncOperation<winrt.microsoft.ui.xaml.input.FocusMovementResult> /* GenericTypeInstSig */;
+    overload function TryMoveFocusAsync(focusNavigationDirection: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.FocusNavigationDirection>, focusNavigationOptions: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.FindNextElementOptions>): winrt.windows.foundation.IAsyncOperation<winrt.microsoft.ui.xaml.input.FocusMovementResult> /* GenericTypeInstSig */;
+    overload function TryMoveFocus(focusNavigationDirection: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.FocusNavigationDirection>, focusNavigationOptions: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.FindNextElementOptions>): Bool;
+    overload function FindNextElement(focusNavigationDirection: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.FocusNavigationDirection>): winrt.microsoft.ui.xaml.DependencyObject;
+    function FindFirstFocusableElement(searchScope: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.DependencyObject;
+    function FindLastFocusableElement(searchScope: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.DependencyObject>): winrt.microsoft.ui.xaml.DependencyObject;
+    overload function FindNextElement(focusNavigationDirection: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.FocusNavigationDirection>, focusNavigationOptions: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.FindNextElementOptions>): winrt.microsoft.ui.xaml.DependencyObject;
+    overload function FindNextFocusableElement(focusNavigationDirection: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.FocusNavigationDirection>): winrt.microsoft.ui.xaml.UIElement;
+    overload function FindNextFocusableElement(focusNavigationDirection: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.FocusNavigationDirection>, hintRect: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Rect>): winrt.microsoft.ui.xaml.UIElement;
+    overload function TryMoveFocus(focusNavigationDirection: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.input.FocusNavigationDirection>): Bool;
     overload function GetFocusedElement(): winrt.windows.foundation.IInspectable;
-    overload function GetFocusedElement(xamlRoot: ConstRef<winrt.microsoft.ui.xaml.XamlRoot>): winrt.windows.foundation.IInspectable;
+    overload function GetFocusedElement(xamlRoot: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.XamlRoot>): winrt.windows.foundation.IInspectable;
 }

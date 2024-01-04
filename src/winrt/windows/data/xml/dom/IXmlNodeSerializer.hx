@@ -10,5 +10,5 @@ extern interface IXmlNodeSerializer extends winrt.windows.foundation.IInspectabl
 {
     function GetXml(): winrt.HString;
     overload function InnerText(): winrt.HString;
-    overload function InnerText(value: ConstRef<winrt.HString>): Void;
+    overload function InnerText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

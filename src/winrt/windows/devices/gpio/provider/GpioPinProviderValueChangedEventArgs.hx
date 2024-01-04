@@ -9,6 +9,6 @@ package winrt.windows.devices.gpio.provider;
 extern class GpioPinProviderValueChangedEventArgs
     implements winrt.windows.devices.gpio.provider.IGpioPinProviderValueChangedEventArgs
 {
-    /* explicit */ function new(edge: ConstRef<winrt.windows.devices.gpio.provider.ProviderGpioPinEdge>);
+    /* explicit */ function new(edge: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.gpio.provider.ProviderGpioPinEdge>);
     overload function Edge(): winrt.windows.devices.gpio.provider.ProviderGpioPinEdge;
 }

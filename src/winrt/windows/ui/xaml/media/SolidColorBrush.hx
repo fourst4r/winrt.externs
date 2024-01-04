@@ -12,9 +12,9 @@ extern class SolidColorBrush
 {
     function new();
     @:native("winrt::Windows::UI::Xaml::Media::SolidColorBrush")
-    /* explicit */ static overload function make(color: ConstRef<winrt.windows.ui.Color>): winrt.windows.ui.xaml.media.SolidColorBrush;
+    /* explicit */ static overload function make(color: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): winrt.windows.ui.xaml.media.SolidColorBrush;
     overload function Color(): winrt.windows.ui.Color;
-    overload function Color(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function Color(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
     overload function ColorProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function ColorProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

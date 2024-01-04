@@ -12,24 +12,24 @@ extern class BluetoothLEAdvertisementWatcher
 {
     function new();
     @:native("winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher")
-    /* explicit */ static overload function make(advertisementFilter: ConstRef<winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementFilter>): winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementWatcher;
+    /* explicit */ static overload function make(advertisementFilter: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementFilter>): winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementWatcher;
     overload function MinSamplingInterval(): winrt.windows.foundation.TimeSpan;
     overload function MaxSamplingInterval(): winrt.windows.foundation.TimeSpan;
     overload function MinOutOfRangeTimeout(): winrt.windows.foundation.TimeSpan;
     overload function MaxOutOfRangeTimeout(): winrt.windows.foundation.TimeSpan;
     overload function Status(): winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementWatcherStatus;
     overload function ScanningMode(): winrt.windows.devices.bluetooth.advertisement.BluetoothLEScanningMode;
-    overload function ScanningMode(value: ConstRef<winrt.windows.devices.bluetooth.advertisement.BluetoothLEScanningMode>): Void;
+    overload function ScanningMode(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.bluetooth.advertisement.BluetoothLEScanningMode>): Void;
     overload function SignalStrengthFilter(): winrt.windows.devices.bluetooth.BluetoothSignalStrengthFilter;
-    overload function SignalStrengthFilter(value: ConstRef<winrt.windows.devices.bluetooth.BluetoothSignalStrengthFilter>): Void;
+    overload function SignalStrengthFilter(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.bluetooth.BluetoothSignalStrengthFilter>): Void;
     overload function AdvertisementFilter(): winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementFilter;
-    overload function AdvertisementFilter(value: ConstRef<winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementFilter>): Void;
+    overload function AdvertisementFilter(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementFilter>): Void;
     function Start(): Void;
     function Stop(): Void;
-    overload function Received(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementWatcher, winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementReceivedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Received(token: ConstRef<winrt.EventToken>): Void;
-    overload function Stopped(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementWatcher, winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Stopped(token: ConstRef<winrt.EventToken>): Void;
+    overload function Received(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementWatcher, winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementReceivedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Received(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function Stopped(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementWatcher, winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Stopped(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function AllowExtendedAdvertisements(): Bool;
     overload function AllowExtendedAdvertisements(value: Bool): Void;
 }

@@ -13,6 +13,6 @@ extern interface ICoreIndependentInputSourceController extends winrt.windows.fou
     overload function IsPalmRejectionEnabled(): Bool;
     overload function IsPalmRejectionEnabled(value: Bool): Void;
     overload function Source(): winrt.windows.ui.core.CoreIndependentInputSource;
-    overload function SetControlledInput(inputTypes: ConstRef<winrt.windows.ui.core.CoreInputDeviceTypes>): Void;
-    overload function SetControlledInput(inputTypes: ConstRef<winrt.windows.ui.core.CoreInputDeviceTypes>, required: ConstRef<winrt.windows.ui.core.CoreIndependentInputFilters>, excluded: ConstRef<winrt.windows.ui.core.CoreIndependentInputFilters>): Void;
+    overload function SetControlledInput(inputTypes: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.CoreInputDeviceTypes>): Void;
+    overload function SetControlledInput(inputTypes: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.CoreInputDeviceTypes>, required: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.CoreIndependentInputFilters>, excluded: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.CoreIndependentInputFilters>): Void;
 }

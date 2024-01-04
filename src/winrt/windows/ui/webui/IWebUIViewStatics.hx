@@ -9,5 +9,5 @@ package winrt.windows.ui.webui;
 extern interface IWebUIViewStatics extends winrt.windows.foundation.IInspectable
 {
     overload function CreateAsync(): winrt.windows.foundation.IAsyncOperation<winrt.windows.ui.webui.WebUIView> /* GenericTypeInstSig */;
-    overload function CreateAsync(uri: ConstRef<winrt.windows.foundation.Uri>): winrt.windows.foundation.IAsyncOperation<winrt.windows.ui.webui.WebUIView> /* GenericTypeInstSig */;
+    overload function CreateAsync(uri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): winrt.windows.foundation.IAsyncOperation<winrt.windows.ui.webui.WebUIView> /* GenericTypeInstSig */;
 }

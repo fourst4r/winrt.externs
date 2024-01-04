@@ -9,6 +9,6 @@ package winrt.microsoft.ui;
 extern class ColorHelper
     implements winrt.microsoft.ui.IColorHelper
 {
-    function FromArgb(a: UInt8, r: UInt8, g: UInt8, b: UInt8): winrt.windows.ui.Color;
-    static function FromArgb(a: UInt8, r: UInt8, g: UInt8, b: UInt8): winrt.windows.ui.Color;
+    function FromArgb(a: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, r: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, g: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, b: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8): winrt.windows.ui.Color;
+    static function FromArgb(a: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, r: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, g: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, b: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8): winrt.windows.ui.Color;
 }

@@ -8,6 +8,6 @@ package winrt.windows.networking.vpn;
 @:native("winrt::Windows::Networking::Vpn::IVpnCustomTextBox")
 extern interface IVpnCustomTextBox extends winrt.windows.foundation.IInspectable
 {
-    overload function DisplayText(value: ConstRef<winrt.HString>): Void;
+    overload function DisplayText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function DisplayText(): winrt.HString;
 }

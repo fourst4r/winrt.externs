@@ -12,5 +12,5 @@ extern class CompositeVideoFrameContext
     overload function SurfacesToOverlay(): winrt.windows.foundation.collections.IVectorView<winrt.windows.graphics.directx.direct3d11.IDirect3DSurface> /* GenericTypeInstSig */;
     overload function BackgroundFrame(): winrt.windows.media.VideoFrame;
     overload function OutputFrame(): winrt.windows.media.VideoFrame;
-    function GetOverlayForSurface(surfaceToOverlay: ConstRef<winrt.windows.graphics.directx.direct3d11.IDirect3DSurface>): winrt.windows.media.editing.MediaOverlay;
+    function GetOverlayForSurface(surfaceToOverlay: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.graphics.directx.direct3d11.IDirect3DSurface>): winrt.windows.media.editing.MediaOverlay;
 }

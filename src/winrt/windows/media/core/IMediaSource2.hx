@@ -8,8 +8,8 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::IMediaSource2")
 extern interface IMediaSource2 extends winrt.windows.foundation.IInspectable
 {
-    overload function OpenOperationCompleted(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MediaSource, winrt.windows.media.core.MediaSourceOpenOperationCompletedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function OpenOperationCompleted(token: ConstRef<winrt.EventToken>): Void;
+    overload function OpenOperationCompleted(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MediaSource, winrt.windows.media.core.MediaSourceOpenOperationCompletedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function OpenOperationCompleted(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function CustomProperties(): winrt.windows.foundation.collections.ValueSet;
     overload function Duration(): winrt.windows.foundation.IReference<winrt.windows.foundation.TimeSpan> /* GenericTypeInstSig */;
     overload function IsOpen(): Bool;

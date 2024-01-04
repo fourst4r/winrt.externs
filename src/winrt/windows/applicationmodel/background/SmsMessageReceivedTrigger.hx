@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.background;
 extern class SmsMessageReceivedTrigger
     implements winrt.windows.applicationmodel.background.IBackgroundTrigger
 {
-    /* explicit */ function new(filterRules: ConstRef<winrt.windows.devices.sms.SmsFilterRules>);
+    /* explicit */ function new(filterRules: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.sms.SmsFilterRules>);
 }

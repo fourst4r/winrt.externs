@@ -9,7 +9,7 @@ package winrt.windows.gaming.input.custom;
 extern class GipFirmwareUpdateResult
     implements winrt.windows.gaming.input.custom.IGipFirmwareUpdateResult
 {
-    overload function ExtendedErrorCode(): UInt32;
-    overload function FinalComponentId(): UInt32;
+    overload function ExtendedErrorCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
+    overload function FinalComponentId(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function Status(): winrt.windows.gaming.input.custom.GipFirmwareUpdateStatus;
 }

@@ -9,7 +9,7 @@ package winrt.windows.devices.alljoyn;
 extern class AllJoynCredentialsRequestedEventArgs
     implements winrt.windows.devices.alljoyn.IAllJoynCredentialsRequestedEventArgs
 {
-    overload function AttemptCount(): UInt16;
+    overload function AttemptCount(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
     overload function Credentials(): winrt.windows.devices.alljoyn.AllJoynCredentials;
     overload function PeerUniqueName(): winrt.HString;
     overload function RequestedUserName(): winrt.HString;

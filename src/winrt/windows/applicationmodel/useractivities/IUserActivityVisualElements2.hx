@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.useractivities;
 extern interface IUserActivityVisualElements2 extends winrt.windows.foundation.IInspectable
 {
     overload function AttributionDisplayText(): winrt.HString;
-    overload function AttributionDisplayText(value: ConstRef<winrt.HString>): Void;
+    overload function AttributionDisplayText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

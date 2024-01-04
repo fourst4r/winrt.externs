@@ -10,7 +10,7 @@ extern interface IGettingFocusEventArgs extends winrt.windows.foundation.IInspec
 {
     overload function OldFocusedElement(): winrt.windows.ui.xaml.DependencyObject;
     overload function NewFocusedElement(): winrt.windows.ui.xaml.DependencyObject;
-    overload function NewFocusedElement(value: ConstRef<winrt.windows.ui.xaml.DependencyObject>): Void;
+    overload function NewFocusedElement(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.DependencyObject>): Void;
     overload function FocusState(): winrt.windows.ui.xaml.FocusState;
     overload function Direction(): winrt.windows.ui.xaml.input.FocusNavigationDirection;
     overload function Handled(): Bool;

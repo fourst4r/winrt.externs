@@ -10,5 +10,5 @@ extern class RfcommOutboundConnectionInformation
     implements winrt.windows.devices.bluetooth.background.IRfcommOutboundConnectionInformation
 {
     overload function RemoteServiceId(): winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId;
-    overload function RemoteServiceId(value: ConstRef<winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId>): Void;
+    overload function RemoteServiceId(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId>): Void;
 }

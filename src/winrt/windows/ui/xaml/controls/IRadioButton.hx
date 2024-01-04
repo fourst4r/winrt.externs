@@ -9,5 +9,5 @@ package winrt.windows.ui.xaml.controls;
 extern interface IRadioButton extends winrt.windows.foundation.IInspectable
 {
     overload function GroupName(): winrt.HString;
-    overload function GroupName(value: ConstRef<winrt.HString>): Void;
+    overload function GroupName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

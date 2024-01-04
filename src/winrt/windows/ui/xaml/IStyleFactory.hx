@@ -8,5 +8,5 @@ package winrt.windows.ui.xaml;
 @:native("winrt::Windows::UI::Xaml::IStyleFactory")
 extern interface IStyleFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(targetType: ConstRef<winrt.windows.ui.xaml.interop.TypeName>): winrt.windows.ui.xaml.Style;
+    function CreateInstance(targetType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.interop.TypeName>): winrt.windows.ui.xaml.Style;
 }

@@ -14,8 +14,8 @@ extern interface IStorageItemInformation extends winrt.windows.foundation.IInspe
     overload function DocumentProperties(): winrt.windows.storage.fileproperties.DocumentProperties;
     overload function BasicProperties(): winrt.windows.storage.fileproperties.BasicProperties;
     overload function Thumbnail(): winrt.windows.storage.fileproperties.StorageItemThumbnail;
-    overload function ThumbnailUpdated(changedHandler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.storage.bulkaccess.IStorageItemInformation, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function ThumbnailUpdated(eventCookie: ConstRef<winrt.EventToken>): Void;
-    overload function PropertiesUpdated(changedHandler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.storage.bulkaccess.IStorageItemInformation, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function PropertiesUpdated(eventCookie: ConstRef<winrt.EventToken>): Void;
+    overload function ThumbnailUpdated(changedHandler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.storage.bulkaccess.IStorageItemInformation, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function ThumbnailUpdated(eventCookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function PropertiesUpdated(changedHandler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.storage.bulkaccess.IStorageItemInformation, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function PropertiesUpdated(eventCookie: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

@@ -11,5 +11,5 @@ extern interface IStreamSocketControl3 extends winrt.windows.foundation.IInspect
     overload function SerializeConnectionAttempts(): Bool;
     overload function SerializeConnectionAttempts(value: Bool): Void;
     overload function ClientCertificate(): winrt.windows.security.cryptography.certificates.Certificate;
-    overload function ClientCertificate(value: ConstRef<winrt.windows.security.cryptography.certificates.Certificate>): Void;
+    overload function ClientCertificate(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.cryptography.certificates.Certificate>): Void;
 }

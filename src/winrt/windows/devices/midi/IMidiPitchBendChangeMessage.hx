@@ -8,6 +8,6 @@ package winrt.windows.devices.midi;
 @:native("winrt::Windows::Devices::Midi::IMidiPitchBendChangeMessage")
 extern interface IMidiPitchBendChangeMessage extends winrt.windows.foundation.IInspectable
 {
-    overload function Channel(): UInt8;
-    overload function Bend(): UInt16;
+    overload function Channel(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function Bend(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
 }

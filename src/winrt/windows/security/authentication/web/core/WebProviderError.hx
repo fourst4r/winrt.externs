@@ -9,8 +9,8 @@ package winrt.windows.security.authentication.web.core;
 extern class WebProviderError
     implements winrt.windows.security.authentication.web.core.IWebProviderError
 {
-    function new(errorCode: UInt32, errorMessage: ConstRef<winrt.HString>);
-    overload function ErrorCode(): UInt32;
+    function new(errorCode: #if reflaxe.cpp cxx.num. #else cpp. #end UInt32, errorMessage: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>);
+    overload function ErrorCode(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
     overload function ErrorMessage(): winrt.HString;
     overload function Properties(): winrt.windows.foundation.collections.IMap<winrt.HString, winrt.HString> /* GenericTypeInstSig */;
 }

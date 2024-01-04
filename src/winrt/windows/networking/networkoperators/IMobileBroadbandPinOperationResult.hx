@@ -9,5 +9,5 @@ package winrt.windows.networking.networkoperators;
 extern interface IMobileBroadbandPinOperationResult extends winrt.windows.foundation.IInspectable
 {
     overload function IsSuccessful(): Bool;
-    overload function AttemptsRemaining(): UInt32;
+    overload function AttemptsRemaining(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

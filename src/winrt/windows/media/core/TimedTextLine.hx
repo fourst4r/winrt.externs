@@ -11,6 +11,6 @@ extern class TimedTextLine
 {
     function new();
     overload function Text(): winrt.HString;
-    overload function Text(value: ConstRef<winrt.HString>): Void;
+    overload function Text(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Subformats(): winrt.windows.foundation.collections.IVector<winrt.windows.media.core.TimedTextSubformat> /* GenericTypeInstSig */;
 }

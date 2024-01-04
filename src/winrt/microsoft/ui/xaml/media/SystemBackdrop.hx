@@ -11,8 +11,8 @@ extern class SystemBackdrop
     implements winrt.microsoft.ui.xaml.media.ISystemBackdrop
     implements winrt.microsoft.ui.xaml.media.ISystemBackdropOverrides
 {
-    function GetDefaultSystemBackdropConfiguration(target: ConstRef<winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>, xamlRoot: ConstRef<winrt.microsoft.ui.xaml.XamlRoot>): winrt.microsoft.ui.composition.systembackdrops.SystemBackdropConfiguration;
-    function OnTargetConnected(connectedTarget: ConstRef<winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>, xamlRoot: ConstRef<winrt.microsoft.ui.xaml.XamlRoot>): Void;
-    function OnTargetDisconnected(disconnectedTarget: ConstRef<winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>): Void;
-    function OnDefaultSystemBackdropConfigurationChanged(target: ConstRef<winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>, xamlRoot: ConstRef<winrt.microsoft.ui.xaml.XamlRoot>): Void;
+    function GetDefaultSystemBackdropConfiguration(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>, xamlRoot: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.XamlRoot>): winrt.microsoft.ui.composition.systembackdrops.SystemBackdropConfiguration;
+    function OnTargetConnected(connectedTarget: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>, xamlRoot: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.XamlRoot>): Void;
+    function OnTargetDisconnected(disconnectedTarget: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>): Void;
+    function OnDefaultSystemBackdropConfigurationChanged(target: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.composition.ICompositionSupportsSystemBackdrop>, xamlRoot: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.xaml.XamlRoot>): Void;
 }

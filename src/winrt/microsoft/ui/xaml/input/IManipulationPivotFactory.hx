@@ -8,5 +8,5 @@ package winrt.microsoft.ui.xaml.input;
 @:native("winrt::Microsoft::UI::Xaml::Input::IManipulationPivotFactory")
 extern interface IManipulationPivotFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstanceWithCenterAndRadius(center: ConstRef<winrt.windows.foundation.Point>, radius: Float64): winrt.microsoft.ui.xaml.input.ManipulationPivot;
+    function CreateInstanceWithCenterAndRadius(center: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>, radius: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.microsoft.ui.xaml.input.ManipulationPivot;
 }

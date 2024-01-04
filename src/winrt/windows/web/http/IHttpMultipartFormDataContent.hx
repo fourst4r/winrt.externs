@@ -8,7 +8,7 @@ package winrt.windows.web.http;
 @:native("winrt::Windows::Web::Http::IHttpMultipartFormDataContent")
 extern interface IHttpMultipartFormDataContent extends winrt.windows.foundation.IInspectable
 {
-    overload function Add(content: ConstRef<winrt.windows.web.http.IHttpContent>): Void;
-    overload function Add(content: ConstRef<winrt.windows.web.http.IHttpContent>, name: ConstRef<winrt.HString>): Void;
-    overload function Add(content: ConstRef<winrt.windows.web.http.IHttpContent>, name: ConstRef<winrt.HString>, fileName: ConstRef<winrt.HString>): Void;
+    overload function Add(content: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.IHttpContent>): Void;
+    overload function Add(content: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.IHttpContent>, name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    overload function Add(content: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.web.http.IHttpContent>, name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, fileName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

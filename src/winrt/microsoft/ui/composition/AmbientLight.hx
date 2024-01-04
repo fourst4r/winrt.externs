@@ -11,8 +11,8 @@ extern class AmbientLight
     implements winrt.microsoft.ui.composition.IAmbientLight
     implements winrt.microsoft.ui.composition.IAmbientLight2
 {
-    overload function Intensity(): Float32;
-    overload function Color(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function Intensity(): #if reflaxe.cpp cxx.num. #else cpp. #end Float32;
+    overload function Color(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
     overload function Color(): winrt.windows.ui.Color;
-    overload function Intensity(value: Float32): Void;
+    overload function Intensity(value: #if reflaxe.cpp cxx.num. #else cpp. #end Float32): Void;
 }

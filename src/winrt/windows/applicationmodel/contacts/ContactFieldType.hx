@@ -2,7 +2,7 @@ package winrt.windows.applicationmodel.contacts;
 
 @:include("winrt/Windows.ApplicationModel.Contacts.h", true)
 @:native("winrt::Windows::ApplicationModel::Contacts::ContactFieldType")
-extern enum abstract ContactFieldType(Int32)
+extern enum abstract ContactFieldType(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactFieldType::Email") final Email;
     @:native("winrt::Windows::ApplicationModel::Contacts::ContactFieldType::PhoneNumber") final PhoneNumber;

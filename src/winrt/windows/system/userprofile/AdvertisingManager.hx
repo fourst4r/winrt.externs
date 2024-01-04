@@ -5,5 +5,5 @@ package winrt.windows.system.userprofile;
 extern class AdvertisingManager
 {
     static overload function AdvertisingId(): winrt.HString;
-    static function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.system.userprofile.AdvertisingManagerForUser;
+    static function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.system.userprofile.AdvertisingManagerForUser;
 }

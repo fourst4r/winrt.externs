@@ -10,8 +10,8 @@ extern class PlayReadyLicenseSession
     implements winrt.windows.media.protection.playready.IPlayReadyLicenseSession
     implements winrt.windows.media.protection.playready.IPlayReadyLicenseSession2
 {
-    /* explicit */ function new(configuration: ConstRef<winrt.windows.foundation.collections.IPropertySet>);
+    /* explicit */ function new(configuration: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IPropertySet>);
     function CreateLAServiceRequest(): winrt.windows.media.protection.playready.IPlayReadyLicenseAcquisitionServiceRequest;
-    function ConfigureMediaProtectionManager(mpm: ConstRef<winrt.windows.media.protection.MediaProtectionManager>): Void;
-    function CreateLicenseIterable(contentHeader: ConstRef<winrt.windows.media.protection.playready.PlayReadyContentHeader>, fullyEvaluated: Bool): winrt.windows.media.protection.playready.PlayReadyLicenseIterable;
+    function ConfigureMediaProtectionManager(mpm: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.protection.MediaProtectionManager>): Void;
+    function CreateLicenseIterable(contentHeader: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.protection.playready.PlayReadyContentHeader>, fullyEvaluated: Bool): winrt.windows.media.protection.playready.PlayReadyLicenseIterable;
 }

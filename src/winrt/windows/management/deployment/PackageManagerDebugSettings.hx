@@ -9,6 +9,6 @@ package winrt.windows.management.deployment;
 extern class PackageManagerDebugSettings
     implements winrt.windows.management.deployment.IPackageManagerDebugSettings
 {
-    overload function SetContentGroupStateAsync(package: ConstRef<winrt.windows.applicationmodel.Package>, contentGroupName: ConstRef<winrt.HString>, state: ConstRef<winrt.windows.applicationmodel.PackageContentGroupState>): winrt.windows.foundation.IAsyncAction;
-    overload function SetContentGroupStateAsync(package: ConstRef<winrt.windows.applicationmodel.Package>, contentGroupName: ConstRef<winrt.HString>, state: ConstRef<winrt.windows.applicationmodel.PackageContentGroupState>, completionPercentage: Float64): winrt.windows.foundation.IAsyncAction;
+    overload function SetContentGroupStateAsync(package: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.Package>, contentGroupName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, state: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.PackageContentGroupState>): winrt.windows.foundation.IAsyncAction;
+    overload function SetContentGroupStateAsync(package: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.Package>, contentGroupName: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, state: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.PackageContentGroupState>, completionPercentage: #if reflaxe.cpp cxx.num. #else cpp. #end Float64): winrt.windows.foundation.IAsyncAction;
 }

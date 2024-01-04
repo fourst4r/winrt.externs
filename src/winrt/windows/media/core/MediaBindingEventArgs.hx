@@ -11,14 +11,14 @@ extern class MediaBindingEventArgs
     implements winrt.windows.media.core.IMediaBindingEventArgs2
     implements winrt.windows.media.core.IMediaBindingEventArgs3
 {
-    overload function Canceled(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MediaBindingEventArgs, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Canceled(token: ConstRef<winrt.EventToken>): Void;
+    overload function Canceled(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MediaBindingEventArgs, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Canceled(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function MediaBinder(): winrt.windows.media.core.MediaBinder;
     function GetDeferral(): winrt.windows.foundation.Deferral;
-    function SetUri(uri: ConstRef<winrt.windows.foundation.Uri>): Void;
-    function SetStream(stream: ConstRef<winrt.windows.storage.streams.IRandomAccessStream>, contentType: ConstRef<winrt.HString>): Void;
-    function SetStreamReference(stream: ConstRef<winrt.windows.storage.streams.IRandomAccessStreamReference>, contentType: ConstRef<winrt.HString>): Void;
-    function SetAdaptiveMediaSource(mediaSource: ConstRef<winrt.windows.media.streaming.adaptive.AdaptiveMediaSource>): Void;
-    function SetStorageFile(file: ConstRef<winrt.windows.storage.IStorageFile>): Void;
-    function SetDownloadOperation(downloadOperation: ConstRef<winrt.windows.networking.backgroundtransfer.DownloadOperation>): Void;
+    function SetUri(uri: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
+    function SetStream(stream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStream>, contentType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function SetStreamReference(stream: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.streams.IRandomAccessStreamReference>, contentType: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
+    function SetAdaptiveMediaSource(mediaSource: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.streaming.adaptive.AdaptiveMediaSource>): Void;
+    function SetStorageFile(file: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.storage.IStorageFile>): Void;
+    function SetDownloadOperation(downloadOperation: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.backgroundtransfer.DownloadOperation>): Void;
 }

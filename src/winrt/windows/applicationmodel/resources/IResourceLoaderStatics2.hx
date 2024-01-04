@@ -9,7 +9,7 @@ package winrt.windows.applicationmodel.resources;
 extern interface IResourceLoaderStatics2 extends winrt.windows.foundation.IInspectable
 {
     overload function GetForCurrentView(): winrt.windows.applicationmodel.resources.ResourceLoader;
-    overload function GetForCurrentView(name: ConstRef<winrt.HString>): winrt.windows.applicationmodel.resources.ResourceLoader;
+    overload function GetForCurrentView(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.resources.ResourceLoader;
     overload function GetForViewIndependentUse(): winrt.windows.applicationmodel.resources.ResourceLoader;
-    overload function GetForViewIndependentUse(name: ConstRef<winrt.HString>): winrt.windows.applicationmodel.resources.ResourceLoader;
+    overload function GetForViewIndependentUse(name: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.applicationmodel.resources.ResourceLoader;
 }

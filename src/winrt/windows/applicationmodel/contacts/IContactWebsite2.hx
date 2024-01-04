@@ -9,5 +9,5 @@ package winrt.windows.applicationmodel.contacts;
 extern interface IContactWebsite2 extends winrt.windows.foundation.IInspectable
 {
     overload function RawValue(): winrt.HString;
-    overload function RawValue(value: ConstRef<winrt.HString>): Void;
+    overload function RawValue(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

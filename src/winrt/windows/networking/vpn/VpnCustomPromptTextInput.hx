@@ -11,12 +11,12 @@ extern class VpnCustomPromptTextInput
     implements winrt.windows.networking.vpn.IVpnCustomPromptTextInput
 {
     function new();
-    overload function PlaceholderText(value: ConstRef<winrt.HString>): Void;
+    overload function PlaceholderText(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function PlaceholderText(): winrt.HString;
     overload function IsTextHidden(value: Bool): Void;
     overload function IsTextHidden(): Bool;
     overload function Text(): winrt.HString;
-    overload function DisplayName(value: ConstRef<winrt.HString>): Void;
+    overload function DisplayName(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function DisplayName(): winrt.HString;
     overload function Compulsory(value: Bool): Void;
     overload function Compulsory(): Bool;

@@ -9,16 +9,16 @@ package winrt.windows.media.playback;
 extern class MediaBreakManager
     implements winrt.windows.media.playback.IMediaBreakManager
 {
-    overload function BreaksSeekedOver(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.playback.MediaBreakManager, winrt.windows.media.playback.MediaBreakSeekedOverEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function BreaksSeekedOver(token: ConstRef<winrt.EventToken>): Void;
-    overload function BreakStarted(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.playback.MediaBreakManager, winrt.windows.media.playback.MediaBreakStartedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function BreakStarted(token: ConstRef<winrt.EventToken>): Void;
-    overload function BreakEnded(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.playback.MediaBreakManager, winrt.windows.media.playback.MediaBreakEndedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function BreakEnded(token: ConstRef<winrt.EventToken>): Void;
-    overload function BreakSkipped(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.playback.MediaBreakManager, winrt.windows.media.playback.MediaBreakSkippedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function BreakSkipped(token: ConstRef<winrt.EventToken>): Void;
+    overload function BreaksSeekedOver(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.playback.MediaBreakManager, winrt.windows.media.playback.MediaBreakSeekedOverEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function BreaksSeekedOver(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function BreakStarted(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.playback.MediaBreakManager, winrt.windows.media.playback.MediaBreakStartedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function BreakStarted(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function BreakEnded(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.playback.MediaBreakManager, winrt.windows.media.playback.MediaBreakEndedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function BreakEnded(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function BreakSkipped(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.playback.MediaBreakManager, winrt.windows.media.playback.MediaBreakSkippedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function BreakSkipped(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     overload function CurrentBreak(): winrt.windows.media.playback.MediaBreak;
     overload function PlaybackSession(): winrt.windows.media.playback.MediaPlaybackSession;
-    function PlayBreak(value: ConstRef<winrt.windows.media.playback.MediaBreak>): Void;
+    function PlayBreak(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.playback.MediaBreak>): Void;
     function SkipCurrentBreak(): Void;
 }

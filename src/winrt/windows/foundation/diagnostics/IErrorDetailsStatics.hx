@@ -8,5 +8,5 @@ package winrt.windows.foundation.diagnostics;
 @:native("winrt::Windows::Foundation::Diagnostics::IErrorDetailsStatics")
 extern interface IErrorDetailsStatics extends winrt.windows.foundation.IInspectable
 {
-    function CreateFromHResultAsync(errorCode: Int32): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.diagnostics.ErrorDetails> /* GenericTypeInstSig */;
+    function CreateFromHResultAsync(errorCode: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): winrt.windows.foundation.IAsyncOperation<winrt.windows.foundation.diagnostics.ErrorDetails> /* GenericTypeInstSig */;
 }

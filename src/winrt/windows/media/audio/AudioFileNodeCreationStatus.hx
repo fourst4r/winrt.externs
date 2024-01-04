@@ -2,7 +2,7 @@ package winrt.windows.media.audio;
 
 @:include("winrt/Windows.Media.Audio.h", true)
 @:native("winrt::Windows::Media::Audio::AudioFileNodeCreationStatus")
-extern enum abstract AudioFileNodeCreationStatus(Int32)
+extern enum abstract AudioFileNodeCreationStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Audio::AudioFileNodeCreationStatus::Success") final Success;
     @:native("winrt::Windows::Media::Audio::AudioFileNodeCreationStatus::FileNotFound") final FileNotFound;

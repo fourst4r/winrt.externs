@@ -9,5 +9,5 @@ package winrt.windows.ui.input.inking.core;
 extern interface ICoreInkIndependentInputSource2 extends winrt.windows.foundation.IInspectable
 {
     overload function PointerCursor(): winrt.windows.ui.core.CoreCursor;
-    overload function PointerCursor(value: ConstRef<winrt.windows.ui.core.CoreCursor>): Void;
+    overload function PointerCursor(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.core.CoreCursor>): Void;
 }

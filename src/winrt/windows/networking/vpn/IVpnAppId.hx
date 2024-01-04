@@ -9,7 +9,7 @@ package winrt.windows.networking.vpn;
 extern interface IVpnAppId extends winrt.windows.foundation.IInspectable
 {
     overload function Type(): winrt.windows.networking.vpn.VpnAppIdType;
-    overload function Type(value: ConstRef<winrt.windows.networking.vpn.VpnAppIdType>): Void;
+    overload function Type(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.networking.vpn.VpnAppIdType>): Void;
     overload function Value(): winrt.HString;
-    overload function Value(value: ConstRef<winrt.HString>): Void;
+    overload function Value(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

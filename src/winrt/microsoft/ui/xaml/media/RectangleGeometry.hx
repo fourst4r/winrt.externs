@@ -12,7 +12,7 @@ extern class RectangleGeometry
 {
     function new();
     overload function Rect(): winrt.windows.foundation.Rect;
-    overload function Rect(value: ConstRef<winrt.windows.foundation.Rect>): Void;
+    overload function Rect(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Rect>): Void;
     overload function RectProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
     static overload function RectProperty(): winrt.microsoft.ui.xaml.DependencyProperty;
 }

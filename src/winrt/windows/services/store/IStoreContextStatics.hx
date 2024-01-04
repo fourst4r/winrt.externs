@@ -9,5 +9,5 @@ package winrt.windows.services.store;
 extern interface IStoreContextStatics extends winrt.windows.foundation.IInspectable
 {
     function GetDefault(): winrt.windows.services.store.StoreContext;
-    function GetForUser(user: ConstRef<winrt.windows.system.User>): winrt.windows.services.store.StoreContext;
+    function GetForUser(user: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.system.User>): winrt.windows.services.store.StoreContext;
 }

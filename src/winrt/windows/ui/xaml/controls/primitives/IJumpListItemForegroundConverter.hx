@@ -9,7 +9,7 @@ package winrt.windows.ui.xaml.controls.primitives;
 extern interface IJumpListItemForegroundConverter extends winrt.windows.foundation.IInspectable
 {
     overload function Enabled(): winrt.windows.ui.xaml.media.Brush;
-    overload function Enabled(value: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
+    overload function Enabled(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Brush>): Void;
     overload function Disabled(): winrt.windows.ui.xaml.media.Brush;
-    overload function Disabled(value: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
+    overload function Disabled(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Brush>): Void;
 }

@@ -2,7 +2,7 @@ package winrt.microsoft.ui.xaml.input;
 
 @:include("winrt/Microsoft.UI.Xaml.Input.h", true)
 @:native("winrt::Microsoft::UI::Xaml::Input::ManipulationModes")
-extern enum abstract ManipulationModes(UInt32)
+extern enum abstract ManipulationModes(#if reflaxe.cpp cxx.num. #else cpp. #end UInt32)
 {
     @:native("winrt::Microsoft::UI::Xaml::Input::ManipulationModes::None") final None;
     @:native("winrt::Microsoft::UI::Xaml::Input::ManipulationModes::TranslateX") final TranslateX;

@@ -9,6 +9,6 @@ package winrt.windows.security.authentication.identity.provider;
 extern interface ISecondaryAuthenticationFactorInfo2 extends winrt.windows.foundation.IInspectable
 {
     overload function PresenceMonitoringMode(): winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorDevicePresenceMonitoringMode;
-    function UpdateDevicePresenceAsync(presenceState: ConstRef<winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorDevicePresence>): winrt.windows.foundation.IAsyncAction;
+    function UpdateDevicePresenceAsync(presenceState: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorDevicePresence>): winrt.windows.foundation.IAsyncAction;
     overload function IsAuthenticationSupported(): Bool;
 }

@@ -9,5 +9,5 @@ package winrt.microsoft.ui.composition;
 extern interface ICompositionColorBrush extends winrt.windows.foundation.IInspectable
 {
     overload function Color(): winrt.windows.ui.Color;
-    overload function Color(value: ConstRef<winrt.windows.ui.Color>): Void;
+    overload function Color(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.Color>): Void;
 }

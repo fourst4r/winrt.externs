@@ -9,7 +9,7 @@ package winrt.windows.ui.xaml.shapes;
 extern interface IPolyline extends winrt.windows.foundation.IInspectable
 {
     overload function FillRule(): winrt.windows.ui.xaml.media.FillRule;
-    overload function FillRule(value: ConstRef<winrt.windows.ui.xaml.media.FillRule>): Void;
+    overload function FillRule(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.FillRule>): Void;
     overload function Points(): winrt.windows.ui.xaml.media.PointCollection;
-    overload function Points(value: ConstRef<winrt.windows.ui.xaml.media.PointCollection>): Void;
+    overload function Points(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.PointCollection>): Void;
 }

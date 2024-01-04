@@ -11,8 +11,8 @@ extern class CompositionCapabilities
 {
     function AreEffectsSupported(): Bool;
     function AreEffectsFast(): Bool;
-    overload function Changed(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.composition.CompositionCapabilities, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Changed(token: ConstRef<winrt.EventToken>): Void;
+    overload function Changed(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.ui.composition.CompositionCapabilities, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Changed(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
     function GetForCurrentView(): winrt.windows.ui.composition.CompositionCapabilities;
     static function GetForCurrentView(): winrt.windows.ui.composition.CompositionCapabilities;
 }

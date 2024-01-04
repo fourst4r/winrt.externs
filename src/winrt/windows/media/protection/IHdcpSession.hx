@@ -8,9 +8,9 @@ package winrt.windows.media.protection;
 @:native("winrt::Windows::Media::Protection::IHdcpSession")
 extern interface IHdcpSession extends winrt.windows.foundation.IInspectable
 {
-    function IsEffectiveProtectionAtLeast(protection: ConstRef<winrt.windows.media.protection.HdcpProtection>): Bool;
+    function IsEffectiveProtectionAtLeast(protection: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.protection.HdcpProtection>): Bool;
     function GetEffectiveProtection(): winrt.windows.foundation.IReference<winrt.windows.media.protection.HdcpProtection> /* GenericTypeInstSig */;
-    function SetDesiredMinProtectionAsync(protection: ConstRef<winrt.windows.media.protection.HdcpProtection>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.protection.HdcpSetProtectionResult> /* GenericTypeInstSig */;
-    overload function ProtectionChanged(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.protection.HdcpSession, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function ProtectionChanged(token: ConstRef<winrt.EventToken>): Void;
+    function SetDesiredMinProtectionAsync(protection: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.protection.HdcpProtection>): winrt.windows.foundation.IAsyncOperation<winrt.windows.media.protection.HdcpSetProtectionResult> /* GenericTypeInstSig */;
+    overload function ProtectionChanged(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.protection.HdcpSession, winrt.windows.foundation.IInspectable> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function ProtectionChanged(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

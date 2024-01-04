@@ -8,5 +8,5 @@ package winrt.windows.devices.printers;
 @:native("winrt::Windows::Devices::Printers::IIppTextWithLanguageFactory")
 extern interface IIppTextWithLanguageFactory extends winrt.windows.foundation.IInspectable
 {
-    function CreateInstance(language: ConstRef<winrt.HString>, text: ConstRef<winrt.HString>): winrt.windows.devices.printers.IppTextWithLanguage;
+    function CreateInstance(language: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>, text: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): winrt.windows.devices.printers.IppTextWithLanguage;
 }

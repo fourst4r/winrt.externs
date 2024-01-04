@@ -12,5 +12,5 @@ extern class NavigationTransitionInfo
     implements winrt.windows.ui.xaml.media.animation.INavigationTransitionInfoOverrides
 {
     function GetNavigationStateCore(): winrt.HString;
-    function SetNavigationStateCore(navigationState: ConstRef<winrt.HString>): Void;
+    function SetNavigationStateCore(navigationState: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

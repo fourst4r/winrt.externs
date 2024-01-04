@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.datatransfer;
 @:native("winrt::Windows::ApplicationModel::DataTransfer::IDataPackageView4")
 extern interface IDataPackageView4 extends winrt.windows.foundation.IInspectable
 {
-    function SetAcceptedFormatId(formatId: ConstRef<winrt.HString>): Void;
+    function SetAcceptedFormatId(formatId: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
 }

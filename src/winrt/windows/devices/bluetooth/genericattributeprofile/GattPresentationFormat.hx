@@ -9,13 +9,13 @@ package winrt.windows.devices.bluetooth.genericattributeprofile;
 extern class GattPresentationFormat
     implements winrt.windows.devices.bluetooth.genericattributeprofile.IGattPresentationFormat
 {
-    overload function FormatType(): UInt8;
-    overload function Exponent(): Int32;
-    overload function Unit(): UInt16;
-    overload function Namespace(): UInt8;
-    overload function Description(): UInt16;
-    function FromParts(formatType: UInt8, exponent: Int32, unit: UInt16, namespaceId: UInt8, description: UInt16): winrt.windows.devices.bluetooth.genericattributeprofile.GattPresentationFormat;
-    overload function BluetoothSigAssignedNumbers(): UInt8;
-    static overload function BluetoothSigAssignedNumbers(): UInt8;
-    static function FromParts(formatType: UInt8, exponent: Int32, unit: UInt16, namespaceId: UInt8, description: UInt16): winrt.windows.devices.bluetooth.genericattributeprofile.GattPresentationFormat;
+    overload function FormatType(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function Exponent(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    overload function Unit(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    overload function Namespace(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    overload function Description(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt16;
+    function FromParts(formatType: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, exponent: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, unit: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, namespaceId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, description: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.windows.devices.bluetooth.genericattributeprofile.GattPresentationFormat;
+    overload function BluetoothSigAssignedNumbers(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    static overload function BluetoothSigAssignedNumbers(): #if reflaxe.cpp cxx.num. #else cpp. #end UInt8;
+    static function FromParts(formatType: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, exponent: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, unit: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16, namespaceId: #if reflaxe.cpp cxx.num. #else cpp. #end UInt8, description: #if reflaxe.cpp cxx.num. #else cpp. #end UInt16): winrt.windows.devices.bluetooth.genericattributeprofile.GattPresentationFormat;
 }

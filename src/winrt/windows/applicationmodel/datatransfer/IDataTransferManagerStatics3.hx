@@ -8,5 +8,5 @@ package winrt.windows.applicationmodel.datatransfer;
 @:native("winrt::Windows::ApplicationModel::DataTransfer::IDataTransferManagerStatics3")
 extern interface IDataTransferManagerStatics3 extends winrt.windows.foundation.IInspectable
 {
-    function ShowShareUI(options: ConstRef<winrt.windows.applicationmodel.datatransfer.ShareUIOptions>): Void;
+    function ShowShareUI(options: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.datatransfer.ShareUIOptions>): Void;
 }

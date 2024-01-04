@@ -8,6 +8,6 @@ package winrt.windows.media.core;
 @:native("winrt::Windows::Media::Core::IMediaStreamSource2")
 extern interface IMediaStreamSource2 extends winrt.windows.foundation.IInspectable
 {
-    overload function SampleRendered(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MediaStreamSource, winrt.windows.media.core.MediaStreamSourceSampleRenderedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function SampleRendered(token: ConstRef<winrt.EventToken>): Void;
+    overload function SampleRendered(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.media.core.MediaStreamSource, winrt.windows.media.core.MediaStreamSourceSampleRenderedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function SampleRendered(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

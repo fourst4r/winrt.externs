@@ -9,15 +9,15 @@ package winrt.windows.ui.xaml.controls;
 extern interface IGridStatics extends winrt.windows.foundation.IInspectable
 {
     overload function RowProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetRow(element: ConstRef<winrt.windows.ui.xaml.FrameworkElement>): Int32;
-    function SetRow(element: ConstRef<winrt.windows.ui.xaml.FrameworkElement>, value: Int32): Void;
+    function GetRow(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.FrameworkElement>): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function SetRow(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.FrameworkElement>, value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function ColumnProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetColumn(element: ConstRef<winrt.windows.ui.xaml.FrameworkElement>): Int32;
-    function SetColumn(element: ConstRef<winrt.windows.ui.xaml.FrameworkElement>, value: Int32): Void;
+    function GetColumn(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.FrameworkElement>): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function SetColumn(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.FrameworkElement>, value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function RowSpanProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetRowSpan(element: ConstRef<winrt.windows.ui.xaml.FrameworkElement>): Int32;
-    function SetRowSpan(element: ConstRef<winrt.windows.ui.xaml.FrameworkElement>, value: Int32): Void;
+    function GetRowSpan(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.FrameworkElement>): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function SetRowSpan(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.FrameworkElement>, value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
     overload function ColumnSpanProperty(): winrt.windows.ui.xaml.DependencyProperty;
-    function GetColumnSpan(element: ConstRef<winrt.windows.ui.xaml.FrameworkElement>): Int32;
-    function SetColumnSpan(element: ConstRef<winrt.windows.ui.xaml.FrameworkElement>, value: Int32): Void;
+    function GetColumnSpan(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.FrameworkElement>): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
+    function SetColumnSpan(element: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.FrameworkElement>, value: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
 }

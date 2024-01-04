@@ -2,7 +2,7 @@ package winrt.windows.media.playback;
 
 @:include("winrt/Windows.Media.Playback.h", true)
 @:native("winrt::Windows::Media::Playback::MediaPlayerState")
-extern enum abstract MediaPlayerState(Int32)
+extern enum abstract MediaPlayerState(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Playback::MediaPlayerState::Closed") final Closed;
     @:native("winrt::Windows::Media::Playback::MediaPlayerState::Opening") final Opening;

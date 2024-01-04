@@ -8,7 +8,7 @@ package winrt.windows.ui.xaml.controls;
 @:native("winrt::Windows::UI::Xaml::Controls::IVirtualizingPanelProtected")
 extern interface IVirtualizingPanelProtected extends winrt.windows.foundation.IInspectable
 {
-    function AddInternalChild(child: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
-    function InsertInternalChild(index: Int32, child: ConstRef<winrt.windows.ui.xaml.UIElement>): Void;
-    function RemoveInternalChildRange(index: Int32, range: Int32): Void;
+    function AddInternalChild(child: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
+    function InsertInternalChild(index: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, child: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.UIElement>): Void;
+    function RemoveInternalChildRange(index: #if reflaxe.cpp cxx.num. #else cpp. #end Int32, range: #if reflaxe.cpp cxx.num. #else cpp. #end Int32): Void;
 }

@@ -10,7 +10,7 @@ extern interface IAdvancedVideoCaptureDeviceController4 extends winrt.windows.fo
 {
     overload function ExposurePriorityVideoControl(): winrt.windows.media.devices.ExposurePriorityVideoControl;
     overload function DesiredOptimization(): winrt.windows.media.devices.MediaCaptureOptimization;
-    overload function DesiredOptimization(value: ConstRef<winrt.windows.media.devices.MediaCaptureOptimization>): Void;
+    overload function DesiredOptimization(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.devices.MediaCaptureOptimization>): Void;
     overload function HdrVideoControl(): winrt.windows.media.devices.HdrVideoControl;
     overload function OpticalImageStabilizationControl(): winrt.windows.media.devices.OpticalImageStabilizationControl;
     overload function AdvancedPhotoControl(): winrt.windows.media.devices.AdvancedPhotoControl;

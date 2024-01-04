@@ -2,7 +2,7 @@ package winrt.windows.ui.xaml;
 
 @:include("winrt/Windows.UI.Xaml.h", true)
 @:native("winrt::Windows::UI::Xaml::FontCapitals")
-extern enum abstract FontCapitals(Int32)
+extern enum abstract FontCapitals(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::UI::Xaml::FontCapitals::Normal") final Normal;
     @:native("winrt::Windows::UI::Xaml::FontCapitals::AllSmallCaps") final AllSmallCaps;

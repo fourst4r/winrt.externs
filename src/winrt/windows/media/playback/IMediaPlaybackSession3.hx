@@ -9,6 +9,6 @@ package winrt.windows.media.playback;
 extern interface IMediaPlaybackSession3 extends winrt.windows.foundation.IInspectable
 {
     overload function PlaybackRotation(): winrt.windows.media.mediaproperties.MediaRotation;
-    overload function PlaybackRotation(value: ConstRef<winrt.windows.media.mediaproperties.MediaRotation>): Void;
+    overload function PlaybackRotation(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.media.mediaproperties.MediaRotation>): Void;
     function GetOutputDegradationPolicyState(): winrt.windows.media.playback.MediaPlaybackSessionOutputDegradationPolicyState;
 }

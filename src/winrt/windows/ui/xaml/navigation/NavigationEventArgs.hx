@@ -15,6 +15,6 @@ extern class NavigationEventArgs
     overload function SourcePageType(): winrt.windows.ui.xaml.interop.TypeName;
     overload function NavigationMode(): winrt.windows.ui.xaml.navigation.NavigationMode;
     overload function Uri(): winrt.windows.foundation.Uri;
-    overload function Uri(value: ConstRef<winrt.windows.foundation.Uri>): Void;
+    overload function Uri(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Uri>): Void;
     overload function NavigationTransitionInfo(): winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo;
 }

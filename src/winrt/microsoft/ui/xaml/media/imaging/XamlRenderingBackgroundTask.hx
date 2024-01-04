@@ -10,5 +10,5 @@ extern class XamlRenderingBackgroundTask
     implements winrt.microsoft.ui.xaml.media.imaging.IXamlRenderingBackgroundTask
     implements winrt.microsoft.ui.xaml.media.imaging.IXamlRenderingBackgroundTaskOverrides
 {
-    function OnRun(taskInstance: ConstRef<winrt.windows.applicationmodel.background.IBackgroundTaskInstance>): Void;
+    function OnRun(taskInstance: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.background.IBackgroundTaskInstance>): Void;
 }

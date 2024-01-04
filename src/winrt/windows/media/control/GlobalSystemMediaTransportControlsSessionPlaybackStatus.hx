@@ -2,7 +2,7 @@ package winrt.windows.media.control;
 
 @:include("winrt/Windows.Media.Control.h", true)
 @:native("winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackStatus")
-extern enum abstract GlobalSystemMediaTransportControlsSessionPlaybackStatus(Int32)
+extern enum abstract GlobalSystemMediaTransportControlsSessionPlaybackStatus(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackStatus::Closed") final Closed;
     @:native("winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackStatus::Opened") final Opened;

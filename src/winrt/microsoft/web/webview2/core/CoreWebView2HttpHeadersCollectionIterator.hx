@@ -13,5 +13,5 @@ extern class CoreWebView2HttpHeadersCollectionIterator
     overload function Current(): winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.HString> /* GenericTypeInstSig */;
     overload function HasCurrent(): Bool;
     function MoveNext(): Bool;
-    function GetMany(items: winrt.ArrayView<winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.HString> /* GenericTypeInstSig */>): UInt32;
+    function GetMany(items: winrt.ArrayView<winrt.windows.foundation.collections.IKeyValuePair<winrt.HString, winrt.HString> /* GenericTypeInstSig */>): #if reflaxe.cpp cxx.num. #else cpp. #end UInt32;
 }

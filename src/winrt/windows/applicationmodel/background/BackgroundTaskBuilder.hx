@@ -14,11 +14,11 @@ extern class BackgroundTaskBuilder
     implements winrt.windows.applicationmodel.background.IBackgroundTaskBuilder5
 {
     function new();
-    overload function TaskEntryPoint(value: ConstRef<winrt.HString>): Void;
+    overload function TaskEntryPoint(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function TaskEntryPoint(): winrt.HString;
-    function SetTrigger(trigger: ConstRef<winrt.windows.applicationmodel.background.IBackgroundTrigger>): Void;
-    function AddCondition(condition: ConstRef<winrt.windows.applicationmodel.background.IBackgroundCondition>): Void;
-    overload function Name(value: ConstRef<winrt.HString>): Void;
+    function SetTrigger(trigger: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.background.IBackgroundTrigger>): Void;
+    function AddCondition(condition: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.background.IBackgroundCondition>): Void;
+    overload function Name(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.HString>): Void;
     overload function Name(): winrt.HString;
     function Register(): winrt.windows.applicationmodel.background.BackgroundTaskRegistration;
     overload function CancelOnConditionLoss(value: Bool): Void;
@@ -26,6 +26,6 @@ extern class BackgroundTaskBuilder
     overload function IsNetworkRequested(value: Bool): Void;
     overload function IsNetworkRequested(): Bool;
     overload function TaskGroup(): winrt.windows.applicationmodel.background.BackgroundTaskRegistrationGroup;
-    overload function TaskGroup(value: ConstRef<winrt.windows.applicationmodel.background.BackgroundTaskRegistrationGroup>): Void;
-    function SetTaskEntryPointClsid(TaskEntryPoint: ConstRef<winrt.Guid>): Void;
+    overload function TaskGroup(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.applicationmodel.background.BackgroundTaskRegistrationGroup>): Void;
+    function SetTaskEntryPointClsid(TaskEntryPoint: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.Guid>): Void;
 }

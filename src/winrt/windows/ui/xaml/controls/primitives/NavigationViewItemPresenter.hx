@@ -12,7 +12,7 @@ extern class NavigationViewItemPresenter
 {
     function new();
     overload function Icon(): winrt.windows.ui.xaml.controls.IconElement;
-    overload function Icon(value: ConstRef<winrt.windows.ui.xaml.controls.IconElement>): Void;
+    overload function Icon(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.controls.IconElement>): Void;
     overload function IconProperty(): winrt.windows.ui.xaml.DependencyProperty;
     static overload function IconProperty(): winrt.windows.ui.xaml.DependencyProperty;
 }

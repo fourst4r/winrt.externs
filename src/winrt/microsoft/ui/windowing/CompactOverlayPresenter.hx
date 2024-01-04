@@ -10,7 +10,7 @@ extern class CompactOverlayPresenter
     extends winrt.microsoft.ui.windowing.AppWindowPresenter
     implements winrt.microsoft.ui.windowing.ICompactOverlayPresenter
 {
-    overload function InitialSize(value: ConstRef<winrt.microsoft.ui.windowing.CompactOverlaySize>): Void;
+    overload function InitialSize(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.microsoft.ui.windowing.CompactOverlaySize>): Void;
     overload function InitialSize(): winrt.microsoft.ui.windowing.CompactOverlaySize;
     function Create(): winrt.microsoft.ui.windowing.CompactOverlayPresenter;
     static function Create(): winrt.microsoft.ui.windowing.CompactOverlayPresenter;

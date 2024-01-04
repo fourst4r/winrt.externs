@@ -9,7 +9,7 @@ package winrt.windows.ui.xaml.controls.maps;
 extern interface IMapControl6 extends winrt.windows.foundation.IInspectable
 {
     overload function Layers(): winrt.windows.foundation.collections.IVector<winrt.windows.ui.xaml.controls.maps.MapLayer> /* GenericTypeInstSig */;
-    overload function Layers(value: ConstRef<winrt.windows.foundation.collections.IVector<winrt.windows.ui.xaml.controls.maps.MapLayer> /* temp_GenericTypeInstSig */>): Void;
-    overload function TryGetLocationFromOffset(offset: ConstRef<winrt.windows.foundation.Point>, location: Ref<winrt.windows.devices.geolocation.Geopoint>): Bool;
-    overload function TryGetLocationFromOffset(offset: ConstRef<winrt.windows.foundation.Point>, desiredReferenceSystem: ConstRef<winrt.windows.devices.geolocation.AltitudeReferenceSystem>, location: Ref<winrt.windows.devices.geolocation.Geopoint>): Bool;
+    overload function Layers(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.collections.IVector<winrt.windows.ui.xaml.controls.maps.MapLayer> /* temp_GenericTypeInstSig */>): Void;
+    overload function TryGetLocationFromOffset(offset: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>, location: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.devices.geolocation.Geopoint>): Bool;
+    overload function TryGetLocationFromOffset(offset: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.Point>, desiredReferenceSystem: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.devices.geolocation.AltitudeReferenceSystem>, location: #if reflaxe.cpp cxx.Ref #else cpp.Reference #end <winrt.windows.devices.geolocation.Geopoint>): Bool;
 }

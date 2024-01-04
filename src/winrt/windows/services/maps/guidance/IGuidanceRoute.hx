@@ -9,7 +9,7 @@ package winrt.windows.services.maps.guidance;
 extern interface IGuidanceRoute extends winrt.windows.foundation.IInspectable
 {
     overload function Duration(): winrt.windows.foundation.TimeSpan;
-    overload function Distance(): Int32;
+    overload function Distance(): #if reflaxe.cpp cxx.num. #else cpp. #end Int32;
     overload function Maneuvers(): winrt.windows.foundation.collections.IVectorView<winrt.windows.services.maps.guidance.GuidanceManeuver> /* GenericTypeInstSig */;
     overload function BoundingBox(): winrt.windows.devices.geolocation.GeoboundingBox;
     overload function Path(): winrt.windows.devices.geolocation.Geopath;

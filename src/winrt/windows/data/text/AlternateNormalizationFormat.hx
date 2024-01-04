@@ -2,7 +2,7 @@ package winrt.windows.data.text;
 
 @:include("winrt/Windows.Data.Text.h", true)
 @:native("winrt::Windows::Data::Text::AlternateNormalizationFormat")
-extern enum abstract AlternateNormalizationFormat(Int32)
+extern enum abstract AlternateNormalizationFormat(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Data::Text::AlternateNormalizationFormat::NotNormalized") final NotNormalized;
     @:native("winrt::Windows::Data::Text::AlternateNormalizationFormat::Number") final Number;

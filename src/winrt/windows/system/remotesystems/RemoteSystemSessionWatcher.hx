@@ -12,10 +12,10 @@ extern class RemoteSystemSessionWatcher
     function Start(): Void;
     function Stop(): Void;
     overload function Status(): winrt.windows.system.remotesystems.RemoteSystemSessionWatcherStatus;
-    overload function Added(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.system.remotesystems.RemoteSystemSessionWatcher, winrt.windows.system.remotesystems.RemoteSystemSessionAddedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Added(token: ConstRef<winrt.EventToken>): Void;
-    overload function Updated(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.system.remotesystems.RemoteSystemSessionWatcher, winrt.windows.system.remotesystems.RemoteSystemSessionUpdatedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Updated(token: ConstRef<winrt.EventToken>): Void;
-    overload function Removed(handler: ConstRef<winrt.windows.foundation.TypedEventHandler<winrt.windows.system.remotesystems.RemoteSystemSessionWatcher, winrt.windows.system.remotesystems.RemoteSystemSessionRemovedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
-    @:noExcept overload function Removed(token: ConstRef<winrt.EventToken>): Void;
+    overload function Added(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.system.remotesystems.RemoteSystemSessionWatcher, winrt.windows.system.remotesystems.RemoteSystemSessionAddedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Added(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function Updated(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.system.remotesystems.RemoteSystemSessionWatcher, winrt.windows.system.remotesystems.RemoteSystemSessionUpdatedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Updated(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
+    overload function Removed(handler: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.foundation.TypedEventHandler<winrt.windows.system.remotesystems.RemoteSystemSessionWatcher, winrt.windows.system.remotesystems.RemoteSystemSessionRemovedEventArgs> /* temp_GenericTypeInstSig */>): winrt.EventToken;
+    @:noExcept overload function Removed(token: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.EventToken>): Void;
 }

@@ -13,12 +13,12 @@ extern class Panel
 {
     overload function Children(): winrt.windows.ui.xaml.controls.UIElementCollection;
     overload function Background(): winrt.windows.ui.xaml.media.Brush;
-    overload function Background(value: ConstRef<winrt.windows.ui.xaml.media.Brush>): Void;
+    overload function Background(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.Brush>): Void;
     overload function IsItemsHost(): Bool;
     overload function ChildrenTransitions(): winrt.windows.ui.xaml.media.animation.TransitionCollection;
-    overload function ChildrenTransitions(value: ConstRef<winrt.windows.ui.xaml.media.animation.TransitionCollection>): Void;
+    overload function ChildrenTransitions(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.media.animation.TransitionCollection>): Void;
     overload function BackgroundTransition(): winrt.windows.ui.xaml.BrushTransition;
-    overload function BackgroundTransition(value: ConstRef<winrt.windows.ui.xaml.BrushTransition>): Void;
+    overload function BackgroundTransition(value: #if reflaxe.cpp cxx.ConstRef #else cpp.Reference #end <winrt.windows.ui.xaml.BrushTransition>): Void;
     overload function BackgroundProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function IsItemsHostProperty(): winrt.windows.ui.xaml.DependencyProperty;
     overload function ChildrenTransitionsProperty(): winrt.windows.ui.xaml.DependencyProperty;

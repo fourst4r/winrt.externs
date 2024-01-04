@@ -2,7 +2,7 @@ package winrt.windows.devices.pointofservice;
 
 @:include("winrt/Windows.Devices.PointOfService.h", true)
 @:native("winrt::Windows::Devices::PointOfService::UnifiedPosErrorSeverity")
-extern enum abstract UnifiedPosErrorSeverity(Int32)
+extern enum abstract UnifiedPosErrorSeverity(#if reflaxe.cpp cxx.num. #else cpp. #end Int32)
 {
     @:native("winrt::Windows::Devices::PointOfService::UnifiedPosErrorSeverity::UnknownErrorSeverity") final UnknownErrorSeverity;
     @:native("winrt::Windows::Devices::PointOfService::UnifiedPosErrorSeverity::Warning") final Warning;
